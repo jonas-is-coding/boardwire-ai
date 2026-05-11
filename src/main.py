@@ -33,6 +33,7 @@ from src.models import DraftPost, FeedItem, Source
 from src.publisher.base import PublishResult
 from src.publisher.bluesky_publisher import BlueskyPublisher
 from src.publisher.dry_run_publisher import DryRunPublisher
+from src.publisher.x_browser_publisher import XBrowserPublisher
 from src.publisher.x_publisher import XPublisher
 from src.quality.gates import QualityConfig, check_quality
 from src.reports.review_report import generate_review_queue_report
@@ -41,7 +42,7 @@ from src.utils.logger import get_logger
 from src.writer.post_writer import generate_post
 
 VALID_REVIEW_STATUSES = {"pending_review", "approved", "rejected", "published_dry_run", "deferred_due_to_cap", "expired_deferred"}
-VALID_PUBLISHERS = {"dry_run", "bluesky", "x"}
+VALID_PUBLISHERS = {"dry_run", "bluesky", "x", "x_browser"}
 
 
 def _load_sources() -> list[Source]:
@@ -106,7 +107,7 @@ def _build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--reject-review", type=str, default=None, help="Reject one review queue item by ID.")
     parser.add_argument("--publish-approved", action="store_true", help="Publish approved review items in dry-run mode.")
     parser.add_argument("--list-published", action="store_true", help="List published dry-run posts.")
-    parser.add_argument("--publisher", choices=["dry_run", "bluesky", "x"], default=None, help="Publisher backend for --publish-approved.")
+    parser.add_argument("--publisher", choices=["dry_run", "bluesky", "x", "x_browser"], default=None, help="Publisher backend for --publish-approved.")
     parser.add_argument("--confirm-real-publish", action="store_true", help="Required confirmation flag for real publishing.")
     parser.add_argument("--quality-report", action="store_true", help="Print quality gate pass/fail reasons for each candidate.")
     parser.add_argument("--self-check-writer", action="store_true", help="Generate fixture posts and run quality gates as a writer self-check.")
@@ -488,6 +489,19 @@ def _resolve_publisher(args, logger):
     if not args.confirm_real_publish:
         logger.error("Refusing %s publish: missing --confirm-real-publish", selected)
         return None, selected
+
+    if selected == "x_browser":
+        logger.info("Experimental local browser publisher")
+        if os.getenv("GITHUB_ACTIONS", "").strip().lower() == "true":
+            logger.error("Refusing x_browser publisher in GitHub Actions")
+            return None, "x_browser"
+        allow_browser = os.getenv("BOARDWIRE_ALLOW_BROWSER_PUBLISH", "false").strip().lower() == "true"
+        if not allow_browser:
+            logger.error("Refusing x_browser publish: BOARDWIRE_ALLOW_BROWSER_PUBLISH must be true")
+            return None, "x_browser"
+        auto_click = os.getenv("BOARDWIRE_BROWSER_AUTO_CLICK_POST", "false").strip().lower() == "true"
+        profile_dir = Path(".browser/x-profile")
+        return XBrowserPublisher(profile_dir=profile_dir, auto_click_post=auto_click), "x_browser"
 
     if selected == "bluesky":
         handle = os.getenv("BLUESKY_HANDLE", "").strip()

@@ -104,6 +104,7 @@ For real X publishing:
 - If `card_path` exists on the review item, the card image is attached on publish.
 - `dry_run` stays the safe default publisher.
 - Supported publishers: `dry_run`, `bluesky`, `x`.
+- Experimental local publisher: `x_browser` (local only).
 
 ## X setup
 
@@ -120,3 +121,30 @@ For real X publishing:
 Current X media behavior:
 - Text posting is enabled.
 - If `image_path` exists, Boardwire logs: `X media upload not enabled yet, posting text-only`.
+
+## Experimental: local X browser publisher
+
+`x_browser` is an experimental local-only fallback when X API credits are unavailable.
+
+- Recommended production path remains official X API (`--publisher x`).
+- Must run locally; it is refused in GitHub Actions.
+- Uses a persistent local profile at `.browser/x-profile`.
+- First run: browser opens and you log in manually (including any captcha/2FA/security steps).
+- No anti-detection tricks, no proxying, no bypass behavior.
+- Default behavior prepares the post and waits for manual confirmation.
+- Auto-clicking Post is disabled by default.
+
+Required safety flags/env:
+- `BOARDWIRE_REAL_PUBLISH_ENABLED=true`
+- `BOARDWIRE_ALLOW_BROWSER_PUBLISH=true`
+- `--confirm-real-publish`
+
+Optional:
+- `BOARDWIRE_BROWSER_AUTO_CLICK_POST=true` enables automatic click of Post.
+
+Local command example:
+```bash
+BOARDWIRE_REAL_PUBLISH_ENABLED=true \
+BOARDWIRE_ALLOW_BROWSER_PUBLISH=true \
+python -m src.main --publish-approved --publisher x_browser --confirm-real-publish
+```
