@@ -1,23 +1,8 @@
 [
   {
-    "id": "01e685217601",
-    "status": "pending_review",
-    "created_at": "2026-05-11T15:27:44.956717Z",
-    "score": 7,
-    "reason": "Matched keywords: agent, robotics, research",
-    "proposed_post": "DeepMind introduces robotics agent with longer-horizon planning. The practical question is how much reliability improves when agent tooling is used in real developer workflows.",
-    "source_angle": "Rule-based",
-    "source_item": {
-      "title": "DeepMind introduces robotics agent with longer-horizon planning",
-      "source": "Google DeepMind Blog",
-      "link": "https://deepmind.google/discover/blog/robotics-agent-long-horizon"
-    },
-    "is_llm_mode": false
-  },
-  {
-    "id": "ebc309eca390",
-    "status": "pending_review",
-    "created_at": "2026-05-11T15:27:44.956730Z",
+    "id": "65849460d052",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-11T15:32:59.069738Z",
     "score": 10,
     "reason": "Matched keywords: model, agent, research, llm",
     "proposed_post": "arXiv: Efficient LLM routing reduces inference cost in agent systems. The practical question is how much reliability improves when agent tooling is used in real developer workflows.",
@@ -30,9 +15,9 @@
     "is_llm_mode": false
   },
   {
-    "id": "9ec41461eca7",
-    "status": "pending_review",
-    "created_at": "2026-05-11T15:27:44.956741Z",
+    "id": "88cc0e07a1e6",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-11T15:32:59.069747Z",
     "score": 7,
     "reason": "Matched keywords: ai, model, benchmark",
     "proposed_post": "OpenAI releases evaluation notes for multimodal safety benchmark. Benchmark movement matters most when evaluation setup is transparent and results transfer to production tasks.",
@@ -41,6 +26,51 @@
       "title": "OpenAI releases evaluation notes for multimodal safety benchmark",
       "source": "OpenAI Blog",
       "link": "https://openai.com/news/multimodal-safety-benchmark-notes"
+    },
+    "is_llm_mode": false
+  },
+  {
+    "id": "fe83dd7fa4de",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-11T15:32:59.069781Z",
+    "score": 5,
+    "reason": "Matched keywords: ai, research",
+    "proposed_post": "Opinion: AI will replace every job next month. The useful part is the method and evidence quality, not just headline claims from a single result.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Opinion: AI will replace every job next month",
+      "source": "Random Tech Blog",
+      "link": "https://example.com/opinion-ai-replace-every-job"
+    },
+    "is_llm_mode": false
+  },
+  {
+    "id": "433c05b99ae8",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-11T15:32:59.069789Z",
+    "score": 9,
+    "reason": "Matched keywords: ai, model, benchmark, research",
+    "proposed_post": "Celebrity shares favorite chatbot prompts. Benchmark movement matters most when evaluation setup is transparent and results transfer to production tasks.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Celebrity shares favorite chatbot prompts",
+      "source": "Lifestyle News",
+      "link": "https://example.com/celebrity-chatbot-prompts"
+    },
+    "is_llm_mode": false
+  },
+  {
+    "id": "22077dee4a64",
+    "status": "pending_review",
+    "created_at": "2026-05-11T15:32:59.069726Z",
+    "score": 7,
+    "reason": "Matched keywords: agent, robotics, research",
+    "proposed_post": "DeepMind introduces robotics agent with longer-horizon planning. The practical question is how much reliability improves when agent tooling is used in real developer workflows.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "DeepMind introduces robotics agent with longer-horizon planning",
+      "source": "Google DeepMind Blog",
+      "link": "https://deepmind.google/discover/blog/robotics-agent-long-horizon"
     },
     "is_llm_mode": false
   }

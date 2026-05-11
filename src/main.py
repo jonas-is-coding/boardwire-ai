@@ -35,7 +35,7 @@ from src.storage.json_store import JsonStore
 from src.utils.logger import get_logger
 from src.writer.post_writer import generate_post
 
-VALID_REVIEW_STATUSES = {"pending_review", "approved", "rejected", "published_dry_run"}
+VALID_REVIEW_STATUSES = {"pending_review", "approved", "rejected", "published_dry_run", "deferred_due_to_cap"}
 VALID_PUBLISHERS = {"dry_run", "bluesky"}
 
 
@@ -576,6 +576,7 @@ def run(argv: list[str] | None = None) -> int:
 
     created_drafts: list[DraftPost] = []
     processed_links: list[str] = []
+    deferred_due_to_cap_links: set[str] = set()
     llm_evaluated = 0
     gemini_evaluated = 0
     llm_mode_by_link: dict[str, bool] = {}
@@ -618,9 +619,7 @@ def run(argv: list[str] | None = None) -> int:
         created_drafts.append(draft)
         processed_links.append(item.link)
 
-    updated_seen = list(seen_links.union(processed_links))
     JsonStore.save(DRAFTS_PATH, drafts_data)
-    JsonStore.save(SEEN_ITEMS_PATH, updated_seen)
 
     evaluator_approved = sum(1 for d in created_drafts if d.should_post)
     evaluator_rejected = len(created_drafts) - evaluator_approved
@@ -674,6 +673,9 @@ def run(argv: list[str] | None = None) -> int:
                 if remaining_today <= 0:
                     quality_reject += 1
                     logger.warning("Quality reject: daily post cap reached (%d)", max_posts_per_day)
+                    item["status"] = "deferred_due_to_cap"
+                    review_queue_data.append(item)
+                    deferred_due_to_cap_links.add(item.get("source_item", {}).get("link", ""))
                     if args.quality_report:
                         logger.info("Quality report [REJECT] ID=%s | title=%s | score=%d", item.get("id"), source_title, score_val)
                         logger.info("Proposed post: %s", proposed_post)
@@ -700,6 +702,12 @@ def run(argv: list[str] | None = None) -> int:
         saved_to_review_queue = len(passed_queue_items)
         logger.info("Saved %d drafts to review queue", saved_to_review_queue)
         logger.info("Quality gate summary: passed=%d rejected=%d", quality_pass, quality_reject)
+        logger.info("Deferred due to daily cap: %d", len([x for x in review_queue_data if x.get("status") == "deferred_due_to_cap"]))
+
+    # Do not mark cap-deferred candidates as seen so they can be reconsidered later.
+    effective_processed_links = [link for link in processed_links if link not in deferred_due_to_cap_links]
+    updated_seen = list(seen_links.union(effective_processed_links))
+    JsonStore.save(SEEN_ITEMS_PATH, updated_seen)
 
     logger.info("Boardwire AI dry run complete")
     logger.info("Sources loaded: %d", len(sources) if not args.use_fixtures else 0)
