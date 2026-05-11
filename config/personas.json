@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Scout",
+    "role": "finds potentially interesting stories"
+  },
+  {
+    "name": "Analyst",
+    "role": "explains why it matters"
+  },
+  {
+    "name": "Skeptic",
+    "role": "rejects hype and weak stories"
+  },
+  {
+    "name": "Editor",
+    "role": "turns it into a concise post"
+  },
+  {
+    "name": "CEO",
+    "role": "makes the final publish decision"
+  }
+]

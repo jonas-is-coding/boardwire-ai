@@ -1,0 +1,43 @@
+[
+  {
+    "name": "OpenAI Blog",
+    "url": "https://openai.com/news/rss.xml",
+    "fallback_urls": [
+      "https://openai.com/blog/rss.xml"
+    ],
+    "enabled": true
+  },
+  {
+    "name": "Google DeepMind Blog",
+    "url": "https://deepmind.google/discover/blog/rss.xml",
+    "enabled": true
+  },
+  {
+    "name": "Hugging Face Blog",
+    "url": "https://huggingface.co/blog/feed.xml",
+    "enabled": true
+  },
+  {
+    "name": "arXiv cs.AI",
+    "url": "https://export.arxiv.org/rss/cs.AI",
+    "enabled": true
+  },
+  {
+    "name": "arXiv cs.LG",
+    "url": "https://export.arxiv.org/rss/cs.LG",
+    "enabled": true
+  },
+  {
+    "name": "Papers with Code Latest",
+    "url": "https://paperswithcode.com/rss/latest",
+    "enabled": true
+  },
+  {
+    "name": "GitHub Blog AI & ML",
+    "url": "https://github.blog/ai-and-ml/feed/",
+    "fallback_urls": [
+      "https://github.blog/engineering/feed/"
+    ],
+    "enabled": true
+  }
+]

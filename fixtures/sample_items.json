@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Open model reaches top benchmark tier for code generation",
+    "source": "Hugging Face Blog",
+    "link": "https://huggingface.co/blog/open-code-model-benchmarks",
+    "published_at": "2026-05-10T10:30:00Z",
+    "summary": "A new open-source model family posts strong benchmark results on code tasks with transparent eval methodology and reproducible checkpoints."
+  },
+  {
+    "title": "DeepMind introduces robotics agent with longer-horizon planning",
+    "source": "Google DeepMind Blog",
+    "link": "https://deepmind.google/discover/blog/robotics-agent-long-horizon",
+    "published_at": "2026-05-10T08:15:00Z",
+    "summary": "The team shares research progress on a robotics agent that combines vision-language planning with policy adaptation for multi-step tasks."
+  },
+  {
+    "title": "arXiv: Efficient LLM routing reduces inference cost in agent systems",
+    "source": "arXiv cs.LG",
+    "link": "https://arxiv.org/abs/2605.01234",
+    "published_at": "2026-05-09T19:20:00Z",
+    "summary": "Researchers propose a routing framework that selects smaller or larger models dynamically, cutting serving cost while keeping quality stable."
+  },
+  {
+    "title": "OpenAI releases evaluation notes for multimodal safety benchmark",
+    "source": "OpenAI Blog",
+    "link": "https://openai.com/news/multimodal-safety-benchmark-notes",
+    "published_at": "2026-05-09T13:45:00Z",
+    "summary": "The post details methodology, failure classes, and open questions for benchmarking multimodal model safety at scale."
+  },
+  {
+    "title": "Startup launches AI meeting summaries for niche vertical",
+    "source": "GitHub Blog AI & ML",
+    "link": "https://github.blog/ai-and-ml/startup-ai-meeting-summaries",
+    "published_at": "2026-05-08T16:10:00Z",
+    "summary": "A product update describes AI-generated meeting summaries and integrations, but includes limited technical depth."
+  },
+  {
+    "title": "Papers with Code: incremental update to leaderboard UI",
+    "source": "Papers with Code Latest",
+    "link": "https://paperswithcode.com/latest/leaderboard-ui-update",
+    "published_at": "2026-05-08T09:00:00Z",
+    "summary": "A platform update improves filtering and layout for paper leaderboards without introducing new research results."
+  },
+  {
+    "title": "Opinion: AI will replace every job next month",
+    "source": "Random Tech Blog",
+    "link": "https://example.com/opinion-ai-replace-every-job",
+    "published_at": "2026-05-07T11:00:00Z",
+    "summary": "A hype-driven opinion piece makes broad claims without evidence, methodology, or links to credible research."
+  },
+  {
+    "title": "Celebrity shares favorite chatbot prompts",
+    "source": "Lifestyle News",
+    "link": "https://example.com/celebrity-chatbot-prompts",
+    "published_at": "2026-05-07T07:20:00Z",
+    "summary": "A light entertainment article with little technical substance and no relevance to model, benchmark, or research progress."
+  }
+]

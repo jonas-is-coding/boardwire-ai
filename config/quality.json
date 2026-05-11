@@ -1,0 +1,16 @@
+{
+  "max_post_length": 280,
+  "min_llm_score": 60,
+  "min_rule_score": 5,
+  "banned_phrases": [
+    "game changer",
+    "revolutionary",
+    "will change everything",
+    "you won't believe"
+  ],
+  "generic_phrases": [
+    "this is interesting",
+    "ai is changing everything",
+    "big news in ai"
+  ]
+}

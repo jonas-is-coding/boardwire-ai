@@ -1,0 +1,71 @@
+name: Boardwire Collect with LLM
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "How many newest unseen items to process"
+        required: true
+        default: "8"
+      max_llm_items:
+        description: "Maximum items evaluated by LLM"
+        required: true
+        default: "3"
+      max_posts_per_day:
+        description: "Maximum approved posts allowed per day"
+        required: true
+        default: "3"
+      llm_provider:
+        description: "LLM provider to use"
+        required: true
+        default: "gemini"
+        type: choice
+        options:
+          - gemini
+          - openai
+          - none
+
+permissions:
+  contents: write
+
+jobs:
+  collect_llm:
+    runs-on: ubuntu-latest
+    env:
+      BOARDWIRE_LLM_PROVIDER: ${{ inputs.llm_provider }}
+      BOARDWIRE_MAX_LLM_ITEMS: ${{ inputs.max_llm_items }}
+      BOARDWIRE_MAX_POSTS_PER_DAY: ${{ inputs.max_posts_per_day }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run LLM collection with review mode
+        run: python -m src.main --limit ${{ inputs.limit }} --llm-provider ${{ inputs.llm_provider }} --max-llm-items ${{ inputs.max_llm_items }} --max-posts-per-day ${{ inputs.max_posts_per_day }} --review --quality-report
+
+      - name: Commit updated data files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data/drafts.json data/seen_items.json data/review_queue.json
+
+          if git diff --cached --quiet; then
+            echo "No data changes to commit"
+          else
+            git commit -m "chore: update LLM-collected drafts and review queue"
+            git push
+          fi

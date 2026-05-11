@@ -1,0 +1,49 @@
+name: Boardwire Publish Bluesky
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish_bluesky:
+    runs-on: ubuntu-latest
+    environment: production
+    env:
+      BOARDWIRE_PUBLISHER: bluesky
+      BOARDWIRE_REAL_PUBLISH_ENABLED: true
+      BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+      BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Publish approved to Bluesky (real)
+        run: python -m src.main --publish-approved --publisher bluesky --confirm-real-publish
+
+      - name: Commit publishing state files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data/published_posts.json data/review_queue.json
+
+          if git diff --cached --quiet; then
+            echo "No publish state changes to commit"
+          else
+            git commit -m "chore: update bluesky published posts"
+            git push
+          fi

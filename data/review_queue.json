@@ -1,0 +1,74 @@
+[
+  {
+    "id": "6aa8b24d9bbf",
+    "status": "published_dry_run",
+    "created_at": "2026-05-11T14:46:10.322881Z",
+    "score": 4,
+    "reason": "Matched keywords: model, benchmark",
+    "proposed_post": "Draft candidate: Open model reaches top benchmark tier for code generation (Hugging Face Blog) | Score 4. https://huggingface.co/blog/open-code-model-benchmarks",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Open model reaches top benchmark tier for code generation",
+      "source": "Hugging Face Blog",
+      "link": "https://huggingface.co/blog/open-code-model-benchmarks"
+    },
+    "reviewed_at": "2026-05-11T14:49:24.864169Z",
+    "published_at": "2026-05-11T14:49:24.893665Z"
+  },
+  {
+    "id": "cfa976b906d6",
+    "status": "pending_review",
+    "created_at": "2026-05-11T14:46:10.322947Z",
+    "score": 7,
+    "reason": "Matched keywords: agent, robotics, research",
+    "proposed_post": "Draft candidate: DeepMind introduces robotics agent with longer-horizon planning (Google DeepMind Blog) | Score 7. https://deepmind.google/discover/blog/robotics-agent-long-horizon",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "DeepMind introduces robotics agent with longer-horizon planning",
+      "source": "Google DeepMind Blog",
+      "link": "https://deepmind.google/discover/blog/robotics-agent-long-horizon"
+    }
+  },
+  {
+    "id": "0a4180bb894d",
+    "status": "pending_review",
+    "created_at": "2026-05-11T14:46:10.322957Z",
+    "score": 10,
+    "reason": "Matched keywords: model, agent, research, llm",
+    "proposed_post": "Draft candidate: arXiv: Efficient LLM routing reduces inference cost in agent systems (arXiv cs.LG) | Score 10. https://arxiv.org/abs/2605.01234",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "arXiv: Efficient LLM routing reduces inference cost in agent systems",
+      "source": "arXiv cs.LG",
+      "link": "https://arxiv.org/abs/2605.01234"
+    }
+  },
+  {
+    "id": "d9b5c788a59b",
+    "status": "pending_review",
+    "created_at": "2026-05-11T14:46:10.322964Z",
+    "score": 7,
+    "reason": "Matched keywords: ai, model, benchmark",
+    "proposed_post": "Draft candidate: OpenAI releases evaluation notes for multimodal safety benchmark (OpenAI Blog) | Score 7. https://openai.com/news/multimodal-safety-benchmark-notes",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "OpenAI releases evaluation notes for multimodal safety benchmark",
+      "source": "OpenAI Blog",
+      "link": "https://openai.com/news/multimodal-safety-benchmark-notes"
+    }
+  },
+  {
+    "id": "92a9b594ecf3",
+    "status": "pending_review",
+    "created_at": "2026-05-11T14:46:10.322970Z",
+    "score": 3,
+    "reason": "Matched keywords: ai",
+    "proposed_post": "Draft candidate: Startup launches AI meeting summaries for niche vertical (GitHub Blog AI & ML) | Score 3. https://github.blog/ai-and-ml/startup-ai-meeting-summaries",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Startup launches AI meeting summaries for niche vertical",
+      "source": "GitHub Blog AI & ML",
+      "link": "https://github.blog/ai-and-ml/startup-ai-meeting-summaries"
+    }
+  }
+]
