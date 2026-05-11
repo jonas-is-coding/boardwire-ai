@@ -8,11 +8,6 @@
     "enabled": true
   },
   {
-    "name": "Google DeepMind Blog",
-    "url": "https://deepmind.google/discover/blog/rss.xml",
-    "enabled": true
-  },
-  {
     "name": "Hugging Face Blog",
     "url": "https://huggingface.co/blog/feed.xml",
     "enabled": true
@@ -25,11 +20,6 @@
   {
     "name": "arXiv cs.LG",
     "url": "https://export.arxiv.org/rss/cs.LG",
-    "enabled": true
-  },
-  {
-    "name": "Papers with Code Latest",
-    "url": "https://paperswithcode.com/rss/latest",
     "enabled": true
   },
   {

@@ -24,12 +24,45 @@ def _normalize(text: str) -> str:
     return re.sub(r"\s+", " ", text.strip().lower())
 
 
-def _has_claim_or_insight(text: str) -> bool:
+def _has_claim_or_insight(text: str, context_text: str | None = None) -> bool:
     t = _normalize(text)
-    if len(t.split()) < 6:
+    if len(t.split()) < 5:
         return False
-    indicators = ["because", "shows", "introduces", "reveals", "improves", "reduces", "benchmark", "research", "agent", "model"]
-    return any(word in t for word in indicators)
+
+    indicators = [
+        "because",
+        "shows",
+        "signals",
+        "means",
+        "matters",
+        "could",
+        "enables",
+        "reduces",
+        "improves",
+        "benchmark",
+        "model",
+        "agent",
+        "developer",
+        "research",
+        "open-source",
+        "open source",
+        "robotics",
+        "training",
+        "inference",
+    ]
+    if any(word in t for word in indicators):
+        return True
+
+    if context_text:
+        ctx = _normalize(context_text)
+        post_tokens = set(re.findall(r"[a-z0-9-]{4,}", t))
+        ctx_tokens = set(re.findall(r"[a-z0-9-]{4,}", ctx))
+        overlap = post_tokens & ctx_tokens
+        # Accept when the post carries at least one concrete technical token from source text.
+        if overlap:
+            return True
+
+    return False
 
 
 def _near_duplicate(text: str, history: list[str]) -> bool:
@@ -67,6 +100,7 @@ def check_quality(
     is_llm_mode: bool,
     config: QualityConfig,
     history_posts: list[str],
+    context_text: str | None = None,
 ) -> QualityResult:
     reasons: list[str] = []
     normalized = _normalize(post)
@@ -80,7 +114,7 @@ def check_quality(
     if source_link is None or not source_link.strip():
         reasons.append("Source link is missing")
 
-    if not _has_claim_or_insight(post):
+    if not _has_claim_or_insight(post, context_text=context_text):
         reasons.append("Post lacks a clear claim or insight")
 
     for phrase in config.generic_phrases:

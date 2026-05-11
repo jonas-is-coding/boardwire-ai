@@ -287,6 +287,7 @@ def _publish_approved(args, logger) -> int:
             is_llm_mode=bool(item.get("is_llm_mode", False)),
             config=quality_config,
             history_posts=history,
+            context_text=f"{source_item.get('title', '')} {item.get('reason', '')}",
         )
         if not quality.passed:
             logger.warning("Quality reject: %s (%s)", rid, "; ".join(quality.reasons))
@@ -359,6 +360,7 @@ def _self_check_writer(logger) -> int:
             is_llm_mode=False,
             config=quality_config,
             history_posts=history,
+            context_text=f"{item.title} {item.summary}",
         )
 
         status = "PASS" if quality.passed else "REJECT"
@@ -516,15 +518,16 @@ def run(argv: list[str] | None = None) -> int:
     JsonStore.save(DRAFTS_PATH, drafts_data)
     JsonStore.save(SEEN_ITEMS_PATH, updated_seen)
 
-    approved = sum(1 for d in created_drafts if d.should_post)
-    rejected = len(created_drafts) - approved
+    evaluator_approved = sum(1 for d in created_drafts if d.should_post)
+    evaluator_rejected = len(created_drafts) - evaluator_approved
+    quality_pass = 0
+    quality_reject = 0
+    saved_to_review_queue = 0
 
     if args.review:
         queue_items = _queue_from_drafts(created_drafts)
         history = _history_posts(existing_drafts_data, review_queue_data, published_data)
         passed_queue_items: list[dict] = []
-        quality_pass = 0
-        quality_reject = 0
         today = datetime.now(timezone.utc).date()
         existing_today = 0
         for q in review_queue_data:
@@ -537,25 +540,31 @@ def run(argv: list[str] | None = None) -> int:
         remaining_today = max(0, max_posts_per_day - existing_today)
 
         for item in queue_items:
+            source_title = item.get("source_item", {}).get("title", "Untitled")
+            proposed_post = item.get("proposed_post", "")
+            score_val = int(item.get("score") or 0)
             is_llm_mode = llm_mode_by_link.get(item["source_item"]["link"], False)
             item["is_llm_mode"] = is_llm_mode
             quality = check_quality(
-                post=item.get("proposed_post", ""),
+                post=proposed_post,
                 source_link=item.get("source_item", {}).get("link"),
-                score=int(item.get("score") or 0),
+                score=score_val,
                 is_llm_mode=is_llm_mode,
                 config=quality_config,
                 history_posts=history,
+                context_text=f"{source_title} {item.get('reason', '')}",
             )
             if quality.passed:
                 if remaining_today <= 0:
                     quality_reject += 1
                     logger.warning("Quality reject: daily post cap reached (%d)", max_posts_per_day)
                     if args.quality_report:
-                        logger.info("Quality report [REJECT] %s: daily post cap reached (%d)", item.get("id"), max_posts_per_day)
+                        logger.info("Quality report [REJECT] ID=%s | title=%s | score=%d", item.get("id"), source_title, score_val)
+                        logger.info("Proposed post: %s", proposed_post)
+                        logger.info("Reason: daily post cap reached (%d). Existing today=%d", max_posts_per_day, existing_today)
                     continue
                 passed_queue_items.append(item)
-                history.append(item.get("proposed_post", ""))
+                history.append(proposed_post)
                 quality_pass += 1
                 remaining_today -= 1
                 logger.info("Quality pass: %s", item.get("id"))
@@ -565,11 +574,14 @@ def run(argv: list[str] | None = None) -> int:
 
             if args.quality_report:
                 status = "PASS" if quality.passed else "REJECT"
-                logger.info("Quality report [%s] %s: %s", status, item.get("id"), "; ".join(quality.reasons) if quality.reasons else "passed")
+                logger.info("Quality report [%s] ID=%s | title=%s | score=%d", status, item.get("id"), source_title, score_val)
+                logger.info("Proposed post: %s", proposed_post)
+                logger.info("Reason: %s", "; ".join(quality.reasons) if quality.reasons else "passed")
 
         review_queue_data.extend(passed_queue_items)
         JsonStore.save(REVIEW_QUEUE_PATH, review_queue_data)
-        logger.info("Saved %d drafts to review queue", len(passed_queue_items))
+        saved_to_review_queue = len(passed_queue_items)
+        logger.info("Saved %d drafts to review queue", saved_to_review_queue)
         logger.info("Quality gate summary: passed=%d rejected=%d", quality_pass, quality_reject)
 
     logger.info("Boardwire AI dry run complete")
@@ -581,7 +593,11 @@ def run(argv: list[str] | None = None) -> int:
     logger.info("LLM evaluated %d items", llm_evaluated)
     if llm_config.provider == "gemini":
         logger.info("Gemini evaluated %d items", gemini_evaluated)
-    logger.info("Approved: %d | Rejected: %d", approved, rejected)
+    logger.info("Evaluator approved: %d", evaluator_approved)
+    logger.info("Evaluator rejected: %d", evaluator_rejected)
+    logger.info("Quality passed: %d", quality_pass)
+    logger.info("Quality rejected: %d", quality_reject)
+    logger.info("Saved to review queue: %d", saved_to_review_queue)
 
     if created_drafts:
         logger.info("Drafts written to: %s", DRAFTS_PATH)
