@@ -73,5 +73,125 @@
       "link": "https://deepmind.google/discover/blog/robotics-agent-long-horizon"
     },
     "is_llm_mode": false
+  },
+  {
+    "id": "7c5d7b97cf32",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-11T15:39:12.729466Z",
+    "score": 15,
+    "reason": "Matched keywords: ai, model, agent, benchmark",
+    "proposed_post": "Agentick: A Unified Benchmark for General Sequential Decision-Making Agents. The practical question is how much reliability improves when agent tooling is used in real developer workflows.",
+    "source_angle": "Rule-based fallback",
+    "source_item": {
+      "title": "Agentick: A Unified Benchmark for General Sequential Decision-Making Agents",
+      "source": "arXiv cs.AI",
+      "link": "https://arxiv.org/abs/2605.06869"
+    },
+    "is_llm_mode": false
+  },
+  {
+    "id": "8ed39322cc97",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-11T15:39:12.729750Z",
+    "score": 8,
+    "reason": "Matched keywords: ai, model, llm",
+    "proposed_post": "How Well Do LLMs Perform on the Simplest Long-Chain Reasoning Tasks: An Empirical Study on the Equivalence Class Problem. Benchmark movement matters most when evaluation setup is transparent and results transfer to production tasks.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "How Well Do LLMs Perform on the Simplest Long-Chain Reasoning Tasks: An Empirical Study on the Equivalence Class Problem",
+      "source": "arXiv cs.AI",
+      "link": "https://arxiv.org/abs/2605.06882"
+    },
+    "is_llm_mode": false
+  },
+  {
+    "id": "177c2fdd1280",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-11T15:39:12.729790Z",
+    "score": 8,
+    "reason": "Matched keywords: ai, model, agent",
+    "proposed_post": "Beyond the Black Box: Interpretability of Agentic AI Tool Use. The practical question is how much reliability improves when agent tooling is used in real developer workflows.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Beyond the Black Box: Interpretability of Agentic AI Tool Use",
+      "source": "arXiv cs.AI",
+      "link": "https://arxiv.org/abs/2605.06890"
+    },
+    "is_llm_mode": false
+  },
+  {
+    "id": "04fa741abaa0",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-11T15:39:12.729829Z",
+    "score": 8,
+    "reason": "Matched keywords: ai, model, llm",
+    "proposed_post": "Mitigating Cognitive Bias in RLHF by Altering Rationality. The useful part is the method and evidence quality, not just headline claims from a single result.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Mitigating Cognitive Bias in RLHF by Altering Rationality",
+      "source": "arXiv cs.AI",
+      "link": "https://arxiv.org/abs/2605.06895"
+    },
+    "is_llm_mode": false
+  },
+  {
+    "id": "571cc1c12ca2",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-11T15:39:12.729901Z",
+    "score": 8,
+    "reason": "Matched keywords: ai, model, agent",
+    "proposed_post": "Self-Programmed Execution for Language-Model Agents. The practical question is how much reliability improves when agent tooling is used in real developer workflows.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Self-Programmed Execution for Language-Model Agents",
+      "source": "arXiv cs.AI",
+      "link": "https://arxiv.org/abs/2605.06898"
+    },
+    "is_llm_mode": false
+  },
+  {
+    "id": "4f6c464225fc",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-11T15:39:12.729946Z",
+    "score": 10,
+    "reason": "Matched keywords: ai, model, agent, benchmark",
+    "proposed_post": "Multi-Objective Constraint Inference using Inverse reinforcement learning. The practical question is how much reliability improves when agent tooling is used in real developer workflows.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Multi-Objective Constraint Inference using Inverse reinforcement learning",
+      "source": "arXiv cs.AI",
+      "link": "https://arxiv.org/abs/2605.06951"
+    },
+    "is_llm_mode": false
+  },
+  {
+    "id": "0c764279a00a",
+    "status": "pending_review",
+    "created_at": "2026-05-11T15:39:11.588952Z",
+    "score": 8,
+    "reason": "Matched keywords: ai, model, llm",
+    "proposed_post": "Extracting Search Trees from LLM Reasoning Traces Reveals Myopic Planning. The useful part is the method and evidence quality, not just headline claims from a single result.",
+    "source_angle": "Rule-based fallback",
+    "source_item": {
+      "title": "Extracting Search Trees from LLM Reasoning Traces Reveals Myopic Planning",
+      "source": "arXiv cs.AI",
+      "link": "https://arxiv.org/abs/2605.06840"
+    },
+    "is_llm_mode": false
+  },
+  {
+    "id": "3f4d5e3d04ea",
+    "status": "pending_review",
+    "created_at": "2026-05-11T15:39:12.308178Z",
+    "score": 8,
+    "reason": "Matched keywords: ai, model, agent",
+    "proposed_post": "AGWM: Affordance-Grounded World Models for Environments with Compositional Prerequisites. The practical question is how much reliability improves when agent tooling is used in real developer workflows.",
+    "source_angle": "Rule-based fallback",
+    "source_item": {
+      "title": "AGWM: Affordance-Grounded World Models for Environments with Compositional Prerequisites",
+      "source": "arXiv cs.AI",
+      "link": "https://arxiv.org/abs/2605.06841"
+    },
+    "is_llm_mode": false
   }
 ]
