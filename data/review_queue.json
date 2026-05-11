@@ -1,7 +1,7 @@
 [
   {
     "id": "65849460d052",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-11T15:32:59.069738Z",
     "score": 10,
     "reason": "Matched keywords: model, agent, research, llm",
@@ -12,11 +12,12 @@
       "source": "arXiv cs.LG",
       "link": "https://arxiv.org/abs/2605.01234"
     },
-    "is_llm_mode": false
+    "is_llm_mode": false,
+    "rejected_at": "2026-05-11T15:40:52.798153Z"
   },
   {
     "id": "88cc0e07a1e6",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-11T15:32:59.069747Z",
     "score": 7,
     "reason": "Matched keywords: ai, model, benchmark",
@@ -27,11 +28,12 @@
       "source": "OpenAI Blog",
       "link": "https://openai.com/news/multimodal-safety-benchmark-notes"
     },
-    "is_llm_mode": false
+    "is_llm_mode": false,
+    "rejected_at": "2026-05-11T15:40:52.812519Z"
   },
   {
     "id": "fe83dd7fa4de",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-11T15:32:59.069781Z",
     "score": 5,
     "reason": "Matched keywords: ai, research",
@@ -42,11 +44,12 @@
       "source": "Random Tech Blog",
       "link": "https://example.com/opinion-ai-replace-every-job"
     },
-    "is_llm_mode": false
+    "is_llm_mode": false,
+    "rejected_at": "2026-05-11T15:40:52.819762Z"
   },
   {
     "id": "433c05b99ae8",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-11T15:32:59.069789Z",
     "score": 9,
     "reason": "Matched keywords: ai, model, benchmark, research",
@@ -57,7 +60,8 @@
       "source": "Lifestyle News",
       "link": "https://example.com/celebrity-chatbot-prompts"
     },
-    "is_llm_mode": false
+    "is_llm_mode": false,
+    "rejected_at": "2026-05-11T15:40:52.805016Z"
   },
   {
     "id": "22077dee4a64",

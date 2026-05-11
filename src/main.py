@@ -35,7 +35,7 @@ from src.storage.json_store import JsonStore
 from src.utils.logger import get_logger
 from src.writer.post_writer import generate_post
 
-VALID_REVIEW_STATUSES = {"pending_review", "approved", "rejected", "published_dry_run", "deferred_due_to_cap"}
+VALID_REVIEW_STATUSES = {"pending_review", "approved", "rejected", "published_dry_run", "deferred_due_to_cap", "expired_deferred"}
 VALID_PUBLISHERS = {"dry_run", "bluesky"}
 
 
@@ -96,6 +96,7 @@ def _build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--use-fixtures", action="store_true", help="Load offline fixture items instead of RSS sources.")
     parser.add_argument("--review", action="store_true", help="Save approved drafts to review queue with pending status.")
     parser.add_argument("--list-review-queue", action="store_true", help="List pending review queue items.")
+    parser.add_argument("--list-deferred", action="store_true", help="List deferred_due_to_cap items.")
     parser.add_argument("--approve-review", type=str, default=None, help="Approve one review queue item by ID.")
     parser.add_argument("--reject-review", type=str, default=None, help="Reject one review queue item by ID.")
     parser.add_argument("--publish-approved", action="store_true", help="Publish approved review items in dry-run mode.")
@@ -145,6 +146,7 @@ def _load_quality_config() -> QualityConfig:
         max_post_length=int(raw.get("max_post_length", 280)),
         min_llm_score=int(raw.get("min_llm_score", 60)),
         min_rule_score=int(raw.get("min_rule_score", 5)),
+        max_defer_count=int(raw.get("max_defer_count", 3)),
         duplicate_lookback_hours=int(raw.get("duplicate_lookback_hours", 168)),
         fixture_duplicate_lookback_hours=int(raw.get("fixture_duplicate_lookback_hours", 1)),
         banned_phrases=list(raw.get("banned_phrases", [])),
@@ -247,6 +249,27 @@ def _generate_review_report(logger) -> int:
     pending = generate_review_queue_report(REVIEW_QUEUE_PATH, REVIEW_REPORT_PATH)
     logger.info("Generated review report: %s", REVIEW_REPORT_PATH)
     logger.info("Pending items in report: %d", pending)
+    return 0
+
+
+def _list_deferred(logger) -> int:
+    queue = JsonStore.load(REVIEW_QUEUE_PATH, default=[])
+    deferred = [item for item in queue if item.get("status") == "deferred_due_to_cap"]
+    if not deferred:
+        logger.info("Deferred queue is empty")
+        return 0
+    logger.info("Deferred items: %d", len(deferred))
+    deferred_sorted = sorted(deferred, key=lambda x: int(x.get("score") or 0), reverse=True)
+    for item in deferred_sorted:
+        src = item.get("source_item", {})
+        logger.info(
+            "ID: %s | Title: %s | Score: %s | Defer count: %s | Deferred at: %s",
+            item.get("id"),
+            src.get("title", "Untitled"),
+            item.get("score"),
+            item.get("defer_count", 1),
+            item.get("deferred_at", ""),
+        )
     return 0
 
 
@@ -482,6 +505,8 @@ def run(argv: list[str] | None = None) -> int:
 
     if args.list_review_queue:
         return _list_review_queue(logger)
+    if args.list_deferred:
+        return _list_deferred(logger)
     if args.generate_review_report:
         return _generate_review_report(logger)
     if args.self_check_writer:
@@ -552,8 +577,54 @@ def run(argv: list[str] | None = None) -> int:
         logger.info("Total unique fetched items: %d", len(all_items))
         return 0
 
-    unseen_items = [item for item in all_items if item.link not in seen_links]
-    newest = sorted(unseen_items, key=lambda x: x.published_at, reverse=True)[: args.limit]
+    # Load deferred items first and expire over-retried entries.
+    max_defer_count = max(1, quality_config.max_defer_count)
+    deferred_candidates: list[dict] = []
+    deferred_expired = 0
+    for item in review_queue_data:
+        if item.get("status") != "deferred_due_to_cap":
+            continue
+        defer_count = int(item.get("defer_count") or 1)
+        if defer_count > max_defer_count:
+            item["status"] = "expired_deferred"
+            logger.warning("Deferred item expired after max retries: %s", item.get("id"))
+            deferred_expired += 1
+            continue
+
+        src = item.get("source_item", {})
+        link = str(src.get("link", "")).strip()
+        if not link:
+            continue
+        deferred_candidates.append(
+            {
+                "id": item.get("id"),
+                "queue_item": item,
+                "feed_item": FeedItem(
+                    source=str(src.get("source", "Unknown Source")),
+                    title=str(src.get("title", "Untitled")),
+                    link=link,
+                    summary=str(item.get("reason", "")),
+                    published_at=_parse_dt(item.get("created_at")),
+                ),
+                "score": int(item.get("score") or 0),
+                "is_deferred": True,
+            }
+        )
+    deferred_candidates.sort(key=lambda x: x["score"], reverse=True)
+    logger.info("Loaded deferred items: %d", len(deferred_candidates))
+    if deferred_expired:
+        logger.info("Deferred items expired this run: %d", deferred_expired)
+
+    deferred_links = {d["feed_item"].link for d in deferred_candidates}
+    unseen_items = [item for item in all_items if item.link not in seen_links and item.link not in deferred_links]
+    fresh_candidates = sorted(unseen_items, key=lambda x: x.published_at, reverse=True)
+
+    candidate_pipeline: list[dict] = []
+    for d in deferred_candidates:
+        candidate_pipeline.append({"feed_item": d["feed_item"], "is_deferred": True, "queue_item": d["queue_item"]})
+    for f in fresh_candidates:
+        candidate_pipeline.append({"feed_item": f, "is_deferred": False, "queue_item": None})
+    candidate_pipeline = candidate_pipeline[: args.limit]
 
     llm_requested = args.llm or llm_config.provider == "openai"
     llm_requested = llm_requested or llm_config.provider == "gemini"
@@ -577,11 +648,19 @@ def run(argv: list[str] | None = None) -> int:
     created_drafts: list[DraftPost] = []
     processed_links: list[str] = []
     deferred_due_to_cap_links: set[str] = set()
+    deferred_reprocessed = 0
+    deferred_became_review = 0
     llm_evaluated = 0
     gemini_evaluated = 0
     llm_mode_by_link: dict[str, bool] = {}
 
-    for idx, item in enumerate(newest):
+    for idx, candidate in enumerate(candidate_pipeline):
+        item = candidate["feed_item"]
+        is_deferred = bool(candidate["is_deferred"])
+        deferred_queue_item = candidate["queue_item"]
+        if is_deferred:
+            logger.info("Reprocessing deferred item: %s", item.title)
+            deferred_reprocessed += 1
         use_llm_for_item = llm_enabled and idx < llm_config.max_items
         if use_llm_for_item:
             decision = evaluate_with_optional_llm(
@@ -618,6 +697,10 @@ def run(argv: list[str] | None = None) -> int:
         drafts_data.append(asdict(draft))
         created_drafts.append(draft)
         processed_links.append(item.link)
+        if deferred_queue_item is not None:
+            # keep reference for post-quality status transitions
+            deferred_queue_item["_reprocessed"] = True
+            deferred_queue_item["_draft_created_at"] = draft.created_at
 
     JsonStore.save(DRAFTS_PATH, drafts_data)
 
@@ -629,6 +712,12 @@ def run(argv: list[str] | None = None) -> int:
 
     if args.review:
         queue_items = _queue_from_drafts(created_drafts)
+        deferred_queue_by_link: dict[str, dict] = {}
+        for q in review_queue_data:
+            if q.get("status") == "deferred_due_to_cap":
+                link = str(q.get("source_item", {}).get("link", "")).strip()
+                if link:
+                    deferred_queue_by_link[link] = q
         now_dt = datetime.now(timezone.utc)
         lookback_hours = (
             quality_config.fixture_duplicate_lookback_hours if args.use_fixtures else quality_config.duplicate_lookback_hours
@@ -656,13 +745,16 @@ def run(argv: list[str] | None = None) -> int:
 
         for item in queue_items:
             source_title = item.get("source_item", {}).get("title", "Untitled")
+            source_link = str(item.get("source_item", {}).get("link", "")).strip()
             proposed_post = item.get("proposed_post", "")
             score_val = int(item.get("score") or 0)
-            is_llm_mode = llm_mode_by_link.get(item["source_item"]["link"], False)
+            is_llm_mode = llm_mode_by_link.get(source_link, False)
             item["is_llm_mode"] = is_llm_mode
+            linked_deferred = deferred_queue_by_link.get(source_link)
+            is_reprocessed_deferred = bool(linked_deferred and linked_deferred.get("_reprocessed"))
             quality = check_quality(
                 post=proposed_post,
-                source_link=item.get("source_item", {}).get("link"),
+                source_link=source_link,
                 score=score_val,
                 is_llm_mode=is_llm_mode,
                 config=quality_config,
@@ -673,22 +765,55 @@ def run(argv: list[str] | None = None) -> int:
                 if remaining_today <= 0:
                     quality_reject += 1
                     logger.warning("Quality reject: daily post cap reached (%d)", max_posts_per_day)
-                    item["status"] = "deferred_due_to_cap"
-                    review_queue_data.append(item)
-                    deferred_due_to_cap_links.add(item.get("source_item", {}).get("link", ""))
+                    if is_reprocessed_deferred:
+                        linked_deferred["defer_count"] = int(linked_deferred.get("defer_count") or 1) + 1
+                        linked_deferred["deferred_at"] = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+                        if int(linked_deferred["defer_count"]) > max_defer_count:
+                            linked_deferred["status"] = "expired_deferred"
+                            logger.warning("Deferred item expired after max retries: %s", linked_deferred.get("id"))
+                        else:
+                            linked_deferred["status"] = "deferred_due_to_cap"
+                        deferred_due_to_cap_links.add(source_link)
+                    else:
+                        item["status"] = "deferred_due_to_cap"
+                        item["deferred_at"] = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+                        item["defer_count"] = 1
+                        item["original_score"] = score_val
+                        item["original_reason"] = item.get("reason", "")
+                        review_queue_data.append(item)
+                        deferred_due_to_cap_links.add(source_link)
                     if args.quality_report:
                         logger.info("Quality report [REJECT] ID=%s | title=%s | score=%d", item.get("id"), source_title, score_val)
                         logger.info("Proposed post: %s", proposed_post)
                         logger.info("Reason: daily post cap reached (%d). Existing today=%d", max_posts_per_day, existing_today)
                     continue
-                passed_queue_items.append(item)
-                history.append(proposed_post)
-                quality_pass += 1
-                remaining_today -= 1
-                logger.info("Quality pass: %s", item.get("id"))
+                if is_reprocessed_deferred:
+                    linked_deferred["status"] = "pending_review"
+                    linked_deferred["score"] = score_val
+                    linked_deferred["reason"] = item.get("reason", "")
+                    linked_deferred["proposed_post"] = proposed_post
+                    linked_deferred["source_angle"] = item.get("source_angle", linked_deferred.get("source_angle", ""))
+                    linked_deferred["is_llm_mode"] = is_llm_mode
+                    linked_deferred.pop("deferred_at", None)
+                    linked_deferred.pop("defer_count", None)
+                    linked_deferred.pop("original_score", None)
+                    linked_deferred.pop("original_reason", None)
+                    quality_pass += 1
+                    remaining_today -= 1
+                    logger.info("Quality pass: %s", linked_deferred.get("id"))
+                    deferred_became_review += 1
+                else:
+                    passed_queue_items.append(item)
+                    history.append(proposed_post)
+                    quality_pass += 1
+                    remaining_today -= 1
+                    logger.info("Quality pass: %s", item.get("id"))
             else:
                 quality_reject += 1
                 logger.warning("Quality reject: %s", "; ".join(quality.reasons))
+                if is_reprocessed_deferred:
+                    linked_deferred["status"] = "rejected"
+                    linked_deferred["rejected_at"] = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
 
             if args.quality_report:
                 status = "PASS" if quality.passed else "REJECT"
@@ -697,6 +822,9 @@ def run(argv: list[str] | None = None) -> int:
                 logger.info("Reason: %s", "; ".join(quality.reasons) if quality.reasons else "passed")
 
         review_queue_data.extend(passed_queue_items)
+        for q in review_queue_data:
+            q.pop("_reprocessed", None)
+            q.pop("_draft_created_at", None)
         JsonStore.save(REVIEW_QUEUE_PATH, review_queue_data)
         generate_review_queue_report(REVIEW_QUEUE_PATH, REVIEW_REPORT_PATH)
         saved_to_review_queue = len(passed_queue_items)
@@ -723,6 +851,9 @@ def run(argv: list[str] | None = None) -> int:
     logger.info("Quality passed: %d", quality_pass)
     logger.info("Quality rejected: %d", quality_reject)
     logger.info("Saved to review queue: %d", saved_to_review_queue)
+    logger.info("Deferred reprocessed: %d", deferred_reprocessed)
+    logger.info("Deferred promoted to review: %d", deferred_became_review)
+    logger.info("Deferred expired: %d", deferred_expired)
 
     if created_drafts:
         logger.info("Drafts written to: %s", DRAFTS_PATH)
