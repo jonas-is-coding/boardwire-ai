@@ -10,6 +10,8 @@ class QualityConfig:
     max_post_length: int
     min_llm_score: int
     min_rule_score: int
+    duplicate_lookback_hours: int
+    fixture_duplicate_lookback_hours: int
     banned_phrases: list[str]
     generic_phrases: list[str]
 

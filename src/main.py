@@ -103,6 +103,7 @@ def _build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--quality-report", action="store_true", help="Print quality gate pass/fail reasons for each candidate.")
     parser.add_argument("--self-check-writer", action="store_true", help="Generate fixture posts and run quality gates as a writer self-check.")
     parser.add_argument("--max-posts-per-day", type=int, default=None, help="Override BOARDWIRE_MAX_POSTS_PER_DAY for this run.")
+    parser.add_argument("--reset-fixture-state", action="store_true", help="Clear fixture-related seen/draft/review state (requires --use-fixtures).")
     return parser
 
 
@@ -141,17 +142,53 @@ def _load_quality_config() -> QualityConfig:
         max_post_length=int(raw.get("max_post_length", 280)),
         min_llm_score=int(raw.get("min_llm_score", 60)),
         min_rule_score=int(raw.get("min_rule_score", 5)),
+        duplicate_lookback_hours=int(raw.get("duplicate_lookback_hours", 168)),
+        fixture_duplicate_lookback_hours=int(raw.get("fixture_duplicate_lookback_hours", 1)),
         banned_phrases=list(raw.get("banned_phrases", [])),
         generic_phrases=list(raw.get("generic_phrases", [])),
     )
 
 
-def _history_posts(drafts_data: list[dict], review_queue_data: list[dict], published_data: list[dict]) -> list[str]:
+def _is_within_lookback(
+    timestamp: str | None,
+    now: datetime,
+    lookback_hours: int,
+    fixture_mode: bool,
+) -> bool:
+    if not timestamp:
+        return not fixture_mode
+    dt = _parse_dt(timestamp)
+    if fixture_mode and not timestamp:
+        return False
+    delta = now - dt
+    return delta.total_seconds() <= lookback_hours * 3600
+
+
+def _history_posts(
+    drafts_data: list[dict],
+    review_queue_data: list[dict],
+    published_data: list[dict],
+    now: datetime,
+    lookback_hours: int,
+    fixture_mode: bool,
+) -> list[str]:
     posts: list[str] = []
-    posts.extend([str(item.get("post_text", "")) for item in drafts_data])
-    posts.extend([str(item.get("proposed_post", "")) for item in review_queue_data])
-    posts.extend([str(item.get("post", "")) for item in published_data])
-    return [p for p in posts if p.strip()]
+    for item in drafts_data:
+        if _is_within_lookback(item.get("created_at"), now, lookback_hours, fixture_mode):
+            post = str(item.get("post_text", ""))
+            if post.strip():
+                posts.append(post)
+    for item in review_queue_data:
+        if _is_within_lookback(item.get("created_at"), now, lookback_hours, fixture_mode):
+            post = str(item.get("proposed_post", ""))
+            if post.strip():
+                posts.append(post)
+    for item in published_data:
+        if _is_within_lookback(item.get("published_at"), now, lookback_hours, fixture_mode):
+            post = str(item.get("post", ""))
+            if post.strip():
+                posts.append(post)
+    return posts
 
 
 def _history_for_publish_item(
@@ -159,16 +196,27 @@ def _history_for_publish_item(
     review_queue_data: list[dict],
     published_data: list[dict],
     review_id: str | None,
+    now: datetime,
+    lookback_hours: int,
 ) -> list[str]:
     posts: list[str] = []
-    posts.extend([str(item.get("post_text", "")) for item in drafts_data if str(item.get("post_text", "")).strip()])
+    for item in drafts_data:
+        if _is_within_lookback(item.get("created_at"), now, lookback_hours, fixture_mode=False):
+            post = str(item.get("post_text", ""))
+            if post.strip():
+                posts.append(post)
     for item in review_queue_data:
         if item.get("id") == review_id:
             continue
-        post = str(item.get("proposed_post", ""))
-        if post.strip():
-            posts.append(post)
-    posts.extend([str(item.get("post", "")) for item in published_data if str(item.get("post", "")).strip()])
+        if _is_within_lookback(item.get("created_at"), now, lookback_hours, fixture_mode=False):
+            post = str(item.get("proposed_post", ""))
+            if post.strip():
+                posts.append(post)
+    for item in published_data:
+        if _is_within_lookback(item.get("published_at"), now, lookback_hours, fixture_mode=False):
+            post = str(item.get("post", ""))
+            if post.strip():
+                posts.append(post)
     return posts
 
 
@@ -250,6 +298,7 @@ def _publish_approved(args, logger) -> int:
     drafts = JsonStore.load(DRAFTS_PATH, default=[])
     quality_config = _load_quality_config()
     now = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+    now_dt = datetime.now(timezone.utc)
     publisher, selected_platform = _resolve_publisher(args, logger)
     if publisher is None:
         return 1
@@ -279,7 +328,14 @@ def _publish_approved(args, logger) -> int:
             continue
 
         post_text = item.get("proposed_post", "")
-        history = _history_for_publish_item(drafts, queue, published, rid)
+        history = _history_for_publish_item(
+            drafts,
+            queue,
+            published,
+            rid,
+            now=now_dt,
+            lookback_hours=max(1, quality_config.duplicate_lookback_hours),
+        )
         quality = check_quality(
             post=post_text,
             source_link=source_link,
@@ -379,6 +435,34 @@ def _self_check_writer(logger) -> int:
     return 0
 
 
+def _reset_fixture_state(logger) -> int:
+    fixtures = _load_fixture_items()
+    fixture_links = {item.link for item in fixtures}
+
+    seen = JsonStore.load(SEEN_ITEMS_PATH, default=[])
+    drafts = JsonStore.load(DRAFTS_PATH, default=[])
+    review = JsonStore.load(REVIEW_QUEUE_PATH, default=[])
+
+    seen_before = len(seen)
+    drafts_before = len(drafts)
+    review_before = len(review)
+
+    seen_after = [link for link in seen if link not in fixture_links]
+    drafts_after = [d for d in drafts if d.get("link") not in fixture_links]
+    review_after = [r for r in review if r.get("source_item", {}).get("link") not in fixture_links]
+
+    JsonStore.save(SEEN_ITEMS_PATH, seen_after)
+    JsonStore.save(DRAFTS_PATH, drafts_after)
+    JsonStore.save(REVIEW_QUEUE_PATH, review_after)
+
+    logger.info("Fixture state reset complete")
+    logger.info("Removed from seen_items: %d", seen_before - len(seen_after))
+    logger.info("Removed from drafts: %d", drafts_before - len(drafts_after))
+    logger.info("Removed from review_queue: %d", review_before - len(review_after))
+    logger.info("published_posts.json unchanged")
+    return 0
+
+
 def run(argv: list[str] | None = None) -> int:
     logger = get_logger()
     args = _build_parser().parse_args(argv)
@@ -387,6 +471,11 @@ def run(argv: list[str] | None = None) -> int:
         return _list_review_queue(logger)
     if args.self_check_writer:
         return _self_check_writer(logger)
+    if args.reset_fixture_state:
+        if not args.use_fixtures:
+            logger.error("--reset-fixture-state is only allowed with --use-fixtures")
+            return 1
+        return _reset_fixture_state(logger)
     if args.approve_review:
         return _update_review_status(args.approve_review, "approved", logger)
     if args.reject_review:
@@ -526,7 +615,19 @@ def run(argv: list[str] | None = None) -> int:
 
     if args.review:
         queue_items = _queue_from_drafts(created_drafts)
-        history = _history_posts(existing_drafts_data, review_queue_data, published_data)
+        now_dt = datetime.now(timezone.utc)
+        lookback_hours = (
+            quality_config.fixture_duplicate_lookback_hours if args.use_fixtures else quality_config.duplicate_lookback_hours
+        )
+        lookback_hours = max(1, lookback_hours)
+        history = _history_posts(
+            existing_drafts_data,
+            review_queue_data,
+            published_data,
+            now=now_dt,
+            lookback_hours=lookback_hours,
+            fixture_mode=args.use_fixtures,
+        )
         passed_queue_items: list[dict] = []
         today = datetime.now(timezone.utc).date()
         existing_today = 0

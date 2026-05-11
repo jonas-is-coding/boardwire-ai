@@ -2,6 +2,8 @@
   "max_post_length": 280,
   "min_llm_score": 60,
   "min_rule_score": 5,
+  "duplicate_lookback_hours": 168,
+  "fixture_duplicate_lookback_hours": 1,
   "banned_phrases": [
     "game changer",
     "revolutionary",
