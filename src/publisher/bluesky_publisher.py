@@ -21,7 +21,7 @@ class BlueskyPublisher:
         source_link: str | None = None,
         image_path: str | None = None,
     ) -> PublishResult:
-        text = post if not source_link else f"{post}\n{source_link}"
+        text = post if not source_link else f"{post}\n🔗 {source_link}"
         text = text[:300]
 
         try:
