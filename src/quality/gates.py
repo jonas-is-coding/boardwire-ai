@@ -103,6 +103,7 @@ def check_quality(
     is_llm_mode: bool,
     config: QualityConfig,
     history_posts: list[str],
+    context: str = "review",
     context_text: str | None = None,
 ) -> QualityResult:
     reasons: list[str] = []
@@ -128,7 +129,7 @@ def check_quality(
         if phrase in normalized:
             reasons.append(f"Banned phrase detected: '{phrase}'")
 
-    if _near_duplicate(post, history_posts):
+    if context in {"review", "publish"} and _near_duplicate(post, history_posts):
         reasons.append("Duplicate or near-duplicate post detected")
 
     min_score = config.min_llm_score if is_llm_mode else config.min_rule_score

@@ -225,6 +225,20 @@ def _history_for_publish_item(
     return posts
 
 
+def _published_history_only(
+    published_data: list[dict],
+    now: datetime,
+    lookback_hours: int,
+) -> list[str]:
+    posts: list[str] = []
+    for item in published_data:
+        if _is_within_lookback(item.get("published_at"), now, lookback_hours, fixture_mode=False):
+            post = str(item.get("post", ""))
+            if post.strip():
+                posts.append(post)
+    return posts
+
+
 def _history_for_review_item(
     drafts_data: list[dict],
     review_queue_data: list[dict],
@@ -372,7 +386,6 @@ def _resolve_publisher(args, logger):
 def _publish_approved(args, logger) -> int:
     queue = JsonStore.load(REVIEW_QUEUE_PATH, default=[])
     published = JsonStore.load(PUBLISHED_POSTS_PATH, default=[])
-    drafts = JsonStore.load(DRAFTS_PATH, default=[])
     quality_config = _load_quality_config()
     now = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
     now_dt = datetime.now(timezone.utc)
@@ -405,11 +418,10 @@ def _publish_approved(args, logger) -> int:
             continue
 
         post_text = item.get("proposed_post", "")
-        history = _history_for_publish_item(
-            drafts,
-            queue,
+        logger.info("Publish quality check for: %s", rid)
+        logger.info("Ignoring draft/review duplicates during publish context")
+        history = _published_history_only(
             published,
-            rid,
             now=now_dt,
             lookback_hours=max(1, quality_config.duplicate_lookback_hours),
         )
@@ -420,6 +432,7 @@ def _publish_approved(args, logger) -> int:
             is_llm_mode=bool(item.get("is_llm_mode", False)),
             config=quality_config,
             history_posts=history,
+            context="publish",
             context_text=f"{source_item.get('title', '')} {item.get('reason', '')}",
         )
         if not quality.passed:
@@ -494,6 +507,7 @@ def _self_check_writer(logger) -> int:
             is_llm_mode=False,
             config=quality_config,
             history_posts=history,
+            context="review",
             context_text=f"{item.title} {item.summary}",
         )
 
@@ -808,6 +822,7 @@ def run(argv: list[str] | None = None) -> int:
                 is_llm_mode=is_llm_mode,
                 config=quality_config,
                 history_posts=history,
+                context="review",
                 context_text=f"{source_title} {item.get('reason', '')}",
             )
             if quality.passed:

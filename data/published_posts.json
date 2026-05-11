@@ -8,5 +8,17 @@
     "source_title": "Open model reaches top benchmark tier for code generation",
     "score": 4,
     "reason": "Matched keywords: model, benchmark"
+  },
+  {
+    "id": "0c764279a00a",
+    "published_at": "2026-05-11T15:48:19.245875Z",
+    "platform": "dry_run",
+    "post": "Extracting Search Trees from LLM Reasoning Traces Reveals Myopic Planning. The useful part is the method and evidence quality, not just headline claims from a single result.",
+    "source_link": "https://arxiv.org/abs/2605.06840",
+    "source_title": "Extracting Search Trees from LLM Reasoning Traces Reveals Myopic Planning",
+    "score": 8,
+    "reason": "Matched keywords: ai, model, llm",
+    "external_id": null,
+    "url": null
   }
 ]
