@@ -531,14 +531,14 @@
     },
     "card_path": null,
     "is_llm_mode": false,
-    "deferred_at": "2026-05-11T20:00:44.075844Z",
-    "defer_count": 1,
+    "deferred_at": "2026-05-11T22:12:03.727825Z",
+    "defer_count": 2,
     "original_score": 5,
     "original_reason": "Matched keywords: ai, model"
   },
   {
     "id": "410c91869ec8",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-11T20:00:43.986006Z",
     "score": 10,
     "reason": "Matched keywords: ai, model, agent, benchmark",
@@ -554,7 +554,8 @@
     "deferred_at": "2026-05-11T20:00:44.169403Z",
     "defer_count": 1,
     "original_score": 10,
-    "original_reason": "Matched keywords: ai, model, agent, benchmark"
+    "original_reason": "Matched keywords: ai, model, agent, benchmark",
+    "rejected_at": "2026-05-11T22:12:03.677625Z"
   },
   {
     "id": "a4ec20fc9d5c",
@@ -571,9 +572,29 @@
     },
     "card_path": null,
     "is_llm_mode": false,
-    "deferred_at": "2026-05-11T20:00:44.223708Z",
-    "defer_count": 1,
+    "deferred_at": "2026-05-11T22:12:03.786670Z",
+    "defer_count": 2,
     "original_score": 5,
     "original_reason": "Matched keywords: ai, model"
+  },
+  {
+    "id": "aaffba8a06c4",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-11T22:12:03.646058Z",
+    "score": 10,
+    "reason": "Matched keywords: ai, model, agent, benchmark",
+    "proposed_post": "Can You Break RLVER? Probing Adversarial Robustness of RL-Trained Empathetic Agents. The practical question is how much reliability improves when agent tooling is used in real developer workflows.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Can You Break RLVER? Probing Adversarial Robustness of RL-Trained Empathetic Agents",
+      "source": "arXiv cs.AI",
+      "link": "https://arxiv.org/abs/2605.07138"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-11T22:12:03.896002Z",
+    "defer_count": 1,
+    "original_score": 10,
+    "original_reason": "Matched keywords: ai, model, agent, benchmark"
   }
 ]

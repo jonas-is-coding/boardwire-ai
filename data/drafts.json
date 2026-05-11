@@ -614,5 +614,60 @@
     "post_text": "AdaTKG: Adaptive Memory for Temporal Knowledge Graph Reasoning. The useful part is the method and evidence quality, not just headline claims from a single result.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-11T20:00:43.986058Z"
+  },
+  {
+    "title": "Switchcraft: AI Model Router for Agentic Tool Calling",
+    "link": "https://arxiv.org/abs/2605.07112",
+    "source": "arXiv cs.AI",
+    "score": 10,
+    "should_post": true,
+    "reason": "Matched keywords: ai, model, agent, benchmark",
+    "post_text": "Switchcraft: AI Model Router for Agentic Tool Calling. The practical question is how much reliability improves when agent tooling is used in real developer workflows.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-11T22:12:03.645723Z"
+  },
+  {
+    "title": "Online Allocation with Unknown Shared Supply",
+    "link": "https://arxiv.org/abs/2605.07080",
+    "source": "arXiv cs.AI",
+    "score": 5,
+    "should_post": true,
+    "reason": "Matched keywords: ai, model",
+    "post_text": "Online Allocation with Unknown Shared Supply. The main signal is whether this changes measurable capability, reliability, or cost in day-to-day AI work.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-11T22:12:03.645835Z"
+  },
+  {
+    "title": "AdaTKG: Adaptive Memory for Temporal Knowledge Graph Reasoning",
+    "link": "https://arxiv.org/abs/2605.07121",
+    "source": "arXiv cs.AI",
+    "score": 5,
+    "should_post": true,
+    "reason": "Matched keywords: ai, model",
+    "post_text": "AdaTKG: Adaptive Memory for Temporal Knowledge Graph Reasoning. The main signal is whether this changes measurable capability, reliability, or cost in day-to-day AI work.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-11T22:12:03.645927Z"
+  },
+  {
+    "title": "How ChatGPT adoption broadened in early 2026",
+    "link": "https://openai.com/signals/research/2026q1-update",
+    "source": "OpenAI Blog",
+    "score": 3,
+    "should_post": true,
+    "reason": "Matched keywords: ai",
+    "post_text": "How ChatGPT adoption broadened in early 2026. The main signal is whether this changes measurable capability, reliability, or cost in day-to-day AI work.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-11T22:12:03.646002Z"
+  },
+  {
+    "title": "Can You Break RLVER? Probing Adversarial Robustness of RL-Trained Empathetic Agents",
+    "link": "https://arxiv.org/abs/2605.07138",
+    "source": "arXiv cs.AI",
+    "score": 10,
+    "should_post": true,
+    "reason": "Matched keywords: ai, model, agent, benchmark",
+    "post_text": "Can You Break RLVER? Probing Adversarial Robustness of RL-Trained Empathetic Agents. The practical question is how much reliability improves when agent tooling is used in real developer workflows.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-11T22:12:03.646058Z"
   }
 ]
