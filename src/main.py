@@ -566,6 +566,8 @@ def _publish_approved(args, logger) -> int:
     logger.info("Publishing approved posts in %s mode", selected_platform)
     published_count = 0
     quality_rejected_count = 0
+    blocked_missing_image_count = 0
+    posted_with_image_count = 0
 
     for item in queue:
         status = item.get("status", "pending_review")
@@ -586,8 +588,11 @@ def _publish_approved(args, logger) -> int:
 
         post_text = _build_publish_caption(item)
         card_path = item.get("card_path")
+        if selected_platform == "bluesky":
+            logger.info("Image required for Bluesky: %s", rid)
         abs_card_path = _resolve_card_image_path(item, logger)
-        if card_path and not abs_card_path:
+        if selected_platform == "bluesky" and not abs_card_path:
+            logger.info("Card missing, regenerating: %s", rid)
             try:
                 regenerated = _generate_card_for_item(item, logger)
             except Exception as exc:  # pragma: no cover - defensive publish safety
@@ -595,6 +600,8 @@ def _publish_approved(args, logger) -> int:
                 regenerated = None
             if regenerated:
                 item["card_path"] = regenerated
+                card_path = regenerated
+                logger.info("Card generated: %s", regenerated)
                 abs_card_path = _resolve_card_image_path(item, logger)
         logger.info("Publish quality check for: %s", rid)
         logger.info("Ignoring draft/review duplicates during publish context")
@@ -618,8 +625,9 @@ def _publish_approved(args, logger) -> int:
             quality_rejected_count += 1
             continue
         logger.info("Quality pass: %s", rid)
-        if selected_platform == "bluesky" and card_path and not abs_card_path:
-            logger.warning("Publish blocked for %s: card image required but unavailable", rid)
+        if selected_platform == "bluesky" and not abs_card_path:
+            logger.warning("Publish blocked (no image available): %s", rid)
+            blocked_missing_image_count += 1
             continue
 
         result: PublishResult = publisher.publish(
@@ -651,12 +659,16 @@ def _publish_approved(args, logger) -> int:
         item["status"] = "published_dry_run"
         item["published_at"] = now
         published_count += 1
-        logger.info("Published dry-run item: %s", rid)
+        if abs_card_path:
+            posted_with_image_count += 1
+        logger.info("Published %s item: %s", selected_platform, rid)
 
     JsonStore.save(REVIEW_QUEUE_PATH, queue)
     JsonStore.save(PUBLISHED_POSTS_PATH, published)
     generate_review_queue_report(REVIEW_QUEUE_PATH, REVIEW_REPORT_PATH)
-    logger.info("Dry-run published count: %d", published_count)
+    logger.info("Published count: %d", published_count)
+    logger.info("Publish blocked (missing image): %d", blocked_missing_image_count)
+    logger.info("Posted with image: %d", posted_with_image_count)
     logger.info("Quality rejected before publish: %d", quality_rejected_count)
     return 0
 
