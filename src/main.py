@@ -225,6 +225,49 @@ def _history_for_publish_item(
     return posts
 
 
+def _history_for_review_item(
+    drafts_data: list[dict],
+    review_queue_data: list[dict],
+    published_data: list[dict],
+    now: datetime,
+    lookback_hours: int,
+    fixture_mode: bool,
+    candidate_id: str | None,
+    candidate_link: str | None,
+    is_reprocessing_deferred: bool,
+) -> list[str]:
+    posts: list[str] = []
+    for item in drafts_data:
+        if _is_within_lookback(item.get("created_at"), now, lookback_hours, fixture_mode):
+            post = str(item.get("post_text", ""))
+            if post.strip():
+                posts.append(post)
+
+    for item in review_queue_data:
+        if _is_within_lookback(item.get("created_at"), now, lookback_hours, fixture_mode):
+            # Ignore self duplicate when reprocessing deferred item.
+            if is_reprocessing_deferred:
+                same_id = candidate_id and item.get("id") == candidate_id
+                same_link_deferred = (
+                    candidate_link
+                    and item.get("status") == "deferred_due_to_cap"
+                    and item.get("source_item", {}).get("link") == candidate_link
+                )
+                if same_id or same_link_deferred:
+                    continue
+            post = str(item.get("proposed_post", ""))
+            if post.strip():
+                posts.append(post)
+
+    for item in published_data:
+        if _is_within_lookback(item.get("published_at"), now, lookback_hours, fixture_mode):
+            post = str(item.get("post", ""))
+            if post.strip():
+                posts.append(post)
+
+    return posts
+
+
 def _list_review_queue(logger) -> int:
     queue = JsonStore.load(REVIEW_QUEUE_PATH, default=[])
     for item in queue:
@@ -723,14 +766,6 @@ def run(argv: list[str] | None = None) -> int:
             quality_config.fixture_duplicate_lookback_hours if args.use_fixtures else quality_config.duplicate_lookback_hours
         )
         lookback_hours = max(1, lookback_hours)
-        history = _history_posts(
-            existing_drafts_data,
-            review_queue_data,
-            published_data,
-            now=now_dt,
-            lookback_hours=lookback_hours,
-            fixture_mode=args.use_fixtures,
-        )
         passed_queue_items: list[dict] = []
         today = datetime.now(timezone.utc).date()
         existing_today = 0
@@ -743,6 +778,7 @@ def run(argv: list[str] | None = None) -> int:
                 existing_today += 1
         remaining_today = max(0, max_posts_per_day - existing_today)
 
+        deferred_rejected = 0
         for item in queue_items:
             source_title = item.get("source_item", {}).get("title", "Untitled")
             source_link = str(item.get("source_item", {}).get("link", "")).strip()
@@ -752,6 +788,19 @@ def run(argv: list[str] | None = None) -> int:
             item["is_llm_mode"] = is_llm_mode
             linked_deferred = deferred_queue_by_link.get(source_link)
             is_reprocessed_deferred = bool(linked_deferred and linked_deferred.get("_reprocessed"))
+            if is_reprocessed_deferred and args.quality_report:
+                logger.info("Ignoring self duplicate for deferred item: %s", linked_deferred.get("id"))
+            history = _history_for_review_item(
+                existing_drafts_data,
+                review_queue_data,
+                published_data,
+                now=now_dt,
+                lookback_hours=lookback_hours,
+                fixture_mode=args.use_fixtures,
+                candidate_id=(linked_deferred.get("id") if is_reprocessed_deferred else None),
+                candidate_link=(source_link if is_reprocessed_deferred else None),
+                is_reprocessing_deferred=is_reprocessed_deferred,
+            )
             quality = check_quality(
                 post=proposed_post,
                 source_link=source_link,
@@ -793,6 +842,9 @@ def run(argv: list[str] | None = None) -> int:
                     linked_deferred["reason"] = item.get("reason", "")
                     linked_deferred["proposed_post"] = proposed_post
                     linked_deferred["source_angle"] = item.get("source_angle", linked_deferred.get("source_angle", ""))
+                    now_iso = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+                    linked_deferred["created_at"] = now_iso
+                    linked_deferred["reactivated_at"] = now_iso
                     linked_deferred["is_llm_mode"] = is_llm_mode
                     linked_deferred.pop("deferred_at", None)
                     linked_deferred.pop("defer_count", None)
@@ -814,6 +866,7 @@ def run(argv: list[str] | None = None) -> int:
                 if is_reprocessed_deferred:
                     linked_deferred["status"] = "rejected"
                     linked_deferred["rejected_at"] = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+                    deferred_rejected += 1
 
             if args.quality_report:
                 status = "PASS" if quality.passed else "REJECT"
@@ -854,6 +907,8 @@ def run(argv: list[str] | None = None) -> int:
     logger.info("Deferred reprocessed: %d", deferred_reprocessed)
     logger.info("Deferred promoted to review: %d", deferred_became_review)
     logger.info("Deferred expired: %d", deferred_expired)
+    if args.review:
+        logger.info("Deferred rejected: %d", deferred_rejected)
 
     if created_drafts:
         logger.info("Drafts written to: %s", DRAFTS_PATH)
