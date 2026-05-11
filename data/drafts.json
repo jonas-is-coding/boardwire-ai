@@ -504,5 +504,60 @@
     "post_text": "2.5-D Decomposition for LLM-Based Spatial Construction. The practical question is how much reliability improves when agent tooling is used in real developer workflows.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-11T16:05:20.092541Z"
+  },
+  {
+    "title": "Optimal Experiments for Partial Causal Effect Identification",
+    "link": "https://arxiv.org/abs/2605.06993",
+    "source": "arXiv cs.AI",
+    "score": 5,
+    "should_post": true,
+    "reason": "Matched keywords: ai, benchmark",
+    "post_text": "Optimal Experiments for Partial Causal Effect Identification. Benchmark movement matters most when evaluation setup is transparent and results transfer to production tasks.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-11T17:59:21.294470Z"
+  },
+  {
+    "title": "Adaptive auditing of AI systems with anytime-valid guarantees",
+    "link": "https://arxiv.org/abs/2605.07002",
+    "source": "arXiv cs.AI",
+    "score": 5,
+    "should_post": true,
+    "reason": "Matched keywords: ai, model",
+    "post_text": "Adaptive auditing of AI systems with anytime-valid guarantees. Benchmark movement matters most when evaluation setup is transparent and results transfer to production tasks.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-11T17:59:21.294558Z"
+  },
+  {
+    "title": "Behavior Cue Reasoning: Monitorable Reasoning Improves Efficiency and Safety through Oversight",
+    "link": "https://arxiv.org/abs/2605.07021",
+    "source": "arXiv cs.AI",
+    "score": 8,
+    "should_post": true,
+    "reason": "Matched keywords: ai, model, llm",
+    "post_text": "Behavior Cue Reasoning: Monitorable Reasoning Improves Efficiency and Safety through Oversight. Benchmark movement matters most when evaluation setup is transparent and results transfer to production tasks.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-11T17:59:21.294642Z"
+  },
+  {
+    "title": "The Context Gathering Decision Process: A POMDP Framework for Agentic Search",
+    "link": "https://arxiv.org/abs/2605.07042",
+    "source": "arXiv cs.AI",
+    "score": 11,
+    "should_post": true,
+    "reason": "Matched keywords: ai, model, agent, llm",
+    "post_text": "The Context Gathering Decision Process: A POMDP Framework for Agentic Search. The practical question is how much reliability improves when agent tooling is used in real developer workflows.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-11T17:59:21.294691Z"
+  },
+  {
+    "title": "2.5-D Decomposition for LLM-Based Spatial Construction",
+    "link": "https://arxiv.org/abs/2605.07066",
+    "source": "arXiv cs.AI",
+    "score": 13,
+    "should_post": true,
+    "reason": "Matched keywords: ai, model, agent, benchmark",
+    "post_text": "2.5-D Decomposition for LLM-Based Spatial Construction. The practical question is how much reliability improves when agent tooling is used in real developer workflows.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-11T17:59:21.294736Z"
   }
 ]
