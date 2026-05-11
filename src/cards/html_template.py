@@ -5,233 +5,209 @@ from html import escape
 from src.cards.card_data import CardData
 
 
+# Source → accent color mapping. Each source gets its own brand-tinted dot.
+# Falls back to white for unknown sources.
+SOURCE_COLORS: dict[str, str] = {
+    "hugging face":   "#FFD21E",
+    "huggingface":    "#FFD21E",
+    "openai":         "#10A37F",
+    "anthropic":      "#D97757",
+    "google":         "#4285F4",
+    "google deepmind": "#4285F4",
+    "deepmind":       "#4285F4",
+    "meta":           "#0668E1",
+    "meta ai":        "#0668E1",
+    "microsoft":      "#00A4EF",
+    "nvidia":         "#76B900",
+    "mistral":        "#FF7000",
+    "x":              "#1D9BF0",
+    "twitter":        "#1D9BF0",
+    "github":         "#8B949E",
+    "arxiv":          "#B31B1B",
+}
+
+DEFAULT_ACCENT = "#FFFFFF"
+
+
+def _accent_for(source: str) -> str:
+    return SOURCE_COLORS.get(source.strip().lower(), DEFAULT_ACCENT)
+
+
+def _split_headline(headline: str) -> tuple[str, str]:
+    """Split off a trailing period so we can color it as an accent.
+
+    Returns (body, period) where period is '' or '.'.
+    """
+    stripped = headline.rstrip()
+    if stripped.endswith("."):
+        return stripped[:-1], "."
+    return stripped, ""
+
+
 def render_card_html(card: CardData) -> str:
-    theme_class = f"theme-{escape(card.visual_theme)}"
+    # Defensive attribute access — works whether CardData uses
+    # headline/title and summary/subtitle/description naming.
+    headline = (
+        getattr(card, "card_headline", None)
+        or getattr(card, "headline", None)
+        or getattr(card, "title", None)
+        or ""
+    )
+    summary = (
+        getattr(card, "card_summary", None)
+        or getattr(card, "summary", None)
+        or getattr(card, "subtitle", None)
+        or getattr(card, "description", None)
+        or ""
+    )
+    source = (
+        getattr(card, "source_label", None)
+        or getattr(card, "source", None)
+        or ""
+    )
+    visual_theme = getattr(card, "visual_theme", "dark") or "dark"
+
+    accent = _accent_for(source)
+    is_light = visual_theme.lower() == "light"
+
+    body, period = _split_headline(headline)
+
+    # Theme tokens
+    if is_light:
+        bg = "#fafafa"
+        fg = "#0a0a0a"
+        subtle = "#525252"
+        bloom_fg = "rgba(0,0,0,0.03)"
+        grid_alpha = "0.025"
+    else:
+        bg = "#000000"
+        fg = "#ffffff"
+        subtle = "#a1a1a1"
+        bloom_fg = "rgba(255,255,255,0.025)"
+        grid_alpha = "0.015"
+
+    # Pre-escape user content
+    headline_html = (
+        f'{escape(body)}<span class="period">{escape(period)}</span>'
+        if period
+        else escape(body)
+    )
+    summary_html = escape(summary)
+    source_html = escape(source)
+
     return f"""<!doctype html>
-<html lang=\"en\">
+<html lang="en">
 <head>
-  <meta charset=\"utf-8\" />
-  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
-  <title>Boardwire Card</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Boardwire</title>
   <style>
     :root {{
-      --bg: #000000;
-      --fg: #ffffff;
-      --muted: #afafaf;
-      --line: #2d2d2d;
+      --bg: {bg};
+      --fg: {fg};
+      --subtle: {subtle};
+      --accent: {accent};
     }}
-    * {{ box-sizing: border-box; }}
-    body {{
-      margin: 0;
+    * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+    html, body {{
+      background: var(--bg);
+      width: 1200px;
+      height: 1200px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }}
+    .card {{
+      width: 1200px;
+      height: 1200px;
       background: var(--bg);
       color: var(--fg);
-      width: 1200px;
-      height: 1200px;
-      font-family: \"Arial Narrow\", \"Segoe UI\", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
-    }}
-    .canvas {{
-      width: 1200px;
-      height: 1200px;
-      border: 1px solid var(--line);
-      padding: 44px 48px;
+      position: relative;
+      overflow: hidden;
+      padding: 96px 100px;
       display: grid;
       grid-template-rows: auto 1fr auto;
-      gap: 34px;
-      position: relative;
     }}
-    .top {{
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 24px;
-      padding-bottom: 14px;
-      border-bottom: 1px solid var(--line);
-    }}
-    .brand {{
-      font-size: 32px;
-      letter-spacing: 0.15em;
-      font-weight: 800;
-      text-transform: uppercase;
-    }}
-    .source-label {{
-      font-size: 16px;
-      letter-spacing: 0.14em;
-      color: var(--muted);
-      text-transform: uppercase;
-      font-weight: 700;
-      white-space: nowrap;
-      max-width: 56%;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }}
-    .content {{
-      display: grid;
-      grid-template-columns: 1.18fr 0.82fr;
-      gap: 34px;
-      min-height: 0;
-    }}
-    .story {{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      min-height: 0;
-    }}
-    .headline {{
-      font-size: 88px;
-      line-height: 0.96;
-      font-weight: 830;
-      letter-spacing: -0.01em;
-      text-wrap: balance;
-      overflow-wrap: anywhere;
-      margin-top: 6px;
-    }}
-    .summary {{
-      margin-top: 24px;
-      font-size: 27px;
-      line-height: 1.25;
-      color: #e0e0e0;
-      font-weight: 520;
-      max-width: 92%;
-      overflow-wrap: anywhere;
-    }}
-    .visual {{
-      border: 1px solid #4d4d4d;
-      background: #050505;
-      position: relative;
-      min-height: 0;
-      height: 100%;
-      overflow: hidden;
-    }}
-    .visual::before, .visual::after {{
-      content: \"\";
+    .card::before {{
+      content: "";
       position: absolute;
       inset: 0;
+      background:
+        radial-gradient(900px 600px at 100% 100%, {accent}10, transparent 60%),
+        radial-gradient(700px 500px at 0% 0%, {bloom_fg}, transparent 55%);
       pointer-events: none;
     }}
-    .theme-agents .visual::before {{
-      background:
-        linear-gradient(90deg, transparent 0%, #ffffff 8%, transparent 8.5%) 12% 18%/72% 2px no-repeat,
-        linear-gradient(90deg, transparent 0%, #ffffff 8%, transparent 8.5%) 22% 35%/68% 2px no-repeat,
-        linear-gradient(90deg, transparent 0%, #ffffff 8%, transparent 8.5%) 16% 52%/74% 2px no-repeat,
-        linear-gradient(90deg, transparent 0%, #ffffff 8%, transparent 8.5%) 28% 68%/64% 2px no-repeat;
-      opacity: 0.75;
+    .card::after {{
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,{grid_alpha}) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,{grid_alpha}) 1px, transparent 1px);
+      background-size: 80px 80px;
+      pointer-events: none;
+      -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+              mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
     }}
-    .theme-agents .visual::after {{
-      background:
-        linear-gradient(#ffffff,#ffffff) 8% 14%/42% 16% no-repeat,
-        linear-gradient(#ffffff,#ffffff) 28% 36%/50% 16% no-repeat,
-        linear-gradient(#ffffff,#ffffff) 14% 58%/55% 16% no-repeat,
-        linear-gradient(#ffffff,#ffffff) 38% 80%/46% 14% no-repeat;
-      mix-blend-mode: screen;
-      opacity: 0.9;
-    }}
-    .theme-research .visual::before {{
-      background:
-        repeating-linear-gradient(0deg, #1f1f1f 0 1px, transparent 1px 42px),
-        repeating-linear-gradient(90deg, #1f1f1f 0 1px, transparent 1px 42px);
-      opacity: 0.9;
-    }}
-    .theme-research .visual::after {{
-      background:
-        linear-gradient(90deg, #fff 0 100%) 12% 18%/68% 2px no-repeat,
-        linear-gradient(90deg, #fff 0 100%) 20% 34%/54% 2px no-repeat,
-        linear-gradient(90deg, #fff 0 100%) 24% 50%/62% 2px no-repeat,
-        linear-gradient(90deg, #fff 0 100%) 14% 66%/58% 2px no-repeat,
-        linear-gradient(90deg, #fff 0 100%) 18% 82%/46% 2px no-repeat;
-      opacity: 0.82;
-    }}
-    .theme-open_source .visual::before {{
-      background:
-        linear-gradient(#fff,#fff) 10% 14%/30% 24% no-repeat,
-        linear-gradient(#fff,#fff) 45% 14%/45% 24% no-repeat,
-        linear-gradient(#fff,#fff) 10% 46%/42% 20% no-repeat,
-        linear-gradient(#fff,#fff) 56% 46%/34% 20% no-repeat,
-        linear-gradient(#fff,#fff) 10% 74%/30% 16% no-repeat,
-        linear-gradient(#fff,#fff) 45% 74%/45% 16% no-repeat;
-      opacity: 0.88;
-    }}
-    .theme-open_source .visual::after {{
-      background:
-        repeating-linear-gradient(90deg, transparent 0 36px, #0c0c0c 36px 38px);
-      opacity: 0.7;
-    }}
-    .theme-infrastructure .visual::before {{
-      background:
-        repeating-linear-gradient(0deg, #1d1d1d 0 1px, transparent 1px 28px),
-        repeating-linear-gradient(90deg, #1d1d1d 0 1px, transparent 1px 28px);
-      opacity: 0.95;
-    }}
-    .theme-infrastructure .visual::after {{
-      background:
-        linear-gradient(90deg, #fff 0 100%) 8% 16%/78% 2px no-repeat,
-        linear-gradient(90deg, #fff 0 100%) 8% 30%/64% 2px no-repeat,
-        linear-gradient(90deg, #fff 0 100%) 8% 44%/84% 2px no-repeat,
-        linear-gradient(90deg, #fff 0 100%) 8% 58%/58% 2px no-repeat,
-        linear-gradient(90deg, #fff 0 100%) 8% 72%/74% 2px no-repeat;
-      opacity: 0.85;
-    }}
-    .theme-robotics .visual::before {{
-      background:
-        radial-gradient(circle at 26% 26%, transparent 0 48px, #fff 49px 51px, transparent 52px),
-        radial-gradient(circle at 66% 44%, transparent 0 58px, #fff 59px 61px, transparent 62px),
-        radial-gradient(circle at 38% 76%, transparent 0 72px, #fff 73px 75px, transparent 76px);
-      opacity: 0.88;
-    }}
-    .theme-robotics .visual::after {{
-      background:
-        linear-gradient(45deg, transparent 48%, #fff 49%, #fff 51%, transparent 52%) 20% 18%/56% 38% no-repeat,
-        linear-gradient(45deg, transparent 48%, #fff 49%, #fff 51%, transparent 52%) 42% 40%/46% 34% no-repeat,
-        linear-gradient(45deg, transparent 48%, #fff 49%, #fff 51%, transparent 52%) 24% 64%/52% 26% no-repeat;
-      opacity: 0.8;
-    }}
-    .theme-news .visual::before {{
-      background:
-        repeating-linear-gradient(0deg, #1a1a1a 0 1px, transparent 1px 40px),
-        repeating-linear-gradient(90deg, #1a1a1a 0 1px, transparent 1px 40px);
-      opacity: 0.85;
-    }}
-    .theme-news .visual::after {{
-      background:
-        linear-gradient(#fff,#fff) 12% 18%/76% 20% no-repeat,
-        linear-gradient(#fff,#fff) 12% 44%/52% 14% no-repeat,
-        linear-gradient(#fff,#fff) 12% 64%/68% 12% no-repeat;
-      opacity: 0.9;
-    }}
-    .meta {{
+    .source {{
       display: flex;
-      justify-content: flex-start;
-      gap: 12px;
-      font-size: 17px;
-      color: var(--muted);
+      align-items: center;
+      gap: 14px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size: 22px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      letter-spacing: 0.11em;
-      font-weight: 680;
-      border-top: 1px solid var(--line);
-      padding-top: 16px;
-      white-space: nowrap;
+      color: var(--subtle);
+      position: relative;
+      z-index: 1;
+    }}
+    .dot {{
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 24px var(--accent);
+      flex-shrink: 0;
+    }}
+    .headline-block {{
+      align-self: end;
+      position: relative;
+      z-index: 1;
+    }}
+    .headline {{
+      font-size: 124px;
+      line-height: 0.94;
+      font-weight: 600;
+      letter-spacing: -0.045em;
+      color: var(--fg);
+      text-wrap: balance;
+    }}
+    .headline .period {{ color: var(--accent); }}
+    .summary {{
+      margin-top: 56px;
+      font-size: 32px;
+      line-height: 1.35;
+      font-weight: 400;
+      letter-spacing: -0.015em;
+      color: var(--subtle);
+      max-width: 88%;
+      text-wrap: pretty;
+      position: relative;
+      z-index: 1;
     }}
   </style>
 </head>
 <body>
-  <div class=\"canvas {theme_class}\">
-    <div class=\"top\">
-      <div class=\"brand\">BOARDWIRE</div>
-      <div class=\"source-label\">{escape(card.source_label)}</div>
+  <div class="card">
+    <div class="source">
+      <span class="dot"></span>
+      <span>{source_html}</span>
     </div>
-    <div class=\"content\">
-      <div class=\"story\">
-        <div class=\"headline\">{escape(card.card_headline)}</div>
-        <div class=\"summary\">{escape(card.card_summary)}</div>
-      </div>
-      <div class=\"visual\" aria-label=\"Editorial visual\"></div>
+    <div class="headline-block">
+      <h1 class="headline">{headline_html}</h1>
     </div>
-    <div class=\"meta\">
-      <span>{escape(card.source_label)}</span>
-      <span>/</span>
-      <span>{escape(card.date_label)}</span>
-      <span>/</span>
-      <span>{escape(card.footer)}</span>
-    </div>
+    <p class="summary">{summary_html}</p>
   </div>
 </body>
 </html>
