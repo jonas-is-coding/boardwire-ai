@@ -527,6 +527,29 @@ def _build_publish_caption(item: dict) -> str:
     return caption[:280]
 
 
+def _resolve_card_image_path(item: dict, logger) -> str | None:
+    card_path = str(item.get("card_path") or "").strip()
+    if not card_path:
+        return None
+
+    raw = Path(card_path)
+    candidates: list[Path] = []
+    if raw.is_absolute():
+        candidates.append(raw)
+    else:
+        candidates.append(Path.cwd() / raw)
+        candidates.append(CARDS_DIR / raw.name)
+        if card_path.startswith("generated/"):
+            candidates.append(Path.cwd() / card_path)
+
+    for candidate in candidates:
+        if candidate.exists() and candidate.is_file():
+            return str(candidate)
+
+    logger.warning("Card path set but file missing: %s", card_path)
+    return None
+
+
 def _publish_approved(args, logger) -> int:
     queue = JsonStore.load(REVIEW_QUEUE_PATH, default=[])
     published = JsonStore.load(PUBLISHED_POSTS_PATH, default=[])
@@ -563,15 +586,16 @@ def _publish_approved(args, logger) -> int:
 
         post_text = _build_publish_caption(item)
         card_path = item.get("card_path")
-        abs_card_path: str | None = None
-        if card_path:
-            candidate = CARDS_DIR.parent / str(card_path).replace("generated/", "")
-            if candidate.exists():
-                abs_card_path = str(candidate)
-            else:
-                fallback = Path(str(card_path))
-                if fallback.exists():
-                    abs_card_path = str(fallback)
+        abs_card_path = _resolve_card_image_path(item, logger)
+        if card_path and not abs_card_path:
+            try:
+                regenerated = _generate_card_for_item(item, logger)
+            except Exception as exc:  # pragma: no cover - defensive publish safety
+                logger.warning("Card regeneration failed for %s: %s", rid, exc)
+                regenerated = None
+            if regenerated:
+                item["card_path"] = regenerated
+                abs_card_path = _resolve_card_image_path(item, logger)
         logger.info("Publish quality check for: %s", rid)
         logger.info("Ignoring draft/review duplicates during publish context")
         history = _published_history_only(
@@ -594,6 +618,9 @@ def _publish_approved(args, logger) -> int:
             quality_rejected_count += 1
             continue
         logger.info("Quality pass: %s", rid)
+        if selected_platform == "bluesky" and card_path and not abs_card_path:
+            logger.warning("Publish blocked for %s: card image required but unavailable", rid)
+            continue
 
         result: PublishResult = publisher.publish(
             post=post_text,

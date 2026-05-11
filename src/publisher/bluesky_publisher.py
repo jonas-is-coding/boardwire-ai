@@ -52,35 +52,58 @@ class BlueskyPublisher:
 
             if image_path:
                 path = Path(image_path)
-                if path.exists() and path.is_file():
-                    mime = "image/png"
-                    if path.suffix.lower() in {".jpg", ".jpeg"}:
-                        mime = "image/jpeg"
-                    try:
-                        image_bytes = path.read_bytes()
-                        upload_resp = requests.post(
-                            "https://bsky.social/xrpc/com.atproto.repo.uploadBlob",
-                            headers={
-                                "Authorization": f"Bearer {access_jwt}",
-                                "Content-Type": mime,
-                            },
-                            data=image_bytes,
-                            timeout=30,
-                        )
-                        if upload_resp.status_code < 400:
-                            blob = upload_resp.json().get("blob")
-                            if blob:
-                                record["embed"] = {
-                                    "$type": "app.bsky.embed.images",
-                                    "images": [
-                                        {
-                                            "alt": "Boardwire editorial card",
-                                            "image": blob,
-                                        }
-                                    ],
-                                }
-                    except OSError:
-                        pass
+                if not path.exists() or not path.is_file():
+                    return PublishResult(
+                        success=False,
+                        platform=self.platform,
+                        error=f"Card image not found: {image_path}",
+                    )
+
+                mime = "image/png"
+                if path.suffix.lower() in {".jpg", ".jpeg"}:
+                    mime = "image/jpeg"
+                try:
+                    image_bytes = path.read_bytes()
+                    upload_resp = requests.post(
+                        "https://bsky.social/xrpc/com.atproto.repo.uploadBlob",
+                        headers={
+                            "Authorization": f"Bearer {access_jwt}",
+                            "Content-Type": mime,
+                        },
+                        data=image_bytes,
+                        timeout=30,
+                    )
+                except OSError as exc:
+                    return PublishResult(
+                        success=False,
+                        platform=self.platform,
+                        error=f"Failed reading card image: {exc}",
+                    )
+
+                if upload_resp.status_code >= 400:
+                    return PublishResult(
+                        success=False,
+                        platform=self.platform,
+                        error=f"Bluesky image upload failed: {upload_resp.status_code}",
+                    )
+
+                blob = upload_resp.json().get("blob")
+                if not blob:
+                    return PublishResult(
+                        success=False,
+                        platform=self.platform,
+                        error="Bluesky image upload response missing blob",
+                    )
+
+                record["embed"] = {
+                    "$type": "app.bsky.embed.images",
+                    "images": [
+                        {
+                            "alt": "Boardwire editorial card",
+                            "image": blob,
+                        }
+                    ],
+                }
 
             create_resp = requests.post(
                 "https://bsky.social/xrpc/com.atproto.repo.createRecord",
