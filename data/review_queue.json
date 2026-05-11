@@ -215,7 +215,7 @@
   },
   {
     "id": "c5862c1a55e4",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-11T16:05:20.092466Z",
     "score": 5,
     "reason": "Matched keywords: ai, benchmark",
@@ -230,11 +230,12 @@
     "deferred_at": "2026-05-11T16:05:20.175450Z",
     "defer_count": 1,
     "original_score": 5,
-    "original_reason": "Matched keywords: ai, benchmark"
+    "original_reason": "Matched keywords: ai, benchmark",
+    "rejected_at": "2026-05-11T16:25:52.321437Z"
   },
   {
     "id": "3b21bc21100f",
-    "status": "deferred_due_to_cap",
+    "status": "published_dry_run",
     "created_at": "2026-05-11T16:05:20.092489Z",
     "score": 5,
     "reason": "Matched keywords: ai, model",
@@ -246,14 +247,16 @@
       "link": "https://arxiv.org/abs/2605.07002"
     },
     "is_llm_mode": false,
-    "deferred_at": "2026-05-11T16:05:20.197663Z",
-    "defer_count": 1,
+    "deferred_at": "2026-05-11T16:25:52.345029Z",
+    "defer_count": 2,
     "original_score": 5,
-    "original_reason": "Matched keywords: ai, model"
+    "original_reason": "Matched keywords: ai, model",
+    "reviewed_at": "2026-05-11T16:56:52.357414Z",
+    "published_at": "2026-05-11T16:56:52.532017Z"
   },
   {
     "id": "4d9e3358923b",
-    "status": "deferred_due_to_cap",
+    "status": "published_dry_run",
     "created_at": "2026-05-11T16:05:20.092508Z",
     "score": 8,
     "reason": "Matched keywords: ai, model, llm",
@@ -265,14 +268,17 @@
       "link": "https://arxiv.org/abs/2605.07021"
     },
     "is_llm_mode": false,
-    "deferred_at": "2026-05-11T16:05:20.222248Z",
-    "defer_count": 1,
+    "deferred_at": "2026-05-11T16:25:52.305672Z",
+    "defer_count": 2,
     "original_score": 8,
-    "original_reason": "Matched keywords: ai, model, llm"
+    "original_reason": "Matched keywords: ai, model, llm",
+    "reviewed_at": "2026-05-11T17:09:06.315400Z",
+    "card_path": "generated/cards/4d9e3358923b.png",
+    "published_at": "2026-05-11T17:21:32.342745Z"
   },
   {
     "id": "f5d82609d6c0",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-11T16:05:20.092525Z",
     "score": 11,
     "reason": "Matched keywords: ai, model, agent, llm",
@@ -287,11 +293,12 @@
     "deferred_at": "2026-05-11T16:05:20.242028Z",
     "defer_count": 1,
     "original_score": 11,
-    "original_reason": "Matched keywords: ai, model, agent, llm"
+    "original_reason": "Matched keywords: ai, model, agent, llm",
+    "rejected_at": "2026-05-11T16:25:52.277489Z"
   },
   {
     "id": "079903c32143",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-11T16:05:20.092541Z",
     "score": 13,
     "reason": "Matched keywords: ai, model, agent, benchmark",
@@ -306,7 +313,8 @@
     "deferred_at": "2026-05-11T16:05:20.260763Z",
     "defer_count": 1,
     "original_score": 13,
-    "original_reason": "Matched keywords: ai, model, agent, benchmark"
+    "original_reason": "Matched keywords: ai, model, agent, benchmark",
+    "rejected_at": "2026-05-11T16:25:52.260540Z"
   },
   {
     "id": "cce2e6a82a03",
@@ -324,5 +332,188 @@
     "is_llm_mode": false,
     "reviewed_at": "2026-05-11T16:08:25.750102Z",
     "published_at": "2026-05-11T16:08:33.622478Z"
+  },
+  {
+    "id": "c60f0c9bf3f9",
+    "status": "published_dry_run",
+    "created_at": "2026-05-11T16:25:52.241530Z",
+    "score": 8,
+    "reason": "Matched keywords: ai, agent, benchmark",
+    "proposed_post": "TeamBench: Evaluating Agent Coordination under Enforced Role Separation. The practical question is how much reliability improves when agent tooling is used in real developer workflows.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "TeamBench: Evaluating Agent Coordination under Enforced Role Separation",
+      "source": "arXiv cs.AI",
+      "link": "https://arxiv.org/abs/2605.07073"
+    },
+    "card_path": "generated/cards/c60f0c9bf3f9.png",
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-11T16:25:52.366608Z",
+    "defer_count": 1,
+    "original_score": 8,
+    "original_reason": "Matched keywords: ai, agent, benchmark",
+    "reviewed_at": "2026-05-11T17:12:53.562046Z",
+    "published_at": "2026-05-11T17:12:53.744300Z"
+  },
+  {
+    "id": "a6cabe5e6908",
+    "status": "approved",
+    "created_at": "2026-05-11T16:25:52.241566Z",
+    "score": 5,
+    "reason": "Matched keywords: ai, model",
+    "proposed_post": "Allocation under shared uncertainty is becoming a practical AI systems question, not just theory. #AIResearch #MachineLearning #Boardwire",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Online Allocation with Unknown Shared Supply",
+      "source": "arXiv cs.AI",
+      "link": "https://arxiv.org/abs/2605.07080"
+    },
+    "card_path": "generated/cards/a6cabe5e6908.png",
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-11T16:25:52.389038Z",
+    "defer_count": 1,
+    "original_score": 5,
+    "original_reason": "Matched keywords: ai, model",
+    "reviewed_at": "2026-05-11T17:21:12.736066Z"
+  },
+  {
+    "id": "27e57cfba977",
+    "status": "published_dry_run",
+    "created_at": "2026-05-11T16:25:52.241589Z",
+    "score": 8,
+    "reason": "Matched keywords: ai, model, agent",
+    "proposed_post": "ARMOR: An Agentic Framework for Reaction Feasibility Prediction via Adaptive Utility-aware Multi-tool Reasoning. The practical question is how much reliability improves when agent tooling is used in real developer workflows.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "ARMOR: An Agentic Framework for Reaction Feasibility Prediction via Adaptive Utility-aware Multi-tool Reasoning",
+      "source": "arXiv cs.AI",
+      "link": "https://arxiv.org/abs/2605.07103"
+    },
+    "card_path": "generated/cards/27e57cfba977.png",
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-11T16:25:52.414379Z",
+    "defer_count": 1,
+    "original_score": 8,
+    "original_reason": "Matched keywords: ai, model, agent",
+    "reviewed_at": "2026-05-11T17:18:53.698723Z",
+    "published_at": "2026-05-11T17:21:32.342745Z"
+  },
+  {
+    "id": "625c8355d108",
+    "status": "published_dry_run",
+    "created_at": "2026-05-11T16:27:33.107680Z",
+    "score": 4,
+    "reason": "Matched keywords: model, benchmark",
+    "proposed_post": "Open model reaches top benchmark tier for code generation. The key signal is whether teams can inspect, adapt, and run these models without black-box constraints.",
+    "source_angle": "Rule-based test item",
+    "source_item": {
+      "title": "Open model reaches top benchmark tier for code generation",
+      "source": "Hugging Face Blog",
+      "link": "https://huggingface.co/blog/open-code-model-benchmarks"
+    },
+    "is_llm_mode": false,
+    "card_path": "generated/cards/625c8355d108.png",
+    "reviewed_at": "2026-05-11T16:52:17.237247Z"
+  },
+  {
+    "id": "39d1b49f3900",
+    "status": "published_dry_run",
+    "created_at": "2026-05-11T16:28:29.540741Z",
+    "score": 4,
+    "reason": "Matched keywords: model, benchmark",
+    "proposed_post": "Open model reaches top benchmark tier for code generation. The key signal is whether teams can inspect, adapt, and run these models without black-box constraints.",
+    "source_angle": "Rule-based test item",
+    "source_item": {
+      "title": "Open model reaches top benchmark tier for code generation",
+      "source": "Hugging Face Blog",
+      "link": "https://huggingface.co/blog/open-code-model-benchmarks"
+    },
+    "is_llm_mode": false,
+    "card_path": "generated/cards/39d1b49f3900.png",
+    "reviewed_at": "2026-05-11T16:52:54.558846Z",
+    "published_at": "2026-05-11T16:53:29.835191Z"
+  },
+  {
+    "id": "e62d833d9515",
+    "status": "published_dry_run",
+    "created_at": "2026-05-11T16:29:07.227071Z",
+    "score": 4,
+    "reason": "Matched keywords: model, benchmark",
+    "proposed_post": "Open model reaches top benchmark tier for code generation. The key signal is whether teams can inspect, adapt, and run these models without black-box constraints.",
+    "source_angle": "Rule-based test item",
+    "source_item": {
+      "title": "Open model reaches top benchmark tier for code generation",
+      "source": "Hugging Face Blog",
+      "link": "https://huggingface.co/blog/open-code-model-benchmarks"
+    },
+    "is_llm_mode": false,
+    "card_path": "generated/cards/e62d833d9515.png",
+    "reviewed_at": "2026-05-11T16:53:21.301742Z"
+  },
+  {
+    "id": "109587b9f3c3",
+    "status": "published_dry_run",
+    "created_at": "2026-05-11T16:33:29.164375Z",
+    "score": 4,
+    "reason": "Matched keywords: model, benchmark",
+    "proposed_post": "Open model reaches top benchmark tier for code generation. The key signal is whether teams can inspect, adapt, and run these models without black-box constraints.",
+    "source_angle": "Rule-based test item",
+    "source_item": {
+      "title": "Open model reaches top benchmark tier for code generation",
+      "source": "Hugging Face Blog",
+      "link": "https://huggingface.co/blog/open-code-model-benchmarks"
+    },
+    "is_llm_mode": false,
+    "card_path": "generated/cards/109587b9f3c3.png",
+    "reviewed_at": "2026-05-11T16:56:32.345547Z"
+  },
+  {
+    "id": "d7fa8d4a1b28",
+    "status": "approved",
+    "created_at": "2026-05-11T16:34:55.174225Z",
+    "score": 4,
+    "reason": "Matched keywords: model, benchmark",
+    "proposed_post": "Open model reaches top benchmark tier for code generation. The key signal is whether teams can inspect, adapt, and run these models without black-box constraints.",
+    "source_angle": "Rule-based test item",
+    "source_item": {
+      "title": "Open model reaches top benchmark tier for code generation",
+      "source": "Hugging Face Blog",
+      "link": "https://huggingface.co/blog/open-code-model-benchmarks"
+    },
+    "is_llm_mode": false,
+    "card_path": "generated/cards/d7fa8d4a1b28.png",
+    "reviewed_at": "2026-05-11T17:28:26.116497Z"
+  },
+  {
+    "id": "7bfb0f79d44b",
+    "status": "pending_review",
+    "created_at": "2026-05-11T16:40:14.234773Z",
+    "score": 4,
+    "reason": "Matched keywords: model, benchmark",
+    "proposed_post": "Open model reaches top benchmark tier for code generation. The key signal is whether teams can inspect, adapt, and run these models without black-box constraints.",
+    "source_angle": "Rule-based test item",
+    "source_item": {
+      "title": "Open model reaches top benchmark tier for code generation",
+      "source": "Hugging Face Blog",
+      "link": "https://huggingface.co/blog/open-code-model-benchmarks"
+    },
+    "is_llm_mode": false,
+    "card_path": "generated/cards/7bfb0f79d44b.png"
+  },
+  {
+    "id": "b2fafcd3aa34",
+    "status": "pending_review",
+    "created_at": "2026-05-11T16:40:46.422822Z",
+    "score": 4,
+    "reason": "Matched keywords: model, benchmark",
+    "proposed_post": "Open model reaches top benchmark tier for code generation. The key signal is whether teams can inspect, adapt, and run these models without black-box constraints.",
+    "source_angle": "Rule-based test item",
+    "source_item": {
+      "title": "Open model reaches top benchmark tier for code generation",
+      "source": "Hugging Face Blog",
+      "link": "https://huggingface.co/blog/open-code-model-benchmarks"
+    },
+    "is_llm_mode": false,
+    "card_path": "generated/cards/b2fafcd3aa34.png"
   }
 ]
