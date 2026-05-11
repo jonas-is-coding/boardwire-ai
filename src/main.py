@@ -5,6 +5,7 @@ import hashlib
 import os
 from dataclasses import asdict
 from datetime import datetime, timezone
+from pathlib import Path
 
 from dateutil import parser as date_parser
 
@@ -496,6 +497,36 @@ def _resolve_publisher(args, logger):
     return BlueskyPublisher(handle=handle, app_password=app_password), "bluesky"
 
 
+def _build_publish_caption(item: dict) -> str:
+    source_item = item.get("source_item", {})
+    title = str(source_item.get("title", "")).strip()
+    lower = title.lower()
+    core = "New AI signal."
+    tags = ["#AI", "#Boardwire"]
+
+    if any(k in lower for k in ("agent", "workflow", "tooling")):
+        core = "Agent tooling is moving into real workflows."
+        tags = ["#AIAgents", "#DeveloperTools", "#Boardwire"]
+    elif any(k in lower for k in ("open source", "open-source", "open model", "open-weight")):
+        core = "Open models keep gaining practical ground."
+        tags = ["#OpenSource", "#LLM", "#Boardwire"]
+    elif any(k in lower for k in ("benchmark", "evaluation", "leaderboard")):
+        core = "Benchmarks matter when results transfer to production."
+        tags = ["#Benchmark", "#ML", "#Boardwire"]
+    elif any(k in lower for k in ("robot", "robotics")):
+        core = "Robotics progress matters when generalization improves."
+        tags = ["#Robotics", "#AI", "#Boardwire"]
+    elif any(k in lower for k in ("infra", "inference", "deployment", "serving")):
+        core = "AI infra is becoming a core product advantage."
+        tags = ["#MLOps", "#Inference", "#Boardwire"]
+    elif "arxiv" in str(source_item.get("source", "")).lower() or "paper" in lower or "research" in lower:
+        core = "Research to watch for practical downstream impact."
+        tags = ["#AIResearch", "#MachineLearning", "#Boardwire"]
+
+    caption = f"{core} {' '.join(tags)}"
+    return caption[:280]
+
+
 def _publish_approved(args, logger) -> int:
     queue = JsonStore.load(REVIEW_QUEUE_PATH, default=[])
     published = JsonStore.load(PUBLISHED_POSTS_PATH, default=[])
@@ -530,7 +561,17 @@ def _publish_approved(args, logger) -> int:
             item["status"] = "published_dry_run"
             continue
 
-        post_text = item.get("proposed_post", "")
+        post_text = _build_publish_caption(item)
+        card_path = item.get("card_path")
+        abs_card_path: str | None = None
+        if card_path:
+            candidate = CARDS_DIR.parent / str(card_path).replace("generated/", "")
+            if candidate.exists():
+                abs_card_path = str(candidate)
+            else:
+                fallback = Path(str(card_path))
+                if fallback.exists():
+                    abs_card_path = str(fallback)
         logger.info("Publish quality check for: %s", rid)
         logger.info("Ignoring draft/review duplicates during publish context")
         history = _published_history_only(
@@ -554,7 +595,11 @@ def _publish_approved(args, logger) -> int:
             continue
         logger.info("Quality pass: %s", rid)
 
-        result: PublishResult = publisher.publish(post_text, source_link=source_link)
+        result: PublishResult = publisher.publish(
+            post=post_text,
+            source_link=source_link,
+            image_path=abs_card_path,
+        )
         if not result.success:
             logger.warning("Publish failed for %s: %s", rid, result.error or "unknown error")
             continue
@@ -568,6 +613,7 @@ def _publish_approved(args, logger) -> int:
             "source_title": source_item.get("title", "Untitled"),
             "score": item.get("score"),
             "reason": item.get("reason", ""),
+            "card_path": card_path,
             "external_id": result.external_id,
             "url": result.url,
         }

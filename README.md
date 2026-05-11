@@ -91,3 +91,9 @@ Optional for OpenAI:
 For real Bluesky publishing:
 - `BLUESKY_HANDLE`
 - `BLUESKY_APP_PASSWORD`
+
+## Publish behavior
+
+- `--publish-approved` now sends a short caption + hashtags.
+- If `card_path` exists on the review item, the card image is attached on publish.
+- `dry_run` stays the safe default publisher.

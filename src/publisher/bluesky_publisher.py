@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from datetime import datetime, timezone
+from pathlib import Path
 
 import requests
 
@@ -14,7 +15,12 @@ class BlueskyPublisher:
         self.handle = handle
         self.app_password = app_password
 
-    def publish(self, post: str, source_link: str | None = None) -> PublishResult:
+    def publish(
+        self,
+        post: str,
+        source_link: str | None = None,
+        image_path: str | None = None,
+    ) -> PublishResult:
         text = post if not source_link else f"{post}\n{source_link}"
         text = text[:300]
 
@@ -38,17 +44,51 @@ class BlueskyPublisher:
                 return PublishResult(success=False, platform=self.platform, error="Bluesky auth response missing fields")
 
             now = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+            record: dict = {
+                "$type": "app.bsky.feed.post",
+                "text": text,
+                "createdAt": now,
+            }
+
+            if image_path:
+                path = Path(image_path)
+                if path.exists() and path.is_file():
+                    mime = "image/png"
+                    if path.suffix.lower() in {".jpg", ".jpeg"}:
+                        mime = "image/jpeg"
+                    try:
+                        image_bytes = path.read_bytes()
+                        upload_resp = requests.post(
+                            "https://bsky.social/xrpc/com.atproto.repo.uploadBlob",
+                            headers={
+                                "Authorization": f"Bearer {access_jwt}",
+                                "Content-Type": mime,
+                            },
+                            data=image_bytes,
+                            timeout=30,
+                        )
+                        if upload_resp.status_code < 400:
+                            blob = upload_resp.json().get("blob")
+                            if blob:
+                                record["embed"] = {
+                                    "$type": "app.bsky.embed.images",
+                                    "images": [
+                                        {
+                                            "alt": "Boardwire editorial card",
+                                            "image": blob,
+                                        }
+                                    ],
+                                }
+                    except OSError:
+                        pass
+
             create_resp = requests.post(
                 "https://bsky.social/xrpc/com.atproto.repo.createRecord",
                 headers={"Authorization": f"Bearer {access_jwt}"},
                 json={
                     "repo": did,
                     "collection": "app.bsky.feed.post",
-                    "record": {
-                        "$type": "app.bsky.feed.post",
-                        "text": text,
-                        "createdAt": now,
-                    },
+                    "record": record,
                 },
                 timeout=20,
             )

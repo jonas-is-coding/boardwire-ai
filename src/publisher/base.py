@@ -14,5 +14,10 @@ class PublishResult:
 
 
 class Publisher(Protocol):
-    def publish(self, post: str, source_link: str | None = None) -> PublishResult:
+    def publish(
+        self,
+        post: str,
+        source_link: str | None = None,
+        image_path: str | None = None,
+    ) -> PublishResult:
         ...
