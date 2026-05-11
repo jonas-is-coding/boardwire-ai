@@ -19,6 +19,7 @@ from src.config import (
     PUBLISHED_POSTS_PATH,
     QUALITY_PATH,
     REVIEW_QUEUE_PATH,
+    REVIEW_REPORT_PATH,
     SAMPLE_ITEMS_PATH,
     SEEN_ITEMS_PATH,
     SOURCES_PATH,
@@ -29,6 +30,7 @@ from src.publisher.base import PublishResult
 from src.publisher.bluesky_publisher import BlueskyPublisher
 from src.publisher.dry_run_publisher import DryRunPublisher
 from src.quality.gates import QualityConfig, check_quality
+from src.reports.review_report import generate_review_queue_report
 from src.storage.json_store import JsonStore
 from src.utils.logger import get_logger
 from src.writer.post_writer import generate_post
@@ -104,6 +106,7 @@ def _build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--self-check-writer", action="store_true", help="Generate fixture posts and run quality gates as a writer self-check.")
     parser.add_argument("--max-posts-per-day", type=int, default=None, help="Override BOARDWIRE_MAX_POSTS_PER_DAY for this run.")
     parser.add_argument("--reset-fixture-state", action="store_true", help="Clear fixture-related seen/draft/review state (requires --use-fixtures).")
+    parser.add_argument("--generate-review-report", action="store_true", help="Generate reports/review_queue.md from pending review items.")
     return parser
 
 
@@ -240,6 +243,13 @@ def _list_review_queue(logger) -> int:
     return 0
 
 
+def _generate_review_report(logger) -> int:
+    pending = generate_review_queue_report(REVIEW_QUEUE_PATH, REVIEW_REPORT_PATH)
+    logger.info("Generated review report: %s", REVIEW_REPORT_PATH)
+    logger.info("Pending items in report: %d", pending)
+    return 0
+
+
 def _update_review_status(review_id: str, status: str, logger) -> int:
     queue = JsonStore.load(REVIEW_QUEUE_PATH, default=[])
     updated = False
@@ -261,6 +271,7 @@ def _update_review_status(review_id: str, status: str, logger) -> int:
         return 1
 
     JsonStore.save(REVIEW_QUEUE_PATH, queue)
+    generate_review_queue_report(REVIEW_QUEUE_PATH, REVIEW_REPORT_PATH)
     logger.info("Review item %s marked as %s", review_id, status)
     return 0
 
@@ -379,6 +390,7 @@ def _publish_approved(args, logger) -> int:
 
     JsonStore.save(REVIEW_QUEUE_PATH, queue)
     JsonStore.save(PUBLISHED_POSTS_PATH, published)
+    generate_review_queue_report(REVIEW_QUEUE_PATH, REVIEW_REPORT_PATH)
     logger.info("Dry-run published count: %d", published_count)
     logger.info("Quality rejected before publish: %d", quality_rejected_count)
     return 0
@@ -454,6 +466,7 @@ def _reset_fixture_state(logger) -> int:
     JsonStore.save(SEEN_ITEMS_PATH, seen_after)
     JsonStore.save(DRAFTS_PATH, drafts_after)
     JsonStore.save(REVIEW_QUEUE_PATH, review_after)
+    generate_review_queue_report(REVIEW_QUEUE_PATH, REVIEW_REPORT_PATH)
 
     logger.info("Fixture state reset complete")
     logger.info("Removed from seen_items: %d", seen_before - len(seen_after))
@@ -469,6 +482,8 @@ def run(argv: list[str] | None = None) -> int:
 
     if args.list_review_queue:
         return _list_review_queue(logger)
+    if args.generate_review_report:
+        return _generate_review_report(logger)
     if args.self_check_writer:
         return _self_check_writer(logger)
     if args.reset_fixture_state:
@@ -681,6 +696,7 @@ def run(argv: list[str] | None = None) -> int:
 
         review_queue_data.extend(passed_queue_items)
         JsonStore.save(REVIEW_QUEUE_PATH, review_queue_data)
+        generate_review_queue_report(REVIEW_QUEUE_PATH, REVIEW_REPORT_PATH)
         saved_to_review_queue = len(passed_queue_items)
         logger.info("Saved %d drafts to review queue", saved_to_review_queue)
         logger.info("Quality gate summary: passed=%d rejected=%d", quality_pass, quality_reject)
