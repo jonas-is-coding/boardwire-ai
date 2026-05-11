@@ -174,5 +174,93 @@
     "post_text": "Celebrity shares favorite chatbot prompts. Benchmark movement matters most when evaluation setup is transparent and results transfer to production tasks.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-11T15:03:22.174086Z"
+  },
+  {
+    "title": "How enterprises are scaling AI",
+    "link": "https://openai.com/business/guides-and-resources/how-enterprises-are-scaling-ai",
+    "source": "OpenAI Blog",
+    "score": 85,
+    "should_post": true,
+    "reason": "The story from OpenAI provides practical insights into the critical aspects of scaling AI in enterprises, focusing on governance, trust, and quality, which are vital for successful adoption beyond initial experiments. It's a relevant and cr",
+    "post_text": "Enterprises scaling AI? OpenAI shares key strategies for moving from experiments to compounding impact, focusing on trust, governance, workflow design, and quality at scale. Essential reading for business leaders. #AI #EnterpriseAI",
+    "source_angle": "OpenAI's perspective on practical enterprise AI scaling challenges and solutions.",
+    "created_at": "2026-05-11T15:21:42.096886Z"
+  },
+  {
+    "title": "OpenAI Campus Network: Student club interest form",
+    "link": "https://openai.com/index/openai-campus-network-student-club-interest-form",
+    "source": "OpenAI Blog",
+    "score": 25,
+    "should_post": false,
+    "reason": "An 'interest form' for a student club network is a low-signal announcement. While strategically relevant for OpenAI's long-term community and talent pipeline, it lacks immediate impact or technical depth for a general tech audience.",
+    "post_text": "No post generated",
+    "source_angle": "Community building, strategic outreach",
+    "created_at": "2026-05-11T15:21:50.339979Z"
+  },
+  {
+    "title": "OpenAI launches DeployCo to help businesses build around intelligence",
+    "link": "https://openai.com/index/openai-launches-the-deployment-company",
+    "source": "OpenAI Blog",
+    "score": 92,
+    "should_post": true,
+    "reason": "OpenAI's launch of DeployCo is a significant strategic move, addressing the critical challenge of bringing frontier AI into enterprise production for measurable business impact. This indicates a maturation of the AI market towards practical",
+    "post_text": "OpenAI launches DeployCo, a new enterprise company dedicated to helping organizations integrate frontier AI into production. This strategic move aims to translate advanced AI capabilities into measurable business impact for companies.",
+    "source_angle": "Company Announcement / Strategic Expansion",
+    "created_at": "2026-05-11T15:21:55.821254Z"
+  },
+  {
+    "title": "GraphDC: A Divide-and-Conquer Multi-Agent System for Scalable Graph Algorithm Reasoning",
+    "link": "https://arxiv.org/abs/2605.06671",
+    "source": "arXiv cs.AI",
+    "score": 8,
+    "should_post": true,
+    "reason": "Matched keywords: model, agent, llm",
+    "post_text": "GraphDC: A Divide-and-Conquer Multi-Agent System for Scalable Graph Algorithm Reasoning. The practical question is how much reliability improves when agent tooling is used in real developer workflows.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-11T15:21:55.821421Z"
+  },
+  {
+    "title": "More Thinking, More Bias: Length-Driven Position Bias in Reasoning Models",
+    "link": "https://arxiv.org/abs/2605.06672",
+    "source": "arXiv cs.AI",
+    "score": 5,
+    "should_post": true,
+    "reason": "Matched keywords: ai, model",
+    "post_text": "More Thinking, More Bias: Length-Driven Position Bias in Reasoning Models. The key signal is whether teams can inspect, adapt, and run these models without black-box constraints.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-11T15:21:55.821463Z"
+  },
+  {
+    "title": "Fast and Effective Redistricting Optimization via Composite-Move Tabu Search",
+    "link": "https://arxiv.org/abs/2605.06682",
+    "source": "arXiv cs.AI",
+    "score": 3,
+    "should_post": true,
+    "reason": "Matched keywords: ai",
+    "post_text": "Fast and Effective Redistricting Optimization via Composite-Move Tabu Search. The practical question is how much reliability improves when agent tooling is used in real developer workflows.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-11T15:21:55.821500Z"
+  },
+  {
+    "title": "State Representation and Termination for Recursive Reasoning Systems",
+    "link": "https://arxiv.org/abs/2605.06690",
+    "source": "arXiv cs.AI",
+    "score": 6,
+    "should_post": true,
+    "reason": "Matched keywords: ai, agent",
+    "post_text": "State Representation and Termination for Recursive Reasoning Systems. The practical question is how much reliability improves when agent tooling is used in real developer workflows.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-11T15:21:55.821528Z"
+  },
+  {
+    "title": "Hidden Coalitions in Multi-Agent AI: A Spectral Diagnostic from Internal Representations",
+    "link": "https://arxiv.org/abs/2605.06696",
+    "source": "arXiv cs.AI",
+    "score": 8,
+    "should_post": true,
+    "reason": "Matched keywords: ai, model, agent",
+    "post_text": "Hidden Coalitions in Multi-Agent AI: A Spectral Diagnostic from Internal Representations. The practical question is how much reliability improves when agent tooling is used in real developer workflows.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-11T15:21:55.821570Z"
   }
 ]
