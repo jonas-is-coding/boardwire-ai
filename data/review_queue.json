@@ -97,7 +97,7 @@
   },
   {
     "id": "8ed39322cc97",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-11T15:39:12.729750Z",
     "score": 8,
     "reason": "Matched keywords: ai, model, llm",
@@ -110,7 +110,8 @@
     },
     "is_llm_mode": false,
     "defer_count": 2,
-    "deferred_at": "2026-05-11T15:44:16.365935Z"
+    "deferred_at": "2026-05-11T15:44:16.365935Z",
+    "rejected_at": "2026-05-11T16:05:20.115385Z"
   },
   {
     "id": "177c2fdd1280",
@@ -130,7 +131,7 @@
   },
   {
     "id": "04fa741abaa0",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-11T15:39:12.729829Z",
     "score": 8,
     "reason": "Matched keywords: ai, model, llm",
@@ -143,7 +144,8 @@
     },
     "is_llm_mode": false,
     "defer_count": 2,
-    "deferred_at": "2026-05-11T15:44:16.403453Z"
+    "deferred_at": "2026-05-11T15:44:16.403453Z",
+    "rejected_at": "2026-05-11T16:05:20.133497Z"
   },
   {
     "id": "571cc1c12ca2",
@@ -196,7 +198,7 @@
   },
   {
     "id": "3f4d5e3d04ea",
-    "status": "pending_review",
+    "status": "published_dry_run",
     "created_at": "2026-05-11T15:39:12.308178Z",
     "score": 8,
     "reason": "Matched keywords: ai, model, agent",
@@ -207,6 +209,120 @@
       "source": "arXiv cs.AI",
       "link": "https://arxiv.org/abs/2605.06841"
     },
-    "is_llm_mode": false
+    "is_llm_mode": false,
+    "reviewed_at": "2026-05-11T15:50:18.070998Z",
+    "published_at": "2026-05-11T15:50:18.192060Z"
+  },
+  {
+    "id": "c5862c1a55e4",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-11T16:05:20.092466Z",
+    "score": 5,
+    "reason": "Matched keywords: ai, benchmark",
+    "proposed_post": "Optimal Experiments for Partial Causal Effect Identification. Benchmark movement matters most when evaluation setup is transparent and results transfer to production tasks.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Optimal Experiments for Partial Causal Effect Identification",
+      "source": "arXiv cs.AI",
+      "link": "https://arxiv.org/abs/2605.06993"
+    },
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-11T16:05:20.175450Z",
+    "defer_count": 1,
+    "original_score": 5,
+    "original_reason": "Matched keywords: ai, benchmark"
+  },
+  {
+    "id": "3b21bc21100f",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-11T16:05:20.092489Z",
+    "score": 5,
+    "reason": "Matched keywords: ai, model",
+    "proposed_post": "Adaptive auditing of AI systems with anytime-valid guarantees. Benchmark movement matters most when evaluation setup is transparent and results transfer to production tasks.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Adaptive auditing of AI systems with anytime-valid guarantees",
+      "source": "arXiv cs.AI",
+      "link": "https://arxiv.org/abs/2605.07002"
+    },
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-11T16:05:20.197663Z",
+    "defer_count": 1,
+    "original_score": 5,
+    "original_reason": "Matched keywords: ai, model"
+  },
+  {
+    "id": "4d9e3358923b",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-11T16:05:20.092508Z",
+    "score": 8,
+    "reason": "Matched keywords: ai, model, llm",
+    "proposed_post": "Behavior Cue Reasoning: Monitorable Reasoning Improves Efficiency and Safety through Oversight. Benchmark movement matters most when evaluation setup is transparent and results transfer to production tasks.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Behavior Cue Reasoning: Monitorable Reasoning Improves Efficiency and Safety through Oversight",
+      "source": "arXiv cs.AI",
+      "link": "https://arxiv.org/abs/2605.07021"
+    },
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-11T16:05:20.222248Z",
+    "defer_count": 1,
+    "original_score": 8,
+    "original_reason": "Matched keywords: ai, model, llm"
+  },
+  {
+    "id": "f5d82609d6c0",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-11T16:05:20.092525Z",
+    "score": 11,
+    "reason": "Matched keywords: ai, model, agent, llm",
+    "proposed_post": "The Context Gathering Decision Process: A POMDP Framework for Agentic Search. The practical question is how much reliability improves when agent tooling is used in real developer workflows.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "The Context Gathering Decision Process: A POMDP Framework for Agentic Search",
+      "source": "arXiv cs.AI",
+      "link": "https://arxiv.org/abs/2605.07042"
+    },
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-11T16:05:20.242028Z",
+    "defer_count": 1,
+    "original_score": 11,
+    "original_reason": "Matched keywords: ai, model, agent, llm"
+  },
+  {
+    "id": "079903c32143",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-11T16:05:20.092541Z",
+    "score": 13,
+    "reason": "Matched keywords: ai, model, agent, benchmark",
+    "proposed_post": "2.5-D Decomposition for LLM-Based Spatial Construction. The practical question is how much reliability improves when agent tooling is used in real developer workflows.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "2.5-D Decomposition for LLM-Based Spatial Construction",
+      "source": "arXiv cs.AI",
+      "link": "https://arxiv.org/abs/2605.07066"
+    },
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-11T16:05:20.260763Z",
+    "defer_count": 1,
+    "original_score": 13,
+    "original_reason": "Matched keywords: ai, model, agent, benchmark"
+  },
+  {
+    "id": "cce2e6a82a03",
+    "status": "published_dry_run",
+    "created_at": "2026-05-11T16:05:20.092443Z",
+    "score": 10,
+    "reason": "Matched keywords: model, agent, benchmark, llm",
+    "proposed_post": "Learning and Reusing Policy Decompositions for Hierarchical Generalized Planning with LLM Agents. The practical question is how much reliability improves when agent tooling is used in real developer workflows.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Learning and Reusing Policy Decompositions for Hierarchical Generalized Planning with LLM Agents",
+      "source": "arXiv cs.AI",
+      "link": "https://arxiv.org/abs/2605.06957"
+    },
+    "is_llm_mode": false,
+    "reviewed_at": "2026-05-11T16:08:25.750102Z",
+    "published_at": "2026-05-11T16:08:33.622478Z"
   }
 ]

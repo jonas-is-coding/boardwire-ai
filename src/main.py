@@ -12,7 +12,10 @@ from src.board.evaluator import evaluate_item
 from src.board.llm_evaluator import evaluate_with_optional_llm
 from src.board.personas import load_personas
 from src.collector.rss_collector import fetch_all
+from src.cards.card_data import from_review_item
+from src.cards.renderer import render_card_png
 from src.config import (
+    CARDS_DIR,
     DRAFTS_PATH,
     MAX_ITEMS_PER_RUN,
     PERSONAS_PATH,
@@ -108,6 +111,8 @@ def _build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--max-posts-per-day", type=int, default=None, help="Override BOARDWIRE_MAX_POSTS_PER_DAY for this run.")
     parser.add_argument("--reset-fixture-state", action="store_true", help="Clear fixture-related seen/draft/review state (requires --use-fixtures).")
     parser.add_argument("--generate-review-report", action="store_true", help="Generate reports/review_queue.md from pending review items.")
+    parser.add_argument("--generate-card", type=str, default=None, help="Generate one card for a review item ID.")
+    parser.add_argument("--generate-cards", action="store_true", help="Generate cards for pending_review and approved items missing card_path.")
     return parser
 
 
@@ -135,6 +140,7 @@ def _queue_from_drafts(drafts: list[DraftPost]) -> list[dict]:
                     "source": draft.source,
                     "link": draft.link,
                 },
+                "card_path": None,
             }
         )
     return queue_items
@@ -306,6 +312,52 @@ def _generate_review_report(logger) -> int:
     pending = generate_review_queue_report(REVIEW_QUEUE_PATH, REVIEW_REPORT_PATH)
     logger.info("Generated review report: %s", REVIEW_REPORT_PATH)
     logger.info("Pending items in report: %d", pending)
+    return 0
+
+
+def _generate_card_for_item(item: dict, logger) -> str | None:
+    review_id = str(item.get("id", "")).strip()
+    if not review_id:
+        return None
+    logger.info("Generating card for: %s", review_id)
+    card_data = from_review_item(item)
+    output_path = CARDS_DIR / f"{review_id}.png"
+    render_card_png(card_data, output_path)
+    rel = f"generated/cards/{review_id}.png"
+    logger.info("Saved card: %s", rel)
+    return rel
+
+
+def _generate_card_for_id(review_id: str, logger) -> int:
+    queue = JsonStore.load(REVIEW_QUEUE_PATH, default=[])
+    for item in queue:
+        if item.get("id") == review_id:
+            card_path = _generate_card_for_item(item, logger)
+            if card_path:
+                item["card_path"] = card_path
+                JsonStore.save(REVIEW_QUEUE_PATH, queue)
+                generate_review_queue_report(REVIEW_QUEUE_PATH, REVIEW_REPORT_PATH)
+                return 0
+    logger.warning("Review item not found for card generation: %s", review_id)
+    return 1
+
+
+def _generate_cards(logger) -> int:
+    queue = JsonStore.load(REVIEW_QUEUE_PATH, default=[])
+    generated = 0
+    for item in queue:
+        status = item.get("status")
+        if status not in {"pending_review", "approved"}:
+            continue
+        if item.get("card_path"):
+            continue
+        card_path = _generate_card_for_item(item, logger)
+        if card_path:
+            item["card_path"] = card_path
+            generated += 1
+    JsonStore.save(REVIEW_QUEUE_PATH, queue)
+    generate_review_queue_report(REVIEW_QUEUE_PATH, REVIEW_REPORT_PATH)
+    logger.info("Generated cards: %d", generated)
     return 0
 
 
@@ -562,6 +614,10 @@ def run(argv: list[str] | None = None) -> int:
 
     if args.list_review_queue:
         return _list_review_queue(logger)
+    if args.generate_card:
+        return _generate_card_for_id(args.generate_card, logger)
+    if args.generate_cards:
+        return _generate_cards(logger)
     if args.list_deferred:
         return _list_deferred(logger)
     if args.generate_review_report:

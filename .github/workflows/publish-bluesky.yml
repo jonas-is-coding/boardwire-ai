@@ -31,6 +31,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Install Playwright Chromium
+        run: python -m playwright install chromium
+
       - name: Publish approved to Bluesky (real)
         run: python -m src.main --publish-approved --publisher bluesky --confirm-real-publish
 

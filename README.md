@@ -2,63 +2,69 @@
 
 Boardwire AI is a CLI-first MVP for an autonomous AI news channel with safe defaults.
 
-## Deferred queue prioritization
+## Branded image cards
 
-When daily cap blocks strong candidates, Boardwire stores them as `deferred_due_to_cap` instead of losing them.
+Boardwire can generate square editorial image cards for review/publish flows.
 
-Next runs automatically:
-- load deferred items first,
-- prioritize deferred items by score (highest first),
-- process fresh unseen RSS items after deferred items.
+Output path:
+- `generated/cards/<review_id>.png`
 
-This prevents strong stories from being dropped during high-volume periods.
+Card style:
+- 1200x1200
+- black/white
+- minimal editorial layout
+- no external assets
 
-### Deferred fields
+### Setup (one-time)
 
-Deferred items store:
-- `deferred_at`
-- `defer_count`
-- `original_score`
-- `original_reason`
-
-### Retry and expiry
-
-`config/quality.json` includes:
-- `max_defer_count` (default `3`)
-
-If `defer_count` exceeds the limit, item status becomes `expired_deferred` and it is skipped permanently.
-
-## Commands
-
-List deferred items:
 ```bash
-python -m src.main --list-deferred
+pip install -r requirements.txt
+python -m playwright install chromium
 ```
 
-Run normal review flow:
+### Commands
+
+Generate one card by review item ID:
 ```bash
-python -m src.main --limit 8 --llm-provider none --review --quality-report
+python -m src.main --generate-card <ID>
 ```
 
-Generate markdown queue report:
+Generate cards for all `pending_review` + `approved` items without `card_path`:
 ```bash
-python -m src.main --generate-review-report
+python -m src.main --generate-cards
 ```
+
+Cards are generated from `data/review_queue.json` and saved back via `card_path`.
 
 ## Review report
 
 Boardwire maintains:
 - `reports/review_queue.md`
 
-It contains `pending_review` items only (newest first) with approve/reject commands.
+It contains pending items only (newest first) and approve/reject commands.
+
+## Deferred queue prioritization
+
+When daily cap blocks strong candidates, Boardwire stores them as `deferred_due_to_cap`.
+Deferred items are prioritized before fresh RSS items on the next run.
 
 ## LLM providers
 
 Supported providers:
-- `none` (default fallback)
+- `none`
 - `openai`
 - `gemini`
 
-Gemini is the recommended low-cost/free provider for manual LLM collection.
+Gemini is recommended for low-cost/manual LLM collection.
 
-Codex is used for development assistance only, not for runtime automation.
+## GitHub Secrets
+
+For Gemini:
+- `GEMINI_API_KEY`
+
+Optional for OpenAI:
+- `OPENAI_API_KEY`
+
+For real Bluesky publishing:
+- `BLUESKY_HANDLE`
+- `BLUESKY_APP_PASSWORD`

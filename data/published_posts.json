@@ -20,5 +20,29 @@
     "reason": "Matched keywords: ai, model, llm",
     "external_id": null,
     "url": null
+  },
+  {
+    "id": "3f4d5e3d04ea",
+    "published_at": "2026-05-11T15:50:18.192060Z",
+    "platform": "dry_run",
+    "post": "AGWM: Affordance-Grounded World Models for Environments with Compositional Prerequisites. The practical question is how much reliability improves when agent tooling is used in real developer workflows.",
+    "source_link": "https://arxiv.org/abs/2605.06841",
+    "source_title": "AGWM: Affordance-Grounded World Models for Environments with Compositional Prerequisites",
+    "score": 8,
+    "reason": "Matched keywords: ai, model, agent",
+    "external_id": null,
+    "url": null
+  },
+  {
+    "id": "cce2e6a82a03",
+    "published_at": "2026-05-11T16:08:33.622478Z",
+    "platform": "bluesky",
+    "post": "Learning and Reusing Policy Decompositions for Hierarchical Generalized Planning with LLM Agents. The practical question is how much reliability improves when agent tooling is used in real developer workflows.",
+    "source_link": "https://arxiv.org/abs/2605.06957",
+    "source_title": "Learning and Reusing Policy Decompositions for Hierarchical Generalized Planning with LLM Agents",
+    "score": 10,
+    "reason": "Matched keywords: model, agent, benchmark, llm",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mllnuqml4a2u",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mllnuqml4a2u"
   }
 ]
