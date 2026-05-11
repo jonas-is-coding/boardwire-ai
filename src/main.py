@@ -113,6 +113,7 @@ def _build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--generate-review-report", action="store_true", help="Generate reports/review_queue.md from pending review items.")
     parser.add_argument("--generate-card", type=str, default=None, help="Generate one card for a review item ID.")
     parser.add_argument("--generate-cards", action="store_true", help="Generate cards for pending_review and approved items missing card_path.")
+    parser.add_argument("--regenerate-cards", action="store_true", help="Regenerate cards for pending_review and approved items, even if card_path exists.")
     parser.add_argument("--ignore-daily-cap", action="store_true", help="Development-only: bypass daily cap checks for this run.")
     parser.add_argument("--create-test-review-item", action="store_true", help="Development-only: create one pending review item from fixtures.")
     return parser
@@ -360,6 +361,23 @@ def _generate_cards(logger) -> int:
     JsonStore.save(REVIEW_QUEUE_PATH, queue)
     generate_review_queue_report(REVIEW_QUEUE_PATH, REVIEW_REPORT_PATH)
     logger.info("Generated cards: %d", generated)
+    return 0
+
+
+def _regenerate_cards(logger) -> int:
+    queue = JsonStore.load(REVIEW_QUEUE_PATH, default=[])
+    regenerated = 0
+    for item in queue:
+        status = item.get("status")
+        if status not in {"pending_review", "approved"}:
+            continue
+        card_path = _generate_card_for_item(item, logger)
+        if card_path:
+            item["card_path"] = card_path
+            regenerated += 1
+    JsonStore.save(REVIEW_QUEUE_PATH, queue)
+    generate_review_queue_report(REVIEW_QUEUE_PATH, REVIEW_REPORT_PATH)
+    logger.info("Regenerated cards: %d", regenerated)
     return 0
 
 
@@ -661,6 +679,8 @@ def run(argv: list[str] | None = None) -> int:
         return _generate_card_for_id(args.generate_card, logger)
     if args.generate_cards:
         return _generate_cards(logger)
+    if args.regenerate_cards:
+        return _regenerate_cards(logger)
     if args.create_test_review_item:
         if not args.use_fixtures:
             logger.error("--create-test-review-item requires --use-fixtures")

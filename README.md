@@ -34,6 +34,11 @@ Generate cards for all `pending_review` + `approved` items without `card_path`:
 python -m src.main --generate-cards
 ```
 
+Regenerate cards for all `pending_review` + `approved` items even when `card_path` already exists:
+```bash
+python -m src.main --regenerate-cards
+```
+
 Cards are generated from `data/review_queue.json` and saved back via `card_path`.
 
 ## Dev-only testing commands
