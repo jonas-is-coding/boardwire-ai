@@ -33,6 +33,7 @@ from src.models import DraftPost, FeedItem, Source
 from src.publisher.base import PublishResult
 from src.publisher.bluesky_publisher import BlueskyPublisher
 from src.publisher.dry_run_publisher import DryRunPublisher
+from src.publisher.x_publisher import XPublisher
 from src.quality.gates import QualityConfig, check_quality
 from src.reports.review_report import generate_review_queue_report
 from src.storage.json_store import JsonStore
@@ -40,7 +41,7 @@ from src.utils.logger import get_logger
 from src.writer.post_writer import generate_post
 
 VALID_REVIEW_STATUSES = {"pending_review", "approved", "rejected", "published_dry_run", "deferred_due_to_cap", "expired_deferred"}
-VALID_PUBLISHERS = {"dry_run", "bluesky"}
+VALID_PUBLISHERS = {"dry_run", "bluesky", "x"}
 
 
 def _load_sources() -> list[Source]:
@@ -105,7 +106,7 @@ def _build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--reject-review", type=str, default=None, help="Reject one review queue item by ID.")
     parser.add_argument("--publish-approved", action="store_true", help="Publish approved review items in dry-run mode.")
     parser.add_argument("--list-published", action="store_true", help="List published dry-run posts.")
-    parser.add_argument("--publisher", choices=["dry_run", "bluesky"], default=None, help="Publisher backend for --publish-approved.")
+    parser.add_argument("--publisher", choices=["dry_run", "bluesky", "x"], default=None, help="Publisher backend for --publish-approved.")
     parser.add_argument("--confirm-real-publish", action="store_true", help="Required confirmation flag for real publishing.")
     parser.add_argument("--quality-report", action="store_true", help="Print quality gate pass/fail reasons for each candidate.")
     parser.add_argument("--self-check-writer", action="store_true", help="Generate fixture posts and run quality gates as a writer self-check.")
@@ -481,20 +482,48 @@ def _resolve_publisher(args, logger):
         return DryRunPublisher(), "dry_run"
 
     real_enabled = os.getenv("BOARDWIRE_REAL_PUBLISH_ENABLED", "false").strip().lower() == "true"
-    handle = os.getenv("BLUESKY_HANDLE", "").strip()
-    app_password = os.getenv("BLUESKY_APP_PASSWORD", "").strip()
-
     if not real_enabled:
-        logger.error("Refusing Bluesky publish: BOARDWIRE_REAL_PUBLISH_ENABLED must be true")
-        return None, "bluesky"
+        logger.error("Refusing %s publish: BOARDWIRE_REAL_PUBLISH_ENABLED must be true", selected)
+        return None, selected
     if not args.confirm_real_publish:
-        logger.error("Refusing Bluesky publish: missing --confirm-real-publish")
-        return None, "bluesky"
-    if not handle or not app_password:
-        logger.error("Refusing Bluesky publish: BLUESKY_HANDLE and BLUESKY_APP_PASSWORD are required")
-        return None, "bluesky"
+        logger.error("Refusing %s publish: missing --confirm-real-publish", selected)
+        return None, selected
 
-    return BlueskyPublisher(handle=handle, app_password=app_password), "bluesky"
+    if selected == "bluesky":
+        handle = os.getenv("BLUESKY_HANDLE", "").strip()
+        app_password = os.getenv("BLUESKY_APP_PASSWORD", "").strip()
+        if not handle or not app_password:
+            logger.error("Refusing Bluesky publish: BLUESKY_HANDLE and BLUESKY_APP_PASSWORD are required")
+            return None, "bluesky"
+        return BlueskyPublisher(handle=handle, app_password=app_password), "bluesky"
+
+    missing_x: list[str] = []
+    consumer_key = os.getenv("X_CONSUMER_KEY", "").strip()
+    consumer_secret = os.getenv("X_CONSUMER_KEY_SECRET", "").strip()
+    access_token = os.getenv("X_ACCESS_TOKEN", "").strip()
+    access_secret = os.getenv("X_ACCESS_TOKEN_SECRET", "").strip()
+    if not consumer_key:
+        missing_x.append("X_CONSUMER_KEY")
+    if not consumer_secret:
+        missing_x.append("X_CONSUMER_KEY_SECRET")
+    if not access_token:
+        missing_x.append("X_ACCESS_TOKEN")
+    if not access_secret:
+        missing_x.append("X_ACCESS_TOKEN_SECRET")
+
+    if missing_x:
+        logger.error("Refusing X publish: missing required env vars: %s", ", ".join(missing_x))
+        return None, "x"
+
+    return (
+        XPublisher(
+            consumer_key=consumer_key,
+            consumer_secret=consumer_secret,
+            access_token=access_token,
+            access_token_secret=access_secret,
+        ),
+        "x",
+    )
 
 
 def _build_publish_caption(item: dict) -> str:

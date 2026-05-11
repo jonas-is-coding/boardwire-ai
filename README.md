@@ -92,8 +92,31 @@ For real Bluesky publishing:
 - `BLUESKY_HANDLE`
 - `BLUESKY_APP_PASSWORD`
 
+For real X publishing:
+- `X_CONSUMER_KEY`
+- `X_CONSUMER_KEY_SECRET`
+- `X_ACCESS_TOKEN`
+- `X_ACCESS_TOKEN_SECRET`
+
 ## Publish behavior
 
 - `--publish-approved` now sends a short caption + hashtags.
 - If `card_path` exists on the review item, the card image is attached on publish.
 - `dry_run` stays the safe default publisher.
+- Supported publishers: `dry_run`, `bluesky`, `x`.
+
+## X setup
+
+- Create an app in the X Developer Portal.
+- App permissions must be `Read and Write`.
+- Use an app type suited for automation (Web App / Automated App / Bot).
+- After enabling write access, generate OAuth 1.0a Access Token + Access Token Secret.
+- Boardwire uses OAuth 1.0a for X publishing via Tweepy.
+- Safety gates for real X posting:
+  - `BOARDWIRE_REAL_PUBLISH_ENABLED=true`
+  - `--confirm-real-publish`
+  - all 4 OAuth env vars present
+
+Current X media behavior:
+- Text posting is enabled.
+- If `image_path` exists, Boardwire logs: `X media upload not enabled yet, posting text-only`.
