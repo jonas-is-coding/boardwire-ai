@@ -5,32 +5,12 @@ from html import escape
 from src.cards.card_data import CardData
 
 
-# Source → accent color mapping. Each source gets its own brand-tinted dot.
-# Falls back to white for unknown sources.
-SOURCE_COLORS: dict[str, str] = {
-    "hugging face":   "#FFD21E",
-    "huggingface":    "#FFD21E",
-    "openai":         "#10A37F",
-    "anthropic":      "#D97757",
-    "google":         "#4285F4",
-    "google deepmind": "#4285F4",
-    "deepmind":       "#4285F4",
-    "meta":           "#0668E1",
-    "meta ai":        "#0668E1",
-    "microsoft":      "#00A4EF",
-    "nvidia":         "#76B900",
-    "mistral":        "#FF7000",
-    "x":              "#1D9BF0",
-    "twitter":        "#1D9BF0",
-    "github":         "#8B949E",
-    "arxiv":          "#B31B1B",
-}
-
-DEFAULT_ACCENT = "#FFFFFF"
+DEFAULT_ACCENT = "#FFD21E"
 
 
 def _accent_for(source: str) -> str:
-    return SOURCE_COLORS.get(source.strip().lower(), DEFAULT_ACCENT)
+    _ = source
+    return DEFAULT_ACCENT
 
 
 def _split_headline(headline: str) -> tuple[str, str]:
