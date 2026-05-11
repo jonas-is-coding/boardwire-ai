@@ -11,6 +11,7 @@ class DryRunPublisher:
         post: str,
         source_link: str | None = None,
         image_path: str | None = None,
+        image_alt: str | None = None,
     ) -> PublishResult:
-        _ = (post, source_link, image_path)
+        _ = (post, source_link, image_path, image_alt)
         return PublishResult(success=True, platform=self.platform)

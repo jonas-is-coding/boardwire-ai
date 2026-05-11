@@ -20,6 +20,7 @@ class BlueskyPublisher:
         post: str,
         source_link: str | None = None,
         image_path: str | None = None,
+        image_alt: str | None = None,
     ) -> PublishResult:
         text = post if not source_link else f"{post}\n🔗 {source_link}"
         text = text[:300]
@@ -105,7 +106,7 @@ class BlueskyPublisher:
                 "$type": "app.bsky.embed.images",
                 "images": [
                     {
-                        "alt": "Boardwire editorial card",
+                        "alt": (image_alt or "Boardwire news card")[:1000],
                         "image": blob,
                     }
                 ],

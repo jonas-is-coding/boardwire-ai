@@ -550,6 +550,19 @@ def _resolve_card_image_path(item: dict, logger) -> str | None:
     return None
 
 
+def _build_image_alt_text(item: dict) -> str:
+    source_item = item.get("source_item", {})
+    title = " ".join(str(source_item.get("title", "")).split()).strip()
+    source = " ".join(str(source_item.get("source", "")).split()).strip()
+    if title and source:
+        return f"Boardwire card: {title} ({source})"
+    if title:
+        return f"Boardwire card: {title}"
+    if source:
+        return f"Boardwire card from {source}"
+    return "Boardwire news card"
+
+
 def _publish_approved(args, logger) -> int:
     queue = JsonStore.load(REVIEW_QUEUE_PATH, default=[])
     published = JsonStore.load(PUBLISHED_POSTS_PATH, default=[])
@@ -634,6 +647,7 @@ def _publish_approved(args, logger) -> int:
             post=post_text,
             source_link=source_link,
             image_path=abs_card_path,
+            image_alt=_build_image_alt_text(item),
         )
         if not result.success:
             logger.warning("Publish failed for %s: %s", rid, result.error or "unknown error")

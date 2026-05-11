@@ -19,5 +19,6 @@ class Publisher(Protocol):
         post: str,
         source_link: str | None = None,
         image_path: str | None = None,
+        image_alt: str | None = None,
     ) -> PublishResult:
         ...
