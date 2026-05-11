@@ -174,5 +174,93 @@
     "post_text": "Celebrity shares favorite chatbot prompts. Benchmark movement matters most when evaluation setup is transparent and results transfer to production tasks.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-11T15:27:44.956787Z"
+  },
+  {
+    "title": "CASCADE: Case-Based Continual Adaptation for Large Language Models During Deployment",
+    "link": "https://arxiv.org/abs/2605.06702",
+    "source": "arXiv cs.AI",
+    "score": 11,
+    "should_post": true,
+    "reason": "Matched keywords: ai, model, agent, llm",
+    "post_text": "CASCADE: Case-Based Continual Adaptation for Large Language Models During Deployment. The practical question is how much reliability improves when agent tooling is used in real developer workflows.",
+    "source_angle": "Rule-based fallback",
+    "created_at": "2026-05-11T15:29:04.908626Z"
+  },
+  {
+    "title": "From Storage to Experience: A Survey on the Evolution of LLM Agent Memory Mechanisms",
+    "link": "https://arxiv.org/abs/2605.06716",
+    "source": "arXiv cs.AI",
+    "score": 13,
+    "should_post": true,
+    "reason": "Matched keywords: ai, model, agent, research",
+    "post_text": "From Storage to Experience: A Survey on the Evolution of LLM Agent Memory Mechanisms. The practical question is how much reliability improves when agent tooling is used in real developer workflows.",
+    "source_angle": "Rule-based fallback",
+    "created_at": "2026-05-11T15:29:05.490718Z"
+  },
+  {
+    "title": "When Does a Language Model Commit? A Finite-Answer Theory of Pre-Verbalization Commitment",
+    "link": "https://arxiv.org/abs/2605.06723",
+    "source": "arXiv cs.AI",
+    "score": 5,
+    "should_post": true,
+    "reason": "Matched keywords: ai, model",
+    "post_text": "When Does a Language Model Commit? A Finite-Answer Theory of Pre-Verbalization Commitment. The useful part is the method and evidence quality, not just headline claims from a single result.",
+    "source_angle": "Rule-based fallback",
+    "created_at": "2026-05-11T15:29:07.343027Z"
+  },
+  {
+    "title": "Weblica: Scalable and Reproducible Training Environments for Visual Web Agents",
+    "link": "https://arxiv.org/abs/2605.06761",
+    "source": "arXiv cs.AI",
+    "score": 13,
+    "should_post": true,
+    "reason": "Matched keywords: ai, model, agent, benchmark",
+    "post_text": "Weblica: Scalable and Reproducible Training Environments for Visual Web Agents. The key signal is whether teams can inspect, adapt, and run these models without black-box constraints.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-11T15:29:07.343114Z"
+  },
+  {
+    "title": "When Does Critique Improve AI-Assisted Theoretical Physics? SCALAR: Structured Critic--Actor Loop for Agentic Reasoning",
+    "link": "https://arxiv.org/abs/2605.06772",
+    "source": "arXiv cs.AI",
+    "score": 13,
+    "should_post": true,
+    "reason": "Matched keywords: ai, model, agent, research",
+    "post_text": "When Does Critique Improve AI-Assisted Theoretical Physics? SCALAR: Structured Critic--Actor Loop for Agentic Reasoning. The practical question is how much reliability improves when agent tooling is used in real developer workflows.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-11T15:29:07.343149Z"
+  },
+  {
+    "title": "Towards Security-Auditable LLM Agents: A Unified Graph Representation",
+    "link": "https://arxiv.org/abs/2605.06812",
+    "source": "arXiv cs.AI",
+    "score": 11,
+    "should_post": true,
+    "reason": "Matched keywords: ai, model, agent, llm",
+    "post_text": "Towards Security-Auditable LLM Agents: A Unified Graph Representation. The practical question is how much reliability improves when agent tooling is used in real developer workflows.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-11T15:29:07.343182Z"
+  },
+  {
+    "title": "Uneven Evolution of Cognition Across Generations of Generative AI Models",
+    "link": "https://arxiv.org/abs/2605.06815",
+    "source": "arXiv cs.AI",
+    "score": 7,
+    "should_post": true,
+    "reason": "Matched keywords: ai, model, benchmark",
+    "post_text": "Uneven Evolution of Cognition Across Generations of Generative AI Models. Benchmark movement matters most when evaluation setup is transparent and results transfer to production tasks.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-11T15:29:07.343216Z"
+  },
+  {
+    "title": "Randomness is sometimes necessary for coordination",
+    "link": "https://arxiv.org/abs/2605.06825",
+    "source": "arXiv cs.AI",
+    "score": 6,
+    "should_post": true,
+    "reason": "Matched keywords: ai, agent",
+    "post_text": "Randomness is sometimes necessary for coordination. The practical question is how much reliability improves when agent tooling is used in real developer workflows.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-11T15:29:07.343259Z"
   }
 ]
