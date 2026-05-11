@@ -113,6 +113,8 @@ def _build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--generate-review-report", action="store_true", help="Generate reports/review_queue.md from pending review items.")
     parser.add_argument("--generate-card", type=str, default=None, help="Generate one card for a review item ID.")
     parser.add_argument("--generate-cards", action="store_true", help="Generate cards for pending_review and approved items missing card_path.")
+    parser.add_argument("--ignore-daily-cap", action="store_true", help="Development-only: bypass daily cap checks for this run.")
+    parser.add_argument("--create-test-review-item", action="store_true", help="Development-only: create one pending review item from fixtures.")
     return parser
 
 
@@ -358,6 +360,47 @@ def _generate_cards(logger) -> int:
     JsonStore.save(REVIEW_QUEUE_PATH, queue)
     generate_review_queue_report(REVIEW_QUEUE_PATH, REVIEW_REPORT_PATH)
     logger.info("Generated cards: %d", generated)
+    return 0
+
+
+def _create_test_review_item(logger) -> int:
+    fixtures = _load_fixture_items()
+    if not fixtures:
+        logger.warning("No fixture items found")
+        return 1
+
+    item = fixtures[0]
+    evaluation = evaluate_item(item, personas=[])
+    post_text = generate_post(item, evaluation)
+    created_at = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+    rid = _review_id(item.link, created_at)
+
+    queue = JsonStore.load(REVIEW_QUEUE_PATH, default=[])
+    for existing in queue:
+        if existing.get("id") == rid:
+            logger.info("Test review item already exists: %s", rid)
+            return 0
+
+    test_item = {
+        "id": rid,
+        "status": "pending_review",
+        "created_at": created_at,
+        "score": evaluation.score,
+        "reason": evaluation.reason,
+        "proposed_post": post_text,
+        "source_angle": "Rule-based test item",
+        "source_item": {
+            "title": item.title,
+            "source": item.source,
+            "link": item.link,
+        },
+        "is_llm_mode": False,
+        "card_path": None,
+    }
+    queue.append(test_item)
+    JsonStore.save(REVIEW_QUEUE_PATH, queue)
+    generate_review_queue_report(REVIEW_QUEUE_PATH, REVIEW_REPORT_PATH)
+    logger.info("Created test review item: %s", rid)
     return 0
 
 
@@ -618,6 +661,11 @@ def run(argv: list[str] | None = None) -> int:
         return _generate_card_for_id(args.generate_card, logger)
     if args.generate_cards:
         return _generate_cards(logger)
+    if args.create_test_review_item:
+        if not args.use_fixtures:
+            logger.error("--create-test-review-item requires --use-fixtures")
+            return 1
+        return _create_test_review_item(logger)
     if args.list_deferred:
         return _list_deferred(logger)
     if args.generate_review_report:
@@ -667,6 +715,13 @@ def run(argv: list[str] | None = None) -> int:
         llm_config.provider = args.llm_provider
     if args.max_posts_per_day is not None and args.max_posts_per_day > 0:
         max_posts_per_day = args.max_posts_per_day
+    ignore_daily_cap = False
+    if args.ignore_daily_cap:
+        if os.getenv("GITHUB_EVENT_NAME", "").strip().lower() == "schedule":
+            logger.error("--ignore-daily-cap is not allowed in scheduled GitHub workflows")
+            return 1
+        ignore_daily_cap = True
+        logger.info("Daily cap ignored for this run")
 
     if args.use_fixtures:
         all_items = _load_fixture_items()
@@ -882,7 +937,7 @@ def run(argv: list[str] | None = None) -> int:
                 context_text=f"{source_title} {item.get('reason', '')}",
             )
             if quality.passed:
-                if remaining_today <= 0:
+                if (not ignore_daily_cap) and remaining_today <= 0:
                     quality_reject += 1
                     logger.warning("Quality reject: daily post cap reached (%d)", max_posts_per_day)
                     if is_reprocessed_deferred:

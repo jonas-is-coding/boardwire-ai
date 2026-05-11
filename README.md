@@ -36,6 +36,24 @@ python -m src.main --generate-cards
 
 Cards are generated from `data/review_queue.json` and saved back via `card_path`.
 
+## Dev-only testing commands
+
+These commands are for local development/testing only.
+
+Create a synthetic pending review item from fixtures:
+```bash
+python -m src.main --use-fixtures --create-test-review-item
+```
+
+Ignore daily cap in a local run:
+```bash
+python -m src.main --use-fixtures --limit 8 --review --ignore-daily-cap
+```
+
+Notes:
+- `--ignore-daily-cap` logs `Daily cap ignored for this run`
+- `--ignore-daily-cap` is blocked in scheduled GitHub workflows
+
 ## Review report
 
 Boardwire maintains:
