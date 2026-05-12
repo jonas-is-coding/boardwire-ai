@@ -37,7 +37,9 @@ jobs:
       BOARDWIRE_MAX_POSTS_PER_DAY: ${{ inputs.max_posts_per_day }}
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-      SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+      SLACK_WEBHOOK_URL_CLAIRE: ${{ secrets.SLACK_WEBHOOK_URL_CLAIRE }}
+      SLACK_WEBHOOK_URL_CHLOE: ${{ secrets.SLACK_WEBHOOK_URL_CHLOE }}
+      SLACK_WEBHOOK_URL_MADISON: ${{ secrets.SLACK_WEBHOOK_URL_MADISON }}
 
     steps:
       - name: Checkout
