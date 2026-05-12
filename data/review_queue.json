@@ -518,7 +518,7 @@
   },
   {
     "id": "39fbb6776b4d",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-11T20:00:43.985911Z",
     "score": 5,
     "reason": "Matched keywords: ai, model",
@@ -534,7 +534,8 @@
     "deferred_at": "2026-05-11T22:12:03.727825Z",
     "defer_count": 2,
     "original_score": 5,
-    "original_reason": "Matched keywords: ai, model"
+    "original_reason": "Matched keywords: ai, model",
+    "rejected_at": "2026-05-12T00:03:29.724085Z"
   },
   {
     "id": "410c91869ec8",
@@ -559,7 +560,7 @@
   },
   {
     "id": "a4ec20fc9d5c",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-11T20:00:43.986058Z",
     "score": 5,
     "reason": "Matched keywords: ai, model",
@@ -575,11 +576,12 @@
     "deferred_at": "2026-05-11T22:12:03.786670Z",
     "defer_count": 2,
     "original_score": 5,
-    "original_reason": "Matched keywords: ai, model"
+    "original_reason": "Matched keywords: ai, model",
+    "rejected_at": "2026-05-12T00:03:29.761690Z"
   },
   {
     "id": "aaffba8a06c4",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-11T22:12:03.646058Z",
     "score": 10,
     "reason": "Matched keywords: ai, model, agent, benchmark",
@@ -595,6 +597,39 @@
     "deferred_at": "2026-05-11T22:12:03.896002Z",
     "defer_count": 1,
     "original_score": 10,
-    "original_reason": "Matched keywords: ai, model, agent, benchmark"
+    "original_reason": "Matched keywords: ai, model, agent, benchmark",
+    "rejected_at": "2026-05-12T00:03:29.689730Z"
+  },
+  {
+    "id": "2331ace41710",
+    "status": "pending_review",
+    "created_at": "2026-05-12T00:03:29.649099Z",
+    "score": 5,
+    "reason": "Matched keywords: ai, model",
+    "proposed_post": "Building Blocks for Foundation Model Training and Inference on AWS. Cost and deployment improvements matter when they hold under sustained production load, not only lab tests.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Building Blocks for Foundation Model Training and Inference on AWS",
+      "source": "Hugging Face Blog",
+      "link": "https://huggingface.co/blog/amazon/foundation-model-building-blocks"
+    },
+    "card_path": null,
+    "is_llm_mode": false
+  },
+  {
+    "id": "cc6a89ba781d",
+    "status": "pending_review",
+    "created_at": "2026-05-12T00:03:29.649144Z",
+    "score": 12,
+    "reason": "Matched keywords: ai, model, agent, benchmark",
+    "proposed_post": "SREGym: A Live Benchmark for AI SRE Agents with High-Fidelity Failure Scenarios. The practical question is how much reliability improves when agent tooling is used in real developer workflows.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "SREGym: A Live Benchmark for AI SRE Agents with High-Fidelity Failure Scenarios",
+      "source": "arXiv cs.AI",
+      "link": "https://arxiv.org/abs/2605.07161"
+    },
+    "card_path": null,
+    "is_llm_mode": false
   }
 ]
