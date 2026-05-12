@@ -1,0 +1,76 @@
+[
+  {
+    "id": "49b6728a7a60",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-12T12:25:55.856698Z",
+    "score": 26,
+    "reason": "Builder signal: release, api, agent, llm",
+    "proposed_post": "langchain-core==1.4.0. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "langchain-core==1.4.0",
+      "source": "LangChain Releases",
+      "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.4.0"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-12T12:25:59.668570Z",
+    "defer_count": 1,
+    "original_score": 26,
+    "original_reason": "Builder signal: release, api, agent, llm"
+  },
+  {
+    "id": "92776d1d23c3",
+    "status": "approved",
+    "created_at": "2026-05-12T12:25:53.523182Z",
+    "score": 4,
+    "reason": "Builder signal: v0., changelog, model",
+    "proposed_post": "v0.23.3. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based fallback",
+    "source_item": {
+      "title": "v0.23.3",
+      "source": "Ollama Releases",
+      "link": "https://github.com/ollama/ollama/releases/tag/v0.23.3-rc1"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Aus *Ollama Releases* ist ein starker Kandidat reingekommen: *v0.23.3*.\nRelevanz fuer Builder: Das Thema trifft klar Builder-Interesse (v0., changelog, model).\n_Score: 4_",
+    "chloe_note": "Kurzes Update: *v0.23.3* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um v0., changelog, model. Ich habe es mit 4 Punkten bewertet. Hier der Link: https://github.com/ollama/ollama/releases/tag/v0.23.3-rc1"
+  },
+  {
+    "id": "a4e4438cc1b1",
+    "status": "approved",
+    "created_at": "2026-05-12T12:25:54.568889Z",
+    "score": 8,
+    "reason": "Builder signal: inference, ai, model, training",
+    "proposed_post": "Building Blocks for Foundation Model Training and Inference on AWS. Inference and deployment improvements compound fast — check whether the numbers hold under sustained load, not just peak tests.",
+    "source_angle": "Rule-based fallback",
+    "source_item": {
+      "title": "Building Blocks for Foundation Model Training and Inference on AWS",
+      "source": "Hugging Face Blog",
+      "link": "https://huggingface.co/blog/amazon/foundation-model-building-blocks"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Aus *Hugging Face Blog* ist ein starker Kandidat reingekommen: *Building Blocks for Foundation Model Training and Inference on AWS*.\nRelevanz fuer Builder: Das Thema trifft klar Builder-Interesse (inference, ai, model, training).\n_Score: 8_",
+    "chloe_note": "*Building Blocks for Foundation Model Training and Inference on AWS* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch inference, ai, model, training. Bewertung: 8. Quelle: https://huggingface.co/blog/amazon/foundation-model-building-blocks"
+  },
+  {
+    "id": "17fc35cb6830",
+    "status": "approved",
+    "created_at": "2026-05-12T12:25:55.208518Z",
+    "score": 32,
+    "reason": "Builder signal: api, agent, llm, v2.",
+    "proposed_post": "v2.1.139. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "v2.1.139",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.139"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Aus *Claude Code Releases* ist ein starker Kandidat reingekommen: *v2.1.139*.\nRelevanz fuer Builder: Das Thema trifft klar Builder-Interesse (api, agent, llm, v2.).\n_Score: 32_",
+    "chloe_note": "Hey, *v2.1.139* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen api, agent, llm, v2. Score aktuell: 32. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.139"
+  }
+]
