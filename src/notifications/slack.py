@@ -107,7 +107,7 @@ def chloe_approved(title: str, link: str, score: int, reason: str, is_llm: bool,
     # Review-phase guardrail: avoid implying real publish happened already.
     text = re.sub(r"\b(das\s+geht\s+live)\b", "freigegeben fuer den Publish-Queue", text, flags=re.IGNORECASE)
     text = re.sub(r"\b(ist\s+live)\b", "ist fuer den Publish-Queue freigegeben", text, flags=re.IGNORECASE)
-    _post("chloe", text)
+    _post("madison", text)
     return text
 
 
@@ -146,7 +146,7 @@ def madison_published(platform: str, title: str, post_text: str, url: str | None
         f"{platform}: {url or 'Link kommt gleich'}"
     )
     body = _clean_message(body)
-    _post("madison", f"{body}\n\n{post_text}")
+    _post("chloe", f"{body}\n\n{post_text}")
 
 
 def jim_failed(platform: str, title: str, error: str) -> None:
