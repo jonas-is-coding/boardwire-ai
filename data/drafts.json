@@ -86,5 +86,93 @@
     "post_text": "v0.30.0-rc13. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-12T11:30:48.730562Z"
+  },
+  {
+    "title": "langchain-core==1.4.0",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.4.0",
+    "source": "LangChain Releases",
+    "score": 14,
+    "should_post": true,
+    "reason": "Builder signal: release, api, agent, llm",
+    "post_text": "langchain-core==1.4.0. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based fallback",
+    "created_at": "2026-05-12T11:38:41.860296Z"
+  },
+  {
+    "title": "v0.101.0",
+    "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.101.0",
+    "source": "Anthropic Python SDK Releases",
+    "score": 15,
+    "should_post": true,
+    "reason": "Builder signal: v0., changelog, claude , sdk",
+    "post_text": "v0.101.0. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based fallback",
+    "created_at": "2026-05-12T11:38:42.622034Z"
+  },
+  {
+    "title": "How ChatGPT adoption broadened in early 2026",
+    "link": "https://openai.com/signals/research/2026q1-update",
+    "source": "OpenAI News",
+    "score": 1,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "How ChatGPT adoption broadened in early 2026. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based fallback",
+    "created_at": "2026-05-12T11:38:43.379515Z"
+  },
+  {
+    "title": "Import AI 456: RSI and economic growth; radical optionality for AI regulation; and a neural computer",
+    "link": "https://jack-clark.net/2026/05/11/import-ai-456-rsi-and-economic-growth-radical-optionality-for-ai-regulation-and-a-neural-computer/",
+    "source": "Import AI (Jack Clark)",
+    "score": 3,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "Import AI 456: RSI and economic growth; radical optionality for AI regulation; and a neural computer. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-12T11:38:43.379854Z"
+  },
+  {
+    "title": "OpenAI Campus Network: Student club interest form",
+    "link": "https://openai.com/index/openai-campus-network-student-club-interest-form",
+    "source": "OpenAI News",
+    "score": 3,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "OpenAI Campus Network: Student club interest form. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-12T11:38:43.379901Z"
+  },
+  {
+    "title": "How enterprises are scaling AI",
+    "link": "https://openai.com/business/guides-and-resources/how-enterprises-are-scaling-ai",
+    "source": "OpenAI News",
+    "score": 1,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "How enterprises are scaling AI. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-12T11:38:43.379934Z"
+  },
+  {
+    "title": "OpenAI launches DeployCo to help businesses build around intelligence",
+    "link": "https://openai.com/index/openai-launches-the-deployment-company",
+    "source": "OpenAI News",
+    "score": 10,
+    "should_post": true,
+    "reason": "Builder signal: launches, deployment, production, ai",
+    "post_text": "OpenAI launches DeployCo to help businesses build around intelligence. Inference and deployment improvements compound fast — check whether the numbers hold under sustained load, not just peak tests.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-12T11:38:43.379970Z"
+  },
+  {
+    "title": "v0.30.0-rc12",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.30.0-rc12",
+    "source": "Ollama Releases",
+    "score": 0,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "v0.30.0-rc12. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-12T11:38:43.998837Z"
   }
 ]

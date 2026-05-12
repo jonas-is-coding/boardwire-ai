@@ -1,7 +1,7 @@
 [
   {
     "id": "521ac2952435",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-12T11:30:48.162874Z",
     "score": 26,
     "reason": "Builder signal: release, api, agent, llm",
@@ -17,7 +17,8 @@
     "deferred_at": "2026-05-12T11:30:50.906244Z",
     "defer_count": 1,
     "original_score": 26,
-    "original_reason": "Builder signal: release, api, agent, llm"
+    "original_reason": "Builder signal: release, api, agent, llm",
+    "rejected_at": "2026-05-12T11:38:44.003413Z"
   },
   {
     "id": "9bf153cfe146",
@@ -69,5 +70,25 @@
     "card_path": null,
     "is_llm_mode": false,
     "chloe_note": "Claire,\ndas geht live: *v2.1.139*.\nEs besteht den Ships Test, weil es einen klaren praktischen Nutzen für Builder liefert.\nGrundlage: Builder signal: api, agent, llm, v2.\nLink: https://github.com/anthropics/claude-code/releases/tag/v2.1.139\n_Score: 32_\n_Automated with this n8n workflow_"
+  },
+  {
+    "id": "79e86719365c",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-12T11:38:43.379970Z",
+    "score": 10,
+    "reason": "Builder signal: launches, deployment, production, ai",
+    "proposed_post": "OpenAI launches DeployCo to help businesses build around intelligence. Inference and deployment improvements compound fast — check whether the numbers hold under sustained load, not just peak tests.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "OpenAI launches DeployCo to help businesses build around intelligence",
+      "source": "OpenAI News",
+      "link": "https://openai.com/index/openai-launches-the-deployment-company"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-12T11:38:44.011646Z",
+    "defer_count": 1,
+    "original_score": 10,
+    "original_reason": "Builder signal: launches, deployment, production, ai"
   }
 ]
