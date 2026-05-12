@@ -21,7 +21,7 @@
   },
   {
     "id": "7edd9c475c16",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-05-12T12:02:12.510248Z",
     "score": 4,
     "reason": "Builder signal: v0., changelog, model",
@@ -32,13 +32,14 @@
       "source": "Ollama Releases",
       "link": "https://github.com/ollama/ollama/releases/tag/v0.23.3-rc1"
     },
-    "card_path": null,
+    "card_path": "generated/cards/7edd9c475c16.png",
     "is_llm_mode": false,
-    "chloe_note": "Freigegeben fuer den Publish-Queue: *v0.23.3*.\nEs besteht den Ships Test, weil es einen klaren praktischen Nutzen fuer Builder liefert.\nGrundlage: Builder signal: v0., changelog, model\nLink: https://github.com/ollama/ollama/releases/tag/v0.23.3-rc1\n_Score: 4_"
+    "chloe_note": "Freigegeben fuer den Publish-Queue: *v0.23.3*.\nEs besteht den Ships Test, weil es einen klaren praktischen Nutzen fuer Builder liefert.\nGrundlage: Builder signal: v0., changelog, model\nLink: https://github.com/ollama/ollama/releases/tag/v0.23.3-rc1\n_Score: 4_",
+    "published_at": "2026-05-12T12:03:14.152497Z"
   },
   {
     "id": "c954cc2c7218",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-05-12T12:02:13.344929Z",
     "score": 8,
     "reason": "Builder signal: inference, ai, model, training",
@@ -49,13 +50,14 @@
       "source": "Hugging Face Blog",
       "link": "https://huggingface.co/blog/amazon/foundation-model-building-blocks"
     },
-    "card_path": null,
+    "card_path": "generated/cards/c954cc2c7218.png",
     "is_llm_mode": false,
-    "chloe_note": "Freigegeben fuer den Publish-Queue: *Building Blocks for Foundation Model Training and Inference on AWS*.\nEs besteht den Ships Test, weil es einen klaren praktischen Nutzen fuer Builder liefert.\nGrundlage: Builder signal: inference, ai, model, training\nLink: https://huggingface.co/blog/amazon/foundation-model-building-blocks\n_Score: 8_"
+    "chloe_note": "Freigegeben fuer den Publish-Queue: *Building Blocks for Foundation Model Training and Inference on AWS*.\nEs besteht den Ships Test, weil es einen klaren praktischen Nutzen fuer Builder liefert.\nGrundlage: Builder signal: inference, ai, model, training\nLink: https://huggingface.co/blog/amazon/foundation-model-building-blocks\n_Score: 8_",
+    "published_at": "2026-05-12T12:03:14.152497Z"
   },
   {
     "id": "bac544a0a823",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-05-12T12:02:13.938499Z",
     "score": 32,
     "reason": "Builder signal: api, agent, llm, v2.",
@@ -66,8 +68,9 @@
       "source": "Claude Code Releases",
       "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.139"
     },
-    "card_path": null,
+    "card_path": "generated/cards/bac544a0a823.png",
     "is_llm_mode": false,
-    "chloe_note": "Freigegeben fuer den Publish-Queue: *v2.1.139*.\nEs besteht den Ships Test, weil es einen klaren praktischen Nutzen fuer Builder liefert.\nGrundlage: Builder signal: api, agent, llm, v2.\nLink: https://github.com/anthropics/claude-code/releases/tag/v2.1.139\n_Score: 32_"
+    "chloe_note": "Freigegeben fuer den Publish-Queue: *v2.1.139*.\nEs besteht den Ships Test, weil es einen klaren praktischen Nutzen fuer Builder liefert.\nGrundlage: Builder signal: api, agent, llm, v2.\nLink: https://github.com/anthropics/claude-code/releases/tag/v2.1.139\n_Score: 32_",
+    "published_at": "2026-05-12T12:03:14.152497Z"
   }
 ]
