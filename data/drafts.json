@@ -196,5 +196,60 @@
     "post_text": "OpenAI launches DeployCo to help businesses build around intelligence. Inference and deployment improvements compound fast — check whether the numbers hold under sustained load, not just peak tests.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-12T16:25:23.705087Z"
+  },
+  {
+    "title": "OpenAI launches DeployCo to help businesses build around intelligence",
+    "link": "https://openai.com/index/openai-launches-the-deployment-company",
+    "source": "OpenAI News",
+    "score": 10,
+    "should_post": true,
+    "reason": "Builder signal: launches, deployment, production, ai",
+    "post_text": "OpenAI launches DeployCo to help businesses build around intelligence. Inference and deployment improvements compound fast — check whether the numbers hold under sustained load, not just peak tests.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-12T19:00:59.627837Z"
+  },
+  {
+    "title": "How open model ecosystems compound",
+    "link": "https://www.interconnects.ai/p/how-open-model-ecosystems-compound",
+    "source": "Nathan Lambert (Interconnects)",
+    "score": 7,
+    "should_post": true,
+    "reason": "Builder signal: open model, ai, model",
+    "post_text": "How open model ecosystems compound. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-12T19:01:01.044605Z"
+  },
+  {
+    "title": "v0.30.0-rc12",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.30.0-rc12",
+    "source": "Ollama Releases",
+    "score": 0,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "v0.30.0-rc12. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-12T19:01:02.399362Z"
+  },
+  {
+    "title": "v0.20.2",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.20.2",
+    "source": "vLLM Releases",
+    "score": 12,
+    "should_post": true,
+    "reason": "Builder signal: release, llm, v0., ai",
+    "post_text": "v0.20.2. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-12T19:01:02.399621Z"
+  },
+  {
+    "title": "v0.30.0-rc11",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.30.0-rc11",
+    "source": "Ollama Releases",
+    "score": 0,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "v0.30.0-rc11. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-12T19:01:03.422061Z"
   }
 ]

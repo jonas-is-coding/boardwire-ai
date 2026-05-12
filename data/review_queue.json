@@ -79,7 +79,7 @@
   },
   {
     "id": "c7a4eb6f2d5f",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-12T16:25:21.326672Z",
     "score": 7,
     "reason": "Builder signal: open model, ai, model",
@@ -95,11 +95,12 @@
     "deferred_at": "2026-05-12T16:25:25.424730Z",
     "defer_count": 1,
     "original_score": 7,
-    "original_reason": "Builder signal: open model, ai, model"
+    "original_reason": "Builder signal: open model, ai, model",
+    "rejected_at": "2026-05-12T19:01:03.438081Z"
   },
   {
     "id": "59ea2c6f2f8d",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-12T16:25:23.705087Z",
     "score": 10,
     "reason": "Builder signal: launches, deployment, production, ai",
@@ -115,6 +116,7 @@
     "deferred_at": "2026-05-12T16:25:25.440816Z",
     "defer_count": 1,
     "original_score": 10,
-    "original_reason": "Builder signal: launches, deployment, production, ai"
+    "original_reason": "Builder signal: launches, deployment, production, ai",
+    "rejected_at": "2026-05-12T19:01:03.431848Z"
   }
 ]
