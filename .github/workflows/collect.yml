@@ -11,6 +11,7 @@ jobs:
   collect:
     runs-on: ubuntu-latest
     env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       SLACK_WEBHOOK_URL_CLAIRE: ${{ secrets.SLACK_WEBHOOK_URL_CLAIRE }}
       SLACK_WEBHOOK_URL_CHLOE: ${{ secrets.SLACK_WEBHOOK_URL_CHLOE }}
       SLACK_WEBHOOK_URL_MADISON: ${{ secrets.SLACK_WEBHOOK_URL_MADISON }}
