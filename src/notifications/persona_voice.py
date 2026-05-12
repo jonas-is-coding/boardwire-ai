@@ -53,29 +53,52 @@ _USER_PROMPTS = {
 }
 
 
+def _available_keys() -> list[str]:
+    keys = []
+    for env in ("GEMINI_API_KEY", "GEMINI_API_KEY_2"):
+        k = os.getenv(env, "").strip()
+        if k:
+            keys.append(k)
+    return keys
+
+
 def _call_gemini(system: str, user: str) -> str | None:
-    api_key = os.getenv("GEMINI_API_KEY", "").strip()
-    if not api_key:
+    keys = _available_keys()
+    if not keys:
         return None
+
     model = os.getenv("BOARDWIRE_GEMINI_MODEL", _GEMINI_MODEL).strip() or _GEMINI_MODEL
     prompt = f"{system}\n\n{user}"
     body = {
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {"temperature": 0.7, "maxOutputTokens": 120},
     }
-    url = (
-        f"https://generativelanguage.googleapis.com/v1beta/models/"
-        f"{model}:generateContent?key={api_key}"
-    )
-    try:
-        resp = requests.post(url, json=body, timeout=10)
-        if resp.status_code >= 400:
+
+    idx = 0
+    switches = 0
+    max_switches = 3
+
+    while switches <= max_switches:
+        api_key = keys[idx % len(keys)]
+        url = (
+            f"https://generativelanguage.googleapis.com/v1beta/models/"
+            f"{model}:generateContent?key={api_key}"
+        )
+        try:
+            resp = requests.post(url, json=body, timeout=10)
+            if resp.status_code == 429 and len(keys) > 1:
+                idx += 1
+                switches += 1
+                continue
+            if resp.status_code >= 400:
+                return None
+            parts = resp.json().get("candidates", [{}])[0].get("content", {}).get("parts", [])
+            text = str(parts[0].get("text", "")).strip() if parts else ""
+            return text or None
+        except Exception:
             return None
-        parts = resp.json().get("candidates", [{}])[0].get("content", {}).get("parts", [])
-        text = str(parts[0].get("text", "")).strip() if parts else ""
-        return text or None
-    except Exception:
-        return None
+
+    return None
 
 
 def claire_on_found(title: str, source: str, score: int, summary: str) -> str | None:
