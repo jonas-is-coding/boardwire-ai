@@ -26,45 +26,14 @@ def _webhook(persona: str) -> str | None:
     return _WEBHOOKS[persona]
 
 
-def _post(persona: str, payload: dict) -> None:
+def _post(persona: str, text: str) -> None:
     url = _webhook(persona)
     if not url:
         return
     try:
-        requests.post(url, json=payload, timeout=5)
+        requests.post(url, json={"text": text}, timeout=5)
     except Exception:
         pass
-
-
-_COLORS = {
-    "green": "#2eb886",
-    "yellow": "#f5a623",
-    "red": "#d00000",
-    "gray": "#aaaaaa",
-}
-
-
-def _send(
-    persona: Literal["claire", "chloe", "madison"],
-    text: str,
-    color: str = "gray",
-    fields: list[dict] | None = None,
-    title: str | None = None,
-    title_link: str | None = None,
-) -> None:
-    attachment: dict = {
-        "color": _COLORS.get(color, color),
-        "text": text,
-        "mrkdwn_in": ["text"],
-    }
-    if title:
-        attachment["title"] = title
-    if title_link:
-        attachment["title_link"] = title_link
-    if fields:
-        attachment["fields"] = fields
-
-    _post(persona, {"attachments": [attachment]})
 
 
 # ---------------------------------------------------------------------------
@@ -76,16 +45,14 @@ def pam_found_candidate(title: str, source: str, link: str, score: int) -> str:
 
 
 def claire_found_candidate(title: str, source: str, link: str, score: int) -> str:
-    """Returns Claire's commentary so it can be passed to Chloe."""
     llm_text = voice.claire_on_found(title, source, score, summary="")
-    text = llm_text or f"Neuer Kandidat aus *{source}* · Score *{score}*"
-    _send("claire", text, color="yellow", title=title, title_link=link)
+    text = llm_text or f'Neuer Kandidat aus {source} (Score {score}): "{title}"'
+    _post("claire", text)
     return text
 
 
 def claire_post_deferred(title: str, link: str, text: str) -> None:
-    """Post a pre-generated Claire message (for interleaved ordering)."""
-    _send("claire", text, color="yellow", title=title, title_link=link)
+    _post("claire", text)
 
 
 def michael_approved(title: str, link: str, score: int, reason: str, is_llm: bool, claire_note: str = "") -> str:
@@ -93,16 +60,9 @@ def michael_approved(title: str, link: str, score: int, reason: str, is_llm: boo
 
 
 def chloe_approved(title: str, link: str, score: int, reason: str, is_llm: bool, claire_note: str = "") -> str:
-    """Returns Chloe's commentary so it can be passed to Madison."""
     llm_text = voice.chloe_on_approved(title, score, reason, is_llm, claire_note)
-    text = llm_text or f"✅ Freigegeben ({'LLM' if is_llm else 'Regel'}) · Score {score}"
-    _send(
-        "chloe",
-        text,
-        color="green",
-        title=title,
-        title_link=link,
-    )
+    text = llm_text or f'Freigegeben (Score {score}): "{title}"'
+    _post("chloe", text)
     return text
 
 
@@ -112,8 +72,8 @@ def michael_rejected(title: str, link: str, reasons: list[str], claire_note: str
 
 def chloe_rejected(title: str, link: str, reasons: list[str], claire_note: str = "") -> None:
     llm_text = voice.chloe_on_rejected(title, reasons, claire_note)
-    text = llm_text or f"❌ {'; '.join(reasons)}"
-    _send("chloe", text, color="red", title=title, title_link=link)
+    text = llm_text or f'Abgelehnt: "{title}" — {"; ".join(reasons)}'
+    _post("chloe", text)
 
 
 def michael_human_approved(review_id: str, title: str) -> None:
@@ -121,7 +81,7 @@ def michael_human_approved(review_id: str, title: str) -> None:
 
 
 def chloe_human_approved(review_id: str, title: str) -> None:
-    _send("chloe", f"👍 Manuell genehmigt: *{title}*", color="green")
+    _post("chloe", f'Manuell freigegeben: "{title}"')
 
 
 def michael_human_rejected(review_id: str, title: str) -> None:
@@ -129,7 +89,7 @@ def michael_human_rejected(review_id: str, title: str) -> None:
 
 
 def chloe_human_rejected(review_id: str, title: str) -> None:
-    _send("chloe", f"👎 Manuell abgelehnt: *{title}*", color="red")
+    _post("chloe", f'Manuell abgelehnt: "{title}"')
 
 
 def jim_published(platform: str, title: str, post_text: str, url: str | None, with_image: bool, chloe_note: str = "") -> None:
@@ -138,10 +98,9 @@ def jim_published(platform: str, title: str, post_text: str, url: str | None, wi
 
 def madison_published(platform: str, title: str, post_text: str, url: str | None, with_image: bool, chloe_note: str = "") -> None:
     llm_text = voice.madison_on_published(title, platform, post_text, chloe_note)
-    image_note = " 🖼️" if with_image else ""
-    link_text = f"\n🔗 <{url}|Post ansehen>" if url else ""
-    body = llm_text or f"✅ Live auf *{platform}*{image_note}"
-    _send("madison", f"{body}{link_text}\n\n_{post_text}_", color="green", title=title)
+    link_line = f"\n{url}" if url else ""
+    body = llm_text or f'Live auf {platform}: "{title}"'
+    _post("madison", f"{body}{link_line}\n\n{post_text}")
 
 
 def jim_failed(platform: str, title: str, error: str) -> None:
@@ -149,21 +108,13 @@ def jim_failed(platform: str, title: str, error: str) -> None:
 
 
 def madison_failed(platform: str, title: str, error: str) -> None:
-    _send("madison", f"❌ Fehlgeschlagen auf *{platform}*\n'{error}'", color="red", title=title)
+    _post("madison", f'Fehler beim Veröffentlichen auf {platform}: "{title}"\n{error}')
 
 
 def run_started(sources_count: int, items_count: int, llm_mode: bool) -> None:
-    _send(
-        "claire",
-        f"▶️ Neue Runde — *{sources_count}* Quellen, *{items_count}* neue Artikel"
-        + (", LLM aktiv" if llm_mode else ""),
-        color="gray",
-    )
+    mode = ", LLM aktiv" if llm_mode else ""
+    _post("claire", f"Neue Runde gestartet — {sources_count} Quellen, {items_count} neue Artikel{mode}.")
 
 
 def run_finished(queued: int, rejected: int) -> None:
-    _send(
-        "claire",
-        f"⏹️ Abgeschlossen — *{queued}* in Queue, *{rejected}* abgelehnt",
-        color="gray",
-    )
+    _post("claire", f"Runde abgeschlossen — {queued} in der Queue, {rejected} abgelehnt.")
