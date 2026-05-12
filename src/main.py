@@ -99,7 +99,7 @@ def _build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--no-llm", action="store_true", help="Force rule-based mode.")
     parser.add_argument("--max-llm-items", type=int, default=None, help="Override BOARDWIRE_MAX_LLM_ITEMS for this run.")
     parser.add_argument("--use-fixtures", action="store_true", help="Load offline fixture items instead of RSS sources.")
-    parser.add_argument("--review", action="store_true", help="Save approved drafts to review queue with pending status.")
+    parser.add_argument("--review", action="store_true", help="Save quality-approved drafts to review queue.")
     parser.add_argument("--list-review-queue", action="store_true", help="List pending review queue items.")
     parser.add_argument("--list-deferred", action="store_true", help="List deferred_due_to_cap items.")
     parser.add_argument("--approve-review", type=str, default=None, help="Approve one review queue item by ID.")
@@ -608,8 +608,12 @@ def _publish_approved(args, logger) -> int:
             status = "pending_review"
             item["status"] = status
 
-        if status != "approved":
+        auto_approved_legacy = status == "pending_review" and bool(str(item.get("chloe_note", "")).strip())
+        if status != "approved" and not auto_approved_legacy:
             continue
+        if auto_approved_legacy:
+            item["status"] = "approved"
+            logger.info("Auto-upgraded legacy pending_review item to approved: %s", rid)
 
         rid = item.get("id")
         source_item = item.get("source_item", {})
@@ -1030,7 +1034,11 @@ def run(argv: list[str] | None = None) -> int:
             # so Claire+Chloe messages appear interleaved per article in Slack.
             from src.notifications import persona_voice as _pv
             claire_text = _pv.claire_on_found(item.title, item.source, evaluation.score, item.summary[:300])
-            claire_text = claire_text or f"Neuer Kandidat aus *{item.source}* · Score *{evaluation.score}*"
+            claire_text = claire_text or (
+                f"Ich habe aus *{item.source}* etwas Relevantes gefunden: *{item.title}*.\n"
+                f"Warum das fuer Builder zaehlt: {evaluation.reason}\n"
+                f"_Score: {evaluation.score}_"
+            )
             _claire_notes[item.link] = claire_text
             _pending_claire[item.link] = (item.title, item.link)
         processed_links.append(item.link)
@@ -1132,7 +1140,7 @@ def run(argv: list[str] | None = None) -> int:
                         logger.info("Reason: daily post cap reached (%d). Existing today=%d", max_posts_per_day, existing_today)
                     continue
                 if is_reprocessed_deferred:
-                    linked_deferred["status"] = "pending_review"
+                    linked_deferred["status"] = "approved"
                     linked_deferred["score"] = score_val
                     linked_deferred["reason"] = item.get("reason", "")
                     linked_deferred["proposed_post"] = proposed_post
@@ -1150,6 +1158,7 @@ def run(argv: list[str] | None = None) -> int:
                     logger.info("Quality pass: %s", linked_deferred.get("id"))
                     deferred_became_review += 1
                 else:
+                    item["status"] = "approved"
                     passed_queue_items.append(item)
                     history.append(proposed_post)
                     quality_pass += 1
