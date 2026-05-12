@@ -76,5 +76,45 @@
     "claire_note": "Aus *Claude Code Releases* ist ein starker Kandidat reingekommen: *v2.1.139*.\nRelevanz fuer Builder: Das Thema trifft klar Builder-Interesse (api, agent, llm, v2.).\n_Score: 32_",
     "chloe_note": "Hey, *v2.1.139* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen api, agent, llm, v2. Score aktuell: 32. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.139",
     "published_at": "2026-05-12T12:33:39.202745Z"
+  },
+  {
+    "id": "c7a4eb6f2d5f",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-12T16:25:21.326672Z",
+    "score": 7,
+    "reason": "Builder signal: open model, ai, model",
+    "proposed_post": "How open model ecosystems compound. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "How open model ecosystems compound",
+      "source": "Nathan Lambert (Interconnects)",
+      "link": "https://www.interconnects.ai/p/how-open-model-ecosystems-compound"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-12T16:25:25.424730Z",
+    "defer_count": 1,
+    "original_score": 7,
+    "original_reason": "Builder signal: open model, ai, model"
+  },
+  {
+    "id": "59ea2c6f2f8d",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-12T16:25:23.705087Z",
+    "score": 10,
+    "reason": "Builder signal: launches, deployment, production, ai",
+    "proposed_post": "OpenAI launches DeployCo to help businesses build around intelligence. Inference and deployment improvements compound fast — check whether the numbers hold under sustained load, not just peak tests.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "OpenAI launches DeployCo to help businesses build around intelligence",
+      "source": "OpenAI News",
+      "link": "https://openai.com/index/openai-launches-the-deployment-company"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-12T16:25:25.440816Z",
+    "defer_count": 1,
+    "original_score": 10,
+    "original_reason": "Builder signal: launches, deployment, production, ai"
   }
 ]

@@ -141,5 +141,60 @@
     "post_text": "OpenAI Campus Network: Student club interest form. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-12T13:08:42.427487Z"
+  },
+  {
+    "title": "How open model ecosystems compound",
+    "link": "https://www.interconnects.ai/p/how-open-model-ecosystems-compound",
+    "source": "Nathan Lambert (Interconnects)",
+    "score": 7,
+    "should_post": true,
+    "reason": "Builder signal: open model, ai, model",
+    "post_text": "How open model ecosystems compound. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-12T16:25:21.326672Z"
+  },
+  {
+    "title": "Dungeons & Desktops: Building a procedurally generated roguelike with GitHub Copilot CLI",
+    "link": "https://github.blog/ai-and-ml/github-copilot/dungeons-desktops-building-a-procedurally-generated-roguelike-with-github-copilot-cli/",
+    "source": "GitHub Blog AI",
+    "score": 3,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "Dungeons & Desktops: Building a procedurally generated roguelike with GitHub Copilot CLI. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-12T16:25:22.592947Z"
+  },
+  {
+    "title": "langchain==1.3.0",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.3.0",
+    "source": "LangChain Releases",
+    "score": 8,
+    "should_post": true,
+    "reason": "Builder signal: release, agent, ai",
+    "post_text": "langchain==1.3.0. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-12T16:25:22.593007Z"
+  },
+  {
+    "title": "How enterprises are scaling AI",
+    "link": "https://openai.com/business/guides-and-resources/how-enterprises-are-scaling-ai",
+    "source": "OpenAI News",
+    "score": 1,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "How enterprises are scaling AI. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-12T16:25:23.705027Z"
+  },
+  {
+    "title": "OpenAI launches DeployCo to help businesses build around intelligence",
+    "link": "https://openai.com/index/openai-launches-the-deployment-company",
+    "source": "OpenAI News",
+    "score": 10,
+    "should_post": true,
+    "reason": "Builder signal: launches, deployment, production, ai",
+    "post_text": "OpenAI launches DeployCo to help businesses build around intelligence. Inference and deployment improvements compound fast — check whether the numbers hold under sustained load, not just peak tests.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-12T16:25:23.705087Z"
   }
 ]
