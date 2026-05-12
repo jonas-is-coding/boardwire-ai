@@ -15,6 +15,8 @@ _PERSONA_ENV = {
     "madison": "SLACK_WEBHOOK_URL_MADISON",
 }
 
+_FOOTER = "_Automated with this n8n workflow_"
+
 
 def _webhook(persona: str) -> str | None:
     if persona not in _WEBHOOKS:
@@ -56,7 +58,14 @@ def pam_found_candidate(title: str, source: str, link: str, score: int) -> str:
 
 def claire_found_candidate(title: str, source: str, link: str, score: int) -> str:
     llm_text = voice.claire_on_found(title, source, score, summary="")
-    text = llm_text or f'Neuer Kandidat aus {source} (Score {score}): "{title}"'
+    text = llm_text or (
+        f"Chloe,\n"
+        f"ich habe einen starken Kandidaten aus *{source}* gefunden: *{title}*.\n"
+        f"Der Builder-Impact ist direkt nutzbar, weil Teams damit heute etwas deployen oder verbessern können.\n"
+        f"Link: {link}\n"
+        f"_Score: {score}_\n"
+        f"{_FOOTER}"
+    )
     _post("claire", text)
     return text
 
@@ -71,7 +80,15 @@ def michael_approved(title: str, link: str, score: int, reason: str, is_llm: boo
 
 def chloe_approved(title: str, link: str, score: int, reason: str, is_llm: bool, claire_note: str = "") -> str:
     llm_text = voice.chloe_on_approved(title, score, reason, is_llm, claire_note)
-    text = llm_text or f'Freigegeben (Score {score}): "{title}"'
+    text = llm_text or (
+        f"Claire,\n"
+        f"das geht live: *{title}*.\n"
+        f"Es besteht den Ships Test, weil es einen klaren praktischen Nutzen für Builder liefert.\n"
+        f"Grundlage: {reason}\n"
+        f"Link: {link}\n"
+        f"_Score: {score}_\n"
+        f"{_FOOTER}"
+    )
     _post("chloe", text)
     return text
 
@@ -106,9 +123,12 @@ def jim_published(platform: str, title: str, post_text: str, url: str | None, wi
 
 def madison_published(platform: str, title: str, post_text: str, url: str | None, with_image: bool, chloe_note: str = "") -> None:
     llm_text = voice.madison_on_published(title, platform, post_text, chloe_note)
-    link_line = f"\n{url}" if url else ""
-    body = llm_text or f'Live auf {platform}: "{title}"'
-    _post("madison", f"{body}{link_line}\n\n{post_text}")
+    body = llm_text or (
+        f"Aaand ... we're live!\n"
+        f"{platform}: {url or 'Link kommt gleich'}\n"
+        f"{_FOOTER}"
+    )
+    _post("madison", f"{body}\n\n{post_text}")
 
 
 def jim_failed(platform: str, title: str, error: str) -> None:
