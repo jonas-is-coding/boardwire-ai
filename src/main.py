@@ -652,6 +652,12 @@ def _publish_approved(args, logger) -> int:
             item["sarah_package"] = sarah_package
             post_text = _compose_sarah_post(sarah_package)
             item["proposed_post"] = post_text
+            notify.sarah_packaged(
+                title=str(sarah_package.get("title", "")),
+                subtitle=str(sarah_package.get("subtitle", "")),
+                description=str(sarah_package.get("description", "")),
+                hashtags=[str(x) for x in sarah_package.get("hashtags", [])] if isinstance(sarah_package.get("hashtags"), list) else [],
+            )
         else:
             post_text = base_post_text
         card_path = item.get("card_path")

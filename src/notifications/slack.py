@@ -15,6 +15,7 @@ _PERSONA_ENV = {
     "claire": "SLACK_WEBHOOK_URL_CLAIRE",
     "chloe": "SLACK_WEBHOOK_URL_CHLOE",
     "madison": "SLACK_WEBHOOK_URL_MADISON",
+    "sarah": "SLACK_WEBHOOK_URL_SARAH",
 }
 
 
@@ -186,3 +187,15 @@ def run_started(sources_count: int, items_count: int, llm_mode: bool) -> None:
 
 def run_finished(queued: int, rejected: int) -> None:
     _post_debug(f"Runde abgeschlossen — {queued} in der Queue, {rejected} abgelehnt.")
+
+
+def sarah_packaged(title: str, subtitle: str, description: str, hashtags: list[str]) -> None:
+    tag_line = " ".join(t.strip() for t in hashtags if str(t).strip())
+    text = (
+        "Sarah package erstellt:\n"
+        f"Title: {title}\n"
+        f"Subtitle: {subtitle}\n"
+        f"Description: {description}\n"
+        f"Hashtags: {tag_line}"
+    )
+    _post("sarah", text)

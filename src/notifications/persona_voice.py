@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 
 import requests
 
@@ -162,6 +163,28 @@ def _call_gemini(system: str, user: str) -> str | None:
     return None
 
 
+def _parse_json_loose(raw: str) -> dict | None:
+    text = raw.strip()
+    if not text:
+        return None
+    try:
+        parsed = json.loads(text)
+        return parsed if isinstance(parsed, dict) else None
+    except Exception:
+        pass
+
+    # Handle fenced blocks or extra prose around JSON.
+    match = re.search(r"\{.*\}", text, flags=re.DOTALL)
+    if not match:
+        return None
+    candidate = match.group(0)
+    try:
+        parsed = json.loads(candidate)
+        return parsed if isinstance(parsed, dict) else None
+    except Exception:
+        return None
+
+
 def claire_on_found(title: str, source: str, score: int, summary: str) -> str | None:
     user = _USER_PROMPTS["claire_found"].format(
         title=title, source=source, score=score, summary=summary[:300]
@@ -251,9 +274,8 @@ def sarah_build_publish_package(
     raw = _call_gemini(_SYSTEM_PROMPTS["sarah"], user)
     if not raw:
         return None
-    try:
-        data = json.loads(raw)
-    except Exception:
+    data = _parse_json_loose(raw)
+    if not data:
         return None
 
     title_val = str(data.get("title", "")).strip()[:70]
