@@ -1,0 +1,41 @@
+[
+  {
+    "id": "207248879bfa",
+    "published_at": "2026-05-12T12:33:39.202745Z",
+    "platform": "bluesky",
+    "post": "v0.23.3. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_link": "https://github.com/ollama/ollama/releases/tag/v0.23.3-rc1",
+    "source_title": "v0.23.3",
+    "score": 4,
+    "reason": "Builder signal: v0., changelog, model",
+    "card_path": "generated/cards/207248879bfa.png",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mlnsdhggc52g",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mlnsdhggc52g"
+  },
+  {
+    "id": "d2bf152b17a8",
+    "published_at": "2026-05-12T12:33:39.202745Z",
+    "platform": "bluesky",
+    "post": "Building Blocks for Foundation Model Training and Inference on AWS. Inference and deployment improvements compound fast — check whether the numbers hold under sustained load, not just peak tests.",
+    "source_link": "https://huggingface.co/blog/amazon/foundation-model-building-blocks",
+    "source_title": "Building Blocks for Foundation Model Training and Inference on AWS",
+    "score": 8,
+    "reason": "Builder signal: inference, ai, model, training",
+    "card_path": "generated/cards/d2bf152b17a8.png",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mlnsdkvd3y2o",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mlnsdkvd3y2o"
+  },
+  {
+    "id": "ef338879c1a9",
+    "published_at": "2026-05-12T12:33:39.202745Z",
+    "platform": "bluesky",
+    "post": "v2.1.139. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.139",
+    "source_title": "v2.1.139",
+    "score": 32,
+    "reason": "Builder signal: api, agent, llm, v2.",
+    "card_path": "generated/cards/ef338879c1a9.png",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mlnsdo455c2y",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mlnsdo455c2y"
+  }
+]
