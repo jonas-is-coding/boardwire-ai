@@ -32,7 +32,7 @@
       "source": "Ollama Releases",
       "link": "https://github.com/ollama/ollama/releases/tag/v0.23.3-rc1"
     },
-    "card_path": null,
+    "card_path": "generated/cards/96ebdbb6bf66.png",
     "is_llm_mode": false,
     "chloe_note": "Freigegeben fuer den Publish-Queue: *v0.23.3*.\nEs besteht den Ships Test, weil es einen klaren praktischen Nutzen fuer Builder liefert.\nGrundlage: Builder signal: v0., changelog, model\nLink: https://github.com/ollama/ollama/releases/tag/v0.23.3-rc1\n_Score: 4_"
   },
@@ -49,7 +49,7 @@
       "source": "Hugging Face Blog",
       "link": "https://huggingface.co/blog/amazon/foundation-model-building-blocks"
     },
-    "card_path": null,
+    "card_path": "generated/cards/b83c4d9fc8b5.png",
     "is_llm_mode": false,
     "chloe_note": "Freigegeben fuer den Publish-Queue: *Building Blocks for Foundation Model Training and Inference on AWS*.\nEs besteht den Ships Test, weil es einen klaren praktischen Nutzen fuer Builder liefert.\nGrundlage: Builder signal: inference, ai, model, training\nLink: https://huggingface.co/blog/amazon/foundation-model-building-blocks\n_Score: 8_"
   },
@@ -66,7 +66,7 @@
       "source": "Claude Code Releases",
       "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.139"
     },
-    "card_path": null,
+    "card_path": "generated/cards/07460944d6da.png",
     "is_llm_mode": false,
     "chloe_note": "Freigegeben fuer den Publish-Queue: *v2.1.139*.\nEs besteht den Ships Test, weil es einen klaren praktischen Nutzen fuer Builder liefert.\nGrundlage: Builder signal: api, agent, llm, v2.\nLink: https://github.com/anthropics/claude-code/releases/tag/v2.1.139\n_Score: 32_"
   }
