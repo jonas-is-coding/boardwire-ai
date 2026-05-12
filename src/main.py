@@ -604,6 +604,7 @@ def _publish_approved(args, logger) -> int:
 
     for item in queue:
         status = item.get("status", "pending_review")
+        rid = item.get("id")
         if status not in VALID_REVIEW_STATUSES:
             status = "pending_review"
             item["status"] = status
@@ -615,7 +616,6 @@ def _publish_approved(args, logger) -> int:
             item["status"] = "approved"
             logger.info("Auto-upgraded legacy pending_review item to approved: %s", rid)
 
-        rid = item.get("id")
         source_item = item.get("source_item", {})
         source_link = source_item.get("link")
         if rid in existing_ids or source_link in existing_links:
@@ -623,7 +623,7 @@ def _publish_approved(args, logger) -> int:
             item["status"] = "published_dry_run"
             continue
 
-        post_text = _build_publish_caption(item)
+        post_text = str(item.get("proposed_post") or "").strip() or _build_publish_caption(item)
         card_path = item.get("card_path")
         if selected_platform == "bluesky":
             logger.info("Image required for Bluesky: %s", rid)
@@ -1034,9 +1034,15 @@ def run(argv: list[str] | None = None) -> int:
             # so Claire+Chloe messages appear interleaved per article in Slack.
             from src.notifications import persona_voice as _pv
             claire_text = _pv.claire_on_found(item.title, item.source, evaluation.score, item.summary[:300])
+            fallback_reason = (evaluation.reason or "").strip()
+            if fallback_reason.lower().startswith("builder signal:"):
+                fallback_reason = (
+                    "Das Thema trifft klar Builder-Interesse "
+                    f"({fallback_reason.split(':', 1)[1].strip()})."
+                )
             claire_text = claire_text or (
-                f"Ich habe aus *{item.source}* etwas Relevantes gefunden: *{item.title}*.\n"
-                f"Warum das fuer Builder zaehlt: {evaluation.reason}\n"
+                f"Aus *{item.source}* ist ein starker Kandidat reingekommen: *{item.title}*.\n"
+                f"Relevanz fuer Builder: {fallback_reason or 'klarer praktischer Nutzen fuer aktuelle AI-Workflows.'}\n"
                 f"_Score: {evaluation.score}_"
             )
             _claire_notes[item.link] = claire_text

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from datetime import datetime, timezone
 from pathlib import Path
+import time
 
 import requests
 
@@ -14,6 +15,22 @@ class BlueskyPublisher:
     def __init__(self, handle: str, app_password: str) -> None:
         self.handle = handle
         self.app_password = app_password
+
+    def _post_with_retry(self, url: str, **kwargs) -> requests.Response:
+        attempts = 3
+        delay_seconds = 2
+        last_error: Exception | None = None
+        for idx in range(attempts):
+            try:
+                return requests.post(url, **kwargs)
+            except requests.Timeout as exc:
+                last_error = exc
+                if idx == attempts - 1:
+                    raise
+                time.sleep(delay_seconds)
+        if last_error:
+            raise last_error
+        raise requests.RequestException("Unexpected Bluesky retry failure")
 
     def publish(
         self,
@@ -33,10 +50,10 @@ class BlueskyPublisher:
             )
 
         try:
-            session_resp = requests.post(
+            session_resp = self._post_with_retry(
                 "https://bsky.social/xrpc/com.atproto.server.createSession",
                 json={"identifier": self.handle, "password": self.app_password},
-                timeout=20,
+                timeout=30,
             )
             if session_resp.status_code >= 400:
                 return PublishResult(
@@ -71,14 +88,14 @@ class BlueskyPublisher:
                 mime = "image/jpeg"
             try:
                 image_bytes = path.read_bytes()
-                upload_resp = requests.post(
+                upload_resp = self._post_with_retry(
                     "https://bsky.social/xrpc/com.atproto.repo.uploadBlob",
                     headers={
                         "Authorization": f"Bearer {access_jwt}",
                         "Content-Type": mime,
                     },
                     data=image_bytes,
-                    timeout=30,
+                    timeout=60,
                 )
             except OSError as exc:
                 return PublishResult(
@@ -112,7 +129,7 @@ class BlueskyPublisher:
                 ],
             }
 
-            create_resp = requests.post(
+            create_resp = self._post_with_retry(
                 "https://bsky.social/xrpc/com.atproto.repo.createRecord",
                 headers={"Authorization": f"Bearer {access_jwt}"},
                 json={
@@ -120,7 +137,7 @@ class BlueskyPublisher:
                     "collection": "app.bsky.feed.post",
                     "record": record,
                 },
-                timeout=20,
+                timeout=30,
             )
             if create_resp.status_code >= 400:
                 return PublishResult(
