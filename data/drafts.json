@@ -306,5 +306,60 @@
     "post_text": "v2.1.138. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-12T21:23:56.650709Z"
+  },
+  {
+    "title": "What Parameter Golf taught us about AI-assisted research",
+    "link": "https://openai.com/index/what-parameter-golf-taught-us",
+    "source": "OpenAI News",
+    "score": 7,
+    "should_post": true,
+    "reason": "Builder signal: agent, ai, model, research",
+    "post_text": "What Parameter Golf taught us about AI-assisted research. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-12T23:07:16.083292Z"
+  },
+  {
+    "title": "v0.21.0rc1",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.21.0rc1",
+    "source": "vLLM Releases",
+    "score": 4,
+    "should_post": true,
+    "reason": "Builder signal: v0.",
+    "post_text": "v0.21.0rc1. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-12T23:07:17.420303Z"
+  },
+  {
+    "title": "v0.23.4-rc0",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.23.4-rc0",
+    "source": "Ollama Releases",
+    "score": 1,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "v0.23.4-rc0. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-12T23:07:18.361645Z"
+  },
+  {
+    "title": "How finance teams use Codex",
+    "link": "https://openai.com/academy/how-finance-teams-use-codex",
+    "source": "OpenAI News",
+    "score": 2,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "How finance teams use Codex. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-12T23:07:18.361699Z"
+  },
+  {
+    "title": "How NVIDIA engineers and researchers build with Codex",
+    "link": "https://openai.com/index/nvidia",
+    "source": "OpenAI News",
+    "score": 4,
+    "should_post": true,
+    "reason": "Builder signal: production, research",
+    "post_text": "How NVIDIA engineers and researchers build with Codex. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-12T23:07:18.361735Z"
   }
 ]

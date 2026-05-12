@@ -121,7 +121,7 @@
   },
   {
     "id": "7e4c5caee7a5",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-12T21:23:55.334025Z",
     "score": 7,
     "reason": "Builder signal: agent, ai, model, research",
@@ -137,6 +137,27 @@
     "deferred_at": "2026-05-12T21:23:57.929778Z",
     "defer_count": 1,
     "original_score": 7,
-    "original_reason": "Builder signal: agent, ai, model, research"
+    "original_reason": "Builder signal: agent, ai, model, research",
+    "rejected_at": "2026-05-12T23:07:19.472234Z"
+  },
+  {
+    "id": "5dc663d4b435",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-12T23:07:18.361735Z",
+    "score": 4,
+    "reason": "Builder signal: production, research",
+    "proposed_post": "How NVIDIA engineers and researchers build with Codex. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "How NVIDIA engineers and researchers build with Codex",
+      "source": "OpenAI News",
+      "link": "https://openai.com/index/nvidia"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-12T23:07:19.492307Z",
+    "defer_count": 1,
+    "original_score": 4,
+    "original_reason": "Builder signal: production, research"
   }
 ]
