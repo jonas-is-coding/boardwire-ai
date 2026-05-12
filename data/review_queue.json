@@ -14,14 +14,14 @@
     },
     "card_path": null,
     "is_llm_mode": false,
-    "deferred_at": "2026-05-12T07:21:49.986863Z",
-    "defer_count": 1,
+    "deferred_at": "2026-05-12T07:47:09.488940Z",
+    "defer_count": 2,
     "original_score": 5,
     "original_reason": "Builder signal: v0., ai"
   },
   {
     "id": "c5c0dbf173a8",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-12T07:21:49.180190Z",
     "score": 6,
     "reason": "Builder signal: v0., model",
@@ -37,11 +37,12 @@
     "deferred_at": "2026-05-12T07:21:49.987976Z",
     "defer_count": 1,
     "original_score": 6,
-    "original_reason": "Builder signal: v0., model"
+    "original_reason": "Builder signal: v0., model",
+    "rejected_at": "2026-05-12T07:47:09.481711Z"
   },
   {
     "id": "23accb3686af",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-12T07:21:49.310539Z",
     "score": 32,
     "reason": "Builder signal: api, agent, llm, v2.",
@@ -57,11 +58,12 @@
     "deferred_at": "2026-05-12T07:21:49.989753Z",
     "defer_count": 1,
     "original_score": 32,
-    "original_reason": "Builder signal: api, agent, llm, v2."
+    "original_reason": "Builder signal: api, agent, llm, v2.",
+    "rejected_at": "2026-05-12T07:47:09.284907Z"
   },
   {
     "id": "3509c34265e6",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-12T07:21:49.551648Z",
     "score": 4,
     "reason": "Builder signal: v0.",
@@ -77,7 +79,8 @@
     "deferred_at": "2026-05-12T07:21:50.112931Z",
     "defer_count": 1,
     "original_score": 4,
-    "original_reason": "Builder signal: v0."
+    "original_reason": "Builder signal: v0.",
+    "rejected_at": "2026-05-12T07:47:09.684151Z"
   },
   {
     "id": "76031b2e9ac8",

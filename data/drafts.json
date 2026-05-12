@@ -86,5 +86,60 @@
     "post_text": "v0.30.0-rc13. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-12T07:21:49.551648Z"
+  },
+  {
+    "title": "v2.1.139",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.139",
+    "source": "Claude Code Releases",
+    "score": 13,
+    "should_post": true,
+    "reason": "Builder signal: api, agent, llm, v2.",
+    "post_text": "v2.1.139. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-12T07:47:07.854302Z"
+  },
+  {
+    "title": "v0.23.3-rc0: app: harden update flows (#16100)",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.23.3-rc0",
+    "source": "Ollama Releases",
+    "score": 6,
+    "should_post": true,
+    "reason": "Builder signal: v0., model",
+    "post_text": "v0.23.3-rc0: app: harden update flows (#16100). The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-12T07:47:08.118782Z"
+  },
+  {
+    "title": "v0.30.0-rc14: Merge remote-tracking branch 'upstream/main' into llama-runner-phase-0",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.30.0-rc14",
+    "source": "Ollama Releases",
+    "score": 5,
+    "should_post": true,
+    "reason": "Builder signal: v0., ai",
+    "post_text": "v0.30.0-rc14: Merge remote-tracking branch 'upstream/main' into llama-runner-phase-0. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-12T07:47:08.376293Z"
+  },
+  {
+    "title": "v0.30.0-rc13",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.30.0-rc13",
+    "source": "Ollama Releases",
+    "score": 4,
+    "should_post": true,
+    "reason": "Builder signal: v0.",
+    "post_text": "v0.30.0-rc13. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-12T07:47:08.643663Z"
+  },
+  {
+    "title": "v0.101.0",
+    "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.101.0",
+    "source": "Anthropic Python SDK Releases",
+    "score": 15,
+    "should_post": true,
+    "reason": "Builder signal: v0., changelog, claude , sdk",
+    "post_text": "v0.101.0. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-12T07:47:08.833238Z"
   }
 ]
