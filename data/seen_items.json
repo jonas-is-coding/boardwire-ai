@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [
   "https://github.com/ollama/ollama/releases/tag/v0.23.3-rc1",
   "https://huggingface.co/blog/amazon/foundation-model-building-blocks",
@@ -25,3 +26,5 @@
   "https://github.com/ollama/ollama/releases/tag/v0.30.0-rc10",
   "https://github.com/vllm-project/vllm/releases/tag/v0.20.2"
 ]
+=======
+>>>>>>> 7bd46bd (Delete all Data)
