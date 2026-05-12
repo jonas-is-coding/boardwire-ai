@@ -63,6 +63,13 @@ _USER_PROMPTS = {
         "Important: this is review stage only, so do not claim it is already live/published.\n\n"
         "Title: {title}\nScore: {score}\nReason: {reason}\nMode: {mode}"
     ),
+    "madison_approved": (
+        "Claire flagged this article and it passed the quality gate.\n"
+        "Claire's note: \"{claire_note}\"\n\n"
+        "Write Madison's approval message for Slack in a natural, human tone.\n"
+        "Important: this is review stage only, so do not claim it is already live/published.\n\n"
+        "Title: {title}\nScore: {score}\nReason: {reason}\nMode: {mode}\nLink: {link}"
+    ),
     "chloe_rejected": (
         "Claire flagged this article but it failed the quality gate.\n"
         "Claire's note: \"{claire_note}\"\n\n"
@@ -73,6 +80,12 @@ _USER_PROMPTS = {
         "Madison approved this and it just went live.\n"
         "Madison's verdict: \"{chloe_note}\"\n\n"
         "Announce it to the team and say it's live.\n\n"
+        "Title: {title}\nPlatform: {platform}\nPost: {post_text}"
+    ),
+    "chloe_published": (
+        "Madison approved this and it just went live.\n"
+        "Madison's verdict: \"{chloe_note}\"\n\n"
+        "Write Chloe's live announcement in a concise, natural tone.\n\n"
         "Title: {title}\nPlatform: {platform}\nPost: {post_text}"
     ),
     "sarah_package": (
@@ -167,6 +180,25 @@ def chloe_on_approved(title: str, score: int, reason: str, is_llm: bool, claire_
     return _call_gemini(_SYSTEM_PROMPTS["chloe"], user)
 
 
+def madison_on_approved(
+    title: str,
+    link: str,
+    score: int,
+    reason: str,
+    is_llm: bool,
+    claire_note: str = "",
+) -> str | None:
+    user = _USER_PROMPTS["madison_approved"].format(
+        title=title,
+        link=link,
+        score=score,
+        reason=reason,
+        mode="LLM" if is_llm else "Regel",
+        claire_note=claire_note or "Sieht interessant aus fuer Builder.",
+    )
+    return _call_gemini(_SYSTEM_PROMPTS["madison"], user)
+
+
 def chloe_on_rejected(title: str, reasons: list[str], claire_note: str = "") -> str | None:
     user = _USER_PROMPTS["chloe_rejected"].format(
         title=title,
@@ -184,6 +216,16 @@ def madison_on_published(title: str, platform: str, post_text: str, chloe_note: 
         chloe_note=chloe_note or "Ships Test bestanden.",
     )
     return _call_gemini(_SYSTEM_PROMPTS["madison"], user)
+
+
+def chloe_on_published(title: str, platform: str, post_text: str, chloe_note: str = "") -> str | None:
+    user = _USER_PROMPTS["chloe_published"].format(
+        title=title,
+        platform=platform,
+        post_text=post_text[:200],
+        chloe_note=chloe_note or "Ships Test bestanden.",
+    )
+    return _call_gemini(_SYSTEM_PROMPTS["chloe"], user)
 
 
 def sarah_build_publish_package(

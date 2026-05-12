@@ -95,13 +95,12 @@ def michael_approved(title: str, link: str, score: int, reason: str, is_llm: boo
 
 
 def chloe_approved(title: str, link: str, score: int, reason: str, is_llm: bool, claire_note: str = "") -> str:
-    llm_text = voice.chloe_on_approved(title, score, reason, is_llm, claire_note)
+    llm_text = voice.madison_on_approved(title, link, score, reason, is_llm, claire_note)
     text = llm_text or (
-        f"Freigegeben fuer den Publish-Queue: *{title}*.\n"
-        f"Es besteht den Ships Test, weil es einen klaren praktischen Nutzen fuer Builder liefert.\n"
-        f"Grundlage: {reason}\n"
-        f"Link: {link}\n"
-        f"_Score: {score}_"
+        f"Hey, *{title}* habe ich gerade fuer den Publish-Queue freigegeben. "
+        f"Das Release ist echt gut fuer Builder geeignet, vor allem wegen {reason}. "
+        f"Insgesamt habe ich das Ganze mit einem Score von {score} bewertet. "
+        f"Hier der Link: {link}"
     )
     text = _clean_message(text, recipient_name="Claire")
     # Review-phase guardrail: avoid implying real publish happened already.
@@ -140,7 +139,7 @@ def jim_published(platform: str, title: str, post_text: str, url: str | None, wi
 
 
 def madison_published(platform: str, title: str, post_text: str, url: str | None, with_image: bool, chloe_note: str = "") -> None:
-    llm_text = voice.madison_on_published(title, platform, post_text, chloe_note)
+    llm_text = voice.chloe_on_published(title, platform, post_text, chloe_note)
     body = llm_text or (
         f"Aaand ... we're live!\n"
         f"{platform}: {url or 'Link kommt gleich'}"
