@@ -687,8 +687,8 @@
     },
     "card_path": null,
     "is_llm_mode": false,
-    "deferred_at": "2026-05-12T04:40:05.743322Z",
-    "defer_count": 1,
+    "deferred_at": "2026-05-12T07:18:00.997048Z",
+    "defer_count": 2,
     "original_score": 5,
     "original_reason": "Matched keywords: ai, model"
   },
@@ -727,5 +727,65 @@
     },
     "card_path": null,
     "is_llm_mode": false
+  },
+  {
+    "id": "1b895483f689",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-12T07:18:00.079720Z",
+    "score": 9,
+    "reason": "Builder signal: v0., changelog, model",
+    "proposed_post": "v0.23.3. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "v0.23.3",
+      "source": "Ollama Releases",
+      "link": "https://github.com/ollama/ollama/releases/tag/v0.23.3-rc1"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-12T07:18:01.044290Z",
+    "defer_count": 1,
+    "original_score": 9,
+    "original_reason": "Builder signal: v0., changelog, model"
+  },
+  {
+    "id": "f66fa6472f52",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-12T07:18:00.546877Z",
+    "score": 5,
+    "reason": "Builder signal: v0., ai",
+    "proposed_post": "v0.30.0-rc14: Merge remote-tracking branch 'upstream/main' into llama-runner-phase-0. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "v0.30.0-rc14: Merge remote-tracking branch 'upstream/main' into llama-runner-phase-0",
+      "source": "Ollama Releases",
+      "link": "https://github.com/ollama/ollama/releases/tag/v0.30.0-rc14"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-12T07:18:01.357878Z",
+    "defer_count": 1,
+    "original_score": 5,
+    "original_reason": "Builder signal: v0., ai"
+  },
+  {
+    "id": "42acf369a9bb",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-12T07:18:00.738294Z",
+    "score": 6,
+    "reason": "Builder signal: v0., model",
+    "proposed_post": "v0.23.3-rc0: app: harden update flows (#16100). The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "v0.23.3-rc0: app: harden update flows (#16100)",
+      "source": "Ollama Releases",
+      "link": "https://github.com/ollama/ollama/releases/tag/v0.23.3-rc0"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-12T07:18:01.418417Z",
+    "defer_count": 1,
+    "original_score": 6,
+    "original_reason": "Builder signal: v0., model"
   }
 ]
