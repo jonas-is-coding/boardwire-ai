@@ -149,5 +149,65 @@
     "defer_count": 1,
     "original_score": 10,
     "original_reason": "Builder signal: launches, deployment, production, ai"
+  },
+  {
+    "id": "ecc9ac467652",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-12T08:29:20.397798Z",
+    "score": 90,
+    "reason": "New Claude Code release with concrete feature additions and critical bug fixes for developer tools and enterprise integrations.",
+    "proposed_post": "Claude Code v2.1.136 adds `hard_deny` for auto-mode classifier rules and fixes MCP server config/OAuth token loss. Builders get stricter AI behavior control and improved reliability for Claude integrations in VS Code/JetBrains.",
+    "source_angle": "Claude Code SDK/Plugin Update",
+    "source_item": {
+      "title": "v2.1.136",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.136"
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-05-12T08:29:31.332195Z",
+    "defer_count": 1,
+    "original_score": 90,
+    "original_reason": "New Claude Code release with concrete feature additions and critical bug fixes for developer tools and enterprise integrations."
+  },
+  {
+    "id": "83be4e6f4018",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-12T08:29:24.431660Z",
+    "score": 4,
+    "reason": "Builder signal: agent, ai",
+    "proposed_post": "Running Codex safely at OpenAI. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Running Codex safely at OpenAI",
+      "source": "OpenAI News",
+      "link": "https://openai.com/index/running-codex-safely"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-12T08:29:33.824656Z",
+    "defer_count": 1,
+    "original_score": 4,
+    "original_reason": "Builder signal: agent, ai"
+  },
+  {
+    "id": "fc33eaabe51d",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-12T08:29:28.904348Z",
+    "score": 10,
+    "reason": "Builder signal: api, agent, production, ai",
+    "proposed_post": "Improving token efficiency in GitHub Agentic Workflows. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Improving token efficiency in GitHub Agentic Workflows",
+      "source": "GitHub Blog AI",
+      "link": "https://github.blog/ai-and-ml/github-copilot/improving-token-efficiency-in-github-agentic-workflows/"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-12T08:29:36.251313Z",
+    "defer_count": 1,
+    "original_score": 10,
+    "original_reason": "Builder signal: api, agent, production, ai"
   }
 ]

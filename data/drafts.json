@@ -317,5 +317,93 @@
     "post_text": "v0.30.0-rc8: Merge remote-tracking branch 'upstream/main' into llama-runner-phase-0. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-12T08:20:01.198107Z"
+  },
+  {
+    "title": "OpenAI launches DeployCo to help businesses build around intelligence",
+    "link": "https://openai.com/index/openai-launches-the-deployment-company",
+    "source": "OpenAI News",
+    "score": 25,
+    "should_post": false,
+    "reason": "OpenAI launched a new company/initiative, DeployCo. No new API, model, or tool for builders to use or integrate today.",
+    "post_text": "No post generated",
+    "source_angle": "OpenAI's strategic move into enterprise deployment services.",
+    "created_at": "2026-05-12T08:28:54.934707Z"
+  },
+  {
+    "title": "v0.30.0-rc14: Merge remote-tracking branch 'upstream/main' into llama-runner-phase-0",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.30.0-rc14",
+    "source": "Ollama Releases",
+    "score": 30,
+    "should_post": false,
+    "reason": "Release candidate title is an internal git merge, not a user-facing feature. No concrete capabilities described.",
+    "post_text": "No post generated",
+    "source_angle": "Ollama internal development update",
+    "created_at": "2026-05-12T08:29:12.775959Z"
+  },
+  {
+    "title": "v2.1.136",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.136",
+    "source": "Claude Code Releases",
+    "score": 90,
+    "should_post": true,
+    "reason": "New Claude Code release with concrete feature additions and critical bug fixes for developer tools and enterprise integrations.",
+    "post_text": "Claude Code v2.1.136 adds `hard_deny` for auto-mode classifier rules and fixes MCP server config/OAuth token loss. Builders get stricter AI behavior control and improved reliability for Claude integrations in VS Code/JetBrains.",
+    "source_angle": "Claude Code SDK/Plugin Update",
+    "created_at": "2026-05-12T08:29:20.397798Z"
+  },
+  {
+    "title": "EMO: Pretraining mixture of experts for emergent modularity",
+    "link": "https://huggingface.co/blog/allenai/emo",
+    "source": "Hugging Face Blog",
+    "score": 3,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "EMO: Pretraining mixture of experts for emergent modularity. Training improvements matter most when they reduce cost or data requirements — see whether the method is reproducible on smaller hardware.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-12T08:29:22.383782Z"
+  },
+  {
+    "title": "langchain==1.2.18",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.2.18",
+    "source": "LangChain Releases",
+    "score": 8,
+    "should_post": true,
+    "reason": "Builder signal: release, agent, ai",
+    "post_text": "langchain==1.2.18. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-12T08:29:22.384063Z"
+  },
+  {
+    "title": "Running Codex safely at OpenAI",
+    "link": "https://openai.com/index/running-codex-safely",
+    "source": "OpenAI News",
+    "score": 4,
+    "should_post": true,
+    "reason": "Builder signal: agent, ai",
+    "post_text": "Running Codex safely at OpenAI. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-12T08:29:24.431660Z"
+  },
+  {
+    "title": "v2.1.133",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.133",
+    "source": "Claude Code Releases",
+    "score": 24,
+    "should_post": true,
+    "reason": "Builder signal: agent, v2., mcp, claude ",
+    "post_text": "v2.1.133. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-12T08:29:26.576580Z"
+  },
+  {
+    "title": "Improving token efficiency in GitHub Agentic Workflows",
+    "link": "https://github.blog/ai-and-ml/github-copilot/improving-token-efficiency-in-github-agentic-workflows/",
+    "source": "GitHub Blog AI",
+    "score": 10,
+    "should_post": true,
+    "reason": "Builder signal: api, agent, production, ai",
+    "post_text": "Improving token efficiency in GitHub Agentic Workflows. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-12T08:29:28.904348Z"
   }
 ]
