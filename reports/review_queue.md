@@ -1,93 +1,57 @@
 # Boardwire Review Queue
 
-## Pending: 5
-
-### Where Reliability Lives in Vision-Language Models: A Mechanistic Study of Attention, Hidden States, and Causal Circuits
-ID: `7eceaaf9f3bb`
-Score: `5`
-Source: `arXiv cs.AI`
-Created: `2026-05-12T04:40:05.467064Z`
-
-Post:
-> Where Reliability Lives in Vision-Language Models: A Mechanistic Study of Attention, Hidden States, and Causal Circuits. The key signal is whether teams can inspect, adapt, and run these models without black-box constraints.
-
-Source:
-https://arxiv.org/abs/2605.08200
-
-Approve:
-`python -m src.main --approve-review 7eceaaf9f3bb`
-
-Reject:
-`python -m src.main --reject-review 7eceaaf9f3bb`
-
-### SREGym: A Live Benchmark for AI SRE Agents with High-Fidelity Failure Scenarios
-ID: `cc6a89ba781d`
-Score: `12`
-Source: `arXiv cs.AI`
-Created: `2026-05-12T00:03:29.649144Z`
-
-Post:
-> SREGym: A Live Benchmark for AI SRE Agents with High-Fidelity Failure Scenarios. The practical question is how much reliability improves when agent tooling is used in real developer workflows.
-
-Source:
-https://arxiv.org/abs/2605.07161
-
-Approve:
-`python -m src.main --approve-review cc6a89ba781d`
-
-Reject:
-`python -m src.main --reject-review cc6a89ba781d`
+## Pending: 3
 
 ### Building Blocks for Foundation Model Training and Inference on AWS
-ID: `2331ace41710`
-Score: `5`
+ID: `b29bbdd634b0`
+Score: `8`
 Source: `Hugging Face Blog`
-Created: `2026-05-12T00:03:29.649099Z`
+Created: `2026-05-12T07:21:48.949595Z`
 
 Post:
-> Building Blocks for Foundation Model Training and Inference on AWS. Cost and deployment improvements matter when they hold under sustained production load, not only lab tests.
+> Building Blocks for Foundation Model Training and Inference on AWS. Inference and deployment improvements compound fast — check whether the numbers hold under sustained load, not just peak tests.
 
 Source:
 https://huggingface.co/blog/amazon/foundation-model-building-blocks
 
 Approve:
-`python -m src.main --approve-review 2331ace41710`
+`python -m src.main --approve-review b29bbdd634b0`
 
 Reject:
-`python -m src.main --reject-review 2331ace41710`
+`python -m src.main --reject-review b29bbdd634b0`
 
-### Open model reaches top benchmark tier for code generation
-ID: `b2fafcd3aa34`
+### v0.30.0-rc15
+ID: `8f679cddda27`
 Score: `4`
-Source: `Hugging Face Blog`
-Created: `2026-05-11T16:40:46.422822Z`
+Source: `Ollama Releases`
+Created: `2026-05-12T07:21:37.832011Z`
 
 Post:
-> Open model reaches top benchmark tier for code generation. The key signal is whether teams can inspect, adapt, and run these models without black-box constraints.
+> v0.30.0-rc15. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.
 
 Source:
-https://huggingface.co/blog/open-code-model-benchmarks
+https://github.com/ollama/ollama/releases/tag/v0.30.0-rc15
 
 Approve:
-`python -m src.main --approve-review b2fafcd3aa34`
+`python -m src.main --approve-review 8f679cddda27`
 
 Reject:
-`python -m src.main --reject-review b2fafcd3aa34`
+`python -m src.main --reject-review 8f679cddda27`
 
-### Open model reaches top benchmark tier for code generation
-ID: `7bfb0f79d44b`
-Score: `4`
-Source: `Hugging Face Blog`
-Created: `2026-05-11T16:40:14.234773Z`
+### v0.23.3
+ID: `76031b2e9ac8`
+Score: `9`
+Source: `Ollama Releases`
+Created: `2026-05-12T07:21:35.863425Z`
 
 Post:
-> Open model reaches top benchmark tier for code generation. The key signal is whether teams can inspect, adapt, and run these models without black-box constraints.
+> v0.23.3. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.
 
 Source:
-https://huggingface.co/blog/open-code-model-benchmarks
+https://github.com/ollama/ollama/releases/tag/v0.23.3-rc1
 
 Approve:
-`python -m src.main --approve-review 7bfb0f79d44b`
+`python -m src.main --approve-review 76031b2e9ac8`
 
 Reject:
-`python -m src.main --reject-review 7bfb0f79d44b`
+`python -m src.main --reject-review 76031b2e9ac8`

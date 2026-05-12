@@ -1,1 +1,130 @@
-[]
+[
+  {
+    "id": "46a76ee87d91",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-12T07:21:49.064883Z",
+    "score": 5,
+    "reason": "Builder signal: v0., ai",
+    "proposed_post": "v0.30.0-rc14: Merge remote-tracking branch 'upstream/main' into llama-runner-phase-0. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "v0.30.0-rc14: Merge remote-tracking branch 'upstream/main' into llama-runner-phase-0",
+      "source": "Ollama Releases",
+      "link": "https://github.com/ollama/ollama/releases/tag/v0.30.0-rc14"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-12T07:21:49.986863Z",
+    "defer_count": 1,
+    "original_score": 5,
+    "original_reason": "Builder signal: v0., ai"
+  },
+  {
+    "id": "c5c0dbf173a8",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-12T07:21:49.180190Z",
+    "score": 6,
+    "reason": "Builder signal: v0., model",
+    "proposed_post": "v0.23.3-rc0: app: harden update flows (#16100). The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "v0.23.3-rc0: app: harden update flows (#16100)",
+      "source": "Ollama Releases",
+      "link": "https://github.com/ollama/ollama/releases/tag/v0.23.3-rc0"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-12T07:21:49.987976Z",
+    "defer_count": 1,
+    "original_score": 6,
+    "original_reason": "Builder signal: v0., model"
+  },
+  {
+    "id": "23accb3686af",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-12T07:21:49.310539Z",
+    "score": 32,
+    "reason": "Builder signal: api, agent, llm, v2.",
+    "proposed_post": "v2.1.139. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "v2.1.139",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.139"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-12T07:21:49.989753Z",
+    "defer_count": 1,
+    "original_score": 32,
+    "original_reason": "Builder signal: api, agent, llm, v2."
+  },
+  {
+    "id": "3509c34265e6",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-12T07:21:49.551648Z",
+    "score": 4,
+    "reason": "Builder signal: v0.",
+    "proposed_post": "v0.30.0-rc13. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "v0.30.0-rc13",
+      "source": "Ollama Releases",
+      "link": "https://github.com/ollama/ollama/releases/tag/v0.30.0-rc13"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-12T07:21:50.112931Z",
+    "defer_count": 1,
+    "original_score": 4,
+    "original_reason": "Builder signal: v0."
+  },
+  {
+    "id": "76031b2e9ac8",
+    "status": "pending_review",
+    "created_at": "2026-05-12T07:21:35.863425Z",
+    "score": 9,
+    "reason": "Builder signal: v0., changelog, model",
+    "proposed_post": "v0.23.3. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based fallback",
+    "source_item": {
+      "title": "v0.23.3",
+      "source": "Ollama Releases",
+      "link": "https://github.com/ollama/ollama/releases/tag/v0.23.3-rc1"
+    },
+    "card_path": null,
+    "is_llm_mode": false
+  },
+  {
+    "id": "8f679cddda27",
+    "status": "pending_review",
+    "created_at": "2026-05-12T07:21:37.832011Z",
+    "score": 4,
+    "reason": "Builder signal: v0.",
+    "proposed_post": "v0.30.0-rc15. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based fallback",
+    "source_item": {
+      "title": "v0.30.0-rc15",
+      "source": "Ollama Releases",
+      "link": "https://github.com/ollama/ollama/releases/tag/v0.30.0-rc15"
+    },
+    "card_path": null,
+    "is_llm_mode": false
+  },
+  {
+    "id": "b29bbdd634b0",
+    "status": "pending_review",
+    "created_at": "2026-05-12T07:21:48.949595Z",
+    "score": 8,
+    "reason": "Builder signal: inference, ai, model, training",
+    "proposed_post": "Building Blocks for Foundation Model Training and Inference on AWS. Inference and deployment improvements compound fast — check whether the numbers hold under sustained load, not just peak tests.",
+    "source_angle": "Rule-based fallback",
+    "source_item": {
+      "title": "Building Blocks for Foundation Model Training and Inference on AWS",
+      "source": "Hugging Face Blog",
+      "link": "https://huggingface.co/blog/amazon/foundation-model-building-blocks"
+    },
+    "card_path": null,
+    "is_llm_mode": false
+  }
+]
