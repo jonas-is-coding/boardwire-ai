@@ -1172,10 +1172,7 @@ def run(argv: list[str] | None = None) -> int:
             else:
                 quality_reject += 1
                 logger.warning("Quality reject: %s", "; ".join(quality.reasons))
-                # Send Claire's deferred notification first — then Chloe's rejection
-                if source_link in _pending_claire:
-                    c_title, c_link = _pending_claire.pop(source_link)
-                    notify.claire_post_deferred(c_title, c_link, _claire_notes.get(source_link, ""))
+                _pending_claire.pop(source_link, None)
                 notify.michael_rejected(
                     title=source_title,
                     link=source_link,

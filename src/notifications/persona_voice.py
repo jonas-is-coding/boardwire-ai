@@ -79,7 +79,11 @@ def _call_gemini(system: str, user: str) -> str | None:
     prompt = f"{system}\n\n{user}"
     body = {
         "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {"temperature": 0.7, "maxOutputTokens": 220},
+        "generationConfig": {
+            "temperature": 0.7,
+            "maxOutputTokens": 220,
+            "thinkingConfig": {"thinkingBudget": 0},
+        },
     }
 
     idx = 0
@@ -101,9 +105,15 @@ def _call_gemini(system: str, user: str) -> str | None:
             if resp.status_code >= 400:
                 return None
             parts = resp.json().get("candidates", [{}])[0].get("content", {}).get("parts", [])
-            text = str(parts[0].get("text", "")).strip() if parts else ""
-            # Strip backticks that break Slack markdown
-            text = text.replace("`", "'")
+            text_chunks = [
+                str(p.get("text", ""))
+                for p in parts
+                if p.get("text") and not p.get("thought")
+            ]
+            text = " ".join(t.strip() for t in text_chunks if t.strip())
+            text = text.replace("`", "'").strip()
+            if len(text) < 30:
+                return None
             return text or None
         except Exception:
             return None

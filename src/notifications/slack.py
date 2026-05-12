@@ -36,6 +36,16 @@ def _post(persona: str, text: str) -> None:
         pass
 
 
+def _post_debug(text: str) -> None:
+    url = os.getenv("SLACK_WEBHOOK_URL_DEBUG", "").strip()
+    if not url:
+        return
+    try:
+        requests.post(url, json={"text": text}, timeout=5)
+    except Exception:
+        pass
+
+
 # ---------------------------------------------------------------------------
 # Public notification events
 # ---------------------------------------------------------------------------
@@ -71,9 +81,7 @@ def michael_rejected(title: str, link: str, reasons: list[str], claire_note: str
 
 
 def chloe_rejected(title: str, link: str, reasons: list[str], claire_note: str = "") -> None:
-    llm_text = voice.chloe_on_rejected(title, reasons, claire_note)
-    text = llm_text or f'Abgelehnt: "{title}" — {"; ".join(reasons)}'
-    _post("chloe", text)
+    _post_debug(f'Abgelehnt: "{title}" — {"; ".join(reasons)}')
 
 
 def michael_human_approved(review_id: str, title: str) -> None:
@@ -81,7 +89,7 @@ def michael_human_approved(review_id: str, title: str) -> None:
 
 
 def chloe_human_approved(review_id: str, title: str) -> None:
-    _post("chloe", f'Manuell freigegeben: "{title}"')
+    _post_debug(f'Manuell freigegeben: "{title}"')
 
 
 def michael_human_rejected(review_id: str, title: str) -> None:
@@ -89,7 +97,7 @@ def michael_human_rejected(review_id: str, title: str) -> None:
 
 
 def chloe_human_rejected(review_id: str, title: str) -> None:
-    _post("chloe", f'Manuell abgelehnt: "{title}"')
+    _post_debug(f'Manuell abgelehnt: "{title}"')
 
 
 def jim_published(platform: str, title: str, post_text: str, url: str | None, with_image: bool, chloe_note: str = "") -> None:
@@ -108,13 +116,13 @@ def jim_failed(platform: str, title: str, error: str) -> None:
 
 
 def madison_failed(platform: str, title: str, error: str) -> None:
-    _post("madison", f'Fehler beim Veröffentlichen auf {platform}: "{title}"\n{error}')
+    _post_debug(f'Fehler beim Veröffentlichen auf {platform}: "{title}"\n{error}')
 
 
 def run_started(sources_count: int, items_count: int, llm_mode: bool) -> None:
     mode = ", LLM aktiv" if llm_mode else ""
-    _post("claire", f"Neue Runde gestartet — {sources_count} Quellen, {items_count} neue Artikel{mode}.")
+    _post_debug(f"Neue Runde gestartet — {sources_count} Quellen, {items_count} neue Artikel{mode}.")
 
 
 def run_finished(queued: int, rejected: int) -> None:
-    _post("claire", f"Runde abgeschlossen — {queued} in der Queue, {rejected} abgelehnt.")
+    _post_debug(f"Runde abgeschlossen — {queued} in der Queue, {rejected} abgelehnt.")
