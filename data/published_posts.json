@@ -1,48 +1,41 @@
 [
   {
-    "id": "6aa8b24d9bbf",
-    "published_at": "2026-05-11T14:49:24.893665Z",
-    "platform": "dry_run",
-    "post": "Draft candidate: Open model reaches top benchmark tier for code generation (Hugging Face Blog) | Score 4. https://huggingface.co/blog/open-code-model-benchmarks",
-    "source_link": "https://huggingface.co/blog/open-code-model-benchmarks",
-    "source_title": "Open model reaches top benchmark tier for code generation",
-    "score": 4,
-    "reason": "Matched keywords: model, benchmark"
-  },
-  {
-    "id": "0c764279a00a",
-    "published_at": "2026-05-11T15:48:19.245875Z",
-    "platform": "dry_run",
-    "post": "Extracting Search Trees from LLM Reasoning Traces Reveals Myopic Planning. The useful part is the method and evidence quality, not just headline claims from a single result.",
-    "source_link": "https://arxiv.org/abs/2605.06840",
-    "source_title": "Extracting Search Trees from LLM Reasoning Traces Reveals Myopic Planning",
+    "id": "4d9e3358923b",
+    "published_at": "2026-05-11T17:21:32.342745Z",
+    "platform": "bluesky",
+    "post": "Research to watch for practical downstream impact. #AIResearch #MachineLearning #Boardwire",
+    "source_link": "https://arxiv.org/abs/2605.07021",
+    "source_title": "Behavior Cue Reasoning: Monitorable Reasoning Improves Efficiency and Safety through Oversight",
     "score": 8,
     "reason": "Matched keywords: ai, model, llm",
-    "external_id": null,
-    "url": null
+    "card_path": "generated/cards/4d9e3358923b.png",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mllrxbg2kf2u",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mllrxbg2kf2u"
   },
   {
-    "id": "3f4d5e3d04ea",
-    "published_at": "2026-05-11T15:50:18.192060Z",
-    "platform": "dry_run",
-    "post": "AGWM: Affordance-Grounded World Models for Environments with Compositional Prerequisites. The practical question is how much reliability improves when agent tooling is used in real developer workflows.",
-    "source_link": "https://arxiv.org/abs/2605.06841",
-    "source_title": "AGWM: Affordance-Grounded World Models for Environments with Compositional Prerequisites",
+    "id": "27e57cfba977",
+    "published_at": "2026-05-11T17:21:32.342745Z",
+    "platform": "bluesky",
+    "post": "Agent tooling is moving into real workflows. #AIAgents #DeveloperTools #Boardwire",
+    "source_link": "https://arxiv.org/abs/2605.07103",
+    "source_title": "ARMOR: An Agentic Framework for Reaction Feasibility Prediction via Adaptive Utility-aware Multi-tool Reasoning",
     "score": 8,
     "reason": "Matched keywords: ai, model, agent",
-    "external_id": null,
-    "url": null
+    "card_path": "generated/cards/27e57cfba977.png",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mllrxe5lob22",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mllrxe5lob22"
   },
   {
-    "id": "cce2e6a82a03",
-    "published_at": "2026-05-11T16:08:33.622478Z",
-    "platform": "bluesky",
-    "post": "Learning and Reusing Policy Decompositions for Hierarchical Generalized Planning with LLM Agents. The practical question is how much reliability improves when agent tooling is used in real developer workflows.",
-    "source_link": "https://arxiv.org/abs/2605.06957",
-    "source_title": "Learning and Reusing Policy Decompositions for Hierarchical Generalized Planning with LLM Agents",
-    "score": 10,
-    "reason": "Matched keywords: model, agent, benchmark, llm",
-    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mllnuqml4a2u",
-    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mllnuqml4a2u"
+    "id": "e8679b6db40a",
+    "published_at": "2026-05-11T17:53:45.196792Z",
+    "platform": "dry_run",
+    "post": "New AI signal. #AI #Boardwire",
+    "source_link": "https://example.com/boardwire-x-browser-test-1778521034",
+    "source_title": "Boardwire local browser publish path test",
+    "score": 99,
+    "reason": "manual x_browser test item",
+    "card_path": null,
+    "external_id": null,
+    "url": null
   }
 ]

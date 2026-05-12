@@ -1,0 +1,12 @@
+{
+  "id": "session-1778569156242",
+  "startedAt": "2026-05-12T06:59:16.242Z",
+  "cwd": "/Users/jonasbrahmst/boardwire/boardwire-ai",
+  "context": {},
+  "metrics": {
+    "edits": 1,
+    "commands": 0,
+    "tasks": 0,
+    "errors": 0
+  }
+}

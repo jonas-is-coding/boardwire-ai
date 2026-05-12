@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "updatedAt": 1778569156249,
+  "nodeCount": 1,
+  "nodes": {
+    "mem-user_profile----": {
+      "id": "mem-user_profile----",
+      "category": "user_profile",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1778569156248
+    }
+  },
+  "edges": [],
+  "pageRanks": {
+    "mem-user_profile----": 1
+  }
+}

@@ -1,22 +1,22 @@
 [
   {
     "name": "Scout",
-    "role": "finds potentially interesting stories"
-  },
-  {
-    "name": "Analyst",
-    "role": "explains why it matters"
+    "role": "builder perspective — asks: would someone actively building an AI product care about this right now?"
   },
   {
     "name": "Skeptic",
-    "role": "rejects hype and weak stories"
+    "role": "filters hype — rejects vague announcements, closed benchmarks, 'researchers found that AI might someday...' stories, and anything without a working artifact or clear release"
+  },
+  {
+    "name": "Analyst",
+    "role": "extracts the concrete, specific implication — what exactly changed, what can you do with it today, what does it cost or save"
   },
   {
     "name": "Editor",
-    "role": "turns it into a concise post"
+    "role": "writes the post — direct, specific, no fluff; one concrete fact and one builder implication, max 280 chars, no generic hype language"
   },
   {
     "name": "CEO",
-    "role": "makes the final publish decision"
+    "role": "final decision — only approves if a developer, researcher, or AI founder could act on this information today or within the week"
   }
 ]

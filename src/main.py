@@ -33,16 +33,15 @@ from src.models import DraftPost, FeedItem, Source
 from src.publisher.base import PublishResult
 from src.publisher.bluesky_publisher import BlueskyPublisher
 from src.publisher.dry_run_publisher import DryRunPublisher
-from src.publisher.x_browser_publisher import XBrowserPublisher
-from src.publisher.x_publisher import XPublisher
 from src.quality.gates import QualityConfig, check_quality
 from src.reports.review_report import generate_review_queue_report
 from src.storage.json_store import JsonStore
+from src.notifications import slack as notify
 from src.utils.logger import get_logger
 from src.writer.post_writer import generate_post
 
 VALID_REVIEW_STATUSES = {"pending_review", "approved", "rejected", "published_dry_run", "deferred_due_to_cap", "expired_deferred"}
-VALID_PUBLISHERS = {"dry_run", "bluesky", "x", "x_browser"}
+VALID_PUBLISHERS = {"dry_run", "bluesky"}
 
 
 def _load_sources() -> list[Source]:
@@ -107,7 +106,7 @@ def _build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--reject-review", type=str, default=None, help="Reject one review queue item by ID.")
     parser.add_argument("--publish-approved", action="store_true", help="Publish approved review items in dry-run mode.")
     parser.add_argument("--list-published", action="store_true", help="List published dry-run posts.")
-    parser.add_argument("--publisher", choices=["dry_run", "bluesky", "x", "x_browser"], default=None, help="Publisher backend for --publish-approved.")
+    parser.add_argument("--publisher", choices=["dry_run", "bluesky"], default=None, help="Publisher backend for --publish-approved.")
     parser.add_argument("--confirm-real-publish", action="store_true", help="Required confirmation flag for real publishing.")
     parser.add_argument("--quality-report", action="store_true", help="Print quality gate pass/fail reasons for each candidate.")
     parser.add_argument("--self-check-writer", action="store_true", help="Generate fixture posts and run quality gates as a writer self-check.")
@@ -469,6 +468,16 @@ def _update_review_status(review_id: str, status: str, logger) -> int:
     JsonStore.save(REVIEW_QUEUE_PATH, queue)
     generate_review_queue_report(REVIEW_QUEUE_PATH, REVIEW_REPORT_PATH)
     logger.info("Review item %s marked as %s", review_id, status)
+
+    for item in queue:
+        if item.get("id") == review_id:
+            title = item.get("source_item", {}).get("title", review_id)
+            if status == "approved":
+                notify.michael_human_approved(review_id, title)
+            elif status == "rejected":
+                notify.michael_human_rejected(review_id, title)
+            break
+
     return 0
 
 
@@ -490,19 +499,6 @@ def _resolve_publisher(args, logger):
         logger.error("Refusing %s publish: missing --confirm-real-publish", selected)
         return None, selected
 
-    if selected == "x_browser":
-        logger.info("Experimental local browser publisher")
-        if os.getenv("GITHUB_ACTIONS", "").strip().lower() == "true":
-            logger.error("Refusing x_browser publisher in GitHub Actions")
-            return None, "x_browser"
-        allow_browser = os.getenv("BOARDWIRE_ALLOW_BROWSER_PUBLISH", "false").strip().lower() == "true"
-        if not allow_browser:
-            logger.error("Refusing x_browser publish: BOARDWIRE_ALLOW_BROWSER_PUBLISH must be true")
-            return None, "x_browser"
-        auto_click = os.getenv("BOARDWIRE_BROWSER_AUTO_CLICK_POST", "false").strip().lower() == "true"
-        profile_dir = Path(".browser/x-profile")
-        return XBrowserPublisher(profile_dir=profile_dir, auto_click_post=auto_click), "x_browser"
-
     if selected == "bluesky":
         handle = os.getenv("BLUESKY_HANDLE", "").strip()
         app_password = os.getenv("BLUESKY_APP_PASSWORD", "").strip()
@@ -510,63 +506,44 @@ def _resolve_publisher(args, logger):
             logger.error("Refusing Bluesky publish: BLUESKY_HANDLE and BLUESKY_APP_PASSWORD are required")
             return None, "bluesky"
         return BlueskyPublisher(handle=handle, app_password=app_password), "bluesky"
-
-    missing_x: list[str] = []
-    consumer_key = os.getenv("X_CONSUMER_KEY", "").strip()
-    consumer_secret = os.getenv("X_CONSUMER_KEY_SECRET", "").strip()
-    access_token = os.getenv("X_ACCESS_TOKEN", "").strip()
-    access_secret = os.getenv("X_ACCESS_TOKEN_SECRET", "").strip()
-    if not consumer_key:
-        missing_x.append("X_CONSUMER_KEY")
-    if not consumer_secret:
-        missing_x.append("X_CONSUMER_KEY_SECRET")
-    if not access_token:
-        missing_x.append("X_ACCESS_TOKEN")
-    if not access_secret:
-        missing_x.append("X_ACCESS_TOKEN_SECRET")
-
-    if missing_x:
-        logger.error("Refusing X publish: missing required env vars: %s", ", ".join(missing_x))
-        return None, "x"
-
-    return (
-        XPublisher(
-            consumer_key=consumer_key,
-            consumer_secret=consumer_secret,
-            access_token=access_token,
-            access_token_secret=access_secret,
-        ),
-        "x",
-    )
+    logger.error("Unsupported publisher: %s", selected)
+    return None, selected
 
 
 def _build_publish_caption(item: dict) -> str:
     source_item = item.get("source_item", {})
     title = str(source_item.get("title", "")).strip()
     lower = title.lower()
-    core = "New AI signal."
+    core = "Check whether this changes measurable capability, reliability, or cost in real AI workloads."
     tags = ["#AI", "#Boardwire"]
 
-    if any(k in lower for k in ("agent", "workflow", "tooling")):
-        core = "Agent tooling is moving into real workflows."
-        tags = ["#AIAgents", "#DeveloperTools", "#Boardwire"]
-    elif any(k in lower for k in ("open source", "open-source", "open model", "open-weight")):
-        core = "Open models keep gaining practical ground."
+    if any(k in lower for k in ("agent", "workflow", "tooling", "agentic")):
+        core = "Agent reliability in production is still the hard part — check whether the evals reflect real task completion."
+        tags = ["#AIAgents", "#BuildersAI", "#Boardwire"]
+    elif any(k in lower for k in ("open source", "open-source", "open model", "open-weight", "weights")):
+        core = "Open weights: you can inspect it, run it locally, and fine-tune — worth evaluating against your current stack."
         tags = ["#OpenSource", "#LLM", "#Boardwire"]
-    elif any(k in lower for k in ("benchmark", "evaluation", "leaderboard")):
-        core = "Benchmarks matter when results transfer to production."
-        tags = ["#Benchmark", "#ML", "#Boardwire"]
+    elif any(k in lower for k in ("benchmark", "evaluation", "leaderboard", " eval ")):
+        core = "A benchmark only matters if the eval setup is public and the tasks map to something you need in production."
+        tags = ["#Benchmark", "#BuildersAI", "#Boardwire"]
     elif any(k in lower for k in ("robot", "robotics")):
-        core = "Robotics progress matters when generalization improves."
+        core = "Robotics progress is meaningful when it holds outside curated demos — look for generalization results."
         tags = ["#Robotics", "#AI", "#Boardwire"]
-    elif any(k in lower for k in ("infra", "inference", "deployment", "serving")):
-        core = "AI infra is becoming a core product advantage."
+    elif any(k in lower for k in ("infra", "inference", "deployment", "serving", "latency")):
+        core = "Inference improvements compound fast — check whether the numbers hold under sustained load, not just peak tests."
         tags = ["#MLOps", "#Inference", "#Boardwire"]
-    elif "arxiv" in str(source_item.get("source", "")).lower() or "paper" in lower or "research" in lower:
-        core = "Research to watch for practical downstream impact."
-        tags = ["#AIResearch", "#MachineLearning", "#Boardwire"]
+    elif any(k in lower for k in ("fine-tun", "training", "dataset")):
+        core = "Training improvements matter most when they reduce cost or data requirements — see if the method is reproducible."
+        tags = ["#MLTraining", "#BuildersAI", "#Boardwire"]
+    elif any(k in lower for k in ("rag", "retrieval", "embedding")):
+        core = "Retrieval quality is the bottleneck most RAG systems hit first — check recall on domain-specific data."
+        tags = ["#RAG", "#BuildersAI", "#Boardwire"]
 
-    caption = f"{core} {' '.join(tags)}"
+    tag_str = " ".join(tags)
+    if title:
+        caption = f"{core} — {title.rstrip('.')}. {tag_str}"
+    else:
+        caption = f"{core} {tag_str}"
     return caption[:280]
 
 
@@ -694,6 +671,11 @@ def _publish_approved(args, logger) -> int:
         )
         if not result.success:
             logger.warning("Publish failed for %s: %s", rid, result.error or "unknown error")
+            notify.jim_failed(
+                platform=selected_platform,
+                title=source_item.get("title", rid),
+                error=result.error or "unknown error",
+            )
             continue
 
         post = {
@@ -719,6 +701,13 @@ def _publish_approved(args, logger) -> int:
         if abs_card_path:
             posted_with_image_count += 1
         logger.info("Published %s item: %s", selected_platform, rid)
+        notify.jim_published(
+            platform=selected_platform,
+            title=source_item.get("title", rid),
+            post_text=post_text,
+            url=result.url,
+            with_image=bool(abs_card_path),
+        )
 
     JsonStore.save(REVIEW_QUEUE_PATH, queue)
     JsonStore.save(PUBLISHED_POSTS_PATH, published)
@@ -984,6 +973,12 @@ def run(argv: list[str] | None = None) -> int:
     gemini_evaluated = 0
     llm_mode_by_link: dict[str, bool] = {}
 
+    notify.run_started(
+        sources_count=len(sources),
+        items_count=len(candidate_pipeline),
+        llm_mode=llm_enabled,
+    )
+
     for idx, candidate in enumerate(candidate_pipeline):
         item = candidate["feed_item"]
         is_deferred = bool(candidate["is_deferred"])
@@ -1026,6 +1021,13 @@ def run(argv: list[str] | None = None) -> int:
         )
         drafts_data.append(asdict(draft))
         created_drafts.append(draft)
+        if evaluation.should_post:
+            notify.pam_found_candidate(
+                title=item.title,
+                source=item.source,
+                link=item.link,
+                score=evaluation.score,
+            )
         processed_links.append(item.link)
         if deferred_queue_item is not None:
             # keep reference for post-quality status transitions
@@ -1148,9 +1150,21 @@ def run(argv: list[str] | None = None) -> int:
                     quality_pass += 1
                     remaining_today -= 1
                     logger.info("Quality pass: %s", item.get("id"))
+                    notify.michael_approved(
+                        title=source_title,
+                        link=source_link,
+                        score=score_val,
+                        reason=item.get("reason", ""),
+                        is_llm=is_llm_mode,
+                    )
             else:
                 quality_reject += 1
                 logger.warning("Quality reject: %s", "; ".join(quality.reasons))
+                notify.michael_rejected(
+                    title=source_title,
+                    link=source_link,
+                    reasons=quality.reasons,
+                )
                 if is_reprocessed_deferred:
                     linked_deferred["status"] = "rejected"
                     linked_deferred["rejected_at"] = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
@@ -1178,6 +1192,7 @@ def run(argv: list[str] | None = None) -> int:
     updated_seen = list(seen_links.union(effective_processed_links))
     JsonStore.save(SEEN_ITEMS_PATH, updated_seen)
 
+    notify.run_finished(queued=saved_to_review_queue, rejected=quality_reject)
     logger.info("Boardwire AI dry run complete")
     logger.info("Sources loaded: %d", len(sources) if not args.use_fixtures else 0)
     logger.info("Fetched items: %d", len(all_items))
