@@ -1,7 +1,7 @@
 [
   {
     "id": "8f91da8255d5",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-12T08:35:45.231132Z",
     "score": 26,
     "reason": "Builder signal: release, api, agent, llm",
@@ -17,7 +17,8 @@
     "deferred_at": "2026-05-12T08:45:58.430617Z",
     "defer_count": 2,
     "original_score": 26,
-    "original_reason": "Builder signal: release, api, agent, llm"
+    "original_reason": "Builder signal: release, api, agent, llm",
+    "rejected_at": "2026-05-12T08:49:33.522758Z"
   },
   {
     "id": "bb56e2cb5868",
@@ -72,7 +73,7 @@
   },
   {
     "id": "e09c18982780",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-12T08:45:56.584047Z",
     "score": 10,
     "reason": "Builder signal: launches, deployment, production, ai",
@@ -88,6 +89,7 @@
     "deferred_at": "2026-05-12T08:46:01.074587Z",
     "defer_count": 1,
     "original_score": 10,
-    "original_reason": "Builder signal: launches, deployment, production, ai"
+    "original_reason": "Builder signal: launches, deployment, production, ai",
+    "rejected_at": "2026-05-12T08:49:34.228032Z"
   }
 ]
