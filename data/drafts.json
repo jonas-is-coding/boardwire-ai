@@ -229,5 +229,93 @@
     "post_text": "v0.20.2. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-12T08:13:54.445406Z"
+  },
+  {
+    "title": "OpenAI launches DeployCo to help businesses build around intelligence",
+    "link": "https://openai.com/index/openai-launches-the-deployment-company",
+    "source": "OpenAI News",
+    "score": 30,
+    "should_post": false,
+    "reason": "Announcement of new service/entity. No concrete API, weights, or deployable tool available for builders today.",
+    "post_text": "No post generated",
+    "source_angle": "OpenAI's new enterprise deployment initiative",
+    "created_at": "2026-05-12T08:19:34.016053Z"
+  },
+  {
+    "title": "v0.30.0-rc14: Merge remote-tracking branch 'upstream/main' into llama-runner-phase-0",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.30.0-rc14",
+    "source": "Ollama Releases",
+    "score": 20,
+    "should_post": false,
+    "reason": "Release candidate tag describes internal Git merge, not user-facing features or changes. No actionable item for builders.",
+    "post_text": "No post generated",
+    "source_angle": "Ollama internal development progress, not a user-ready feature release.",
+    "created_at": "2026-05-12T08:19:42.814576Z"
+  },
+  {
+    "title": "v0.30.0-rc11",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.30.0-rc11",
+    "source": "Ollama Releases",
+    "score": 4,
+    "should_post": true,
+    "reason": "Builder signal: v0.",
+    "post_text": "v0.30.0-rc11. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based fallback",
+    "created_at": "2026-05-12T08:19:55.091987Z"
+  },
+  {
+    "title": "v0.30.0-rc10",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.30.0-rc10",
+    "source": "Ollama Releases",
+    "score": 4,
+    "should_post": true,
+    "reason": "Builder signal: v0.",
+    "post_text": "v0.30.0-rc10. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-12T08:19:55.943262Z"
+  },
+  {
+    "title": "v0.30.0-rc9",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.30.0-rc9",
+    "source": "Ollama Releases",
+    "score": 4,
+    "should_post": true,
+    "reason": "Builder signal: v0.",
+    "post_text": "v0.30.0-rc9. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-12T08:19:57.158165Z"
+  },
+  {
+    "title": "v2.1.138",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.138",
+    "source": "Claude Code Releases",
+    "score": 4,
+    "should_post": true,
+    "reason": "Builder signal: v2.",
+    "post_text": "v2.1.138. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-12T08:19:58.426483Z"
+  },
+  {
+    "title": "v2.1.137",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.137",
+    "source": "Claude Code Releases",
+    "score": 7,
+    "should_post": true,
+    "reason": "Builder signal: v2., extension, ai",
+    "post_text": "v2.1.137. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-12T08:19:59.922054Z"
+  },
+  {
+    "title": "v0.30.0-rc8: Merge remote-tracking branch 'upstream/main' into llama-runner-phase-0",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.30.0-rc8",
+    "source": "Ollama Releases",
+    "score": 7,
+    "should_post": true,
+    "reason": "Builder signal: v0., ai, model",
+    "post_text": "v0.30.0-rc8: Merge remote-tracking branch 'upstream/main' into llama-runner-phase-0. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-12T08:20:01.198107Z"
   }
 ]
