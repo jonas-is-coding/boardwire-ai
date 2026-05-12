@@ -1,7 +1,7 @@
 [
   {
     "id": "54d20f1e39db",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-12T09:01:57.150923Z",
     "score": 26,
     "reason": "Builder signal: release, api, agent, llm",
@@ -17,7 +17,8 @@
     "deferred_at": "2026-05-12T09:01:59.914154Z",
     "defer_count": 1,
     "original_score": 26,
-    "original_reason": "Builder signal: release, api, agent, llm"
+    "original_reason": "Builder signal: release, api, agent, llm",
+    "rejected_at": "2026-05-12T10:38:10.392092Z"
   },
   {
     "id": "3b455e5fb1c7",
