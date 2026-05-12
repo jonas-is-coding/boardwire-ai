@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import os
+import re
 from typing import Literal
 
 import requests
@@ -96,13 +97,16 @@ def michael_approved(title: str, link: str, score: int, reason: str, is_llm: boo
 def chloe_approved(title: str, link: str, score: int, reason: str, is_llm: bool, claire_note: str = "") -> str:
     llm_text = voice.chloe_on_approved(title, score, reason, is_llm, claire_note)
     text = llm_text or (
-        f"Das geht live: *{title}*.\n"
-        f"Es besteht den Ships Test, weil es einen klaren praktischen Nutzen für Builder liefert.\n"
+        f"Freigegeben fuer den Publish-Queue: *{title}*.\n"
+        f"Es besteht den Ships Test, weil es einen klaren praktischen Nutzen fuer Builder liefert.\n"
         f"Grundlage: {reason}\n"
         f"Link: {link}\n"
         f"_Score: {score}_"
     )
     text = _clean_message(text, recipient_name="Claire")
+    # Review-phase guardrail: avoid implying real publish happened already.
+    text = re.sub(r"\b(das\s+geht\s+live)\b", "freigegeben fuer den Publish-Queue", text, flags=re.IGNORECASE)
+    text = re.sub(r"\b(ist\s+live)\b", "ist fuer den Publish-Queue freigegeben", text, flags=re.IGNORECASE)
     _post("chloe", text)
     return text
 

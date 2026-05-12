@@ -53,7 +53,8 @@ _USER_PROMPTS = {
     "chloe_approved": (
         "Claire flagged this article and it passed the quality gate.\n"
         "Claire's note: \"{claire_note}\"\n\n"
-        "Tell Claire specifically what makes it pass the Ships Test.\n\n"
+        "Tell Claire specifically what makes it pass the Ships Test.\n"
+        "Important: this is review stage only, so do not claim it is already live/published.\n\n"
         "Title: {title}\nScore: {score}\nReason: {reason}\nMode: {mode}"
     ),
     "chloe_rejected": (
