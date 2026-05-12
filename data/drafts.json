@@ -251,5 +251,60 @@
     "post_text": "v0.30.0-rc11. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-12T19:01:03.422061Z"
+  },
+  {
+    "title": "v2.1.140",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.140",
+    "source": "Claude Code Releases",
+    "score": 15,
+    "should_post": true,
+    "reason": "Builder signal: agent, v2., claude , plugin",
+    "post_text": "v2.1.140. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-12T21:23:54.068349Z"
+  },
+  {
+    "title": "What Parameter Golf taught us about AI-assisted research",
+    "link": "https://openai.com/index/what-parameter-golf-taught-us",
+    "source": "OpenAI News",
+    "score": 7,
+    "should_post": true,
+    "reason": "Builder signal: agent, ai, model, research",
+    "post_text": "What Parameter Golf taught us about AI-assisted research. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-12T21:23:55.334025Z"
+  },
+  {
+    "title": "v0.30.0-rc10",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.30.0-rc10",
+    "source": "Ollama Releases",
+    "score": 0,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "v0.30.0-rc10. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-12T21:23:56.650632Z"
+  },
+  {
+    "title": "v0.30.0-rc9",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.30.0-rc9",
+    "source": "Ollama Releases",
+    "score": 0,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "v0.30.0-rc9. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-12T21:23:56.650679Z"
+  },
+  {
+    "title": "v2.1.138",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.138",
+    "source": "Claude Code Releases",
+    "score": 4,
+    "should_post": true,
+    "reason": "Builder signal: v2.",
+    "post_text": "v2.1.138. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-12T21:23:56.650709Z"
   }
 ]
