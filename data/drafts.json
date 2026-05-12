@@ -1,15 +1,14 @@
-<<<<<<< HEAD
 [
   {
     "title": "v0.23.3",
     "link": "https://github.com/ollama/ollama/releases/tag/v0.23.3-rc1",
     "source": "Ollama Releases",
-    "score": 70,
+    "score": 4,
     "should_post": true,
-    "reason": "Ollama v0.23.3-rc1 is available, offering refined MLX model push and hardened update flows. Direct download/use.",
-    "post_text": "Ollama v0.23.3-rc1 refines MLX model push behavior and hardens update flows. Builders using MLX for local LLMs should test for improved stability and model management.",
-    "source_angle": "Ollama release candidate improves local LLM stability and MLX integration.",
-    "created_at": "2026-05-12T08:35:38.586819Z"
+    "reason": "Builder signal: v0., changelog, model",
+    "post_text": "v0.23.3. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based fallback",
+    "created_at": "2026-05-12T09:01:55.348518Z"
   },
   {
     "title": "v0.30.0-rc15",
@@ -20,7 +19,7 @@
     "reason": "Weak builder signal — no clear release, tool, or actionable output",
     "post_text": "v0.30.0-rc15. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
     "source_angle": "Rule-based fallback",
-    "created_at": "2026-05-12T08:35:40.833422Z"
+    "created_at": "2026-05-12T09:01:56.069990Z"
   },
   {
     "title": "Building Blocks for Foundation Model Training and Inference on AWS",
@@ -31,7 +30,7 @@
     "reason": "Builder signal: inference, ai, model, training",
     "post_text": "Building Blocks for Foundation Model Training and Inference on AWS. Inference and deployment improvements compound fast — check whether the numbers hold under sustained load, not just peak tests.",
     "source_angle": "Rule-based fallback",
-    "created_at": "2026-05-12T08:35:41.086499Z"
+    "created_at": "2026-05-12T09:01:56.209088Z"
   },
   {
     "title": "v0.30.0-rc14: Merge remote-tracking branch 'upstream/main' into llama-runner-phase-0",
@@ -42,7 +41,7 @@
     "reason": "Weak builder signal — no clear release, tool, or actionable output",
     "post_text": "v0.30.0-rc14: Merge remote-tracking branch 'upstream/main' into llama-runner-phase-0. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
     "source_angle": "Rule-based",
-    "created_at": "2026-05-12T08:35:43.373950Z"
+    "created_at": "2026-05-12T09:01:56.776186Z"
   },
   {
     "title": "v0.23.3-rc0: app: harden update flows (#16100)",
@@ -53,7 +52,7 @@
     "reason": "Weak builder signal — no clear release, tool, or actionable output",
     "post_text": "v0.23.3-rc0: app: harden update flows (#16100). The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
     "source_angle": "Rule-based",
-    "created_at": "2026-05-12T08:35:43.374012Z"
+    "created_at": "2026-05-12T09:01:56.776254Z"
   },
   {
     "title": "v2.1.139",
@@ -64,7 +63,7 @@
     "reason": "Builder signal: api, agent, llm, v2.",
     "post_text": "v2.1.139. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
     "source_angle": "Rule-based",
-    "created_at": "2026-05-12T08:35:43.374524Z"
+    "created_at": "2026-05-12T09:01:56.776683Z"
   },
   {
     "title": "langchain-core==1.4.0",
@@ -75,7 +74,7 @@
     "reason": "Builder signal: release, api, agent, llm",
     "post_text": "langchain-core==1.4.0. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
     "source_angle": "Rule-based",
-    "created_at": "2026-05-12T08:35:45.231132Z"
+    "created_at": "2026-05-12T09:01:57.150923Z"
   },
   {
     "title": "v0.30.0-rc13",
@@ -86,184 +85,6 @@
     "reason": "Weak builder signal — no clear release, tool, or actionable output",
     "post_text": "v0.30.0-rc13. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
     "source_angle": "Rule-based",
-    "created_at": "2026-05-12T08:35:47.496848Z"
-  },
-  {
-    "title": "langchain-core==1.4.0",
-    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.4.0",
-    "source": "LangChain Releases",
-    "score": 90,
-    "should_post": true,
-    "reason": "langchain-core 1.4.0 released. Direct, actionable update for builders using LangChain.",
-    "post_text": "langchain-core 1.4.0 is released. Update dependencies to access new API, agent, and LLM features for your AI applications.",
-    "source_angle": "LangChain core library update for builders",
-    "created_at": "2026-05-12T08:45:51.989456Z"
-  },
-  {
-    "title": "v0.101.0",
-    "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.101.0",
-    "source": "Anthropic Python SDK Releases",
-    "score": 15,
-    "should_post": true,
-    "reason": "Builder signal: v0., changelog, claude , sdk",
-    "post_text": "v0.101.0. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
-    "source_angle": "Rule-based fallback",
-    "created_at": "2026-05-12T08:45:54.624101Z"
-  },
-  {
-    "title": "How ChatGPT adoption broadened in early 2026",
-    "link": "https://openai.com/signals/research/2026q1-update",
-    "source": "OpenAI News",
-    "score": 1,
-    "should_post": false,
-    "reason": "Weak builder signal — no clear release, tool, or actionable output",
-    "post_text": "How ChatGPT adoption broadened in early 2026. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
-    "source_angle": "Rule-based fallback",
-    "created_at": "2026-05-12T08:45:56.583584Z"
-  },
-  {
-    "title": "Import AI 456: RSI and economic growth; radical optionality for AI regulation; and a neural computer",
-    "link": "https://jack-clark.net/2026/05/11/import-ai-456-rsi-and-economic-growth-radical-optionality-for-ai-regulation-and-a-neural-computer/",
-    "source": "Import AI (Jack Clark)",
-    "score": 3,
-    "should_post": false,
-    "reason": "Weak builder signal — no clear release, tool, or actionable output",
-    "post_text": "Import AI 456: RSI and economic growth; radical optionality for AI regulation; and a neural computer. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
-    "source_angle": "Rule-based",
-    "created_at": "2026-05-12T08:45:56.583894Z"
-  },
-  {
-    "title": "How enterprises are scaling AI",
-    "link": "https://openai.com/business/guides-and-resources/how-enterprises-are-scaling-ai",
-    "source": "OpenAI News",
-    "score": 1,
-    "should_post": false,
-    "reason": "Weak builder signal — no clear release, tool, or actionable output",
-    "post_text": "How enterprises are scaling AI. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
-    "source_angle": "Rule-based",
-    "created_at": "2026-05-12T08:45:56.583932Z"
-  },
-  {
-    "title": "OpenAI Campus Network: Student club interest form",
-    "link": "https://openai.com/index/openai-campus-network-student-club-interest-form",
-    "source": "OpenAI News",
-    "score": 3,
-    "should_post": false,
-    "reason": "Weak builder signal — no clear release, tool, or actionable output",
-    "post_text": "OpenAI Campus Network: Student club interest form. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
-    "source_angle": "Rule-based",
-    "created_at": "2026-05-12T08:45:56.583973Z"
-  },
-  {
-    "title": "OpenAI launches DeployCo to help businesses build around intelligence",
-    "link": "https://openai.com/index/openai-launches-the-deployment-company",
-    "source": "OpenAI News",
-    "score": 10,
-    "should_post": true,
-    "reason": "Builder signal: launches, deployment, production, ai",
-    "post_text": "OpenAI launches DeployCo to help businesses build around intelligence. Inference and deployment improvements compound fast — check whether the numbers hold under sustained load, not just peak tests.",
-    "source_angle": "Rule-based",
-    "created_at": "2026-05-12T08:45:56.584047Z"
-  },
-  {
-    "title": "v0.30.0-rc12",
-    "link": "https://github.com/ollama/ollama/releases/tag/v0.30.0-rc12",
-    "source": "Ollama Releases",
-    "score": 0,
-    "should_post": false,
-    "reason": "Weak builder signal — no clear release, tool, or actionable output",
-    "post_text": "v0.30.0-rc12. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
-    "source_angle": "Rule-based",
-    "created_at": "2026-05-12T08:45:58.424033Z"
-  },
-  {
-    "title": "langchain-core==1.4.0",
-    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.4.0",
-    "source": "LangChain Releases",
-    "score": 14,
-    "should_post": true,
-    "reason": "Builder signal: release, api, agent, llm",
-    "post_text": "langchain-core==1.4.0. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
-    "source_angle": "Rule-based fallback",
-    "created_at": "2026-05-12T08:49:27.501791Z"
-  },
-  {
-    "title": "OpenAI launches DeployCo to help businesses build around intelligence",
-    "link": "https://openai.com/index/openai-launches-the-deployment-company",
-    "source": "OpenAI News",
-    "score": 10,
-    "should_post": true,
-    "reason": "Builder signal: launches, deployment, production, ai",
-    "post_text": "OpenAI launches DeployCo to help businesses build around intelligence. Inference and deployment improvements compound fast — check whether the numbers hold under sustained load, not just peak tests.",
-    "source_angle": "Rule-based fallback",
-    "created_at": "2026-05-12T08:49:29.443989Z"
-  },
-  {
-    "title": "v0.20.2",
-    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.20.2",
-    "source": "vLLM Releases",
-    "score": 12,
-    "should_post": true,
-    "reason": "Builder signal: release, llm, v0., ai",
-    "post_text": "v0.20.2. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
-    "source_angle": "Rule-based fallback",
-    "created_at": "2026-05-12T08:49:31.158127Z"
-  },
-  {
-    "title": "v0.30.0-rc11",
-    "link": "https://github.com/ollama/ollama/releases/tag/v0.30.0-rc11",
-    "source": "Ollama Releases",
-    "score": 0,
-    "should_post": false,
-    "reason": "Weak builder signal — no clear release, tool, or actionable output",
-    "post_text": "v0.30.0-rc11. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
-    "source_angle": "Rule-based",
-    "created_at": "2026-05-12T08:49:31.737420Z"
-  },
-  {
-    "title": "v0.30.0-rc10",
-    "link": "https://github.com/ollama/ollama/releases/tag/v0.30.0-rc10",
-    "source": "Ollama Releases",
-    "score": 0,
-    "should_post": false,
-    "reason": "Weak builder signal — no clear release, tool, or actionable output",
-    "post_text": "v0.30.0-rc10. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
-    "source_angle": "Rule-based",
-    "created_at": "2026-05-12T08:49:31.737471Z"
-  },
-  {
-    "title": "v0.30.0-rc9",
-    "link": "https://github.com/ollama/ollama/releases/tag/v0.30.0-rc9",
-    "source": "Ollama Releases",
-    "score": 0,
-    "should_post": false,
-    "reason": "Weak builder signal — no clear release, tool, or actionable output",
-    "post_text": "v0.30.0-rc9. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
-    "source_angle": "Rule-based",
-    "created_at": "2026-05-12T08:49:31.737513Z"
-  },
-  {
-    "title": "v2.1.138",
-    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.138",
-    "source": "Claude Code Releases",
-    "score": 4,
-    "should_post": true,
-    "reason": "Builder signal: v2.",
-    "post_text": "v2.1.138. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
-    "source_angle": "Rule-based",
-    "created_at": "2026-05-12T08:49:31.737539Z"
-  },
-  {
-    "title": "v2.1.137",
-    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.137",
-    "source": "Claude Code Releases",
-    "score": 7,
-    "should_post": true,
-    "reason": "Builder signal: v2., extension, ai",
-    "post_text": "v2.1.137. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
-    "source_angle": "Rule-based",
-    "created_at": "2026-05-12T08:49:32.275314Z"
+    "created_at": "2026-05-12T09:01:57.706776Z"
   }
 ]
-=======
->>>>>>> 7fa9867 (fix: Bot Conversations)
