@@ -21,7 +21,7 @@
   },
   {
     "id": "92776d1d23c3",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-05-12T12:25:53.523182Z",
     "score": 4,
     "reason": "Builder signal: v0., changelog, model",
@@ -32,14 +32,15 @@
       "source": "Ollama Releases",
       "link": "https://github.com/ollama/ollama/releases/tag/v0.23.3-rc1"
     },
-    "card_path": null,
+    "card_path": "generated/cards/92776d1d23c3.png",
     "is_llm_mode": false,
     "claire_note": "Aus *Ollama Releases* ist ein starker Kandidat reingekommen: *v0.23.3*.\nRelevanz fuer Builder: Das Thema trifft klar Builder-Interesse (v0., changelog, model).\n_Score: 4_",
-    "chloe_note": "Kurzes Update: *v0.23.3* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um v0., changelog, model. Ich habe es mit 4 Punkten bewertet. Hier der Link: https://github.com/ollama/ollama/releases/tag/v0.23.3-rc1"
+    "chloe_note": "Kurzes Update: *v0.23.3* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um v0., changelog, model. Ich habe es mit 4 Punkten bewertet. Hier der Link: https://github.com/ollama/ollama/releases/tag/v0.23.3-rc1",
+    "published_at": "2026-05-12T12:27:35.365690Z"
   },
   {
     "id": "a4e4438cc1b1",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-05-12T12:25:54.568889Z",
     "score": 8,
     "reason": "Builder signal: inference, ai, model, training",
@@ -50,14 +51,15 @@
       "source": "Hugging Face Blog",
       "link": "https://huggingface.co/blog/amazon/foundation-model-building-blocks"
     },
-    "card_path": null,
+    "card_path": "generated/cards/a4e4438cc1b1.png",
     "is_llm_mode": false,
     "claire_note": "Aus *Hugging Face Blog* ist ein starker Kandidat reingekommen: *Building Blocks for Foundation Model Training and Inference on AWS*.\nRelevanz fuer Builder: Das Thema trifft klar Builder-Interesse (inference, ai, model, training).\n_Score: 8_",
-    "chloe_note": "*Building Blocks for Foundation Model Training and Inference on AWS* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch inference, ai, model, training. Bewertung: 8. Quelle: https://huggingface.co/blog/amazon/foundation-model-building-blocks"
+    "chloe_note": "*Building Blocks for Foundation Model Training and Inference on AWS* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch inference, ai, model, training. Bewertung: 8. Quelle: https://huggingface.co/blog/amazon/foundation-model-building-blocks",
+    "published_at": "2026-05-12T12:27:35.365690Z"
   },
   {
     "id": "17fc35cb6830",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-05-12T12:25:55.208518Z",
     "score": 32,
     "reason": "Builder signal: api, agent, llm, v2.",
@@ -68,9 +70,10 @@
       "source": "Claude Code Releases",
       "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.139"
     },
-    "card_path": null,
+    "card_path": "generated/cards/17fc35cb6830.png",
     "is_llm_mode": false,
     "claire_note": "Aus *Claude Code Releases* ist ein starker Kandidat reingekommen: *v2.1.139*.\nRelevanz fuer Builder: Das Thema trifft klar Builder-Interesse (api, agent, llm, v2.).\n_Score: 32_",
-    "chloe_note": "Hey, *v2.1.139* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen api, agent, llm, v2. Score aktuell: 32. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.139"
+    "chloe_note": "Hey, *v2.1.139* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen api, agent, llm, v2. Score aktuell: 32. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.139",
+    "published_at": "2026-05-12T12:27:35.365690Z"
   }
 ]
