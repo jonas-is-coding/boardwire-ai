@@ -2,11 +2,29 @@
 
 ## Pending: 3
 
+### v2.1.139
+ID: `1768961cd39c`
+Score: `32`
+Source: `Claude Code Releases`
+Created: `2026-05-12T11:48:31.133400Z`
+
+Post:
+> v2.1.139. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.
+
+Source:
+https://github.com/anthropics/claude-code/releases/tag/v2.1.139
+
+Approve:
+`python -m src.main --approve-review 1768961cd39c`
+
+Reject:
+`python -m src.main --reject-review 1768961cd39c`
+
 ### Building Blocks for Foundation Model Training and Inference on AWS
-ID: `60380b8ffe33`
+ID: `c19b77f13570`
 Score: `8`
 Source: `Hugging Face Blog`
-Created: `2026-05-12T11:40:50.771802Z`
+Created: `2026-05-12T11:48:30.277554Z`
 
 Post:
 > Building Blocks for Foundation Model Training and Inference on AWS. Inference and deployment improvements compound fast — check whether the numbers hold under sustained load, not just peak tests.
@@ -15,43 +33,25 @@ Source:
 https://huggingface.co/blog/amazon/foundation-model-building-blocks
 
 Approve:
-`python -m src.main --approve-review 60380b8ffe33`
+`python -m src.main --approve-review c19b77f13570`
 
 Reject:
-`python -m src.main --reject-review 60380b8ffe33`
-
-### v0.30.0-rc15
-ID: `bc6f6d8648ac`
-Score: `90`
-Source: `Ollama Releases`
-Created: `2026-05-12T11:40:49.382101Z`
-
-Post:
-> Ollama v0.30.0-rc15 adds Windows iGPU detection for Vulkan. This could improve local LLM performance and reliability for developers running Ollama on Windows machines with integrated GPUs.
-
-Source:
-https://github.com/ollama/ollama/releases/tag/v0.30.0-rc15
-
-Approve:
-`python -m src.main --approve-review bc6f6d8648ac`
-
-Reject:
-`python -m src.main --reject-review bc6f6d8648ac`
+`python -m src.main --reject-review c19b77f13570`
 
 ### v0.23.3
-ID: `bf994aaa35e0`
-Score: `85`
+ID: `9e4f94ec150e`
+Score: `4`
 Source: `Ollama Releases`
-Created: `2026-05-12T11:40:41.129968Z`
+Created: `2026-05-12T11:48:28.779731Z`
 
 Post:
-> Ollama v0.23.3-rc1 ships with refined MLX model push behavior. Builders using MLX for local LLM development can test improved model sharing and deployment workflows.
+> v0.23.3. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.
 
 Source:
 https://github.com/ollama/ollama/releases/tag/v0.23.3-rc1
 
 Approve:
-`python -m src.main --approve-review bf994aaa35e0`
+`python -m src.main --approve-review 9e4f94ec150e`
 
 Reject:
-`python -m src.main --reject-review bf994aaa35e0`
+`python -m src.main --reject-review 9e4f94ec150e`
