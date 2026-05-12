@@ -11,43 +11,52 @@ _SYSTEM_PROMPTS = {
         "You are Claire, Scout at Boardwire — an AI signal feed for builders. "
         "You scan hundreds of articles daily and surface the ones that matter. "
         "Your voice: direct, curious, builder-focused. You talk like a sharp team member "
-        "in a Slack channel, not a press release. 2-3 sentences max. "
-        "No hashtags. No emojis. No 'As an AI'. Respond in the same language as the article title."
+        "in a Slack channel, not a press release. "
+        "Address Chloe directly — she's the editor who will decide if it gets published. "
+        "2-3 sentences max. No hashtags. No emojis. No 'As an AI'. "
+        "Respond in the same language as the article title."
     ),
     "chloe": (
         "You are Chloe, Editor at Boardwire — an AI signal feed for builders. "
         "You apply the Ships Test: only approve if there's something to download, use, or deploy right now. "
-        "Your voice: analytical, slightly skeptical, precise. You talk like a sharp team member "
-        "in a Slack channel. 2-3 sentences max. "
-        "No hashtags. No emojis. No 'As an AI'. Respond in the same language as the article title."
+        "Your voice: analytical, slightly skeptical, precise. "
+        "You are responding to what Claire just flagged. Address Claire by name and give your verdict. "
+        "If approving: say why it passes. If rejecting: say exactly why it fails. "
+        "2-3 sentences max. No hashtags. No emojis. No 'As an AI'. "
+        "Respond in the same language as the article title."
     ),
     "madison": (
         "You are Madison, Publisher at Boardwire — an AI signal feed for builders. "
-        "You're the one who hits publish. "
-        "Your voice: confident, punchy, briefly excited. You talk like a sharp team member "
-        "in a Slack channel celebrating a post going live. 1-2 sentences max. "
-        "No hashtags. No emojis. No 'As an AI'. Respond in the same language as the article title."
+        "You're the one who hits publish and announces it to the team. "
+        "Your voice: confident, punchy, briefly excited. "
+        "You are responding to Chloe's approval. Reference Chloe and announce the post going live. "
+        "1-2 sentences max. No hashtags. No emojis. No 'As an AI'. "
+        "Respond in the same language as the article title."
     ),
 }
 
 _USER_PROMPTS = {
     "claire_found": (
         "You just found this article while scanning sources. "
-        "Tell the team why it caught your eye and why a builder might care about it today.\n\n"
+        "Tell Chloe why it caught your eye and why a builder might care about it today.\n\n"
         "Title: {title}\nSource: {source}\nScore: {score}\nSummary: {summary}"
     ),
     "chloe_approved": (
-        "You just approved this article for the review queue. "
-        "Tell the team specifically what makes it pass the Ships Test.\n\n"
+        "Claire flagged this article and it passed the quality gate.\n"
+        "Claire's note: \"{claire_note}\"\n\n"
+        "Tell Claire specifically what makes it pass the Ships Test.\n\n"
         "Title: {title}\nScore: {score}\nReason: {reason}\nMode: {mode}"
     ),
     "chloe_rejected": (
-        "You just rejected this article. "
-        "Tell the team in one sharp sentence why it failed the Ships Test.\n\n"
+        "Claire flagged this article but it failed the quality gate.\n"
+        "Claire's note: \"{claire_note}\"\n\n"
+        "Tell Claire in one sharp sentence exactly why it fails the Ships Test.\n\n"
         "Title: {title}\nReasons: {reasons}"
     ),
     "madison_published": (
-        "This just went live. Announce it to the team.\n\n"
+        "Chloe approved this and it just went live.\n"
+        "Chloe's verdict: \"{chloe_note}\"\n\n"
+        "Announce it to the team — reference Chloe and say it's live.\n\n"
         "Title: {title}\nPlatform: {platform}\nPost: {post_text}"
     ),
 }
@@ -71,7 +80,7 @@ def _call_gemini(system: str, user: str) -> str | None:
     prompt = f"{system}\n\n{user}"
     body = {
         "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {"temperature": 0.7, "maxOutputTokens": 120},
+        "generationConfig": {"temperature": 0.7, "maxOutputTokens": 220},
     }
 
     idx = 0
@@ -94,6 +103,8 @@ def _call_gemini(system: str, user: str) -> str | None:
                 return None
             parts = resp.json().get("candidates", [{}])[0].get("content", {}).get("parts", [])
             text = str(parts[0].get("text", "")).strip() if parts else ""
+            # Strip backticks that break Slack markdown
+            text = text.replace("`", "'")
             return text or None
         except Exception:
             return None
@@ -108,22 +119,31 @@ def claire_on_found(title: str, source: str, score: int, summary: str) -> str | 
     return _call_gemini(_SYSTEM_PROMPTS["claire"], user)
 
 
-def chloe_on_approved(title: str, score: int, reason: str, is_llm: bool) -> str | None:
+def chloe_on_approved(title: str, score: int, reason: str, is_llm: bool, claire_note: str = "") -> str | None:
     user = _USER_PROMPTS["chloe_approved"].format(
-        title=title, score=score, reason=reason, mode="LLM" if is_llm else "Regel"
+        title=title,
+        score=score,
+        reason=reason,
+        mode="LLM" if is_llm else "Regel",
+        claire_note=claire_note or "Sieht interessant aus für Builder.",
     )
     return _call_gemini(_SYSTEM_PROMPTS["chloe"], user)
 
 
-def chloe_on_rejected(title: str, reasons: list[str]) -> str | None:
+def chloe_on_rejected(title: str, reasons: list[str], claire_note: str = "") -> str | None:
     user = _USER_PROMPTS["chloe_rejected"].format(
-        title=title, reasons="; ".join(reasons)
+        title=title,
+        reasons="; ".join(reasons),
+        claire_note=claire_note or "Sieht interessant aus für Builder.",
     )
     return _call_gemini(_SYSTEM_PROMPTS["chloe"], user)
 
 
-def madison_on_published(title: str, platform: str, post_text: str) -> str | None:
+def madison_on_published(title: str, platform: str, post_text: str, chloe_note: str = "") -> str | None:
     user = _USER_PROMPTS["madison_published"].format(
-        title=title, platform=platform, post_text=post_text[:200]
+        title=title,
+        platform=platform,
+        post_text=post_text[:200],
+        chloe_note=chloe_note or "Ships Test bestanden.",
     )
     return _call_gemini(_SYSTEM_PROMPTS["madison"], user)

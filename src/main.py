@@ -707,6 +707,7 @@ def _publish_approved(args, logger) -> int:
             post_text=post_text,
             url=result.url,
             with_image=bool(abs_card_path),
+            chloe_note=item.get("chloe_note", ""),
         )
 
     JsonStore.save(REVIEW_QUEUE_PATH, queue)
@@ -972,6 +973,8 @@ def run(argv: list[str] | None = None) -> int:
     llm_evaluated = 0
     gemini_evaluated = 0
     llm_mode_by_link: dict[str, bool] = {}
+    _claire_notes: dict[str, str] = {}  # link → Claire's Slack commentary
+    _chloe_notes: dict[str, str] = {}   # link → Chloe's Slack commentary
 
     notify.run_started(
         sources_count=len(sources),
@@ -1022,7 +1025,7 @@ def run(argv: list[str] | None = None) -> int:
         drafts_data.append(asdict(draft))
         created_drafts.append(draft)
         if evaluation.should_post:
-            notify.pam_found_candidate(
+            _claire_notes[item.link] = notify.pam_found_candidate(
                 title=item.title,
                 source=item.source,
                 link=item.link,
@@ -1150,13 +1153,16 @@ def run(argv: list[str] | None = None) -> int:
                     quality_pass += 1
                     remaining_today -= 1
                     logger.info("Quality pass: %s", item.get("id"))
-                    notify.michael_approved(
+                    chloe_note = notify.michael_approved(
                         title=source_title,
                         link=source_link,
                         score=score_val,
                         reason=item.get("reason", ""),
                         is_llm=is_llm_mode,
+                        claire_note=_claire_notes.get(source_link, ""),
                     )
+                    _chloe_notes[source_link] = chloe_note
+                    item["chloe_note"] = chloe_note
             else:
                 quality_reject += 1
                 logger.warning("Quality reject: %s", "; ".join(quality.reasons))
@@ -1164,6 +1170,7 @@ def run(argv: list[str] | None = None) -> int:
                     title=source_title,
                     link=source_link,
                     reasons=quality.reasons,
+                    claire_note=_claire_notes.get(source_link, ""),
                 )
                 if is_reprocessed_deferred:
                     linked_deferred["status"] = "rejected"

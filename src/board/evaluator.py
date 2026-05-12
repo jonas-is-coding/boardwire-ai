@@ -66,6 +66,10 @@ _LOW_SIGNAL_PENALTY = {
     "might": -1,
     "could eventually": -2,
     "in the future": -2,
+    # Release candidates and internal merges are not worth posting
+    "-rc": -5,
+    "merge remote-tracking": -10,
+    "merge branch": -5,
 }
 
 
