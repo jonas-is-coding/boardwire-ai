@@ -1,6 +1,24 @@
 # Boardwire Review Queue
 
-## Pending: 4
+## Pending: 5
+
+### Where Reliability Lives in Vision-Language Models: A Mechanistic Study of Attention, Hidden States, and Causal Circuits
+ID: `7eceaaf9f3bb`
+Score: `5`
+Source: `arXiv cs.AI`
+Created: `2026-05-12T04:40:05.467064Z`
+
+Post:
+> Where Reliability Lives in Vision-Language Models: A Mechanistic Study of Attention, Hidden States, and Causal Circuits. The key signal is whether teams can inspect, adapt, and run these models without black-box constraints.
+
+Source:
+https://arxiv.org/abs/2605.08200
+
+Approve:
+`python -m src.main --approve-review 7eceaaf9f3bb`
+
+Reject:
+`python -m src.main --reject-review 7eceaaf9f3bb`
 
 ### SREGym: A Live Benchmark for AI SRE Agents with High-Fidelity Failure Scenarios
 ID: `cc6a89ba781d`

@@ -631,5 +631,101 @@
     },
     "card_path": null,
     "is_llm_mode": false
+  },
+  {
+    "id": "9851a0b209e3",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-12T04:40:05.467160Z",
+    "score": 10,
+    "reason": "Matched keywords: ai, model, research, llm",
+    "proposed_post": "Spatial Priming Outperforms Semantic Prompting: A Grid-Based Approach to Improving LLM Accuracy on Chart Data Extraction. The useful part is the method and evidence quality, not just headline claims from a single result.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Spatial Priming Outperforms Semantic Prompting: A Grid-Based Approach to Improving LLM Accuracy on Chart Data Extraction",
+      "source": "arXiv cs.AI",
+      "link": "https://arxiv.org/abs/2605.08220"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-12T04:40:05.614934Z",
+    "defer_count": 1,
+    "original_score": 10,
+    "original_reason": "Matched keywords: ai, model, research, llm"
+  },
+  {
+    "id": "fc89b725b5b0",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-12T04:40:05.467221Z",
+    "score": 7,
+    "reason": "Matched keywords: ai, model, benchmark",
+    "proposed_post": "Auto-Rubric as Reward: From Implicit Preferences to Explicit Multimodal Generative Criteria. Benchmark movement matters most when evaluation setup is transparent and results transfer to production tasks.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Auto-Rubric as Reward: From Implicit Preferences to Explicit Multimodal Generative Criteria",
+      "source": "arXiv cs.AI",
+      "link": "https://arxiv.org/abs/2605.08354"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-12T04:40:05.682682Z",
+    "defer_count": 1,
+    "original_score": 7,
+    "original_reason": "Matched keywords: ai, model, benchmark"
+  },
+  {
+    "id": "470af8364c21",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-12T04:40:05.467278Z",
+    "score": 5,
+    "reason": "Matched keywords: ai, model",
+    "proposed_post": "Embeddings for Preferences, Not Semantics. The useful part is the method and evidence quality, not just headline claims from a single result.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Embeddings for Preferences, Not Semantics",
+      "source": "arXiv cs.AI",
+      "link": "https://arxiv.org/abs/2605.08360"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-12T04:40:05.743322Z",
+    "defer_count": 1,
+    "original_score": 5,
+    "original_reason": "Matched keywords: ai, model"
+  },
+  {
+    "id": "52b319f9c72d",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-12T04:40:05.467336Z",
+    "score": 7,
+    "reason": "Matched keywords: ai, model, research",
+    "proposed_post": "On Distinguishing Capability Elicitation from Capability Creation in Post-Training: A Free-Energy Perspective. The useful part is the method and evidence quality, not just headline claims from a single result.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "On Distinguishing Capability Elicitation from Capability Creation in Post-Training: A Free-Energy Perspective",
+      "source": "arXiv cs.AI",
+      "link": "https://arxiv.org/abs/2605.08368"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-12T04:40:05.812442Z",
+    "defer_count": 1,
+    "original_score": 7,
+    "original_reason": "Matched keywords: ai, model, research"
+  },
+  {
+    "id": "7eceaaf9f3bb",
+    "status": "pending_review",
+    "created_at": "2026-05-12T04:40:05.467064Z",
+    "score": 5,
+    "reason": "Matched keywords: ai, model",
+    "proposed_post": "Where Reliability Lives in Vision-Language Models: A Mechanistic Study of Attention, Hidden States, and Causal Circuits. The key signal is whether teams can inspect, adapt, and run these models without black-box constraints.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Where Reliability Lives in Vision-Language Models: A Mechanistic Study of Attention, Hidden States, and Causal Circuits",
+      "source": "arXiv cs.AI",
+      "link": "https://arxiv.org/abs/2605.08200"
+    },
+    "card_path": null,
+    "is_llm_mode": false
   }
 ]
