@@ -44,6 +44,17 @@ VALID_REVIEW_STATUSES = {"pending_review", "approved", "rejected", "published_dr
 VALID_PUBLISHERS = {"dry_run", "bluesky"}
 
 
+def _compose_sarah_post(package: dict[str, str | list[str]]) -> str:
+    title = str(package.get("title", "")).strip()
+    subtitle = str(package.get("subtitle", "")).strip()
+    description = str(package.get("description", "")).strip()
+    raw_tags = package.get("hashtags", [])
+    tags = [str(t).strip() for t in raw_tags] if isinstance(raw_tags, list) else []
+    tags_line = " ".join(t for t in tags if t)[:90]
+    post = f"{title}\n{subtitle}\n\n{description}\n\n{tags_line}".strip()
+    return post[:280]
+
+
 def _load_sources() -> list[Source]:
     raw = JsonStore.load(SOURCES_PATH, default=[])
     return [
@@ -584,6 +595,8 @@ def _build_image_alt_text(item: dict) -> str:
 
 
 def _publish_approved(args, logger) -> int:
+    from src.notifications import persona_voice as voice
+
     queue = JsonStore.load(REVIEW_QUEUE_PATH, default=[])
     published = JsonStore.load(PUBLISHED_POSTS_PATH, default=[])
     quality_config = _load_quality_config()
@@ -623,7 +636,24 @@ def _publish_approved(args, logger) -> int:
             item["status"] = "published_dry_run"
             continue
 
-        post_text = str(item.get("proposed_post") or "").strip() or _build_publish_caption(item)
+        source_summary = str(source_item.get("summary", "")).strip()
+        base_post_text = str(item.get("proposed_post") or "").strip() or _build_publish_caption(item)
+        sarah_package = voice.sarah_build_publish_package(
+            title=str(source_item.get("title", "Untitled")),
+            source=str(source_item.get("source", "Unknown Source")),
+            reason=str(item.get("reason", "")),
+            score=int(item.get("score") or 0),
+            claire_note=str(item.get("claire_note", "")),
+            chloe_note=str(item.get("chloe_note", "")),
+            post_text=base_post_text,
+            summary=source_summary,
+        )
+        if sarah_package:
+            item["sarah_package"] = sarah_package
+            post_text = _compose_sarah_post(sarah_package)
+            item["proposed_post"] = post_text
+        else:
+            post_text = base_post_text
         card_path = item.get("card_path")
         if selected_platform == "bluesky":
             logger.info("Image required for Bluesky: %s", rid)
@@ -1183,6 +1213,7 @@ def run(argv: list[str] | None = None) -> int:
                         claire_note=_claire_notes.get(source_link, ""),
                     )
                     _chloe_notes[source_link] = chloe_note
+                    item["claire_note"] = _claire_notes.get(source_link, "")
                     item["chloe_note"] = chloe_note
             else:
                 quality_reject += 1

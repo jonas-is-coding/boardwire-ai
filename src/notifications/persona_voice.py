@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import os
 
 import requests
@@ -42,6 +43,14 @@ _SYSTEM_PROMPTS = {
         "2) Dann Linkzeile im Format '<Plattform>: <URL-oder-hinweis>'.\n"
         "Keine Hashtags. Keine Emojis. Kein 'Als KI'."
     ),
+    "sarah": (
+        "You are Sarah, Head of Editorial Packaging at Boardwire. "
+        "Your job is to turn an approved AI news item into a sharp social post package for builders. "
+        "Write concise, concrete copy with zero hype and no filler. "
+        "Output STRICT JSON only with keys: title, subtitle, description, hashtags. "
+        "Rules: title <= 70 chars, subtitle <= 110 chars, description <= 180 chars, "
+        "hashtags must be 2-4 items and each must start with #."
+    ),
 }
 
 _USER_PROMPTS = {
@@ -68,6 +77,17 @@ _USER_PROMPTS = {
         "Chloe's verdict: \"{chloe_note}\"\n\n"
         "Announce it to the team — reference Chloe and say it's live.\n\n"
         "Title: {title}\nPlatform: {platform}\nPost: {post_text}"
+    ),
+    "sarah_package": (
+        "Build a publish package from this approved item.\n\n"
+        "Title: {title}\n"
+        "Source: {source}\n"
+        "Reason: {reason}\n"
+        "Score: {score}\n"
+        "Claire note: {claire_note}\n"
+        "Chloe note: {chloe_note}\n"
+        "Current post draft: {post_text}\n"
+        "Summary: {summary}"
     ),
 }
 
@@ -167,3 +187,58 @@ def madison_on_published(title: str, platform: str, post_text: str, chloe_note: 
         chloe_note=chloe_note or "Ships Test bestanden.",
     )
     return _call_gemini(_SYSTEM_PROMPTS["madison"], user)
+
+
+def sarah_build_publish_package(
+    title: str,
+    source: str,
+    reason: str,
+    score: int,
+    claire_note: str,
+    chloe_note: str,
+    post_text: str,
+    summary: str,
+) -> dict[str, str | list[str]] | None:
+    user = _USER_PROMPTS["sarah_package"].format(
+        title=title,
+        source=source,
+        reason=reason[:200],
+        score=score,
+        claire_note=claire_note[:400],
+        chloe_note=chloe_note[:400],
+        post_text=post_text[:280],
+        summary=summary[:500],
+    )
+    raw = _call_gemini(_SYSTEM_PROMPTS["sarah"], user)
+    if not raw:
+        return None
+    try:
+        data = json.loads(raw)
+    except Exception:
+        return None
+
+    title_val = str(data.get("title", "")).strip()[:70]
+    subtitle_val = str(data.get("subtitle", "")).strip()[:110]
+    description_val = str(data.get("description", "")).strip()[:180]
+    raw_hashtags = data.get("hashtags", [])
+    if not isinstance(raw_hashtags, list):
+        return None
+    hashtags: list[str] = []
+    for tag in raw_hashtags:
+        t = str(tag).strip()
+        if not t:
+            continue
+        if not t.startswith("#"):
+            t = f"#{t.lstrip('#')}"
+        t = t.replace(" ", "")
+        hashtags.append(t)
+    hashtags = hashtags[:4]
+    if not (title_val and subtitle_val and description_val and 2 <= len(hashtags) <= 4):
+        return None
+
+    return {
+        "title": title_val,
+        "subtitle": subtitle_val,
+        "description": description_val,
+        "hashtags": hashtags,
+    }
