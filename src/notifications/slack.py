@@ -83,6 +83,11 @@ def claire_found_candidate(title: str, source: str, link: str, score: int) -> st
     return text
 
 
+def claire_post_deferred(title: str, link: str, text: str) -> None:
+    """Post a pre-generated Claire message (for interleaved ordering)."""
+    _send("claire", text, color="yellow", title=title, title_link=link)
+
+
 def michael_approved(title: str, link: str, score: int, reason: str, is_llm: bool, claire_note: str = "") -> str:
     return chloe_approved(title, link, score, reason, is_llm, claire_note)
 

@@ -973,8 +973,9 @@ def run(argv: list[str] | None = None) -> int:
     llm_evaluated = 0
     gemini_evaluated = 0
     llm_mode_by_link: dict[str, bool] = {}
-    _claire_notes: dict[str, str] = {}  # link → Claire's Slack commentary
-    _chloe_notes: dict[str, str] = {}   # link → Chloe's Slack commentary
+    _claire_notes: dict[str, str] = {}          # link → Claire's LLM text (for Chloe context)
+    _chloe_notes: dict[str, str] = {}           # link → Chloe's LLM text (for Madison context)
+    _pending_claire: dict[str, tuple] = {}      # link → (title, link) — deferred until Chloe fires
 
     notify.run_started(
         sources_count=len(sources),
@@ -1025,12 +1026,13 @@ def run(argv: list[str] | None = None) -> int:
         drafts_data.append(asdict(draft))
         created_drafts.append(draft)
         if evaluation.should_post:
-            _claire_notes[item.link] = notify.pam_found_candidate(
-                title=item.title,
-                source=item.source,
-                link=item.link,
-                score=evaluation.score,
-            )
+            # Generate Claire's text now (needed as context for Chloe) but defer posting
+            # so Claire+Chloe messages appear interleaved per article in Slack.
+            from src.notifications import persona_voice as _pv
+            claire_text = _pv.claire_on_found(item.title, item.source, evaluation.score, item.summary[:300])
+            claire_text = claire_text or f"Neuer Kandidat aus *{item.source}* · Score *{evaluation.score}*"
+            _claire_notes[item.link] = claire_text
+            _pending_claire[item.link] = (item.title, item.link)
         processed_links.append(item.link)
         if deferred_queue_item is not None:
             # keep reference for post-quality status transitions
@@ -1153,6 +1155,10 @@ def run(argv: list[str] | None = None) -> int:
                     quality_pass += 1
                     remaining_today -= 1
                     logger.info("Quality pass: %s", item.get("id"))
+                    # Send Claire's deferred notification first — then Chloe's immediately after
+                    if source_link in _pending_claire:
+                        c_title, c_link = _pending_claire.pop(source_link)
+                        notify.claire_post_deferred(c_title, c_link, _claire_notes.get(source_link, ""))
                     chloe_note = notify.michael_approved(
                         title=source_title,
                         link=source_link,
@@ -1166,6 +1172,10 @@ def run(argv: list[str] | None = None) -> int:
             else:
                 quality_reject += 1
                 logger.warning("Quality reject: %s", "; ".join(quality.reasons))
+                # Send Claire's deferred notification first — then Chloe's rejection
+                if source_link in _pending_claire:
+                    c_title, c_link = _pending_claire.pop(source_link)
+                    notify.claire_post_deferred(c_title, c_link, _claire_notes.get(source_link, ""))
                 notify.michael_rejected(
                     title=source_title,
                     link=source_link,
