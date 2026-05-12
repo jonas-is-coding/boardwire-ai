@@ -2,11 +2,29 @@
 
 ## Pending: 3
 
+### v2.1.139
+ID: `8d1386b7b820`
+Score: `32`
+Source: `Claude Code Releases`
+Created: `2026-05-12T08:35:43.374524Z`
+
+Post:
+> v2.1.139. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.
+
+Source:
+https://github.com/anthropics/claude-code/releases/tag/v2.1.139
+
+Approve:
+`python -m src.main --approve-review 8d1386b7b820`
+
+Reject:
+`python -m src.main --reject-review 8d1386b7b820`
+
 ### Building Blocks for Foundation Model Training and Inference on AWS
-ID: `b29bbdd634b0`
+ID: `ff50f0d5b16e`
 Score: `8`
 Source: `Hugging Face Blog`
-Created: `2026-05-12T07:21:48.949595Z`
+Created: `2026-05-12T08:35:41.086499Z`
 
 Post:
 > Building Blocks for Foundation Model Training and Inference on AWS. Inference and deployment improvements compound fast — check whether the numbers hold under sustained load, not just peak tests.
@@ -15,43 +33,25 @@ Source:
 https://huggingface.co/blog/amazon/foundation-model-building-blocks
 
 Approve:
-`python -m src.main --approve-review b29bbdd634b0`
+`python -m src.main --approve-review ff50f0d5b16e`
 
 Reject:
-`python -m src.main --reject-review b29bbdd634b0`
-
-### v0.30.0-rc15
-ID: `8f679cddda27`
-Score: `4`
-Source: `Ollama Releases`
-Created: `2026-05-12T07:21:37.832011Z`
-
-Post:
-> v0.30.0-rc15. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.
-
-Source:
-https://github.com/ollama/ollama/releases/tag/v0.30.0-rc15
-
-Approve:
-`python -m src.main --approve-review 8f679cddda27`
-
-Reject:
-`python -m src.main --reject-review 8f679cddda27`
+`python -m src.main --reject-review ff50f0d5b16e`
 
 ### v0.23.3
-ID: `76031b2e9ac8`
-Score: `9`
+ID: `bb56e2cb5868`
+Score: `70`
 Source: `Ollama Releases`
-Created: `2026-05-12T07:21:35.863425Z`
+Created: `2026-05-12T08:35:38.586819Z`
 
 Post:
-> v0.23.3. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.
+> Ollama v0.23.3-rc1 refines MLX model push behavior and hardens update flows. Builders using MLX for local LLMs should test for improved stability and model management.
 
 Source:
 https://github.com/ollama/ollama/releases/tag/v0.23.3-rc1
 
 Approve:
-`python -m src.main --approve-review 76031b2e9ac8`
+`python -m src.main --approve-review bb56e2cb5868`
 
 Reject:
-`python -m src.main --reject-review 76031b2e9ac8`
+`python -m src.main --reject-review bb56e2cb5868`

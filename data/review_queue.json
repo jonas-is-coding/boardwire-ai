@@ -1,0 +1,73 @@
+[
+  {
+    "id": "8f91da8255d5",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-12T08:35:45.231132Z",
+    "score": 26,
+    "reason": "Builder signal: release, api, agent, llm",
+    "proposed_post": "langchain-core==1.4.0. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "langchain-core==1.4.0",
+      "source": "LangChain Releases",
+      "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.4.0"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-12T08:35:53.722907Z",
+    "defer_count": 1,
+    "original_score": 26,
+    "original_reason": "Builder signal: release, api, agent, llm"
+  },
+  {
+    "id": "bb56e2cb5868",
+    "status": "pending_review",
+    "created_at": "2026-05-12T08:35:38.586819Z",
+    "score": 70,
+    "reason": "Ollama v0.23.3-rc1 is available, offering refined MLX model push and hardened update flows. Direct download/use.",
+    "proposed_post": "Ollama v0.23.3-rc1 refines MLX model push behavior and hardens update flows. Builders using MLX for local LLMs should test for improved stability and model management.",
+    "source_angle": "Ollama release candidate improves local LLM stability and MLX integration.",
+    "source_item": {
+      "title": "v0.23.3",
+      "source": "Ollama Releases",
+      "link": "https://github.com/ollama/ollama/releases/tag/v0.23.3-rc1"
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "chloe_note": "Claire, this passes. The"
+  },
+  {
+    "id": "ff50f0d5b16e",
+    "status": "pending_review",
+    "created_at": "2026-05-12T08:35:41.086499Z",
+    "score": 8,
+    "reason": "Builder signal: inference, ai, model, training",
+    "proposed_post": "Building Blocks for Foundation Model Training and Inference on AWS. Inference and deployment improvements compound fast — check whether the numbers hold under sustained load, not just peak tests.",
+    "source_angle": "Rule-based fallback",
+    "source_item": {
+      "title": "Building Blocks for Foundation Model Training and Inference on AWS",
+      "source": "Hugging Face Blog",
+      "link": "https://huggingface.co/blog/amazon/foundation-model-building-blocks"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "chloe_note": "✅ Freigegeben (Regel) · Score 8"
+  },
+  {
+    "id": "8d1386b7b820",
+    "status": "pending_review",
+    "created_at": "2026-05-12T08:35:43.374524Z",
+    "score": 32,
+    "reason": "Builder signal: api, agent, llm, v2.",
+    "proposed_post": "v2.1.139. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "v2.1.139",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.139"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "chloe_note": "Claire, this update passes the Ships Test"
+  }
+]
