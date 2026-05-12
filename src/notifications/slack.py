@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import os
 import re
+import hashlib
 from typing import Literal
 
 import requests
@@ -32,6 +33,19 @@ def _clean_message(text: str, recipient_name: str | None = None) -> str:
             continue
         cleaned_lines.append(line)
     cleaned = "\n".join(cleaned_lines).strip()
+    return cleaned
+
+
+def _variant_seed(*parts: str) -> int:
+    key = "|".join(parts).encode("utf-8")
+    return int(hashlib.sha1(key).hexdigest(), 16)
+
+
+def _normalize_reason(reason: str) -> str:
+    cleaned = reason.strip()
+    if cleaned.lower().startswith("builder signal:"):
+        cleaned = cleaned.split(":", 1)[1].strip()
+    cleaned = cleaned.rstrip(".")
     return cleaned
 
 
@@ -75,12 +89,16 @@ def pam_found_candidate(title: str, source: str, link: str, score: int) -> str:
 
 def claire_found_candidate(title: str, source: str, link: str, score: int) -> str:
     llm_text = voice.claire_on_found(title, source, score, summary="")
-    text = llm_text or (
-        f"Ich habe einen starken Kandidaten aus *{source}* gefunden: *{title}*.\n"
-        f"Der Builder-Impact ist direkt nutzbar, weil Teams damit heute etwas deployen oder verbessern können.\n"
-        f"Link: {link}\n"
-        f"_Score: {score}_"
-    )
+    if llm_text:
+        text = llm_text
+    else:
+        seed = _variant_seed("claire", title, source)
+        variants = [
+            f"Aus *{source}* ist ein spannender Kandidat reingekommen: *{title}*.\nDas ist fuer Builder direkt relevant, weil sich daraus kurzfristig etwas Praktisches bauen oder testen laesst.\n_Score: {score}_",
+            f"Gerade aus *{source}* entdeckt: *{title}*.\nBuilder-Relevanz ist hoch, weil das Thema konkrete Auswirkungen auf Tooling, Deployments oder Modellbetrieb hat.\n_Score: {score}_",
+            f"Neuer Fund aus *{source}*: *{title}*.\nFuer Builder interessant, weil es eher um nutzbare Praxis als um reine Ankuendigung geht.\n_Score: {score}_",
+        ]
+        text = variants[seed % len(variants)]
     text = _clean_message(text, recipient_name="Chloe")
     _post("claire", text)
     return text
@@ -96,12 +114,17 @@ def michael_approved(title: str, link: str, score: int, reason: str, is_llm: boo
 
 def chloe_approved(title: str, link: str, score: int, reason: str, is_llm: bool, claire_note: str = "") -> str:
     llm_text = voice.madison_on_approved(title, link, score, reason, is_llm, claire_note)
-    text = llm_text or (
-        f"Hey, *{title}* habe ich gerade fuer den Publish-Queue freigegeben. "
-        f"Das Release ist echt gut fuer Builder geeignet, vor allem wegen {reason}. "
-        f"Insgesamt habe ich das Ganze mit einem Score von {score} bewertet. "
-        f"Hier der Link: {link}"
-    )
+    if llm_text:
+        text = llm_text
+    else:
+        seed = _variant_seed("madison", title, reason)
+        r = _normalize_reason(reason)
+        variants = [
+            f"Hey, *{title}* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen {r}. Score aktuell: {score}. Link: {link}",
+            f"Kurzes Update: *{title}* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um {r}. Ich habe es mit {score} Punkten bewertet. Hier der Link: {link}",
+            f"*{title}* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch {r}. Bewertung: {score}. Quelle: {link}",
+        ]
+        text = variants[seed % len(variants)]
     text = _clean_message(text, recipient_name="Claire")
     # Review-phase guardrail: avoid implying real publish happened already.
     text = re.sub(r"\b(das\s+geht\s+live)\b", "freigegeben fuer den Publish-Queue", text, flags=re.IGNORECASE)
