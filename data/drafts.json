@@ -526,5 +526,60 @@
     "post_text": "langchain==0.3.30. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-13T09:48:57.404802Z"
+  },
+  {
+    "title": "Notes on the xAI/Anthropic data center deal",
+    "link": "https://simonwillison.net/2026/May/7/xai-anthropic/#atom-entries",
+    "source": "Simon Willison",
+    "score": 11,
+    "should_post": true,
+    "reason": "Builder signal: launches, api, claude , ai",
+    "post_text": "Notes on the xAI/Anthropic data center deal. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-13T12:09:03.084825Z"
+  },
+  {
+    "title": "Agent pull requests are everywhere. Here’s how to review them.",
+    "link": "https://github.blog/ai-and-ml/generative-ai/agent-pull-requests-are-everywhere-heres-how-to-review-them/",
+    "source": "GitHub Blog AI",
+    "score": 8,
+    "should_post": true,
+    "reason": "Builder signal: ships, agent, ai",
+    "post_text": "Agent pull requests are everywhere. Here’s how to review them. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-13T12:09:04.825672Z"
+  },
+  {
+    "title": "langchain-classic==1.0.7",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-classic%3D%3D1.0.7",
+    "source": "LangChain Releases",
+    "score": 5,
+    "should_post": true,
+    "reason": "Builder signal: release, ai",
+    "post_text": "langchain-classic==1.0.7. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-13T12:09:06.032121Z"
+  },
+  {
+    "title": "Notes from inside China's AI labs",
+    "link": "https://www.interconnects.ai/p/notes-from-inside-chinas-ai-labs",
+    "source": "Nathan Lambert (Interconnects)",
+    "score": 1,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "Notes from inside China's AI labs. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-13T12:09:07.161435Z"
+  },
+  {
+    "title": "Scaling Trusted Access for Cyber with GPT-5.5 and GPT-5.5-Cyber",
+    "link": "https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber",
+    "source": "OpenAI News",
+    "score": 2,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "Scaling Trusted Access for Cyber with GPT-5.5 and GPT-5.5-Cyber. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-13T12:09:07.161492Z"
   }
 ]
