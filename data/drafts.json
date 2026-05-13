@@ -746,5 +746,60 @@
     "post_text": "langchain==1.3.0a2. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-13T20:48:13.702267Z"
+  },
+  {
+    "title": "Building a safe, effective sandbox to enable Codex on Windows",
+    "link": "https://openai.com/index/building-codex-windows-sandbox",
+    "source": "OpenAI News",
+    "score": 4,
+    "should_post": true,
+    "reason": "Builder signal: agent, ai",
+    "post_text": "Building a safe, effective sandbox to enable Codex on Windows. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-13T22:18:15.929213Z"
+  },
+  {
+    "title": "v0.23.4",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.23.4",
+    "source": "Ollama Releases",
+    "score": 6,
+    "should_post": true,
+    "reason": "Builder signal: v0., model",
+    "post_text": "v0.23.4. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-13T22:18:17.002544Z"
+  },
+  {
+    "title": "Live blog: Code w/ Claude 2026",
+    "link": "https://simonwillison.net/2026/May/6/code-w-claude-2026/#atom-entries",
+    "source": "Simon Willison",
+    "score": 3,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "Live blog: Code w/ Claude 2026. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-13T22:18:17.959884Z"
+  },
+  {
+    "title": "v0.100.0",
+    "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.100.0",
+    "source": "Anthropic Python SDK Releases",
+    "score": 16,
+    "should_post": true,
+    "reason": "Builder signal: api, agent, v0., changelog",
+    "post_text": "v0.100.0. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-13T22:18:17.959939Z"
+  },
+  {
+    "title": "Vibe coding and agentic engineering are getting closer than I'd like",
+    "link": "https://simonwillison.net/2026/May/6/vibe-coding-and-agentic-engineering/#atom-entries",
+    "source": "Simon Willison",
+    "score": 21,
+    "should_post": true,
+    "reason": "Builder signal: api, agent, production, claude code",
+    "post_text": "Vibe coding and agentic engineering are getting closer than I'd like. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-13T22:18:19.267867Z"
   }
 ]
