@@ -238,7 +238,7 @@
   },
   {
     "id": "b5fee10c3368",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-13T09:48:55.085393Z",
     "score": 15,
     "reason": "Builder signal: launches, api, claude , ai",
@@ -254,6 +254,47 @@
     "deferred_at": "2026-05-13T12:09:07.191515Z",
     "defer_count": 2,
     "original_score": 15,
-    "original_reason": "Builder signal: launches, api, claude , ai"
+    "original_reason": "Builder signal: launches, api, claude , ai",
+    "rejected_at": "2026-05-13T15:46:55.081406Z"
+  },
+  {
+    "id": "e286e87d665e",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-13T15:46:52.430482Z",
+    "score": 9,
+    "reason": "Builder signal: agent, ai, model, rag",
+    "proposed_post": "Parloa builds service agents customers want to talk to. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Parloa builds service agents customers want to talk to",
+      "source": "OpenAI News",
+      "link": "https://openai.com/index/parloa"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-13T15:46:55.122117Z",
+    "defer_count": 1,
+    "original_score": 9,
+    "original_reason": "Builder signal: agent, ai, model, rag"
+  },
+  {
+    "id": "3165d598a57d",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-13T15:46:54.124186Z",
+    "score": 6,
+    "reason": "Builder signal: api, ai, model",
+    "proposed_post": "Advancing voice intelligence with new models in the API. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Advancing voice intelligence with new models in the API",
+      "source": "OpenAI News",
+      "link": "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-13T15:46:55.156136Z",
+    "defer_count": 1,
+    "original_score": 6,
+    "original_reason": "Builder signal: api, ai, model"
   }
 ]
