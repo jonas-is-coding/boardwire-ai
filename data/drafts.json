@@ -361,5 +361,60 @@
     "post_text": "How NVIDIA engineers and researchers build with Codex. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-12T23:07:18.361735Z"
+  },
+  {
+    "title": "How NVIDIA engineers and researchers build with Codex",
+    "link": "https://openai.com/index/nvidia",
+    "source": "OpenAI News",
+    "score": 4,
+    "should_post": true,
+    "reason": "Builder signal: production, research",
+    "post_text": "How NVIDIA engineers and researchers build with Codex. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-13T03:54:35.170078Z"
+  },
+  {
+    "title": "v0.23.3",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.23.3",
+    "source": "Ollama Releases",
+    "score": 12,
+    "should_post": true,
+    "reason": "Builder signal: inference, v0., changelog, model",
+    "post_text": "v0.23.3. Inference and deployment improvements compound fast — check whether the numbers hold under sustained load, not just peak tests.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-13T03:54:36.147562Z"
+  },
+  {
+    "title": "AutoScout24 scales engineering with AI-powered workflows",
+    "link": "https://openai.com/index/autoscout24",
+    "source": "OpenAI News",
+    "score": 1,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "AutoScout24 scales engineering with AI-powered workflows. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-13T03:54:37.137418Z"
+  },
+  {
+    "title": "v2.1.137",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.137",
+    "source": "Claude Code Releases",
+    "score": 7,
+    "should_post": true,
+    "reason": "Builder signal: v2., extension, ai",
+    "post_text": "v2.1.137. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-13T03:54:37.137469Z"
+  },
+  {
+    "title": "v2.1.136",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.136",
+    "source": "Claude Code Releases",
+    "score": 31,
+    "should_post": true,
+    "reason": "Builder signal: release, api, agent, v2.",
+    "post_text": "v2.1.136. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-13T03:54:38.247110Z"
   }
 ]
