@@ -214,5 +214,45 @@
     "is_llm_mode": false,
     "claire_note": "Chloe, das hier ist ein Treffer. GitHub zeigt, wie sie ihre eigenen Agentic Workflows auf Token-Effizienz trimmen. Jeder, der aktuell auf PRs Agenten laufen lässt, kriegt hier konkrete Instrumentierungstipps und sieht, wie man API-Kosten in den Griff bekommt. Direkt anwendbar, um die eigenen Rechnungen zu senken.",
     "chloe_note": "Das ist ein klarer Ship. Der Artikel liefert spezifische Instrumentierungstipps und zeigt, wie man API-Kosten in bestehenden Agenten-Workflows senken kann. Entwickler können hier direkt Code oder Konfiguration adaptieren, um ihre eigenen Systeme zu optimieren."
+  },
+  {
+    "id": "d9d67a6ba1b8",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-13T09:48:53.590426Z",
+    "score": 8,
+    "reason": "Builder signal: ships, agent, ai",
+    "proposed_post": "Agent pull requests are everywhere. Here’s how to review them. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Agent pull requests are everywhere. Here’s how to review them.",
+      "source": "GitHub Blog AI",
+      "link": "https://github.blog/ai-and-ml/generative-ai/agent-pull-requests-are-everywhere-heres-how-to-review-them/"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-13T09:48:58.657010Z",
+    "defer_count": 1,
+    "original_score": 8,
+    "original_reason": "Builder signal: ships, agent, ai"
+  },
+  {
+    "id": "b5fee10c3368",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-13T09:48:55.085393Z",
+    "score": 15,
+    "reason": "Builder signal: launches, api, claude , ai",
+    "proposed_post": "Notes on the xAI/Anthropic data center deal. Inference and deployment improvements compound fast — check whether the numbers hold under sustained load, not just peak tests.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Notes on the xAI/Anthropic data center deal",
+      "source": "Simon Willison",
+      "link": "https://simonwillison.net/2026/May/7/xai-anthropic/#atom-entries"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-13T09:48:58.688912Z",
+    "defer_count": 1,
+    "original_score": 15,
+    "original_reason": "Builder signal: launches, api, claude , ai"
   }
 ]
