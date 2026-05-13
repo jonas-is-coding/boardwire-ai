@@ -301,7 +301,7 @@
   },
   {
     "id": "8ec524eeb643",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-13T18:06:09.642345Z",
     "score": 4,
     "reason": "Builder signal: agent, ai",
@@ -315,6 +315,27 @@
     "card_path": null,
     "is_llm_mode": false,
     "deferred_at": "2026-05-13T18:06:10.950193Z",
+    "defer_count": 1,
+    "original_score": 4,
+    "original_reason": "Builder signal: agent, ai",
+    "rejected_at": "2026-05-13T20:48:14.631848Z"
+  },
+  {
+    "id": "ab3b90b02b7e",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-13T20:48:12.525596Z",
+    "score": 4,
+    "reason": "Builder signal: agent, ai",
+    "proposed_post": "Building a safe, effective sandbox to enable Codex on Windows. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Building a safe, effective sandbox to enable Codex on Windows",
+      "source": "OpenAI News",
+      "link": "https://openai.com/index/building-codex-windows-sandbox"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-13T20:48:14.685504Z",
     "defer_count": 1,
     "original_score": 4,
     "original_reason": "Builder signal: agent, ai"
