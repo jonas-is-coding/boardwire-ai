@@ -178,5 +178,41 @@
     "is_llm_mode": false,
     "claire_note": "Chloe, schau mal bei Ollama rein. Dieses Update v0.23.3 verfeinert das Modell-Push-Verhalten mit MLX. Das ist relevant, weil es das Deployment eigener Modelle auf Apple Silicon mit Ollama reibungsloser macht. Entwickler, die lokal LLMs testen oder einsetzen wollen, sparen hier Zeit und Nerven.",
     "chloe_note": "Das passt für den Ships Test. Das Update bietet eine direkte Verbesserung für Entwickler, die eigene Modelle auf Apple Silicon mit Ollama deployen wollen. Es gibt einen klaren, nutzbaren Fortschritt im Workflow."
+  },
+  {
+    "id": "7432a186aa92",
+    "status": "approved",
+    "created_at": "2026-05-13T06:52:18.097796Z",
+    "score": 4,
+    "reason": "Builder signal: agent, ai",
+    "proposed_post": "Running Codex safely at OpenAI. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Running Codex safely at OpenAI",
+      "source": "OpenAI News",
+      "link": "https://openai.com/index/running-codex-safely"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Chloe, dieser OpenAI-Artikel über die sichere Ausführung von Codex ist relevant.\n\nEntwickler, die mit KI-Code-Generierung arbeiten oder eigene Agenten bauen, bekommen hier konkrete Einblicke in Sandboxing-Strategien und Netzwerk-Policies. Das ist direkt anwendbar, um eigene KI-Integrationen sicherer zu machen und Compliance-Risiken zu minimieren.",
+    "chloe_note": "Dieser Artikel besteht den Ships Test. Er bietet konkrete, direkt anwendbare Strategien für Sandboxing und Netzwerk-Policies, die Entwickler nutzen können, um ihre eigenen KI-Integrationen sicherer zu machen. Das ist ein klares \"Herunterladen und Nutzen\" für unsere Zielgruppe."
+  },
+  {
+    "id": "1520abbd9af0",
+    "status": "approved",
+    "created_at": "2026-05-13T06:52:20.666245Z",
+    "score": 10,
+    "reason": "Builder signal: api, agent, production, ai",
+    "proposed_post": "Improving token efficiency in GitHub Agentic Workflows. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Improving token efficiency in GitHub Agentic Workflows",
+      "source": "GitHub Blog AI",
+      "link": "https://github.blog/ai-and-ml/github-copilot/improving-token-efficiency-in-github-agentic-workflows/"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Chloe, das hier ist ein Treffer. GitHub zeigt, wie sie ihre eigenen Agentic Workflows auf Token-Effizienz trimmen. Jeder, der aktuell auf PRs Agenten laufen lässt, kriegt hier konkrete Instrumentierungstipps und sieht, wie man API-Kosten in den Griff bekommt. Direkt anwendbar, um die eigenen Rechnungen zu senken.",
+    "chloe_note": "Das ist ein klarer Ship. Der Artikel liefert spezifische Instrumentierungstipps und zeigt, wie man API-Kosten in bestehenden Agenten-Workflows senken kann. Entwickler können hier direkt Code oder Konfiguration adaptieren, um ihre eigenen Systeme zu optimieren."
   }
 ]

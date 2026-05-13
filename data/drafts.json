@@ -416,5 +416,60 @@
     "post_text": "v2.1.136. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-13T03:54:38.247110Z"
+  },
+  {
+    "title": "EMO: Pretraining mixture of experts for emergent modularity",
+    "link": "https://huggingface.co/blog/allenai/emo",
+    "source": "Hugging Face Blog",
+    "score": 3,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "EMO: Pretraining mixture of experts for emergent modularity. Training improvements matter most when they reduce cost or data requirements — see whether the method is reproducible on smaller hardware.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-13T06:52:16.809146Z"
+  },
+  {
+    "title": "langchain==1.2.18",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.2.18",
+    "source": "LangChain Releases",
+    "score": 8,
+    "should_post": true,
+    "reason": "Builder signal: release, agent, ai",
+    "post_text": "langchain==1.2.18. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-13T06:52:16.809276Z"
+  },
+  {
+    "title": "Running Codex safely at OpenAI",
+    "link": "https://openai.com/index/running-codex-safely",
+    "source": "OpenAI News",
+    "score": 4,
+    "should_post": true,
+    "reason": "Builder signal: agent, ai",
+    "post_text": "Running Codex safely at OpenAI. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-13T06:52:18.097796Z"
+  },
+  {
+    "title": "v2.1.133",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.133",
+    "source": "Claude Code Releases",
+    "score": 24,
+    "should_post": true,
+    "reason": "Builder signal: agent, v2., mcp, claude ",
+    "post_text": "v2.1.133. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-13T06:52:19.369155Z"
+  },
+  {
+    "title": "Improving token efficiency in GitHub Agentic Workflows",
+    "link": "https://github.blog/ai-and-ml/github-copilot/improving-token-efficiency-in-github-agentic-workflows/",
+    "source": "GitHub Blog AI",
+    "score": 10,
+    "should_post": true,
+    "reason": "Builder signal: api, agent, production, ai",
+    "post_text": "Improving token efficiency in GitHub Agentic Workflows. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-13T06:52:20.666245Z"
   }
 ]
