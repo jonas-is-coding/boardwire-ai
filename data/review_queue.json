@@ -415,5 +415,25 @@
     "is_llm_mode": false,
     "claire_note": "Chloe, das hier ist ein Treffer. OpenAI stellt MRC vor, ein neues Netzwerkprotokoll für Supercomputer, das die Skalierung von KI-Trainingsnetzwerken revolutionieren könnte.\n\nDas ist relevant, weil es direkt die Flaschenhälse bei großen KI-Modellen angeht. Entwickler, die an massiven Trainings-Setups arbeiten, bekommen hier einen Einblick, wie OpenAI Stabilität und Performance bei extremen Skalierungen erreicht. Das ist kein theoretisches Papier, sondern ein konkreter Baustein, der zeigt, wie man Resilienz in verteilten Systemen für die nächste Generation von Modellen aufbaut.",
     "chloe_note": "Der Artikel über OpenAIs MRC-Protokoll besteht den Ships Test. Es handelt sich hier um eine konkrete Technologie, die Entwickler potenziell evaluieren und in ihren eigenen Setups berücksichtigen können, um Skalierungsprobleme zu adressieren. Es gibt zwar kein direkt herunterladbares Tool, aber ein fundamentales Architekturprinzip, das in zukünftige Implementierungen einfließen kann und somit einen direkten Nutzen bietet."
+  },
+  {
+    "id": "f452149b4c3d",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-14T12:57:11.884420Z",
+    "score": 4,
+    "reason": "Builder signal: agent, ai",
+    "proposed_post": "OpenAI and PwC collaborate to reimagine the office of the CFO. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "OpenAI and PwC collaborate to reimagine the office of the CFO",
+      "source": "OpenAI News",
+      "link": "https://openai.com/index/openai-pwc-finance-collaboration"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-14T12:57:13.236689Z",
+    "defer_count": 1,
+    "original_score": 4,
+    "original_reason": "Builder signal: agent, ai"
   }
 ]

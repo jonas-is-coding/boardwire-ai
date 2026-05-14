@@ -1021,5 +1021,60 @@
     "post_text": "Unlocking large scale AI training networks with MRC (Multipath Reliable Connection). Training improvements matter most when they reduce cost or data requirements — see whether the method is reproducible on smaller hardware.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-14T10:25:44.477192Z"
+  },
+  {
+    "title": "GPT-5.5 Instant System Card",
+    "link": "https://openai.com/index/gpt-5-5-instant-system-card",
+    "source": "OpenAI News",
+    "score": 0,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "GPT-5.5 Instant System Card. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-14T12:57:10.775713Z"
+  },
+  {
+    "title": "Advancing youth safety and wellbeing in EMEA",
+    "link": "https://openai.com/index/advancing-youth-safety-in-emea",
+    "source": "OpenAI News",
+    "score": 1,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "Advancing youth safety and wellbeing in EMEA. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-14T12:57:10.775812Z"
+  },
+  {
+    "title": "New ways to buy ChatGPT ads",
+    "link": "https://openai.com/index/new-ways-to-buy-chatgpt-ads",
+    "source": "OpenAI News",
+    "score": 3,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "New ways to buy ChatGPT ads. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-14T12:57:10.775874Z"
+  },
+  {
+    "title": "v0.98.1",
+    "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.98.1",
+    "source": "Anthropic Python SDK Releases",
+    "score": 10,
+    "should_post": true,
+    "reason": "Builder signal: v0., changelog, sdk",
+    "post_text": "v0.98.1. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-14T12:57:10.775935Z"
+  },
+  {
+    "title": "OpenAI and PwC collaborate to reimagine the office of the CFO",
+    "link": "https://openai.com/index/openai-pwc-finance-collaboration",
+    "source": "OpenAI News",
+    "score": 4,
+    "should_post": true,
+    "reason": "Builder signal: agent, ai",
+    "post_text": "OpenAI and PwC collaborate to reimagine the office of the CFO. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-14T12:57:11.884420Z"
   }
 ]
