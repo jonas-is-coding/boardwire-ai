@@ -966,5 +966,60 @@
     "post_text": "v0.99.0. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-14T07:46:49.984833Z"
+  },
+  {
+    "title": "v0.21.0rc3",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.21.0rc3",
+    "source": "vLLM Releases",
+    "score": 4,
+    "should_post": true,
+    "reason": "Builder signal: v0.",
+    "post_text": "v0.21.0rc3. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-14T10:25:41.100954Z"
+  },
+  {
+    "title": "langchain-fireworks==1.3.1",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-fireworks%3D%3D1.3.1",
+    "source": "LangChain Releases",
+    "score": 12,
+    "should_post": true,
+    "reason": "Builder signal: release, api, ai, tool",
+    "post_text": "langchain-fireworks==1.3.1. Retrieval quality is the bottleneck most RAG systems hit first — check recall metrics on domain-specific data, not just generic benchmarks.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-14T10:25:42.118672Z"
+  },
+  {
+    "title": "langchain-mistralai==1.1.4",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-mistralai%3D%3D1.1.4",
+    "source": "LangChain Releases",
+    "score": 7,
+    "should_post": true,
+    "reason": "Builder signal: release, ai, tool",
+    "post_text": "langchain-mistralai==1.1.4. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-14T10:25:43.316461Z"
+  },
+  {
+    "title": "GPT-5.5 Instant: smarter, clearer, and more personalized",
+    "link": "https://openai.com/index/gpt-5-5-instant",
+    "source": "OpenAI News",
+    "score": 2,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "GPT-5.5 Instant: smarter, clearer, and more personalized. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-14T10:25:44.477122Z"
+  },
+  {
+    "title": "Unlocking large scale AI training networks with MRC (Multipath Reliable Connection)",
+    "link": "https://openai.com/index/mrc-supercomputer-networking",
+    "source": "OpenAI News",
+    "score": 11,
+    "should_post": true,
+    "reason": "Builder signal: release, released, ai, training",
+    "post_text": "Unlocking large scale AI training networks with MRC (Multipath Reliable Connection). Training improvements matter most when they reduce cost or data requirements — see whether the method is reproducible on smaller hardware.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-14T10:25:44.477192Z"
   }
 ]

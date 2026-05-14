@@ -379,5 +379,41 @@
     "is_llm_mode": false,
     "claire_note": "Hey Chloe,\n\nHab hier einen OpenAI-Artikel gefunden, \"How ChatGPT learns about the world while protecting privacy\". Der ist interessant, weil er konkrete Einblicke gibt, wie sie Daten für das Training nutzen und gleichzeitig Privatsphäre schützen.\n\nFür Entwickler ist das wichtig, weil es zeigt, wie man mit sensiblen Daten in KI-Modellen umgeht. Man kann hier direkt sehen, welche Ansätze OpenAI verfolgt, um die Balance zwischen Modellverbesserung und Datenschutz zu finden. Das ist relevant für jeden, der selbst KI-Anwendungen baut und sich mit den ethischen und technischen Herausforderungen der Datennutzung auseinandersetzten muss.",
     "chloe_note": "Dieser Artikel besteht den Ships Test nicht. Er bietet zwar wertvolle Einblicke in die Methodik von OpenAI, aber es gibt nichts Konkretes zum Herunterladen, Nutzen oder Deployen für Entwickler, um diese Ansätze direkt anzuwenden oder zu experimentieren. Es ist eher eine konzeptionelle Erläuterung."
+  },
+  {
+    "id": "ab66abf923f3",
+    "status": "approved",
+    "created_at": "2026-05-14T10:25:42.118672Z",
+    "score": 12,
+    "reason": "Builder signal: release, api, ai, tool",
+    "proposed_post": "langchain-fireworks==1.3.1. Retrieval quality is the bottleneck most RAG systems hit first — check recall metrics on domain-specific data, not just generic benchmarks.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "langchain-fireworks==1.3.1",
+      "source": "LangChain Releases",
+      "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-fireworks%3D%3D1.3.1"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Hey Chloe,\n\nLangchain-fireworks 1.3.1 ist draußen. Das fixiert den 'api_key' in 'FireworksEmbeddings'. Für Builder, die Fireworks AI für Embeddings nutzen, ist das wichtig, um sicherzustellen, dass ihre API-Aufrufe korrekt authentifiziert werden und keine unerwarteten Fehler auftreten. Ein kleines, aber wichtiges Update für Stabilität in LangChain-Projekten.",
+    "chloe_note": "Das besteht den Ships Test nicht. Es ist ein reines Bugfix-Release, das lediglich eine korrekte Authentifizierung in einer bestehenden Integration sicherstellt. Es gibt nichts Neues zum Herunterladen, Nutzen oder Deployen, das über die Behebung eines Fehlers hinausgeht."
+  },
+  {
+    "id": "185e6d46d577",
+    "status": "approved",
+    "created_at": "2026-05-14T10:25:44.477192Z",
+    "score": 11,
+    "reason": "Builder signal: release, released, ai, training",
+    "proposed_post": "Unlocking large scale AI training networks with MRC (Multipath Reliable Connection). Training improvements matter most when they reduce cost or data requirements — see whether the method is reproducible on smaller hardware.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Unlocking large scale AI training networks with MRC (Multipath Reliable Connection)",
+      "source": "OpenAI News",
+      "link": "https://openai.com/index/mrc-supercomputer-networking"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Chloe, das hier ist ein Treffer. OpenAI stellt MRC vor, ein neues Netzwerkprotokoll für Supercomputer, das die Skalierung von KI-Trainingsnetzwerken revolutionieren könnte.\n\nDas ist relevant, weil es direkt die Flaschenhälse bei großen KI-Modellen angeht. Entwickler, die an massiven Trainings-Setups arbeiten, bekommen hier einen Einblick, wie OpenAI Stabilität und Performance bei extremen Skalierungen erreicht. Das ist kein theoretisches Papier, sondern ein konkreter Baustein, der zeigt, wie man Resilienz in verteilten Systemen für die nächste Generation von Modellen aufbaut.",
+    "chloe_note": "Der Artikel über OpenAIs MRC-Protokoll besteht den Ships Test. Es handelt sich hier um eine konkrete Technologie, die Entwickler potenziell evaluieren und in ihren eigenen Setups berücksichtigen können, um Skalierungsprobleme zu adressieren. Es gibt zwar kein direkt herunterladbares Tool, aber ein fundamentales Architekturprinzip, das in zukünftige Implementierungen einfließen kann und somit einen direkten Nutzen bietet."
   }
 ]
