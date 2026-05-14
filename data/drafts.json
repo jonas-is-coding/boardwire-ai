@@ -1296,5 +1296,60 @@
     "post_text": "Enabling a new model for healthcare with AI co-clinician. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-14T21:18:22.948250Z"
+  },
+  {
+    "title": "Enabling a new model for healthcare with AI co-clinician",
+    "link": "https://deepmind.google/blog/ai-co-clinician/",
+    "source": "Google DeepMind Blog",
+    "score": 4,
+    "should_post": true,
+    "reason": "Builder signal: ai, model, research",
+    "post_text": "Enabling a new model for healthcare with AI co-clinician. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-14T23:01:51.737003Z"
+  },
+  {
+    "title": "v2.1.142",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.142",
+    "source": "Claude Code Releases",
+    "score": 23,
+    "should_post": true,
+    "reason": "Builder signal: agent, v2., mcp, claude ",
+    "post_text": "v2.1.142. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-14T23:01:53.106092Z"
+  },
+  {
+    "title": "v0.30.0-rc16",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.30.0-rc16",
+    "source": "Ollama Releases",
+    "score": 0,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "v0.30.0-rc16. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-14T23:01:54.174301Z"
+  },
+  {
+    "title": "v0.21.0: [Bugfix] Add swiglu limits to deepgemm fp8 methods (#41986)",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.21.0",
+    "source": "vLLM Releases",
+    "score": 11,
+    "should_post": true,
+    "reason": "Builder signal: llm, v0., claude , ai",
+    "post_text": "v0.21.0: [Bugfix] Add swiglu limits to deepgemm fp8 methods (#41986). The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-14T23:01:54.174376Z"
+  },
+  {
+    "title": "v0.24.0",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.24.0",
+    "source": "Ollama Releases",
+    "score": 4,
+    "should_post": true,
+    "reason": "Builder signal: v0.",
+    "post_text": "v0.24.0. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-14T23:01:55.609210Z"
   }
 ]

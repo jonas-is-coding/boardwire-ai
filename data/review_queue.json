@@ -523,7 +523,7 @@
   },
   {
     "id": "57db3f2116ec",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-14T21:18:22.948250Z",
     "score": 4,
     "reason": "Builder signal: ai, model, research",
@@ -539,6 +539,27 @@
     "deferred_at": "2026-05-14T21:18:24.776953Z",
     "defer_count": 1,
     "original_score": 4,
-    "original_reason": "Builder signal: ai, model, research"
+    "original_reason": "Builder signal: ai, model, research",
+    "rejected_at": "2026-05-14T23:01:56.879793Z"
+  },
+  {
+    "id": "3ae8fea95117",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-14T23:01:54.174376Z",
+    "score": 11,
+    "reason": "Builder signal: llm, v0., claude , ai",
+    "proposed_post": "v0.21.0: [Bugfix] Add swiglu limits to deepgemm fp8 methods (#41986). The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "v0.21.0: [Bugfix] Add swiglu limits to deepgemm fp8 methods (#41986)",
+      "source": "vLLM Releases",
+      "link": "https://github.com/vllm-project/vllm/releases/tag/v0.21.0"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-14T23:01:56.954818Z",
+    "defer_count": 1,
+    "original_score": 11,
+    "original_reason": "Builder signal: llm, v0., claude , ai"
   }
 ]
