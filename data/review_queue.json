@@ -502,7 +502,7 @@
   },
   {
     "id": "900fc465316b",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-14T19:57:52.870262Z",
     "score": 4,
     "reason": "Builder signal: embedding, retrieval",
@@ -518,6 +518,27 @@
     "deferred_at": "2026-05-14T19:57:54.292531Z",
     "defer_count": 1,
     "original_score": 4,
-    "original_reason": "Builder signal: embedding, retrieval"
+    "original_reason": "Builder signal: embedding, retrieval",
+    "rejected_at": "2026-05-14T21:18:24.704216Z"
+  },
+  {
+    "id": "57db3f2116ec",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-14T21:18:22.948250Z",
+    "score": 4,
+    "reason": "Builder signal: ai, model, research",
+    "proposed_post": "Enabling a new model for healthcare with AI co-clinician. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Enabling a new model for healthcare with AI co-clinician",
+      "source": "Google DeepMind Blog",
+      "link": "https://deepmind.google/blog/ai-co-clinician/"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-14T21:18:24.776953Z",
+    "defer_count": 1,
+    "original_score": 4,
+    "original_reason": "Builder signal: ai, model, research"
   }
 ]
