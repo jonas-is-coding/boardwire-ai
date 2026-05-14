@@ -1076,5 +1076,60 @@
     "post_text": "OpenAI and PwC collaborate to reimagine the office of the CFO. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-14T12:57:11.884420Z"
+  },
+  {
+    "title": "OpenAI and PwC collaborate to reimagine the office of the CFO",
+    "link": "https://openai.com/index/openai-pwc-finance-collaboration",
+    "source": "OpenAI News",
+    "score": 4,
+    "should_post": true,
+    "reason": "Builder signal: agent, ai",
+    "post_text": "OpenAI and PwC collaborate to reimagine the office of the CFO. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-14T15:26:13.045868Z"
+  },
+  {
+    "title": "Unlocking asynchronicity in continuous batching",
+    "link": "https://huggingface.co/blog/continuous_async",
+    "source": "Hugging Face Blog",
+    "score": 0,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "Unlocking asynchronicity in continuous batching. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-14T15:26:14.256555Z"
+  },
+  {
+    "title": "v0.98.0",
+    "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.98.0",
+    "source": "Anthropic Python SDK Releases",
+    "score": 17,
+    "should_post": true,
+    "reason": "Builder signal: api, agent, v0., changelog",
+    "post_text": "v0.98.0. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-14T15:26:14.256723Z"
+  },
+  {
+    "title": "The distillation panic",
+    "link": "https://www.interconnects.ai/p/the-distillation-panic",
+    "source": "Nathan Lambert (Interconnects)",
+    "score": 0,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "The distillation panic. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-14T15:26:15.450421Z"
+  },
+  {
+    "title": "Register now for OpenClaw: After Hours @ GitHub",
+    "link": "https://github.blog/open-source/register-now-for-openclaw-after-hours-github/",
+    "source": "GitHub Blog AI",
+    "score": 4,
+    "should_post": true,
+    "reason": "Builder signal: open-source",
+    "post_text": "Register now for OpenClaw: After Hours @ GitHub. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-14T15:26:15.450507Z"
   }
 ]

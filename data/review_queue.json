@@ -418,7 +418,7 @@
   },
   {
     "id": "f452149b4c3d",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-14T12:57:11.884420Z",
     "score": 4,
     "reason": "Builder signal: agent, ai",
@@ -434,6 +434,27 @@
     "deferred_at": "2026-05-14T12:57:13.236689Z",
     "defer_count": 1,
     "original_score": 4,
-    "original_reason": "Builder signal: agent, ai"
+    "original_reason": "Builder signal: agent, ai",
+    "rejected_at": "2026-05-14T15:26:16.741885Z"
+  },
+  {
+    "id": "551e13a56619",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-14T15:26:15.450507Z",
+    "score": 4,
+    "reason": "Builder signal: open-source",
+    "proposed_post": "Register now for OpenClaw: After Hours @ GitHub. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Register now for OpenClaw: After Hours @ GitHub",
+      "source": "GitHub Blog AI",
+      "link": "https://github.blog/open-source/register-now-for-openclaw-after-hours-github/"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-14T15:26:16.798943Z",
+    "defer_count": 1,
+    "original_score": 4,
+    "original_reason": "Builder signal: open-source"
   }
 ]
