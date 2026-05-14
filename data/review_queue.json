@@ -460,7 +460,7 @@
   },
   {
     "id": "a1bfbc212cd5",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-14T17:58:14.462350Z",
     "score": 5,
     "reason": "Builder signal: available, ai, research",
@@ -476,11 +476,12 @@
     "deferred_at": "2026-05-14T17:58:17.932958Z",
     "defer_count": 1,
     "original_score": 5,
-    "original_reason": "Builder signal: available, ai, research"
+    "original_reason": "Builder signal: available, ai, research",
+    "rejected_at": "2026-05-14T19:57:54.127042Z"
   },
   {
     "id": "bacf40cb8646",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-14T17:58:16.787313Z",
     "score": 5,
     "reason": "Builder signal: v0., ai",
@@ -496,6 +497,27 @@
     "deferred_at": "2026-05-14T17:58:17.990912Z",
     "defer_count": 1,
     "original_score": 5,
-    "original_reason": "Builder signal: v0., ai"
+    "original_reason": "Builder signal: v0., ai",
+    "rejected_at": "2026-05-14T19:57:54.169465Z"
+  },
+  {
+    "id": "900fc465316b",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-14T19:57:52.870262Z",
+    "score": 4,
+    "reason": "Builder signal: embedding, retrieval",
+    "proposed_post": "Granite Embedding Multilingual R2: Open Apache 2.0 Multilingual Embeddings with 32K Context — Best Sub-100M Retrieval Quality. Retrieval quality is the bottleneck most RAG systems hit first — check recall metrics on domain-specific data, not just generic benchmarks.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Granite Embedding Multilingual R2: Open Apache 2.0 Multilingual Embeddings with 32K Context — Best Sub-100M Retrieval Quality",
+      "source": "Hugging Face Blog",
+      "link": "https://huggingface.co/blog/ibm-granite/granite-embedding-multilingual-r2"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-14T19:57:54.292531Z",
+    "defer_count": 1,
+    "original_score": 4,
+    "original_reason": "Builder signal: embedding, retrieval"
   }
 ]

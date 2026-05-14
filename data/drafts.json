@@ -1186,5 +1186,60 @@
     "post_text": "v0.20.2rc0: [MRV2] Add shutdown() method (#41297). The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-14T17:58:16.787313Z"
+  },
+  {
+    "title": "Import AI 455: Automating AI Research",
+    "link": "https://jack-clark.net/2026/05/04/import-ai-455-automating-ai-research/",
+    "source": "Import AI (Jack Clark)",
+    "score": 5,
+    "should_post": true,
+    "reason": "Builder signal: available, ai, research",
+    "post_text": "Import AI 455: Automating AI Research. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-14T19:57:50.259964Z"
+  },
+  {
+    "title": "v0.20.2rc0: [MRV2] Add shutdown() method (#41297)",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.20.2rc0",
+    "source": "vLLM Releases",
+    "score": 5,
+    "should_post": true,
+    "reason": "Builder signal: v0., ai",
+    "post_text": "v0.20.2rc0: [MRV2] Add shutdown() method (#41297). The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-14T19:57:51.661092Z"
+  },
+  {
+    "title": "v0.24.0-rc1",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.24.0-rc1",
+    "source": "Ollama Releases",
+    "score": 0,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "v0.24.0-rc1. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-14T19:57:52.870018Z"
+  },
+  {
+    "title": "Granite Embedding Multilingual R2: Open Apache 2.0 Multilingual Embeddings with 32K Context — Best Sub-100M Retrieval Quality",
+    "link": "https://huggingface.co/blog/ibm-granite/granite-embedding-multilingual-r2",
+    "source": "Hugging Face Blog",
+    "score": 4,
+    "should_post": true,
+    "reason": "Builder signal: embedding, retrieval",
+    "post_text": "Granite Embedding Multilingual R2: Open Apache 2.0 Multilingual Embeddings with 32K Context — Best Sub-100M Retrieval Quality. Retrieval quality is the bottleneck most RAG systems hit first — check recall metrics on domain-specific data, not just generic benchmarks.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-14T19:57:52.870262Z"
+  },
+  {
+    "title": "Helping ChatGPT better recognize context in sensitive conversations",
+    "link": "https://openai.com/index/chatgpt-recognize-context-in-sensitive-conversations",
+    "source": "OpenAI News",
+    "score": 0,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "Helping ChatGPT better recognize context in sensitive conversations. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-14T19:57:54.083657Z"
   }
 ]
