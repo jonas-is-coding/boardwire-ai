@@ -439,7 +439,7 @@
   },
   {
     "id": "551e13a56619",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-14T15:26:15.450507Z",
     "score": 4,
     "reason": "Builder signal: open-source",
@@ -455,6 +455,47 @@
     "deferred_at": "2026-05-14T15:26:16.798943Z",
     "defer_count": 1,
     "original_score": 4,
-    "original_reason": "Builder signal: open-source"
+    "original_reason": "Builder signal: open-source",
+    "rejected_at": "2026-05-14T17:58:17.882368Z"
+  },
+  {
+    "id": "a1bfbc212cd5",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-14T17:58:14.462350Z",
+    "score": 5,
+    "reason": "Builder signal: available, ai, research",
+    "proposed_post": "Import AI 455: Automating AI Research. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Import AI 455: Automating AI Research",
+      "source": "Import AI (Jack Clark)",
+      "link": "https://jack-clark.net/2026/05/04/import-ai-455-automating-ai-research/"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-14T17:58:17.932958Z",
+    "defer_count": 1,
+    "original_score": 5,
+    "original_reason": "Builder signal: available, ai, research"
+  },
+  {
+    "id": "bacf40cb8646",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-14T17:58:16.787313Z",
+    "score": 5,
+    "reason": "Builder signal: v0., ai",
+    "proposed_post": "v0.20.2rc0: [MRV2] Add shutdown() method (#41297). The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "v0.20.2rc0: [MRV2] Add shutdown() method (#41297)",
+      "source": "vLLM Releases",
+      "link": "https://github.com/vllm-project/vllm/releases/tag/v0.20.2rc0"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-14T17:58:17.990912Z",
+    "defer_count": 1,
+    "original_score": 5,
+    "original_reason": "Builder signal: v0., ai"
   }
 ]
