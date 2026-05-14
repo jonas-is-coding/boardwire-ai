@@ -801,5 +801,60 @@
     "post_text": "Vibe coding and agentic engineering are getting closer than I'd like. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-13T22:18:19.267867Z"
+  },
+  {
+    "title": "Vibe coding and agentic engineering are getting closer than I'd like",
+    "link": "https://simonwillison.net/2026/May/6/vibe-coding-and-agentic-engineering/#atom-entries",
+    "source": "Simon Willison",
+    "score": 16,
+    "should_post": true,
+    "reason": "Builder signal: api, agent, production, claude code",
+    "post_text": "Vibe coding and agentic engineering are getting closer than I'd like. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-14T00:07:24.545090Z"
+  },
+  {
+    "title": "v2.1.141",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.141",
+    "source": "Claude Code Releases",
+    "score": 34,
+    "should_post": true,
+    "reason": "Builder signal: available, api, agent, v2.",
+    "post_text": "v2.1.141. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-14T00:07:26.095142Z"
+  },
+  {
+    "title": "AlphaEvolve: How our Gemini-powered coding agent is scaling impact across fields",
+    "link": "https://deepmind.google/blog/alphaevolve-impact/",
+    "source": "Google DeepMind Blog",
+    "score": 3,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "AlphaEvolve: How our Gemini-powered coding agent is scaling impact across fields. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-14T00:07:27.219533Z"
+  },
+  {
+    "title": "How ChatGPT learns about the world while protecting privacy",
+    "link": "https://openai.com/index/how-chatgpt-protects-privacy",
+    "source": "OpenAI News",
+    "score": 5,
+    "should_post": true,
+    "reason": "Builder signal: ai, model, training",
+    "post_text": "How ChatGPT learns about the world while protecting privacy. Training improvements matter most when they reduce cost or data requirements — see whether the method is reproducible on smaller hardware.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-14T00:07:27.219593Z"
+  },
+  {
+    "title": "v2.1.131",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.131",
+    "source": "Claude Code Releases",
+    "score": 13,
+    "should_post": true,
+    "reason": "Builder signal: api, v2., sdk, extension",
+    "post_text": "v2.1.131. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-14T00:07:28.534599Z"
   }
 ]

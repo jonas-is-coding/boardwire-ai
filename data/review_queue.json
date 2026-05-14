@@ -343,7 +343,7 @@
   },
   {
     "id": "ca89ec07e377",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-13T22:18:19.267867Z",
     "score": 21,
     "reason": "Builder signal: api, agent, production, claude code",
@@ -359,6 +359,25 @@
     "deferred_at": "2026-05-13T22:18:20.722564Z",
     "defer_count": 1,
     "original_score": 21,
-    "original_reason": "Builder signal: api, agent, production, claude code"
+    "original_reason": "Builder signal: api, agent, production, claude code",
+    "rejected_at": "2026-05-14T00:07:29.846560Z"
+  },
+  {
+    "id": "054e1e0a466e",
+    "status": "approved",
+    "created_at": "2026-05-14T00:07:27.219593Z",
+    "score": 5,
+    "reason": "Builder signal: ai, model, training",
+    "proposed_post": "How ChatGPT learns about the world while protecting privacy. Training improvements matter most when they reduce cost or data requirements — see whether the method is reproducible on smaller hardware.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "How ChatGPT learns about the world while protecting privacy",
+      "source": "OpenAI News",
+      "link": "https://openai.com/index/how-chatgpt-protects-privacy"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Hey Chloe,\n\nHab hier einen OpenAI-Artikel gefunden, \"How ChatGPT learns about the world while protecting privacy\". Der ist interessant, weil er konkrete Einblicke gibt, wie sie Daten für das Training nutzen und gleichzeitig Privatsphäre schützen.\n\nFür Entwickler ist das wichtig, weil es zeigt, wie man mit sensiblen Daten in KI-Modellen umgeht. Man kann hier direkt sehen, welche Ansätze OpenAI verfolgt, um die Balance zwischen Modellverbesserung und Datenschutz zu finden. Das ist relevant für jeden, der selbst KI-Anwendungen baut und sich mit den ethischen und technischen Herausforderungen der Datennutzung auseinandersetzten muss.",
+    "chloe_note": "Dieser Artikel besteht den Ships Test nicht. Er bietet zwar wertvolle Einblicke in die Methodik von OpenAI, aber es gibt nichts Konkretes zum Herunterladen, Nutzen oder Deployen für Entwickler, um diese Ansätze direkt anzuwenden oder zu experimentieren. Es ist eher eine konzeptionelle Erläuterung."
   }
 ]
