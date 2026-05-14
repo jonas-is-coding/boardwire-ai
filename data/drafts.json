@@ -856,5 +856,60 @@
     "post_text": "v2.1.131. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-14T00:07:28.534599Z"
+  },
+  {
+    "title": "v0.24.0",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.24.0-rc0",
+    "source": "Ollama Releases",
+    "score": 2,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "v0.24.0. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-14T04:50:27.676336Z"
+  },
+  {
+    "title": "Our response to the TanStack npm supply chain attack",
+    "link": "https://openai.com/index/our-response-to-the-tanstack-npm-supply-chain-attack",
+    "source": "OpenAI News",
+    "score": 1,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "Our response to the TanStack npm supply chain attack. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-14T04:50:27.676424Z"
+  },
+  {
+    "title": "v2.1.129",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.129",
+    "source": "Claude Code Releases",
+    "score": 33,
+    "should_post": true,
+    "reason": "Builder signal: api, agent, inference, deployment",
+    "post_text": "v2.1.129. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-14T04:50:27.676654Z"
+  },
+  {
+    "title": "Uber uses OpenAI to help people earn smarter and book faster",
+    "link": "https://openai.com/index/uber",
+    "source": "OpenAI News",
+    "score": 1,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "Uber uses OpenAI to help people earn smarter and book faster. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-14T04:50:28.783400Z"
+  },
+  {
+    "title": "Introducing ChatGPT Futures: Class of 2026",
+    "link": "https://openai.com/index/introducing-chatgpt-futures-class-of-2026",
+    "source": "OpenAI News",
+    "score": 2,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "Introducing ChatGPT Futures: Class of 2026. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-14T04:50:28.783533Z"
   }
 ]
