@@ -1791,5 +1791,60 @@
     "post_text": "A pelican for GPT-5.5 via the semi-official Codex backdoor API. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-15T21:11:05.266425Z"
+  },
+  {
+    "title": "A pelican for GPT-5.5 via the semi-official Codex backdoor API",
+    "link": "https://simonwillison.net/2026/Apr/23/gpt-5-5/#atom-entries",
+    "source": "Simon Willison",
+    "score": 15,
+    "should_post": true,
+    "reason": "Builder signal: release, available, open source, api",
+    "post_text": "A pelican for GPT-5.5 via the semi-official Codex backdoor API. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-15T23:00:41.913084Z"
+  },
+  {
+    "title": "Extract PDF text in your browser with LiteParse for the web",
+    "link": "https://simonwillison.net/2026/Apr/23/liteparse-for-the-web/#atom-entries",
+    "source": "Simon Willison",
+    "score": 15,
+    "should_post": true,
+    "reason": "Builder signal: release, open source, agent, v2.",
+    "post_text": "Extract PDF text in your browser with LiteParse for the web. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-15T23:00:43.467743Z"
+  },
+  {
+    "title": "DeepSeek V4 - almost on the frontier, a fraction of the price",
+    "link": "https://simonwillison.net/2026/Apr/24/deepseek-v4/#atom-entries",
+    "source": "Simon Willison",
+    "score": 14,
+    "should_post": true,
+    "reason": "Builder signal: release, open weight, weights, api",
+    "post_text": "DeepSeek V4 - almost on the frontier, a fraction of the price. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-15T23:00:45.128477Z"
+  },
+  {
+    "title": "v2.1.143",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.143",
+    "source": "Claude Code Releases",
+    "score": 34,
+    "should_post": true,
+    "reason": "Builder signal: available, download, agent, v2.",
+    "post_text": "v2.1.143. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-15T23:00:46.083775Z"
+  },
+  {
+    "title": "v0.25.0-rc0: ci: speed up release builds (#15982)",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.25.0-rc0",
+    "source": "Ollama Releases",
+    "score": 3,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "v0.25.0-rc0: ci: speed up release builds (#15982). The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-15T23:00:47.444733Z"
   }
 ]
