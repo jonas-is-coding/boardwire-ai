@@ -1626,5 +1626,60 @@
     "post_text": "The next phase of the Microsoft OpenAI partnership. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-15T15:25:16.514540Z"
+  },
+  {
+    "title": "Building a general-purpose accessibility agent—and what we learned in the process",
+    "link": "https://github.blog/ai-and-ml/github-copilot/building-a-general-purpose-accessibility-agent-and-what-we-learned-in-the-process/",
+    "source": "GitHub Blog AI",
+    "score": 4,
+    "should_post": true,
+    "reason": "Builder signal: agent, ai",
+    "post_text": "Building a general-purpose accessibility agent—and what we learned in the process. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-15T17:45:58.824595Z"
+  },
+  {
+    "title": "A new personal finance experience in ChatGPT",
+    "link": "https://openai.com/index/personal-finance-chatgpt",
+    "source": "OpenAI News",
+    "score": 1,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "A new personal finance experience in ChatGPT. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-15T17:45:59.838383Z"
+  },
+  {
+    "title": "An open-source spec for orchestration: Symphony",
+    "link": "https://openai.com/index/open-source-codex-orchestration-symphony",
+    "source": "OpenAI News",
+    "score": 7,
+    "should_post": true,
+    "reason": "Builder signal: open-source, agent",
+    "post_text": "An open-source spec for orchestration: Symphony. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-15T17:45:59.838626Z"
+  },
+  {
+    "title": "Choco automates food distribution with AI agents",
+    "link": "https://openai.com/index/choco",
+    "source": "OpenAI News",
+    "score": 7,
+    "should_post": true,
+    "reason": "Builder signal: api, agent, ai",
+    "post_text": "Choco automates food distribution with AI agents. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-15T17:46:01.188235Z"
+  },
+  {
+    "title": "How to build scalable web apps with OpenAI's Privacy Filter",
+    "link": "https://huggingface.co/blog/openai-privacy-filter-web-apps",
+    "source": "Hugging Face Blog",
+    "score": 1,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "How to build scalable web apps with OpenAI's Privacy Filter. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-15T17:46:02.296598Z"
   }
 ]
