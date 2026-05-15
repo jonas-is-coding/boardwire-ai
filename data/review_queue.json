@@ -583,7 +583,7 @@
   },
   {
     "id": "34f7ae9e12e1",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-15T10:31:44.561215Z",
     "score": 9,
     "reason": "Builder signal: available, agent, ai, model",
@@ -599,11 +599,12 @@
     "deferred_at": "2026-05-15T10:31:52.140717Z",
     "defer_count": 1,
     "original_score": 9,
-    "original_reason": "Builder signal: available, agent, ai, model"
+    "original_reason": "Builder signal: available, agent, ai, model",
+    "rejected_at": "2026-05-15T12:58:46.505842Z"
   },
   {
     "id": "93fb51855a24",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-15T10:31:45.986487Z",
     "score": 55,
     "reason": "Builder signal: release, ships, weights, api",
@@ -619,7 +620,8 @@
     "deferred_at": "2026-05-15T10:31:52.225843Z",
     "defer_count": 1,
     "original_score": 55,
-    "original_reason": "Builder signal: release, ships, weights, api"
+    "original_reason": "Builder signal: release, ships, weights, api",
+    "rejected_at": "2026-05-15T12:58:46.427469Z"
   },
   {
     "id": "a881bb30f8e9",
@@ -656,5 +658,65 @@
     "is_llm_mode": false,
     "claire_note": "Chloe, schau dir das hier an. NVIDIA hat Nemotron 3 Nano Omni rausgebracht. Das ist ein Long-Context Multimodal LLM, der Text, Audio und Video verarbeiten kann.\n\nFür uns Builder heißt das: Wir können jetzt Agenten bauen, die nicht nur Code verstehen, sondern auch Dokumente, Voice-Chats oder Videostreams als Input nehmen. Stell dir vor, du trainierst einen QA-Agenten, der die komplette Doku-Suite *und* die letzten drei Kunden-Calls analysieren kann, um die beste Antwort zu finden. Das ist ein großer Schritt, um komplexere, realitätsnahe KI-Anwendungen zu entwickeln.",
     "chloe_note": "Das besteht den Ships Test. Es gibt ein spezifisches Modell (Nemotron 3 Nano Omni), das heruntergeladen und genutzt werden kann, um die beschriebenen multimodalen Agenten zu bauen. Der direkte Anwendungsfall für Entwickler ist klar."
+  },
+  {
+    "id": "2082e9e05769",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-15T12:58:42.764003Z",
+    "score": 4,
+    "reason": "Builder signal: api, ai, model, research",
+    "proposed_post": "Tracking the history of the now-deceased OpenAI Microsoft AGI clause. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Tracking the history of the now-deceased OpenAI Microsoft AGI clause",
+      "source": "Simon Willison",
+      "link": "https://simonwillison.net/2026/Apr/27/now-deceased-agi-clause/#atom-entries"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-15T12:58:46.586808Z",
+    "defer_count": 1,
+    "original_score": 4,
+    "original_reason": "Builder signal: api, ai, model, research"
+  },
+  {
+    "id": "9978762de7e8",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-15T12:58:44.116076Z",
+    "score": 7,
+    "reason": "Builder signal: available, api, ai",
+    "proposed_post": "OpenAI available at FedRAMP Moderate. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "OpenAI available at FedRAMP Moderate",
+      "source": "OpenAI News",
+      "link": "https://openai.com/index/openai-available-at-fedramp-moderate"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-15T12:58:46.658387Z",
+    "defer_count": 1,
+    "original_score": 7,
+    "original_reason": "Builder signal: available, api, ai"
+  },
+  {
+    "id": "15484a537e35",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-15T12:58:45.232569Z",
+    "score": 11,
+    "reason": "Builder signal: api, v0., claude , ai",
+    "proposed_post": "v0.20.1rc0: Add system_fingerprint field to OpenAI-compatible API responses (#40537). The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "v0.20.1rc0: Add system_fingerprint field to OpenAI-compatible API responses (#40537)",
+      "source": "vLLM Releases",
+      "link": "https://github.com/vllm-project/vllm/releases/tag/v0.20.1rc0"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-15T12:58:46.745641Z",
+    "defer_count": 1,
+    "original_score": 11,
+    "original_reason": "Builder signal: api, v0., claude , ai"
   }
 ]

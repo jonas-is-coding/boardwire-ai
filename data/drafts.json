@@ -1516,5 +1516,60 @@
     "post_text": "v0.20.0. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-15T10:31:45.986487Z"
+  },
+  {
+    "title": "v0.20.0",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.20.0",
+    "source": "vLLM Releases",
+    "score": 18,
+    "should_post": true,
+    "reason": "Builder signal: release, ships, weights, api",
+    "post_text": "v0.20.0. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-15T12:58:40.457172Z"
+  },
+  {
+    "title": "OpenAI models, Codex, and Managed Agents come to AWS",
+    "link": "https://openai.com/index/openai-on-aws",
+    "source": "OpenAI News",
+    "score": 9,
+    "should_post": true,
+    "reason": "Builder signal: available, agent, ai, model",
+    "post_text": "OpenAI models, Codex, and Managed Agents come to AWS. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-15T12:58:41.445427Z"
+  },
+  {
+    "title": "Tracking the history of the now-deceased OpenAI Microsoft AGI clause",
+    "link": "https://simonwillison.net/2026/Apr/27/now-deceased-agi-clause/#atom-entries",
+    "source": "Simon Willison",
+    "score": 4,
+    "should_post": true,
+    "reason": "Builder signal: api, ai, model, research",
+    "post_text": "Tracking the history of the now-deceased OpenAI Microsoft AGI clause. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-15T12:58:42.764003Z"
+  },
+  {
+    "title": "OpenAI available at FedRAMP Moderate",
+    "link": "https://openai.com/index/openai-available-at-fedramp-moderate",
+    "source": "OpenAI News",
+    "score": 7,
+    "should_post": true,
+    "reason": "Builder signal: available, api, ai",
+    "post_text": "OpenAI available at FedRAMP Moderate. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-15T12:58:44.116076Z"
+  },
+  {
+    "title": "v0.20.1rc0: Add system_fingerprint field to OpenAI-compatible API responses (#40537)",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.20.1rc0",
+    "source": "vLLM Releases",
+    "score": 11,
+    "should_post": true,
+    "reason": "Builder signal: api, v0., claude , ai",
+    "post_text": "v0.20.1rc0: Add system_fingerprint field to OpenAI-compatible API responses (#40537). The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-15T12:58:45.232569Z"
   }
 ]
