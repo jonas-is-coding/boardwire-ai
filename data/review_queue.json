@@ -661,7 +661,7 @@
   },
   {
     "id": "2082e9e05769",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-15T12:58:42.764003Z",
     "score": 4,
     "reason": "Builder signal: api, ai, model, research",
@@ -677,11 +677,12 @@
     "deferred_at": "2026-05-15T12:58:46.586808Z",
     "defer_count": 1,
     "original_score": 4,
-    "original_reason": "Builder signal: api, ai, model, research"
+    "original_reason": "Builder signal: api, ai, model, research",
+    "rejected_at": "2026-05-15T15:25:16.712415Z"
   },
   {
     "id": "9978762de7e8",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-15T12:58:44.116076Z",
     "score": 7,
     "reason": "Builder signal: available, api, ai",
@@ -697,11 +698,12 @@
     "deferred_at": "2026-05-15T12:58:46.658387Z",
     "defer_count": 1,
     "original_score": 7,
-    "original_reason": "Builder signal: available, api, ai"
+    "original_reason": "Builder signal: available, api, ai",
+    "rejected_at": "2026-05-15T15:25:16.645270Z"
   },
   {
     "id": "15484a537e35",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-15T12:58:45.232569Z",
     "score": 11,
     "reason": "Builder signal: api, v0., claude , ai",
@@ -717,6 +719,7 @@
     "deferred_at": "2026-05-15T12:58:46.745641Z",
     "defer_count": 1,
     "original_score": 11,
-    "original_reason": "Builder signal: api, v0., claude , ai"
+    "original_reason": "Builder signal: api, v0., claude , ai",
+    "rejected_at": "2026-05-15T15:25:16.588099Z"
   }
 ]
