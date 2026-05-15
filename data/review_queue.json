@@ -784,5 +784,65 @@
     "original_score": 7,
     "original_reason": "Builder signal: api, agent, ai",
     "rejected_at": "2026-05-15T19:46:05.981792Z"
+  },
+  {
+    "id": "633224bdc44f",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-15T21:11:02.196724Z",
+    "score": 29,
+    "reason": "Builder signal: release, open weight, weights, api",
+    "proposed_post": "DeepSeek V4 - almost on the frontier, a fraction of the price. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "DeepSeek V4 - almost on the frontier, a fraction of the price",
+      "source": "Simon Willison",
+      "link": "https://simonwillison.net/2026/Apr/24/deepseek-v4/#atom-entries"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-15T21:11:06.762550Z",
+    "defer_count": 1,
+    "original_score": 29,
+    "original_reason": "Builder signal: release, open weight, weights, api"
+  },
+  {
+    "id": "913986a80eb7",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-15T21:11:03.303371Z",
+    "score": 30,
+    "reason": "Builder signal: release, open source, agent, v2.",
+    "proposed_post": "Extract PDF text in your browser with LiteParse for the web. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Extract PDF text in your browser with LiteParse for the web",
+      "source": "Simon Willison",
+      "link": "https://simonwillison.net/2026/Apr/23/liteparse-for-the-web/#atom-entries"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-15T21:11:06.888846Z",
+    "defer_count": 1,
+    "original_score": 30,
+    "original_reason": "Builder signal: release, open source, agent, v2."
+  },
+  {
+    "id": "71ea77216516",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-15T21:11:05.266425Z",
+    "score": 40,
+    "reason": "Builder signal: release, available, open source, api",
+    "proposed_post": "A pelican for GPT-5.5 via the semi-official Codex backdoor API. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "A pelican for GPT-5.5 via the semi-official Codex backdoor API",
+      "source": "Simon Willison",
+      "link": "https://simonwillison.net/2026/Apr/23/gpt-5-5/#atom-entries"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-15T21:11:07.045457Z",
+    "defer_count": 1,
+    "original_score": 40,
+    "original_reason": "Builder signal: release, available, open source, api"
   }
 ]

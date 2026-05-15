@@ -1736,5 +1736,60 @@
     "post_text": "Our principles. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-15T19:46:05.818639Z"
+  },
+  {
+    "title": "DeepSeek V4 - almost on the frontier, a fraction of the price",
+    "link": "https://simonwillison.net/2026/Apr/24/deepseek-v4/#atom-entries",
+    "source": "Simon Willison",
+    "score": 29,
+    "should_post": true,
+    "reason": "Builder signal: release, open weight, weights, api",
+    "post_text": "DeepSeek V4 - almost on the frontier, a fraction of the price. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-15T21:11:02.196724Z"
+  },
+  {
+    "title": "DeepSeek-V4: a million-token context that agents can actually use",
+    "link": "https://huggingface.co/blog/deepseekv4",
+    "source": "Hugging Face Blog",
+    "score": 3,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "DeepSeek-V4: a million-token context that agents can actually use. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-15T21:11:03.302540Z"
+  },
+  {
+    "title": "Extract PDF text in your browser with LiteParse for the web",
+    "link": "https://simonwillison.net/2026/Apr/23/liteparse-for-the-web/#atom-entries",
+    "source": "Simon Willison",
+    "score": 30,
+    "should_post": true,
+    "reason": "Builder signal: release, open source, agent, v2.",
+    "post_text": "Extract PDF text in your browser with LiteParse for the web. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-15T21:11:03.303371Z"
+  },
+  {
+    "title": "v0.97.0",
+    "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.97.0",
+    "source": "Anthropic Python SDK Releases",
+    "score": 13,
+    "should_post": true,
+    "reason": "Builder signal: api, v0., changelog, sdk",
+    "post_text": "v0.97.0. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-15T21:11:04.418609Z"
+  },
+  {
+    "title": "A pelican for GPT-5.5 via the semi-official Codex backdoor API",
+    "link": "https://simonwillison.net/2026/Apr/23/gpt-5-5/#atom-entries",
+    "source": "Simon Willison",
+    "score": 40,
+    "should_post": true,
+    "reason": "Builder signal: release, available, open source, api",
+    "post_text": "A pelican for GPT-5.5 via the semi-official Codex backdoor API. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-15T21:11:05.266425Z"
   }
 ]
