@@ -1461,5 +1461,60 @@
     "post_text": "DeepInfra on Hugging Face Inference Providers 🔥. Inference and deployment improvements compound fast — check whether the numbers hold under sustained load, not just peak tests.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-15T07:30:49.031510Z"
+  },
+  {
+    "title": "v0.21.1rc0: [ROCm][CI] Stage B gating (#42025)",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.21.1rc0",
+    "source": "vLLM Releases",
+    "score": 5,
+    "should_post": true,
+    "reason": "Builder signal: v0., ai",
+    "post_text": "v0.21.1rc0: [ROCm][CI] Stage B gating (#42025). The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-15T10:31:42.026394Z"
+  },
+  {
+    "title": "Introducing NVIDIA Nemotron 3 Nano Omni: Long-Context Multimodal Intelligence for Documents, Audio and Video Agents",
+    "link": "https://huggingface.co/blog/nvidia/nemotron-3-nano-omni-multimodal-intelligence",
+    "source": "Hugging Face Blog",
+    "score": 5,
+    "should_post": true,
+    "reason": "Builder signal: agent, multimodal",
+    "post_text": "Introducing NVIDIA Nemotron 3 Nano Omni: Long-Context Multimodal Intelligence for Documents, Audio and Video Agents. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-15T10:31:43.208009Z"
+  },
+  {
+    "title": "Our commitment to community safety",
+    "link": "https://openai.com/index/our-commitment-to-community-safety",
+    "source": "OpenAI News",
+    "score": 3,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "Our commitment to community safety. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-15T10:31:44.561159Z"
+  },
+  {
+    "title": "OpenAI models, Codex, and Managed Agents come to AWS",
+    "link": "https://openai.com/index/openai-on-aws",
+    "source": "OpenAI News",
+    "score": 9,
+    "should_post": true,
+    "reason": "Builder signal: available, agent, ai, model",
+    "post_text": "OpenAI models, Codex, and Managed Agents come to AWS. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-15T10:31:44.561215Z"
+  },
+  {
+    "title": "v0.20.0",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.20.0",
+    "source": "vLLM Releases",
+    "score": 55,
+    "should_post": true,
+    "reason": "Builder signal: release, ships, weights, api",
+    "post_text": "v0.20.0. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-15T10:31:45.986487Z"
   }
 ]

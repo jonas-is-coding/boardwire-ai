@@ -580,5 +580,81 @@
     "is_llm_mode": false,
     "claire_note": "Chloe, der Simon Willison Artikel über LLM 0.32a0 ist definitiv was für uns.\n\nEr hat seine LLM Python Library und CLI Tools refactored – das ist ein großes Ding, weil seine Tools schon jetzt super sind, um schnell mit verschiedenen LLMs zu experimentieren. Jetzt hat er das Backend komplett umgebaut, um Modelle wie Claude 3 oder Gemini besser zu unterstützen. Das bedeutet, Entwickler können jetzt noch einfacher zwischen APIs wechseln und Prompts testen, ohne ihren Code groß anzupassen. Die Abstraktionsebene, die er da geschaffen hat, ist Gold wert für jeden, der nicht in einem Vendor-Lock-in landen will, wenn er mit LLMs arbeitet. Er spricht von \"backwards-compatible refactor\", was wichtig ist, da bestehende Projekte nicht sofort auseinanderfallen.",
     "chloe_note": "Dieser Artikel besteht den Ships Test. Die Referenz auf die refactored LLM Python Library und die CLI Tools zeigt klar auf etwas, das Entwickler herunterladen und nutzen können, um direkt mit verschiedenen LLMs zu experimentieren. Die verbesserte Abstraktionsebene für APIs ist ein direkter Mehrwert für die Integration und vermeidet Vendor-Lock-in."
+  },
+  {
+    "id": "34f7ae9e12e1",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-15T10:31:44.561215Z",
+    "score": 9,
+    "reason": "Builder signal: available, agent, ai, model",
+    "proposed_post": "OpenAI models, Codex, and Managed Agents come to AWS. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "OpenAI models, Codex, and Managed Agents come to AWS",
+      "source": "OpenAI News",
+      "link": "https://openai.com/index/openai-on-aws"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-15T10:31:52.140717Z",
+    "defer_count": 1,
+    "original_score": 9,
+    "original_reason": "Builder signal: available, agent, ai, model"
+  },
+  {
+    "id": "93fb51855a24",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-15T10:31:45.986487Z",
+    "score": 55,
+    "reason": "Builder signal: release, ships, weights, api",
+    "proposed_post": "v0.20.0. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "v0.20.0",
+      "source": "vLLM Releases",
+      "link": "https://github.com/vllm-project/vllm/releases/tag/v0.20.0"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-15T10:31:52.225843Z",
+    "defer_count": 1,
+    "original_score": 55,
+    "original_reason": "Builder signal: release, ships, weights, api"
+  },
+  {
+    "id": "a881bb30f8e9",
+    "status": "approved",
+    "created_at": "2026-05-15T10:31:42.026394Z",
+    "score": 5,
+    "reason": "Builder signal: v0., ai",
+    "proposed_post": "v0.21.1rc0: [ROCm][CI] Stage B gating (#42025). The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "v0.21.1rc0: [ROCm][CI] Stage B gating (#42025)",
+      "source": "vLLM Releases",
+      "link": "https://github.com/vllm-project/vllm/releases/tag/v0.21.1rc0"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Hey Chloe,\n\nCheck this out: vLLM hat einen Release Candidate für v0.21.1rc0 draußen, der ROCm Stage B Gating integriert. Das ist ein großer Schritt für Performance und Stabilität auf AMD GPUs. Entwickler, die vLLM mit AMD-Hardware nutzen, können hier potenziell signifikante Verbesserungen bei der Inference-Geschwindigkeit und Zuverlässigkeit erwarten.",
+    "chloe_note": "Dieses Signal besteht den Ships Test. Der Release Candidate bietet eine spezifische Version zum Herunterladen und Ausprobieren, die direkt auf AMD-Hardware angewendet werden kann, um die versprochenen Performance-Verbesserungen zu evaluieren. Entwickler können die Integration von ROCm Stage B Gating sofort testen."
+  },
+  {
+    "id": "5bf2a01ca419",
+    "status": "approved",
+    "created_at": "2026-05-15T10:31:43.208009Z",
+    "score": 5,
+    "reason": "Builder signal: agent, multimodal",
+    "proposed_post": "Introducing NVIDIA Nemotron 3 Nano Omni: Long-Context Multimodal Intelligence for Documents, Audio and Video Agents. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Introducing NVIDIA Nemotron 3 Nano Omni: Long-Context Multimodal Intelligence for Documents, Audio and Video Agents",
+      "source": "Hugging Face Blog",
+      "link": "https://huggingface.co/blog/nvidia/nemotron-3-nano-omni-multimodal-intelligence"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Chloe, schau dir das hier an. NVIDIA hat Nemotron 3 Nano Omni rausgebracht. Das ist ein Long-Context Multimodal LLM, der Text, Audio und Video verarbeiten kann.\n\nFür uns Builder heißt das: Wir können jetzt Agenten bauen, die nicht nur Code verstehen, sondern auch Dokumente, Voice-Chats oder Videostreams als Input nehmen. Stell dir vor, du trainierst einen QA-Agenten, der die komplette Doku-Suite *und* die letzten drei Kunden-Calls analysieren kann, um die beste Antwort zu finden. Das ist ein großer Schritt, um komplexere, realitätsnahe KI-Anwendungen zu entwickeln.",
+    "chloe_note": "Das besteht den Ships Test. Es gibt ein spezifisches Modell (Nemotron 3 Nano Omni), das heruntergeladen und genutzt werden kann, um die beschriebenen multimodalen Agenten zu bauen. Der direkte Anwendungsfall für Entwickler ist klar."
   }
 ]
