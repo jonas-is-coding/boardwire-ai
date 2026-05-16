@@ -1127,9 +1127,49 @@
     },
     "card_path": null,
     "is_llm_mode": false,
-    "deferred_at": "2026-05-16T20:56:51.933762Z",
-    "defer_count": 1,
+    "deferred_at": "2026-05-16T21:57:12.381612Z",
+    "defer_count": 2,
     "original_score": 19,
     "original_reason": "Builder signal: release, llm, claude , plugin"
+  },
+  {
+    "id": "5e6675110a0f",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-16T21:57:09.666519Z",
+    "score": 4,
+    "reason": "Builder signal: ai, model, research",
+    "proposed_post": "Introducing GPT-Rosalind for life sciences research. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Introducing GPT-Rosalind for life sciences research",
+      "source": "OpenAI News",
+      "link": "https://openai.com/index/introducing-gpt-rosalind"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-16T21:57:12.555411Z",
+    "defer_count": 1,
+    "original_score": 4,
+    "original_reason": "Builder signal: ai, model, research"
+  },
+  {
+    "id": "6148997d332e",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-16T21:57:10.991036Z",
+    "score": 4,
+    "reason": "Builder signal: api, ai",
+    "proposed_post": "Accelerating the cyber defense ecosystem that protects us all. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Accelerating the cyber defense ecosystem that protects us all",
+      "source": "OpenAI News",
+      "link": "https://openai.com/index/accelerating-cyber-defense-ecosystem"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-16T21:57:12.683647Z",
+    "defer_count": 1,
+    "original_score": 4,
+    "original_reason": "Builder signal: api, ai"
   }
 ]

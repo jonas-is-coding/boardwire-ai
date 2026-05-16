@@ -2396,5 +2396,60 @@
     "post_text": "Qwen3.6-35B-A3B on my laptop drew me a better pelican than Claude Opus 4.7. A benchmark result only matters if the eval setup is public and the tasks map to something you actually need in production.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-16T20:56:49.923381Z"
+  },
+  {
+    "title": "Qwen3.6-35B-A3B on my laptop drew me a better pelican than Claude Opus 4.7",
+    "link": "https://simonwillison.net/2026/Apr/16/qwen-beats-opus/#atom-entries",
+    "source": "Simon Willison",
+    "score": 12,
+    "should_post": true,
+    "reason": "Builder signal: release, llm, claude , plugin",
+    "post_text": "Qwen3.6-35B-A3B on my laptop drew me a better pelican than Claude Opus 4.7. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-16T21:57:07.456058Z"
+  },
+  {
+    "title": "v0.96.0",
+    "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.96.0",
+    "source": "Anthropic Python SDK Releases",
+    "score": 17,
+    "should_post": true,
+    "reason": "Builder signal: release, api, v0., changelog",
+    "post_text": "v0.96.0. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-16T21:57:08.480411Z"
+  },
+  {
+    "title": "Codex for (almost) everything",
+    "link": "https://openai.com/index/codex-for-almost-everything",
+    "source": "OpenAI News",
+    "score": 2,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "Codex for (almost) everything. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-16T21:57:09.666462Z"
+  },
+  {
+    "title": "Introducing GPT-Rosalind for life sciences research",
+    "link": "https://openai.com/index/introducing-gpt-rosalind",
+    "source": "OpenAI News",
+    "score": 4,
+    "should_post": true,
+    "reason": "Builder signal: ai, model, research",
+    "post_text": "Introducing GPT-Rosalind for life sciences research. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-16T21:57:09.666519Z"
+  },
+  {
+    "title": "Accelerating the cyber defense ecosystem that protects us all",
+    "link": "https://openai.com/index/accelerating-cyber-defense-ecosystem",
+    "source": "OpenAI News",
+    "score": 4,
+    "should_post": true,
+    "reason": "Builder signal: api, ai",
+    "post_text": "Accelerating the cyber defense ecosystem that protects us all. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-16T21:57:10.991036Z"
   }
 ]
