@@ -1846,5 +1846,60 @@
     "post_text": "v0.25.0-rc0: ci: speed up release builds (#15982). The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-15T23:00:47.444733Z"
+  },
+  {
+    "title": "Databricks brings GPT-5.5 to enterprise agent workflows",
+    "link": "https://openai.com/index/databricks",
+    "source": "OpenAI News",
+    "score": 7,
+    "should_post": true,
+    "reason": "Builder signal: agent, model, benchmark",
+    "post_text": "Databricks brings GPT-5.5 to enterprise agent workflows. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-16T03:39:18.457029Z"
+  },
+  {
+    "title": "GPT-5.5 System Card",
+    "link": "https://openai.com/index/gpt-5-5-system-card",
+    "source": "OpenAI News",
+    "score": 0,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "GPT-5.5 System Card. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-16T03:39:19.678215Z"
+  },
+  {
+    "title": "Introducing GPT-5.5",
+    "link": "https://openai.com/index/introducing-gpt-5-5",
+    "source": "OpenAI News",
+    "score": 5,
+    "should_post": true,
+    "reason": "Builder signal: model, research, tool",
+    "post_text": "Introducing GPT-5.5. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-16T03:39:19.678354Z"
+  },
+  {
+    "title": "Plugins and skills",
+    "link": "https://openai.com/academy/codex-plugins-and-skills",
+    "source": "OpenAI News",
+    "score": 4,
+    "should_post": true,
+    "reason": "Builder signal: plugin, tool",
+    "post_text": "Plugins and skills. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-16T03:39:21.066900Z"
+  },
+  {
+    "title": "How to get started with Codex",
+    "link": "https://openai.com/academy/codex-how-to-start",
+    "source": "OpenAI News",
+    "score": 0,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "How to get started with Codex. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-16T03:39:22.259125Z"
   }
 ]
