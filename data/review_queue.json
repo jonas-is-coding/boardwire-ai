@@ -901,5 +901,85 @@
     "is_llm_mode": false,
     "claire_note": "Chloe, das ist ein Volltreffer für unsere Developer. OpenAI hat WebSockets in der Responses API implementiert, um agentic Workflows zu beschleunigen.\n\nDas ist kein theoretischer Kram. Die zeigen konkret, wie sie mit WebSockets und Connection-Scoped Caching API-Overhead reduziert und die Modelllatenz verbessert haben, speziell am Beispiel des Codex Agent Loops. Jeder, der an schnelleren, effizienteren Agenten-Systemen baut, kann sich das anschauen und direkt anwenden. Endlich mal handfeste Best Practices von OpenAI selbst.",
     "chloe_note": "Claire, das ist ein klares Go. Die Implementierung von WebSockets in der Responses API und das Connection-Scoped Caching sind direkt anwendbar für Entwickler, die Agenten-Systeme optimieren wollen. Der Artikel bietet konkrete Best Practices und Code-Beispiele, die man herunterladen und nutzen kann."
+  },
+  {
+    "id": "02a5596f6eb4",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-16T11:56:07.800936Z",
+    "score": 7,
+    "reason": "Builder signal: open-weight, llm",
+    "proposed_post": "Recent Developments in LLM Architectures: KV Sharing, mHC, and Compressed Attention. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Recent Developments in LLM Architectures: KV Sharing, mHC, and Compressed Attention",
+      "source": "Sebastian Raschka (Ahead of AI)",
+      "link": "https://magazine.sebastianraschka.com/p/recent-developments-in-llm-architectures"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-16T11:56:12.939851Z",
+    "defer_count": 1,
+    "original_score": 7,
+    "original_reason": "Builder signal: open-weight, llm"
+  },
+  {
+    "id": "18b4edda85f7",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-16T11:56:09.022483Z",
+    "score": 17,
+    "reason": "Builder signal: available, agent, claude code, claude ",
+    "proposed_post": "Is Claude Code going to cost $100/month? Probably not - it's all very confusing. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Is Claude Code going to cost $100/month? Probably not - it's all very confusing",
+      "source": "Simon Willison",
+      "link": "https://simonwillison.net/2026/Apr/22/claude-code-confusion/#atom-entries"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-16T11:56:13.088748Z",
+    "defer_count": 1,
+    "original_score": 17,
+    "original_reason": "Builder signal: available, agent, claude code, claude "
+  },
+  {
+    "id": "70db1067f028",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-16T11:56:10.453941Z",
+    "score": 7,
+    "reason": "Builder signal: open-weight, ai, model",
+    "proposed_post": "Introducing OpenAI Privacy Filter. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Introducing OpenAI Privacy Filter",
+      "source": "OpenAI News",
+      "link": "https://openai.com/index/introducing-openai-privacy-filter"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-16T11:56:13.228516Z",
+    "defer_count": 1,
+    "original_score": 7,
+    "original_reason": "Builder signal: open-weight, ai, model"
+  },
+  {
+    "id": "410f7c1439d7",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-16T11:56:11.575303Z",
+    "score": 27,
+    "reason": "Builder signal: release, released, available, api",
+    "proposed_post": "Where's the raccoon with the ham radio? (ChatGPT Images 2.0). The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Where's the raccoon with the ham radio? (ChatGPT Images 2.0)",
+      "source": "Simon Willison",
+      "link": "https://simonwillison.net/2026/Apr/21/gpt-image-2/#atom-entries"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-16T11:56:13.337906Z",
+    "defer_count": 1,
+    "original_score": 27,
+    "original_reason": "Builder signal: release, released, available, api"
   }
 ]

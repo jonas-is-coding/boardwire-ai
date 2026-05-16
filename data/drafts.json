@@ -2066,5 +2066,60 @@
     "post_text": "Workspace agents. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-16T10:20:54.047343Z"
+  },
+  {
+    "title": "Recent Developments in LLM Architectures: KV Sharing, mHC, and Compressed Attention",
+    "link": "https://magazine.sebastianraschka.com/p/recent-developments-in-llm-architectures",
+    "source": "Sebastian Raschka (Ahead of AI)",
+    "score": 7,
+    "should_post": true,
+    "reason": "Builder signal: open-weight, llm",
+    "post_text": "Recent Developments in LLM Architectures: KV Sharing, mHC, and Compressed Attention. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-16T11:56:07.800936Z"
+  },
+  {
+    "title": "OpenAI and Malta partner to bring ChatGPT Plus to all citizens",
+    "link": "https://openai.com/index/malta-chatgpt-plus-partnership",
+    "source": "OpenAI News",
+    "score": 3,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "OpenAI and Malta partner to bring ChatGPT Plus to all citizens. Training improvements matter most when they reduce cost or data requirements — see whether the method is reproducible on smaller hardware.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-16T11:56:09.022128Z"
+  },
+  {
+    "title": "Is Claude Code going to cost $100/month? Probably not - it's all very confusing",
+    "link": "https://simonwillison.net/2026/Apr/22/claude-code-confusion/#atom-entries",
+    "source": "Simon Willison",
+    "score": 17,
+    "should_post": true,
+    "reason": "Builder signal: available, agent, claude code, claude ",
+    "post_text": "Is Claude Code going to cost $100/month? Probably not - it's all very confusing. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-16T11:56:09.022483Z"
+  },
+  {
+    "title": "Introducing OpenAI Privacy Filter",
+    "link": "https://openai.com/index/introducing-openai-privacy-filter",
+    "source": "OpenAI News",
+    "score": 7,
+    "should_post": true,
+    "reason": "Builder signal: open-weight, ai, model",
+    "post_text": "Introducing OpenAI Privacy Filter. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-16T11:56:10.453941Z"
+  },
+  {
+    "title": "Where's the raccoon with the ham radio? (ChatGPT Images 2.0)",
+    "link": "https://simonwillison.net/2026/Apr/21/gpt-image-2/#atom-entries",
+    "source": "Simon Willison",
+    "score": 27,
+    "should_post": true,
+    "reason": "Builder signal: release, released, available, api",
+    "post_text": "Where's the raccoon with the ham radio? (ChatGPT Images 2.0). The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-16T11:56:11.575303Z"
   }
 ]
