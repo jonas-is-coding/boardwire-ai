@@ -904,7 +904,7 @@
   },
   {
     "id": "02a5596f6eb4",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-16T11:56:07.800936Z",
     "score": 7,
     "reason": "Builder signal: open-weight, llm",
@@ -920,11 +920,12 @@
     "deferred_at": "2026-05-16T11:56:12.939851Z",
     "defer_count": 1,
     "original_score": 7,
-    "original_reason": "Builder signal: open-weight, llm"
+    "original_reason": "Builder signal: open-weight, llm",
+    "rejected_at": "2026-05-16T13:49:00.473551Z"
   },
   {
     "id": "18b4edda85f7",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-16T11:56:09.022483Z",
     "score": 17,
     "reason": "Builder signal: available, agent, claude code, claude ",
@@ -940,11 +941,12 @@
     "deferred_at": "2026-05-16T11:56:13.088748Z",
     "defer_count": 1,
     "original_score": 17,
-    "original_reason": "Builder signal: available, agent, claude code, claude "
+    "original_reason": "Builder signal: available, agent, claude code, claude ",
+    "rejected_at": "2026-05-16T13:49:00.333905Z"
   },
   {
     "id": "70db1067f028",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-16T11:56:10.453941Z",
     "score": 7,
     "reason": "Builder signal: open-weight, ai, model",
@@ -960,11 +962,12 @@
     "deferred_at": "2026-05-16T11:56:13.228516Z",
     "defer_count": 1,
     "original_score": 7,
-    "original_reason": "Builder signal: open-weight, ai, model"
+    "original_reason": "Builder signal: open-weight, ai, model",
+    "rejected_at": "2026-05-16T13:49:00.585434Z"
   },
   {
     "id": "410f7c1439d7",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-16T11:56:11.575303Z",
     "score": 27,
     "reason": "Builder signal: release, released, available, api",
@@ -980,6 +983,7 @@
     "deferred_at": "2026-05-16T11:56:13.337906Z",
     "defer_count": 1,
     "original_score": 27,
-    "original_reason": "Builder signal: release, released, available, api"
+    "original_reason": "Builder signal: release, released, available, api",
+    "rejected_at": "2026-05-16T13:49:00.215652Z"
   }
 ]

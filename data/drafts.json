@@ -2121,5 +2121,60 @@
     "post_text": "Where's the raccoon with the ham radio? (ChatGPT Images 2.0). The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-16T11:56:11.575303Z"
+  },
+  {
+    "title": "Where's the raccoon with the ham radio? (ChatGPT Images 2.0)",
+    "link": "https://simonwillison.net/2026/Apr/21/gpt-image-2/#atom-entries",
+    "source": "Simon Willison",
+    "score": 15,
+    "should_post": true,
+    "reason": "Builder signal: release, released, available, api",
+    "post_text": "Where's the raccoon with the ham radio? (ChatGPT Images 2.0). The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-16T13:48:54.282378Z"
+  },
+  {
+    "title": "Is Claude Code going to cost $100/month? Probably not - it's all very confusing",
+    "link": "https://simonwillison.net/2026/Apr/22/claude-code-confusion/#atom-entries",
+    "source": "Simon Willison",
+    "score": 14,
+    "should_post": true,
+    "reason": "Builder signal: available, agent, claude code, claude ",
+    "post_text": "Is Claude Code going to cost $100/month? Probably not - it's all very confusing. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-16T13:48:56.135442Z"
+  },
+  {
+    "title": "Recent Developments in LLM Architectures: KV Sharing, mHC, and Compressed Attention",
+    "link": "https://magazine.sebastianraschka.com/p/recent-developments-in-llm-architectures",
+    "source": "Sebastian Raschka (Ahead of AI)",
+    "score": 7,
+    "should_post": true,
+    "reason": "Builder signal: open-weight, llm",
+    "post_text": "Recent Developments in LLM Architectures: KV Sharing, mHC, and Compressed Attention. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-16T13:48:57.985331Z"
+  },
+  {
+    "title": "Introducing OpenAI Privacy Filter",
+    "link": "https://openai.com/index/introducing-openai-privacy-filter",
+    "source": "OpenAI News",
+    "score": 7,
+    "should_post": true,
+    "reason": "Builder signal: open-weight, ai, model",
+    "post_text": "Introducing OpenAI Privacy Filter. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-16T13:48:59.231117Z"
+  },
+  {
+    "title": "Partnering with industry leaders to accelerate AI transformation",
+    "link": "https://deepmind.google/blog/partnering-with-industry-leaders-to-accelerate-ai-transformation/",
+    "source": "Google DeepMind Blog",
+    "score": 1,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "Partnering with industry leaders to accelerate AI transformation. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-16T13:49:00.128196Z"
   }
 ]
