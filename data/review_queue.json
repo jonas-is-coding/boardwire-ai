@@ -988,7 +988,7 @@
   },
   {
     "id": "3df1ac9bba13",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-16T15:02:20.454947Z",
     "score": 5,
     "reason": "Builder signal: launches, ai",
@@ -1004,6 +1004,47 @@
     "deferred_at": "2026-05-16T15:02:21.935653Z",
     "defer_count": 1,
     "original_score": 5,
-    "original_reason": "Builder signal: launches, ai"
+    "original_reason": "Builder signal: launches, ai",
+    "rejected_at": "2026-05-16T17:04:22.725751Z"
+  },
+  {
+    "id": "4cacb416c050",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-16T17:04:20.302449Z",
+    "score": 11,
+    "reason": "Builder signal: release, open model, ai, model",
+    "proposed_post": "Latest open artifacts (#21): Open model bonanza! Gemma 4, DeepSeek V4, Kimi K2.6, MiMo 2.5, GLM-5.1 & others. On CAISI's V4 assessment. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Latest open artifacts (#21): Open model bonanza! Gemma 4, DeepSeek V4, Kimi K2.6, MiMo 2.5, GLM-5.1 & others. On CAISI's V4 assessment.",
+      "source": "Nathan Lambert (Interconnects)",
+      "link": "https://www.interconnects.ai/p/latest-open-artifacts-21-open-model"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-16T17:04:22.937673Z",
+    "defer_count": 1,
+    "original_score": 11,
+    "original_reason": "Builder signal: release, open model, ai, model"
+  },
+  {
+    "id": "6e30c9a8f566",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-16T17:04:21.510903Z",
+    "score": 6,
+    "reason": "Builder signal: ai, model, research, training",
+    "proposed_post": "Import AI 454: Automating alignment research; safety study of a Chinese model; HiFloat4. Training improvements matter most when they reduce cost or data requirements — see whether the method is reproducible on smaller hardware.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Import AI 454: Automating alignment research; safety study of a Chinese model; HiFloat4",
+      "source": "Import AI (Jack Clark)",
+      "link": "https://jack-clark.net/2026/04/20/import-ai-454-automating-alignment-research-safety-study-of-a-chinese-model-hifloat4/"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-16T17:04:23.129268Z",
+    "defer_count": 1,
+    "original_score": 6,
+    "original_reason": "Builder signal: ai, model, research, training"
   }
 ]

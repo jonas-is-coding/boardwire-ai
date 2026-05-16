@@ -2231,5 +2231,60 @@
     "post_text": "AI and the Future of Cybersecurity: Why Openness Matters. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-16T15:02:21.815886Z"
+  },
+  {
+    "title": "Scaling Codex to enterprises worldwide",
+    "link": "https://openai.com/index/scaling-codex-to-enterprises-worldwide",
+    "source": "OpenAI News",
+    "score": 5,
+    "should_post": true,
+    "reason": "Builder signal: launches, ai",
+    "post_text": "Scaling Codex to enterprises worldwide. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-16T17:04:19.340625Z"
+  },
+  {
+    "title": "Latest open artifacts (#21): Open model bonanza! Gemma 4, DeepSeek V4, Kimi K2.6, MiMo 2.5, GLM-5.1 & others. On CAISI's V4 assessment.",
+    "link": "https://www.interconnects.ai/p/latest-open-artifacts-21-open-model",
+    "source": "Nathan Lambert (Interconnects)",
+    "score": 11,
+    "should_post": true,
+    "reason": "Builder signal: release, open model, ai, model",
+    "post_text": "Latest open artifacts (#21): Open model bonanza! Gemma 4, DeepSeek V4, Kimi K2.6, MiMo 2.5, GLM-5.1 & others. On CAISI's V4 assessment. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-16T17:04:20.302449Z"
+  },
+  {
+    "title": "Reading today's open-closed performance gap",
+    "link": "https://www.interconnects.ai/p/reading-todays-open-closed-performance",
+    "source": "Nathan Lambert (Interconnects)",
+    "score": 0,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "Reading today's open-closed performance gap. A benchmark result only matters if the eval setup is public and the tasks map to something you actually need in production.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-16T17:04:21.510594Z"
+  },
+  {
+    "title": "Import AI 454: Automating alignment research; safety study of a Chinese model; HiFloat4",
+    "link": "https://jack-clark.net/2026/04/20/import-ai-454-automating-alignment-research-safety-study-of-a-chinese-model-hifloat4/",
+    "source": "Import AI (Jack Clark)",
+    "score": 6,
+    "should_post": true,
+    "reason": "Builder signal: ai, model, research, training",
+    "post_text": "Import AI 454: Automating alignment research; safety study of a Chinese model; HiFloat4. Training improvements matter most when they reduce cost or data requirements — see whether the method is reproducible on smaller hardware.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-16T17:04:21.510903Z"
+  },
+  {
+    "title": "OpenAI helps Hyatt advance AI among colleagues",
+    "link": "https://openai.com/index/hyatt-advances-ai-with-chatgpt-enterprise",
+    "source": "OpenAI News",
+    "score": 1,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "OpenAI helps Hyatt advance AI among colleagues. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-16T17:04:22.645234Z"
   }
 ]
