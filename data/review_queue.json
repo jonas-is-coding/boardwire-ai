@@ -1051,7 +1051,7 @@
   },
   {
     "id": "40586eab4b7f",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-16T19:13:34.936033Z",
     "score": 33,
     "reason": "Builder signal: release, available, api, agent",
@@ -1067,11 +1067,12 @@
     "deferred_at": "2026-05-16T19:13:39.538735Z",
     "defer_count": 1,
     "original_score": 33,
-    "original_reason": "Builder signal: release, available, api, agent"
+    "original_reason": "Builder signal: release, available, api, agent",
+    "rejected_at": "2026-05-16T20:56:51.532226Z"
   },
   {
     "id": "d73b9d41a441",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-16T19:13:36.354722Z",
     "score": 13,
     "reason": "Builder signal: release, open-weight, llm, model",
@@ -1087,11 +1088,12 @@
     "deferred_at": "2026-05-16T19:13:39.669080Z",
     "defer_count": 1,
     "original_score": 13,
-    "original_reason": "Builder signal: release, open-weight, llm, model"
+    "original_reason": "Builder signal: release, open-weight, llm, model",
+    "rejected_at": "2026-05-16T20:56:51.771366Z"
   },
   {
     "id": "1603ba5025a1",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-16T19:13:37.692230Z",
     "score": 16,
     "reason": "Builder signal: agent, inference, claude code, claude ",
@@ -1107,6 +1109,27 @@
     "deferred_at": "2026-05-16T19:13:39.848767Z",
     "defer_count": 1,
     "original_score": 16,
-    "original_reason": "Builder signal: agent, inference, claude code, claude "
+    "original_reason": "Builder signal: agent, inference, claude code, claude ",
+    "rejected_at": "2026-05-16T20:56:51.671266Z"
+  },
+  {
+    "id": "a0b656d7140f",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-16T20:56:49.923381Z",
+    "score": 19,
+    "reason": "Builder signal: release, llm, claude , plugin",
+    "proposed_post": "Qwen3.6-35B-A3B on my laptop drew me a better pelican than Claude Opus 4.7. A benchmark result only matters if the eval setup is public and the tasks map to something you actually need in production.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Qwen3.6-35B-A3B on my laptop drew me a better pelican than Claude Opus 4.7",
+      "source": "Simon Willison",
+      "link": "https://simonwillison.net/2026/Apr/16/qwen-beats-opus/#atom-entries"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-16T20:56:51.933762Z",
+    "defer_count": 1,
+    "original_score": 19,
+    "original_reason": "Builder signal: release, llm, claude , plugin"
   }
 ]

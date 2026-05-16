@@ -2341,5 +2341,60 @@
     "post_text": "Join us at PyCon US 2026 in Long Beach - we have new AI and security tracks this year. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-16T19:13:37.692230Z"
+  },
+  {
+    "title": "Changes in the system prompt between Claude Opus 4.6 and 4.7",
+    "link": "https://simonwillison.net/2026/Apr/18/opus-system-prompt/#atom-entries",
+    "source": "Simon Willison",
+    "score": 17,
+    "should_post": true,
+    "reason": "Builder signal: release, available, api, agent",
+    "post_text": "Changes in the system prompt between Claude Opus 4.6 and 4.7. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-16T20:56:45.805607Z"
+  },
+  {
+    "title": "Join us at PyCon US 2026 in Long Beach - we have new AI and security tracks this year",
+    "link": "https://simonwillison.net/2026/Apr/17/pycon-us-2026/#atom-entries",
+    "source": "Simon Willison",
+    "score": 14,
+    "should_post": true,
+    "reason": "Builder signal: agent, inference, claude code, claude ",
+    "post_text": "Join us at PyCon US 2026 in Long Beach - we have new AI and security tracks this year. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-16T20:56:47.029360Z"
+  },
+  {
+    "title": "My Workflow for Understanding LLM Architectures",
+    "link": "https://magazine.sebastianraschka.com/p/workflow-for-understanding-llms",
+    "source": "Sebastian Raschka (Ahead of AI)",
+    "score": 13,
+    "should_post": true,
+    "reason": "Builder signal: release, open-weight, llm, model",
+    "post_text": "My Workflow for Understanding LLM Architectures. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-16T20:56:48.534744Z"
+  },
+  {
+    "title": "Building an emoji list generator with the GitHub Copilot CLI",
+    "link": "https://github.blog/ai-and-ml/github-copilot/building-an-emoji-list-generator-with-the-github-copilot-cli/",
+    "source": "GitHub Blog AI",
+    "score": 1,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "Building an emoji list generator with the GitHub Copilot CLI. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-16T20:56:49.923113Z"
+  },
+  {
+    "title": "Qwen3.6-35B-A3B on my laptop drew me a better pelican than Claude Opus 4.7",
+    "link": "https://simonwillison.net/2026/Apr/16/qwen-beats-opus/#atom-entries",
+    "source": "Simon Willison",
+    "score": 19,
+    "should_post": true,
+    "reason": "Builder signal: release, llm, claude , plugin",
+    "post_text": "Qwen3.6-35B-A3B on my laptop drew me a better pelican than Claude Opus 4.7. A benchmark result only matters if the eval setup is public and the tasks map to something you actually need in production.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-16T20:56:49.923381Z"
   }
 ]
