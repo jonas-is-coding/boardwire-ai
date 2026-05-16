@@ -1009,7 +1009,7 @@
   },
   {
     "id": "4cacb416c050",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-16T17:04:20.302449Z",
     "score": 11,
     "reason": "Builder signal: release, open model, ai, model",
@@ -1025,11 +1025,12 @@
     "deferred_at": "2026-05-16T17:04:22.937673Z",
     "defer_count": 1,
     "original_score": 11,
-    "original_reason": "Builder signal: release, open model, ai, model"
+    "original_reason": "Builder signal: release, open model, ai, model",
+    "rejected_at": "2026-05-16T19:13:39.225178Z"
   },
   {
     "id": "6e30c9a8f566",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-16T17:04:21.510903Z",
     "score": 6,
     "reason": "Builder signal: ai, model, research, training",
@@ -1045,6 +1046,67 @@
     "deferred_at": "2026-05-16T17:04:23.129268Z",
     "defer_count": 1,
     "original_score": 6,
-    "original_reason": "Builder signal: ai, model, research, training"
+    "original_reason": "Builder signal: ai, model, research, training",
+    "rejected_at": "2026-05-16T19:13:39.387532Z"
+  },
+  {
+    "id": "40586eab4b7f",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-16T19:13:34.936033Z",
+    "score": 33,
+    "reason": "Builder signal: release, available, api, agent",
+    "proposed_post": "Changes in the system prompt between Claude Opus 4.6 and 4.7. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Changes in the system prompt between Claude Opus 4.6 and 4.7",
+      "source": "Simon Willison",
+      "link": "https://simonwillison.net/2026/Apr/18/opus-system-prompt/#atom-entries"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-16T19:13:39.538735Z",
+    "defer_count": 1,
+    "original_score": 33,
+    "original_reason": "Builder signal: release, available, api, agent"
+  },
+  {
+    "id": "d73b9d41a441",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-16T19:13:36.354722Z",
+    "score": 13,
+    "reason": "Builder signal: release, open-weight, llm, model",
+    "proposed_post": "My Workflow for Understanding LLM Architectures. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "My Workflow for Understanding LLM Architectures",
+      "source": "Sebastian Raschka (Ahead of AI)",
+      "link": "https://magazine.sebastianraschka.com/p/workflow-for-understanding-llms"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-16T19:13:39.669080Z",
+    "defer_count": 1,
+    "original_score": 13,
+    "original_reason": "Builder signal: release, open-weight, llm, model"
+  },
+  {
+    "id": "1603ba5025a1",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-16T19:13:37.692230Z",
+    "score": 16,
+    "reason": "Builder signal: agent, inference, claude code, claude ",
+    "proposed_post": "Join us at PyCon US 2026 in Long Beach - we have new AI and security tracks this year. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Join us at PyCon US 2026 in Long Beach - we have new AI and security tracks this year",
+      "source": "Simon Willison",
+      "link": "https://simonwillison.net/2026/Apr/17/pycon-us-2026/#atom-entries"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-16T19:13:39.848767Z",
+    "defer_count": 1,
+    "original_score": 16,
+    "original_reason": "Builder signal: agent, inference, claude code, claude "
   }
 ]
