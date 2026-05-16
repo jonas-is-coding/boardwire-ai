@@ -985,5 +985,25 @@
     "original_score": 27,
     "original_reason": "Builder signal: release, released, available, api",
     "rejected_at": "2026-05-16T13:49:00.215652Z"
+  },
+  {
+    "id": "3df1ac9bba13",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-16T15:02:20.454947Z",
+    "score": 5,
+    "reason": "Builder signal: launches, ai",
+    "proposed_post": "Scaling Codex to enterprises worldwide. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Scaling Codex to enterprises worldwide",
+      "source": "OpenAI News",
+      "link": "https://openai.com/index/scaling-codex-to-enterprises-worldwide"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-16T15:02:21.935653Z",
+    "defer_count": 1,
+    "original_score": 5,
+    "original_reason": "Builder signal: launches, ai"
   }
 ]

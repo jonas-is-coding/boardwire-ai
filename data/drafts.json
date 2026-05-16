@@ -2176,5 +2176,60 @@
     "post_text": "Partnering with industry leaders to accelerate AI transformation. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-16T13:49:00.128196Z"
+  },
+  {
+    "title": "Introducing ChatGPT Images 2.0",
+    "link": "https://openai.com/index/introducing-chatgpt-images-2-0",
+    "source": "OpenAI News",
+    "score": 2,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "Introducing ChatGPT Images 2.0. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-16T15:02:19.515094Z"
+  },
+  {
+    "title": "QIMMA قِمّة ⛰: A Quality-First Arabic LLM Leaderboard",
+    "link": "https://huggingface.co/blog/tiiuae/qimma-arabic-leaderboard",
+    "source": "Hugging Face Blog",
+    "score": 3,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "QIMMA قِمّة ⛰: A Quality-First Arabic LLM Leaderboard. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-16T15:02:19.515188Z"
+  },
+  {
+    "title": "v0.14.21",
+    "link": "https://github.com/run-llama/llama_index/releases/tag/v0.14.21",
+    "source": "LlamaIndex Releases",
+    "score": 34,
+    "should_post": true,
+    "reason": "Builder signal: release, api, agent, llm",
+    "post_text": "v0.14.21. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-16T15:02:19.517149Z"
+  },
+  {
+    "title": "Scaling Codex to enterprises worldwide",
+    "link": "https://openai.com/index/scaling-codex-to-enterprises-worldwide",
+    "source": "OpenAI News",
+    "score": 5,
+    "should_post": true,
+    "reason": "Builder signal: launches, ai",
+    "post_text": "Scaling Codex to enterprises worldwide. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-16T15:02:20.454947Z"
+  },
+  {
+    "title": "AI and the Future of Cybersecurity: Why Openness Matters",
+    "link": "https://huggingface.co/blog/cybersecurity-openness",
+    "source": "Hugging Face Blog",
+    "score": 1,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "AI and the Future of Cybersecurity: Why Openness Matters. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-16T15:02:21.815886Z"
   }
 ]
