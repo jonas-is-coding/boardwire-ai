@@ -865,5 +865,41 @@
     "is_llm_mode": false,
     "claire_note": "Hey Chloe,\n\nHab hier einen Artikel von OpenAI News gefunden, der interessant sein könnte: \"Databricks brings GPT-5.5 to enterprise agent workflows\".\n\nDas ist ein direkter Anwendungsfall für Builder, die Enterprise-Agenten bauen. GPT-5.5 ist hier der neue State-of-the-Art auf OfficeQA Pro – das zeigt, dass es im Business-Kontext echt was kann. Entwickler können jetzt sehen, wie Databricks das für reale Workflows einsetzt und lernen, wie sie diese neue Modell-Fähigkeit in ihre eigenen Agenten integrieren, um deren Performance zu boosten.",
     "chloe_note": "Dieser Artikel besteht den Ships Test. Databricks' Implementierung von GPT-5.5 in Enterprise-Agenten bietet Entwicklern einen konkreten Anwendungsfall und eine Referenzarchitektur zum Nachbauen oder Anpassen. Die Erwähnung von OfficeQA Pro als Benchmark unterstreicht die Relevanz für reale Business-Workflows."
+  },
+  {
+    "id": "50f0de23c4dc",
+    "status": "approved",
+    "created_at": "2026-05-16T10:20:51.732946Z",
+    "score": 5,
+    "reason": "Builder signal: agent, tool",
+    "proposed_post": "Introducing workspace agents in ChatGPT. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Introducing workspace agents in ChatGPT",
+      "source": "OpenAI News",
+      "link": "https://openai.com/index/introducing-workspace-agents-in-chatgpt"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Okay, Chloe, das hier ist ein Treffer.\n\nOpenAI bringt Workspace Agents in ChatGPT – das sind Codex-gestützte Agents, die komplexe Workflows automatisieren. Das bedeutet, Entwickler können jetzt in ChatGPT eigene Agenten bauen, die über Tools hinweg arbeiten und skalieren. Stell dir vor, du kannst deine CI/CD-Pipelines oder Ticket-Systeme direkt aus ChatGPT steuern, ohne ständig die Kontexte zu wechseln. Das ist ein Game-Changer für Produktivität in Entwicklungsteams.",
+    "chloe_note": "Genehmigt. Der Ships Test ist hier klar bestanden, da Entwickler direkt in ChatGPT eigene Agenten bauen können, die über Tools hinweg arbeiten. Das ist ein konkretes Feature zum Nutzen und Deployen."
+  },
+  {
+    "id": "67e66e94ec90",
+    "status": "approved",
+    "created_at": "2026-05-16T10:20:52.848269Z",
+    "score": 8,
+    "reason": "Builder signal: api, agent, model",
+    "proposed_post": "Speeding up agentic workflows with WebSockets in the Responses API. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Speeding up agentic workflows with WebSockets in the Responses API",
+      "source": "OpenAI News",
+      "link": "https://openai.com/index/speeding-up-agentic-workflows-with-websockets"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Chloe, das ist ein Volltreffer für unsere Developer. OpenAI hat WebSockets in der Responses API implementiert, um agentic Workflows zu beschleunigen.\n\nDas ist kein theoretischer Kram. Die zeigen konkret, wie sie mit WebSockets und Connection-Scoped Caching API-Overhead reduziert und die Modelllatenz verbessert haben, speziell am Beispiel des Codex Agent Loops. Jeder, der an schnelleren, effizienteren Agenten-Systemen baut, kann sich das anschauen und direkt anwenden. Endlich mal handfeste Best Practices von OpenAI selbst.",
+    "chloe_note": "Claire, das ist ein klares Go. Die Implementierung von WebSockets in der Responses API und das Connection-Scoped Caching sind direkt anwendbar für Entwickler, die Agenten-Systeme optimieren wollen. Der Artikel bietet konkrete Best Practices und Code-Beispiele, die man herunterladen und nutzen kann."
   }
 ]
