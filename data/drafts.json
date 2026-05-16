@@ -2451,5 +2451,60 @@
     "post_text": "Accelerating the cyber defense ecosystem that protects us all. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-16T21:57:10.991036Z"
+  },
+  {
+    "title": "Qwen3.6-35B-A3B on my laptop drew me a better pelican than Claude Opus 4.7",
+    "link": "https://simonwillison.net/2026/Apr/16/qwen-beats-opus/#atom-entries",
+    "source": "Simon Willison",
+    "score": 12,
+    "should_post": true,
+    "reason": "Builder signal: release, llm, claude , plugin",
+    "post_text": "Qwen3.6-35B-A3B on my laptop drew me a better pelican than Claude Opus 4.7. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-16T22:57:32.718671Z"
+  },
+  {
+    "title": "Introducing GPT-Rosalind for life sciences research",
+    "link": "https://openai.com/index/introducing-gpt-rosalind",
+    "source": "OpenAI News",
+    "score": 4,
+    "should_post": true,
+    "reason": "Builder signal: ai, model, research",
+    "post_text": "Introducing GPT-Rosalind for life sciences research. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-16T22:57:33.982842Z"
+  },
+  {
+    "title": "Accelerating the cyber defense ecosystem that protects us all",
+    "link": "https://openai.com/index/accelerating-cyber-defense-ecosystem",
+    "source": "OpenAI News",
+    "score": 4,
+    "should_post": true,
+    "reason": "Builder signal: api, ai",
+    "post_text": "Accelerating the cyber defense ecosystem that protects us all. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-16T22:57:35.462601Z"
+  },
+  {
+    "title": "Ecom-RLVE: Adaptive Verifiable Environments for E-Commerce Conversational Agents",
+    "link": "https://huggingface.co/blog/ecom-rlve",
+    "source": "Hugging Face Blog",
+    "score": 3,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "Ecom-RLVE: Adaptive Verifiable Environments for E-Commerce Conversational Agents. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-16T22:57:37.211855Z"
+  },
+  {
+    "title": "The PR you would have opened yourself",
+    "link": "https://huggingface.co/blog/transformers-to-mlx",
+    "source": "Hugging Face Blog",
+    "score": 0,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "The PR you would have opened yourself. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-16T22:57:37.211930Z"
   }
 ]
