@@ -1294,7 +1294,7 @@
   },
   {
     "id": "ab1b146fa4ee",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-17T09:52:29.209936Z",
     "score": 5,
     "reason": "Builder signal: agent, ai, research",
@@ -1310,11 +1310,12 @@
     "deferred_at": "2026-05-17T09:52:34.476489Z",
     "defer_count": 1,
     "original_score": 5,
-    "original_reason": "Builder signal: agent, ai, research"
+    "original_reason": "Builder signal: agent, ai, research",
+    "rejected_at": "2026-05-17T11:13:50.521707Z"
   },
   {
     "id": "bb28cebc5473",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-17T09:52:30.662865Z",
     "score": 4,
     "reason": "Builder signal: agent, ai",
@@ -1330,11 +1331,12 @@
     "deferred_at": "2026-05-17T09:52:34.655286Z",
     "defer_count": 1,
     "original_score": 4,
-    "original_reason": "Builder signal: agent, ai"
+    "original_reason": "Builder signal: agent, ai",
+    "rejected_at": "2026-05-17T11:13:50.673846Z"
   },
   {
     "id": "02c56e9cb837",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-17T09:52:32.226852Z",
     "score": 6,
     "reason": "Builder signal: open model, model",
@@ -1350,6 +1352,7 @@
     "deferred_at": "2026-05-17T09:52:34.831996Z",
     "defer_count": 1,
     "original_score": 6,
-    "original_reason": "Builder signal: open model, model"
+    "original_reason": "Builder signal: open model, model",
+    "rejected_at": "2026-05-17T11:13:50.359864Z"
   }
 ]

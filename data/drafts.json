@@ -2726,5 +2726,60 @@
     "post_text": "The inevitable need for an open model consortium. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-17T09:52:32.226852Z"
+  },
+  {
+    "title": "The inevitable need for an open model consortium",
+    "link": "https://www.interconnects.ai/p/the-inevitable-need-for-an-open-model",
+    "source": "Nathan Lambert (Interconnects)",
+    "score": 6,
+    "should_post": true,
+    "reason": "Builder signal: open model, model",
+    "post_text": "The inevitable need for an open model consortium. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-17T11:13:46.495404Z"
+  },
+  {
+    "title": "Import AI 453: Breaking AI agents; MirrorCode; and ten views on gradual disempowerment",
+    "link": "https://jack-clark.net/2026/04/13/import-ai-453-breaking-ai-agents-mirrorcode-and-ten-views-on-gradual-disempowerment/",
+    "source": "Import AI (Jack Clark)",
+    "score": 5,
+    "should_post": true,
+    "reason": "Builder signal: agent, ai, research",
+    "post_text": "Import AI 453: Breaking AI agents; MirrorCode; and ten views on gradual disempowerment. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-17T11:13:47.745239Z"
+  },
+  {
+    "title": "Enterprises power agentic workflows in Cloudflare Agent Cloud with OpenAI",
+    "link": "https://openai.com/index/cloudflare-openai-agent-cloud",
+    "source": "OpenAI News",
+    "score": 4,
+    "should_post": true,
+    "reason": "Builder signal: agent, ai",
+    "post_text": "Enterprises power agentic workflows in Cloudflare Agent Cloud with OpenAI. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-17T11:13:48.994444Z"
+  },
+  {
+    "title": "ChatGPT for finance teams",
+    "link": "https://openai.com/academy/finance",
+    "source": "OpenAI News",
+    "score": 0,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "ChatGPT for finance teams. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-17T11:13:50.203937Z"
+  },
+  {
+    "title": "Our response to the Axios developer tool compromise",
+    "link": "https://openai.com/index/axios-developer-tool-compromise",
+    "source": "OpenAI News",
+    "score": 3,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "Our response to the Axios developer tool compromise. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-17T11:13:50.203993Z"
   }
 ]
