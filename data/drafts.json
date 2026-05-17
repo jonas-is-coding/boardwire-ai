@@ -2891,5 +2891,60 @@
     "post_text": "Applications of AI at OpenAI. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-17T15:01:57.708656Z"
+  },
+  {
+    "title": "Applications of AI at OpenAI",
+    "link": "https://openai.com/academy/applications-of-ai",
+    "source": "OpenAI News",
+    "score": 4,
+    "should_post": true,
+    "reason": "Builder signal: api, ai",
+    "post_text": "Applications of AI at OpenAI. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-17T17:03:33.219791Z"
+  },
+  {
+    "title": "ChatGPT for sales teams",
+    "link": "https://openai.com/academy/sales",
+    "source": "OpenAI News",
+    "score": 1,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "ChatGPT for sales teams. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-17T17:03:34.168837Z"
+  },
+  {
+    "title": "Using skills",
+    "link": "https://openai.com/academy/skills",
+    "source": "OpenAI News",
+    "score": 0,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "Using skills. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-17T17:03:34.168890Z"
+  },
+  {
+    "title": "Personalizing ChatGPT",
+    "link": "https://openai.com/academy/personalization",
+    "source": "OpenAI News",
+    "score": 1,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "Personalizing ChatGPT. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-17T17:03:34.168921Z"
+  },
+  {
+    "title": "Using custom GPTs",
+    "link": "https://openai.com/academy/custom-gpts",
+    "source": "OpenAI News",
+    "score": 1,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "Using custom GPTs. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-17T17:03:34.168947Z"
   }
 ]
