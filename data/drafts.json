@@ -2561,5 +2561,60 @@
     "post_text": "Gemini 3.1 Flash TTS: the next generation of expressive AI speech. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-17T00:00:59.453777Z"
+  },
+  {
+    "title": "Inside VAKRA: Reasoning, Tool Use, and Failure Modes of Agents",
+    "link": "https://huggingface.co/blog/ibm-research/vakra-benchmark-analysis",
+    "source": "Hugging Face Blog",
+    "score": 6,
+    "should_post": true,
+    "reason": "Builder signal: agent, ai, tool",
+    "post_text": "Inside VAKRA: Reasoning, Tool Use, and Failure Modes of Agents. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-17T04:55:29.903606Z"
+  },
+  {
+    "title": "The next evolution of the Agents SDK",
+    "link": "https://openai.com/index/the-next-evolution-of-the-agents-sdk",
+    "source": "OpenAI News",
+    "score": 11,
+    "should_post": true,
+    "reason": "Builder signal: agent, sdk, ai, model",
+    "post_text": "The next evolution of the Agents SDK. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-17T04:55:31.054317Z"
+  },
+  {
+    "title": "Meet HoloTab by HCompany. Your AI browser companion.",
+    "link": "https://huggingface.co/blog/Hcompany/holotab",
+    "source": "Hugging Face Blog",
+    "score": 1,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "Meet HoloTab by HCompany. Your AI browser companion. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-17T04:55:32.159821Z"
+  },
+  {
+    "title": "What I’ve been building: ATOM Report, post-training course, finishing my book, and ongoing research",
+    "link": "https://www.interconnects.ai/p/what-ive-been-building-atom-report",
+    "source": "Nathan Lambert (Interconnects)",
+    "score": 4,
+    "should_post": true,
+    "reason": "Builder signal: ai, research, training",
+    "post_text": "What I’ve been building: ATOM Report, post-training course, finishing my book, and ongoing research. Training improvements matter most when they reduce cost or data requirements — see whether the method is reproducible on smaller hardware.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-17T04:55:32.159964Z"
+  },
+  {
+    "title": "v0.95.0",
+    "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.95.0",
+    "source": "Anthropic Python SDK Releases",
+    "score": 13,
+    "should_post": true,
+    "reason": "Builder signal: api, v0., changelog, sdk",
+    "post_text": "v0.95.0. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-17T04:55:33.657631Z"
   }
 ]

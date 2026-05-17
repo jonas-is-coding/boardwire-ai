@@ -1210,5 +1210,63 @@
     "is_llm_mode": false,
     "claire_note": "Hey Chloe,\n\nHab da einen von Nathan Lambert gefunden: \"My bets on open models, mid-2026\". Der Artikel ist interessant, weil Lambert ziemlich konkret wird, was er vom Open-Closed-Gap bis Mitte 2026 erwartet. Für unsere Entwickler ist das super, um ihre Strategien für die nächsten 1-2 Jahre auszurichten, besonders wenn sie auf Open-Source-Modelle setzen. Er geht auf die technischen Hürden und die nötigen Durchbrüche ein, was Entwicklern hilft, ihre Roadmaps zu planen und zu sehen, wo sich Investitionen lohnen könnten.",
     "chloe_note": "Der Artikel von Lambert besteht den Ships Test. Auch wenn es keine direkte Software zum Download gibt, bietet die detaillierte technische Analyse konkrete Ansatzpunkte für strategische Entscheidungen und die Planung von Roadmaps. Entwickler können die darin genannten Hürden und nötigen Durchbrüche direkt in ihre Projektplanung integrieren."
+  },
+  {
+    "id": "251dccf13e5f",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-17T04:55:31.054317Z",
+    "score": 11,
+    "reason": "Builder signal: agent, sdk, ai, model",
+    "proposed_post": "The next evolution of the Agents SDK. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "The next evolution of the Agents SDK",
+      "source": "OpenAI News",
+      "link": "https://openai.com/index/the-next-evolution-of-the-agents-sdk"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-17T04:55:36.115818Z",
+    "defer_count": 1,
+    "original_score": 11,
+    "original_reason": "Builder signal: agent, sdk, ai, model"
+  },
+  {
+    "id": "6582e3e4c3bb",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-17T04:55:32.159964Z",
+    "score": 4,
+    "reason": "Builder signal: ai, research, training",
+    "proposed_post": "What I’ve been building: ATOM Report, post-training course, finishing my book, and ongoing research. Training improvements matter most when they reduce cost or data requirements — see whether the method is reproducible on smaller hardware.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "What I’ve been building: ATOM Report, post-training course, finishing my book, and ongoing research",
+      "source": "Nathan Lambert (Interconnects)",
+      "link": "https://www.interconnects.ai/p/what-ive-been-building-atom-report"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-17T04:55:36.349798Z",
+    "defer_count": 1,
+    "original_score": 4,
+    "original_reason": "Builder signal: ai, research, training"
+  },
+  {
+    "id": "06bbe73c3891",
+    "status": "approved",
+    "created_at": "2026-05-17T04:55:29.903606Z",
+    "score": 6,
+    "reason": "Builder signal: agent, ai, tool",
+    "proposed_post": "Inside VAKRA: Reasoning, Tool Use, and Failure Modes of Agents. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Inside VAKRA: Reasoning, Tool Use, and Failure Modes of Agents",
+      "source": "Hugging Face Blog",
+      "link": "https://huggingface.co/blog/ibm-research/vakra-benchmark-analysis"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Chloe, der VAKRA-Artikel von Hugging Face ist interessant, weil er tief in die Fehleranalyse von Agenten eintaucht. Entwickler können hier konkret sehen, wie Reasoning und Tool Use bei LLM-basierten Agenten scheitern und welche Fallstricke sie bei der Implementierung beachten müssen. Das ist direkt umsetzbar, um robustere Agenten zu bauen.",
+    "chloe_note": "Der VAKRA-Artikel besteht den Ships Test. Er bietet Entwicklern eine konkrete Analyse von Fehlerursachen bei LLM-Agenten und direkt umsetzbare Erkenntnisse, um robustere Systeme zu bauen. Das ist klar nutzbar."
   }
 ]
