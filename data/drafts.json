@@ -2781,5 +2781,60 @@
     "post_text": "Our response to the Axios developer tool compromise. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-17T11:13:50.203993Z"
+  },
+  {
+    "title": "Creating images with ChatGPT",
+    "link": "https://openai.com/academy/image-generation",
+    "source": "OpenAI News",
+    "score": 0,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "Creating images with ChatGPT. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-17T13:43:12.213052Z"
+  },
+  {
+    "title": "Prompting fundamentals",
+    "link": "https://openai.com/academy/prompting",
+    "source": "OpenAI News",
+    "score": 0,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "Prompting fundamentals. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-17T13:43:12.213135Z"
+  },
+  {
+    "title": "ChatGPT for research",
+    "link": "https://openai.com/academy/research",
+    "source": "OpenAI News",
+    "score": 1,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "ChatGPT for research. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-17T13:43:12.213192Z"
+  },
+  {
+    "title": "Brainstorming with ChatGPT",
+    "link": "https://openai.com/academy/brainstorming",
+    "source": "OpenAI News",
+    "score": 1,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "Brainstorming with ChatGPT. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-17T13:43:12.213237Z"
+  },
+  {
+    "title": "Writing with ChatGPT",
+    "link": "https://openai.com/academy/writing",
+    "source": "OpenAI News",
+    "score": 0,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "Writing with ChatGPT. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-17T13:43:12.213277Z"
   }
 ]
