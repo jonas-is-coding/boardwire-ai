@@ -2671,5 +2671,60 @@
     "post_text": "v0.94.1. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-17T07:36:06.642964Z"
+  },
+  {
+    "title": "Hack the AI agent: Build agentic AI security skills with the GitHub Secure Code Game",
+    "link": "https://github.blog/security/hack-the-ai-agent-build-agentic-ai-security-skills-with-the-github-secure-code-game/",
+    "source": "GitHub Blog AI",
+    "score": 8,
+    "should_post": true,
+    "reason": "Builder signal: open source, agent, ai",
+    "post_text": "Hack the AI agent: Build agentic AI security skills with the GitHub Secure Code Game. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-17T09:52:27.981307Z"
+  },
+  {
+    "title": "Gemini Robotics-ER 1.6: Powering real-world robotics tasks through enhanced embodied reasoning",
+    "link": "https://deepmind.google/blog/gemini-robotics-er-1-6/",
+    "source": "Google DeepMind Blog",
+    "score": 2,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "Gemini Robotics-ER 1.6: Powering real-world robotics tasks through enhanced embodied reasoning. Robotics progress is meaningful when it holds outside curated demos — look for generalization results across environments.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-17T09:52:29.209740Z"
+  },
+  {
+    "title": "Import AI 453: Breaking AI agents; MirrorCode; and ten views on gradual disempowerment",
+    "link": "https://jack-clark.net/2026/04/13/import-ai-453-breaking-ai-agents-mirrorcode-and-ten-views-on-gradual-disempowerment/",
+    "source": "Import AI (Jack Clark)",
+    "score": 5,
+    "should_post": true,
+    "reason": "Builder signal: agent, ai, research",
+    "post_text": "Import AI 453: Breaking AI agents; MirrorCode; and ten views on gradual disempowerment. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-17T09:52:29.209936Z"
+  },
+  {
+    "title": "Enterprises power agentic workflows in Cloudflare Agent Cloud with OpenAI",
+    "link": "https://openai.com/index/cloudflare-openai-agent-cloud",
+    "source": "OpenAI News",
+    "score": 4,
+    "should_post": true,
+    "reason": "Builder signal: agent, ai",
+    "post_text": "Enterprises power agentic workflows in Cloudflare Agent Cloud with OpenAI. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-17T09:52:30.662865Z"
+  },
+  {
+    "title": "The inevitable need for an open model consortium",
+    "link": "https://www.interconnects.ai/p/the-inevitable-need-for-an-open-model",
+    "source": "Nathan Lambert (Interconnects)",
+    "score": 6,
+    "should_post": true,
+    "reason": "Builder signal: open model, model",
+    "post_text": "The inevitable need for an open model consortium. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-17T09:52:32.226852Z"
   }
 ]

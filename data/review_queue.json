@@ -1273,7 +1273,7 @@
   },
   {
     "id": "86c3ae04e013",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-17T07:36:05.712625Z",
     "score": 8,
     "reason": "Builder signal: open source, agent, ai",
@@ -1289,6 +1289,67 @@
     "deferred_at": "2026-05-17T07:36:08.313465Z",
     "defer_count": 1,
     "original_score": 8,
-    "original_reason": "Builder signal: open source, agent, ai"
+    "original_reason": "Builder signal: open source, agent, ai",
+    "rejected_at": "2026-05-17T09:52:34.286177Z"
+  },
+  {
+    "id": "ab1b146fa4ee",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-17T09:52:29.209936Z",
+    "score": 5,
+    "reason": "Builder signal: agent, ai, research",
+    "proposed_post": "Import AI 453: Breaking AI agents; MirrorCode; and ten views on gradual disempowerment. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Import AI 453: Breaking AI agents; MirrorCode; and ten views on gradual disempowerment",
+      "source": "Import AI (Jack Clark)",
+      "link": "https://jack-clark.net/2026/04/13/import-ai-453-breaking-ai-agents-mirrorcode-and-ten-views-on-gradual-disempowerment/"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-17T09:52:34.476489Z",
+    "defer_count": 1,
+    "original_score": 5,
+    "original_reason": "Builder signal: agent, ai, research"
+  },
+  {
+    "id": "bb28cebc5473",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-17T09:52:30.662865Z",
+    "score": 4,
+    "reason": "Builder signal: agent, ai",
+    "proposed_post": "Enterprises power agentic workflows in Cloudflare Agent Cloud with OpenAI. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Enterprises power agentic workflows in Cloudflare Agent Cloud with OpenAI",
+      "source": "OpenAI News",
+      "link": "https://openai.com/index/cloudflare-openai-agent-cloud"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-17T09:52:34.655286Z",
+    "defer_count": 1,
+    "original_score": 4,
+    "original_reason": "Builder signal: agent, ai"
+  },
+  {
+    "id": "02c56e9cb837",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-17T09:52:32.226852Z",
+    "score": 6,
+    "reason": "Builder signal: open model, model",
+    "proposed_post": "The inevitable need for an open model consortium. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "The inevitable need for an open model consortium",
+      "source": "Nathan Lambert (Interconnects)",
+      "link": "https://www.interconnects.ai/p/the-inevitable-need-for-an-open-model"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-17T09:52:34.831996Z",
+    "defer_count": 1,
+    "original_score": 6,
+    "original_reason": "Builder signal: open model, model"
   }
 ]
