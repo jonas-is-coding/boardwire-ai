@@ -1354,5 +1354,25 @@
     "original_score": 6,
     "original_reason": "Builder signal: open model, model",
     "rejected_at": "2026-05-17T11:13:50.359864Z"
+  },
+  {
+    "id": "886783aa51f7",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-17T15:01:57.708656Z",
+    "score": 4,
+    "reason": "Builder signal: api, ai",
+    "proposed_post": "Applications of AI at OpenAI. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Applications of AI at OpenAI",
+      "source": "OpenAI News",
+      "link": "https://openai.com/academy/applications-of-ai"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-17T15:01:58.937763Z",
+    "defer_count": 1,
+    "original_score": 4,
+    "original_reason": "Builder signal: api, ai"
   }
 ]
