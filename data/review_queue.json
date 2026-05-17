@@ -1135,7 +1135,7 @@
   },
   {
     "id": "5e6675110a0f",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-16T21:57:09.666519Z",
     "score": 4,
     "reason": "Builder signal: ai, model, research",
@@ -1151,7 +1151,8 @@
     "deferred_at": "2026-05-16T22:57:37.445084Z",
     "defer_count": 2,
     "original_score": 4,
-    "original_reason": "Builder signal: ai, model, research"
+    "original_reason": "Builder signal: ai, model, research",
+    "rejected_at": "2026-05-17T00:00:59.550679Z"
   },
   {
     "id": "6148997d332e",
@@ -1173,5 +1174,41 @@
     "original_score": 4,
     "original_reason": "Builder signal: api, ai",
     "rejected_at": "2026-05-16T22:57:37.548932Z"
+  },
+  {
+    "id": "721dce67d5b4",
+    "status": "approved",
+    "created_at": "2026-05-17T00:00:57.115000Z",
+    "score": 9,
+    "reason": "Builder signal: ai, model, training, multimodal",
+    "proposed_post": "Training and Finetuning Multimodal Embedding & Reranker Models with Sentence Transformers. Training improvements matter most when they reduce cost or data requirements — see whether the method is reproducible on smaller hardware.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Training and Finetuning Multimodal Embedding & Reranker Models with Sentence Transformers",
+      "source": "Hugging Face Blog",
+      "link": "https://huggingface.co/blog/train-multimodal-sentence-transformers"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Chloe, das ist ein Volltreffer für unsere Devs, die an multimodalem Retrieval arbeiten. Der Artikel zeigt, wie man mit Sentence Transformers eigene Embedding- und Reranker-Modelle für Text und Bilder trainiert. Das ist super, um die Suche in Apps zu verbessern oder Empfehlungssysteme präzisieren.",
+    "chloe_note": "Claire, das ist ein klares Go. Der Artikel liefert konkrete Anleitungen zum Trainieren und Finetunen von Modellen, was Devs direkt implementieren können. Es gibt hier etwas zum Nutzen und Deployen."
+  },
+  {
+    "id": "41c2a2ad2f6d",
+    "status": "approved",
+    "created_at": "2026-05-17T00:00:58.252847Z",
+    "score": 6,
+    "reason": "Builder signal: open model, model",
+    "proposed_post": "My bets on open models, mid-2026. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "My bets on open models, mid-2026",
+      "source": "Nathan Lambert (Interconnects)",
+      "link": "https://www.interconnects.ai/p/my-bets-on-open-models-mid-2026"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Hey Chloe,\n\nHab da einen von Nathan Lambert gefunden: \"My bets on open models, mid-2026\". Der Artikel ist interessant, weil Lambert ziemlich konkret wird, was er vom Open-Closed-Gap bis Mitte 2026 erwartet. Für unsere Entwickler ist das super, um ihre Strategien für die nächsten 1-2 Jahre auszurichten, besonders wenn sie auf Open-Source-Modelle setzen. Er geht auf die technischen Hürden und die nötigen Durchbrüche ein, was Entwicklern hilft, ihre Roadmaps zu planen und zu sehen, wo sich Investitionen lohnen könnten.",
+    "chloe_note": "Der Artikel von Lambert besteht den Ships Test. Auch wenn es keine direkte Software zum Download gibt, bietet die detaillierte technische Analyse konkrete Ansatzpunkte für strategische Entscheidungen und die Planung von Roadmaps. Entwickler können die darin genannten Hürden und nötigen Durchbrüche direkt in ihre Projektplanung integrieren."
   }
 ]
