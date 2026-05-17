@@ -1213,7 +1213,7 @@
   },
   {
     "id": "251dccf13e5f",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-17T04:55:31.054317Z",
     "score": 11,
     "reason": "Builder signal: agent, sdk, ai, model",
@@ -1229,11 +1229,12 @@
     "deferred_at": "2026-05-17T04:55:36.115818Z",
     "defer_count": 1,
     "original_score": 11,
-    "original_reason": "Builder signal: agent, sdk, ai, model"
+    "original_reason": "Builder signal: agent, sdk, ai, model",
+    "rejected_at": "2026-05-17T07:36:07.869205Z"
   },
   {
     "id": "6582e3e4c3bb",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-17T04:55:32.159964Z",
     "score": 4,
     "reason": "Builder signal: ai, research, training",
@@ -1249,7 +1250,8 @@
     "deferred_at": "2026-05-17T04:55:36.349798Z",
     "defer_count": 1,
     "original_score": 4,
-    "original_reason": "Builder signal: ai, research, training"
+    "original_reason": "Builder signal: ai, research, training",
+    "rejected_at": "2026-05-17T07:36:08.064398Z"
   },
   {
     "id": "06bbe73c3891",
@@ -1268,5 +1270,25 @@
     "is_llm_mode": false,
     "claire_note": "Chloe, der VAKRA-Artikel von Hugging Face ist interessant, weil er tief in die Fehleranalyse von Agenten eintaucht. Entwickler können hier konkret sehen, wie Reasoning und Tool Use bei LLM-basierten Agenten scheitern und welche Fallstricke sie bei der Implementierung beachten müssen. Das ist direkt umsetzbar, um robustere Agenten zu bauen.",
     "chloe_note": "Der VAKRA-Artikel besteht den Ships Test. Er bietet Entwicklern eine konkrete Analyse von Fehlerursachen bei LLM-Agenten und direkt umsetzbare Erkenntnisse, um robustere Systeme zu bauen. Das ist klar nutzbar."
+  },
+  {
+    "id": "86c3ae04e013",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-17T07:36:05.712625Z",
+    "score": 8,
+    "reason": "Builder signal: open source, agent, ai",
+    "proposed_post": "Hack the AI agent: Build agentic AI security skills with the GitHub Secure Code Game. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Hack the AI agent: Build agentic AI security skills with the GitHub Secure Code Game",
+      "source": "GitHub Blog AI",
+      "link": "https://github.blog/security/hack-the-ai-agent-build-agentic-ai-security-skills-with-the-github-secure-code-game/"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-17T07:36:08.313465Z",
+    "defer_count": 1,
+    "original_score": 8,
+    "original_reason": "Builder signal: open source, agent, ai"
   }
 ]

@@ -2616,5 +2616,60 @@
     "post_text": "v0.95.0. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-17T04:55:33.657631Z"
+  },
+  {
+    "title": "The next evolution of the Agents SDK",
+    "link": "https://openai.com/index/the-next-evolution-of-the-agents-sdk",
+    "source": "OpenAI News",
+    "score": 9,
+    "should_post": true,
+    "reason": "Builder signal: agent, sdk, ai, model",
+    "post_text": "The next evolution of the Agents SDK. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-17T07:36:02.939465Z"
+  },
+  {
+    "title": "What I’ve been building: ATOM Report, post-training course, finishing my book, and ongoing research",
+    "link": "https://www.interconnects.ai/p/what-ive-been-building-atom-report",
+    "source": "Nathan Lambert (Interconnects)",
+    "score": 4,
+    "should_post": true,
+    "reason": "Builder signal: ai, research, training",
+    "post_text": "What I’ve been building: ATOM Report, post-training course, finishing my book, and ongoing research. Training improvements matter most when they reduce cost or data requirements — see whether the method is reproducible on smaller hardware.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-17T07:36:04.500436Z"
+  },
+  {
+    "title": "Hack the AI agent: Build agentic AI security skills with the GitHub Secure Code Game",
+    "link": "https://github.blog/security/hack-the-ai-agent-build-agentic-ai-security-skills-with-the-github-secure-code-game/",
+    "source": "GitHub Blog AI",
+    "score": 8,
+    "should_post": true,
+    "reason": "Builder signal: open source, agent, ai",
+    "post_text": "Hack the AI agent: Build agentic AI security skills with the GitHub Secure Code Game. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-17T07:36:05.712625Z"
+  },
+  {
+    "title": "Trusted access for the next era of cyber defense",
+    "link": "https://openai.com/index/scaling-trusted-access-for-cyber-defense",
+    "source": "OpenAI News",
+    "score": 1,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "Trusted access for the next era of cyber defense. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-17T07:36:06.642902Z"
+  },
+  {
+    "title": "v0.94.1",
+    "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.94.1",
+    "source": "Anthropic Python SDK Releases",
+    "score": 10,
+    "should_post": true,
+    "reason": "Builder signal: v0., changelog, sdk",
+    "post_text": "v0.94.1. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-17T07:36:06.642964Z"
   }
 ]
