@@ -3056,5 +3056,60 @@
     "post_text": "Claude Mythos and misguided open-weight fearmongering. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-17T21:00:34.099571Z"
+  },
+  {
+    "title": "Claude Mythos and misguided open-weight fearmongering",
+    "link": "https://www.interconnects.ai/p/claude-mythos-and-misguided-open",
+    "source": "Nathan Lambert (Interconnects)",
+    "score": 11,
+    "should_post": true,
+    "reason": "Builder signal: open-source, open-weight, claude ",
+    "post_text": "Claude Mythos and misguided open-weight fearmongering. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-17T22:57:53.581407Z"
+  },
+  {
+    "title": "OpenAI Full Fan Mode Contest: Terms & Conditions",
+    "link": "https://openai.com/index/full-fan-mode-contest-terms-conditions",
+    "source": "OpenAI News",
+    "score": 1,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "OpenAI Full Fan Mode Contest: Terms & Conditions. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-17T22:57:55.172889Z"
+  },
+  {
+    "title": "CyberAgent moves faster with ChatGPT Enterprise and Codex",
+    "link": "https://openai.com/index/cyberagent",
+    "source": "OpenAI News",
+    "score": 7,
+    "should_post": true,
+    "reason": "Builder signal: agent, ai, rag",
+    "post_text": "CyberAgent moves faster with ChatGPT Enterprise and Codex. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-17T22:57:55.172951Z"
+  },
+  {
+    "title": "Waypoint-1.5: Higher-Fidelity Interactive Worlds for Everyday GPUs",
+    "link": "https://huggingface.co/blog/waypoint-1-5",
+    "source": "Hugging Face Blog",
+    "score": 0,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "Waypoint-1.5: Higher-Fidelity Interactive Worlds for Everyday GPUs. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-17T22:57:56.321241Z"
+  },
+  {
+    "title": "Multimodal Embedding & Reranker Models with Sentence Transformers",
+    "link": "https://huggingface.co/blog/multimodal-sentence-transformers",
+    "source": "Hugging Face Blog",
+    "score": 6,
+    "should_post": true,
+    "reason": "Builder signal: model, multimodal, embedding",
+    "post_text": "Multimodal Embedding & Reranker Models with Sentence Transformers. Retrieval quality is the bottleneck most RAG systems hit first — check recall metrics on domain-specific data, not just generic benchmarks.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-17T22:57:56.321298Z"
   }
 ]

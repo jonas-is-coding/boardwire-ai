@@ -1378,7 +1378,7 @@
   },
   {
     "id": "e98e5edf6864",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-17T21:00:34.099571Z",
     "score": 11,
     "reason": "Builder signal: open-source, open-weight, claude ",
@@ -1394,6 +1394,47 @@
     "deferred_at": "2026-05-17T21:00:35.944499Z",
     "defer_count": 1,
     "original_score": 11,
-    "original_reason": "Builder signal: open-source, open-weight, claude "
+    "original_reason": "Builder signal: open-source, open-weight, claude ",
+    "rejected_at": "2026-05-17T22:57:57.626465Z"
+  },
+  {
+    "id": "be3bb1e83772",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-17T22:57:55.172951Z",
+    "score": 7,
+    "reason": "Builder signal: agent, ai, rag",
+    "proposed_post": "CyberAgent moves faster with ChatGPT Enterprise and Codex. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "CyberAgent moves faster with ChatGPT Enterprise and Codex",
+      "source": "OpenAI News",
+      "link": "https://openai.com/index/cyberagent"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-17T22:57:57.818652Z",
+    "defer_count": 1,
+    "original_score": 7,
+    "original_reason": "Builder signal: agent, ai, rag"
+  },
+  {
+    "id": "0b3e9d00bf17",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-17T22:57:56.321298Z",
+    "score": 6,
+    "reason": "Builder signal: model, multimodal, embedding",
+    "proposed_post": "Multimodal Embedding & Reranker Models with Sentence Transformers. Retrieval quality is the bottleneck most RAG systems hit first — check recall metrics on domain-specific data, not just generic benchmarks.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Multimodal Embedding & Reranker Models with Sentence Transformers",
+      "source": "Hugging Face Blog",
+      "link": "https://huggingface.co/blog/multimodal-sentence-transformers"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-17T22:57:58.059292Z",
+    "defer_count": 1,
+    "original_score": 6,
+    "original_reason": "Builder signal: model, multimodal, embedding"
   }
 ]
