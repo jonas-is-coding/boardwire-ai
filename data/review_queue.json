@@ -1,1 +1,116 @@
-[]
+[
+  {
+    "id": "7e197d39c507",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-18T08:30:54.451065Z",
+    "score": 5,
+    "reason": "Builder signal: release, ai",
+    "proposed_post": "langchain==1.3.1. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "langchain==1.3.1",
+      "source": "LangChain Releases",
+      "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.3.1"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-18T08:31:04.941076Z",
+    "defer_count": 1,
+    "original_score": 5,
+    "original_reason": "Builder signal: release, ai"
+  },
+  {
+    "id": "23cdccb43ba3",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-18T08:30:55.457269Z",
+    "score": 13,
+    "reason": "Builder signal: agent, v0., changelog, ai",
+    "proposed_post": "v0.24.0. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "v0.24.0",
+      "source": "Ollama Releases",
+      "link": "https://github.com/ollama/ollama/releases/tag/v0.24.0"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-18T08:31:04.942075Z",
+    "defer_count": 1,
+    "original_score": 13,
+    "original_reason": "Builder signal: agent, v0., changelog, ai"
+  },
+  {
+    "id": "de8faa37517f",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-18T08:30:58.274888Z",
+    "score": 4,
+    "reason": "Builder signal: agent, ai",
+    "proposed_post": "Building a general-purpose accessibility agent—and what we learned in the process. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Building a general-purpose accessibility agent—and what we learned in the process",
+      "source": "GitHub Blog AI",
+      "link": "https://github.blog/ai-and-ml/github-copilot/building-a-general-purpose-accessibility-agent-and-what-we-learned-in-the-process/"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-18T08:31:04.943603Z",
+    "defer_count": 1,
+    "original_score": 4,
+    "original_reason": "Builder signal: agent, ai"
+  },
+  {
+    "id": "2532f1619356",
+    "status": "approved",
+    "created_at": "2026-05-18T08:30:34.998821Z",
+    "score": 95,
+    "reason": "Multiple new open models with weights released, offering immediate utility for builders.",
+    "proposed_post": "Gemma 4, DeepSeek V4, Kimi K2.6, MiMo 2.5, GLM-5.1 weights released. Builders can now benchmark these new open models to find immediate performance or cost improvements for their AI applications.",
+    "source_angle": "Tracking new open model releases and their implications for builders.",
+    "source_item": {
+      "title": "Latest open artifacts (#21): Open model bonanza! Gemma 4, DeepSeek V4, Kimi K2.6, MiMo 2.5, GLM-5.1 & others. On CAISI's V4 assessment.",
+      "source": "Nathan Lambert (Interconnects)",
+      "link": "https://www.interconnects.ai/p/latest-open-artifacts-21-open-model"
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "claire_note": "Aus *Nathan Lambert (Interconnects)* ist ein starker Kandidat reingekommen: *Latest open artifacts (#21): Open model bonanza! Gemma 4, DeepSeek V4, Kimi K2.6, MiMo 2.5, GLM-5.1 & others. On CAISI's V4 assessment.*.\nRelevanz fuer Builder: Multiple new open models with weights released, offering immediate utility for builders.\n_Score: 95_",
+    "chloe_note": "Dieser Artikel besteht den Ships Test. Die direkte Verfügbarkeit von Modell-Weights für mehrere neue Open-Source-Modelle bietet Entwicklern sofortigen Mehrwert zum Herunterladen und Nutzen."
+  },
+  {
+    "id": "cc890d263f9e",
+    "status": "approved",
+    "created_at": "2026-05-18T08:30:41.872824Z",
+    "score": 90,
+    "reason": "New open-weight LLMs implement architectural changes for concrete cost reduction in long contexts. Ships today.",
+    "proposed_post": "Gemma 4 and DeepSeek V4 integrate KV Sharing, mHC, and Compressed Attention to cut long-context costs. Evaluate these open-weight models for cheaper long-context inference, or apply these architectural insights.",
+    "source_angle": "Open-weight LLMs reduce long-context inference costs via new architectures.",
+    "source_item": {
+      "title": "Recent Developments in LLM Architectures: KV Sharing, mHC, and Compressed Attention",
+      "source": "Sebastian Raschka (Ahead of AI)",
+      "link": "https://magazine.sebastianraschka.com/p/recent-developments-in-llm-architectures"
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "claire_note": "Hey Chloe,\n\nHab hier einen Artikel von Raschka zu neuen LLM-Architekturen. Der geht tief auf KV Sharing, mHC und Compressed Attention ein – ist super relevant für alle, die wirklich verstehen wollen, wie die neuen Open-Weight LLMs wie Gemma 4 oder DeepSeek V4 ihre Long-Context-Kosten so drücken.\n\nFür Entwickler ist das Gold wert, weil es konkrete Einblicke gibt, wie man eigene Modelle optimieren oder bestehende effizienter nutzen kann, besonders bei langen Kontexten. Man kann direkt ableiten, welche Techniken man sich genauer ansehen muss, um Memory und Compute zu sparen.",
+    "chloe_note": "Dieser Artikel besteht den Ships Test. Die Analyse von KV Sharing, mHC und Compressed Attention bietet Entwicklern konkrete technische Ansätze zur Optimierung von LLMs für lange Kontexte, was direkt in experimentelle Implementierungen oder die Bewertung bestehender Modelle einfließen kann. Der Fokus auf Open-Weight LLMs und deren spezifische Kostenreduktionen ist unmittelbar anwendbar."
+  },
+  {
+    "id": "1c772a9ff8cb",
+    "status": "approved",
+    "created_at": "2026-05-18T08:30:48.970353Z",
+    "score": 34,
+    "reason": "Builder signal: available, download, agent, v2.",
+    "proposed_post": "v2.1.143. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "v2.1.143",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.143"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Chloe, dieser Claude Release ist relevant.\n\nDas Plugin Dependency Enforcement ist ein klares QoL-Update für Devs. Endlich keine Broken Builds mehr, weil ein Plugin stillschweigend eine Abhängigkeit gekillt hat. Das spart echt Zeit bei der Fehlersuche.",
+    "chloe_note": "Dieser Claude Release besteht den Ships Test. Das Plugin ist direkt herunterladbar und bietet einen konkreten Nutzen zur Vermeidung von Build-Fehlern. Ein klares Quality-of-Life-Update für Entwickler."
+  }
+]
