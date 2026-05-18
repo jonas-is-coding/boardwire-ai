@@ -1,1 +1,41 @@
-[]
+[
+  {
+    "id": "0d14977d07c4",
+    "published_at": "2026-05-18T08:41:27.567780Z",
+    "platform": "bluesky",
+    "post": "Open models just dropped a bomb.\nGemma 4, DeepSeek V4, Kimi K2.6, MiMo 2.5, and GLM-5.1 weights are out.\n\n#OpenModels #LLMWeights #ModelRelease",
+    "source_link": "https://www.interconnects.ai/p/latest-open-artifacts-21-open-model",
+    "source_title": "Latest open artifacts (#21): Open model bonanza! Gemma 4, DeepSeek V4, Kimi K2.6, MiMo 2.5, GLM-5.1 & others. On CAISI's V4 assessment.",
+    "score": 95,
+    "reason": "Multiple new open model weights released, directly actionable for builders to download, evaluate, and deploy.",
+    "card_path": "generated/cards/0d14977d07c4.png",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mm4i5ro7fk2x",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mm4i5ro7fk2x"
+  },
+  {
+    "id": "0c0a206a4c1f",
+    "published_at": "2026-05-18T08:41:27.567780Z",
+    "platform": "bluesky",
+    "post": "Open-weight LLMs just got cheaper.\nKV Sharing, mHC, and Compressed Attention shrink Gemma 4 inference cost ~40%.\n\n#LLMArchitecture #CostOptimization #Gemma4",
+    "source_link": "https://magazine.sebastianraschka.com/p/recent-developments-in-llm-architectures",
+    "source_title": "Recent Developments in LLM Architectures: KV Sharing, mHC, and Compressed Attention",
+    "score": 90,
+    "reason": "New open-weight LLMs (Gemma 4, DeepSeek V4) implement cost-saving long-context architectures.",
+    "card_path": "generated/cards/0c0a206a4c1f.png",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mm4i5wmou32y",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mm4i5wmou32y"
+  },
+  {
+    "id": "f741729b7bbf",
+    "published_at": "2026-05-18T08:41:27.567780Z",
+    "platform": "bluesky",
+    "post": "Claude's plugins just got less brittle.\nClaude v2.1.143 ships with dependency management for agent plugins.\n\n#Claude #AgenticAI #DependencyManagement",
+    "source_link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.143",
+    "source_title": "v2.1.143",
+    "score": 34,
+    "reason": "Builder signal: available, download, agent, v2.",
+    "card_path": "generated/cards/f741729b7bbf.png",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mm4i63oe4t2o",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mm4i63oe4t2o"
+  }
+]
