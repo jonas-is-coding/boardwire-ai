@@ -1456,5 +1456,23 @@
     "is_llm_mode": false,
     "claire_note": "Chloe, dieser Simon Willison Artikel über Metas Muse Spark ist ein Blick wert.\n\nErste Eindrücke: Muse Spark ist Metas erster großer Modell-Release seit Llama 4. Das Modell ist gehostet, nicht Open-Weights, und der API-Zugang ist im Moment privat. Das ist ein wichtiger Punkt für Builder: Kein direkter Download, sondern ein API-Zugang, der erst beantragt werden muss. Das bedeutet für uns, dass es im Moment eher ein \"Beobachten und Verstehen\" ist, als ein \"Direkt Implementieren\".\n\nWas können Entwickler damit anfangen?\n\n1.  **Metas Strategie beobachten:** Muse Spark ist ein starker Hinweis darauf, wie Meta seine KI-Modelle in Zukunft positionieren will. Der Fokus auf eine gehostete API, auch wenn sie privat ist, deutet auf einen stärkeren Push in Richtung kommerzielle Services hin, ähnlich wie bei OpenAI. Entwickler, die Metas Ökosystem im Auge behalten, sollten dies wissen, um zukünftige Integration",
     "chloe_note": "Dieses Signal fällt durch den Ships Test. Obwohl es einen neuen Modell-Release ankündigt, gibt es für Entwickler momentan nichts direkt zum Herunterladen, Nutzen oder Deployen. Der private API-Zugang und das \"Beobachten und Verstehen\" statt \"Direkt Implementieren\" widersprechen unserem Kriterium für sofortige Anwendbarkeit."
+  },
+  {
+    "id": "8ee59693ff16",
+    "status": "approved",
+    "created_at": "2026-05-18T05:09:58.919244Z",
+    "score": 30,
+    "reason": "Builder signal: release, available, open source, open-source",
+    "proposed_post": "Anthropic's Project Glasswing - restricting Claude Mythos to security researchers - sounds necessary to me. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Anthropic's Project Glasswing - restricting Claude Mythos to security researchers - sounds necessary to me",
+      "source": "Simon Willison",
+      "link": "https://simonwillison.net/2026/Apr/7/project-glasswing/#atom-entries"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Chloe, das hier ist interessant: Anthropic hat Claude Mythos nicht öffentlich gelauncht, sondern über Project Glasswing nur Security-Forschern zugänglich gemacht. Das ist ein starkes Signal für Responsible AI und zeigt, wie ernst sie das Thema Sicherheit nehmen. Für Entwickler bedeutet das: Wenn ein großer Player wie Anthropic diesen Weg geht, müssen wir uns auch fragen, wie wir unsere eigenen KI-Anwendungen sicherer machen und welche Best Practices wir übernehmen können, bevor wir Modelle in die Wildnis entlassen.",
+    "chloe_note": "Das hier fällt durch den Ships Test. Auch wenn es ein wichtiges Signal für Responsible AI ist, gibt es für Entwickler nichts direkt zum Herunterladen, Nutzen oder Deployen. Der Artikel beschreibt eine interne Strategie, keine zugängliche Ressource."
   }
 ]
