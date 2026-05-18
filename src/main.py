@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import os
+import re
 from dataclasses import asdict
 from datetime import datetime, timezone
 from pathlib import Path
@@ -59,6 +60,98 @@ def _compose_sarah_post(package: dict[str, str | list[str]]) -> str:
         parts.append(tags_line)
     post = "\n".join(parts).strip()
     return post[:280]
+
+
+_HASHTAG_KEYWORDS: list[tuple[str, str]] = [
+    ("anthropic", "#Anthropic"),
+    ("claude", "#Claude"),
+    ("openai", "#OpenAI"),
+    ("gpt-", "#GPT"),
+    ("chatgpt", "#ChatGPT"),
+    ("gemini", "#Gemini"),
+    ("gemma", "#Gemma"),
+    ("google deepmind", "#DeepMind"),
+    ("deepmind", "#DeepMind"),
+    ("google", "#Google"),
+    ("meta", "#Meta"),
+    ("llama", "#Llama"),
+    ("mistral", "#Mistral"),
+    ("deepseek", "#DeepSeek"),
+    ("kimi", "#Kimi"),
+    ("qwen", "#Qwen"),
+    ("hugging face", "#HuggingFace"),
+    ("huggingface", "#HuggingFace"),
+    ("arxiv", "#Research"),
+    ("paper", "#Research"),
+    ("agent", "#AIAgents"),
+    ("eval", "#AIEvals"),
+    ("benchmark", "#AIEvals"),
+    ("inference", "#Inference"),
+    ("open-weight", "#OpenWeight"),
+    ("open weight", "#OpenWeight"),
+    ("open-source", "#OpenSource"),
+    ("open source", "#OpenSource"),
+    ("attention", "#LLM"),
+    ("transformer", "#LLM"),
+    ("rag", "#RAG"),
+    ("fine-tun", "#FineTuning"),
+    ("finetun", "#FineTuning"),
+    ("multimodal", "#Multimodal"),
+    ("vision", "#VLM"),
+    ("robot", "#Robotics"),
+    ("code", "#DevTools"),
+]
+
+
+def _derive_hashtags(source: str, title: str, subtitle: str = "") -> list[str]:
+    haystack = f"{title} {subtitle} {source}".lower()
+    tags: list[str] = []
+    seen: set[str] = set()
+    for keyword, tag in _HASHTAG_KEYWORDS:
+        if keyword in haystack and tag not in seen:
+            tags.append(tag)
+            seen.add(tag)
+            if len(tags) >= 3:
+                return tags
+    for default in ("#AI", "#LLM"):
+        if len(tags) >= 2:
+            break
+        if default not in seen:
+            tags.append(default)
+            seen.add(default)
+    return tags[:3]
+
+
+def _build_fallback_sarah_package(item: dict) -> dict[str, str | list[str]]:
+    source_item = item.get("source_item", {}) or {}
+    raw_title = str(source_item.get("title", "")).strip()
+    raw_source = str(source_item.get("source", "")).strip()
+    summary = str(source_item.get("summary", "")).strip()
+    reason = str(item.get("reason", "")).strip()
+    base_post = str(item.get("proposed_post", "")).strip()
+
+    title = re.sub(r"\s+", " ", raw_title).strip()[:69]
+    if title and not title.endswith((".", "!", "?")):
+        title = f"{title}."
+
+    body = summary or base_post or reason
+    body = re.sub(r"(?i)matched keywords?:[^.]*\.?\s*", "", body)
+    body = re.sub(r"(?i)^why it matters:\s*", "", body)
+    body = re.sub(r"\s+", " ", body).strip()
+    sentences = [s.strip() for s in re.split(r"(?<=[.!?])\s+", body) if s.strip()]
+
+    subtitle = (sentences[0] if sentences else body)[:100].strip()
+    description_src = " ".join(sentences[1:]).strip() if len(sentences) > 1 else body
+    description = description_src[:140].strip() or subtitle
+
+    hashtags = _derive_hashtags(raw_source, raw_title, subtitle)
+
+    return {
+        "title": title or raw_title[:70],
+        "subtitle": subtitle,
+        "description": description,
+        "hashtags": hashtags,
+    }
 
 
 def _load_sources() -> list[Source]:
@@ -654,25 +747,26 @@ def _publish_approved(args, logger) -> int:
             post_text=base_post_text,
             summary=source_summary,
         )
-        if sarah_package:
-            item["sarah_package"] = sarah_package
-            post_text = _compose_sarah_post(sarah_package)
-            item["proposed_post"] = post_text
-            notify.sarah_packaged(
-                title=str(sarah_package.get("title", "")),
-                subtitle=str(sarah_package.get("subtitle", "")),
-                description=str(sarah_package.get("description", "")),
-                hashtags=[str(x) for x in sarah_package.get("hashtags", [])] if isinstance(sarah_package.get("hashtags"), list) else [],
-            )
-            try:
-                regenerated = _generate_card_for_item(item, logger)
-                if regenerated:
-                    item["card_path"] = regenerated
-                    logger.info("Card regenerated with Sarah package: %s", regenerated)
-            except Exception as exc:
-                logger.warning("Card regeneration after Sarah failed for %s: %s", rid, exc)
-        else:
-            post_text = base_post_text
+        if not sarah_package:
+            logger.info("Sarah LLM unavailable or rejected, using deterministic fallback: %s", rid)
+            sarah_package = _build_fallback_sarah_package(item)
+
+        item["sarah_package"] = sarah_package
+        post_text = _compose_sarah_post(sarah_package)
+        item["proposed_post"] = post_text
+        notify.sarah_packaged(
+            title=str(sarah_package.get("title", "")),
+            subtitle=str(sarah_package.get("subtitle", "")),
+            description=str(sarah_package.get("description", "")),
+            hashtags=[str(x) for x in sarah_package.get("hashtags", [])] if isinstance(sarah_package.get("hashtags"), list) else [],
+        )
+        try:
+            regenerated = _generate_card_for_item(item, logger)
+            if regenerated:
+                item["card_path"] = regenerated
+                logger.info("Card regenerated with Sarah package: %s", regenerated)
+        except Exception as exc:
+            logger.warning("Card regeneration after Sarah failed for %s: %s", rid, exc)
         card_path = item.get("card_path")
         if selected_platform == "bluesky":
             logger.info("Image required for Bluesky: %s", rid)

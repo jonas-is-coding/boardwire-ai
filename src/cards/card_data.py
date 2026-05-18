@@ -82,7 +82,7 @@ def _card_summary(title: str, post: str, summary: str, reason: str) -> str:
     base = clean_summary or clean_post or reason
     base = re.sub(r"\s+", " ", base).strip()
     if not base:
-        return "Why it matters: Follow how this changes real-world AI usage."
+        return ""
     lower = base.lower()
     title_lower = title.lower()
     if title_lower and lower == title_lower:
@@ -90,8 +90,7 @@ def _card_summary(title: str, post: str, summary: str, reason: str) -> str:
     base = re.sub(r"(?i)^why it matters:\s*", "", base).strip()
     base = re.sub(r"(?i)^the signal:\s*", "", base).strip()
     base = re.sub(r"(?i)^watch:\s*", "", base).strip()
-    base = _shorten_chars(base, 140).rstrip(".")
-    return f"Why it matters: {base}."
+    return _shorten_chars(base, 140)
 
 
 def _card_headline(title: str) -> str:
