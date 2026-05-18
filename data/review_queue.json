@@ -232,7 +232,7 @@
   },
   {
     "id": "be34784a551f",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-18T17:32:13.136615Z",
     "score": 4,
     "reason": "Builder signal: available, ai",
@@ -248,6 +248,7 @@
     "deferred_at": "2026-05-18T17:32:14.199267Z",
     "defer_count": 1,
     "original_score": 4,
-    "original_reason": "Builder signal: available, ai"
+    "original_reason": "Builder signal: available, ai",
+    "rejected_at": "2026-05-18T19:51:54.335174Z"
   }
 ]

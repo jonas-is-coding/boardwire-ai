@@ -251,5 +251,60 @@
     "post_text": "Fine-Tuning NVIDIA Cosmos Predict 2.5 with LoRA/DoRA for Robot Video Generation. Robotics progress is meaningful when it holds outside curated demos — look for generalization results across environments.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-18T17:32:14.168703Z"
+  },
+  {
+    "title": "Take your local GitHub sessions anywhere",
+    "link": "https://github.blog/news-insights/product-news/take-your-local-github-sessions-anywhere/",
+    "source": "GitHub Blog AI",
+    "score": 4,
+    "should_post": true,
+    "reason": "Builder signal: available, ai",
+    "post_text": "Take your local GitHub sessions anywhere. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-18T19:51:52.579102Z"
+  },
+  {
+    "title": "PaddleOCR 3.5: Running OCR and Document Parsing Tasks with a Transformers Backend",
+    "link": "https://huggingface.co/blog/PaddlePaddle/paddleocr-transformers",
+    "source": "Hugging Face Blog",
+    "score": 0,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "PaddleOCR 3.5: Running OCR and Document Parsing Tasks with a Transformers Backend. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-18T19:51:54.324530Z"
+  },
+  {
+    "title": "v0.30.0-rc19",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.30.0-rc19",
+    "source": "Ollama Releases",
+    "score": 0,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "v0.30.0-rc19. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-18T19:51:54.324619Z"
+  },
+  {
+    "title": "v0.30.0-rc18",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.30.0-rc18",
+    "source": "Ollama Releases",
+    "score": 0,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "v0.30.0-rc18. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-18T19:51:54.324657Z"
+  },
+  {
+    "title": "Import AI 457: AI stuxnet; cursed Muon optimizer; and positive alignment",
+    "link": "https://jack-clark.net/2026/05/18/import-ai-457-ai-stuxnet-cursed-muon-optimizer-and-positive-alignment/",
+    "source": "Import AI (Jack Clark)",
+    "score": 2,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "Import AI 457: AI stuxnet; cursed Muon optimizer; and positive alignment. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-18T19:51:54.324846Z"
   }
 ]
