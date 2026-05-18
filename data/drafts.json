@@ -361,5 +361,60 @@
     "post_text": "How data science teams use Codex. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-18T21:17:24.372358Z"
+  },
+  {
+    "title": "OpenAI and Dell partner to bring Codex to hybrid and on-premise enterprise environments",
+    "link": "https://openai.com/index/dell-codex-enterprise-partnership",
+    "source": "OpenAI News",
+    "score": 4,
+    "should_post": true,
+    "reason": "Builder signal: agent, ai",
+    "post_text": "OpenAI and Dell partner to bring Codex to hybrid and on-premise enterprise environments. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-18T23:09:27.134467Z"
+  },
+  {
+    "title": "langchain-tests==1.1.8",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-tests%3D%3D1.1.8",
+    "source": "LangChain Releases",
+    "score": 11,
+    "should_post": true,
+    "reason": "Builder signal: release, v1., ai, model",
+    "post_text": "langchain-tests==1.1.8. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-18T23:09:28.766910Z"
+  },
+  {
+    "title": "v2.1.142",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.142",
+    "source": "Claude Code Releases",
+    "score": 23,
+    "should_post": true,
+    "reason": "Builder signal: agent, v2., mcp, claude ",
+    "post_text": "v2.1.142. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-18T23:09:29.877372Z"
+  },
+  {
+    "title": "Sea's View on the Future of Agentic Software Development with Codex",
+    "link": "https://openai.com/index/sea-david-chen",
+    "source": "OpenAI News",
+    "score": 4,
+    "should_post": true,
+    "reason": "Builder signal: agent, ai",
+    "post_text": "Sea's View on the Future of Agentic Software Development with Codex. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-18T23:09:31.176912Z"
+  },
+  {
+    "title": "v0.14.22",
+    "link": "https://github.com/run-llama/llama_index/releases/tag/v0.14.22",
+    "source": "LlamaIndex Releases",
+    "score": 35,
+    "should_post": true,
+    "reason": "Builder signal: release, api, agent, llm",
+    "post_text": "v0.14.22. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-18T23:09:32.322186Z"
   }
 ]
