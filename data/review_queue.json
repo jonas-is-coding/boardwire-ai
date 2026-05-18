@@ -148,7 +148,7 @@
   },
   {
     "id": "5e1429260119",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-18T10:19:41.427678Z",
     "score": 43,
     "reason": "Builder signal: release, available, weights, api",
@@ -164,11 +164,12 @@
     "deferred_at": "2026-05-18T10:19:44.685357Z",
     "defer_count": 1,
     "original_score": 43,
-    "original_reason": "Builder signal: release, available, weights, api"
+    "original_reason": "Builder signal: release, available, weights, api",
+    "rejected_at": "2026-05-18T14:34:22.732694Z"
   },
   {
     "id": "aef9a678b813",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-18T10:19:43.340675Z",
     "score": 5,
     "reason": "Builder signal: v0., ai",
@@ -184,6 +185,47 @@
     "deferred_at": "2026-05-18T10:19:44.690450Z",
     "defer_count": 1,
     "original_score": 5,
-    "original_reason": "Builder signal: v0., ai"
+    "original_reason": "Builder signal: v0., ai",
+    "rejected_at": "2026-05-18T14:34:22.737761Z"
+  },
+  {
+    "id": "44caa693851f",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-18T14:34:19.581994Z",
+    "score": 8,
+    "reason": "Builder signal: release, inference, v0., model",
+    "proposed_post": "v0.30.0. Inference and deployment improvements compound fast — check whether the numbers hold under sustained load, not just peak tests.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "v0.30.0",
+      "source": "Ollama Releases",
+      "link": "https://github.com/ollama/ollama/releases/tag/v0.30.0-rc17"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-18T14:34:22.748031Z",
+    "defer_count": 1,
+    "original_score": 8,
+    "original_reason": "Builder signal: release, inference, v0., model"
+  },
+  {
+    "id": "843b361bf56a",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-18T14:34:20.914139Z",
+    "score": 7,
+    "reason": "Builder signal: agent, model, benchmark",
+    "proposed_post": "Databricks brings GPT-5.5 to enterprise agent workflows. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Databricks brings GPT-5.5 to enterprise agent workflows",
+      "source": "OpenAI News",
+      "link": "https://openai.com/index/databricks"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-18T14:34:22.760170Z",
+    "defer_count": 1,
+    "original_score": 7,
+    "original_reason": "Builder signal: agent, model, benchmark"
   }
 ]
