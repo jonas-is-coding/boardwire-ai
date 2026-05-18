@@ -1399,7 +1399,7 @@
   },
   {
     "id": "be3bb1e83772",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-17T22:57:55.172951Z",
     "score": 7,
     "reason": "Builder signal: agent, ai, rag",
@@ -1415,11 +1415,12 @@
     "deferred_at": "2026-05-17T22:57:57.818652Z",
     "defer_count": 1,
     "original_score": 7,
-    "original_reason": "Builder signal: agent, ai, rag"
+    "original_reason": "Builder signal: agent, ai, rag",
+    "rejected_at": "2026-05-18T00:04:43.012355Z"
   },
   {
     "id": "0b3e9d00bf17",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-17T22:57:56.321298Z",
     "score": 6,
     "reason": "Builder signal: model, multimodal, embedding",
@@ -1435,6 +1436,25 @@
     "deferred_at": "2026-05-17T22:57:58.059292Z",
     "defer_count": 1,
     "original_score": 6,
-    "original_reason": "Builder signal: model, multimodal, embedding"
+    "original_reason": "Builder signal: model, multimodal, embedding",
+    "rejected_at": "2026-05-18T00:04:43.213328Z"
+  },
+  {
+    "id": "bce8e5002bcd",
+    "status": "approved",
+    "created_at": "2026-05-18T00:04:39.666934Z",
+    "score": 50,
+    "reason": "Builder signal: release, available, open-source, open weight",
+    "proposed_post": "Meta's new model is Muse Spark, and meta.ai chat has some interesting tools. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Meta's new model is Muse Spark, and meta.ai chat has some interesting tools",
+      "source": "Simon Willison",
+      "link": "https://simonwillison.net/2026/Apr/8/muse-spark/#atom-entries"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Chloe, dieser Simon Willison Artikel über Metas Muse Spark ist ein Blick wert.\n\nErste Eindrücke: Muse Spark ist Metas erster großer Modell-Release seit Llama 4. Das Modell ist gehostet, nicht Open-Weights, und der API-Zugang ist im Moment privat. Das ist ein wichtiger Punkt für Builder: Kein direkter Download, sondern ein API-Zugang, der erst beantragt werden muss. Das bedeutet für uns, dass es im Moment eher ein \"Beobachten und Verstehen\" ist, als ein \"Direkt Implementieren\".\n\nWas können Entwickler damit anfangen?\n\n1.  **Metas Strategie beobachten:** Muse Spark ist ein starker Hinweis darauf, wie Meta seine KI-Modelle in Zukunft positionieren will. Der Fokus auf eine gehostete API, auch wenn sie privat ist, deutet auf einen stärkeren Push in Richtung kommerzielle Services hin, ähnlich wie bei OpenAI. Entwickler, die Metas Ökosystem im Auge behalten, sollten dies wissen, um zukünftige Integration",
+    "chloe_note": "Dieses Signal fällt durch den Ships Test. Obwohl es einen neuen Modell-Release ankündigt, gibt es für Entwickler momentan nichts direkt zum Herunterladen, Nutzen oder Deployen. Der private API-Zugang und das \"Beobachten und Verstehen\" statt \"Direkt Implementieren\" widersprechen unserem Kriterium für sofortige Anwendbarkeit."
   }
 ]
