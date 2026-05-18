@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "id": "2532f1619356",
+    "published_at": "2026-05-18T08:31:54.031124Z",
+    "platform": "bluesky",
+    "post": "New Open Models: Gemma 4, DeepSeek V4, Kimi K2.6, MiMo 2.5, GLM-5.1\nMultiple new open models with weights released. Benchmark for immediate performance & cost improvements.\n\nAccess weights for Gemma 4, DeepSeek V4, Kimi K2.6, MiMo 2.5, GLM-5.1, and more. Integrate these open mode",
+    "source_link": "https://www.interconnects.ai/p/latest-open-artifacts-21-open-model",
+    "source_title": "Latest open artifacts (#21): Open model bonanza! Gemma 4, DeepSeek V4, Kimi K2.6, MiMo 2.5, GLM-5.1 & others. On CAISI's V4 assessment.",
+    "score": 95,
+    "reason": "Multiple new open models with weights released, offering immediate utility for builders.",
+    "card_path": "generated/cards/2532f1619356.png",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mm4hmp37k32v",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mm4hmp37k32v"
+  },
+  {
+    "id": "cc890d263f9e",
+    "published_at": "2026-05-18T08:31:54.031124Z",
+    "platform": "bluesky",
+    "post": "LLM Architecture: Cost Reduction in Long Contexts\nKV Sharing, mHC, and Compressed Attention optimize open-weight LLMs like Gemma 4 for efficiency.\n\nUnderstand how new LLM architectures reduce long-context inference costs. Apply KV Sharing, mHC, and Compressed Attention insights t",
+    "source_link": "https://magazine.sebastianraschka.com/p/recent-developments-in-llm-architectures",
+    "source_title": "Recent Developments in LLM Architectures: KV Sharing, mHC, and Compressed Attention",
+    "score": 90,
+    "reason": "New open-weight LLMs implement architectural changes for concrete cost reduction in long contexts. Ships today.",
+    "card_path": "generated/cards/cc890d263f9e.png",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mm4hmtdwel2j",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mm4hmtdwel2j"
+  }
+]
