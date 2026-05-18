@@ -250,5 +250,25 @@
     "original_score": 4,
     "original_reason": "Builder signal: available, ai",
     "rejected_at": "2026-05-18T19:51:54.335174Z"
+  },
+  {
+    "id": "007c3c059c19",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-18T21:17:23.272784Z",
+    "score": 4,
+    "reason": "Builder signal: agent, ai",
+    "proposed_post": "OpenAI and Dell partner to bring Codex to hybrid and on-premise enterprise environments. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "OpenAI and Dell partner to bring Codex to hybrid and on-premise enterprise environments",
+      "source": "OpenAI News",
+      "link": "https://openai.com/index/dell-codex-enterprise-partnership"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-18T21:17:24.400418Z",
+    "defer_count": 1,
+    "original_score": 4,
+    "original_reason": "Builder signal: agent, ai"
   }
 ]
