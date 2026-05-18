@@ -1,7 +1,7 @@
 [
   {
     "id": "77c8c3491fd6",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-18T08:59:09.906295Z",
     "score": 5,
     "reason": "Builder signal: release, ai",
@@ -17,11 +17,12 @@
     "deferred_at": "2026-05-18T08:59:15.178235Z",
     "defer_count": 1,
     "original_score": 5,
-    "original_reason": "Builder signal: release, ai"
+    "original_reason": "Builder signal: release, ai",
+    "rejected_at": "2026-05-18T10:19:44.676774Z"
   },
   {
     "id": "c97f855b1fbd",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-18T08:59:10.597585Z",
     "score": 13,
     "reason": "Builder signal: agent, v0., changelog, ai",
@@ -37,11 +38,12 @@
     "deferred_at": "2026-05-18T08:59:15.179146Z",
     "defer_count": 1,
     "original_score": 13,
-    "original_reason": "Builder signal: agent, v0., changelog, ai"
+    "original_reason": "Builder signal: agent, v0., changelog, ai",
+    "rejected_at": "2026-05-18T10:19:44.675166Z"
   },
   {
     "id": "b689eda1a685",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-18T08:59:11.337542Z",
     "score": 4,
     "reason": "Builder signal: agent, ai",
@@ -57,7 +59,8 @@
     "deferred_at": "2026-05-18T08:59:15.180622Z",
     "defer_count": 1,
     "original_score": 4,
-    "original_reason": "Builder signal: agent, ai"
+    "original_reason": "Builder signal: agent, ai",
+    "rejected_at": "2026-05-18T10:19:44.679636Z"
   },
   {
     "id": "7dfad07fffe5",
@@ -142,5 +145,45 @@
         "#DevTools"
       ]
     }
+  },
+  {
+    "id": "5e1429260119",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-18T10:19:41.427678Z",
+    "score": 43,
+    "reason": "Builder signal: release, available, weights, api",
+    "proposed_post": "v0.21.0. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "v0.21.0",
+      "source": "vLLM Releases",
+      "link": "https://github.com/vllm-project/vllm/releases/tag/v0.21.0"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-18T10:19:44.685357Z",
+    "defer_count": 1,
+    "original_score": 43,
+    "original_reason": "Builder signal: release, available, weights, api"
+  },
+  {
+    "id": "aef9a678b813",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-18T10:19:43.340675Z",
+    "score": 5,
+    "reason": "Builder signal: v0., ai",
+    "proposed_post": "v0.21.1rc0: [ROCm][CI] Stage B gating (#42025). The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "v0.21.1rc0: [ROCm][CI] Stage B gating (#42025)",
+      "source": "vLLM Releases",
+      "link": "https://github.com/vllm-project/vllm/releases/tag/v0.21.1rc0"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-18T10:19:44.690450Z",
+    "defer_count": 1,
+    "original_score": 5,
+    "original_reason": "Builder signal: v0., ai"
   }
 ]
