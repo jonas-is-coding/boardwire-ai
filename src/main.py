@@ -52,6 +52,7 @@ def _compose_sarah_post(package: dict[str, str | list[str]]) -> str:
     tags_line = " ".join(t for t in tags if t)[:60]
     parts = [title]
     if subtitle:
+        parts.append("")
         parts.append(subtitle)
     if tags_line:
         parts.append("")

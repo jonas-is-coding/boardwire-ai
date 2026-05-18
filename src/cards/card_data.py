@@ -122,7 +122,7 @@ def from_review_item(item: dict) -> CardData:
 
     if sarah_description:
         body = re.sub(r"(?i)^why it matters:\s*", "", sarah_description).strip()
-        card_summary = f"Why it matters: {_shorten_chars(body, 140).rstrip('.')}."
+        card_summary = _shorten_chars(body, 140)
     else:
         card_summary = _card_summary(title=title, post=post, summary=src_summary, reason=reason)
 
