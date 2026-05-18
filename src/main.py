@@ -658,6 +658,13 @@ def _publish_approved(args, logger) -> int:
                 description=str(sarah_package.get("description", "")),
                 hashtags=[str(x) for x in sarah_package.get("hashtags", [])] if isinstance(sarah_package.get("hashtags"), list) else [],
             )
+            try:
+                regenerated = _generate_card_for_item(item, logger)
+                if regenerated:
+                    item["card_path"] = regenerated
+                    logger.info("Card regenerated with Sarah package: %s", regenerated)
+            except Exception as exc:
+                logger.warning("Card regeneration after Sarah failed for %s: %s", rid, exc)
         else:
             post_text = base_post_text
         card_path = item.get("card_path")

@@ -111,10 +111,25 @@ def from_review_item(item: dict) -> CardData:
     dt = _parse_dt(created_at)
     date_label = dt.strftime("%Y-%m-%d")
 
+    sarah = item.get("sarah_package") or {}
+    sarah_title = str(sarah.get("title", "")).strip()
+    sarah_description = str(sarah.get("description", "")).strip() or str(sarah.get("subtitle", "")).strip()
+
+    if sarah_title:
+        card_headline = _card_headline(sarah_title)
+    else:
+        card_headline = _card_headline(title)
+
+    if sarah_description:
+        body = re.sub(r"(?i)^why it matters:\s*", "", sarah_description).strip()
+        card_summary = f"Why it matters: {_shorten_chars(body, 140).rstrip('.')}."
+    else:
+        card_summary = _card_summary(title=title, post=post, summary=src_summary, reason=reason)
+
     return CardData(
         review_id=str(item.get("id", "unknown")),
-        card_headline=_card_headline(title),
-        card_summary=_card_summary(title=title, post=post, summary=src_summary, reason=reason),
+        card_headline=card_headline,
+        card_summary=card_summary,
         visual_theme=_visual_theme(title=title, post=post, source=source, summary=src_summary),
         source_label=_source_label(source),
         source=source,
