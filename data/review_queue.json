@@ -61,39 +61,60 @@
   },
   {
     "id": "7dfad07fffe5",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-05-18T08:59:06.831868Z",
     "score": 95,
     "reason": "Multiple new open models released with an accompanying assessment, providing immediate tools and data for builders.",
-    "proposed_post": "Gemma 4, DeepSeek V4, Kimi K2.6, MiMo 2.5, and GLM-5.1 open models are now available, with CAISI's V4 assessment. Builders can evaluate these new models for deployment or fine-tuning, using the assessment to compare performance and capabilities.",
+    "proposed_post": "Latest open artifacts (#21): Open model bonanza! Gemma 4, DeepSeek V4.\n\nGemma 4, DeepSeek V4, Kimi K2.6, MiMo 2.5, and GLM-5.1 open models are now available, with CAISI's V\n\n#Gemma #DeepSeek #Kimi",
     "source_angle": "Overview of multiple new open models and their CAISI V4 assessment.",
     "source_item": {
       "title": "Latest open artifacts (#21): Open model bonanza! Gemma 4, DeepSeek V4, Kimi K2.6, MiMo 2.5, GLM-5.1 & others. On CAISI's V4 assessment.",
       "source": "Nathan Lambert (Interconnects)",
       "link": "https://www.interconnects.ai/p/latest-open-artifacts-21-open-model"
     },
-    "card_path": null,
+    "card_path": "generated/cards/7dfad07fffe5.png",
     "is_llm_mode": true,
     "claire_note": "Chloe, das ist ein Pflicht-Post. Lambert fasst die Flut an neuen Open Models zusammen – Gemma 4, DeepSeek V4, Kimi K2.6, MiMo 2.5, GLM-5.1. Entwickler müssen wissen, welche neuen Tools sie jetzt in ihre Projekte einbauen können und wo die Grenzen der aktuellen V4-Modelle liegen, basierend auf CAISI's Assessment.",
-    "chloe_note": "Hey, *Latest open artifacts (#21): Open model bonanza! Gemma 4, DeepSeek V4, Kimi K2.6, MiMo 2.5, GLM-5.1 & others. On CAISI's V4 assessment.* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Multiple new open models released with an accompanying assessment, providing immediate tools and data for builders. Score aktuell: 95. Link: https://www.interconnects.ai/p/latest-open-artifacts-21-open-model"
+    "chloe_note": "Hey, *Latest open artifacts (#21): Open model bonanza! Gemma 4, DeepSeek V4, Kimi K2.6, MiMo 2.5, GLM-5.1 & others. On CAISI's V4 assessment.* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Multiple new open models released with an accompanying assessment, providing immediate tools and data for builders. Score aktuell: 95. Link: https://www.interconnects.ai/p/latest-open-artifacts-21-open-model",
+    "sarah_package": {
+      "title": "Latest open artifacts (#21): Open model bonanza! Gemma 4, DeepSeek V4.",
+      "subtitle": "Gemma 4, DeepSeek V4, Kimi K2.6, MiMo 2.5, and GLM-5.1 open models are now available, with CAISI's V",
+      "description": "Builders can evaluate these new models for deployment or fine-tuning, using the assessment to compare performance and capabilities.",
+      "hashtags": [
+        "#Gemma",
+        "#DeepSeek",
+        "#Kimi"
+      ]
+    },
+    "published_at": "2026-05-18T09:00:14.798102Z"
   },
   {
     "id": "0fe675cc8e7e",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-05-18T08:59:08.310183Z",
     "score": 7,
     "reason": "Builder signal: open-weight, llm",
-    "proposed_post": "Recent Developments in LLM Architectures: KV Sharing, mHC, and Compressed Attention. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
+    "proposed_post": "Recent Developments in LLM Architectures: KV Sharing, mHC, and Compre.\n\nRecent Developments in LLM Architectures: KV Sharing, mHC, and Compressed Attention.\n\n#LLM #AI",
     "source_angle": "Rule-based fallback",
     "source_item": {
       "title": "Recent Developments in LLM Architectures: KV Sharing, mHC, and Compressed Attention",
       "source": "Sebastian Raschka (Ahead of AI)",
       "link": "https://magazine.sebastianraschka.com/p/recent-developments-in-llm-architectures"
     },
-    "card_path": null,
+    "card_path": "generated/cards/0fe675cc8e7e.png",
     "is_llm_mode": false,
     "claire_note": "Aus *Sebastian Raschka (Ahead of AI)* ist ein starker Kandidat reingekommen: *Recent Developments in LLM Architectures: KV Sharing, mHC, and Compressed Attention*.\nRelevanz fuer Builder: Das Thema trifft klar Builder-Interesse (open-weight, llm).\n_Score: 7_",
-    "chloe_note": "Kurzes Update: *Recent Developments in LLM Architectures: KV Sharing, mHC, and Compressed Attention* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um open-weight, llm. Ich habe es mit 7 Punkten bewertet. Hier der Link: https://magazine.sebastianraschka.com/p/recent-developments-in-llm-architectures"
+    "chloe_note": "Kurzes Update: *Recent Developments in LLM Architectures: KV Sharing, mHC, and Compressed Attention* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um open-weight, llm. Ich habe es mit 7 Punkten bewertet. Hier der Link: https://magazine.sebastianraschka.com/p/recent-developments-in-llm-architectures",
+    "sarah_package": {
+      "title": "Recent Developments in LLM Architectures: KV Sharing, mHC, and Compre.",
+      "subtitle": "Recent Developments in LLM Architectures: KV Sharing, mHC, and Compressed Attention.",
+      "description": "Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
+      "hashtags": [
+        "#LLM",
+        "#AI"
+      ]
+    },
+    "published_at": "2026-05-18T09:00:14.798102Z"
   },
   {
     "id": "f3011a798515",
@@ -101,16 +122,25 @@
     "created_at": "2026-05-18T08:59:09.217703Z",
     "score": 34,
     "reason": "Builder signal: available, download, agent, v2.",
-    "proposed_post": "v2.1.143. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "proposed_post": "v2.1.143.\n\nv2.1.143.\n\n#Claude #DevTools",
     "source_angle": "Rule-based",
     "source_item": {
       "title": "v2.1.143",
       "source": "Claude Code Releases",
       "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.143"
     },
-    "card_path": null,
+    "card_path": "generated/cards/f3011a798515.png",
     "is_llm_mode": false,
     "claire_note": "Aus *Claude Code Releases* ist ein starker Kandidat reingekommen: *v2.1.143*.\nRelevanz fuer Builder: Das Thema trifft klar Builder-Interesse (available, download, agent, v2.).\n_Score: 34_",
-    "chloe_note": "Hey, *v2.1.143* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen available, download, agent, v2. Score aktuell: 34. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.143"
+    "chloe_note": "Hey, *v2.1.143* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen available, download, agent, v2. Score aktuell: 34. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.143",
+    "sarah_package": {
+      "title": "v2.1.143.",
+      "subtitle": "v2.1.143.",
+      "description": "Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+      "hashtags": [
+        "#Claude",
+        "#DevTools"
+      ]
+    }
   }
 ]
