@@ -196,5 +196,60 @@
     "post_text": "Databricks brings GPT-5.5 to enterprise agent workflows. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-18T14:34:20.914139Z"
+  },
+  {
+    "title": "v0.30.0",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.30.0-rc17",
+    "source": "Ollama Releases",
+    "score": 13,
+    "should_post": true,
+    "reason": "Builder signal: release, inference, v0., model",
+    "post_text": "v0.30.0. Inference and deployment improvements compound fast — check whether the numbers hold under sustained load, not just peak tests.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-18T17:32:10.639551Z"
+  },
+  {
+    "title": "Databricks brings GPT-5.5 to enterprise agent workflows",
+    "link": "https://openai.com/index/databricks",
+    "source": "OpenAI News",
+    "score": 7,
+    "should_post": true,
+    "reason": "Builder signal: agent, model, benchmark",
+    "post_text": "Databricks brings GPT-5.5 to enterprise agent workflows. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-18T17:32:11.654973Z"
+  },
+  {
+    "title": "v0.30.0-rc20",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.30.0-rc20",
+    "source": "Ollama Releases",
+    "score": 0,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "v0.30.0-rc20. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-18T17:32:13.136545Z"
+  },
+  {
+    "title": "Take your local GitHub sessions anywhere",
+    "link": "https://github.blog/news-insights/product-news/take-your-local-github-sessions-anywhere/",
+    "source": "GitHub Blog AI",
+    "score": 4,
+    "should_post": true,
+    "reason": "Builder signal: available, ai",
+    "post_text": "Take your local GitHub sessions anywhere. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-18T17:32:13.136615Z"
+  },
+  {
+    "title": "Fine-Tuning NVIDIA Cosmos Predict 2.5 with LoRA/DoRA for Robot Video Generation",
+    "link": "https://huggingface.co/blog/nvidia/cosmos-fine-tuning-for-robot-video-generation",
+    "source": "Hugging Face Blog",
+    "score": 3,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "Fine-Tuning NVIDIA Cosmos Predict 2.5 with LoRA/DoRA for Robot Video Generation. Robotics progress is meaningful when it holds outside curated demos — look for generalization results across environments.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-18T17:32:14.168703Z"
   }
 ]

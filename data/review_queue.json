@@ -190,7 +190,7 @@
   },
   {
     "id": "44caa693851f",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-18T14:34:19.581994Z",
     "score": 8,
     "reason": "Builder signal: release, inference, v0., model",
@@ -206,11 +206,12 @@
     "deferred_at": "2026-05-18T14:34:22.748031Z",
     "defer_count": 1,
     "original_score": 8,
-    "original_reason": "Builder signal: release, inference, v0., model"
+    "original_reason": "Builder signal: release, inference, v0., model",
+    "rejected_at": "2026-05-18T17:32:14.177672Z"
   },
   {
     "id": "843b361bf56a",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-18T14:34:20.914139Z",
     "score": 7,
     "reason": "Builder signal: agent, model, benchmark",
@@ -226,6 +227,27 @@
     "deferred_at": "2026-05-18T14:34:22.760170Z",
     "defer_count": 1,
     "original_score": 7,
-    "original_reason": "Builder signal: agent, model, benchmark"
+    "original_reason": "Builder signal: agent, model, benchmark",
+    "rejected_at": "2026-05-18T17:32:14.186593Z"
+  },
+  {
+    "id": "be34784a551f",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-18T17:32:13.136615Z",
+    "score": 4,
+    "reason": "Builder signal: available, ai",
+    "proposed_post": "Take your local GitHub sessions anywhere. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Take your local GitHub sessions anywhere",
+      "source": "GitHub Blog AI",
+      "link": "https://github.blog/news-insights/product-news/take-your-local-github-sessions-anywhere/"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-18T17:32:14.199267Z",
+    "defer_count": 1,
+    "original_score": 4,
+    "original_reason": "Builder signal: available, ai"
   }
 ]
