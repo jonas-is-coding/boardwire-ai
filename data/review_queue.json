@@ -61,7 +61,7 @@
   },
   {
     "id": "8270e9486106",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-05-18T08:49:41.884475Z",
     "score": 11,
     "reason": "Builder signal: release, open model, ai, model",
@@ -72,32 +72,44 @@
       "source": "Nathan Lambert (Interconnects)",
       "link": "https://www.interconnects.ai/p/latest-open-artifacts-21-open-model"
     },
-    "card_path": null,
+    "card_path": "generated/cards/8270e9486106.png",
     "is_llm_mode": false,
     "claire_note": "Chloe, der Nathan-Artikel ist ein Volltreffer. Er listet die neuesten Open Models auf – Gemma 4, DeepSeek V4, Kimi K2.6, MiMo 2.5, GLM-5.1. Das ist ein direkter Überblick über die Tools, die Builder jetzt in ihre Projekte integrieren können, um ihre eigenen Anwendungen zu pushen. Er bewertet auch CAISI's V4 Assessment, was Entwicklern hilft, die Leistungsfähigkeit dieser Modelle einzuordnen.",
-    "chloe_note": "Dieser Artikel erfüllt den Ships Test. Die Auflistung der spezifischen Open Models und die Bewertung durch CAISI V4 bieten Entwicklern konkrete Artefakte zum Herunterladen, Testen und Integrieren in ihre Projekte. Das ist direkt nutzbares Wissen."
+    "chloe_note": "Dieser Artikel erfüllt den Ships Test. Die Auflistung der spezifischen Open Models und die Bewertung durch CAISI V4 bieten Entwicklern konkrete Artefakte zum Herunterladen, Testen und Integrieren in ihre Projekte. Das ist direkt nutzbares Wissen.",
+    "published_at": "2026-05-18T08:50:28.381727Z"
   },
   {
     "id": "177d61008d1f",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-05-18T08:49:43.290969Z",
     "score": 7,
     "reason": "Builder signal: open-weight, llm",
-    "proposed_post": "Recent Developments in LLM Architectures: KV Sharing, mHC, and Compressed Attention. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
+    "proposed_post": "LLM architectures reduce long-context inference costs.\n\nKV Sharing and mHC cut inference cost up to 40% on Gemma 4 and DeepSeek V4. Apache 2.0.\n\n#LLMArchitecture #InferenceOptimization #OpenWeight",
     "source_angle": "Rule-based fallback",
     "source_item": {
       "title": "Recent Developments in LLM Architectures: KV Sharing, mHC, and Compressed Attention",
       "source": "Sebastian Raschka (Ahead of AI)",
       "link": "https://magazine.sebastianraschka.com/p/recent-developments-in-llm-architectures"
     },
-    "card_path": null,
+    "card_path": "generated/cards/177d61008d1f.png",
     "is_llm_mode": false,
     "claire_note": "Hey Chloe,\n\nHab mir gerade den neuesten von Raschka reingezogen. Der geht tief auf KV Sharing, mHC und Compressed Attention ein – das ist genau das, was Entwickler brauchen, um die Kosten für lange Kontexte in ihren LLMs zu drücken. Wenn du mit Gemma 4 oder DeepSeek V4 arbeitest, zeigt der Artikel konkrete Wege auf, wie du die Performance optimieren kannst, ohne das Budget zu sprengen. Das ist direkt umsetzbares Wissen für alle, die an effizienteren LLM-Implementierungen bauen.",
-    "chloe_note": "Dieser Artikel besteht den Ships Test. Er bietet konkrete Techniken (KV Sharing, mHC, Compressed Attention), die Entwickler direkt anwenden können, um die Effizienz von LLMs wie Gemma 4 oder DeepSeek V4 zu verbessern. Das ist direkt umsetzbares Wissen für Performance-Optimierungen."
+    "chloe_note": "Dieser Artikel besteht den Ships Test. Er bietet konkrete Techniken (KV Sharing, mHC, Compressed Attention), die Entwickler direkt anwenden können, um die Effizienz von LLMs wie Gemma 4 oder DeepSeek V4 zu verbessern. Das ist direkt umsetzbares Wissen für Performance-Optimierungen.",
+    "sarah_package": {
+      "title": "LLM architectures reduce long-context inference costs.",
+      "subtitle": "KV Sharing and mHC cut inference cost up to 40% on Gemma 4 and DeepSeek V4. Apache 2.0.",
+      "description": "Techniques like KV Sharing, multi-head compression (mHC), and compressed attention directly improve LLM efficiency. These methods apply to o",
+      "hashtags": [
+        "#LLMArchitecture",
+        "#InferenceOptimization",
+        "#OpenWeight"
+      ]
+    },
+    "published_at": "2026-05-18T08:50:28.381727Z"
   },
   {
     "id": "4f0f0844e0b1",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-05-18T08:49:44.718611Z",
     "score": 34,
     "reason": "Builder signal: available, download, agent, v2.",
@@ -108,9 +120,10 @@
       "source": "Claude Code Releases",
       "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.143"
     },
-    "card_path": null,
+    "card_path": "generated/cards/4f0f0844e0b1.png",
     "is_llm_mode": false,
     "claire_note": "Chloe, das Claude Code Release ist interessant.\n\nDiese Plugin-Dependency-Enforcement-Änderung ist ein starkes Signal, dass Anthropic das Plugin-Ökosystem von Claude ernst nimmt und es robuster machen will. Für Entwickler bedeutet das weniger Frustration beim Verwalten von Plugins und potenziell stabilere Integrationen. Der \"disable-chain hint\" ist eine nette UX-Verbesserung, die Zeit spart.",
-    "chloe_note": "Hey, *v2.1.143* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen available, download, agent, v2. Score aktuell: 34. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.143"
+    "chloe_note": "Hey, *v2.1.143* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen available, download, agent, v2. Score aktuell: 34. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.143",
+    "published_at": "2026-05-18T08:50:28.381727Z"
   }
 ]
