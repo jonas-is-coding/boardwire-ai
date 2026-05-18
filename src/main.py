@@ -47,11 +47,16 @@ VALID_PUBLISHERS = {"dry_run", "bluesky"}
 def _compose_sarah_post(package: dict[str, str | list[str]]) -> str:
     title = str(package.get("title", "")).strip()
     subtitle = str(package.get("subtitle", "")).strip()
-    description = str(package.get("description", "")).strip()
     raw_tags = package.get("hashtags", [])
     tags = [str(t).strip() for t in raw_tags] if isinstance(raw_tags, list) else []
-    tags_line = " ".join(t for t in tags if t)[:90]
-    post = f"{title}\n{subtitle}\n\n{description}\n\n{tags_line}".strip()
+    tags_line = " ".join(t for t in tags if t)[:60]
+    parts = [title]
+    if subtitle:
+        parts.append(subtitle)
+    if tags_line:
+        parts.append("")
+        parts.append(tags_line)
+    post = "\n".join(parts).strip()
     return post[:280]
 
 
