@@ -141,11 +141,11 @@
   },
   {
     "id": "c553a2e0c738",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-05-19T16:07:19.975117Z",
     "score": 7,
     "reason": "Builder signal (T2): llm, ai",
-    "proposed_post": "rtk-ai/rtk — CLI proxy that reduces LLM token consumption by 60-90% on common dev commands. Single Rust binary, zero dependencies. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "proposed_post": "Rtk-ai proxy cuts LLM token consumption by 60% to 90%.\n\nThe Rust CLI tool reduces costs and latency for common development commands. Ships as a single binar\n\n#Rust #OpenAI #Claude3",
     "source_angle": "Rule-based",
     "source_item": {
       "title": "rtk-ai/rtk — CLI proxy that reduces LLM token consumption by 60-90% on common dev commands. Single Rust binary, zero dependencies",
@@ -154,9 +154,20 @@
       "source_tier": 2,
       "engagement_score": 667.0
     },
-    "card_path": null,
+    "card_path": "generated/cards/c553a2e0c738.png",
     "is_llm_mode": false,
     "claire_note": "Chloe, dieser 'rtk-ai/rtk' Proxy ist spannend. Er verspricht 60-90% Token-Ersparnis bei LLM-Nutzung für Entwickler-Befehle – das ist ein Game Changer für Kosten und Latenz. Rust Binary ohne Dependencies bedeutet einfache Integration und hohe Performance. Jeder, der LLMs in seine Dev-Workflows einbindet, kann damit sofort bares Geld sparen.",
-    "chloe_note": "*rtk-ai/rtk — CLI proxy that reduces LLM token consumption by 60-90% on common dev commands. Single Rust binary, zero dependencies* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Builder signal (T2): llm, ai. Bewertung: 7. Quelle: https://github.com/rtk-ai/rtk"
+    "chloe_note": "*rtk-ai/rtk — CLI proxy that reduces LLM token consumption by 60-90% on common dev commands. Single Rust binary, zero dependencies* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Builder signal (T2): llm, ai. Bewertung: 7. Quelle: https://github.com/rtk-ai/rtk",
+    "sarah_package": {
+      "title": "Rtk-ai proxy cuts LLM token consumption by 60% to 90%.",
+      "subtitle": "The Rust CLI tool reduces costs and latency for common development commands. Ships as a single binar",
+      "description": "Rtk-ai acts as a local proxy for OpenAI API calls, caching and reusing responses for repeated developer commands. It works with GPT-4, GPT-3",
+      "hashtags": [
+        "#Rust",
+        "#OpenAI",
+        "#Claude3"
+      ]
+    },
+    "published_at": "2026-05-19T16:08:35.212206Z"
   }
 ]

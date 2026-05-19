@@ -1,0 +1,15 @@
+[
+  {
+    "id": "c553a2e0c738",
+    "published_at": "2026-05-19T16:08:35.212206Z",
+    "platform": "bluesky",
+    "post": "Rtk-ai proxy cuts LLM token consumption by 60% to 90%.\n\nThe Rust CLI tool reduces costs and latency for common development commands. Ships as a single binar\n\n#Rust #OpenAI #Claude3",
+    "source_link": "https://github.com/rtk-ai/rtk",
+    "source_title": "rtk-ai/rtk — CLI proxy that reduces LLM token consumption by 60-90% on common dev commands. Single Rust binary, zero dependencies",
+    "score": 7,
+    "reason": "Builder signal (T2): llm, ai",
+    "card_path": "generated/cards/c553a2e0c738.png",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mm7rmlkx6m2n",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mm7rmlkx6m2n"
+  }
+]
