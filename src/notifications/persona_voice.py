@@ -489,6 +489,8 @@ def sarah_build_publish_package(
     cluster_total_engagement: int = 0,
     cluster_common_terms: list[str] | None = None,
     alternative_titles: list[str] | None = None,
+    provider_override: str | None = None,
+    allow_gemini_fallback: bool = True,
 ) -> dict[str, str | list[str]] | None:
     cluster_sources = cluster_sources or []
     cluster_common_terms = cluster_common_terms or []
@@ -508,7 +510,7 @@ def sarah_build_publish_package(
         cluster_common_terms=", ".join(str(x) for x in cluster_common_terms[:10]),
         alternative_titles=" | ".join(str(x)[:120] for x in alternative_titles[:6]),
     )
-    sarah_provider = os.getenv("BOARDWIRE_SARAH_PROVIDER", "").strip().lower()
+    sarah_provider = (provider_override or os.getenv("BOARDWIRE_SARAH_PROVIDER", "")).strip().lower()
     raw: str | None = None
 
     if sarah_provider == "openrouter":
@@ -540,7 +542,7 @@ def sarah_build_publish_package(
                 fallback_model=None,
                 max_output_tokens=420,
             )
-        if not raw:
+        if not raw and allow_gemini_fallback:
             _LOGGER.info("OpenRouter Sarah failed, trying Gemini flash fallback")
             raw = _call_gemini(
                 _SYSTEM_PROMPTS["sarah"],
