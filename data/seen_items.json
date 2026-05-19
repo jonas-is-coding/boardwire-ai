@@ -1,10 +1,18 @@
 [
+  "https://github.com/rohitg00/agentmemory",
+  "https://github.com/anthropics/claude-code/releases/tag/v2.1.144",
+  "https://github.com/rtk-ai/rtk",
+  "https://github.com/microsoft/ai-agents-for-beginners",
+  "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.103.0",
+  "https://github.com/ollama/ollama/releases/tag/v0.30.0-rc21",
+  "https://github.com/HKUDS/CLI-Anything",
+  "https://github.com/colbymchenry/codegraph",
   "https://github.com/tinyhumansai/openhuman",
+  "https://github.blog/news-insights/product-news/take-your-local-github-sessions-anywhere/",
+  "https://openai.com/index/dell-codex-enterprise-partnership",
+  "https://github.com/Imbad0202/academic-research-skills",
   "https://github.com/msitarzewski/agency-agents",
   "https://deepmind.google/blog/gemini-3-5-frontier-intelligence-with-action/",
   "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.103.1",
-  "https://openai.com/index/dell-codex-enterprise-partnership",
-  "https://github.com/Imbad0202/academic-research-skills",
-  "https://github.com/anthropics/claude-code/releases/tag/v2.1.144",
-  "https://github.com/microsoft/ai-agents-for-beginners"
+  "https://github.com/run-llama/llama_index/releases/tag/v0.14.22"
 ]
