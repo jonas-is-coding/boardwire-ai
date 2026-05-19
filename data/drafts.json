@@ -471,5 +471,60 @@
     "post_text": "v0.24.0-rc1. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-19T04:05:10.622134Z"
+  },
+  {
+    "title": "v0.103.0",
+    "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.103.0",
+    "source": "Anthropic Python SDK Releases",
+    "score": 10,
+    "should_post": true,
+    "reason": "Builder signal: v0., changelog, sdk",
+    "post_text": "v0.103.0. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-19T08:32:02.120189Z"
+  },
+  {
+    "title": "Granite Embedding Multilingual R2: Open Apache 2.0 Multilingual Embeddings with 32K Context — Best Sub-100M Retrieval Quality",
+    "link": "https://huggingface.co/blog/ibm-granite/granite-embedding-multilingual-r2",
+    "source": "Hugging Face Blog",
+    "score": 4,
+    "should_post": true,
+    "reason": "Builder signal: embedding, retrieval",
+    "post_text": "Granite Embedding Multilingual R2: Open Apache 2.0 Multilingual Embeddings with 32K Context — Best Sub-100M Retrieval Quality. Retrieval quality is the bottleneck most RAG systems hit first — check recall metrics on domain-specific data, not just generic benchmarks.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-19T08:32:03.013293Z"
+  },
+  {
+    "title": "Work with Codex from anywhere",
+    "link": "https://openai.com/index/work-with-codex-from-anywhere",
+    "source": "OpenAI News",
+    "score": 0,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "Work with Codex from anywhere. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-19T08:32:04.366031Z"
+  },
+  {
+    "title": "v0.21.0rc3",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.21.0rc3",
+    "source": "vLLM Releases",
+    "score": 4,
+    "should_post": true,
+    "reason": "Builder signal: v0.",
+    "post_text": "v0.21.0rc3. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-19T08:32:04.366277Z"
+  },
+  {
+    "title": "v0.24.0-rc0",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.24.0-rc0",
+    "source": "Ollama Releases",
+    "score": 0,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "v0.24.0-rc0. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-19T08:32:05.510317Z"
   }
 ]

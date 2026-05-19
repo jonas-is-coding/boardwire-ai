@@ -310,5 +310,23 @@
     "is_llm_mode": false,
     "claire_note": "Chloe, der Simon Willison Artikel \"The last six months in LLMs in five minutes\" ist ein Volltreffer.\n\nEr fasst die wichtigsten LLM-Entwicklungen der letzten sechs Monate super kompakt zusammen. Für jeden, der mit LLMs baut, ist das eine schnelle, aber fundierte Orientierung, wo die Reise hingeht – besonders mit seinen Annotated Slides. Man sieht sofort, was relevant ist und wo man tiefer graben sollte, ohne stundenlang News zu sichten.",
     "chloe_note": "Dieser Artikel besteht den Ships Test. Willison liefert eine prägnante Übersicht über relevante LLM-Releases und verfügbare Modelle, die für Entwickler direkt nutzbar oder deploybar sind. Die annotated Slides sind besonders hilfreich, um schnell die Schlüsselpunkte für eigene Projekte zu identifizieren."
+  },
+  {
+    "id": "c19bf266a6fe",
+    "status": "approved",
+    "created_at": "2026-05-19T08:32:03.013293Z",
+    "score": 4,
+    "reason": "Builder signal: embedding, retrieval",
+    "proposed_post": "Granite Embedding Multilingual R2: Open Apache 2.0 Multilingual Embeddings with 32K Context — Best Sub-100M Retrieval Quality. Retrieval quality is the bottleneck most RAG systems hit first — check recall metrics on domain-specific data, not just generic benchmarks.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Granite Embedding Multilingual R2: Open Apache 2.0 Multilingual Embeddings with 32K Context — Best Sub-100M Retrieval Quality",
+      "source": "Hugging Face Blog",
+      "link": "https://huggingface.co/blog/ibm-granite/granite-embedding-multilingual-r2"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Hey Chloe,\n\nHab da einen interessanten Artikel von Hugging Face gefunden: \"Granite Embedding Multilingual R2\". Das ist ein Open-Source-Modell unter Apache 2.0.\n\nFür uns Builder ist das krass, weil es multilingual ist und 'ne 32K Context-Window hat. Das Ding soll die beste Retrieval-Qualität unter 100M Parametern liefern. Heißt, man kriegt Top-Ergebnisse für RAG-Anwendungen, ohne direkt auf die ganz großen Modelle gehen zu müssen. Könnte für viele, die multilinguale Suche oder Retrieval-Systeme bauen, echt ein Game Changer sein.",
+    "chloe_note": "Der Hugging Face Artikel über Granite Embedding Multilingual R2 besteht den Ships Test. Es gibt ein Open-Source-Modell unter Apache 2.0 zum direkten Download und Einsatz, was für Entwickler sofort nutzbar ist. Die klare Performance-Angabe für RAG-Anwendungen unterstreicht den praktischen Nutzen."
   }
 ]
