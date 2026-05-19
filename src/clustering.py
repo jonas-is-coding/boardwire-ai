@@ -237,6 +237,7 @@ def cluster_feed_items(items: list[FeedItem], logger=None) -> list[NewsCluster]:
     parent = list(range(len(items)))
     size = [1 for _ in items]
     edge_logs: dict[int, list[dict]] = {i: [] for i in range(len(items))}
+    blocked_union_count = 0
 
     def find(x: int) -> int:
         while parent[x] != x:
@@ -245,13 +246,13 @@ def cluster_feed_items(items: list[FeedItem], logger=None) -> list[NewsCluster]:
         return x
 
     def union(a: int, b: int, edge: dict) -> None:
+        nonlocal blocked_union_count
         ra = find(a)
         rb = find(b)
         if ra == rb:
             return
         if size[ra] + size[rb] > OVERCLUSTER_MAX_SIZE:
-            if logger:
-                logger.warning("Cluster union blocked: would exceed max size")
+            blocked_union_count += 1
             return
         parent[rb] = ra
         size[ra] += size[rb]
@@ -304,6 +305,8 @@ def cluster_feed_items(items: list[FeedItem], logger=None) -> list[NewsCluster]:
         clusters.append(cluster)
 
     if logger:
+        if blocked_union_count > 0:
+            logger.warning("Cluster union blocked: would exceed max size count=%d", blocked_union_count)
         for cluster in clusters:
             if len(cluster.items) > OVERCLUSTER_MAX_SIZE:
                 root_idx = find(items.index(cluster.main_item))
