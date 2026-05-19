@@ -1,1 +1,41 @@
-[]
+[
+  {
+    "id": "d346a3cdd487",
+    "published_at": "2026-05-19T12:40:26.632834Z",
+    "platform": "bluesky",
+    "post": "v0.103.0.\n\nThe signal to watch: whether this changes measurable capability, reliability, or cost in real AI wor\n\n#Anthropic #AI",
+    "source_link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.103.0",
+    "source_title": "v0.103.0",
+    "score": 10,
+    "reason": "Builder signal: v0., changelog, sdk",
+    "card_path": "generated/cards/d346a3cdd487.png",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mm7fy3gotq2x",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mm7fy3gotq2x"
+  },
+  {
+    "id": "be4dd7f45b6c",
+    "published_at": "2026-05-19T12:40:26.632834Z",
+    "platform": "bluesky",
+    "post": "Simon Willison summarizes six months of LLM developments.\n\nOverview covers key releases, open-weight models, and availability for builders. Focuses on actionab\n\n#LLM #OpenWeight #AISummary",
+    "source_link": "https://simonwillison.net/2026/May/19/5-minute-llms/#atom-entries",
+    "source_title": "The last six months in LLMs in five minutes",
+    "score": 38,
+    "reason": "Builder signal: release, released, available, open weight",
+    "card_path": "generated/cards/be4dd7f45b6c.png",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mm7fyarfuv2c",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mm7fyarfuv2c"
+  },
+  {
+    "id": "6a59c75de1e1",
+    "published_at": "2026-05-19T12:40:26.632834Z",
+    "platform": "bluesky",
+    "post": "v2.1.144.\n\nClaude Code v2.1.144 adds `/resume` support for background sessions.\n\n#Claude #DevTools",
+    "source_link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.144",
+    "source_title": "v2.1.144",
+    "score": 90,
+    "reason": "New Claude Code CLI release with direct workflow improvements for developers managing background agent sessions.",
+    "card_path": "generated/cards/6a59c75de1e1.png",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mm7fygrh2y2o",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mm7fygrh2y2o"
+  }
+]
