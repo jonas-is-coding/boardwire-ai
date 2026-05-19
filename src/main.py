@@ -195,11 +195,17 @@ def _cluster_and_rank(items: list[FeedItem], logger, top_k: int) -> tuple[list[F
 
     logger.info("Items before clustering: %d", len(items))
     logger.info("Clusters built: %d", len(clusters))
+    largest_cluster_size = max((len(c.items) for c in clusters), default=0)
+    logger.info("Largest cluster size: %d", largest_cluster_size)
+    if largest_cluster_size > 25:
+        logger.warning("Largest cluster is unusually large: %d items", largest_cluster_size)
     for c in selected[:5]:
         logger.info(
-            "Top cluster %s score=%d sources=%d (%s)",
+            "Top cluster %s score=%d size=%d main_title=%s sources=%d (%s)",
             c.id,
             c.cluster_score,
+            len(c.items),
+            c.main_item.title[:120],
             c.source_count,
             ", ".join(c.sources[:5]),
         )

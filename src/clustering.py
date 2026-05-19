@@ -12,7 +12,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 from src.models import FeedItem
 
-_CLUSTER_THRESHOLD = 0.42
+_CLUSTER_THRESHOLD = 0.62
 _STRONG_TERMS = {
     "release", "released", "launch", "launched", "ships", "shipping", "open-source",
     "opensource", "api", "sdk", "cli", "weights", "benchmark", "benchmarks",
@@ -24,6 +24,10 @@ _STOPWORDS = {
     "the", "and", "for", "with", "from", "that", "this", "into", "about", "after", "before",
     "your", "their", "have", "has", "was", "were", "will", "also", "more", "than", "into",
     "news", "ai", "new", "over", "under", "into", "using", "build", "builder", "today",
+}
+_GENERIC_AI_TERMS = {
+    "ai", "model", "models", "llm", "llms", "agent", "agents", "open", "release",
+    "new", "data", "code", "api", "benchmark", "research",
 }
 
 
@@ -61,27 +65,58 @@ def _url_keywords(link: str) -> str:
 def build_item_text(item: FeedItem) -> str:
     title = normalize_text(item.title)
     summary = normalize_text(item.summary)
-    source = normalize_text(item.source)
-    url_terms = _url_keywords(item.link)
-    return f"{title} {summary} {source} {url_terms}".strip()
+    return f"{title} {summary}".strip()
 
 
 def _tokens(text: str) -> set[str]:
     return {t for t in normalize_text(text).split() if len(t) >= 3 and t not in _STOPWORDS}
 
 
+def _strong_tokens(text: str) -> set[str]:
+    return {t for t in _tokens(text) if t not in _GENERIC_AI_TERMS}
+
+
+def _extract_repo_id(link: str) -> tuple[str, str] | None:
+    try:
+        parsed = urlparse(link or "")
+        host = parsed.netloc.lower()
+        if "github.com" not in host:
+            return None
+        parts = [p for p in parsed.path.split("/") if p]
+        if len(parts) < 2:
+            return None
+        owner = parts[0].lower()
+        repo = parts[1].lower()
+        return owner, repo
+    except Exception:
+        return None
+
+
+def _same_project_or_repo(a: FeedItem, b: FeedItem) -> bool:
+    repo_a = _extract_repo_id(a.link)
+    repo_b = _extract_repo_id(b.link)
+    if repo_a and repo_b:
+        return repo_a == repo_b or repo_a[1] == repo_b[1]
+
+    title_tokens_a = _strong_tokens(a.title)
+    title_tokens_b = _strong_tokens(b.title)
+    overlap = title_tokens_a & title_tokens_b
+    if len(overlap) >= 2:
+        return True
+    return False
+
+
 def _keyword_overlap(a: FeedItem, b: FeedItem) -> bool:
-    title_a = _tokens(a.title)
-    title_b = _tokens(b.title)
+    text_a = f"{a.title} {a.summary}"
+    text_b = f"{b.title} {b.summary}"
+    title_a = _strong_tokens(text_a)
+    title_b = _strong_tokens(text_b)
     if not title_a or not title_b:
-        return False
+        return _same_project_or_repo(a, b)
     inter = title_a & title_b
     if len(inter) >= 3:
         return True
-
-    url_a = _tokens(_url_keywords(a.link))
-    url_b = _tokens(_url_keywords(b.link))
-    if len(url_a & url_b) >= 2:
+    if _same_project_or_repo(a, b):
         return True
 
     return False
