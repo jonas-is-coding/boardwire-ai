@@ -23,8 +23,9 @@ jobs:
       BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
       OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
       BOARDWIRE_SARAH_PROVIDER: openrouter
-      BOARDWIRE_SARAH_MODEL: qwen/qwen3-235b-a22b:free
-      BOARDWIRE_SARAH_FALLBACK_MODEL: deepseek/deepseek-chat-v3-0324:free
+      BOARDWIRE_SARAH_MODEL: deepseek/deepseek-v4-flash:free
+      BOARDWIRE_SARAH_FALLBACK_MODEL: minimax/minimax-m2.5:free
+      BOARDWIRE_SARAH_EMERGENCY_MODEL: openrouter/free
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
       GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}

@@ -487,12 +487,16 @@ def sarah_build_publish_package(
 
     if sarah_provider == "openrouter":
         sarah_model = (
-            os.getenv("BOARDWIRE_SARAH_MODEL", "qwen/qwen3-235b-a22b:free").strip()
-            or "qwen/qwen3-235b-a22b:free"
+            os.getenv("BOARDWIRE_SARAH_MODEL", "deepseek/deepseek-v4-flash:free").strip()
+            or "deepseek/deepseek-v4-flash:free"
         )
         sarah_fallback = (
-            os.getenv("BOARDWIRE_SARAH_FALLBACK_MODEL", "deepseek/deepseek-chat-v3-0324:free").strip()
-            or "deepseek/deepseek-chat-v3-0324:free"
+            os.getenv("BOARDWIRE_SARAH_FALLBACK_MODEL", "minimax/minimax-m2.5:free").strip()
+            or "minimax/minimax-m2.5:free"
+        )
+        sarah_emergency = (
+            os.getenv("BOARDWIRE_SARAH_EMERGENCY_MODEL", "openrouter/free").strip()
+            or "openrouter/free"
         )
         raw = _call_openrouter(
             _SYSTEM_PROMPTS["sarah"],
@@ -501,6 +505,15 @@ def sarah_build_publish_package(
             fallback_model=sarah_fallback,
             max_output_tokens=420,
         )
+        if not raw and sarah_emergency not in {sarah_model, sarah_fallback}:
+            _LOGGER.info("OpenRouter Sarah primary+fallback failed, trying emergency model=%s", sarah_emergency)
+            raw = _call_openrouter(
+                _SYSTEM_PROMPTS["sarah"],
+                user,
+                model=sarah_emergency,
+                fallback_model=None,
+                max_output_tokens=420,
+            )
         if not raw:
             _LOGGER.info("OpenRouter Sarah failed, trying Gemini flash fallback")
             raw = _call_gemini(
