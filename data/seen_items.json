@@ -1,10 +1,13 @@
 [
-  "https://deepmind.google/blog/engineering-more-resilient-crops-for-a-warming-climate/",
-  "https://magazine.sebastianraschka.com/p/llm-evaluation-4-approaches",
   "https://huggingface.co/blog/nvidia/ai-q-top-ranking-open-portable-deep-research-agent",
+  "https://openai.com/index/new-embedding-models-and-api-updates",
   "https://huggingface.co/blog/rapidfireai",
+  "https://openai.com/index/introducing-chatgpt-and-whisper-apis",
   "https://magazine.sebastianraschka.com/p/workflow-for-understanding-llms",
-  "https://huggingface.co/blog/async-rl-training-landscape",
+  "https://deepmind.google/blog/engineering-more-resilient-crops-for-a-warming-climate/",
   "https://huggingface.co/blog/ibm-research/assetopsbench-playground-on-hugging-face",
-  "https://huggingface.co/blog/nvidia/multilingual-reasoning-v1"
+  "https://magazine.sebastianraschka.com/p/llm-evaluation-4-approaches",
+  "https://magazine.sebastianraschka.com/p/a-dream-of-spring-for-open-weight",
+  "https://huggingface.co/blog/nvidia/multilingual-reasoning-v1",
+  "https://huggingface.co/blog/async-rl-training-landscape"
 ]

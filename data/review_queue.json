@@ -280,5 +280,318 @@
     "is_llm_mode": false,
     "claire_note": "Aus *Hugging Face Blog* ist ein starker Kandidat reingekommen: *Measuring Open-Source Llama Nemotron Models on DeepResearch Bench*.\nRelevanz fuer Builder: Builder signal (T2): open-source, model, research\n_Score: 8_",
     "chloe_note": "Kurzes Update: *Measuring Open-Source Llama Nemotron Models on DeepResearch Bench* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Builder signal (T2): open-source, model, researchCluster context: 1 sources, engagement 0. Common terms: nemotron, llama, measuring, deepresearch. Ich habe es mit 8 Punkten bewertet. Hier der Link: https://huggingface.co/blog/nvidia/ai-q-top-ranking-open-portable-deep-research-agent"
+  },
+  {
+    "id": "248693a7936d",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-19T19:11:32.342496Z",
+    "score": 95,
+    "reason": "New open-source model (Gemma 3n) fully available for immediate use by builders, confirmed by trusted source.",
+    "proposed_post": "Gemma 3n is now fully available in the open-source ecosystem. Builders can immediately download, fine-tune, and deploy this model for their applications.",
+    "source_angle": "Gemma 3n open-source release",
+    "source_item": {
+      "title": "Gemma 3n fully available in the open-source ecosystem!",
+      "source": "Hugging Face Blog",
+      "link": "https://huggingface.co/blog/gemma3n",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "summary": "Gemma 3n fully available in the open-source ecosystem!\n[Cluster context: 1 sources, engagement 0, common terms: open-source, fully, available, gemma, ecosystem.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Hugging Face Blog"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "open-source",
+          "fully",
+          "available",
+          "gemma",
+          "ecosystem"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: open-source, fully, available, gemma. Lead: Gemma 3n fully available in the open-source ecosystem!",
+        "alternative_titles": [],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-05-19T19:11:43.512796Z",
+    "defer_count": 1,
+    "original_score": 95,
+    "original_reason": "New open-source model (Gemma 3n) fully available for immediate use by builders, confirmed by trusted source."
+  },
+  {
+    "id": "a70e81cd912e",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-19T19:11:33.233835Z",
+    "score": 5,
+    "reason": "Builder signal (T2): release",
+    "proposed_post": "Google releases Gemma 2 2B, ShieldGemma and Gemma Scope. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Google releases Gemma 2 2B, ShieldGemma and Gemma Scope",
+      "source": "Hugging Face Blog",
+      "link": "https://huggingface.co/blog/gemma-july-update",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "summary": "Google releases Gemma 2 2B, ShieldGemma and Gemma Scope\n[Cluster context: 1 sources, engagement 0, common terms: scope, shieldgemma, releases, gemma.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Hugging Face Blog"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "scope",
+          "shieldgemma",
+          "releases",
+          "gemma"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: scope, shieldgemma, releases, gemma. Lead: Google releases Gemma 2 2B, ShieldGemma and Gemma Scope",
+        "alternative_titles": [],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-19T19:11:43.523996Z",
+    "defer_count": 1,
+    "original_score": 5,
+    "original_reason": "Builder signal (T2): release"
+  },
+  {
+    "id": "0a044e3261cb",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-19T19:11:34.554394Z",
+    "score": 8,
+    "reason": "Builder signal (T2): release, llm",
+    "proposed_post": "CodeGemma - an official Google release for code LLMs. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "CodeGemma - an official Google release for code LLMs",
+      "source": "Hugging Face Blog",
+      "link": "https://huggingface.co/blog/codegemma",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "summary": "CodeGemma - an official Google release for code LLMs\n[Cluster context: 1 sources, engagement 0, common terms: codegemma, official.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Hugging Face Blog"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "codegemma",
+          "official"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: codegemma, official. Lead: CodeGemma - an official Google release for code LLMs",
+        "alternative_titles": [],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-19T19:11:43.536378Z",
+    "defer_count": 1,
+    "original_score": 8,
+    "original_reason": "Builder signal (T2): release, llm"
+  },
+  {
+    "id": "4a2348352734",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-19T19:11:36.038496Z",
+    "score": 6,
+    "reason": "Builder signal (T2): open-source, ai",
+    "proposed_post": "Reachy Mini - The Open-Source Robot for Today's and Tomorrow's AI Builders. Robotics progress is meaningful when it holds outside curated demos — look for generalization results across environments.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Reachy Mini - The Open-Source Robot for Today's and Tomorrow's AI Builders",
+      "source": "Hugging Face Blog",
+      "link": "https://huggingface.co/blog/reachy-mini",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "summary": "Reachy Mini - The Open-Source Robot for Today's and Tomorrow's AI Builders\n[Cluster context: 1 sources, engagement 0, common terms: robot, builders, open-source, mini, reachy.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Hugging Face Blog"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "robot",
+          "builders",
+          "open-source",
+          "mini",
+          "reachy",
+          "tomorrow"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: robot, builders, open-source, mini. Lead: Reachy Mini - The Open-Source Robot for Today's and Tomorrow's AI Builders",
+        "alternative_titles": [],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-19T19:11:43.552509Z",
+    "defer_count": 1,
+    "original_score": 6,
+    "original_reason": "Builder signal (T2): open-source, ai"
+  },
+  {
+    "id": "f83492c42dd5",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-19T19:11:37.363575Z",
+    "score": 7,
+    "reason": "Builder signal (T2): open-source, dataset",
+    "proposed_post": "LeRobot goes to driving school: World’s largest open-source self-driving dataset. Robotics progress is meaningful when it holds outside curated demos — look for generalization results across environments.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "LeRobot goes to driving school: World’s largest open-source self-driving dataset",
+      "source": "Hugging Face Blog",
+      "link": "https://huggingface.co/blog/lerobot-goes-to-driving-school",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "summary": "LeRobot goes to driving school: World’s largest open-source self-driving dataset\n[Cluster context: 1 sources, engagement 0, common terms: open-source, self-driving, largest, school, dataset.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Hugging Face Blog"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "open-source",
+          "self-driving",
+          "largest",
+          "school",
+          "dataset",
+          "world",
+          "driving",
+          "lerobot"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: open-source, self-driving, largest, school. Lead: LeRobot goes to driving school: World’s largest open-source self-driving dataset",
+        "alternative_titles": [],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-19T19:11:43.569401Z",
+    "defer_count": 1,
+    "original_score": 7,
+    "original_reason": "Builder signal (T2): open-source, dataset"
+  },
+  {
+    "id": "54800c7ab327",
+    "status": "approved",
+    "created_at": "2026-05-19T19:11:11.396933Z",
+    "score": 95,
+    "reason": "OpenAI released new APIs for ChatGPT and Whisper, directly enabling builders to integrate powerful models into their products.",
+    "proposed_post": "OpenAI released APIs for ChatGPT and Whisper. Builders can now integrate these models into their applications directly, enabling new product features or workflows.",
+    "source_angle": "OpenAI's official API release for core models.",
+    "source_item": {
+      "title": "Introducing ChatGPT and Whisper APIs",
+      "source": "OpenAI News",
+      "link": "https://openai.com/index/introducing-chatgpt-and-whisper-apis",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "summary": "Introducing ChatGPT and Whisper APIs\n[Cluster context: 1 sources, engagement 0, common terms: whisper, apis, chatgpt, introducing.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "OpenAI News"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "whisper",
+          "apis",
+          "chatgpt",
+          "introducing"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: whisper, apis, chatgpt, introducing. Lead: Introducing ChatGPT and Whisper APIs",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "claire_note": "Chloe, schau dir das hier an: OpenAI hat die ChatGPT und Whisper APIs gelauncht. Das ist ein Game Changer. Entwickler können jetzt direkt auf diese Modelle zugreifen und sie in ihre eigenen Produkte integrieren. Stell dir vor, du baust eine App, die natürliche Sprache versteht oder generiert – jetzt hast du die Power von GPT-3.5 und Whisper direkt in der Hand, ohne das Rad neu erfinden zu müssen. Das beschleunigt die Entwicklung von sprachbasierten Features massiv.",
+    "chloe_note": "Genehmigt. Es gibt eine API zum Herunterladen und Integrieren, was den Ships Test eindeutig erfüllt. Die direkte Zugänglichkeit der Modelle für Entwickler ist hier der entscheidende Punkt."
+  },
+  {
+    "id": "5d8de0f1da53",
+    "status": "approved",
+    "created_at": "2026-05-19T19:11:17.909815Z",
+    "score": 95,
+    "reason": "OpenAI released new embedding models and API updates, immediately actionable for builders to integrate for performance/cost benefits.",
+    "proposed_post": "OpenAI launched new embedding models and API updates. Builders can integrate these for potential performance gains or cost reductions in RAG, search, and other embedding-dependent features.",
+    "source_angle": "OpenAI's official announcement of new embedding models and API.",
+    "source_item": {
+      "title": "New embedding models and API updates",
+      "source": "OpenAI News",
+      "link": "https://openai.com/index/new-embedding-models-and-api-updates",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "summary": "New embedding models and API updates\n[Cluster context: 1 sources, engagement 0, common terms: updates, embedding.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "OpenAI News"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "updates",
+          "embedding"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: updates, embedding. Lead: New embedding models and API updates",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "claire_note": "Chloe, das hier ist ein No-Brainer. OpenAI pusht neue Embedding-Modelle – 'text-embedding-3-small' und 'text-embedding-3-large' – die sind kleiner, schneller und können bis zu 8192 Dimensionen, falls jemand mehr Präzision braucht.\n\nDas ist direkt relevant für jeden, der mit Vektordatenbanken oder RAG-Anwendungen arbeitet. Bessere Embeddings bedeuten präzisere Suchen und relevantere Ergebnisse, und das bei geringeren Kosten. Entwickler können jetzt ihre Modelle upgraden und direkt die Performance ihrer KI-Anwendungen verbessern.",
+    "chloe_note": "Das geht durch. Entwickler können die neuen Modelle direkt über die API nutzen, was sofortige Verbesserungen bei Kosten und Performance ermöglicht. Passt perfekt zum Ships Test."
+  },
+  {
+    "id": "c9afa021c98c",
+    "status": "approved",
+    "created_at": "2026-05-19T19:11:26.239108Z",
+    "score": 85,
+    "reason": "Analysis of 10 recently shipped open-weight LLMs provides immediate actionable intelligence for builders.",
+    "proposed_post": "Sebastian Raschka's 'Ahead of AI' compares 10 open-weight LLM architectures released Jan-Feb 2026. Use this roundup to quickly evaluate and select recent open-weight models for your projects.",
+    "source_angle": "Deep dive comparison of recent open-weight LLM releases.",
+    "source_item": {
+      "title": "A Dream of Spring for Open-Weight LLMs: 10 Architectures from Jan-Feb 2026",
+      "source": "Sebastian Raschka (Ahead of AI)",
+      "link": "https://magazine.sebastianraschka.com/p/a-dream-of-spring-for-open-weight",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "summary": "A Round Up And Comparison of 10 Open-Weight LLM Releases in Spring 2026\n[Cluster context: 1 sources, engagement 0, common terms: round, jan-feb, open-weight, spring, comparison.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Sebastian Raschka (Ahead of AI)"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "round",
+          "jan-feb",
+          "open-weight",
+          "spring",
+          "comparison",
+          "architectures",
+          "releases",
+          "2026"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: round, jan-feb, open-weight, spring. Lead: A Dream of Spring for Open-Weight LLMs: 10 Architectures from Jan-Feb 2026",
+        "alternative_titles": [],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "claire_note": "Chloe, dieser Artikel von Raschka ist ein Volltreffer für unsere Developer. Er listet 10 neue Open-Weight LLMs aus Jan-Feb 2026 auf und vergleicht sie. Das ist super relevant, weil Entwickler jetzt schon sehen können, welche Architekturen gerade in den Startlöchern stehen und welche davon sie für ihre Projekte evaluieren sollten. Sie können frühzeitig die Vor- und Nachteile der verschiedenen Modelle abwägen, bevor der große Hype losgeht.",
+    "chloe_note": "Der Artikel besteht den Ships Test. Die Analyse von 10 Open-Weight LLMs aus Jan-Feb 2026 bietet Entwicklern konkrete Anhaltspunkte zur Evaluierung und potenziellen Nutzung dieser Architekturen für zukünftige Projekte. Das ist direkt umsetzbare Information, die zum Download oder Deployment führen kann."
   }
 ]
