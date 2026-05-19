@@ -1,1 +1,92 @@
-[]
+[
+  {
+    "id": "6dde42028d22",
+    "status": "approved",
+    "created_at": "2026-05-19T13:03:05.286636Z",
+    "score": 10,
+    "reason": "Builder signal: v0., changelog, sdk",
+    "proposed_post": "v0.103.0. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based fallback",
+    "source_item": {
+      "title": "v0.103.0",
+      "source": "Anthropic Python SDK Releases",
+      "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.103.0"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Chloe, check this out: Anthropic's Python SDK v0.103.0 bringt Support für Self-Hosted Sandboxes in CMA. Das ist ein Game-Changer für Devs, die ihre ML-Workflows in isolierten Umgebungen testen und debuggen wollen, ohne alles in der Cloud zu haben. Direkt in die eigene Infrastruktur integrieren, das spart Kosten und gibt mehr Kontrolle.",
+    "chloe_note": "Ja, das passt. Der neue SDK-Release mit Self-Hosted Sandbox Support ist direkt nutzbar und bietet Entwicklern eine konkrete Möglichkeit, ihre Infrastruktur anders zu gestalten. Es gibt etwas zum Herunterladen und Deployen, was den Ships Test erfüllt."
+  },
+  {
+    "id": "5b19e4b102d8",
+    "status": "approved",
+    "created_at": "2026-05-19T13:03:14.019572Z",
+    "score": 32,
+    "reason": "Builder signal: api, agent, v2., mcp",
+    "proposed_post": "v2.1.144. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based fallback",
+    "source_item": {
+      "title": "v2.1.144",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.144"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Okay, das hier ist interessant.\n\nDiese Claude-Release bringt '/resume' für Background-Sessions. Das heißt, Entwickler können jetzt ihre 'claude --bg' oder Agent-View-Sessions im Blick behalten und auch wieder aufnehmen.\n\nChloe, das ist ein kleines, aber feines QoL-Update, das die Arbeit mit persistenten Claude-Sessions deutlich smoother macht. Man verliert den Kontext nicht mehr so leicht und sieht direkt, wie lange Background-Tasks schon laufen. Für jeden, der Claude für längere oder automatisierte Prozesse nutzt, ist das Gold wert.",
+    "chloe_note": "Okay, das ist ein klares Ship. Die '/resume'-Funktion für Background-Sessions ist direkt nutzbar und verbessert das Management persistenter Claude-Instanzen signifikant. Entwickler können hiermit ihre Workflows optimieren und den Kontext ihrer Agenten besser verwalten."
+  },
+  {
+    "id": "dea395c0bcf6",
+    "status": "approved",
+    "created_at": "2026-05-19T13:03:15.736030Z",
+    "score": 11,
+    "reason": "Builder signal: release, v1., ai, model",
+    "proposed_post": "langchain-tests==1.1.8. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based fallback",
+    "source_item": {
+      "title": "langchain-tests==1.1.8",
+      "source": "LangChain Releases",
+      "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-tests%3D%3D1.1.8"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Aus *LangChain Releases* ist ein starker Kandidat reingekommen: *langchain-tests==1.1.8*.\nRelevanz fuer Builder: Das Thema trifft klar Builder-Interesse (release, v1., ai, model).\n_Score: 11_",
+    "chloe_note": "Dieser Release-Kandidat besteht den Ships Test. Es gibt hier eine spezifische Version zum Herunterladen und Nutzen, was direkten Wert für Entwickler bietet. Die Relevanz durch \"release, v1., ai, model\" ist klar gegeben."
+  },
+  {
+    "id": "ae0858e81771",
+    "status": "approved",
+    "created_at": "2026-05-19T13:03:20.374663Z",
+    "score": 8,
+    "reason": "Builder signal: release, inference, v0., model",
+    "proposed_post": "v0.30.0. Inference and deployment improvements compound fast — check whether the numbers hold under sustained load, not just peak tests.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "v0.30.0",
+      "source": "Ollama Releases",
+      "link": "https://github.com/ollama/ollama/releases/tag/v0.30.0-rc20"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Chloe, das Ollama Release v0.30.0 ist ein Game Changer. Die Umstellung auf direkte llama.cpp-Unterstützung und GGUF-Kompatibilität vereinfacht das Modell-Handling massiv. Für Apple Silicon Entwickler ist MLX-Beschleunigung ein riesiger Performance-Boost. Wer lokal mit LLMs arbeitet, muss das sehen.",
+    "chloe_note": "*v0.30.0* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch release, inference, v0., model. Bewertung: 8. Quelle: https://github.com/ollama/ollama/releases/tag/v0.30.0-rc20"
+  },
+  {
+    "id": "3e37c127d272",
+    "status": "approved",
+    "created_at": "2026-05-19T13:03:21.515915Z",
+    "score": 4,
+    "reason": "Builder signal: available, ai",
+    "proposed_post": "Take your local GitHub sessions anywhere. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Take your local GitHub sessions anywhere",
+      "source": "GitHub Blog AI",
+      "link": "https://github.blog/news-insights/product-news/take-your-local-github-sessions-anywhere/"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Okay, das hier ist interessant für unsere Devs. Remote-Control für GitHub Copilot Sessions ist jetzt GA.\n\nChloe, das bedeutet, Entwickler können eine Copilot-Session lokal starten, dann aber über github.com oder mobile weiterarbeiten. Das ist massiv für den Workflow, wenn du mal eben vom Laptop weg musst, aber trotzdem schnell was nachschauen oder ändern willst. Echte Flexibilität für Builds, egal wo du bist.",
+    "chloe_note": "Genehmigt. Der Ships Test ist bestanden, da die Remote-Control-Funktion für GitHub Copilot Sessions als GA verfügbar ist. Entwickler können dies sofort nutzen, um ihren Workflow geräteübergreifend zu erweitern."
+  }
+]

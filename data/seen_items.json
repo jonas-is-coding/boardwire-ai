@@ -1,1 +1,10 @@
-[]
+[
+  "https://github.com/anthropics/claude-code/releases/tag/v2.1.144",
+  "https://huggingface.co/blog/PaddlePaddle/paddleocr-transformers",
+  "https://github.com/ollama/ollama/releases/tag/v0.30.0-rc20",
+  "https://github.blog/news-insights/product-news/take-your-local-github-sessions-anywhere/",
+  "https://simonwillison.net/2026/May/19/5-minute-llms/#atom-entries",
+  "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.103.0",
+  "https://huggingface.co/blog/nvidia/cosmos-fine-tuning-for-robot-video-generation",
+  "https://github.com/langchain-ai/langchain/releases/tag/langchain-tests%3D%3D1.1.8"
+]
