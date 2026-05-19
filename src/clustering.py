@@ -101,8 +101,8 @@ def _same_project_or_repo(a: FeedItem, b: FeedItem) -> bool:
     repo_a = _extract_repo_id(a.link)
     repo_b = _extract_repo_id(b.link)
     if repo_a and repo_b:
-        # Be conservative: only exact owner/repo or exact same repo name.
-        return repo_a == repo_b or (repo_a[1] == repo_b[1] and repo_a[1] != "")
+        # Be conservative: only exact owner/repo.
+        return repo_a == repo_b
     return False
 
 
@@ -111,6 +111,10 @@ def _extract_version(text: str) -> str | None:
     if not m:
         return None
     return m.group(0)
+
+
+def _is_version_token(token: str) -> bool:
+    return re.fullmatch(r"v\d+(?:\.\d+){1,3}(?:-?rc\d+)?", token or "") is not None
 
 
 def _release_source(item: FeedItem) -> str:
@@ -132,7 +136,11 @@ def _product_markers(item: FeedItem) -> set[str]:
         if e in text:
             markers.add(e)
     # token pairs with at least one numeric/tokenized identifier
-    toks = [t for t in _tokens(text) if t not in _GENERIC_AI_TERMS]
+    toks = [
+        t
+        for t in _tokens(text)
+        if t not in _GENERIC_AI_TERMS and not _is_version_token(t)
+    ]
     for i in range(len(toks) - 1):
         pair = f"{toks[i]} {toks[i+1]}"
         if any(c.isdigit() for c in pair) or "-" in pair:
@@ -142,12 +150,20 @@ def _product_markers(item: FeedItem) -> set[str]:
 
 def _edge_decision(a: FeedItem, b: FeedItem, sim_score: float) -> tuple[bool, str, list[str]]:
     strong_inter = sorted(_strong_tokens(f"{a.title} {a.summary}") & _strong_tokens(f"{b.title} {b.summary}"))
-    if _same_project_or_repo(a, b):
-        return True, "repo_match", strong_inter[:8]
+    same_project = _same_project_or_repo(a, b)
     ver_a = _extract_version(f"{a.title} {a.summary}")
     ver_b = _extract_version(f"{b.title} {b.summary}")
-    if ver_a and ver_b and ver_a == ver_b and _release_source(a) and _release_source(a) == _release_source(b):
+    if (
+        same_project
+        and ver_a
+        and ver_b
+        and ver_a == ver_b
+        and _release_source(a)
+        and _release_source(a) == _release_source(b)
+    ):
         return True, "release_version_match", strong_inter[:8]
+    if same_project:
+        return True, "repo_match", strong_inter[:8]
     product_overlap = _product_markers(a) & _product_markers(b)
     # product/model match needs cosine support; cosine never clusters alone.
     if product_overlap and sim_score > _CLUSTER_THRESHOLD:
