@@ -127,6 +127,43 @@ def _release_source(item: FeedItem) -> str:
     return ""
 
 
+def _normalize_project_key(text: str) -> str:
+    t = normalize_text(text).replace("/", " ")
+    if "anthropic python sdk" in t or "anthropic-sdk-python" in t or "anthropic sdk" in t:
+        return "anthropicpythonsdk"
+    if "langchain" in t:
+        return "langchain"
+    if "vllm" in t:
+        return "vllm"
+    if "ollama" in t:
+        return "ollama"
+    return re.sub(r"[^a-z0-9]+", "", t)
+
+
+def _project_key(item: FeedItem) -> str:
+    repo = _extract_repo_id(item.link)
+    if repo:
+        return _normalize_project_key(repo[1])
+    title = item.title or ""
+    source = item.source or ""
+    combined = f"{title} {source}"
+    m = re.search(r"([a-z0-9][a-z0-9 ._/-]{1,60}?)(?:\s+v?\d+(?:\.\d+){1,3}(?:-?rc\d+)?|==\d+(?:\.\d+){1,3})", normalize_text(combined))
+    if m:
+        return _normalize_project_key(m.group(1))
+    return _normalize_project_key(combined)
+
+
+def _is_release_like(item: FeedItem) -> bool:
+    txt = normalize_text(f"{item.title} {item.summary} {item.source}")
+    if _release_source(item):
+        return True
+    if re.search(r"\bv?\d+(?:\.\d+){1,3}(?:-?rc\d+)?\b", txt):
+        return True
+    if re.search(r"[a-z0-9_.-]+==\d+(?:\.\d+){1,3}", txt):
+        return True
+    return False
+
+
 def _product_markers(item: FeedItem) -> set[str]:
     text = normalize_text(f"{item.title} {item.summary}")
     markers: set[str] = set()
@@ -151,17 +188,26 @@ def _product_markers(item: FeedItem) -> set[str]:
 def _edge_decision(a: FeedItem, b: FeedItem, sim_score: float) -> tuple[bool, str, list[str]]:
     strong_inter = sorted(_strong_tokens(f"{a.title} {a.summary}") & _strong_tokens(f"{b.title} {b.summary}"))
     same_project = _same_project_or_repo(a, b)
+    release_like_a = _is_release_like(a)
+    release_like_b = _is_release_like(b)
+    proj_a = _project_key(a)
+    proj_b = _project_key(b)
     ver_a = _extract_version(f"{a.title} {a.summary}")
     ver_b = _extract_version(f"{b.title} {b.summary}")
+    if release_like_a or release_like_b:
+        if not proj_a or not proj_b or proj_a != proj_b:
+            return False, "", strong_inter[:8]
     if (
-        same_project
+        (same_project or (proj_a and proj_b and proj_a == proj_b))
         and ver_a
         and ver_b
         and ver_a == ver_b
-        and _release_source(a)
-        and _release_source(a) == _release_source(b)
+        and release_like_a
+        and release_like_b
     ):
         return True, "release_version_match", strong_inter[:8]
+    if release_like_a and release_like_b and proj_a == proj_b and sim_score > _CLUSTER_THRESHOLD:
+        return True, "release_project_match", strong_inter[:8]
     if same_project:
         return True, "repo_match", strong_inter[:8]
     product_overlap = _product_markers(a) & _product_markers(b)

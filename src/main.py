@@ -103,6 +103,22 @@ def _env_int(name: str, default: int) -> int:
         return default
 
 
+def _sarah_attempt_metadata() -> tuple[str, list[str]]:
+    provider = (os.getenv("BOARDWIRE_SARAH_PROVIDER", "openrouter").strip() or "openrouter").lower()
+    if provider == "openrouter":
+        models = [
+            (os.getenv("BOARDWIRE_SARAH_MODEL", "deepseek/deepseek-v4-flash:free").strip() or "deepseek/deepseek-v4-flash:free"),
+            (os.getenv("BOARDWIRE_SARAH_FALLBACK_MODEL", "minimax/minimax-m2.5:free").strip() or "minimax/minimax-m2.5:free"),
+        ]
+        emergency = os.getenv("BOARDWIRE_SARAH_EMERGENCY_MODEL", "").strip()
+        if emergency:
+            models.append(emergency)
+        return provider, models
+    model = os.getenv("BOARDWIRE_SARAH_MODEL", "gemini-2.5-flash").strip() or "gemini-2.5-flash"
+    fallback = os.getenv("BOARDWIRE_SARAH_FALLBACK_MODEL", "gemini-2.5-flash").strip() or "gemini-2.5-flash"
+    return provider, [model, fallback]
+
+
 def _has_artifact_link(link: str) -> bool:
     lowered = (link or "").lower()
     if not lowered:
@@ -409,6 +425,72 @@ def _is_release_like_item(item: FeedItem) -> bool:
     release_source_markers = ("release", "sdk", "mcp", "ollama", "vllm", "langchain")
     release_text_markers = ("release", "released", "sdk", "mcp", "ollama", "vllm", "langchain")
     return any(m in source for m in release_source_markers) or any(m in text for m in release_text_markers)
+
+
+def _release_project_label(item: FeedItem) -> str:
+    owner_repo = _github_owner_repo(item.link)
+    if owner_repo:
+        repo = owner_repo[1].strip().lower()
+        if repo == "vllm":
+            return "vLLM"
+        if repo == "langchain":
+            return "LangChain"
+        if repo == "ollama":
+            return "Ollama"
+        if repo in {"anthropic-sdk-python", "anthropic"}:
+            return "Anthropic Python SDK"
+        return re.sub(r"[-_]+", " ", owner_repo[1]).strip().title()
+    text = f"{item.title} {item.source}".lower()
+    if "anthropic python sdk" in text or "anthropic-sdk-python" in text or "anthropic sdk" in text:
+        return "Anthropic Python SDK"
+    if "vllm" in text:
+        return "vLLM"
+    if "langchain" in text:
+        return "LangChain"
+    if "ollama" in text:
+        return "Ollama"
+    src = (item.source or "").replace("Releases", "").replace("Release", "").strip()
+    return src[:80]
+
+
+def _extract_release_version_text(item: FeedItem) -> str:
+    text = f"{item.title} {item.summary}"
+    m = re.search(r"\b(v\d+(?:\.\d+){1,3}(?:-?rc\d+)?)\b", text, flags=re.IGNORECASE)
+    if m:
+        return m.group(1)
+    m = re.search(r"==\s*(\d+(?:\.\d+){1,3}(?:-?rc\d+)?)", text, flags=re.IGNORECASE)
+    if m:
+        return f"v{m.group(1)}"
+    m = re.search(r"\b(\d+(?:\.\d+){1,3}(?:-?rc\d+)?)\b", text, flags=re.IGNORECASE)
+    if m:
+        return f"v{m.group(1)}"
+    return ""
+
+
+def _enrich_release_item_title(item: FeedItem) -> FeedItem:
+    if not _is_release_like_item(item):
+        return item
+    label = _release_project_label(item).strip()
+    version = _extract_release_version_text(item).strip()
+    if not label or not version:
+        return item
+    title = (item.title or "").strip()
+    title_l = title.lower()
+    looks_too_short = bool(re.fullmatch(r"(?:v?\d+(?:\.\d+){1,3}(?:-?rc\d+)?)", title_l))
+    looks_pkg_only = bool(re.fullmatch(r"[a-z0-9_.-]+==\d+(?:\.\d+){1,3}(?:-?rc\d+)?", title_l))
+    missing_label = label.lower() not in title_l
+    if not (looks_too_short or looks_pkg_only or missing_label):
+        return item
+    enriched_title = f"{label} {version}"
+    return FeedItem(
+        source=item.source,
+        title=enriched_title,
+        link=item.link,
+        summary=item.summary,
+        published_at=item.published_at,
+        source_tier=item.source_tier,
+        engagement_score=item.engagement_score,
+    )
 
 
 def _freshness_limit_days_for_item(item: FeedItem) -> int:
@@ -1476,6 +1558,7 @@ def run(argv: list[str] | None = None) -> int:
 
     # Hard freshness gate before any clustering/ranking/evaluation work.
     all_items = _apply_freshness_filter(all_items, logger)
+    all_items = [_enrich_release_item_title(item) for item in all_items]
 
     # Load deferred items first and expire over-retried entries.
     max_defer_count = max(1, quality_config.max_defer_count)
@@ -1702,11 +1785,14 @@ def run(argv: list[str] | None = None) -> int:
 
             if not post_text.strip():
                 now_iso = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+                attempted_provider, attempted_models = _sarah_attempt_metadata()
+                defer_count_val = 1
                 if deferred_queue_item is not None:
                     deferred_queue_item["status"] = "deferred_generation_unavailable"
                     deferred_queue_item["defer_count"] = int(deferred_queue_item.get("defer_count") or 1) + 1
                     deferred_queue_item["deferred_at"] = now_iso
                     deferred_queue_item["reason"] = "deferred: generation provider unavailable"
+                    defer_count_val = int(deferred_queue_item["defer_count"])
                     deferred_links_to_retry.add(item.link)
                     deferred_generation_updates += 1
                 else:
@@ -1728,9 +1814,17 @@ def run(argv: list[str] | None = None) -> int:
                         deferred_at_iso=now_iso,
                     )
                     review_queue_data.append(deferred_queue_item)
+                    defer_count_val = int(deferred_queue_item.get("defer_count") or 1)
                     deferred_links_to_retry.add(item.link)
                     deferred_generation_updates += 1
-                logger.warning("Deferred high-score item due to generation provider unavailable: %s", item.title)
+                logger.warning(
+                    "Deferred high-score item due to generation provider unavailable: %s | local_score=%d | attempted_provider=%s | attempted_models=%s | defer_count=%d",
+                    item.title,
+                    local_score,
+                    attempted_provider,
+                    ",".join(attempted_models),
+                    defer_count_val,
+                )
                 evaluation = type(evaluation)(
                     should_post=False,
                     score=max(old_score, local_score),
