@@ -141,11 +141,11 @@
   },
   {
     "id": "3d8d9f369f24",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-05-19T14:07:25.256466Z",
     "score": 7,
     "reason": "Builder signal (T2): agent, ai",
-    "proposed_post": "msitarzewski/agency-agents — A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert w. Agent reliability in production is still the hard part — check whether the ev…",
+    "proposed_post": "Agency-Agents launches modular AI agent framework.\n\nThe system includes specialized agents for frontend development, community management, and content c\n\n#AIAgents #AgentFramework #GitHub",
     "source_angle": "Rule-based",
     "source_item": {
       "title": "msitarzewski/agency-agents — A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert w",
@@ -154,9 +154,20 @@
       "source_tier": 2,
       "engagement_score": 983.0
     },
-    "card_path": null,
+    "card_path": "generated/cards/3d8d9f369f24.png",
     "is_llm_mode": false,
     "claire_note": "Aus *GitHub Trending* ist ein starker Kandidat reingekommen: *msitarzewski/agency-agents — A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert w*.\nRelevanz fuer Builder: Builder signal (T2): agent, ai\n_Score: 7_",
-    "chloe_note": "Kurzes Update: *msitarzewski/agency-agents — A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert w* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Builder signal (T2): agent, ai. Ich habe es mit 7 Punkten bewertet. Hier der Link: https://github.com/msitarzewski/agency-agents"
+    "chloe_note": "Kurzes Update: *msitarzewski/agency-agents — A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert w* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Builder signal (T2): agent, ai. Ich habe es mit 7 Punkten bewertet. Hier der Link: https://github.com/msitarzewski/agency-agents",
+    "sarah_package": {
+      "title": "Agency-Agents launches modular AI agent framework.",
+      "subtitle": "The system includes specialized agents for frontend development, community management, and content c",
+      "description": "Agency-Agents offers a customizable framework for deploying AI agents across various roles, including 'frontend wizards' and 'Reddit communi",
+      "hashtags": [
+        "#AIAgents",
+        "#AgentFramework",
+        "#GitHub"
+      ]
+    },
+    "published_at": "2026-05-19T15:52:50.492749Z"
   }
 ]

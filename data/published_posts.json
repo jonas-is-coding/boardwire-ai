@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "id": "3d8d9f369f24",
+    "published_at": "2026-05-19T15:52:50.492749Z",
+    "platform": "bluesky",
+    "post": "Agency-Agents launches modular AI agent framework.\n\nThe system includes specialized agents for frontend development, community management, and content c\n\n#AIAgents #AgentFramework #GitHub",
+    "source_link": "https://github.com/msitarzewski/agency-agents",
+    "source_title": "msitarzewski/agency-agents — A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert w",
+    "score": 7,
+    "reason": "Builder signal (T2): agent, ai",
+    "card_path": "generated/cards/3d8d9f369f24.png",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mm7qq3flcl2v",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mm7qq3flcl2v"
+  }
+]
