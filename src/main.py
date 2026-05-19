@@ -47,7 +47,15 @@ from src.notifications import slack as notify
 from src.utils.logger import get_logger
 from src.writer.post_writer import generate_post
 
-VALID_REVIEW_STATUSES = {"pending_review", "approved", "rejected", "published_dry_run", "deferred_due_to_cap", "expired_deferred"}
+VALID_REVIEW_STATUSES = {
+    "pending_review",
+    "approved",
+    "rejected",
+    "published_dry_run",
+    "deferred_due_to_cap",
+    "deferred_generation_unavailable",
+    "expired_deferred",
+}
 VALID_PUBLISHERS = {"dry_run", "bluesky"}
 _LOCAL_RANK_LIMIT = 25
 _KNOWN_ORG_REPOS = {"microsoft", "google", "anthropic", "openai", "meta", "nvidia", "huggingface", "langchain-ai"}
@@ -85,6 +93,14 @@ def _env_flag(name: str, default: bool = True) -> bool:
     if raw is None:
         return default
     return raw.strip().lower() in {"1", "true", "yes", "on"}
+
+
+def _env_int(name: str, default: int) -> int:
+    raw = os.getenv(name, str(default)).strip()
+    try:
+        return int(raw)
+    except ValueError:
+        return default
 
 
 def _has_artifact_link(link: str) -> bool:
@@ -531,6 +547,38 @@ def _queue_from_drafts(drafts: list[DraftPost]) -> list[dict]:
     return queue_items
 
 
+def _build_deferred_generation_item(
+    draft: DraftPost,
+    defer_count: int,
+    deferred_at_iso: str,
+    existing_id: str | None = None,
+) -> dict:
+    created_at = draft.created_at
+    rid = existing_id or _review_id(draft.link, created_at)
+    return {
+        "id": rid,
+        "status": "deferred_generation_unavailable",
+        "created_at": created_at,
+        "score": draft.score,
+        "reason": "deferred: generation provider unavailable",
+        "proposed_post": "",
+        "source_angle": draft.source_angle,
+        "source_item": {
+            "title": draft.title,
+            "source": draft.source,
+            "link": draft.link,
+            "source_tier": draft.source_tier,
+            "engagement_score": draft.engagement_score,
+            "local_newsworthiness_score": draft.local_newsworthiness_score,
+        },
+        "deferred_at": deferred_at_iso,
+        "defer_count": max(1, int(defer_count)),
+        "original_score": draft.score,
+        "original_reason": draft.reason,
+        "card_path": None,
+    }
+
+
 def _load_quality_config() -> QualityConfig:
     raw = JsonStore.load(QUALITY_PATH, default={})
     return QualityConfig(
@@ -806,7 +854,11 @@ def _create_test_review_item(logger) -> int:
 
 def _list_deferred(logger) -> int:
     queue = JsonStore.load(REVIEW_QUEUE_PATH, default=[])
-    deferred = [item for item in queue if item.get("status") == "deferred_due_to_cap"]
+    deferred = [
+        item
+        for item in queue
+        if item.get("status") in {"deferred_due_to_cap", "deferred_generation_unavailable"}
+    ]
     if not deferred:
         logger.info("Deferred queue is empty")
         return 0
@@ -1430,7 +1482,7 @@ def run(argv: list[str] | None = None) -> int:
     deferred_candidates: list[dict] = []
     deferred_expired = 0
     for item in review_queue_data:
-        if item.get("status") != "deferred_due_to_cap":
+        if item.get("status") not in {"deferred_due_to_cap", "deferred_generation_unavailable"}:
             continue
         defer_count = int(item.get("defer_count") or 1)
         if defer_count > max_defer_count:
@@ -1558,15 +1610,18 @@ def run(argv: list[str] | None = None) -> int:
     created_drafts: list[DraftPost] = []
     processed_items_by_link: dict[str, FeedItem] = {}
     processed_links: list[str] = []
-    deferred_due_to_cap_links: set[str] = set()
+    deferred_links_to_retry: set[str] = set()
     deferred_reprocessed = 0
     deferred_became_review = 0
+    deferred_generation_updates = 0
     llm_evaluated = 0
     gemini_evaluated = 0
     llm_mode_by_link: dict[str, bool] = {}
     _claire_notes: dict[str, str] = {}          # link → Claire's LLM text (for Chloe context)
     _chloe_notes: dict[str, str] = {}           # link → Chloe's LLM text (for Madison context)
     _pending_claire: dict[str, tuple] = {}      # link → (title, link) — deferred until Chloe fires
+    sarah_fallback_budget = max(0, _env_int("BOARDWIRE_SARAH_FALLBACK_BUDGET", 1))
+    sarah_fallback_attempts = 0
 
     notify.run_started(
         sources_count=len(sources),
@@ -1627,13 +1682,61 @@ def run(argv: list[str] | None = None) -> int:
                 score=max(old_score, local_score),
                 reason="local newsworthiness fallback",
             )
-            evaluation, post_text, source_angle = _try_sarah_openrouter_fallback(
-                item=item,
-                evaluation=evaluation,
-                cluster_context=cluster_context_by_link,
-                logger=logger,
-                voice_module=_pv,
-            )
+            if sarah_fallback_attempts < sarah_fallback_budget:
+                sarah_fallback_attempts += 1
+                evaluation, post_text, source_angle = _try_sarah_openrouter_fallback(
+                    item=item,
+                    evaluation=evaluation,
+                    cluster_context=cluster_context_by_link,
+                    logger=logger,
+                    voice_module=_pv,
+                )
+            else:
+                evaluation = type(evaluation)(
+                    should_post=False,
+                    score=max(old_score, local_score),
+                    reason="deferred: generation provider unavailable",
+                )
+                post_text = ""
+                source_angle = "Rule-based"
+
+            if not post_text.strip():
+                now_iso = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+                if deferred_queue_item is not None:
+                    deferred_queue_item["status"] = "deferred_generation_unavailable"
+                    deferred_queue_item["defer_count"] = int(deferred_queue_item.get("defer_count") or 1) + 1
+                    deferred_queue_item["deferred_at"] = now_iso
+                    deferred_queue_item["reason"] = "deferred: generation provider unavailable"
+                    deferred_links_to_retry.add(item.link)
+                    deferred_generation_updates += 1
+                else:
+                    deferred_queue_item = _build_deferred_generation_item(
+                        draft=DraftPost(
+                            title=item.title,
+                            link=item.link,
+                            source=item.source,
+                            score=max(old_score, local_score),
+                            should_post=False,
+                            reason="deferred: generation provider unavailable",
+                            post_text="",
+                            source_angle="Rule-based",
+                            source_tier=item.source_tier,
+                            engagement_score=item.engagement_score,
+                            local_newsworthiness_score=int(local_newsworthiness_by_link.get(item.link, 0)),
+                        ),
+                        defer_count=1,
+                        deferred_at_iso=now_iso,
+                    )
+                    review_queue_data.append(deferred_queue_item)
+                    deferred_links_to_retry.add(item.link)
+                    deferred_generation_updates += 1
+                logger.warning("Deferred high-score item due to generation provider unavailable: %s", item.title)
+                evaluation = type(evaluation)(
+                    should_post=False,
+                    score=max(old_score, local_score),
+                    reason="deferred: generation provider unavailable",
+                )
+                source_angle = "Rule-based"
         elif gemini_unavailable and local_score < 60:
             logger.warning("Rejecting fallback candidate: no non-generic generation available")
             evaluation = type(evaluation)(
@@ -1713,7 +1816,7 @@ def run(argv: list[str] | None = None) -> int:
                 }
         deferred_queue_by_link: dict[str, dict] = {}
         for q in review_queue_data:
-            if q.get("status") == "deferred_due_to_cap":
+            if q.get("status") in {"deferred_due_to_cap", "deferred_generation_unavailable"}:
                 link = str(q.get("source_item", {}).get("link", "")).strip()
                 if link:
                     deferred_queue_by_link[link] = q
@@ -1789,7 +1892,7 @@ def run(argv: list[str] | None = None) -> int:
                             logger.warning("Deferred item expired after max retries: %s", linked_deferred.get("id"))
                         else:
                             linked_deferred["status"] = "deferred_due_to_cap"
-                        deferred_due_to_cap_links.add(source_link)
+                        deferred_links_to_retry.add(source_link)
                     else:
                         item["status"] = "deferred_due_to_cap"
                         item["deferred_at"] = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
@@ -1797,7 +1900,7 @@ def run(argv: list[str] | None = None) -> int:
                         item["original_score"] = score_val
                         item["original_reason"] = item.get("reason", "")
                         review_queue_data.append(item)
-                        deferred_due_to_cap_links.add(source_link)
+                        deferred_links_to_retry.add(source_link)
                     if args.quality_report:
                         logger.info("Quality report [REJECT] ID=%s | title=%s | score=%d", item.get("id"), source_title, score_val)
                         logger.info("Proposed post: %s", proposed_post)
@@ -1886,9 +1989,16 @@ def run(argv: list[str] | None = None) -> int:
         logger.info("Saved %d drafts to review queue", saved_to_review_queue)
         logger.info("Quality gate summary: passed=%d rejected=%d", quality_pass, quality_reject)
         logger.info("Deferred due to daily cap: %d", len([x for x in review_queue_data if x.get("status") == "deferred_due_to_cap"]))
+    elif deferred_generation_updates:
+        for q in review_queue_data:
+            q.pop("_reprocessed", None)
+            q.pop("_draft_created_at", None)
+        JsonStore.save(REVIEW_QUEUE_PATH, review_queue_data)
+        generate_review_queue_report(REVIEW_QUEUE_PATH, REVIEW_REPORT_PATH)
+        logger.info("Saved deferred generation-unavailable items: %d", deferred_generation_updates)
 
-    # Do not mark cap-deferred candidates as seen so they can be reconsidered later.
-    effective_processed_links = [link for link in processed_links if link not in deferred_due_to_cap_links]
+    # Do not mark deferred candidates as seen so they can be reconsidered later.
+    effective_processed_links = [link for link in processed_links if link not in deferred_links_to_retry]
     updated_seen = list(seen_links.union(effective_processed_links))
     JsonStore.save(SEEN_ITEMS_PATH, updated_seen)
 

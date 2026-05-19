@@ -522,10 +522,7 @@ def sarah_build_publish_package(
             os.getenv("BOARDWIRE_SARAH_FALLBACK_MODEL", "minimax/minimax-m2.5:free").strip()
             or "minimax/minimax-m2.5:free"
         )
-        sarah_emergency = (
-            os.getenv("BOARDWIRE_SARAH_EMERGENCY_MODEL", "openrouter/free").strip()
-            or "openrouter/free"
-        )
+        sarah_emergency = os.getenv("BOARDWIRE_SARAH_EMERGENCY_MODEL", "").strip()
         raw = _call_openrouter(
             _SYSTEM_PROMPTS["sarah"],
             user,
@@ -533,7 +530,7 @@ def sarah_build_publish_package(
             fallback_model=sarah_fallback,
             max_output_tokens=420,
         )
-        if not raw and sarah_emergency not in {sarah_model, sarah_fallback}:
+        if sarah_emergency and (not raw) and sarah_emergency not in {sarah_model, sarah_fallback}:
             _LOGGER.info("OpenRouter Sarah primary+fallback failed, trying emergency model=%s", sarah_emergency)
             raw = _call_openrouter(
                 _SYSTEM_PROMPTS["sarah"],
