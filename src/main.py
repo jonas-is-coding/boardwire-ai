@@ -50,6 +50,7 @@ from src.writer.post_writer import generate_post
 VALID_REVIEW_STATUSES = {"pending_review", "approved", "rejected", "published_dry_run", "deferred_due_to_cap", "expired_deferred"}
 VALID_PUBLISHERS = {"dry_run", "bluesky"}
 _LOCAL_RANK_LIMIT = 25
+_KNOWN_ORG_REPOS = {"microsoft", "google", "anthropic", "openai", "meta", "nvidia", "huggingface", "langchain-ai"}
 
 
 def _compose_sarah_post(package: dict[str, str | list[str]]) -> str:
@@ -97,6 +98,20 @@ def _has_artifact_link(link: str) -> bool:
     return False
 
 
+def _github_owner_repo(link: str) -> tuple[str, str] | None:
+    lowered = (link or "").lower()
+    if "github.com/" not in lowered:
+        return None
+    try:
+        path = lowered.split("github.com/", 1)[1]
+        parts = [p for p in path.split("/") if p]
+        if len(parts) < 2:
+            return None
+        return parts[0], parts[1]
+    except Exception:
+        return None
+
+
 def _contains_any(text: str, terms: tuple[str, ...]) -> bool:
     return any(t in text for t in terms)
 
@@ -104,8 +119,19 @@ def _contains_any(text: str, terms: tuple[str, ...]) -> bool:
 def _newsworthiness_reason_parts(item: FeedItem, cluster_context: dict | None = None) -> list[str]:
     text = f"{item.title} {item.summary}".lower()
     parts: list[str] = []
+    is_github_trending = (item.source or "").strip().lower() == "github trending"
+    gh_org_repo = _github_owner_repo(item.link)
+    has_release_signal = _contains_any(text, ("release", "released", "ships", "shipped", "launched", "open-sourced", "benchmark", "cli", "sdk", "mcp", "weights", "dataset"))
+    gh_extra_signal = (
+        float(item.engagement_score) >= 1500
+        or has_release_signal
+        or (gh_org_repo is not None and gh_org_repo[0] in _KNOWN_ORG_REPOS)
+    )
     if _has_artifact_link(item.link):
-        parts.append("+artifact")
+        if is_github_trending and not gh_extra_signal:
+            parts.append("-gh_artifact_only")
+        else:
+            parts.append("+artifact")
     if _contains_any(text, ("released", "ships", "launched", "open-sourced", "now available")):
         parts.append("+release")
     if _contains_any(text, ("api", "sdk", "cli", "weights", "dataset", "benchmark", "playground", "mcp")):
@@ -122,6 +148,8 @@ def _newsworthiness_reason_parts(item: FeedItem, cluster_context: dict | None = 
         parts.append("+cluster3")
     if _contains_any(text, ("workflow", "understanding", "lessons", "guide", "tutorial", "how to", "introduction", "perspective", "opinion")):
         parts.append("-education_opinion")
+    if _contains_any(text, ("beginners", "lessons", "course", "tutorial", "awesome", "guide", "skills")):
+        parts.append("-educational_repo")
     if _contains_any(text, ("adoption", "announcement", "partnership", "funding", "vision", "future")):
         parts.append("-vague_meta")
     return parts
@@ -130,7 +158,15 @@ def _newsworthiness_reason_parts(item: FeedItem, cluster_context: dict | None = 
 def score_newsworthiness(item: FeedItem, cluster_context: dict | None = None) -> int:
     text = f"{item.title} {item.summary}".lower()
     score = 0
-    if _has_artifact_link(item.link):
+    is_github_trending = (item.source or "").strip().lower() == "github trending"
+    gh_org_repo = _github_owner_repo(item.link)
+    has_release_signal = _contains_any(text, ("release", "released", "ships", "shipped", "launched", "open-sourced", "benchmark", "cli", "sdk", "mcp", "weights", "dataset"))
+    gh_extra_signal = (
+        float(item.engagement_score) >= 1500
+        or has_release_signal
+        or (gh_org_repo is not None and gh_org_repo[0] in _KNOWN_ORG_REPOS)
+    )
+    if _has_artifact_link(item.link) and (not is_github_trending or gh_extra_signal):
         score += 30
     if _contains_any(text, ("released", "ships", "launched", "open-sourced", "now available")):
         score += 25
@@ -148,8 +184,12 @@ def score_newsworthiness(item: FeedItem, cluster_context: dict | None = None) ->
         score += 15
     if _contains_any(text, ("workflow", "understanding", "lessons", "guide", "tutorial", "how to", "introduction", "perspective", "opinion")):
         score -= 30
+    if _contains_any(text, ("beginners", "lessons", "course", "tutorial", "awesome", "guide", "skills")):
+        score -= 35
     if _contains_any(text, ("adoption", "announcement", "partnership", "funding", "vision", "future")):
         score -= 25
+    if is_github_trending and not gh_extra_signal:
+        score -= 35
     return max(0, int(score))
 
 
@@ -445,6 +485,7 @@ def _queue_from_drafts(drafts: list[DraftPost]) -> list[dict]:
                     "link": draft.link,
                     "source_tier": draft.source_tier,
                     "engagement_score": draft.engagement_score,
+                    "local_newsworthiness_score": draft.local_newsworthiness_score,
                 },
                 "card_path": None,
             }
@@ -1053,6 +1094,17 @@ def _publish_approved(args, logger) -> int:
             context="publish",
             context_text=f"{source_item.get('title', '')} {item.get('reason', '')}",
         )
+        local_score_val = int(source_item.get("local_newsworthiness_score") or 0)
+        eval_score_val = int(item.get("score") or 0)
+        fallback_mode = (not bool(item.get("is_llm_mode", False))) or (remaining_gemini_budget() <= 0)
+        if quality.passed and fallback_mode and eval_score_val < 60 and local_score_val < 60:
+            quality = type(quality)(passed=False, reasons=list(quality.reasons) + ["fallback quality score below threshold"])
+            logger.warning(
+                "Quality reject: fallback/local score below threshold | title=%s | evaluator_score=%d | local_score=%d",
+                source_item.get("title", "Untitled"),
+                eval_score_val,
+                local_score_val,
+            )
         if not quality.passed:
             logger.warning("Quality reject: %s (%s)", rid, "; ".join(quality.reasons))
             quality_rejected_count += 1
@@ -1402,6 +1454,7 @@ def run(argv: list[str] | None = None) -> int:
         )
     )
     fresh_candidates = [row[0] for row in local_ranked_rows]
+    local_newsworthiness_by_link = {row[0].link: int(row[1]) for row in local_ranked_rows}
     for row in local_ranked_rows[:10]:
         logger.info(
             "Local rank score=%d | tier=%d | title=%s | reasons=%s",
@@ -1520,6 +1573,7 @@ def run(argv: list[str] | None = None) -> int:
             source_angle=source_angle,
             source_tier=item.source_tier,
             engagement_score=item.engagement_score,
+            local_newsworthiness_score=int(local_newsworthiness_by_link.get(item.link, 0)),
         )
         drafts_data.append(asdict(draft))
         created_drafts.append(draft)
@@ -1632,6 +1686,16 @@ def run(argv: list[str] | None = None) -> int:
                 context="review",
                 context_text=f"{source_title} {item.get('reason', '')}",
             )
+            local_score_val = int(item.get("source_item", {}).get("local_newsworthiness_score") or 0)
+            fallback_mode = (not is_llm_mode) or (llm_config.provider == "gemini" and remaining_gemini_budget() <= 0)
+            if quality.passed and fallback_mode and score_val < 60 and local_score_val < 60:
+                quality = type(quality)(passed=False, reasons=list(quality.reasons) + ["fallback quality score below threshold"])
+                logger.warning(
+                    "Quality reject: fallback/local score below threshold | title=%s | evaluator_score=%d | local_score=%d",
+                    source_title,
+                    score_val,
+                    local_score_val,
+                )
             if quality.passed:
                 if (not ignore_daily_cap) and remaining_today <= 0:
                     quality_reject += 1

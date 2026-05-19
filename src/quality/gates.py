@@ -4,6 +4,13 @@ import re
 from dataclasses import dataclass
 from difflib import SequenceMatcher
 
+_GENERIC_FALLBACK_SENTENCES = (
+    "the signal to watch",
+    "check whether this changes",
+    "agent reliability in production is still the hard part",
+    "training improvements matter most",
+)
+
 
 @dataclass(slots=True)
 class QualityConfig:
@@ -128,6 +135,10 @@ def check_quality(
     for phrase in config.banned_phrases:
         if phrase in normalized:
             reasons.append(f"Banned phrase detected: '{phrase}'")
+
+    for phrase in _GENERIC_FALLBACK_SENTENCES:
+        if phrase in normalized:
+            reasons.append(f"Generic fallback sentence detected: '{phrase}'")
 
     if context in {"review", "publish"} and _near_duplicate(post, history_posts):
         reasons.append("Duplicate or near-duplicate post detected")
