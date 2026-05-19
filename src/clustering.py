@@ -28,7 +28,8 @@ _STOPWORDS = {
 }
 _GENERIC_AI_TERMS = {
     "ai", "model", "models", "llm", "llms", "agent", "agents", "open", "release",
-    "new", "data", "code", "api", "benchmark", "research",
+    "new", "data", "code", "api", "benchmark", "research", "source", "open-source",
+    "learn", "using", "build", "building",
 }
 _COMMON_TERM_EXCLUDE = _GENERIC_AI_TERMS | {
     "openai", "anthropic", "google", "how", "our", "benchmarks", "framework", "frameworks",
@@ -105,32 +106,45 @@ def _same_project_or_repo(a: FeedItem, b: FeedItem) -> bool:
     return False
 
 
+def _project_markers(item: FeedItem) -> set[str]:
+    markers: set[str] = set()
+    repo = _extract_repo_id(item.link)
+    if repo:
+        markers.add(f"{repo[0]}/{repo[1]}")
+        markers.add(repo[1])
+    text = f"{item.title} {item.summary}"
+    for tok in _tokens(text):
+        if tok in _GENERIC_AI_TERMS:
+            continue
+        # Prefer concrete identifiers over plain words.
+        if any(c.isdigit() for c in tok) or "-" in tok:
+            markers.add(tok)
+    return markers
+
+
 def _keyword_overlap(a: FeedItem, b: FeedItem) -> bool:
-    text_a = f"{a.title} {a.summary}"
-    text_b = f"{b.title} {b.summary}"
-    title_a = _strong_tokens(text_a)
-    title_b = _strong_tokens(text_b)
-    if not title_a or not title_b:
-        return _same_project_or_repo(a, b)
-    inter = title_a & title_b
-    if len(inter) >= 3:
-        return True
-    if _same_project_or_repo(a, b):
-        return True
-
-    return False
-
-
-def _should_cluster_pair(a: FeedItem, b: FeedItem, sim_score: float) -> bool:
     if _same_project_or_repo(a, b):
         return True
     strong_inter = _strong_tokens(f"{a.title} {a.summary}") & _strong_tokens(f"{b.title} {b.summary}")
-    # Prefer not clustering when uncertain: require substantial lexical overlap.
-    if len(strong_inter) >= 3:
+    if len(strong_inter) >= 4:
         return True
-    if sim_score > _CLUSTER_THRESHOLD and len(strong_inter) >= 2:
+    if _project_markers(a) & _project_markers(b):
         return True
     return False
+
+
+def _edge_decision(a: FeedItem, b: FeedItem, sim_score: float) -> tuple[bool, str, list[str]]:
+    strong_inter = sorted(_strong_tokens(f"{a.title} {a.summary}") & _strong_tokens(f"{b.title} {b.summary}"))
+    if _same_project_or_repo(a, b):
+        return True, "repo_match", strong_inter[:8]
+    if len(strong_inter) >= 4:
+        return True, "token_overlap", strong_inter[:8]
+    if _project_markers(a) & _project_markers(b):
+        return True, "project_name", strong_inter[:8]
+    # Cosine alone should never force a cluster; require at least the stricter overlap.
+    if sim_score > _CLUSTER_THRESHOLD and len(strong_inter) >= 4:
+        return True, "cosine", strong_inter[:8]
+    return False, "", strong_inter[:8]
 
 
 def _choose_main_item(items: list[FeedItem]) -> FeedItem:
@@ -194,7 +208,7 @@ def score_cluster(cluster: NewsCluster) -> int:
     return score
 
 
-def cluster_feed_items(items: list[FeedItem]) -> list[NewsCluster]:
+def cluster_feed_items(items: list[FeedItem], logger=None) -> list[NewsCluster]:
     if not items:
         return []
     if len(items) == 1:
@@ -221,6 +235,8 @@ def cluster_feed_items(items: list[FeedItem]) -> list[NewsCluster]:
     sim = cosine_similarity(tfidf)
 
     parent = list(range(len(items)))
+    size = [1 for _ in items]
+    edge_logs: dict[int, list[dict]] = {i: [] for i in range(len(items))}
 
     def find(x: int) -> int:
         while parent[x] != x:
@@ -228,17 +244,36 @@ def cluster_feed_items(items: list[FeedItem]) -> list[NewsCluster]:
             x = parent[x]
         return x
 
-    def union(a: int, b: int) -> None:
+    def union(a: int, b: int, edge: dict) -> None:
         ra = find(a)
         rb = find(b)
-        if ra != rb:
-            parent[rb] = ra
+        if ra == rb:
+            return
+        if size[ra] + size[rb] > OVERCLUSTER_MAX_SIZE:
+            if logger:
+                logger.warning("Cluster union blocked: would exceed max size")
+            return
+        parent[rb] = ra
+        size[ra] += size[rb]
+        merged_logs = edge_logs.get(ra, []) + edge_logs.get(rb, [])
+        merged_logs.append(edge)
+        edge_logs[ra] = merged_logs[:200]
+        edge_logs.pop(rb, None)
 
     n = len(items)
     for i in range(n):
         for j in range(i + 1, n):
-            if _should_cluster_pair(items[i], items[j], float(sim[i, j])) or _keyword_overlap(items[i], items[j]):
-                union(i, j)
+            sim_score = float(sim[i, j])
+            should_link, reason, shared_tokens = _edge_decision(items[i], items[j], sim_score)
+            if should_link or _keyword_overlap(items[i], items[j]):
+                edge = {
+                    "a_title": items[i].title[:140],
+                    "b_title": items[j].title[:140],
+                    "sim_score": round(sim_score, 4),
+                    "shared_tokens": shared_tokens,
+                    "reason": reason or "keyword_overlap",
+                }
+                union(i, j, edge)
 
     grouped: dict[int, list[FeedItem]] = {}
     for idx, item in enumerate(items):
@@ -267,6 +302,21 @@ def cluster_feed_items(items: list[FeedItem]) -> list[NewsCluster]:
         )
         cluster.cluster_score = score_cluster(cluster)
         clusters.append(cluster)
+
+    if logger:
+        for cluster in clusters:
+            if len(cluster.items) > OVERCLUSTER_MAX_SIZE:
+                root_idx = find(items.index(cluster.main_item))
+                logger.warning("Overcluster detected: id=%s size=%d", cluster.id, len(cluster.items))
+                for edge in edge_logs.get(root_idx, [])[:20]:
+                    logger.warning(
+                        "Overcluster edge: A=%s | B=%s | sim=%.4f | shared=%s | reason=%s",
+                        edge.get("a_title", ""),
+                        edge.get("b_title", ""),
+                        float(edge.get("sim_score", 0.0)),
+                        ",".join(edge.get("shared_tokens", [])),
+                        edge.get("reason", ""),
+                    )
 
     return clusters
 

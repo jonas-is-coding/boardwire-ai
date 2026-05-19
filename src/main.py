@@ -7,6 +7,7 @@ import re
 from dataclasses import asdict
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
+from collections import Counter
 
 from dateutil import parser as date_parser
 
@@ -48,6 +49,7 @@ from src.writer.post_writer import generate_post
 
 VALID_REVIEW_STATUSES = {"pending_review", "approved", "rejected", "published_dry_run", "deferred_due_to_cap", "expired_deferred"}
 VALID_PUBLISHERS = {"dry_run", "bluesky"}
+_LOCAL_RANK_LIMIT = 25
 
 
 def _compose_sarah_post(package: dict[str, str | list[str]]) -> str:
@@ -84,6 +86,73 @@ def _env_flag(name: str, default: bool = True) -> bool:
     return raw.strip().lower() in {"1", "true", "yes", "on"}
 
 
+def _has_artifact_link(link: str) -> bool:
+    lowered = (link or "").lower()
+    if not lowered:
+        return False
+    if "github.com/" in lowered:
+        return True
+    if "huggingface.co/models/" in lowered or "huggingface.co/datasets/" in lowered or "huggingface.co/spaces/" in lowered:
+        return True
+    return False
+
+
+def _contains_any(text: str, terms: tuple[str, ...]) -> bool:
+    return any(t in text for t in terms)
+
+
+def _newsworthiness_reason_parts(item: FeedItem, cluster_context: dict | None = None) -> list[str]:
+    text = f"{item.title} {item.summary}".lower()
+    parts: list[str] = []
+    if _has_artifact_link(item.link):
+        parts.append("+artifact")
+    if _contains_any(text, ("released", "ships", "launched", "open-sourced", "now available")):
+        parts.append("+release")
+    if _contains_any(text, ("api", "sdk", "cli", "weights", "dataset", "benchmark", "playground", "mcp")):
+        parts.append("+builder_artifact")
+    if float(item.engagement_score) >= 500:
+        parts.append("+engagement500")
+    elif float(item.engagement_score) >= 100:
+        parts.append("+engagement100")
+    if int(item.source_tier) == 1:
+        parts.append("+tier1")
+    elif int(item.source_tier) == 2:
+        parts.append("+tier2")
+    if isinstance(cluster_context, dict) and int(cluster_context.get("source_count") or 0) >= 3:
+        parts.append("+cluster3")
+    if _contains_any(text, ("workflow", "understanding", "lessons", "guide", "tutorial", "how to", "introduction", "perspective", "opinion")):
+        parts.append("-education_opinion")
+    if _contains_any(text, ("adoption", "announcement", "partnership", "funding", "vision", "future")):
+        parts.append("-vague_meta")
+    return parts
+
+
+def score_newsworthiness(item: FeedItem, cluster_context: dict | None = None) -> int:
+    text = f"{item.title} {item.summary}".lower()
+    score = 0
+    if _has_artifact_link(item.link):
+        score += 30
+    if _contains_any(text, ("released", "ships", "launched", "open-sourced", "now available")):
+        score += 25
+    if _contains_any(text, ("api", "sdk", "cli", "weights", "dataset", "benchmark", "playground", "mcp")):
+        score += 20
+    if float(item.engagement_score) >= 500:
+        score += 20
+    elif float(item.engagement_score) >= 100:
+        score += 10
+    if int(item.source_tier) == 1:
+        score += 15
+    elif int(item.source_tier) == 2:
+        score += 10
+    if isinstance(cluster_context, dict) and int(cluster_context.get("source_count") or 0) >= 3:
+        score += 15
+    if _contains_any(text, ("workflow", "understanding", "lessons", "guide", "tutorial", "how to", "introduction", "perspective", "opinion")):
+        score -= 30
+    if _contains_any(text, ("adoption", "announcement", "partnership", "funding", "vision", "future")):
+        score -= 25
+    return max(0, int(score))
+
+
 def _collect_from_aggregators(
     existing_items: list[FeedItem],
     source_report: dict[str, dict[str, object]],
@@ -116,7 +185,7 @@ def _collect_from_aggregators(
 def _cluster_and_rank(items: list[FeedItem], logger, top_k: int) -> tuple[list[FeedItem], dict[str, dict]]:
     if not items:
         return [], {}
-    clusters = cluster_feed_items(items)
+    clusters = cluster_feed_items(items, logger=logger)
     if not clusters:
         return sorted(items, key=lambda x: x.published_at, reverse=True), {}
 
@@ -238,6 +307,63 @@ def _parse_dt(value: str | None) -> datetime:
         return dt.astimezone(timezone.utc)
     except (ValueError, TypeError):
         return datetime.now(timezone.utc)
+
+
+def _is_release_like_item(item: FeedItem) -> bool:
+    source = (item.source or "").lower()
+    text = f"{item.title} {item.summary}".lower()
+    release_source_markers = ("release", "sdk", "mcp", "ollama", "vllm", "langchain")
+    release_text_markers = ("release", "released", "sdk", "mcp", "ollama", "vllm", "langchain")
+    return any(m in source for m in release_source_markers) or any(m in text for m in release_text_markers)
+
+
+def _freshness_limit_days_for_item(item: FeedItem) -> int:
+    source = (item.source or "").lower()
+    if "github trending" in source:
+        raw = os.getenv("BOARDWIRE_GITHUB_TRENDING_MAX_ITEM_AGE_DAYS", "2")
+        try:
+            return max(1, int(raw))
+        except ValueError:
+            return 2
+    if _is_release_like_item(item):
+        raw = os.getenv("BOARDWIRE_RELEASE_MAX_ITEM_AGE_DAYS", "14")
+        try:
+            return max(1, int(raw))
+        except ValueError:
+            return 14
+    raw = os.getenv("BOARDWIRE_MAX_ITEM_AGE_DAYS", "7")
+    try:
+        return max(1, int(raw))
+    except ValueError:
+        return 7
+
+
+def _apply_freshness_filter(items: list[FeedItem], logger) -> list[FeedItem]:
+    now = datetime.now(timezone.utc)
+    kept: list[FeedItem] = []
+    removed_by_source: Counter[str] = Counter()
+    before = len(items)
+
+    for item in items:
+        published = item.published_at
+        if not isinstance(published, datetime):
+            removed_by_source[item.source or "Unknown Source"] += 1
+            continue
+        if published.tzinfo is None:
+            published = published.replace(tzinfo=timezone.utc)
+        age_days = (now - published.astimezone(timezone.utc)).total_seconds() / 86400.0
+        limit_days = _freshness_limit_days_for_item(item)
+        if age_days < 0:
+            age_days = 0
+        if age_days > limit_days:
+            removed_by_source[item.source or "Unknown Source"] += 1
+            continue
+        kept.append(item)
+
+    logger.info("Freshness filter: %d items -> %d items", before, len(kept))
+    for source_name, removed in sorted(removed_by_source.items(), key=lambda kv: (-kv[1], kv[0])):
+        logger.info("Freshness filter removed: source=%s count=%d", source_name, removed)
+    return kept
 
 
 def _load_fixture_items() -> list[FeedItem]:
@@ -1201,6 +1327,9 @@ def run(argv: list[str] | None = None) -> int:
         logger.info("Total unique fetched items: %d", len(all_items))
         return 0
 
+    # Hard freshness gate before any clustering/ranking/evaluation work.
+    all_items = _apply_freshness_filter(all_items, logger)
+
     # Load deferred items first and expire over-retried entries.
     max_defer_count = max(1, quality_config.max_defer_count)
     deferred_candidates: list[dict] = []
@@ -1255,6 +1384,33 @@ def run(argv: list[str] | None = None) -> int:
     else:
         fresh_candidates = sorted(unseen_items, key=lambda x: x.published_at, reverse=True)
 
+    # Local newsworthiness ranking (Gemini-independent) before any LLM ranking.
+    local_ranked_rows: list[tuple[FeedItem, int, list[str]]] = []
+    for item in fresh_candidates:
+        ctx = cluster_context_by_link.get(item.link)
+        score = score_newsworthiness(item, cluster_context=ctx)
+        reasons = _newsworthiness_reason_parts(item, cluster_context=ctx)
+        local_ranked_rows.append((item, score, reasons))
+    local_ranked_rows.sort(
+        key=lambda row: (
+            -row[1],
+            int(row[0].source_tier),
+            -float(row[0].engagement_score),
+            -row[0].published_at.astimezone(timezone.utc).timestamp()
+            if row[0].published_at.tzinfo
+            else -row[0].published_at.replace(tzinfo=timezone.utc).timestamp(),
+        )
+    )
+    fresh_candidates = [row[0] for row in local_ranked_rows]
+    for row in local_ranked_rows[:10]:
+        logger.info(
+            "Local rank score=%d | tier=%d | title=%s | reasons=%s",
+            row[1],
+            int(row[0].source_tier),
+            row[0].title[:120],
+            ",".join(row[2]) if row[2] else "none",
+        )
+
     # Batch LLM pre-ranking: take top RANKING_POOL_SIZE story-scored reps,
     # have the LLM pick the best `--limit` from that pool in ONE call.
     batch_ranking_active = (
@@ -1265,15 +1421,13 @@ def run(argv: list[str] | None = None) -> int:
         and bool(llm_config.gemini_api_key)
     )
     if batch_ranking_active and fresh_candidates:
-        try:
-            pool_size = int(os.getenv("BOARDWIRE_RANKING_POOL_SIZE", "25"))
-        except ValueError:
-            pool_size = 25
-        pool_size = max(args.limit, min(pool_size, len(fresh_candidates)))
+        pool_size = max(args.limit, min(_LOCAL_RANK_LIMIT, len(fresh_candidates)))
         ranking_pool = fresh_candidates[:pool_size]
         picked = rank_candidates_with_llm(ranking_pool, args.limit, llm_config, logger)
         if picked:
             fresh_candidates = picked + [f for f in fresh_candidates if f.link not in {p.link for p in picked}]
+        else:
+            logger.info("Gemini ranking unavailable; using local ranking fallback")
     elif llm_config.provider == "gemini" and remaining_gemini_budget() <= 0:
         logger.warning("Gemini budget exhausted; using fallback for ranking")
 
