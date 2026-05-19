@@ -20,6 +20,15 @@ class LLMError(RuntimeError):
     pass
 
 
+def _gemini_api_keys() -> list[str]:
+    keys: list[str] = []
+    for env in ("GEMINI_API_KEY", "GEMINI_API_KEY_2", "GEMINI_API_KEY_3", "GEMINI_API_KEY_4"):
+        k = os.getenv(env, "").strip()
+        if k:
+            keys.append(k)
+    return keys
+
+
 @dataclass(slots=True)
 class LLMConfig:
     provider: str
@@ -78,6 +87,25 @@ class GeminiClient:
     def __init__(self, api_key: str, model: str) -> None:
         self.api_key = api_key
         self.model = model
+        self.api_keys = [api_key] + [k for k in _gemini_api_keys() if k != api_key]
+
+    def _request_with_key_rotation(self, body: dict, timeout: int) -> requests.Response:
+        if not self.api_keys:
+            raise LLMError("Gemini API key is missing")
+        last_response: requests.Response | None = None
+        for key in self.api_keys:
+            url = (
+                f"https://generativelanguage.googleapis.com/v1beta/models/"
+                f"{self.model}:generateContent?key={key}"
+            )
+            response = requests.post(url, json=body, timeout=timeout)
+            if response.status_code == 429:
+                last_response = response
+                continue
+            return response
+        if last_response is not None:
+            return last_response
+        raise LLMError("Gemini key rotation failed without response")
 
     def rank_candidates(self, items: list[FeedItem], top_k: int) -> list[dict]:
         prompt = f"{RANKING_SYSTEM_PROMPT}\n\n{build_ranking_user_prompt(items, top_k)}"
@@ -88,11 +116,7 @@ class GeminiClient:
                 "temperature": 0.1,
             },
         }
-        url = (
-            f"https://generativelanguage.googleapis.com/v1beta/models/"
-            f"{self.model}:generateContent?key={self.api_key}"
-        )
-        response = requests.post(url, json=body, timeout=30)
+        response = self._request_with_key_rotation(body=body, timeout=30)
         if response.status_code >= 400:
             raise LLMError(f"Gemini ranking error {response.status_code}: {response.text[:220]}")
         data = response.json()
@@ -123,11 +147,7 @@ class GeminiClient:
                 "temperature": 0.2,
             },
         }
-        url = (
-            f"https://generativelanguage.googleapis.com/v1beta/models/"
-            f"{self.model}:generateContent?key={self.api_key}"
-        )
-        response = requests.post(url, json=body, timeout=20)
+        response = self._request_with_key_rotation(body=body, timeout=20)
         if response.status_code >= 400:
             raise LLMError(f"Gemini API error {response.status_code}: {response.text[:220]}")
 
@@ -158,7 +178,8 @@ def load_llm_config() -> LLMConfig:
     openai_model = os.getenv("BOARDWIRE_LLM_MODEL", "gpt-5-mini").strip() or "gpt-5-mini"
     gemini_model = os.getenv("BOARDWIRE_GEMINI_MODEL", "gemini-2.5-flash").strip() or "gemini-2.5-flash"
     openai_api_key = os.getenv("OPENAI_API_KEY")
-    gemini_api_key = os.getenv("GEMINI_API_KEY")
+    gemini_keys = _gemini_api_keys()
+    gemini_api_key = gemini_keys[0] if gemini_keys else None
     try:
         max_items = int(os.getenv("BOARDWIRE_MAX_LLM_ITEMS", "3"))
     except ValueError:

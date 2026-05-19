@@ -148,7 +148,7 @@ _USER_PROMPTS = {
 
 def _available_keys() -> list[str]:
     keys = []
-    for env in ("GEMINI_API_KEY", "GEMINI_API_KEY_2"):
+    for env in ("GEMINI_API_KEY", "GEMINI_API_KEY_2", "GEMINI_API_KEY_3", "GEMINI_API_KEY_4"):
         k = os.getenv(env, "").strip()
         if k:
             keys.append(k)
