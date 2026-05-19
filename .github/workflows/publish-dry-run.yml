@@ -10,6 +10,10 @@ jobs:
   publish_dry_run:
     runs-on: ubuntu-latest
     env:
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+      BOARDWIRE_SARAH_PROVIDER: openrouter
+      BOARDWIRE_SARAH_MODEL: qwen/qwen3-235b-a22b:free
+      BOARDWIRE_SARAH_FALLBACK_MODEL: deepseek/deepseek-chat-v3-0324:free
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
       GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}

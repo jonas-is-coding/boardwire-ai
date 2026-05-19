@@ -271,6 +271,109 @@ def _call_gemini(
     return None
 
 
+def _call_openrouter(
+    system: str,
+    user: str,
+    model: str,
+    fallback_model: str | None = None,
+    max_output_tokens: int = 420,
+) -> str | None:
+    api_key = os.getenv("OPENROUTER_API_KEY", "").strip()
+    if not api_key:
+        _LOGGER.warning("OpenRouter API key missing: OPENROUTER_API_KEY")
+        return None
+
+    github_repo = os.getenv("GITHUB_REPOSITORY", "").strip()
+    referer = f"https://github.com/{github_repo}" if github_repo else "https://github.com/unknown/unknown"
+
+    body = {
+        "model": model,
+        "messages": [
+            {"role": "system", "content": system},
+            {"role": "user", "content": user},
+        ],
+        "temperature": 0.75,
+        "max_tokens": max_output_tokens,
+        "response_format": {"type": "json_object"},
+    }
+    headers = {
+        "Authorization": f"Bearer {api_key}",
+        "Content-Type": "application/json",
+        "HTTP-Referer": referer,
+        "X-Title": "Boardwire",
+    }
+
+    def _request_once(payload: dict) -> tuple[int | None, str | None]:
+        try:
+            resp = requests.post(
+                "https://openrouter.ai/api/v1/chat/completions",
+                headers=headers,
+                json=payload,
+                timeout=20,
+            )
+        except Exception as exc:
+            _LOGGER.warning(
+                "OpenRouter request exception: model=%s type=%s message=%s",
+                payload.get("model"),
+                type(exc).__name__,
+                str(exc)[:220],
+            )
+            return None, None
+
+        if resp.status_code >= 400:
+            error_snippet = ""
+            try:
+                payload_json = resp.json()
+                if isinstance(payload_json, dict):
+                    error_obj = payload_json.get("error", {})
+                    if isinstance(error_obj, dict):
+                        msg = str(error_obj.get("message", "")).strip()
+                        if msg:
+                            error_snippet = msg[:220]
+            except Exception:
+                pass
+            _LOGGER.warning(
+                "OpenRouter request failed: model=%s status=%d%s",
+                payload.get("model"),
+                resp.status_code,
+                f" error={error_snippet}" if error_snippet else "",
+            )
+            return resp.status_code, None
+
+        try:
+            content = str(resp.json()["choices"][0]["message"]["content"]).strip()
+        except Exception:
+            _LOGGER.warning("OpenRouter response parse failed: model=%s", payload.get("model"))
+            return resp.status_code, None
+        if len(content) < 30:
+            _LOGGER.warning(
+                "OpenRouter response rejected: model=%s reason=too_short length=%d",
+                payload.get("model"),
+                len(content),
+            )
+            return resp.status_code, None
+        return resp.status_code, content
+
+    status, content = _request_once(body)
+    if content:
+        return content
+    if status not in {429, 503}:
+        return None
+    if not fallback_model or fallback_model == model:
+        return None
+
+    _LOGGER.info(
+        "OpenRouter attempting fallback: primary_model=%s fallback_model=%s primary_status=%s",
+        model,
+        fallback_model,
+        status,
+    )
+    fallback_body = dict(body)
+    fallback_body["model"] = fallback_model
+    _, fallback_content = _request_once(fallback_body)
+    return fallback_content
+
+
 def _parse_json_loose(raw: str) -> dict | None:
     text = raw.strip()
     if not text:
@@ -379,16 +482,46 @@ def sarah_build_publish_package(
         post_text=post_text[:280],
         summary=summary[:500],
     )
-    sarah_model = os.getenv("BOARDWIRE_SARAH_MODEL", "gemini-2.5-pro").strip() or "gemini-2.5-pro"
-    sarah_fallback = os.getenv("BOARDWIRE_SARAH_FALLBACK_MODEL", "gemini-2.5-flash").strip() or "gemini-2.5-flash"
-    raw = _call_gemini(
-        _SYSTEM_PROMPTS["sarah"],
-        user,
-        model_override=sarah_model,
-        fallback_model=sarah_fallback,
-        max_output_tokens=320,
-        enable_thinking=True,
-    )
+    sarah_provider = os.getenv("BOARDWIRE_SARAH_PROVIDER", "").strip().lower()
+    raw: str | None = None
+
+    if sarah_provider == "openrouter":
+        sarah_model = (
+            os.getenv("BOARDWIRE_SARAH_MODEL", "qwen/qwen3-235b-a22b:free").strip()
+            or "qwen/qwen3-235b-a22b:free"
+        )
+        sarah_fallback = (
+            os.getenv("BOARDWIRE_SARAH_FALLBACK_MODEL", "deepseek/deepseek-chat-v3-0324:free").strip()
+            or "deepseek/deepseek-chat-v3-0324:free"
+        )
+        raw = _call_openrouter(
+            _SYSTEM_PROMPTS["sarah"],
+            user,
+            model=sarah_model,
+            fallback_model=sarah_fallback,
+            max_output_tokens=420,
+        )
+        if not raw:
+            _LOGGER.info("OpenRouter Sarah failed, trying Gemini flash fallback")
+            raw = _call_gemini(
+                _SYSTEM_PROMPTS["sarah"],
+                user,
+                model_override="gemini-2.5-flash",
+                fallback_model=None,
+                max_output_tokens=420,
+                enable_thinking=False,
+            )
+    else:
+        sarah_model = os.getenv("BOARDWIRE_SARAH_MODEL", "gemini-2.5-flash").strip() or "gemini-2.5-flash"
+        sarah_fallback = os.getenv("BOARDWIRE_SARAH_FALLBACK_MODEL", "gemini-2.5-flash").strip() or "gemini-2.5-flash"
+        raw = _call_gemini(
+            _SYSTEM_PROMPTS["sarah"],
+            user,
+            model_override=sarah_model,
+            fallback_model=sarah_fallback,
+            max_output_tokens=420,
+            enable_thinking=False,
+        )
     if not raw:
         return None
     data = _parse_json_loose(raw)
