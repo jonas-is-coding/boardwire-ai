@@ -141,7 +141,15 @@ _USER_PROMPTS = {
         "Claire note: {claire_note}\n"
         "Chloe note: {chloe_note}\n"
         "Current post draft: {post_text}\n"
-        "Summary: {summary}"
+        "Summary: {summary}\n\n"
+        "Cluster context:\n"
+        "- Source count: {cluster_source_count}\n"
+        "- Sources: {cluster_sources}\n"
+        "- Total engagement score: {cluster_total_engagement}\n"
+        "- Common terms: {cluster_common_terms}\n"
+        "- Alternative titles: {alternative_titles}\n\n"
+        "Use facts corroborated across multiple sources whenever possible.\n"
+        "If a number appears in only one source, hedge it with wording like 'claims' instead of stating it as proven."
     ),
 }
 
@@ -471,7 +479,15 @@ def sarah_build_publish_package(
     chloe_note: str,
     post_text: str,
     summary: str,
+    cluster_source_count: int = 1,
+    cluster_sources: list[str] | None = None,
+    cluster_total_engagement: int = 0,
+    cluster_common_terms: list[str] | None = None,
+    alternative_titles: list[str] | None = None,
 ) -> dict[str, str | list[str]] | None:
+    cluster_sources = cluster_sources or []
+    cluster_common_terms = cluster_common_terms or []
+    alternative_titles = alternative_titles or []
     user = _USER_PROMPTS["sarah_package"].format(
         title=title,
         source=source,
@@ -481,6 +497,11 @@ def sarah_build_publish_package(
         chloe_note=chloe_note[:400],
         post_text=post_text[:280],
         summary=summary[:500],
+        cluster_source_count=max(1, int(cluster_source_count)),
+        cluster_sources=", ".join(str(x) for x in cluster_sources[:8]),
+        cluster_total_engagement=max(0, int(cluster_total_engagement)),
+        cluster_common_terms=", ".join(str(x) for x in cluster_common_terms[:10]),
+        alternative_titles=" | ".join(str(x)[:120] for x in alternative_titles[:6]),
     )
     sarah_provider = os.getenv("BOARDWIRE_SARAH_PROVIDER", "").strip().lower()
     raw: str | None = None

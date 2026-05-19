@@ -13,8 +13,7 @@ from dateutil import parser as date_parser
 from src.board.evaluator import evaluate_item
 from src.board.llm_evaluator import evaluate_with_optional_llm, rank_candidates_with_llm
 from src.board.personas import load_personas
-from src.board.embeddings import EmbeddingService
-from src.board.clustering import cluster_items
+from src.clustering import NewsCluster, cluster_feed_items, select_top_clusters
 from src.collector.rss_collector import fetch_all
 from src.collector.hn_collector import fetch_hackernews
 from src.collector.github_trending_collector import fetch_github_trending
@@ -24,7 +23,6 @@ from src.config import (
     CARDS_DIR,
     CLUSTERS_DEBUG_PATH,
     DRAFTS_PATH,
-    EMBEDDINGS_CACHE_PATH,
     MAX_ITEMS_PER_RUN,
     PERSONAS_PATH,
     PUBLISHED_POSTS_PATH,
@@ -114,89 +112,99 @@ def _collect_from_aggregators(
     return merged
 
 
-def _cluster_and_rank(items: list[FeedItem], logger) -> list[FeedItem]:
-    """Cluster items, return representatives sorted by story_score.
-
-    Each representative's summary is augmented with cluster corroboration so the
-    LLM can see how many sources covered the story.
-    """
+def _cluster_and_rank(items: list[FeedItem], logger, top_k: int) -> tuple[list[FeedItem], dict[str, dict]]:
     if not items:
-        return []
-    try:
-        svc = EmbeddingService(cache_path=EMBEDDINGS_CACHE_PATH, logger=logger)
-        embeddings = svc.embed_items(items)
-        # Prune cache: keep only links present in the current run plus recent past.
-        keep = {item.link for item in items}
-        svc.prune_cache(keep | set(svc._cache.keys()))
-    except Exception as exc:  # noqa: BLE001
-        logger.warning("Embedding failed, skipping clustering: %s", exc)
-        return sorted(items, key=lambda x: x.published_at, reverse=True)
-
-    clusters = cluster_items(items, embeddings, logger=logger)
+        return [], {}
+    clusters = cluster_feed_items(items)
     if not clusters:
-        return sorted(items, key=lambda x: x.published_at, reverse=True)
+        return sorted(items, key=lambda x: x.published_at, reverse=True), {}
 
-    debug_dump = []
+    selected = select_top_clusters(clusters, top_k=max(1, top_k))
+    selected_ids = {c.id for c in selected}
+    cluster_context_by_link: dict[str, dict] = {}
+    cluster_by_link: dict[str, NewsCluster] = {}
+    for cluster in selected:
+        for member in cluster.items:
+            cluster_by_link[member.link] = cluster
+
     augmented: list[FeedItem] = []
-
-    for cluster in clusters:
-        rep = cluster.representative
-        if rep is None:
+    for item in sorted(items, key=lambda x: x.published_at, reverse=True):
+        cluster = cluster_by_link.get(item.link)
+        if not cluster or cluster.id not in selected_ids:
+            continue
+        if item.link != cluster.main_item.link:
             continue
 
-        if len(cluster.items) > 1:
-            others = [i for i in cluster.items if i.link != rep.link]
-            others.sort(key=lambda i: i.engagement_score, reverse=True)
-            covered_by = [
-                f"{o.source} (engagement {int(o.engagement_score)})"
-                if o.engagement_score > 0
-                else o.source
-                for o in others[:5]
-            ]
-            corroboration = (
-                f"\n[Cross-source signal: also covered by {len(others)} other "
-                f"source(s) — {', '.join(covered_by)}. Story-score {cluster.story_score:.1f}.]"
-            )
-            new_summary = (rep.summary or "").rstrip() + corroboration
-        else:
-            new_summary = rep.summary
-
-        augmented_item = FeedItem(
-            source=rep.source,
-            title=rep.title,
-            link=rep.link,
-            summary=new_summary,
-            published_at=rep.published_at,
-            source_tier=rep.source_tier,
-            engagement_score=rep.engagement_score,
+        alt_titles = [m.title for m in cluster.items if m.link != cluster.main_item.link][:6]
+        context = {
+            "cluster_id": cluster.id,
+            "cluster_score": cluster.cluster_score,
+            "source_count": cluster.source_count,
+            "sources": cluster.sources,
+            "total_engagement_score": int(cluster.total_engagement_score),
+            "common_terms": cluster.common_terms,
+            "cluster_summary": cluster.cluster_summary,
+            "alternative_titles": alt_titles,
+        }
+        cluster_context_by_link[item.link] = context
+        corroboration = (
+            f"\n[Cluster context: {cluster.source_count} sources, "
+            f"engagement {int(cluster.total_engagement_score)}, "
+            f"common terms: {', '.join(cluster.common_terms[:5])}.]"
         )
-        augmented.append(augmented_item)
+        augmented.append(
+            FeedItem(
+                source=item.source,
+                title=item.title,
+                link=item.link,
+                summary=(item.summary or "").rstrip() + corroboration,
+                published_at=item.published_at,
+                source_tier=item.source_tier,
+                engagement_score=item.engagement_score,
+            )
+        )
 
-        debug_dump.append({
-            "cluster_id": cluster.cluster_id,
-            "story_score": round(cluster.story_score, 3),
-            "size": len(cluster.items),
-            "rep_link": rep.link,
-            "rep_source": rep.source,
-            "rep_title": rep.title,
-            "members": [
-                {
-                    "source": i.source,
-                    "title": i.title,
-                    "link": i.link,
-                    "tier": i.source_tier,
-                    "engagement": i.engagement_score,
-                }
-                for i in cluster.items
-            ],
-        })
-
+    debug_dump = []
+    for cluster in selected:
+        debug_dump.append(
+            {
+                "cluster_id": cluster.id,
+                "cluster_score": cluster.cluster_score,
+                "size": len(cluster.items),
+                "source_count": cluster.source_count,
+                "sources": cluster.sources,
+                "common_terms": cluster.common_terms,
+                "main_link": cluster.main_item.link,
+                "main_title": cluster.main_item.title,
+                "members": [
+                    {
+                        "source": i.source,
+                        "title": i.title,
+                        "link": i.link,
+                        "tier": i.source_tier,
+                        "engagement": i.engagement_score,
+                    }
+                    for i in cluster.items
+                ],
+            }
+        )
     try:
         JsonStore.save(CLUSTERS_DEBUG_PATH, debug_dump)
     except Exception as exc:  # noqa: BLE001
         logger.warning("Clusters debug dump failed: %s", exc)
 
-    return augmented
+    logger.info("Items before clustering: %d", len(items))
+    logger.info("Clusters built: %d", len(clusters))
+    for c in selected[:5]:
+        logger.info(
+            "Top cluster %s score=%d sources=%d (%s)",
+            c.id,
+            c.cluster_score,
+            c.source_count,
+            ", ".join(c.sources[:5]),
+        )
+
+    return augmented, cluster_context_by_link
 
 
 def _load_sources() -> list[Source]:
@@ -834,6 +842,7 @@ def _publish_approved(args, logger) -> int:
             continue
 
         source_summary = str(source_item.get("summary", "")).strip()
+        cluster_context = source_item.get("cluster_context", {}) if isinstance(source_item.get("cluster_context"), dict) else {}
         base_post_text = str(item.get("proposed_post") or "").strip() or _build_publish_caption(item)
         sarah_package = voice.sarah_build_publish_package(
             title=str(source_item.get("title", "Untitled")),
@@ -844,6 +853,11 @@ def _publish_approved(args, logger) -> int:
             chloe_note=str(item.get("chloe_note", "")),
             post_text=base_post_text,
             summary=source_summary,
+            cluster_source_count=int(cluster_context.get("source_count") or 1),
+            cluster_sources=[str(x) for x in cluster_context.get("sources", [])] if isinstance(cluster_context.get("sources"), list) else [],
+            cluster_total_engagement=int(cluster_context.get("total_engagement_score") or 0),
+            cluster_common_terms=[str(x) for x in cluster_context.get("common_terms", [])] if isinstance(cluster_context.get("common_terms"), list) else [],
+            alternative_titles=[str(x) for x in cluster_context.get("alternative_titles", [])] if isinstance(cluster_context.get("alternative_titles"), list) else [],
         )
         if not sarah_package:
             logger.warning("Sarah LLM unavailable or rejected — skipping publish (will retry next run): %s", rid)
@@ -1201,8 +1215,13 @@ def run(argv: list[str] | None = None) -> int:
     deferred_links = {d["feed_item"].link for d in deferred_candidates}
     unseen_items = [item for item in all_items if item.link not in seen_links and item.link not in deferred_links]
 
+    cluster_context_by_link: dict[str, dict] = {}
     if _env_flag("BOARDWIRE_ENABLE_CLUSTERING", True) and not args.use_fixtures:
-        fresh_candidates = _cluster_and_rank(unseen_items, logger)
+        try:
+            cluster_top_k = int(os.getenv("BOARDWIRE_CLUSTER_TOP_K", os.getenv("BOARDWIRE_RANKING_POOL_SIZE", "25")))
+        except ValueError:
+            cluster_top_k = 25
+        fresh_candidates, cluster_context_by_link = _cluster_and_rank(unseen_items, logger, top_k=cluster_top_k)
         logger.info("Clustering active: %d items -> %d cluster reps", len(unseen_items), len(fresh_candidates))
     else:
         fresh_candidates = sorted(unseen_items, key=lambda x: x.published_at, reverse=True)
@@ -1254,6 +1273,7 @@ def run(argv: list[str] | None = None) -> int:
         logger.warning("Falling back to rule-based evaluator: GEMINI_API_KEY is missing")
 
     created_drafts: list[DraftPost] = []
+    processed_items_by_link: dict[str, FeedItem] = {}
     processed_links: list[str] = []
     deferred_due_to_cap_links: set[str] = set()
     deferred_reprocessed = 0
@@ -1273,6 +1293,7 @@ def run(argv: list[str] | None = None) -> int:
 
     for idx, candidate in enumerate(candidate_pipeline):
         item = candidate["feed_item"]
+        processed_items_by_link[item.link] = item
         is_deferred = bool(candidate["is_deferred"])
         deferred_queue_item = candidate["queue_item"]
         if is_deferred:
@@ -1349,6 +1370,23 @@ def run(argv: list[str] | None = None) -> int:
 
     if args.review:
         queue_items = _queue_from_drafts(created_drafts)
+        for q in queue_items:
+            src = q.get("source_item", {})
+            link = str(src.get("link", "")).strip()
+            feed_item = processed_items_by_link.get(link)
+            if feed_item:
+                src["summary"] = feed_item.summary
+            ctx = cluster_context_by_link.get(link)
+            if ctx:
+                src["cluster_context"] = {
+                    "source_count": ctx.get("source_count", 1),
+                    "sources": ctx.get("sources", []),
+                    "total_engagement_score": ctx.get("total_engagement_score", 0),
+                    "common_terms": ctx.get("common_terms", []),
+                    "cluster_summary": ctx.get("cluster_summary", ""),
+                    "alternative_titles": ctx.get("alternative_titles", []),
+                    "cluster_score": ctx.get("cluster_score", 0),
+                }
         deferred_queue_by_link: dict[str, dict] = {}
         for q in review_queue_data:
             if q.get("status") == "deferred_due_to_cap":
@@ -1460,11 +1498,23 @@ def run(argv: list[str] | None = None) -> int:
                     if source_link in _pending_claire:
                         c_title, c_link = _pending_claire.pop(source_link)
                         notify.claire_post_deferred(c_title, c_link, _claire_notes.get(source_link, ""))
+                    cluster_ctx = item.get("source_item", {}).get("cluster_context", {})
+                    cluster_note = ""
+                    if isinstance(cluster_ctx, dict):
+                        c_sources = int(cluster_ctx.get("source_count") or 0)
+                        c_eng = int(cluster_ctx.get("total_engagement_score") or 0)
+                        c_terms = cluster_ctx.get("common_terms", [])
+                        terms_txt = ", ".join(str(x) for x in c_terms[:4]) if isinstance(c_terms, list) else ""
+                        if c_sources > 0:
+                            cluster_note = (
+                                f" Cluster context: {c_sources} sources, "
+                                f"engagement {c_eng}. Common terms: {terms_txt}."
+                            ).strip()
                     chloe_note = notify.michael_approved(
                         title=source_title,
                         link=source_link,
                         score=score_val,
-                        reason=item.get("reason", ""),
+                        reason=f"{item.get('reason', '')}{cluster_note}",
                         is_llm=is_llm_mode,
                         claire_note=_claire_notes.get(source_link, ""),
                     )
