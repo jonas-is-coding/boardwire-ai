@@ -555,11 +555,11 @@
   },
   {
     "id": "c9afa021c98c",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-05-19T19:11:26.239108Z",
     "score": 85,
     "reason": "Analysis of 10 recently shipped open-weight LLMs provides immediate actionable intelligence for builders.",
-    "proposed_post": "Sebastian Raschka's 'Ahead of AI' compares 10 open-weight LLM architectures released Jan-Feb 2026. Use this roundup to quickly evaluate and select recent open-weight models for your projects.",
+    "proposed_post": "Sebastian Raschka analyzes 10 open-weight LLM architectures.\n\nThe 'Ahead of AI' report compares models released in January-February 2026, offering early evaluatio\n\n#OpenWeightLLMs #LLMArchitecture #AIModels",
     "source_angle": "Deep dive comparison of recent open-weight LLM releases.",
     "source_item": {
       "title": "A Dream of Spring for Open-Weight LLMs: 10 Architectures from Jan-Feb 2026",
@@ -589,9 +589,20 @@
         "cluster_score": 35
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/c9afa021c98c.png",
     "is_llm_mode": true,
     "claire_note": "Chloe, dieser Artikel von Raschka ist ein Volltreffer für unsere Developer. Er listet 10 neue Open-Weight LLMs aus Jan-Feb 2026 auf und vergleicht sie. Das ist super relevant, weil Entwickler jetzt schon sehen können, welche Architekturen gerade in den Startlöchern stehen und welche davon sie für ihre Projekte evaluieren sollten. Sie können frühzeitig die Vor- und Nachteile der verschiedenen Modelle abwägen, bevor der große Hype losgeht.",
-    "chloe_note": "Der Artikel besteht den Ships Test. Die Analyse von 10 Open-Weight LLMs aus Jan-Feb 2026 bietet Entwicklern konkrete Anhaltspunkte zur Evaluierung und potenziellen Nutzung dieser Architekturen für zukünftige Projekte. Das ist direkt umsetzbare Information, die zum Download oder Deployment führen kann."
+    "chloe_note": "Der Artikel besteht den Ships Test. Die Analyse von 10 Open-Weight LLMs aus Jan-Feb 2026 bietet Entwicklern konkrete Anhaltspunkte zur Evaluierung und potenziellen Nutzung dieser Architekturen für zukünftige Projekte. Das ist direkt umsetzbare Information, die zum Download oder Deployment führen kann.",
+    "sarah_package": {
+      "title": "Sebastian Raschka analyzes 10 open-weight LLM architectures.",
+      "subtitle": "The 'Ahead of AI' report compares models released in January-February 2026, offering early evaluatio",
+      "description": "The analysis details architectures, performance, and potential applications for 10 recently shipped open-weight LLMs from the first two mont",
+      "hashtags": [
+        "#OpenWeightLLMs",
+        "#LLMArchitecture",
+        "#AIModels"
+      ]
+    },
+    "published_at": "2026-05-19T19:51:30.928382Z"
   }
 ]
