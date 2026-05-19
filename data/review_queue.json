@@ -1,0 +1,178 @@
+[
+  {
+    "id": "fc47be6dd7b4",
+    "status": "approved",
+    "created_at": "2026-05-19T20:58:20.551904Z",
+    "score": 7,
+    "reason": "Builder signal (T2): agent, ai",
+    "proposed_post": "msitarzewski/agency-agents — A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert w. Agent reliability in production is still the hard part — check whether the ev…",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "msitarzewski/agency-agents — A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert w",
+      "source": "GitHub Trending",
+      "link": "https://github.com/msitarzewski/agency-agents",
+      "source_tier": 2,
+      "engagement_score": 983.0,
+      "summary": "Trending on GitHub today: +983 stars. A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.\n[Cluster context: 1 sources, engagement 983, common terms: whimsy, msitarzewski/agency-agents, trending, deliverables., wizards.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 983,
+        "common_terms": [
+          "whimsy",
+          "msitarzewski/agency-agents",
+          "trending",
+          "deliverables.",
+          "wizards",
+          "injectors",
+          "proven",
+          "each"
+        ],
+        "cluster_summary": "1 sources, engagement 983. Common terms: whimsy, msitarzewski/agency-agents, trending, deliverables.. Lead: msitarzewski/agency-agents — A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas,",
+        "alternative_titles": [],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Aus *GitHub Trending* ist ein starker Kandidat reingekommen: *msitarzewski/agency-agents — A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert w*.\nRelevanz fuer Builder: Builder signal (T2): agent, ai\n_Score: 7_",
+    "chloe_note": "Hey, *msitarzewski/agency-agents — A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert w* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Builder signal (T2): agent, aiCluster context: 1 sources, engagement 983. Common terms: whimsy, msitarzewski/agency-agents, trending, deliverables. Score aktuell: 7. Link: https://github.com/msitarzewski/agency-agents"
+  },
+  {
+    "id": "77fd12fd8f24",
+    "status": "approved",
+    "created_at": "2026-05-19T20:58:20.552052Z",
+    "score": 6,
+    "reason": "Builder signal (T2): release, ai",
+    "proposed_post": "langchain==1.3.1. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "langchain==1.3.1",
+      "source": "LangChain Releases",
+      "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.3.1",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "summary": "<p>Changes since langchain==1.3.0</p>\n<p>release(langchain): 1.3.1 (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/37454\">#37454</a>)<br />\nfix(langchain): alias Bedrock providers in summarization token check (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/37453\">#37453</a>)</p>\n[Cluster context: 2 sources, engagement 0, common terms: href, issue-link, class, js-issue-link, since.]",
+      "cluster_context": {
+        "source_count": 2,
+        "sources": [
+          "LangChain Releases",
+          "Ollama Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "href",
+          "issue-link",
+          "class",
+          "js-issue-link",
+          "since",
+          "changes",
+          "langchain",
+          "codex"
+        ],
+        "cluster_summary": "2 sources, engagement 0. Common terms: href, issue-link, class, js-issue-link. Lead: v0.30.0-rc16",
+        "alternative_titles": [
+          "v0.30.0-rc16",
+          "v0.24.0-rc1",
+          "v0.24.0-rc0",
+          "langchain==1.3.0",
+          "langchain-core==0.3.86",
+          "langchain-classic==1.0.7"
+        ],
+        "cluster_score": 55
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Aus *LangChain Releases* ist ein starker Kandidat reingekommen: *langchain==1.3.1*.\nRelevanz fuer Builder: Builder signal (T2): release, ai\n_Score: 6_",
+    "chloe_note": "Kurzes Update: *langchain==1.3.1* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Builder signal (T2): release, aiCluster context: 2 sources, engagement 0. Common terms: href, issue-link, class, js-issue-link. Ich habe es mit 6 Punkten bewertet. Hier der Link: https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.3.1"
+  },
+  {
+    "id": "3604d4c50146",
+    "status": "approved",
+    "created_at": "2026-05-19T20:58:20.552158Z",
+    "score": 6,
+    "reason": "Builder signal (T2): v0., ai",
+    "proposed_post": "v0.21.1rc0: [ROCm][CI] Stage B gating (#42025). The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "v0.21.1rc0: [ROCm][CI] Stage B gating (#42025)",
+      "source": "vLLM Releases",
+      "link": "https://github.com/vllm-project/vllm/releases/tag/v0.21.1rc0",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "summary": "<p>Signed-off-by: Andreas Karatzas <a href=\"mailto:akaratza@amd.com\">akaratza@amd.com</a></p>\n[Cluster context: 1 sources, engagement 0, common terms: mailto, rocm, andreas, href, akaratza.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "vLLM Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "mailto",
+          "rocm",
+          "andreas",
+          "href",
+          "akaratza",
+          "gating",
+          "v0.21.1rc0",
+          "karatzas"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: mailto, rocm, andreas, href. Lead: v0.21.1rc0: [ROCm][CI] Stage B gating (#42025)",
+        "alternative_titles": [
+          "v0.21.0rc3",
+          "v0.21.0rc2",
+          "v0.21.0rc1"
+        ],
+        "cluster_score": 15
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Aus *vLLM Releases* ist ein starker Kandidat reingekommen: *v0.21.1rc0: [ROCm][CI] Stage B gating (#42025)*.\nRelevanz fuer Builder: Builder signal (T2): v0., ai\n_Score: 6_",
+    "chloe_note": "*v0.21.1rc0: [ROCm][CI] Stage B gating (#42025)* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Builder signal (T2): v0., aiCluster context: 1 sources, engagement 0. Common terms: mailto, rocm, andreas, href. Bewertung: 6. Quelle: https://github.com/vllm-project/vllm/releases/tag/v0.21.1rc0"
+  },
+  {
+    "id": "4d8b71df1099",
+    "status": "approved",
+    "created_at": "2026-05-19T20:58:20.552272Z",
+    "score": 7,
+    "reason": "Builder signal (T2): agent, ai",
+    "proposed_post": "microsoft/ai-agents-for-beginners — 12 Lessons to Get Started Building AI Agents. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "microsoft/ai-agents-for-beginners — 12 Lessons to Get Started Building AI Agents",
+      "source": "GitHub Trending",
+      "link": "https://github.com/microsoft/ai-agents-for-beginners",
+      "source_tier": 2,
+      "engagement_score": 820.0,
+      "summary": "Trending on GitHub today: +820 stars. 12 Lessons to Get Started Building AI Agents\n[Cluster context: 1 sources, engagement 820, common terms: lessons, microsoft/ai-agents-for-beginners, github, trending, +820.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 820,
+        "common_terms": [
+          "lessons",
+          "microsoft/ai-agents-for-beginners",
+          "github",
+          "trending",
+          "+820",
+          "get",
+          "started",
+          "stars."
+        ],
+        "cluster_summary": "1 sources, engagement 820. Common terms: lessons, microsoft/ai-agents-for-beginners, github, trending. Lead: microsoft/ai-agents-for-beginners — 12 Lessons to Get Started Building AI Agents",
+        "alternative_titles": [],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Aus *GitHub Trending* ist ein starker Kandidat reingekommen: *microsoft/ai-agents-for-beginners — 12 Lessons to Get Started Building AI Agents*.\nRelevanz fuer Builder: Builder signal (T2): agent, ai\n_Score: 7_",
+    "chloe_note": "Hey, *microsoft/ai-agents-for-beginners — 12 Lessons to Get Started Building AI Agents* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Builder signal (T2): agent, aiCluster context: 1 sources, engagement 820. Common terms: lessons, microsoft/ai-agents-for-beginners, github, trending. Score aktuell: 7. Link: https://github.com/microsoft/ai-agents-for-beginners"
+  }
+]
