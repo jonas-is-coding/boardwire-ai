@@ -4,6 +4,7 @@ import json
 import logging
 import os
 import re
+import time
 
 import requests
 
@@ -11,6 +12,9 @@ from src.llm.gemini_budget import try_consume_gemini_budget
 
 _GEMINI_MODEL = "gemini-2.5-flash"
 _LOGGER = logging.getLogger("boardwire.persona_voice")
+_OPENROUTER_CALLS_USED = 0
+_OPENROUTER_EXHAUSTED = False
+_OPENROUTER_BUDGET = 0
 
 _SYSTEM_PROMPTS = {
     "claire": (
@@ -165,6 +169,24 @@ def _available_keys() -> list[str]:
     return keys
 
 
+def reset_openrouter_state() -> None:
+    global _OPENROUTER_CALLS_USED, _OPENROUTER_EXHAUSTED, _OPENROUTER_BUDGET
+    _OPENROUTER_CALLS_USED = 0
+    _OPENROUTER_EXHAUSTED = False
+    try:
+        _OPENROUTER_BUDGET = max(0, int(os.getenv("BOARDWIRE_OPENROUTER_CALL_BUDGET", "2").strip()))
+    except ValueError:
+        _OPENROUTER_BUDGET = 2
+
+
+def openrouter_stats() -> dict[str, int | bool]:
+    return {
+        "calls_used": int(_OPENROUTER_CALLS_USED),
+        "budget": int(_OPENROUTER_BUDGET),
+        "exhausted": bool(_OPENROUTER_EXHAUSTED),
+    }
+
+
 def _call_gemini(
     system: str,
     user: str,
@@ -291,9 +313,17 @@ def _call_openrouter(
     fallback_model: str | None = None,
     max_output_tokens: int = 420,
 ) -> str | None:
+    del fallback_model
+    global _OPENROUTER_CALLS_USED, _OPENROUTER_EXHAUSTED
     api_key = os.getenv("OPENROUTER_API_KEY", "").strip()
     if not api_key:
         _LOGGER.warning("OpenRouter API key missing: OPENROUTER_API_KEY")
+        return None
+    if _OPENROUTER_EXHAUSTED:
+        _LOGGER.warning("OpenRouter free provider exhausted; deferring generation")
+        return None
+    if _OPENROUTER_BUDGET <= 0:
+        _LOGGER.warning("OpenRouter budget exhausted; deferring generation")
         return None
 
     github_repo = os.getenv("GITHUB_REPOSITORY", "").strip()
@@ -317,6 +347,15 @@ def _call_openrouter(
     }
 
     def _request_once(payload: dict) -> tuple[int | None, str | None]:
+        global _OPENROUTER_CALLS_USED, _OPENROUTER_BUDGET, _OPENROUTER_EXHAUSTED
+        if _OPENROUTER_EXHAUSTED:
+            _LOGGER.warning("OpenRouter free provider exhausted; deferring generation")
+            return None, None
+        if _OPENROUTER_BUDGET <= 0:
+            _LOGGER.warning("OpenRouter budget exhausted; deferring generation")
+            return None, None
+        _OPENROUTER_BUDGET -= 1
+        _OPENROUTER_CALLS_USED += 1
         try:
             resp = requests.post(
                 "https://openrouter.ai/api/v1/chat/completions",
@@ -351,6 +390,9 @@ def _call_openrouter(
                 resp.status_code,
                 f" error={error_snippet}" if error_snippet else "",
             )
+            if resp.status_code == 429 and str(payload.get("model", "")).strip().lower().endswith(":free"):
+                _OPENROUTER_EXHAUSTED = True
+                _LOGGER.warning("OpenRouter free provider exhausted; deferring generation")
             return resp.status_code, None
 
         try:
@@ -370,21 +412,13 @@ def _call_openrouter(
     status, content = _request_once(body)
     if content:
         return content
-    if status not in {429, 503}:
+    if status in {400, 401, 403, 404, 429}:
         return None
-    if not fallback_model or fallback_model == model:
+    if status != 503:
         return None
-
-    _LOGGER.info(
-        "OpenRouter attempting fallback: primary_model=%s fallback_model=%s primary_status=%s",
-        model,
-        fallback_model,
-        status,
-    )
-    fallback_body = dict(body)
-    fallback_body["model"] = fallback_model
-    _, fallback_content = _request_once(fallback_body)
-    return fallback_content
+    time.sleep(0.35)
+    _, retry_content = _request_once(body)
+    return retry_content
 
 
 def _parse_json_loose(raw: str) -> dict | None:
@@ -518,25 +552,19 @@ def sarah_build_publish_package(
             os.getenv("BOARDWIRE_SARAH_MODEL", "deepseek/deepseek-v4-flash:free").strip()
             or "deepseek/deepseek-v4-flash:free"
         )
-        sarah_fallback = (
-            os.getenv("BOARDWIRE_SARAH_FALLBACK_MODEL", "minimax/minimax-m2.5:free").strip()
-            or "minimax/minimax-m2.5:free"
-        )
         sarah_emergency = os.getenv("BOARDWIRE_SARAH_EMERGENCY_MODEL", "").strip()
         raw = _call_openrouter(
             _SYSTEM_PROMPTS["sarah"],
             user,
             model=sarah_model,
-            fallback_model=sarah_fallback,
             max_output_tokens=420,
         )
-        if sarah_emergency and (not raw) and sarah_emergency not in {sarah_model, sarah_fallback}:
-            _LOGGER.info("OpenRouter Sarah primary+fallback failed, trying emergency model=%s", sarah_emergency)
+        if sarah_emergency and (not raw) and (not sarah_emergency.lower().endswith(":free")) and sarah_emergency != sarah_model:
+            _LOGGER.info("OpenRouter Sarah primary failed, trying non-free emergency model=%s", sarah_emergency)
             raw = _call_openrouter(
                 _SYSTEM_PROMPTS["sarah"],
                 user,
                 model=sarah_emergency,
-                fallback_model=None,
                 max_output_tokens=420,
             )
         if not raw and allow_gemini_fallback:

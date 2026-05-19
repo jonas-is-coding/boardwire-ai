@@ -1712,6 +1712,7 @@ def run(argv: list[str] | None = None) -> int:
         llm_mode=llm_enabled,
     )
     from src.notifications import persona_voice as _pv
+    _pv.reset_openrouter_state()
 
     for idx, candidate in enumerate(candidate_pipeline):
         item = candidate["feed_item"]
@@ -2097,6 +2098,17 @@ def run(argv: list[str] | None = None) -> int:
     JsonStore.save(SEEN_ITEMS_PATH, updated_seen)
 
     notify.run_finished(queued=saved_to_review_queue, rejected=quality_reject)
+    openrouter_runtime = _pv.openrouter_stats()
+    deferred_generation_unavailable_count = len(
+        [x for x in review_queue_data if x.get("status") == "deferred_generation_unavailable"]
+    )
+    logger.info(
+        "OpenRouter runtime: calls_used=%d budget=%d exhausted=%s deferred_generation_unavailable=%d",
+        int(openrouter_runtime.get("calls_used", 0)),
+        int(openrouter_runtime.get("budget", 0)),
+        str(bool(openrouter_runtime.get("exhausted", False))).lower(),
+        deferred_generation_unavailable_count,
+    )
     logger.info("Boardwire AI dry run complete")
     logger.info("Sources loaded: %d", len(sources) if not args.use_fixtures else 0)
     logger.info("Fetched items: %d", len(all_items))
