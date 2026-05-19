@@ -1261,6 +1261,11 @@ def _reset_fixture_state(logger) -> int:
 
 def run(argv: list[str] | None = None) -> int:
     logger = get_logger()
+    run_sha = os.getenv("GITHUB_SHA", "").strip()
+    if run_sha:
+        logger.info("Boardwire commit: %s", run_sha)
+    else:
+        logger.info("Boardwire commit: local")
     gemini_budget_total = configure_gemini_budget()
     logger.info("Gemini call budget per run: %d", gemini_budget_total)
     args = _build_parser().parse_args(argv)
