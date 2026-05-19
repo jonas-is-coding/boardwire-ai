@@ -1,1 +1,162 @@
-[]
+[
+  {
+    "id": "7c732e719d58",
+    "status": "approved",
+    "created_at": "2026-05-19T14:07:19.906045Z",
+    "score": 4,
+    "reason": "Builder signal (T2): ai",
+    "proposed_post": "tinyhumansai/openhuman — Your Personal AI super intelligence. Private, Simple and extremely powerful. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based fallback",
+    "source_item": {
+      "title": "tinyhumansai/openhuman — Your Personal AI super intelligence. Private, Simple and extremely powerful.",
+      "source": "GitHub Trending",
+      "link": "https://github.com/tinyhumansai/openhuman",
+      "source_tier": 2,
+      "engagement_score": 3991.0
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Chloe, das hier ist interessant für jeden, der mit lokalen AI-Modellen experimentiert. 'openhuman' ist ein Wrapper für LLMs, der sich auf Privacy und Einfachheit konzentriert.\n\nEntwickler können damit schnell eine lokale, private AI-Instanz aufsetzen, ohne sich um die Komplexität der Modellintegration kümmern zu müssen. Das ist super, um schnell Prototypen mit sensiblen Daten zu bauen oder einfach mal zu schauen, was man mit einem lokalen LLM so anstellen kann.",
+    "chloe_note": "Hey, *tinyhumansai/openhuman — Your Personal AI super intelligence. Private, Simple and extremely powerful.* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Builder signal (T2): ai. Score aktuell: 4. Link: https://github.com/tinyhumansai/openhuman"
+  },
+  {
+    "id": "7b929dff7d49",
+    "status": "approved",
+    "created_at": "2026-05-19T14:07:21.517918Z",
+    "score": 11,
+    "reason": "Builder signal (T2): claude code, claude , research",
+    "proposed_post": "Imbad0202/academic-research-skills — Academic Research Skills for Claude Code: research → write → review → revise → finalize. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based fallback",
+    "source_item": {
+      "title": "Imbad0202/academic-research-skills — Academic Research Skills for Claude Code: research → write → review → revise → finalize",
+      "source": "GitHub Trending",
+      "link": "https://github.com/Imbad0202/academic-research-skills",
+      "source_tier": 2,
+      "engagement_score": 3184.0
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Aus *GitHub Trending* ist ein starker Kandidat reingekommen: *Imbad0202/academic-research-skills — Academic Research Skills for Claude Code: research → write → review → revise → finalize*.\nRelevanz fuer Builder: Builder signal (T2): claude code, claude , research\n_Score: 11_",
+    "chloe_note": "*Imbad0202/academic-research-skills — Academic Research Skills for Claude Code: research → write → review → revise → finalize* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Builder signal (T2): claude code, claude , research. Bewertung: 11. Quelle: https://github.com/Imbad0202/academic-research-skills"
+  },
+  {
+    "id": "b03882acd46a",
+    "status": "approved",
+    "created_at": "2026-05-19T14:07:22.255238Z",
+    "score": 14,
+    "reason": "Builder signal (T2): llm, claude code, claude , ai",
+    "proposed_post": "multica-ai/andrej-karpathy-skills — A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based fallback",
+    "source_item": {
+      "title": "multica-ai/andrej-karpathy-skills — A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
+      "source": "GitHub Trending",
+      "link": "https://github.com/multica-ai/andrej-karpathy-skills",
+      "source_tier": 2,
+      "engagement_score": 2014.0
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Aus *GitHub Trending* ist ein starker Kandidat reingekommen: *multica-ai/andrej-karpathy-skills — A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.*.\nRelevanz fuer Builder: Builder signal (T2): llm, claude code, claude , ai\n_Score: 14_",
+    "chloe_note": "*multica-ai/andrej-karpathy-skills — A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Builder signal (T2): llm, claude code, claude , ai. Bewertung: 14. Quelle: https://github.com/multica-ai/andrej-karpathy-skills"
+  },
+  {
+    "id": "45dff5870b58",
+    "status": "approved",
+    "created_at": "2026-05-19T14:07:22.974048Z",
+    "score": 12,
+    "reason": "Builder signal (T2): claude code, claude , tool",
+    "proposed_post": "colbymchenry/codegraph — Pre-indexed code knowledge graph for Claude Code, Codex, Cursor, and OpenCode — fewer tokens, fewer tool calls, 100% local. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based fallback",
+    "source_item": {
+      "title": "colbymchenry/codegraph — Pre-indexed code knowledge graph for Claude Code, Codex, Cursor, and OpenCode — fewer tokens, fewer tool calls, 100% local",
+      "source": "GitHub Trending",
+      "link": "https://github.com/colbymchenry/codegraph",
+      "source_tier": 2,
+      "engagement_score": 1869.0
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Aus *GitHub Trending* ist ein starker Kandidat reingekommen: *colbymchenry/codegraph — Pre-indexed code knowledge graph for Claude Code, Codex, Cursor, and OpenCode — fewer tokens, fewer tool calls, 100% local*.\nRelevanz fuer Builder: Builder signal (T2): claude code, claude , tool\n_Score: 12_",
+    "chloe_note": "Kurzes Update: *colbymchenry/codegraph — Pre-indexed code knowledge graph for Claude Code, Codex, Cursor, and OpenCode — fewer tokens, fewer tool calls, 100% local* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Builder signal (T2): claude code, claude , tool. Ich habe es mit 12 Punkten bewertet. Hier der Link: https://github.com/colbymchenry/codegraph"
+  },
+  {
+    "id": "2bf07177ebd9",
+    "status": "approved",
+    "created_at": "2026-05-19T14:07:23.618317Z",
+    "score": 9,
+    "reason": "Builder signal (T2): agent, ai, benchmark",
+    "proposed_post": "rohitg00/agentmemory — #1 Persistent memory for AI coding agents based on real-world benchmarks. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "rohitg00/agentmemory — #1 Persistent memory for AI coding agents based on real-world benchmarks",
+      "source": "GitHub Trending",
+      "link": "https://github.com/rohitg00/agentmemory",
+      "source_tier": 2,
+      "engagement_score": 1626.0
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Aus *GitHub Trending* ist ein starker Kandidat reingekommen: *rohitg00/agentmemory — #1 Persistent memory for AI coding agents based on real-world benchmarks*.\nRelevanz fuer Builder: Builder signal (T2): agent, ai, benchmark\n_Score: 9_",
+    "chloe_note": "Hey, *rohitg00/agentmemory — #1 Persistent memory for AI coding agents based on real-world benchmarks* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Builder signal (T2): agent, ai, benchmark. Score aktuell: 9. Link: https://github.com/rohitg00/agentmemory"
+  },
+  {
+    "id": "e24afcd225ce",
+    "status": "approved",
+    "created_at": "2026-05-19T14:07:24.161453Z",
+    "score": 8,
+    "reason": "Builder signal (T2): agent, framework",
+    "proposed_post": "obra/superpowers — An agentic skills framework & software development methodology that works. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "obra/superpowers — An agentic skills framework & software development methodology that works.",
+      "source": "GitHub Trending",
+      "link": "https://github.com/obra/superpowers",
+      "source_tier": 2,
+      "engagement_score": 1620.0
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Aus *GitHub Trending* ist ein starker Kandidat reingekommen: *obra/superpowers — An agentic skills framework & software development methodology that works.*.\nRelevanz fuer Builder: Builder signal (T2): agent, framework\n_Score: 8_",
+    "chloe_note": "Kurzes Update: *obra/superpowers — An agentic skills framework & software development methodology that works.* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Builder signal (T2): agent, framework. Ich habe es mit 8 Punkten bewertet. Hier der Link: https://github.com/obra/superpowers"
+  },
+  {
+    "id": "cac05437e6c1",
+    "status": "approved",
+    "created_at": "2026-05-19T14:07:24.689843Z",
+    "score": 6,
+    "reason": "Builder signal (T2): agent",
+    "proposed_post": "HKUDS/CLI-Anything — \"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:  https://clianything.cc/. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "HKUDS/CLI-Anything — \"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:  https://clianything.cc/",
+      "source": "GitHub Trending",
+      "link": "https://github.com/HKUDS/CLI-Anything",
+      "source_tier": 2,
+      "engagement_score": 1027.0
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Aus *GitHub Trending* ist ein starker Kandidat reingekommen: *HKUDS/CLI-Anything — \"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:  https://clianything.cc/*.\nRelevanz fuer Builder: Builder signal (T2): agent\n_Score: 6_",
+    "chloe_note": "Kurzes Update: *HKUDS/CLI-Anything — \"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:  https://clianything.cc/* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Builder signal (T2): agent. Ich habe es mit 6 Punkten bewertet. Hier der Link: https://github.com/HKUDS/CLI-Anything"
+  },
+  {
+    "id": "3d8d9f369f24",
+    "status": "approved",
+    "created_at": "2026-05-19T14:07:25.256466Z",
+    "score": 7,
+    "reason": "Builder signal (T2): agent, ai",
+    "proposed_post": "msitarzewski/agency-agents — A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert w. Agent reliability in production is still the hard part — check whether the ev…",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "msitarzewski/agency-agents — A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert w",
+      "source": "GitHub Trending",
+      "link": "https://github.com/msitarzewski/agency-agents",
+      "source_tier": 2,
+      "engagement_score": 983.0
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Aus *GitHub Trending* ist ein starker Kandidat reingekommen: *msitarzewski/agency-agents — A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert w*.\nRelevanz fuer Builder: Builder signal (T2): agent, ai\n_Score: 7_",
+    "chloe_note": "Kurzes Update: *msitarzewski/agency-agents — A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert w* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Builder signal (T2): agent, ai. Ich habe es mit 7 Punkten bewertet. Hier der Link: https://github.com/msitarzewski/agency-agents"
+  }
+]
