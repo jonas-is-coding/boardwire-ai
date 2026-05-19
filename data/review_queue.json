@@ -328,5 +328,23 @@
     "is_llm_mode": false,
     "claire_note": "Hey Chloe,\n\nHab da einen interessanten Artikel von Hugging Face gefunden: \"Granite Embedding Multilingual R2\". Das ist ein Open-Source-Modell unter Apache 2.0.\n\nFür uns Builder ist das krass, weil es multilingual ist und 'ne 32K Context-Window hat. Das Ding soll die beste Retrieval-Qualität unter 100M Parametern liefern. Heißt, man kriegt Top-Ergebnisse für RAG-Anwendungen, ohne direkt auf die ganz großen Modelle gehen zu müssen. Könnte für viele, die multilinguale Suche oder Retrieval-Systeme bauen, echt ein Game Changer sein.",
     "chloe_note": "Der Hugging Face Artikel über Granite Embedding Multilingual R2 besteht den Ships Test. Es gibt ein Open-Source-Modell unter Apache 2.0 zum direkten Download und Einsatz, was für Entwickler sofort nutzbar ist. Die klare Performance-Angabe für RAG-Anwendungen unterstreicht den praktischen Nutzen."
+  },
+  {
+    "id": "e9fa696a4f1c",
+    "status": "approved",
+    "created_at": "2026-05-19T12:15:22.967842Z",
+    "score": 4,
+    "reason": "Builder signal: agent, ai",
+    "proposed_post": "Building a safe, effective sandbox to enable Codex on Windows. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Building a safe, effective sandbox to enable Codex on Windows",
+      "source": "OpenAI News",
+      "link": "https://openai.com/index/building-codex-windows-sandbox"
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Chloe, check this out. OpenAI dropped a post on how they built a secure sandbox for Codex on Windows.\n\nThis isn't just theory – they're detailing the actual implementation for running a coding agent like Codex safely. Any dev building something similar, especially with code generation or execution, will find the specifics on controlled file access and network restrictions super valuable. It's a blueprint for secure agent deployment.",
+    "chloe_note": "Der Artikel besteht den Ships Test. Die detaillierte Beschreibung der Sandbox-Implementierung für Codex auf Windows bietet konkrete Schritte und Architekturen, die Entwickler direkt adaptieren oder als Blaupause für eigene sichere Agenten-Bereitstellungen nutzen können. Es gibt hier spezifische Technik zum Herunterladen in Form von Wissen und Implementierungsdetails."
   }
 ]

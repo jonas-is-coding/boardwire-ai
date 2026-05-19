@@ -526,5 +526,60 @@
     "post_text": "v0.24.0-rc0. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-19T08:32:05.510317Z"
+  },
+  {
+    "title": "Helping ChatGPT better recognize context in sensitive conversations",
+    "link": "https://openai.com/index/chatgpt-recognize-context-in-sensitive-conversations",
+    "source": "OpenAI News",
+    "score": 0,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "Helping ChatGPT better recognize context in sensitive conversations. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-19T12:15:20.192704Z"
+  },
+  {
+    "title": "Unlocking asynchronicity in continuous batching",
+    "link": "https://huggingface.co/blog/continuous_async",
+    "source": "Hugging Face Blog",
+    "score": 0,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "Unlocking asynchronicity in continuous batching. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-19T12:15:20.192797Z"
+  },
+  {
+    "title": "v2.1.141",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.141",
+    "source": "Claude Code Releases",
+    "score": 34,
+    "should_post": true,
+    "reason": "Builder signal: available, api, agent, v2.",
+    "post_text": "v2.1.141. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-19T12:15:20.193327Z"
+  },
+  {
+    "title": "v0.102.0",
+    "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.102.0",
+    "source": "Anthropic Python SDK Releases",
+    "score": 16,
+    "should_post": true,
+    "reason": "Builder signal: api, agent, v0., changelog",
+    "post_text": "v0.102.0. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-19T12:15:21.912388Z"
+  },
+  {
+    "title": "Building a safe, effective sandbox to enable Codex on Windows",
+    "link": "https://openai.com/index/building-codex-windows-sandbox",
+    "source": "OpenAI News",
+    "score": 4,
+    "should_post": true,
+    "reason": "Builder signal: agent, ai",
+    "post_text": "Building a safe, effective sandbox to enable Codex on Windows. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-19T12:15:22.967842Z"
   }
 ]
