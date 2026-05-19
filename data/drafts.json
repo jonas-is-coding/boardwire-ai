@@ -416,5 +416,60 @@
     "post_text": "v0.14.22. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
     "source_angle": "Rule-based",
     "created_at": "2026-05-18T23:09:32.322186Z"
+  },
+  {
+    "title": "Sea's View on the Future of Agentic Software Development with Codex",
+    "link": "https://openai.com/index/sea-david-chen",
+    "source": "OpenAI News",
+    "score": 4,
+    "should_post": true,
+    "reason": "Builder signal: agent, ai",
+    "post_text": "Sea's View on the Future of Agentic Software Development with Codex. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-19T04:05:07.196169Z"
+  },
+  {
+    "title": "The last six months in LLMs in five minutes",
+    "link": "https://simonwillison.net/2026/May/19/5-minute-llms/#atom-entries",
+    "source": "Simon Willison",
+    "score": 38,
+    "should_post": true,
+    "reason": "Builder signal: release, released, available, open weight",
+    "post_text": "The last six months in LLMs in five minutes. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-19T04:05:08.520284Z"
+  },
+  {
+    "title": "v2.1.144",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.144",
+    "source": "Claude Code Releases",
+    "score": 32,
+    "should_post": true,
+    "reason": "Builder signal: api, agent, v2., mcp",
+    "post_text": "v2.1.144. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-19T04:05:09.644577Z"
+  },
+  {
+    "title": "v0.30.0-rc16",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.30.0-rc16",
+    "source": "Ollama Releases",
+    "score": 0,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "v0.30.0-rc16. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-19T04:05:10.622087Z"
+  },
+  {
+    "title": "v0.24.0-rc1",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.24.0-rc1",
+    "source": "Ollama Releases",
+    "score": 0,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "v0.24.0-rc1. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-19T04:05:10.622134Z"
   }
 ]
