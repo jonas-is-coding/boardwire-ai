@@ -1,1 +1,90 @@
-[]
+[
+  {
+    "title": "v0.103.0",
+    "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.103.0",
+    "source": "Anthropic Python SDK Releases",
+    "score": 10,
+    "should_post": true,
+    "reason": "Builder signal: v0., changelog, sdk",
+    "post_text": "v0.103.0. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based fallback",
+    "created_at": "2026-05-19T12:38:38.356961Z"
+  },
+  {
+    "title": "The last six months in LLMs in five minutes",
+    "link": "https://simonwillison.net/2026/May/19/5-minute-llms/#atom-entries",
+    "source": "Simon Willison",
+    "score": 38,
+    "should_post": true,
+    "reason": "Builder signal: release, released, available, open weight",
+    "post_text": "The last six months in LLMs in five minutes. Open weights mean you can inspect the model, run it locally, and fine-tune — worth evaluating against your current stack.",
+    "source_angle": "Rule-based fallback",
+    "created_at": "2026-05-19T12:38:39.870926Z"
+  },
+  {
+    "title": "v2.1.144",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.144",
+    "source": "Claude Code Releases",
+    "score": 90,
+    "should_post": true,
+    "reason": "New Claude Code CLI release with direct workflow improvements for developers managing background agent sessions.",
+    "post_text": "Claude Code v2.1.144 adds `/resume` support for background sessions. Developers can now easily track and manage long-running agent tasks initiated via `claude --bg` or agent view.",
+    "source_angle": "Claude Code CLI update: improved background session management",
+    "created_at": "2026-05-19T12:38:51.831937Z"
+  },
+  {
+    "title": "langchain-tests==1.1.8",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-tests%3D%3D1.1.8",
+    "source": "LangChain Releases",
+    "score": 11,
+    "should_post": true,
+    "reason": "Builder signal: release, v1., ai, model",
+    "post_text": "langchain-tests==1.1.8. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-19T12:38:52.735318Z"
+  },
+  {
+    "title": "v0.30.0",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.30.0-rc20",
+    "source": "Ollama Releases",
+    "score": 8,
+    "should_post": true,
+    "reason": "Builder signal: release, inference, v0., model",
+    "post_text": "v0.30.0. Inference and deployment improvements compound fast — check whether the numbers hold under sustained load, not just peak tests.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-19T12:38:53.932994Z"
+  },
+  {
+    "title": "Take your local GitHub sessions anywhere",
+    "link": "https://github.blog/news-insights/product-news/take-your-local-github-sessions-anywhere/",
+    "source": "GitHub Blog AI",
+    "score": 4,
+    "should_post": true,
+    "reason": "Builder signal: available, ai",
+    "post_text": "Take your local GitHub sessions anywhere. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-19T12:38:55.197576Z"
+  },
+  {
+    "title": "Fine-Tuning NVIDIA Cosmos Predict 2.5 with LoRA/DoRA for Robot Video Generation",
+    "link": "https://huggingface.co/blog/nvidia/cosmos-fine-tuning-for-robot-video-generation",
+    "source": "Hugging Face Blog",
+    "score": 3,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "Fine-Tuning NVIDIA Cosmos Predict 2.5 with LoRA/DoRA for Robot Video Generation. Robotics progress is meaningful when it holds outside curated demos — look for generalization results across environments.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-19T12:38:56.397988Z"
+  },
+  {
+    "title": "PaddleOCR 3.5: Running OCR and Document Parsing Tasks with a Transformers Backend",
+    "link": "https://huggingface.co/blog/PaddlePaddle/paddleocr-transformers",
+    "source": "Hugging Face Blog",
+    "score": 0,
+    "should_post": false,
+    "reason": "Weak builder signal — no clear release, tool, or actionable output",
+    "post_text": "PaddleOCR 3.5: Running OCR and Document Parsing Tasks with a Transformers Backend. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "source_angle": "Rule-based",
+    "created_at": "2026-05-19T12:38:56.398043Z"
+  }
+]
