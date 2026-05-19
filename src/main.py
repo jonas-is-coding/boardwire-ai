@@ -5,7 +5,7 @@ import hashlib
 import os
 import re
 from dataclasses import asdict
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 from dateutil import parser as date_parser
@@ -633,9 +633,22 @@ def _publish_approved(args, logger) -> int:
     posted_with_image_count = 0
     sarah_failures: list[dict] = []
 
+    # Queue policy:
+    # - Newest approved items go first (AI news ages out fast).
+    # - At most one successful publish per run (3 scheduled runs/day = 3 posts/day).
+    # - Try up to PUBLISH_TRY_LIMIT items if earlier ones fail Sarah / quality
+    #   so a single bad item doesn't block the whole slot.
+    # - Approved items older than APPROVED_MAX_AGE_HOURS are expired so the
+    #   queue doesn't accumulate a graveyard of items that newer posts always
+    #   jump in front of.
+    approved_max_age_hours = int(os.getenv("BOARDWIRE_APPROVED_MAX_AGE_HOURS", "48"))
+    publish_try_limit = int(os.getenv("BOARDWIRE_PUBLISH_TRY_LIMIT", "5"))
+    max_publish_per_run = int(os.getenv("BOARDWIRE_MAX_PUBLISH_PER_RUN", "1"))
+
+    candidates: list[dict] = []
+    expired_count = 0
     for item in queue:
         status = item.get("status", "pending_review")
-        rid = item.get("id")
         if status not in VALID_REVIEW_STATUSES:
             status = "pending_review"
             item["status"] = status
@@ -645,7 +658,41 @@ def _publish_approved(args, logger) -> int:
             continue
         if auto_approved_legacy:
             item["status"] = "approved"
-            logger.info("Auto-upgraded legacy pending_review item to approved: %s", rid)
+            logger.info("Auto-upgraded legacy pending_review item to approved: %s", item.get("id"))
+
+        created = _parse_dt(item.get("created_at"))
+        if now_dt - created > timedelta(hours=approved_max_age_hours):
+            item["status"] = "expired_deferred"
+            item["expired_at"] = now
+            logger.info(
+                "Expired stale approved item (>%dh old): %s",
+                approved_max_age_hours,
+                item.get("id"),
+            )
+            expired_count += 1
+            continue
+
+        candidates.append(item)
+
+    # Newest-first: sort by created_at descending.
+    candidates.sort(key=lambda it: _parse_dt(it.get("created_at")), reverse=True)
+    logger.info(
+        "Publish candidates: %d (expired %d, try limit %d, max per run %d)",
+        len(candidates),
+        expired_count,
+        publish_try_limit,
+        max_publish_per_run,
+    )
+
+    tried = 0
+    for item in candidates:
+        if published_count >= max_publish_per_run:
+            break
+        if tried >= publish_try_limit:
+            logger.info("Hit publish try limit (%d), stopping", publish_try_limit)
+            break
+        tried += 1
+        rid = item.get("id")
 
         source_item = item.get("source_item", {})
         source_link = source_item.get("link")

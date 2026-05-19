@@ -1,8 +1,11 @@
 name: Boardwire Collect
 
 on:
-  schedule:
-    - cron: "0 * * * *"
+  # Manual fallback only. The scheduled (LLM-evaluated) collection lives
+  # in collect-llm.yml and runs 3x daily — running this rule-based
+  # collector in parallel would pollute the review queue with weaker items
+  # that displace LLM-approved ones in the newest-first publish ordering.
+  workflow_dispatch:
 
 permissions:
   contents: write

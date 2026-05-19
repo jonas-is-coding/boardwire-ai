@@ -1,23 +1,28 @@
 name: Boardwire Collect with LLM
 
 on:
+  # 3x daily: 05:00, 11:00, 17:00 UTC
+  # = 06/12/18 CET (winter) or 07/13/19 CEST (summer)
+  # Publish workflow runs 1h later (06/12/18 UTC).
+  schedule:
+    - cron: "0 5,11,17 * * *"
   workflow_dispatch:
     inputs:
       limit:
         description: "How many newest unseen items to process"
-        required: true
+        required: false
         default: "8"
       max_llm_items:
         description: "Maximum items evaluated by LLM"
-        required: true
-        default: "3"
+        required: false
+        default: "4"
       max_posts_per_day:
-        description: "Maximum approved posts allowed per day"
-        required: true
-        default: "3"
+        description: "Maximum approved posts allowed per day (collection-side cap)"
+        required: false
+        default: "10"
       llm_provider:
         description: "LLM provider to use"
-        required: true
+        required: false
         default: "gemini"
         type: choice
         options:
@@ -32,15 +37,17 @@ jobs:
   collect_llm:
     runs-on: ubuntu-latest
     env:
-      BOARDWIRE_LLM_PROVIDER: ${{ inputs.llm_provider }}
-      BOARDWIRE_MAX_LLM_ITEMS: ${{ inputs.max_llm_items }}
-      BOARDWIRE_MAX_POSTS_PER_DAY: ${{ inputs.max_posts_per_day }}
+      BOARDWIRE_LLM_PROVIDER: ${{ inputs.llm_provider || 'gemini' }}
+      BOARDWIRE_MAX_LLM_ITEMS: ${{ inputs.max_llm_items || '4' }}
+      BOARDWIRE_MAX_POSTS_PER_DAY: ${{ inputs.max_posts_per_day || '10' }}
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       SLACK_WEBHOOK_URL_CLAIRE: ${{ secrets.SLACK_WEBHOOK_URL_CLAIRE }}
       SLACK_WEBHOOK_URL_CHLOE: ${{ secrets.SLACK_WEBHOOK_URL_CHLOE }}
       SLACK_WEBHOOK_URL_MADISON: ${{ secrets.SLACK_WEBHOOK_URL_MADISON }}
+      SLACK_WEBHOOK_URL_SARAH: ${{ secrets.SLACK_WEBHOOK_URL_SARAH }}
+      SLACK_WEBHOOK_URL_DEBUG: ${{ secrets.SLACK_WEBHOOK_URL_DEBUG }}
 
     steps:
       - name: Checkout
@@ -58,7 +65,18 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run LLM collection with review mode
-        run: python -m src.main --limit ${{ inputs.limit }} --llm-provider ${{ inputs.llm_provider }} --max-llm-items ${{ inputs.max_llm_items }} --max-posts-per-day ${{ inputs.max_posts_per_day }} --review --quality-report
+        env:
+          BW_LIMIT: ${{ inputs.limit || '8' }}
+          BW_MAX_LLM_ITEMS: ${{ inputs.max_llm_items || '4' }}
+          BW_MAX_POSTS_PER_DAY: ${{ inputs.max_posts_per_day || '10' }}
+          BW_LLM_PROVIDER: ${{ inputs.llm_provider || 'gemini' }}
+        run: |
+          python -m src.main \
+            --limit "$BW_LIMIT" \
+            --llm-provider "$BW_LLM_PROVIDER" \
+            --max-llm-items "$BW_MAX_LLM_ITEMS" \
+            --max-posts-per-day "$BW_MAX_POSTS_PER_DAY" \
+            --review --quality-report
 
       - name: Commit updated data files
         run: |

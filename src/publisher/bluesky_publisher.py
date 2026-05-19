@@ -21,7 +21,7 @@ def _compose_text_with_link(post: str, source_link: str | None) -> tuple[str, li
 
     url = source_link.strip()
     separator = "\n\n"
-    suffix = f"{separator}{url}"
+    suffix = f"{separator}🔗 {url}"
     budget = 300 - len(suffix.encode("utf-8"))
     if budget < 0:
         return url[:300], []
