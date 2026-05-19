@@ -1154,6 +1154,26 @@ def run(argv: list[str] | None = None) -> int:
         ignore_daily_cap = True
         logger.info("Daily cap ignored for this run")
 
+    # Early daily-cap short-circuit: avoid expensive clustering/LLM/evaluation work
+    # when today's publish budget is already exhausted.
+    if not ignore_daily_cap:
+        today = datetime.now(timezone.utc).date()
+        existing_today = 0
+        for q in review_queue_data:
+            status = q.get("status")
+            if status not in {"pending_review", "approved", "published_dry_run"}:
+                continue
+            dt = _parse_dt(q.get("created_at"))
+            if dt.date() == today:
+                existing_today += 1
+        if existing_today >= max_posts_per_day:
+            logger.info(
+                "Daily post cap already reached: existing_today=%d cap=%d. Skipping collect-to-publish pipeline.",
+                existing_today,
+                max_posts_per_day,
+            )
+            return 0
+
     if args.use_fixtures:
         all_items = _load_fixture_items()
         source_report = {}
