@@ -106,44 +106,52 @@ def _same_project_or_repo(a: FeedItem, b: FeedItem) -> bool:
     return False
 
 
-def _project_markers(item: FeedItem) -> set[str]:
+def _extract_version(text: str) -> str | None:
+    m = re.search(r"\bv\d+(?:\.\d+){1,3}(?:rc\d+)?\b", normalize_text(text))
+    if not m:
+        return None
+    return m.group(0)
+
+
+def _release_source(item: FeedItem) -> str:
+    src = (item.source or "").lower()
+    if "release" in src or "github" in src:
+        return src
+    title = (item.title or "").lower()
+    if "release" in title:
+        return src or "release"
+    return ""
+
+
+def _product_markers(item: FeedItem) -> set[str]:
+    text = normalize_text(f"{item.title} {item.summary}")
     markers: set[str] = set()
-    repo = _extract_repo_id(item.link)
-    if repo:
-        markers.add(f"{repo[0]}/{repo[1]}")
-        markers.add(repo[1])
-    text = f"{item.title} {item.summary}"
-    for tok in _tokens(text):
-        if tok in _GENERIC_AI_TERMS:
-            continue
-        # Prefer concrete identifiers over plain words.
-        if any(c.isdigit() for c in tok) or "-" in tok:
-            markers.add(tok)
+    # explicit known multi-token markers
+    explicit = ("claude code", "project genie", "gemini 3.5", "gemini 2.5", "gpt 4", "gpt 5")
+    for e in explicit:
+        if e in text:
+            markers.add(e)
+    # token pairs with at least one numeric/tokenized identifier
+    toks = [t for t in _tokens(text) if t not in _GENERIC_AI_TERMS]
+    for i in range(len(toks) - 1):
+        pair = f"{toks[i]} {toks[i+1]}"
+        if any(c.isdigit() for c in pair) or "-" in pair:
+            markers.add(pair)
     return markers
-
-
-def _keyword_overlap(a: FeedItem, b: FeedItem) -> bool:
-    if _same_project_or_repo(a, b):
-        return True
-    strong_inter = _strong_tokens(f"{a.title} {a.summary}") & _strong_tokens(f"{b.title} {b.summary}")
-    if len(strong_inter) >= 4:
-        return True
-    if _project_markers(a) & _project_markers(b):
-        return True
-    return False
 
 
 def _edge_decision(a: FeedItem, b: FeedItem, sim_score: float) -> tuple[bool, str, list[str]]:
     strong_inter = sorted(_strong_tokens(f"{a.title} {a.summary}") & _strong_tokens(f"{b.title} {b.summary}"))
     if _same_project_or_repo(a, b):
         return True, "repo_match", strong_inter[:8]
-    if len(strong_inter) >= 4:
-        return True, "token_overlap", strong_inter[:8]
-    if _project_markers(a) & _project_markers(b):
-        return True, "project_name", strong_inter[:8]
-    # Cosine alone should never force a cluster; require at least the stricter overlap.
-    if sim_score > _CLUSTER_THRESHOLD and len(strong_inter) >= 4:
-        return True, "cosine", strong_inter[:8]
+    ver_a = _extract_version(f"{a.title} {a.summary}")
+    ver_b = _extract_version(f"{b.title} {b.summary}")
+    if ver_a and ver_b and ver_a == ver_b and _release_source(a) and _release_source(a) == _release_source(b):
+        return True, "release_version_match", strong_inter[:8]
+    product_overlap = _product_markers(a) & _product_markers(b)
+    # product/model match needs cosine support; cosine never clusters alone.
+    if product_overlap and sim_score > _CLUSTER_THRESHOLD:
+        return True, "product_name_match", strong_inter[:8]
     return False, "", strong_inter[:8]
 
 
@@ -266,13 +274,13 @@ def cluster_feed_items(items: list[FeedItem], logger=None) -> list[NewsCluster]:
         for j in range(i + 1, n):
             sim_score = float(sim[i, j])
             should_link, reason, shared_tokens = _edge_decision(items[i], items[j], sim_score)
-            if should_link or _keyword_overlap(items[i], items[j]):
+            if should_link:
                 edge = {
                     "a_title": items[i].title[:140],
                     "b_title": items[j].title[:140],
                     "sim_score": round(sim_score, 4),
                     "shared_tokens": shared_tokens,
-                    "reason": reason or "keyword_overlap",
+                    "reason": reason,
                 }
                 union(i, j, edge)
 
@@ -308,6 +316,14 @@ def cluster_feed_items(items: list[FeedItem], logger=None) -> list[NewsCluster]:
         if blocked_union_count > 0:
             logger.warning("Cluster union blocked: would exceed max size count=%d", blocked_union_count)
         for cluster in clusters:
+            if len(cluster.items) > 10:
+                logger.warning(
+                    "Large cluster warning: id=%s size=%d main_title=%s sources=%s",
+                    cluster.id,
+                    len(cluster.items),
+                    cluster.main_item.title[:120],
+                    ", ".join(cluster.sources[:6]),
+                )
             if len(cluster.items) > OVERCLUSTER_MAX_SIZE:
                 root_idx = find(items.index(cluster.main_item))
                 logger.warning("Overcluster detected: id=%s size=%d", cluster.id, len(cluster.items))
