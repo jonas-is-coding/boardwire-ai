@@ -42,6 +42,8 @@ jobs:
       BOARDWIRE_MAX_POSTS_PER_DAY: ${{ inputs.max_posts_per_day || '10' }}
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
+      GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
+      GEMINI_API_KEY_4: ${{ secrets.GEMINI_API_KEY_4 }}
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       SLACK_WEBHOOK_URL_CLAIRE: ${{ secrets.SLACK_WEBHOOK_URL_CLAIRE }}
       SLACK_WEBHOOK_URL_CHLOE: ${{ secrets.SLACK_WEBHOOK_URL_CHLOE }}

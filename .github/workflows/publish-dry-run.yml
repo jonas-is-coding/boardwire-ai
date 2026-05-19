@@ -12,6 +12,8 @@ jobs:
     env:
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
+      GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
+      GEMINI_API_KEY_4: ${{ secrets.GEMINI_API_KEY_4 }}
       SLACK_WEBHOOK_URL_CLAIRE: ${{ secrets.SLACK_WEBHOOK_URL_CLAIRE }}
       SLACK_WEBHOOK_URL_CHLOE: ${{ secrets.SLACK_WEBHOOK_URL_CHLOE }}
       SLACK_WEBHOOK_URL_MADISON: ${{ secrets.SLACK_WEBHOOK_URL_MADISON }}
