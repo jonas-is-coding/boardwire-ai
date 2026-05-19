@@ -73,6 +73,9 @@ _LOW_SIGNAL_PENALTY = {
 }
 
 
+_TIER_BONUS = {1: 3, 2: 1, 3: 0}
+
+
 def evaluate_item(item: FeedItem, personas: list[Persona]) -> EvaluationResult:
     _ = personas
     haystack = f"{item.title} {item.summary}".lower()
@@ -94,11 +97,24 @@ def evaluate_item(item: FeedItem, personas: list[Persona]) -> EvaluationResult:
         if phrase in haystack:
             score += penalty
 
+    tier_bonus = _TIER_BONUS.get(item.source_tier, 0)
+    score += tier_bonus
+
+    if item.engagement_score >= 100:
+        score += 2
+    elif item.engagement_score >= 25:
+        score += 1
+
     score = max(0, score)
     should_post = score >= 4
 
     if should_post:
-        reason = f"Builder signal: {', '.join(matched[:4])}" if matched else "General AI relevance"
+        tier_note = f" (T{item.source_tier})" if tier_bonus else ""
+        reason = (
+            f"Builder signal{tier_note}: {', '.join(matched[:4])}"
+            if matched
+            else f"Source signal (Tier {item.source_tier})"
+        )
     else:
         reason = "Weak builder signal — no clear release, tool, or actionable output"
 

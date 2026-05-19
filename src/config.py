@@ -17,6 +17,8 @@ SEEN_ITEMS_PATH = DATA_DIR / "seen_items.json"
 DRAFTS_PATH = DATA_DIR / "drafts.json"
 REVIEW_QUEUE_PATH = DATA_DIR / "review_queue.json"
 PUBLISHED_POSTS_PATH = DATA_DIR / "published_posts.json"
+EMBEDDINGS_CACHE_PATH = DATA_DIR / "embeddings.json"
+CLUSTERS_DEBUG_PATH = DATA_DIR / "clusters.json"
 SAMPLE_ITEMS_PATH = FIXTURES_DIR / "sample_items.json"
 REVIEW_REPORT_PATH = REPORTS_DIR / "review_queue.md"
 

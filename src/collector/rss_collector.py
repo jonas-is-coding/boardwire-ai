@@ -96,6 +96,8 @@ def fetch_from_source(source: Source, logger: Logger | None = None) -> tuple[lis
                 link=link,
                 summary=summary,
                 published_at=_parse_published(entry),
+                source_tier=source.tier,
+                engagement_score=0.0,
             )
         )
 

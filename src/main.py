@@ -11,14 +11,21 @@ from pathlib import Path
 from dateutil import parser as date_parser
 
 from src.board.evaluator import evaluate_item
-from src.board.llm_evaluator import evaluate_with_optional_llm
+from src.board.llm_evaluator import evaluate_with_optional_llm, rank_candidates_with_llm
 from src.board.personas import load_personas
+from src.board.embeddings import EmbeddingService
+from src.board.clustering import cluster_items
 from src.collector.rss_collector import fetch_all
+from src.collector.hn_collector import fetch_hackernews
+from src.collector.reddit_collector import fetch_reddit
+from src.collector.github_trending_collector import fetch_github_trending
 from src.cards.card_data import from_review_item
 from src.cards.renderer import render_card_png
 from src.config import (
     CARDS_DIR,
+    CLUSTERS_DEBUG_PATH,
     DRAFTS_PATH,
+    EMBEDDINGS_CACHE_PATH,
     MAX_ITEMS_PER_RUN,
     PERSONAS_PATH,
     PUBLISHED_POSTS_PATH,
@@ -72,6 +79,136 @@ def _compose_sarah_post(package: dict[str, str | list[str]]) -> str:
     return post[:280]
 
 
+def _env_flag(name: str, default: bool = True) -> bool:
+    raw = os.getenv(name)
+    if raw is None:
+        return default
+    return raw.strip().lower() in {"1", "true", "yes", "on"}
+
+
+def _collect_from_aggregators(
+    existing_items: list[FeedItem],
+    source_report: dict[str, dict[str, object]],
+    logger,
+) -> list[FeedItem]:
+    seen_links: set[str] = {item.link for item in existing_items}
+    merged = list(existing_items)
+
+    if _env_flag("BOARDWIRE_ENABLE_HN", True):
+        hn_items, hn_report = fetch_hackernews(logger=logger)
+        source_report["HackerNews"] = hn_report
+        for item in hn_items:
+            if item.link in seen_links:
+                continue
+            seen_links.add(item.link)
+            merged.append(item)
+
+    if _env_flag("BOARDWIRE_ENABLE_REDDIT", True):
+        reddit_items, reddit_report = fetch_reddit(logger=logger)
+        source_report.update(reddit_report)
+        for item in reddit_items:
+            if item.link in seen_links:
+                continue
+            seen_links.add(item.link)
+            merged.append(item)
+
+    if _env_flag("BOARDWIRE_ENABLE_GITHUB_TRENDING", True):
+        gh_items, gh_report = fetch_github_trending(logger=logger)
+        source_report["GitHub Trending"] = gh_report
+        for item in gh_items:
+            if item.link in seen_links:
+                continue
+            seen_links.add(item.link)
+            merged.append(item)
+
+    return merged
+
+
+def _cluster_and_rank(items: list[FeedItem], logger) -> list[FeedItem]:
+    """Cluster items, return representatives sorted by story_score.
+
+    Each representative's summary is augmented with cluster corroboration so the
+    LLM can see how many sources covered the story.
+    """
+    if not items:
+        return []
+    try:
+        svc = EmbeddingService(cache_path=EMBEDDINGS_CACHE_PATH, logger=logger)
+        embeddings = svc.embed_items(items)
+        # Prune cache: keep only links present in the current run plus recent past.
+        keep = {item.link for item in items}
+        svc.prune_cache(keep | set(svc._cache.keys()))
+    except Exception as exc:  # noqa: BLE001
+        logger.warning("Embedding failed, skipping clustering: %s", exc)
+        return sorted(items, key=lambda x: x.published_at, reverse=True)
+
+    clusters = cluster_items(items, embeddings, logger=logger)
+    if not clusters:
+        return sorted(items, key=lambda x: x.published_at, reverse=True)
+
+    debug_dump = []
+    augmented: list[FeedItem] = []
+
+    for cluster in clusters:
+        rep = cluster.representative
+        if rep is None:
+            continue
+
+        if len(cluster.items) > 1:
+            others = [i for i in cluster.items if i.link != rep.link]
+            others.sort(key=lambda i: i.engagement_score, reverse=True)
+            covered_by = [
+                f"{o.source} (engagement {int(o.engagement_score)})"
+                if o.engagement_score > 0
+                else o.source
+                for o in others[:5]
+            ]
+            corroboration = (
+                f"\n[Cross-source signal: also covered by {len(others)} other "
+                f"source(s) — {', '.join(covered_by)}. Story-score {cluster.story_score:.1f}.]"
+            )
+            new_summary = (rep.summary or "").rstrip() + corroboration
+        else:
+            new_summary = rep.summary
+
+        augmented_item = FeedItem(
+            source=rep.source,
+            title=rep.title,
+            link=rep.link,
+            summary=new_summary,
+            published_at=rep.published_at,
+            source_tier=rep.source_tier,
+            engagement_score=rep.engagement_score,
+        )
+        augmented.append(augmented_item)
+
+        debug_dump.append({
+            "cluster_id": cluster.cluster_id,
+            "story_score": round(cluster.story_score, 3),
+            "size": len(cluster.items),
+            "rep_link": rep.link,
+            "rep_source": rep.source,
+            "rep_title": rep.title,
+            "members": [
+                {
+                    "source": i.source,
+                    "title": i.title,
+                    "link": i.link,
+                    "tier": i.source_tier,
+                    "engagement": i.engagement_score,
+                }
+                for i in cluster.items
+            ],
+        })
+
+    try:
+        JsonStore.save(CLUSTERS_DEBUG_PATH, debug_dump)
+    except Exception as exc:  # noqa: BLE001
+        logger.warning("Clusters debug dump failed: %s", exc)
+
+    return augmented
+
+
 def _load_sources() -> list[Source]:
     raw = JsonStore.load(SOURCES_PATH, default=[])
     return [
@@ -80,6 +217,7 @@ def _load_sources() -> list[Source]:
             url=s["url"],
             enabled=s.get("enabled", True),
             fallback_urls=s.get("fallback_urls"),
+            tier=int(s.get("tier", 3)),
         )
         for s in raw
     ]
@@ -113,6 +251,8 @@ def _load_fixture_items() -> list[FeedItem]:
                 link=link,
                 summary=str(entry.get("summary", "")),
                 published_at=_parse_dt(entry.get("published_at")),
+                source_tier=int(entry.get("source_tier", 3)),
+                engagement_score=float(entry.get("engagement_score", 0.0)),
             )
         )
     return items
@@ -172,6 +312,8 @@ def _queue_from_drafts(drafts: list[DraftPost]) -> list[dict]:
                     "title": draft.title,
                     "source": draft.source,
                     "link": draft.link,
+                    "source_tier": draft.source_tier,
+                    "engagement_score": draft.engagement_score,
                 },
                 "card_path": None,
             }
@@ -1009,17 +1151,19 @@ def run(argv: list[str] | None = None) -> int:
         logger.info("Loaded fixture items: %d", len(all_items))
     else:
         all_items, source_report = fetch_all(sources, logger=logger)
+        all_items = _collect_from_aggregators(all_items, source_report, logger)
+        logger.info("Total items after aggregator merge: %d", len(all_items))
 
     if args.debug_sources and not args.use_fixtures:
         logger.info("Source debug summary")
         for source_name, details in source_report.items():
-            count = details["count"]
-            error = details["error"]
-            newest_titles = details["newest_titles"]
+            count = details.get("count", 0)
+            error = details.get("error")
+            sample_titles = details.get("newest_titles") or details.get("top_titles") or []
             if error:
                 logger.warning("Failed source %s: %s", source_name, error)
             logger.info("%s -> %d items", source_name, count)
-            for title in newest_titles:
+            for title in sample_titles:
                 logger.info("  - %s", title)
         logger.info("Total unique fetched items: %d", len(all_items))
         return 0
@@ -1052,6 +1196,8 @@ def run(argv: list[str] | None = None) -> int:
                     link=link,
                     summary=str(item.get("reason", "")),
                     published_at=_parse_dt(item.get("created_at")),
+                    source_tier=int(src.get("source_tier", 3)),
+                    engagement_score=float(src.get("engagement_score", 0.0)),
                 ),
                 "score": int(item.get("score") or 0),
                 "is_deferred": True,
@@ -1064,7 +1210,32 @@ def run(argv: list[str] | None = None) -> int:
 
     deferred_links = {d["feed_item"].link for d in deferred_candidates}
     unseen_items = [item for item in all_items if item.link not in seen_links and item.link not in deferred_links]
-    fresh_candidates = sorted(unseen_items, key=lambda x: x.published_at, reverse=True)
+
+    if _env_flag("BOARDWIRE_ENABLE_CLUSTERING", True) and not args.use_fixtures:
+        fresh_candidates = _cluster_and_rank(unseen_items, logger)
+        logger.info("Clustering active: %d items -> %d cluster reps", len(unseen_items), len(fresh_candidates))
+    else:
+        fresh_candidates = sorted(unseen_items, key=lambda x: x.published_at, reverse=True)
+
+    # Batch LLM pre-ranking: take top RANKING_POOL_SIZE story-scored reps,
+    # have the LLM pick the best `--limit` from that pool in ONE call.
+    batch_ranking_active = (
+        _env_flag("BOARDWIRE_ENABLE_BATCH_RANKING", True)
+        and not args.use_fixtures
+        and not args.no_llm
+        and llm_config.provider == "gemini"
+        and bool(llm_config.gemini_api_key)
+    )
+    if batch_ranking_active and fresh_candidates:
+        try:
+            pool_size = int(os.getenv("BOARDWIRE_RANKING_POOL_SIZE", "25"))
+        except ValueError:
+            pool_size = 25
+        pool_size = max(args.limit, min(pool_size, len(fresh_candidates)))
+        ranking_pool = fresh_candidates[:pool_size]
+        picked = rank_candidates_with_llm(ranking_pool, args.limit, llm_config, logger)
+        if picked:
+            fresh_candidates = picked + [f for f in fresh_candidates if f.link not in {p.link for p in picked}]
 
     candidate_pipeline: list[dict] = []
     for d in deferred_candidates:
@@ -1149,6 +1320,8 @@ def run(argv: list[str] | None = None) -> int:
             reason=evaluation.reason,
             post_text=post_text,
             source_angle=source_angle,
+            source_tier=item.source_tier,
+            engagement_score=item.engagement_score,
         )
         drafts_data.append(asdict(draft))
         created_drafts.append(draft)

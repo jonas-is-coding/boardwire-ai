@@ -3,103 +3,123 @@
     "name": "OpenAI News",
     "url": "https://openai.com/news/rss.xml",
     "fallback_urls": ["https://openai.com/blog/rss.xml"],
-    "enabled": true
+    "enabled": true,
+    "tier": 1
   },
   {
     "name": "Hugging Face Blog",
     "url": "https://huggingface.co/blog/feed.xml",
-    "enabled": true
+    "enabled": true,
+    "tier": 2
   },
   {
     "name": "Google DeepMind Blog",
     "url": "https://deepmind.google/blog/rss.xml",
     "fallback_urls": ["https://blog.google/technology/ai/rss/"],
-    "enabled": true
+    "enabled": true,
+    "tier": 1
   },
   {
     "name": "GitHub Blog AI",
     "url": "https://github.blog/ai-and-ml/feed/",
     "fallback_urls": ["https://github.blog/engineering/feed/"],
-    "enabled": true
+    "enabled": true,
+    "tier": 2
   },
   {
     "name": "Simon Willison",
     "url": "https://simonwillison.net/atom/entries/",
-    "enabled": true
+    "enabled": true,
+    "tier": 2
   },
   {
     "name": "Import AI (Jack Clark)",
     "url": "https://jack-clark.net/feed/",
-    "enabled": true
+    "enabled": true,
+    "tier": 2
   },
   {
     "name": "The Gradient",
     "url": "https://thegradient.pub/rss/",
-    "enabled": true
+    "enabled": true,
+    "tier": 3
   },
   {
     "name": "SemiAnalysis",
     "url": "https://www.semianalysis.com/feed",
-    "enabled": true
+    "enabled": true,
+    "tier": 2
   },
   {
     "name": "Nathan Lambert (Interconnects)",
     "url": "https://www.interconnects.ai/feed",
-    "enabled": true
+    "enabled": true,
+    "tier": 2
   },
   {
     "name": "Sebastian Raschka (Ahead of AI)",
     "url": "https://magazine.sebastianraschka.com/feed",
-    "enabled": true
+    "enabled": true,
+    "tier": 2
   },
   {
     "name": "Claude Code Releases",
     "url": "https://github.com/anthropics/claude-code/releases.atom",
-    "enabled": true
+    "enabled": true,
+    "tier": 1
   },
   {
     "name": "Anthropic Python SDK Releases",
     "url": "https://github.com/anthropics/anthropic-sdk-python/releases.atom",
-    "enabled": true
+    "enabled": true,
+    "tier": 1
   },
   {
     "name": "MCP Servers Releases",
     "url": "https://github.com/modelcontextprotocol/servers/releases.atom",
-    "enabled": true
+    "enabled": true,
+    "tier": 2
   },
   {
     "name": "MCP Spec Releases",
     "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/releases.atom",
-    "enabled": true
+    "enabled": true,
+    "tier": 1
   },
   {
     "name": "Ollama Releases",
     "url": "https://github.com/ollama/ollama/releases.atom",
-    "enabled": true
+    "enabled": true,
+    "tier": 2
   },
   {
     "name": "vLLM Releases",
     "url": "https://github.com/vllm-project/vllm/releases.atom",
-    "enabled": true
+    "enabled": true,
+    "tier": 2
   },
   {
     "name": "LlamaIndex Releases",
     "url": "https://github.com/run-llama/llama_index/releases.atom",
-    "enabled": true
+    "enabled": true,
+    "tier": 2
   },
   {
     "name": "LangChain Releases",
     "url": "https://github.com/langchain-ai/langchain/releases.atom",
-    "enabled": true
+    "enabled": true,
+    "tier": 2
   },
   {
     "name": "arXiv cs.AI",
     "url": "https://export.arxiv.org/rss/cs.AI",
-    "enabled": false
+    "enabled": false,
+    "tier": 3
   },
   {
     "name": "arXiv cs.LG",
     "url": "https://export.arxiv.org/rss/cs.LG",
-    "enabled": false
+    "enabled": false,
+    "tier": 3
   }
 ]

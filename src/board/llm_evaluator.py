@@ -9,6 +9,8 @@ from src.llm.schemas import LLMBoardResult
 from src.models import EvaluationResult, FeedItem, Persona
 from src.writer.post_writer import generate_post
 
+from logging import Logger as _Logger
+
 
 @dataclass(slots=True)
 class Decision:
@@ -67,6 +69,60 @@ def evaluate_with_optional_llm(
         return _fallback(item, personas, f"Unsupported LLM provider: {llm_config.provider}", logger)
     else:
         return _fallback(item, personas, f"Unsupported LLM provider: {llm_config.provider}", logger)
+
+
+def rank_candidates_with_llm(
+    items: list[FeedItem],
+    top_k: int,
+    llm_config: LLMConfig,
+    logger: _Logger,
+) -> list[FeedItem] | None:
+    """Pre-filter a candidate pool down to top_k via a single LLM ranking call.
+
+    Returns None on any failure so callers can fall back to the story_score order.
+    Only Gemini is implemented (OpenAI uses the existing per-item flow).
+    """
+    if not items or top_k <= 0:
+        return None
+    if llm_config.provider != "gemini":
+        return None
+    if not llm_config.gemini_api_key:
+        logger.warning("Batch ranking skipped: GEMINI_API_KEY missing")
+        return None
+
+    client = GeminiClient(api_key=llm_config.gemini_api_key, model=llm_config.gemini_model)
+    try:
+        ranked = client.rank_candidates(items, top_k)
+    except LLMError as exc:
+        logger.warning("Batch ranking failed: %s", exc)
+        return None
+    except Exception as exc:  # noqa: BLE001
+        logger.warning("Batch ranking unexpected error: %s", exc)
+        return None
+
+    picked: list[FeedItem] = []
+    seen_ids: set[int] = set()
+    for entry in ranked:
+        if not isinstance(entry, dict):
+            continue
+        raw_id = entry.get("id")
+        try:
+            idx = int(str(raw_id))
+        except (TypeError, ValueError):
+            continue
+        if idx < 0 or idx >= len(items) or idx in seen_ids:
+            continue
+        seen_ids.add(idx)
+        picked.append(items[idx])
+        if len(picked) >= top_k:
+            break
+
+    if not picked:
+        logger.warning("Batch ranking returned no valid items, falling back")
+        return None
+
+    logger.info("Batch ranking: %d candidates -> %d picked by LLM", len(items), len(picked))
+    return picked
 
 
 def _from_llm_result(result: LLMBoardResult) -> Decision:

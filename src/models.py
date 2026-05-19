@@ -10,6 +10,7 @@ class Source:
     url: str
     enabled: bool = True
     fallback_urls: list[str] | None = None
+    tier: int = 3
 
 
 @dataclass(slots=True)
@@ -19,6 +20,8 @@ class FeedItem:
     link: str
     summary: str
     published_at: datetime
+    source_tier: int = 3
+    engagement_score: float = 0.0
 
 
 @dataclass(slots=True)
@@ -44,4 +47,6 @@ class DraftPost:
     reason: str
     post_text: str
     source_angle: str = ""
+    source_tier: int = 3
+    engagement_score: float = 0.0
     created_at: str = field(default_factory=lambda: datetime.utcnow().isoformat() + "Z")

@@ -6,7 +6,12 @@ from dataclasses import dataclass
 
 import requests
 
-from src.llm.prompts import SYSTEM_PROMPT, build_user_prompt
+from src.llm.prompts import (
+    RANKING_SYSTEM_PROMPT,
+    SYSTEM_PROMPT,
+    build_ranking_user_prompt,
+    build_user_prompt,
+)
 from src.llm.schemas import LLMBoardResult, validate_llm_result
 from src.models import FeedItem
 
@@ -73,6 +78,41 @@ class GeminiClient:
     def __init__(self, api_key: str, model: str) -> None:
         self.api_key = api_key
         self.model = model
+
+    def rank_candidates(self, items: list[FeedItem], top_k: int) -> list[dict]:
+        prompt = f"{RANKING_SYSTEM_PROMPT}\n\n{build_ranking_user_prompt(items, top_k)}"
+        body = {
+            "contents": [{"parts": [{"text": prompt}]}],
+            "generationConfig": {
+                "responseMimeType": "application/json",
+                "temperature": 0.1,
+            },
+        }
+        url = (
+            f"https://generativelanguage.googleapis.com/v1beta/models/"
+            f"{self.model}:generateContent?key={self.api_key}"
+        )
+        response = requests.post(url, json=body, timeout=30)
+        if response.status_code >= 400:
+            raise LLMError(f"Gemini ranking error {response.status_code}: {response.text[:220]}")
+        data = response.json()
+        candidates = data.get("candidates", [])
+        if not candidates:
+            raise LLMError("Gemini ranking returned no candidates")
+        parts = candidates[0].get("content", {}).get("parts", [])
+        if not parts:
+            raise LLMError("Gemini ranking returned empty content")
+        text_output = str(parts[0].get("text", "")).strip()
+        if not text_output:
+            raise LLMError("Gemini ranking returned empty text")
+        try:
+            parsed = json.loads(text_output)
+        except json.JSONDecodeError as exc:
+            raise LLMError(f"Invalid JSON from Gemini ranking: {exc}") from exc
+        ranked = parsed.get("ranked")
+        if not isinstance(ranked, list):
+            raise LLMError("Gemini ranking JSON missing 'ranked' array")
+        return ranked
 
     def evaluate_item(self, item: FeedItem) -> LLMBoardResult:
         prompt = f"{SYSTEM_PROMPT}\n\n{build_user_prompt(item)}"
