@@ -72,126 +72,6 @@ def _compose_sarah_post(package: dict[str, str | list[str]]) -> str:
     return post[:280]
 
 
-_HASHTAG_KEYWORDS: list[tuple[str, str]] = [
-    ("anthropic", "#Anthropic"),
-    ("claude", "#Claude"),
-    ("openai", "#OpenAI"),
-    ("gpt-", "#GPT"),
-    ("chatgpt", "#ChatGPT"),
-    ("gemini", "#Gemini"),
-    ("gemma", "#Gemma"),
-    ("google deepmind", "#DeepMind"),
-    ("deepmind", "#DeepMind"),
-    ("google", "#Google"),
-    ("meta", "#Meta"),
-    ("llama", "#Llama"),
-    ("mistral", "#Mistral"),
-    ("deepseek", "#DeepSeek"),
-    ("kimi", "#Kimi"),
-    ("qwen", "#Qwen"),
-    ("hugging face", "#HuggingFace"),
-    ("huggingface", "#HuggingFace"),
-    ("arxiv", "#Research"),
-    ("paper", "#Research"),
-    ("agent", "#AIAgents"),
-    ("eval", "#AIEvals"),
-    ("benchmark", "#AIEvals"),
-    ("inference", "#Inference"),
-    ("open-weight", "#OpenWeight"),
-    ("open weight", "#OpenWeight"),
-    ("open-source", "#OpenSource"),
-    ("open source", "#OpenSource"),
-    ("attention", "#LLM"),
-    ("transformer", "#LLM"),
-    ("rag", "#RAG"),
-    ("fine-tun", "#FineTuning"),
-    ("finetun", "#FineTuning"),
-    ("multimodal", "#Multimodal"),
-    ("vision", "#VLM"),
-    ("robot", "#Robotics"),
-    ("code", "#DevTools"),
-]
-
-
-def _derive_hashtags(source: str, title: str, subtitle: str = "") -> list[str]:
-    haystack = f"{title} {subtitle} {source}".lower()
-    tags: list[str] = []
-    seen: set[str] = set()
-    for keyword, tag in _HASHTAG_KEYWORDS:
-        if keyword in haystack and tag not in seen:
-            tags.append(tag)
-            seen.add(tag)
-            if len(tags) >= 3:
-                return tags
-    for default in ("#AI", "#LLM"):
-        if len(tags) >= 2:
-            break
-        if default not in seen:
-            tags.append(default)
-            seen.add(default)
-    return tags[:3]
-
-
-def _build_fallback_sarah_package(item: dict) -> dict[str, str | list[str]]:
-    source_item = item.get("source_item", {}) or {}
-    raw_title = str(source_item.get("title", "")).strip()
-    raw_source = str(source_item.get("source", "")).strip()
-    summary = str(source_item.get("summary", "")).strip()
-    reason = str(item.get("reason", "")).strip()
-    base_post = str(item.get("proposed_post", "")).strip()
-
-    title_clean = re.sub(r"\s+", " ", raw_title).strip()
-    if len(title_clean) <= 69:
-        title = title_clean
-    else:
-        cut = title_clean[:69].rsplit(" ", 1)[0].rstrip(",;:- ")
-        trailing_stops = {"and", "or", "but", "of", "the", "with", "in", "on", "for", "to", "a", "an", "&"}
-        words = cut.split(" ")
-        while words and words[-1].lower().rstrip(",;:") in trailing_stops:
-            words.pop()
-        cut = " ".join(words).rstrip(",;:- ")
-        title = cut or title_clean[:69]
-    if title and not title.endswith((".", "!", "?")):
-        title = f"{title}."
-
-    body = summary or base_post or reason
-    body = re.sub(r"(?i)matched keywords?:[^.]*\.?\s*", "", body)
-    body = re.sub(r"(?i)^why it matters:\s*", "", body)
-    body = re.sub(r"\s+", " ", body).strip()
-
-    title_norm = title_clean.lower().rstrip(".!?")
-
-    def _is_title_echo(text: str) -> bool:
-        norm = text.lower().rstrip(".!?")
-        if not norm or not title_norm:
-            return False
-        return norm == title_norm or norm.startswith(title_norm) or title_norm.startswith(norm)
-
-    sentences = [s.strip() for s in re.split(r"(?<=[.!?])\s+", body) if s.strip()]
-    non_echo = [s for s in sentences if not _is_title_echo(s)]
-
-    if non_echo:
-        subtitle = non_echo[0][:100].strip()
-        description_src = " ".join(non_echo[1:]).strip() or non_echo[0]
-    elif sentences:
-        subtitle = sentences[0][:100].strip()
-        description_src = " ".join(sentences[1:]).strip() or sentences[0]
-    else:
-        subtitle = body[:100].strip()
-        description_src = body
-
-    description = description_src[:140].strip() or subtitle
-
-    hashtags = _derive_hashtags(raw_source, raw_title, subtitle)
-
-    return {
-        "title": title or raw_title[:70],
-        "subtitle": subtitle,
-        "description": description,
-        "hashtags": hashtags,
-    }
-
-
 def _load_sources() -> list[Source]:
     raw = JsonStore.load(SOURCES_PATH, default=[])
     return [
@@ -751,6 +631,7 @@ def _publish_approved(args, logger) -> int:
     quality_rejected_count = 0
     blocked_missing_image_count = 0
     posted_with_image_count = 0
+    sarah_failures: list[dict] = []
 
     for item in queue:
         status = item.get("status", "pending_review")
@@ -786,8 +667,16 @@ def _publish_approved(args, logger) -> int:
             summary=source_summary,
         )
         if not sarah_package:
-            logger.info("Sarah LLM unavailable or rejected, using deterministic fallback: %s", rid)
-            sarah_package = _build_fallback_sarah_package(item)
+            logger.warning("Sarah LLM unavailable or rejected — skipping publish (will retry next run): %s", rid)
+            sarah_failures.append(
+                {
+                    "rid": rid,
+                    "title": source_item.get("title", "Untitled"),
+                    "source": source_item.get("source", "Unknown Source"),
+                    "link": source_link or "",
+                }
+            )
+            continue
 
         item["sarah_package"] = sarah_package
         post_text = _compose_sarah_post(sarah_package)
@@ -902,6 +791,12 @@ def _publish_approved(args, logger) -> int:
     logger.info("Publish blocked (missing image): %d", blocked_missing_image_count)
     logger.info("Posted with image: %d", posted_with_image_count)
     logger.info("Quality rejected before publish: %d", quality_rejected_count)
+    if sarah_failures:
+        logger.warning("Sarah LLM failures (skipped, retry next run): %d", len(sarah_failures))
+        try:
+            notify.sarah_failed_batch(sarah_failures)
+        except Exception as exc:  # pragma: no cover - defensive notification
+            logger.warning("Sarah-failure notification could not be sent: %s", exc)
     return 0
 
 

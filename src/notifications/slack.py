@@ -199,3 +199,28 @@ def sarah_packaged(title: str, subtitle: str, description: str, hashtags: list[s
         f"Hashtags: {tag_line}"
     )
     _post("sarah", text)
+
+
+def sarah_failed_batch(failures: list[dict]) -> None:
+    """Send a single consolidated notification for items where Sarah LLM
+    failed to produce a valid publish package. Items stay in the queue
+    for a retry on the next run."""
+    if not failures:
+        return
+    lines = [f":rotating_light: Sarah LLM hat {len(failures)} Post(s) nicht gepackt — nicht veröffentlicht, Retry beim nächsten Run."]
+    for f in failures[:15]:
+        title = str(f.get("title", "Untitled")).strip()
+        source = str(f.get("source", "Unknown")).strip()
+        link = str(f.get("link", "")).strip()
+        rid = str(f.get("rid", "")).strip()
+        line = f"• *{title}* ({source})"
+        if link:
+            line += f" — {link}"
+        if rid:
+            line += f" — id `{rid}`"
+        lines.append(line)
+    if len(failures) > 15:
+        lines.append(f"… und {len(failures) - 15} weitere.")
+    text = "\n".join(lines)
+    _post("sarah", text)
+    _post_debug(text)
