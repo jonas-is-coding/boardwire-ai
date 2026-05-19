@@ -1164,7 +1164,7 @@ def run(argv: list[str] | None = None) -> int:
             if status not in {"pending_review", "approved", "published_dry_run"}:
                 continue
             dt = _parse_dt(q.get("created_at"))
-            if dt.date() == today:
+            if dt and dt.date() == today:
                 existing_today += 1
         if existing_today >= max_posts_per_day:
             logger.info(
@@ -1432,7 +1432,7 @@ def run(argv: list[str] | None = None) -> int:
             if status not in {"pending_review", "approved", "published_dry_run"}:
                 continue
             dt = _parse_dt(q.get("created_at"))
-            if dt.date() == today:
+            if dt and dt.date() == today:
                 existing_today += 1
         remaining_today = max(0, max_posts_per_day - existing_today)
 
