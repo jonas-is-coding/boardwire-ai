@@ -234,5 +234,27 @@
     "is_llm_mode": false,
     "claire_note": "Aus *LlamaIndex Releases* ist ein starker Kandidat reingekommen: *v0.14.22*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 60_",
     "chloe_note": "*v0.14.22* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: llama-index-callbacks-opik, large, let, llama-index-callbacks-arize-phoenix. Bewertung: 60. Quelle: https://github.com/run-llama/llama_index/releases/tag/v0.14.22"
+  },
+  {
+    "id": "884cabe9ca63",
+    "status": "deferred_generation_unavailable",
+    "created_at": "2026-05-19T21:51:57.038837Z",
+    "score": 65,
+    "reason": "deferred: generation provider unavailable",
+    "proposed_post": "",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "v0.101.0",
+      "source": "Anthropic Python SDK Releases",
+      "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.101.0",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 65
+    },
+    "deferred_at": "2026-05-19T21:51:57.038801Z",
+    "defer_count": 1,
+    "original_score": 65,
+    "original_reason": "deferred: generation provider unavailable",
+    "card_path": null
   }
 ]
