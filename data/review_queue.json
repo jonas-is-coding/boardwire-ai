@@ -1,0 +1,112 @@
+[
+  {
+    "id": "e07dc997682e",
+    "status": "approved",
+    "created_at": "2026-05-19T21:29:22.964314Z",
+    "score": 90,
+    "reason": "New Gemini 3.5 model released via API, specifically for agentic workflows. Passes Ships Test.",
+    "proposed_post": "Google DeepMind released Gemini 3.5, a new model designed for complex agentic workflows. Builders can now leverage enhanced capabilities to develop more sophisticated AI agents.",
+    "source_angle": "DeepMind releases Gemini 3.5 for agentic workflow development",
+    "source_item": {
+      "title": "Gemini 3.5: frontier intelligence with action",
+      "source": "Google DeepMind Blog",
+      "link": "https://deepmind.google/blog/gemini-3-5-frontier-intelligence-with-action/",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 0,
+      "summary": "Gemini 3.5 is built to help you execute complex, agentic workflows.\n[Cluster context: 4 sources, engagement 7215, common terms: original, submitted, hacker, comments, points.]",
+      "cluster_context": {
+        "source_count": 4,
+        "sources": [
+          "Google DeepMind Blog",
+          "HackerNews",
+          "Hugging Face Blog",
+          "Import AI (Jack Clark)"
+        ],
+        "total_engagement_score": 7215,
+        "common_terms": [
+          "original",
+          "submitted",
+          "hacker",
+          "comments",
+          "points",
+          "3.5",
+          "gemini",
+          "intelligence"
+        ],
+        "cluster_summary": "4 sources, engagement 7215. Common terms: original, submitted, hacker, comments. Lead: PaddleOCR 3.5: Running OCR and Document Parsing Tasks with a Transformers Backend",
+        "alternative_titles": [
+          "PaddleOCR 3.5: Running OCR and Document Parsing Tasks with a Transformers Backend",
+          "Import AI 457: AI stuxnet; cursed Muon optimizer; and positive alignment",
+          "Elon Musk has lost his lawsuit against Sam Altman and OpenAI",
+          "I’ve joined Anthropic",
+          "The last six months in LLMs in five minutes",
+          "Anthropic acquires Stainless"
+        ],
+        "cluster_score": 95
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "claire_note": "Chloe, das ist ein Volltreffer. Gemini 3.5 ist nicht nur ein weiteres Modell, sondern auf \"agentic workflows\" ausgelegt. Entwickler können damit komplexe Aufgaben direkt im Modell ausführen, was enorme Möglichkeiten für autonome Agenten und Automatisierungen eröffnet. Der Fokus liegt klar auf der Ausführung von Aktionen – das ist ein Game Changer für alle, die über reine Textgenerierung hinausdenken.",
+    "chloe_note": "Hey, *Gemini 3.5: frontier intelligence with action* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New Gemini 3.5 model released via API, specifically for agentic workflows. Passes Ships Test.Cluster context: 4 sources, engagement 7215. Common terms: original, submitted, hacker, comments. Score aktuell: 90. Link: https://deepmind.google/blog/gemini-3-5-frontier-intelligence-with-action/"
+  },
+  {
+    "id": "b42fe1886bab",
+    "status": "approved",
+    "created_at": "2026-05-19T21:29:35.330272Z",
+    "score": 80,
+    "reason": "local newsworthiness fallback",
+    "proposed_post": "Claude Code v2.1.144 adds /resume for background sessions.\n\nBackground sessions show elapsed duration on completion. /model flag changes active model.\n\n#Claude #Anthropic #CLI",
+    "source_angle": "Local high-score + Sarah/OpenRouter fallback",
+    "source_item": {
+      "title": "v2.1.144",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.144",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 80,
+      "summary": "<h2>What's changed</h2>\n<ul>\n<li>Added <code>/resume</code> support for background sessions — sessions started via <code>claude --bg</code> or agent view now appear alongside interactive ones, marked with <code>bg</code></li>\n<li>Added elapsed duration to background subagent completion notifications (e.g. \"Agent completed · 3h 2m 5s\")</li>\n<li>The <code>/plugin</code> browse and discover panes now show when a plugin was last updated</li>\n<li><code>/model</code> now changes the model for the current session only; press <code>d</code> in the model picker to set a default for new sessions</li>\n<li>Renamed \"extra usage\" to \"usage credits\" across CLI copy; <code>/extra-usage</code> is now <code>/usage-credits</code> (old name still works)</li>\n<li>Fixed startup hanging up to 75s when <code>api.anthropic.com</code> is unreachable (captive portal, firewall, VPN issues) — side-channel API calls now time out after 15s</li>\n<li>Fixed garbled terminal output after a missed window-resize event (e.g. dragging a VS Code split-pane divider) — now self-heals on the next frame instead of requiring Ctrl+L</li>\n<li>Fixed progressive terminal display corruption (stale/garbled glyphs) that could appear in very long sessions and only cleared on terminal resize or restart</li>\n<li>Reduced terminal rendering glitches in VS Code by reducing spinner animation color count</li>\n<li>Fixed macOS background sessions crashing with \"exit 1 before init\" when the project lives under a Full Disk Access-protected folder (regression in 2.1.143)</li>\n<li>Fixed an unrecoverable conversation when reading a file whose image extension doesn't match its contents (e.g. HTML saved as .png) — now falls back to text</li>\n<li>Fewer spurious tool errors during search: <code>head</code>/<code>tail</code> file views now satisfy the read-before-edit check, and a \"no matches\" result (exit code 1) from <code>egrep</code>, <code>fgrep</code>, <code>git grep</code>, or <code>git diff</code> is no longer reported as a command failure</li>\n<li>Fixed <code>/branch</code> failing with \"No conversation to branch\" after entering a worktree or in some background sessions</li>\n<li>Fixed pressing Escape in the AskUserQuestion notes field aborting the turn instead of returning to answer selection</li>\n<li>Fixed model selection not applying when changed via the IDE model picker or <code>applyFlagSettings</code> after startup</li>\n<li>Resumed sessions now keep the model they were using instead of picking up another session's <code>/model</code> choice</li>\n<li>Fixed Bedrock and Vertex users unable to select \"Opus (1M context)\" from the <code>/model</code> picker (regression in v2.1.129)</li>\n<li>Fixed remote-session login failing with \"Can't access this organization\" for users with <code>forceLoginMethod</code> and <code>forceLoginOrgUUID</code> set</li>\n<li>Fixed MCP servers with paginated <code>tools/list</code> responses only returning the first page, silently dropping tools</li>\n<li>Fixed MCP images with unsupported MIME types (e.g. SVG) breaking the conversation — now saved to disk and referenced in the tool result</li>\n<li>Fixed file descriptor exhaustion when a build runs inside a skill directory — non-<code>.md</code> files no longer trigger skill reloads</li>\n<li>Fixed session title being generated from plugin monitor output instead of the user's first prompt</li>\n<li>Fixed Skill tool failing with permission error in headless mode (regression in v2.1.141)</li>\n<li>Fixed plugins enabled in your own settings showing \"not cached\" errors after first load on a fresh machine; plugins enabled only by a project's <code>.claude/settings.json</code> now show an actionable <code>claude plugin install</code> hint</li>\n<li>Fixed <code>claude mcp list</code> silently reporting no servers when <code>.mcp.json</code> can't be parsed (e.g. using VS Code's <code>\"servers\"</code> key instead of <code>\"mcpServers\"</code>) — now shows configuration errors</li>\n<li>Fixed background side-queries on custom <code>ANTHROPIC_BASE_URL</code> setups and Bedrock Mantle not using Haiku — now falls back correctly when a first-party API key is configured or no Haiku model is set</li>\n<li>Fixed scrolling in attached background sessions on Windows — PgUp/PgDn, mouse wheel, and Ctrl+O transcript navigation now work</li>\n<li>Fixed a crash when closing the terminal while attached to a background session</li>\n<li>Fixed on Windows, pressing ← in <code>claude agents</code> leaving the list unresponsive to keyboard input</li>\n<li>Fixed ghost characters at the left edge when switching panes in Agent View on Windows Terminal with CJK content</li>\n<li><code>/bg</code> and <code>←</code>-detach now preserve directories added via <code>/add-dir</code></li>\n<li>Fixed Edit/Write refusing with \"background session hasn't isolated its changes yet\" right after detaching a session that was already editing in place</li>\n<li>Fixed <code>claude respawn &lt;id&gt;</code> on a stopped background session showing \"stopped\" instead of running</li>\n<li>Fixed <code>/resume</code> picker not showing sessions forked from a background session</li>\n<li>Fixed opening a session from <code>claude agents</code> or running <code>claude logs &lt;id&gt;</code> hanging when the background service is unresponsive — now times out after 10s with a recovery hint</li>\n<li>Fixed background Bash tasks spawned by subagents staying \"Running\" in SDK task panels after the process exits</li>\n<li>Fixed completed or stopped background sessions briefly failing to wake being permanently marked as a startup crash</li>\n<li>Fixed markdown links in <code>claude agents</code> attached sessions rendering as plain text instead of clickable hyperlinks</li>\n<li>Fixed custom <code>spinnerVerbs</code> applying to the post-turn duration message — past-tense built-ins like \"Worked for 5s\" are restored there</li>\n<li><code>claude agents</code> / <code>--bg</code> rejection messages now name the specific gate (non-TTY, env var, or setting) instead of a generic message</li>\n<li><code>claude --bg --name &lt;label&gt;</code> now echoes the name in the post-spawn confirmation</li>\n<li><code>claude agents</code>: renaming a background session with Ctrl+R now updates the attached session's banner immediately</li>\n<li>Background session worktree isolation guard now applies for non-git VCS users with <code>WorktreeCreate</code> hooks configured</li>\n<li>Plugin marketplace add/update now respects <code>CLAUDE_CODE_PLUGIN_PREFER_HTTPS</code></li>\n<li><code>/plugin</code> now returns to the Installed list after enabling, disabling, or uninstalling a plugin</li>\n<li><code>/doctor</code> now shows an exec-form example when a command hook is missing the <code>command</code> field</li>\n<li>Skill-listing truncation is no longer shown as a startup notification — run <code>/doctor</code> for the full breakdown</li>\n<li>Improved recovery from rare pre-response stream stalls — now retries streaming once instead of falling back to a slower non-streaming request</li>\n<li>Improved SDK/headless MCP startup: pre-wait now overlaps startup instead of blocking before the first turn (up to 2s faster with slow MCP servers)</li>\n<li>The post-survey follow-up hint now appears after every non-dismiss survey response with context-aware copy, making it easier to share more detail via /feedback.</li>\n</ul>\n[Cluster context: 10 sources, engagement 90, common terms: use, tool, mode, can, work.]",
+      "cluster_context": {
+        "source_count": 10,
+        "sources": [
+          "Claude Code Releases",
+          "Google DeepMind Blog",
+          "HackerNews",
+          "Hugging Face Blog",
+          "LangChain Releases",
+          "Nathan Lambert (Interconnects)",
+          "Ollama Releases",
+          "OpenAI News",
+          "Simon Willison",
+          "vLLM Releases"
+        ],
+        "total_engagement_score": 90,
+        "common_terms": [
+          "use",
+          "tool",
+          "mode",
+          "can",
+          "work",
+          "what",
+          "name",
+          "when"
+        ],
+        "cluster_summary": "10 sources, engagement 90. Common terms: use, tool, mode, can. Lead: Advancing content provenance for a safer, more transparent AI ecosystem",
+        "alternative_titles": [
+          "Advancing content provenance for a safer, more transparent AI ecosystem",
+          "OpenAI and Malta partner to bring ChatGPT Plus to all citizens",
+          "How sales teams use Codex",
+          "How business operations teams use Codex",
+          "A new personal finance experience in ChatGPT",
+          "How data science teams use Codex"
+        ],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Aus *Claude Code Releases* ist ein starker Kandidat reingekommen: *v2.1.144*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 80_",
+    "chloe_note": "*v2.1.144* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch local newsworthiness fallbackCluster context: 10 sources, engagement 90. Common terms: use, tool, mode, can. Bewertung: 80. Quelle: https://github.com/anthropics/claude-code/releases/tag/v2.1.144"
+  }
+]
