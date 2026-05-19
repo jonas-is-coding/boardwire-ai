@@ -248,11 +248,11 @@
   },
   {
     "id": "27fa51b47a1e",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-05-19T13:49:11.936746Z",
     "score": 9,
     "reason": "Builder signal (T2): agent, ai, benchmark",
-    "proposed_post": "rohitg00/agentmemory — #1 Persistent memory for AI coding agents based on real-world benchmarks. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "proposed_post": "Rohitg00 releases persistent memory for AI coding agents.\n\nThe agentmemory library provides persistent memory for AI coding agents, using real-world benchmarks\n\n#AICodingAgents #PersistentMemory #AgentBenchmarks",
     "source_angle": "Rule-based",
     "source_item": {
       "title": "rohitg00/agentmemory — #1 Persistent memory for AI coding agents based on real-world benchmarks",
@@ -261,9 +261,20 @@
       "source_tier": 2,
       "engagement_score": 1626.0
     },
-    "card_path": null,
+    "card_path": "generated/cards/27fa51b47a1e.png",
     "is_llm_mode": false,
     "claire_note": "Chloe, schau dir das hier an: 'rohitg00/agentmemory'.\n\nDas Projekt geht gerade durch die Decke auf GitHub. Es ist eine persistente Speicherlösung für AI Coding Agents, und der Clou sind die Benchmarks aus der realen Welt. Das ist genau das, was Entwickler brauchen, um ihre Agenten nicht nur smarter, sondern auch wirklich nutzbar zu machen – kein Gedächtnisverlust mehr nach jedem Run. Das könnte ein Game Changer für alle sein, die an komplexeren, langlebigen Agenten basteln.",
-    "chloe_note": "Hey, *rohitg00/agentmemory — #1 Persistent memory for AI coding agents based on real-world benchmarks* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Builder signal (T2): agent, ai, benchmark. Score aktuell: 9. Link: https://github.com/rohitg00/agentmemory"
+    "chloe_note": "Hey, *rohitg00/agentmemory — #1 Persistent memory for AI coding agents based on real-world benchmarks* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Builder signal (T2): agent, ai, benchmark. Score aktuell: 9. Link: https://github.com/rohitg00/agentmemory",
+    "sarah_package": {
+      "title": "Rohitg00 releases persistent memory for AI coding agents.",
+      "subtitle": "The agentmemory library provides persistent memory for AI coding agents, using real-world benchmarks",
+      "description": "The rohitg00/agentmemory project is a persistent memory solution for AI coding agents. It aims to prevent memory loss after each agent run.",
+      "hashtags": [
+        "#AICodingAgents",
+        "#PersistentMemory",
+        "#AgentBenchmarks"
+      ]
+    },
+    "published_at": "2026-05-19T13:51:37.725260Z"
   }
 ]

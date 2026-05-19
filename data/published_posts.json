@@ -11,5 +11,18 @@
     "card_path": "generated/cards/3e37c127d272.png",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mm7hd64vrj2g",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mm7hd64vrj2g"
+  },
+  {
+    "id": "27fa51b47a1e",
+    "published_at": "2026-05-19T13:51:37.725260Z",
+    "platform": "bluesky",
+    "post": "Rohitg00 releases persistent memory for AI coding agents.\n\nThe agentmemory library provides persistent memory for AI coding agents, using real-world benchmarks\n\n#AICodingAgents #PersistentMemory #AgentBenchmarks",
+    "source_link": "https://github.com/rohitg00/agentmemory",
+    "source_title": "rohitg00/agentmemory — #1 Persistent memory for AI coding agents based on real-world benchmarks",
+    "score": 9,
+    "reason": "Builder signal (T2): agent, ai, benchmark",
+    "card_path": "generated/cards/27fa51b47a1e.png",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mm7jxdozw22u",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mm7jxdozw22u"
   }
 ]
