@@ -68,6 +68,7 @@ jobs:
 
       - name: Run LLM collection with review mode
         env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           BW_LIMIT: ${{ inputs.limit || '8' }}
           BW_MAX_LLM_ITEMS: ${{ inputs.max_llm_items || '4' }}
           BW_MAX_POSTS_PER_DAY: ${{ inputs.max_posts_per_day || '10' }}
