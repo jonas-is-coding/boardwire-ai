@@ -73,20 +73,31 @@
   },
   {
     "id": "3e37c127d272",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-05-19T13:03:21.515915Z",
     "score": 4,
     "reason": "Builder signal: available, ai",
-    "proposed_post": "Take your local GitHub sessions anywhere. The signal to watch: whether this changes measurable capability, reliability, or cost in real AI workloads.",
+    "proposed_post": "GitHub Copilot remote control reaches general availability.\n\nDevelopers can now start Copilot sessions locally and continue them on github.com or mobile devices.\n\n#GitHubCopilot #DeveloperTools #RemoteWork",
     "source_angle": "Rule-based",
     "source_item": {
       "title": "Take your local GitHub sessions anywhere",
       "source": "GitHub Blog AI",
       "link": "https://github.blog/news-insights/product-news/take-your-local-github-sessions-anywhere/"
     },
-    "card_path": null,
+    "card_path": "generated/cards/3e37c127d272.png",
     "is_llm_mode": false,
     "claire_note": "Okay, das hier ist interessant für unsere Devs. Remote-Control für GitHub Copilot Sessions ist jetzt GA.\n\nChloe, das bedeutet, Entwickler können eine Copilot-Session lokal starten, dann aber über github.com oder mobile weiterarbeiten. Das ist massiv für den Workflow, wenn du mal eben vom Laptop weg musst, aber trotzdem schnell was nachschauen oder ändern willst. Echte Flexibilität für Builds, egal wo du bist.",
-    "chloe_note": "Genehmigt. Der Ships Test ist bestanden, da die Remote-Control-Funktion für GitHub Copilot Sessions als GA verfügbar ist. Entwickler können dies sofort nutzen, um ihren Workflow geräteübergreifend zu erweitern."
+    "chloe_note": "Genehmigt. Der Ships Test ist bestanden, da die Remote-Control-Funktion für GitHub Copilot Sessions als GA verfügbar ist. Entwickler können dies sofort nutzen, um ihren Workflow geräteübergreifend zu erweitern.",
+    "sarah_package": {
+      "title": "GitHub Copilot remote control reaches general availability.",
+      "subtitle": "Developers can now start Copilot sessions locally and continue them on github.com or mobile devices.",
+      "description": "This feature allows users to seamlessly transfer active Copilot sessions across desktop, web, and mobile platforms, enhancing workflow flexi",
+      "hashtags": [
+        "#GitHubCopilot",
+        "#DeveloperTools",
+        "#RemoteWork"
+      ]
+    },
+    "published_at": "2026-05-19T13:04:32.079260Z"
   }
 ]

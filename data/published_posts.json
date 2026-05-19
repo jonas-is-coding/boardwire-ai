@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "id": "3e37c127d272",
+    "published_at": "2026-05-19T13:04:32.079260Z",
+    "platform": "bluesky",
+    "post": "GitHub Copilot remote control reaches general availability.\n\nDevelopers can now start Copilot sessions locally and continue them on github.com or mobile devices.\n\n#GitHubCopilot #DeveloperTools #RemoteWork",
+    "source_link": "https://github.blog/news-insights/product-news/take-your-local-github-sessions-anywhere/",
+    "source_title": "Take your local GitHub sessions anywhere",
+    "score": 4,
+    "reason": "Builder signal: available, ai",
+    "card_path": "generated/cards/3e37c127d272.png",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mm7hd64vrj2g",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mm7hd64vrj2g"
+  }
+]
