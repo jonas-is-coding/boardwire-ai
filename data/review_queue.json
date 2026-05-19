@@ -316,14 +316,14 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-05-19T19:11:43.512796Z",
-    "defer_count": 1,
+    "deferred_at": "2026-05-19T20:35:07.055888Z",
+    "defer_count": 2,
     "original_score": 95,
     "original_reason": "New open-source model (Gemma 3n) fully available for immediate use by builders, confirmed by trusted source."
   },
   {
     "id": "a70e81cd912e",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-05-19T19:11:33.233835Z",
     "score": 5,
     "reason": "Builder signal (T2): release",
@@ -358,7 +358,8 @@
     "deferred_at": "2026-05-19T19:11:43.523996Z",
     "defer_count": 1,
     "original_score": 5,
-    "original_reason": "Builder signal (T2): release"
+    "original_reason": "Builder signal (T2): release",
+    "rejected_at": "2026-05-19T20:35:07.092864Z"
   },
   {
     "id": "0a044e3261cb",
@@ -476,8 +477,8 @@
     },
     "card_path": null,
     "is_llm_mode": false,
-    "deferred_at": "2026-05-19T19:11:43.569401Z",
-    "defer_count": 1,
+    "deferred_at": "2026-05-19T20:35:07.083103Z",
+    "defer_count": 2,
     "original_score": 7,
     "original_reason": "Builder signal (T2): open-source, dataset"
   },
@@ -604,5 +605,123 @@
       ]
     },
     "published_at": "2026-05-19T19:51:30.928382Z"
+  },
+  {
+    "id": "5b7cc7873a24",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-19T20:35:04.199250Z",
+    "score": 6,
+    "reason": "Builder signal (T2): api, dataset",
+    "proposed_post": "Text2SQL using Hugging Face Dataset Viewer API and Motherduck DuckDB-NSQL-7B. Training improvements matter most when they reduce cost or data requirements — see whether the method is reproducible on smaller hardware.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Text2SQL using Hugging Face Dataset Viewer API and Motherduck DuckDB-NSQL-7B",
+      "source": "Hugging Face Blog",
+      "link": "https://huggingface.co/blog/duckdb-nsql-7b",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "summary": "Text2SQL using Hugging Face Dataset Viewer API and Motherduck DuckDB-NSQL-7B\n[Cluster context: 1 sources, engagement 0, common terms: hugging, motherduck, duckdb-nsql-7b, viewer, dataset.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Hugging Face Blog"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "hugging",
+          "motherduck",
+          "duckdb-nsql-7b",
+          "viewer",
+          "dataset",
+          "face",
+          "text2sql"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: hugging, motherduck, duckdb-nsql-7b, viewer. Lead: Text2SQL using Hugging Face Dataset Viewer API and Motherduck DuckDB-NSQL-7B",
+        "alternative_titles": [],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-19T20:35:07.118859Z",
+    "defer_count": 1,
+    "original_score": 6,
+    "original_reason": "Builder signal (T2): api, dataset"
+  },
+  {
+    "id": "d30aa7671810",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-19T20:35:05.069972Z",
+    "score": 12,
+    "reason": "Builder signal (T2): open-source, agent, llm, ai",
+    "proposed_post": "Open-source LLMs as LangChain Agents. Agent reliability in production is still the hard part — check whether the evals reflect real task completion, not just capability demos.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Open-source LLMs as LangChain Agents",
+      "source": "Hugging Face Blog",
+      "link": "https://huggingface.co/blog/open-source-llms-as-agents",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "summary": "Open-source LLMs as LangChain Agents\n[Cluster context: 1 sources, engagement 0, common terms: open-source, langchain.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Hugging Face Blog"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "open-source",
+          "langchain"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: open-source, langchain. Lead: Open-source LLMs as LangChain Agents",
+        "alternative_titles": [],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-19T20:35:07.143327Z",
+    "defer_count": 1,
+    "original_score": 12,
+    "original_reason": "Builder signal (T2): open-source, agent, llm, ai"
+  },
+  {
+    "id": "07111028f950",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-05-19T20:35:06.358583Z",
+    "score": 8,
+    "reason": "Builder signal (T2): api, inference, ai",
+    "proposed_post": "Deploying the AI Comic Factory using the Inference API. Inference and deployment improvements compound fast — check whether the numbers hold under sustained load, not just peak tests.",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Deploying the AI Comic Factory using the Inference API",
+      "source": "Hugging Face Blog",
+      "link": "https://huggingface.co/blog/ai-comic-factory",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "summary": "Deploying the AI Comic Factory using the Inference API\n[Cluster context: 1 sources, engagement 0, common terms: inference, comic, factory, deploying.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Hugging Face Blog"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "inference",
+          "comic",
+          "factory",
+          "deploying"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: inference, comic, factory, deploying. Lead: Deploying the AI Comic Factory using the Inference API",
+        "alternative_titles": [],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "deferred_at": "2026-05-19T20:35:07.168415Z",
+    "defer_count": 1,
+    "original_score": 8,
+    "original_reason": "Builder signal (T2): api, inference, ai"
   }
 ]
