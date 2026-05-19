@@ -141,6 +141,15 @@ def render_card_html(card: CardData) -> str:
       color: var(--subtle);
       position: relative;
       z-index: 1;
+      max-width: 100%;
+      min-width: 0;
+    }}
+    .source .source-text {{
+      min-width: 0;
+      flex: 1 1 auto;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }}
     .dot {{
       width: 12px;
@@ -182,7 +191,7 @@ def render_card_html(card: CardData) -> str:
   <div class="card">
     <div class="source">
       <span class="dot"></span>
-      <span>{source_html}</span>
+      <span class="source-text">{source_html}</span>
     </div>
     <div class="headline-block">
       <h1 class="headline">{headline_html}</h1>

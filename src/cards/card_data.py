@@ -64,10 +64,12 @@ def _shorten_words(text: str, max_words: int) -> str:
 
 
 def _source_label(source: str) -> str:
-    s = source.upper().strip()
-    s = s.replace("BLOG", "").strip()
-    s = s.replace("&", "AND")
-    return _shorten_chars(" ".join(s.split()), 24)
+    s = source.strip()
+    s = re.sub(r"\s*\([^)]*\)\s*$", "", s)
+    s = re.sub(r"(?i)\b(releases?|feed|rss|atom|news|blog)\s*$", "", s).strip()
+    s = s.replace("&", "and")
+    s = " ".join(s.split()).upper()
+    return _shorten_chars(s, 36)
 
 
 def _clean_post_text(post: str) -> str:

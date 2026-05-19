@@ -51,6 +51,16 @@ def _compose_sarah_post(package: dict[str, str | list[str]]) -> str:
     raw_tags = package.get("hashtags", [])
     tags = [str(t).strip() for t in raw_tags] if isinstance(raw_tags, list) else []
     tags_line = " ".join(t for t in tags if t)[:60]
+
+    title_norm = title.lower().rstrip(".!?")
+    subtitle_norm = subtitle.lower().rstrip(".!?")
+    if subtitle_norm and title_norm and (
+        subtitle_norm == title_norm
+        or subtitle_norm.startswith(title_norm)
+        or title_norm.startswith(subtitle_norm)
+    ):
+        subtitle = ""
+
     parts = [title]
     if subtitle:
         parts.append("")
@@ -130,7 +140,17 @@ def _build_fallback_sarah_package(item: dict) -> dict[str, str | list[str]]:
     reason = str(item.get("reason", "")).strip()
     base_post = str(item.get("proposed_post", "")).strip()
 
-    title = re.sub(r"\s+", " ", raw_title).strip()[:69]
+    title_clean = re.sub(r"\s+", " ", raw_title).strip()
+    if len(title_clean) <= 69:
+        title = title_clean
+    else:
+        cut = title_clean[:69].rsplit(" ", 1)[0].rstrip(",;:- ")
+        trailing_stops = {"and", "or", "but", "of", "the", "with", "in", "on", "for", "to", "a", "an", "&"}
+        words = cut.split(" ")
+        while words and words[-1].lower().rstrip(",;:") in trailing_stops:
+            words.pop()
+        cut = " ".join(words).rstrip(",;:- ")
+        title = cut or title_clean[:69]
     if title and not title.endswith((".", "!", "?")):
         title = f"{title}."
 
@@ -138,10 +158,28 @@ def _build_fallback_sarah_package(item: dict) -> dict[str, str | list[str]]:
     body = re.sub(r"(?i)matched keywords?:[^.]*\.?\s*", "", body)
     body = re.sub(r"(?i)^why it matters:\s*", "", body)
     body = re.sub(r"\s+", " ", body).strip()
-    sentences = [s.strip() for s in re.split(r"(?<=[.!?])\s+", body) if s.strip()]
 
-    subtitle = (sentences[0] if sentences else body)[:100].strip()
-    description_src = " ".join(sentences[1:]).strip() if len(sentences) > 1 else body
+    title_norm = title_clean.lower().rstrip(".!?")
+
+    def _is_title_echo(text: str) -> bool:
+        norm = text.lower().rstrip(".!?")
+        if not norm or not title_norm:
+            return False
+        return norm == title_norm or norm.startswith(title_norm) or title_norm.startswith(norm)
+
+    sentences = [s.strip() for s in re.split(r"(?<=[.!?])\s+", body) if s.strip()]
+    non_echo = [s for s in sentences if not _is_title_echo(s)]
+
+    if non_echo:
+        subtitle = non_echo[0][:100].strip()
+        description_src = " ".join(non_echo[1:]).strip() or non_echo[0]
+    elif sentences:
+        subtitle = sentences[0][:100].strip()
+        description_src = " ".join(sentences[1:]).strip() or sentences[0]
+    else:
+        subtitle = body[:100].strip()
+        description_src = body
+
     description = description_src[:140].strip() or subtitle
 
     hashtags = _derive_hashtags(raw_source, raw_title, subtitle)

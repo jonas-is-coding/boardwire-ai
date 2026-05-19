@@ -9,6 +9,44 @@ import requests
 from src.publisher.base import PublishResult
 
 
+def _compose_text_with_link(post: str, source_link: str | None) -> tuple[str, list[dict]]:
+    """Return (text, facets) with the source URL appended and a link facet covering it.
+
+    Keeps the combined text within Bluesky's 300 grapheme/byte limit by trimming
+    the post body — never the URL — so the link stays clickable.
+    """
+    base = post.rstrip()
+    if not source_link:
+        return base[:300], []
+
+    url = source_link.strip()
+    separator = "\n\n"
+    suffix = f"{separator}{url}"
+    budget = 300 - len(suffix.encode("utf-8"))
+    if budget < 0:
+        return url[:300], []
+
+    body_bytes = base.encode("utf-8")
+    if len(body_bytes) > budget:
+        trimmed = body_bytes[:budget].decode("utf-8", errors="ignore").rstrip()
+        base = trimmed
+
+    text = f"{base}{suffix}" if base else url
+    text_bytes = text.encode("utf-8")
+    url_bytes = url.encode("utf-8")
+    byte_end = len(text_bytes)
+    byte_start = byte_end - len(url_bytes)
+    facets = [
+        {
+            "index": {"byteStart": byte_start, "byteEnd": byte_end},
+            "features": [
+                {"$type": "app.bsky.richtext.facet#link", "uri": url}
+            ],
+        }
+    ]
+    return text, facets
+
+
 class BlueskyPublisher:
     platform = "bluesky"
 
@@ -39,7 +77,7 @@ class BlueskyPublisher:
         image_path: str | None = None,
         image_alt: str | None = None,
     ) -> PublishResult:
-        text = post[:300]
+        text, facets = _compose_text_with_link(post, source_link)
 
         if not image_path:
             return PublishResult(
@@ -73,6 +111,8 @@ class BlueskyPublisher:
                 "text": text,
                 "createdAt": now,
             }
+            if facets:
+                record["facets"] = facets
 
             path = Path(image_path)
             if not path.exists() or not path.is_file():
