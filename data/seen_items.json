@@ -1,10 +1,18 @@
 [
-  "https://github.com/tinyhumansai/openhuman",
   "https://deepmind.google/blog/fast-tracking-genetic-leads-to-reverse-cellular-aging/",
-  "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.103.1",
-  "https://github.com/anthropics/claude-code/releases/tag/v2.1.144",
   "https://github.com/InsForge/InsForge",
+  "https://github.com/tinyhumansai/openhuman",
   "https://github.com/Imbad0202/academic-research-skills",
   "https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.3.1",
-  "https://github.com/vllm-project/vllm/releases/tag/v0.21.1rc0"
+  "https://github.com/vllm-project/vllm/releases/tag/v0.21.1rc0",
+  "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.103.0",
+  "https://github.com/ollama/ollama/releases/tag/v0.24.0-rc1",
+  "https://deepmind.google/blog/introducing-google-antigravity-2-0/",
+  "https://github.com/obra/superpowers",
+  "https://deepmind.google/blog/introducing-gemini-omni/",
+  "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.103.1",
+  "https://github.com/anthropics/claude-code/releases/tag/v2.1.144",
+  "https://github.com/vllm-project/vllm/releases/tag/v0.21.0rc3",
+  "https://deepmind.google/blog/simulate-real-world-places-with-project-genie-and-street-view/",
+  "https://openai.com/index/advancing-content-provenance"
 ]
