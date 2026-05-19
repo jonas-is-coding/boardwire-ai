@@ -1,12 +1,14 @@
 from __future__ import annotations
 
 import json
+import logging
 import os
 import re
 
 import requests
 
 _GEMINI_MODEL = "gemini-2.5-flash"
+_LOGGER = logging.getLogger("boardwire.persona_voice")
 
 _SYSTEM_PROMPTS = {
     "claire": (
@@ -200,6 +202,12 @@ def _call_gemini(
             try:
                 resp = requests.post(url, json=body, timeout=10)
                 if resp.status_code == 429:
+                    _LOGGER.info(
+                        "Gemini rate-limited: model=%s key_index=%d status=%d",
+                        model,
+                        (idx % len(keys)) + 1,
+                        resp.status_code,
+                    )
                     if len(keys) > 1 and switches < max_switches:
                         idx += 1
                         switches += 1
@@ -207,6 +215,24 @@ def _call_gemini(
                     rate_limited = True
                     break
                 if resp.status_code >= 400:
+                    error_snippet = ""
+                    try:
+                        payload = resp.json()
+                        if isinstance(payload, dict):
+                            error_data = payload.get("error", {})
+                            if isinstance(error_data, dict):
+                                message = str(error_data.get("message", "")).strip()
+                                if message:
+                                    error_snippet = message[:220]
+                    except Exception:
+                        pass
+                    _LOGGER.warning(
+                        "Gemini request failed: model=%s key_index=%d status=%d%s",
+                        model,
+                        (idx % len(keys)) + 1,
+                        resp.status_code,
+                        f" error={error_snippet}" if error_snippet else "",
+                    )
                     break
                 parts = resp.json().get("candidates", [{}])[0].get("content", {}).get("parts", [])
                 text_chunks = [
@@ -217,12 +243,29 @@ def _call_gemini(
                 text = " ".join(t.strip() for t in text_chunks if t.strip())
                 text = text.replace("`", "'").strip()
                 if len(text) < 30:
+                    _LOGGER.warning(
+                        "Gemini response rejected: model=%s key_index=%d reason=too_short length=%d",
+                        model,
+                        (idx % len(keys)) + 1,
+                        len(text),
+                    )
                     return None
                 return text or None
-            except Exception:
+            except Exception as exc:
+                _LOGGER.warning(
+                    "Gemini request exception: model=%s key_index=%d type=%s message=%s",
+                    model,
+                    (idx % len(keys)) + 1,
+                    type(exc).__name__,
+                    str(exc)[:220],
+                )
                 break
         # Try fallback only on rate-limit on the primary model
         if not rate_limited:
+            _LOGGER.info(
+                "Gemini fallback skipped: primary model failed without rate-limit model=%s",
+                model,
+            )
             return None
 
     return None
