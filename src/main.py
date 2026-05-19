@@ -1535,6 +1535,7 @@ def run(argv: list[str] | None = None) -> int:
     for idx, candidate in enumerate(candidate_pipeline):
         item = candidate["feed_item"]
         processed_items_by_link[item.link] = item
+        local_score = int(local_newsworthiness_by_link.get(item.link, 0))
         is_deferred = bool(candidate["is_deferred"])
         deferred_queue_item = candidate["queue_item"]
         if is_deferred:
@@ -1558,7 +1559,6 @@ def run(argv: list[str] | None = None) -> int:
             source_angle = decision.source_angle
             llm_mode_by_link[item.link] = decision.used_llm
             if not decision.used_llm and evaluation.should_post:
-                local_score = int(local_newsworthiness_by_link.get(item.link, 0))
                 if local_score >= 60:
                     ctx = cluster_context_by_link.get(item.link, {})
                     logger.info("Using Sarah/OpenRouter fallback generation for %s", item.title)
@@ -1598,14 +1598,20 @@ def run(argv: list[str] | None = None) -> int:
                         reason="fallback generation unavailable",
                     )
                     post_text = ""
-        else:
-            evaluation = evaluate_item(item, personas)
-            post_text = ""
-            source_angle = "Rule-based"
-            llm_mode_by_link[item.link] = False
-            if evaluation.should_post:
-                local_score = int(local_newsworthiness_by_link.get(item.link, 0))
-                if local_score >= 60:
+            elif not decision.used_llm and llm_config.provider == "gemini":
+                gemini_unavailable = (remaining_gemini_budget() <= 0) or (not llm_config.gemini_api_key)
+                if gemini_unavailable and local_score >= 60:
+                    logger.info(
+                        "Local high-score fallback allowed: %s local_score=%d evaluator_score=%d",
+                        item.title,
+                        local_score,
+                        int(evaluation.score),
+                    )
+                    evaluation = type(evaluation)(
+                        should_post=True,
+                        score=max(int(evaluation.score), local_score),
+                        reason="local newsworthiness fallback",
+                    )
                     ctx = cluster_context_by_link.get(item.link, {})
                     logger.info("Using Sarah/OpenRouter fallback generation for %s", item.title)
                     package = _pv.sarah_build_publish_package(
@@ -1627,7 +1633,7 @@ def run(argv: list[str] | None = None) -> int:
                     )
                     if package:
                         post_text = _compose_sarah_post(package)
-                        source_angle = "Rule-based + Sarah/OpenRouter fallback"
+                        source_angle = "Local high-score + Sarah/OpenRouter fallback"
                     else:
                         logger.warning("Rejecting fallback candidate: no non-generic generation available")
                         evaluation = type(evaluation)(
@@ -1635,6 +1641,54 @@ def run(argv: list[str] | None = None) -> int:
                             score=evaluation.score,
                             reason="fallback generation unavailable",
                         )
+                        post_text = ""
+                elif gemini_unavailable and local_score < 60:
+                    logger.warning("Rejecting fallback candidate: no non-generic generation available")
+                    evaluation = type(evaluation)(
+                        should_post=False,
+                        score=evaluation.score,
+                        reason="fallback generation unavailable",
+                    )
+                    post_text = ""
+        else:
+            evaluation = evaluate_item(item, personas)
+            post_text = ""
+            source_angle = "Rule-based"
+            llm_mode_by_link[item.link] = False
+            if local_score >= 60:
+                logger.info(
+                    "Local high-score fallback allowed: %s local_score=%d evaluator_score=%d",
+                    item.title,
+                    local_score,
+                    int(evaluation.score),
+                )
+                evaluation = type(evaluation)(
+                    should_post=True,
+                    score=max(int(evaluation.score), local_score),
+                    reason="local newsworthiness fallback",
+                )
+                ctx = cluster_context_by_link.get(item.link, {})
+                logger.info("Using Sarah/OpenRouter fallback generation for %s", item.title)
+                package = _pv.sarah_build_publish_package(
+                    title=item.title,
+                    source=item.source,
+                    reason=evaluation.reason,
+                    score=int(evaluation.score),
+                    claire_note="",
+                    chloe_note="",
+                    post_text="",
+                    summary=item.summary,
+                    cluster_source_count=int(ctx.get("source_count") or 1),
+                    cluster_sources=[str(x) for x in ctx.get("sources", [])] if isinstance(ctx.get("sources"), list) else [],
+                    cluster_total_engagement=int(ctx.get("total_engagement_score") or 0),
+                    cluster_common_terms=[str(x) for x in ctx.get("common_terms", [])] if isinstance(ctx.get("common_terms"), list) else [],
+                    alternative_titles=[str(x) for x in ctx.get("alternative_titles", [])] if isinstance(ctx.get("alternative_titles"), list) else [],
+                    provider_override="openrouter",
+                    allow_gemini_fallback=False,
+                )
+                if package:
+                    post_text = _compose_sarah_post(package)
+                    source_angle = "Local high-score + Sarah/OpenRouter fallback"
                 else:
                     logger.warning("Rejecting fallback candidate: no non-generic generation available")
                     evaluation = type(evaluation)(
@@ -1642,6 +1696,13 @@ def run(argv: list[str] | None = None) -> int:
                         score=evaluation.score,
                         reason="fallback generation unavailable",
                     )
+            else:
+                logger.warning("Rejecting fallback candidate: no non-generic generation available")
+                evaluation = type(evaluation)(
+                    should_post=False,
+                    score=evaluation.score,
+                    reason="fallback generation unavailable",
+                )
 
         draft = DraftPost(
             title=item.title,
