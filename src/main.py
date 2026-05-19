@@ -17,7 +17,6 @@ from src.board.embeddings import EmbeddingService
 from src.board.clustering import cluster_items
 from src.collector.rss_collector import fetch_all
 from src.collector.hn_collector import fetch_hackernews
-from src.collector.reddit_collector import fetch_reddit
 from src.collector.github_trending_collector import fetch_github_trending
 from src.cards.card_data import from_review_item
 from src.cards.renderer import render_card_png
@@ -98,15 +97,6 @@ def _collect_from_aggregators(
         hn_items, hn_report = fetch_hackernews(logger=logger)
         source_report["HackerNews"] = hn_report
         for item in hn_items:
-            if item.link in seen_links:
-                continue
-            seen_links.add(item.link)
-            merged.append(item)
-
-    if _env_flag("BOARDWIRE_ENABLE_REDDIT", True):
-        reddit_items, reddit_report = fetch_reddit(logger=logger)
-        source_report.update(reddit_report)
-        for item in reddit_items:
             if item.link in seen_links:
                 continue
             seen_links.add(item.link)

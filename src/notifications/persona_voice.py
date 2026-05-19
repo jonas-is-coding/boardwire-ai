@@ -50,6 +50,18 @@ _SYSTEM_PROMPTS = {
         "- No emojis. No exclamation marks. No question marks.\n"
         "- No second-person tutorial voice ('you can', 'apply this', 'try X').\n"
         "- Specificity is virality: concrete numbers, model names, benchmarks, license names.\n\n"
+        "SUBJECT RULES (critical — most common failure mode):\n"
+        "- NEVER lead with a personal handle / username (e.g. 'Rohitg00 releases X', 'colbymchenry ships Y').\n"
+        "- For GitHub Trending items the link is owner/repo. The SUBJECT is the project/tool, not the owner.\n"
+        "  GOOD: 'Agentmemory library ships persistent memory for AI coding agents.'\n"
+        "  GOOD: 'Codegraph indexes code knowledge for Claude Code, Codex and Cursor.'\n"
+        "  BAD:  'Rohitg00 releases persistent memory for AI coding agents.' (handle-led)\n"
+        "  BAD:  'Microsoft/ai-agents-for-beginners launches 12 lessons.' (owner/repo path)\n"
+        "- If the project belongs to a known org (Microsoft, Google, Anthropic, OpenAI, Meta, Mistral, HuggingFace, NVIDIA, ByteDance, Alibaba, Stability AI) — lead with the ORG name.\n"
+        "- Otherwise lead with the project/tool/repo NAME (capitalized as a proper noun).\n\n"
+        "ANTI-REPETITION:\n"
+        "- title and subtitle MUST contribute different information. Do not paraphrase the title in the subtitle.\n"
+        "- If title says 'X ships persistent memory for coding agents', subtitle adds the DIFFERENTIATOR (benchmark numbers, license, what it replaces, where it runs) — not a restatement.\n\n"
         "You package one approved AI news item into a Bluesky/X post + editorial card.\n"
         "Output STRICT JSON only with keys: title, subtitle, description, hashtags.\n\n"
         "Roles of each field:\n"
@@ -60,15 +72,16 @@ _SYSTEM_PROMPTS = {
         "  BAD:  'LLM Architecture: Cost Reduction in Long Contexts' (paper-style)\n"
         "  BAD:  'Three new attention tricks land in Gemma 4.' (editorial, not wire)\n"
         "  BAD:  'Anthropic releases new model.' (vague, no numbers)\n"
-        "- subtitle: The lede. Sharpest data points — benchmarks, percentages, named comparisons, license, availability. Max 100 chars.\n"
+        "- subtitle: The lede. NEW information not in the title — benchmarks, percentages, named comparisons, license, availability, runtime. Max 100 chars.\n"
         "  GOOD: 'Outperforms Llama 3.1 on MMLU while running on a single H100. Weights on HuggingFace.'\n"
         "  GOOD: 'Cuts long-context inference cost ~40% on Gemma 4. Apache 2.0. Drop-in for vLLM.'\n"
-        "  BAD:  'New techniques optimize LLMs for efficiency.'\n"
+        "  BAD:  'New techniques optimize LLMs for efficiency.' (vague)\n"
+        "  BAD:  Restating the title with synonyms (anti-repetition rule).\n"
         "- description: Second factual layer for the card. Self-contained sentence with extra context — training data scale, release terms, who built it, what it replaces. NO 'Why it matters' prefix. NO tutorial voice. Max 140 chars.\n"
         "  GOOD: 'First open-weight 70B trained on 15T tokens. Apache 2.0. Beats Llama 3.1 70B on MMLU and HumanEval. Available on HuggingFace.'\n"
         "  BAD:  'Drop these into any workload to optimize your models.' (tutorial)\n"
         "  BAD:  'Why it matters: this changes inference economics.' (don't prefix)\n"
-        "- hashtags: 2-3 items, each starts with #. No spaces inside tags. Concrete, technical, named (model, vendor, technique).\n\n"
+        "- hashtags: 2-3 items, each starts with #. PascalCase. Use named vendors, model names, or specific technical terms (e.g. #Anthropic, #Mistral7B, #vLLM, #MCP, #AgentEval). AVOID invented compound tags like #AICodingAgents or #PersistentMemory.\n\n"
         "FORBIDDEN openers and phrases (kill credibility instantly):\n"
         "  'Understand how', 'Apply X to', 'Discover', 'Explore', 'Learn how', 'In this article',\n"
         "  'researchers found that', 'a new study shows', 'this paper introduces',\n"
@@ -140,52 +153,76 @@ def _available_keys() -> list[str]:
     return keys
 
 
-def _call_gemini(system: str, user: str) -> str | None:
+def _call_gemini(
+    system: str,
+    user: str,
+    model_override: str | None = None,
+    fallback_model: str | None = None,
+    max_output_tokens: int = 220,
+    enable_thinking: bool = False,
+) -> str | None:
     keys = _available_keys()
     if not keys:
         return None
 
-    model = os.getenv("BOARDWIRE_GEMINI_MODEL", _GEMINI_MODEL).strip() or _GEMINI_MODEL
+    primary_model = (
+        model_override
+        or os.getenv("BOARDWIRE_GEMINI_MODEL", _GEMINI_MODEL).strip()
+        or _GEMINI_MODEL
+    )
     prompt = f"{system}\n\n{user}"
+    generation_config: dict = {
+        "temperature": 0.7,
+        "maxOutputTokens": max_output_tokens,
+    }
+    if not enable_thinking:
+        generation_config["thinkingConfig"] = {"thinkingBudget": 0}
     body = {
         "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {
-            "temperature": 0.7,
-            "maxOutputTokens": 220,
-            "thinkingConfig": {"thinkingBudget": 0},
-        },
+        "generationConfig": generation_config,
     }
 
-    idx = 0
-    switches = 0
-    max_switches = 3
+    models_to_try = [primary_model]
+    if fallback_model and fallback_model != primary_model:
+        models_to_try.append(fallback_model)
 
-    while switches <= max_switches:
-        api_key = keys[idx % len(keys)]
-        url = (
-            f"https://generativelanguage.googleapis.com/v1beta/models/"
-            f"{model}:generateContent?key={api_key}"
-        )
-        try:
-            resp = requests.post(url, json=body, timeout=10)
-            if resp.status_code == 429 and len(keys) > 1:
-                idx += 1
-                switches += 1
-                continue
-            if resp.status_code >= 400:
-                return None
-            parts = resp.json().get("candidates", [{}])[0].get("content", {}).get("parts", [])
-            text_chunks = [
-                str(p.get("text", ""))
-                for p in parts
-                if p.get("text") and not p.get("thought")
-            ]
-            text = " ".join(t.strip() for t in text_chunks if t.strip())
-            text = text.replace("`", "'").strip()
-            if len(text) < 30:
-                return None
-            return text or None
-        except Exception:
+    for model in models_to_try:
+        idx = 0
+        switches = 0
+        max_switches = 3
+        rate_limited = False
+        while switches <= max_switches:
+            api_key = keys[idx % len(keys)]
+            url = (
+                f"https://generativelanguage.googleapis.com/v1beta/models/"
+                f"{model}:generateContent?key={api_key}"
+            )
+            try:
+                resp = requests.post(url, json=body, timeout=10)
+                if resp.status_code == 429:
+                    if len(keys) > 1 and switches < max_switches:
+                        idx += 1
+                        switches += 1
+                        continue
+                    rate_limited = True
+                    break
+                if resp.status_code >= 400:
+                    break
+                parts = resp.json().get("candidates", [{}])[0].get("content", {}).get("parts", [])
+                text_chunks = [
+                    str(p.get("text", ""))
+                    for p in parts
+                    if p.get("text") and not p.get("thought")
+                ]
+                text = " ".join(t.strip() for t in text_chunks if t.strip())
+                text = text.replace("`", "'").strip()
+                if len(text) < 30:
+                    return None
+                return text or None
+            except Exception:
+                break
+        # Try fallback only on rate-limit on the primary model
+        if not rate_limited:
             return None
 
     return None
@@ -299,7 +336,16 @@ def sarah_build_publish_package(
         post_text=post_text[:280],
         summary=summary[:500],
     )
-    raw = _call_gemini(_SYSTEM_PROMPTS["sarah"], user)
+    sarah_model = os.getenv("BOARDWIRE_SARAH_MODEL", "gemini-2.5-pro").strip() or "gemini-2.5-pro"
+    sarah_fallback = os.getenv("BOARDWIRE_SARAH_FALLBACK_MODEL", "gemini-2.5-flash").strip() or "gemini-2.5-flash"
+    raw = _call_gemini(
+        _SYSTEM_PROMPTS["sarah"],
+        user,
+        model_override=sarah_model,
+        fallback_model=sarah_fallback,
+        max_output_tokens=320,
+        enable_thinking=True,
+    )
     if not raw:
         return None
     data = _parse_json_loose(raw)
