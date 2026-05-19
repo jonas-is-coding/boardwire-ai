@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from logging import Logger
+from urllib.parse import urlparse
 
 from src.board.evaluator import evaluate_item
 from src.llm.client import GeminiClient, LLMConfig, LLMError, OpenAIClient
@@ -20,9 +21,108 @@ class Decision:
     used_llm: bool
 
 
+_FALLBACK_MIN_SCORE = 60
+_FALLBACK_RELEASE_KEYWORDS = {
+    "released",
+    "ships",
+    "launched",
+    "open-sourced",
+    "api",
+    "sdk",
+    "cli",
+    "weights",
+    "dataset",
+    "benchmark",
+    "playground",
+}
+_FALLBACK_BLOCK_TERMS = {
+    "workflow",
+    "understanding",
+    "lessons",
+    "approaches",
+    "guide",
+    "tutorial",
+    "how to",
+    "introduction",
+    "introducing",
+    "perspective",
+    "opinion",
+}
+
+
+def _has_artifact_link(item: FeedItem) -> bool:
+    link = (item.link or "").strip().lower()
+    if not link:
+        return False
+    try:
+        parsed = urlparse(link)
+        host = parsed.netloc.lower()
+        path = parsed.path.lower()
+    except Exception:
+        return False
+    if "github.com" in host:
+        return "/releases" in path or "/tag/" in path or len([p for p in path.split("/") if p]) >= 2
+    if "huggingface.co" in host:
+        return any(seg in path for seg in ("/models/", "/datasets/", "/spaces/"))
+    return False
+
+
+def _has_release_signal(item: FeedItem) -> bool:
+    haystack = f"{item.title} {item.summary}".lower()
+    return any(k in haystack for k in _FALLBACK_RELEASE_KEYWORDS)
+
+
+def _is_blocked_blog_opinion(item: FeedItem) -> bool:
+    title = (item.title or "").lower()
+    return any(term in title for term in _FALLBACK_BLOCK_TERMS)
+
+
+def _enforce_conservative_fallback(item: FeedItem, evaluation: EvaluationResult) -> EvaluationResult:
+    if _is_blocked_blog_opinion(item):
+        return EvaluationResult(
+            should_post=False,
+            score=evaluation.score,
+            reason="fallback blocked: blog/opinion/education pattern",
+        )
+
+    if evaluation.score < _FALLBACK_MIN_SCORE:
+        return EvaluationResult(
+            should_post=False,
+            score=evaluation.score,
+            reason="fallback score below publish threshold",
+        )
+
+    if item.source_tier in {2, 3}:
+        has_extra_signal = (
+            _has_artifact_link(item)
+            or _has_release_signal(item)
+            or float(item.engagement_score) >= 500
+        )
+        if not has_extra_signal:
+            return EvaluationResult(
+                should_post=False,
+                score=evaluation.score,
+                reason="fallback missing artifact/release signal for tier 2/3",
+            )
+
+    return EvaluationResult(
+        should_post=bool(evaluation.should_post),
+        score=evaluation.score,
+        reason=evaluation.reason,
+    )
+
+
 def _fallback(item: FeedItem, personas: list[Persona], reason: str, logger: Logger) -> Decision:
     logger.warning("Falling back to rule-based evaluator: %s", reason)
     evaluation = evaluate_item(item, personas)
+    evaluation = _enforce_conservative_fallback(item, evaluation)
+    if not evaluation.should_post:
+        logger.warning(
+            "Rule fallback rejected: %s score=%d reason=%s",
+            item.title,
+            int(evaluation.score),
+            evaluation.reason,
+        )
     post_text = generate_post(item, evaluation)
     return Decision(
         evaluation=evaluation,
