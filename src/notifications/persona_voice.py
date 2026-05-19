@@ -7,6 +7,8 @@ import re
 
 import requests
 
+from src.llm.gemini_budget import try_consume_gemini_budget
+
 _GEMINI_MODEL = "gemini-2.5-flash"
 _LOGGER = logging.getLogger("boardwire.persona_voice")
 
@@ -170,7 +172,10 @@ def _call_gemini(
     fallback_model: str | None = None,
     max_output_tokens: int = 220,
     enable_thinking: bool = False,
+    stage: str = "persona",
 ) -> str | None:
+    if not try_consume_gemini_budget(stage, _LOGGER):
+        return None
     keys = _available_keys()
     if not keys:
         return None
@@ -408,7 +413,7 @@ def claire_on_found(title: str, source: str, score: int, summary: str) -> str | 
     user = _USER_PROMPTS["claire_found"].format(
         title=title, source=source, score=score, summary=summary[:300]
     )
-    return _call_gemini(_SYSTEM_PROMPTS["claire"], user)
+    return _call_gemini(_SYSTEM_PROMPTS["claire"], user, stage="claire")
 
 
 def chloe_on_approved(title: str, score: int, reason: str, is_llm: bool, claire_note: str = "") -> str | None:
@@ -419,7 +424,7 @@ def chloe_on_approved(title: str, score: int, reason: str, is_llm: bool, claire_
         mode="LLM" if is_llm else "Regel",
         claire_note=claire_note or "Sieht interessant aus für Builder.",
     )
-    return _call_gemini(_SYSTEM_PROMPTS["chloe"], user)
+    return _call_gemini(_SYSTEM_PROMPTS["chloe"], user, stage="chloe_approved")
 
 
 def madison_on_approved(
@@ -438,7 +443,7 @@ def madison_on_approved(
         mode="LLM" if is_llm else "Regel",
         claire_note=claire_note or "Sieht interessant aus fuer Builder.",
     )
-    return _call_gemini(_SYSTEM_PROMPTS["madison"], user)
+    return _call_gemini(_SYSTEM_PROMPTS["madison"], user, stage="madison_approved")
 
 
 def chloe_on_rejected(title: str, reasons: list[str], claire_note: str = "") -> str | None:
@@ -447,7 +452,7 @@ def chloe_on_rejected(title: str, reasons: list[str], claire_note: str = "") -> 
         reasons="; ".join(reasons),
         claire_note=claire_note or "Sieht interessant aus für Builder.",
     )
-    return _call_gemini(_SYSTEM_PROMPTS["chloe"], user)
+    return _call_gemini(_SYSTEM_PROMPTS["chloe"], user, stage="chloe_rejected")
 
 
 def madison_on_published(title: str, platform: str, post_text: str, chloe_note: str = "") -> str | None:
@@ -457,7 +462,7 @@ def madison_on_published(title: str, platform: str, post_text: str, chloe_note: 
         post_text=post_text[:200],
         chloe_note=chloe_note or "Ships Test bestanden.",
     )
-    return _call_gemini(_SYSTEM_PROMPTS["madison"], user)
+    return _call_gemini(_SYSTEM_PROMPTS["madison"], user, stage="madison_published")
 
 
 def chloe_on_published(title: str, platform: str, post_text: str, chloe_note: str = "") -> str | None:
@@ -467,7 +472,7 @@ def chloe_on_published(title: str, platform: str, post_text: str, chloe_note: st
         post_text=post_text[:200],
         chloe_note=chloe_note or "Ships Test bestanden.",
     )
-    return _call_gemini(_SYSTEM_PROMPTS["chloe"], user)
+    return _call_gemini(_SYSTEM_PROMPTS["chloe"], user, stage="chloe_published")
 
 
 def sarah_build_publish_package(
@@ -544,6 +549,7 @@ def sarah_build_publish_package(
                 fallback_model=None,
                 max_output_tokens=420,
                 enable_thinking=False,
+                stage="sarah_gemini_fallback",
             )
     else:
         sarah_model = os.getenv("BOARDWIRE_SARAH_MODEL", "gemini-2.5-flash").strip() or "gemini-2.5-flash"
@@ -555,6 +561,7 @@ def sarah_build_publish_package(
             fallback_model=sarah_fallback,
             max_output_tokens=420,
             enable_thinking=False,
+            stage="sarah",
         )
     if not raw:
         return None

@@ -5,6 +5,7 @@ from logging import Logger
 from urllib.parse import urlparse
 
 from src.board.evaluator import evaluate_item
+from src.llm.gemini_budget import try_consume_gemini_budget
 from src.llm.client import GeminiClient, LLMConfig, LLMError, OpenAIClient
 from src.llm.schemas import LLMBoardResult
 from src.models import EvaluationResult, FeedItem, Persona
@@ -157,6 +158,8 @@ def evaluate_with_optional_llm(
     if llm_config.provider == "gemini":
         if not llm_config.gemini_api_key:
             return _fallback(item, personas, "GEMINI_API_KEY is missing", logger)
+        if not try_consume_gemini_budget("evaluation", logger):
+            return _fallback(item, personas, "Gemini budget exhausted", logger)
         try:
             result = GeminiClient(api_key=llm_config.gemini_api_key, model=llm_config.gemini_model).evaluate_item(item)
         except LLMError as exc:
@@ -188,6 +191,8 @@ def rank_candidates_with_llm(
         return None
     if not llm_config.gemini_api_key:
         logger.warning("Batch ranking skipped: GEMINI_API_KEY missing")
+        return None
+    if not try_consume_gemini_budget("ranking", logger):
         return None
 
     client = GeminiClient(api_key=llm_config.gemini_api_key, model=llm_config.gemini_model)

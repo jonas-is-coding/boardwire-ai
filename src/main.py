@@ -34,6 +34,7 @@ from src.config import (
     SOURCES_PATH,
 )
 from src.llm.client import LLMConfig, load_llm_config
+from src.llm.gemini_budget import configure_gemini_budget, remaining_gemini_budget
 from src.models import DraftPost, FeedItem, Source
 from src.publisher.base import PublishResult
 from src.publisher.bluesky_publisher import BlueskyPublisher
@@ -1082,6 +1083,8 @@ def _reset_fixture_state(logger) -> int:
 
 def run(argv: list[str] | None = None) -> int:
     logger = get_logger()
+    gemini_budget_total = configure_gemini_budget()
+    logger.info("Gemini call budget per run: %d", gemini_budget_total)
     args = _build_parser().parse_args(argv)
 
     if args.list_review_queue:
@@ -1271,6 +1274,8 @@ def run(argv: list[str] | None = None) -> int:
         picked = rank_candidates_with_llm(ranking_pool, args.limit, llm_config, logger)
         if picked:
             fresh_candidates = picked + [f for f in fresh_candidates if f.link not in {p.link for p in picked}]
+    elif llm_config.provider == "gemini" and remaining_gemini_budget() <= 0:
+        logger.warning("Gemini budget exhausted; using fallback for ranking")
 
     candidate_pipeline: list[dict] = []
     for d in deferred_candidates:
@@ -1297,6 +1302,8 @@ def run(argv: list[str] | None = None) -> int:
         logger.warning("Falling back to rule-based evaluator: OPENAI_API_KEY is missing")
     if llm_enabled and llm_config.provider == "gemini" and not llm_config.gemini_api_key:
         logger.warning("Falling back to rule-based evaluator: GEMINI_API_KEY is missing")
+    if llm_enabled and llm_config.provider == "gemini" and remaining_gemini_budget() <= 0:
+        logger.warning("Gemini budget exhausted; using fallback for evaluation")
 
     created_drafts: list[DraftPost] = []
     processed_items_by_link: dict[str, FeedItem] = {}
@@ -1395,6 +1402,8 @@ def run(argv: list[str] | None = None) -> int:
     saved_to_review_queue = 0
 
     if args.review:
+        if llm_config.provider == "gemini" and remaining_gemini_budget() <= 0:
+            logger.warning("Gemini budget exhausted; using fallback for quality")
         queue_items = _queue_from_drafts(created_drafts)
         for q in queue_items:
             src = q.get("source_item", {})
