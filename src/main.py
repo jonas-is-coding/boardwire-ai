@@ -119,7 +119,7 @@ def _cluster_and_rank(items: list[FeedItem], logger, top_k: int) -> tuple[list[F
     if not clusters:
         return sorted(items, key=lambda x: x.published_at, reverse=True), {}
 
-    selected = select_top_clusters(clusters, top_k=max(1, top_k))
+    selected = select_top_clusters(clusters, top_k=max(1, top_k), logger=logger)
     selected_ids = {c.id for c in selected}
     cluster_context_by_link: dict[str, dict] = {}
     cluster_by_link: dict[str, NewsCluster] = {}

@@ -13,6 +13,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from src.models import FeedItem
 
 _CLUSTER_THRESHOLD = 0.62
+OVERCLUSTER_MAX_SIZE = 25
 _STRONG_TERMS = {
     "release", "released", "launch", "launched", "ships", "shipping", "open-source",
     "opensource", "api", "sdk", "cli", "weights", "benchmark", "benchmarks",
@@ -28,6 +29,9 @@ _STOPWORDS = {
 _GENERIC_AI_TERMS = {
     "ai", "model", "models", "llm", "llms", "agent", "agents", "open", "release",
     "new", "data", "code", "api", "benchmark", "research",
+}
+_COMMON_TERM_EXCLUDE = _GENERIC_AI_TERMS | {
+    "openai", "anthropic", "google", "how", "our", "benchmarks", "framework", "frameworks",
 }
 
 
@@ -96,13 +100,8 @@ def _same_project_or_repo(a: FeedItem, b: FeedItem) -> bool:
     repo_a = _extract_repo_id(a.link)
     repo_b = _extract_repo_id(b.link)
     if repo_a and repo_b:
-        return repo_a == repo_b or repo_a[1] == repo_b[1]
-
-    title_tokens_a = _strong_tokens(a.title)
-    title_tokens_b = _strong_tokens(b.title)
-    overlap = title_tokens_a & title_tokens_b
-    if len(overlap) >= 2:
-        return True
+        # Be conservative: only exact owner/repo or exact same repo name.
+        return repo_a == repo_b or (repo_a[1] == repo_b[1] and repo_a[1] != "")
     return False
 
 
@@ -122,6 +121,18 @@ def _keyword_overlap(a: FeedItem, b: FeedItem) -> bool:
     return False
 
 
+def _should_cluster_pair(a: FeedItem, b: FeedItem, sim_score: float) -> bool:
+    if _same_project_or_repo(a, b):
+        return True
+    strong_inter = _strong_tokens(f"{a.title} {a.summary}") & _strong_tokens(f"{b.title} {b.summary}")
+    # Prefer not clustering when uncertain: require substantial lexical overlap.
+    if len(strong_inter) >= 3:
+        return True
+    if sim_score > _CLUSTER_THRESHOLD and len(strong_inter) >= 2:
+        return True
+    return False
+
+
 def _choose_main_item(items: list[FeedItem]) -> FeedItem:
     return sorted(
         items,
@@ -138,7 +149,7 @@ def _choose_main_item(items: list[FeedItem]) -> FeedItem:
 def _common_terms(items: Iterable[FeedItem], limit: int = 8) -> list[str]:
     counter: Counter[str] = Counter()
     for item in items:
-        counter.update(_tokens(f"{item.title} {item.summary}"))
+        counter.update(t for t in _tokens(f"{item.title} {item.summary}") if t not in _COMMON_TERM_EXCLUDE)
     common = [term for term, _ in counter.most_common(limit)]
     return common
 
@@ -153,6 +164,10 @@ def _cluster_summary(items: list[FeedItem], common_terms: list[str], source_coun
 
 
 def score_cluster(cluster: NewsCluster) -> int:
+    if len(cluster.items) > OVERCLUSTER_MAX_SIZE:
+        # Overcluster penalty cap to keep these out of top selections.
+        return min(10, max(0, int(cluster.total_engagement_score // 200)))
+
     score = 0
     if cluster.source_count >= 3:
         score += 30
@@ -222,7 +237,7 @@ def cluster_feed_items(items: list[FeedItem]) -> list[NewsCluster]:
     n = len(items)
     for i in range(n):
         for j in range(i + 1, n):
-            if sim[i, j] > _CLUSTER_THRESHOLD or _keyword_overlap(items[i], items[j]):
+            if _should_cluster_pair(items[i], items[j], float(sim[i, j])) or _keyword_overlap(items[i], items[j]):
                 union(i, j)
 
     grouped: dict[int, list[FeedItem]] = {}
@@ -256,19 +271,79 @@ def cluster_feed_items(items: list[FeedItem]) -> list[NewsCluster]:
     return clusters
 
 
-def select_top_clusters(clusters: list[NewsCluster], top_k: int) -> list[NewsCluster]:
+def _sort_key_cluster(c: NewsCluster) -> tuple[float, float, float, int, float]:
+    return (
+        -c.cluster_score,
+        -c.source_count,
+        -c.total_engagement_score,
+        c.best_source_tier,
+        -c.main_item.published_at.astimezone(timezone.utc).timestamp()
+        if c.main_item.published_at.tzinfo
+        else -c.main_item.published_at.replace(tzinfo=timezone.utc).timestamp(),
+    )
+
+
+def _sort_key_item(item: FeedItem) -> tuple[int, float, float]:
+    return (
+        int(item.source_tier),
+        -float(item.engagement_score),
+        -item.published_at.astimezone(timezone.utc).timestamp()
+        if item.published_at.tzinfo
+        else -item.published_at.replace(tzinfo=timezone.utc).timestamp(),
+    )
+
+
+def select_top_clusters(clusters: list[NewsCluster], top_k: int, logger=None) -> list[NewsCluster]:
     if top_k <= 0:
         return []
-    ranked = sorted(
-        clusters,
-        key=lambda c: (
-            -c.cluster_score,
-            -c.source_count,
-            -c.total_engagement_score,
-            c.best_source_tier,
-            -c.main_item.published_at.astimezone(timezone.utc).timestamp()
-            if c.main_item.published_at.tzinfo
-            else -c.main_item.published_at.replace(tzinfo=timezone.utc).timestamp(),
-        ),
-    )
-    return ranked[:top_k]
+
+    eligible: list[NewsCluster] = []
+    overclustered: list[NewsCluster] = []
+    for cluster in clusters:
+        if len(cluster.items) > OVERCLUSTER_MAX_SIZE:
+            overclustered.append(cluster)
+            if logger:
+                logger.info("Skipping overclustered cluster %s size=%d", cluster.id, len(cluster.items))
+            continue
+        eligible.append(cluster)
+
+    ranked = sorted(eligible, key=_sort_key_cluster)
+    selected = ranked[:top_k]
+    if len(selected) >= top_k:
+        return selected
+
+    selected_links = {c.main_item.link for c in selected}
+    fallback_items: list[FeedItem] = []
+    for cluster in overclustered:
+        for item in cluster.items:
+            if item.link not in selected_links:
+                fallback_items.append(item)
+    for cluster in eligible[top_k:]:
+        if cluster.main_item.link not in selected_links:
+            fallback_items.append(cluster.main_item)
+
+    fallback_items = sorted(fallback_items, key=_sort_key_item)
+    next_id = len(clusters) + 1
+    for item in fallback_items:
+        if len(selected) >= top_k:
+            break
+        if item.link in selected_links:
+            continue
+        single = NewsCluster(
+            id=f"c{next_id}",
+            items=[item],
+            main_item=item,
+            sources=[item.source],
+            source_count=1,
+            total_engagement_score=float(item.engagement_score),
+            best_source_tier=int(item.source_tier),
+            cluster_score=0,
+            common_terms=_common_terms([item]),
+            cluster_summary=_cluster_summary([item], _common_terms([item]), 1, float(item.engagement_score)),
+        )
+        single.cluster_score = score_cluster(single)
+        selected.append(single)
+        selected_links.add(item.link)
+        next_id += 1
+
+    return selected
