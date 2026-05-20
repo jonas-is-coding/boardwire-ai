@@ -278,5 +278,27 @@
     "original_score": 65,
     "original_reason": "deferred: generation provider unavailable",
     "card_path": null
+  },
+  {
+    "id": "5e22ff598e68",
+    "status": "deferred_generation_unavailable",
+    "created_at": "2026-05-20T08:30:38.360011Z",
+    "score": 60,
+    "reason": "deferred: generation provider unavailable",
+    "proposed_post": "",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Remove–AI–Watermarks – CLI and library for removing AI watermarks from images",
+      "source": "HackerNews",
+      "link": "https://github.com/wiltodelta/remove-ai-watermarks",
+      "source_tier": 3,
+      "engagement_score": 333.5,
+      "local_newsworthiness_score": 60
+    },
+    "deferred_at": "2026-05-20T08:30:38.359948Z",
+    "defer_count": 1,
+    "original_score": 60,
+    "original_reason": "deferred: generation provider unavailable",
+    "card_path": null
   }
 ]
