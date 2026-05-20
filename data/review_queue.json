@@ -262,8 +262,8 @@
       "engagement_score": 0.0,
       "local_newsworthiness_score": 65
     },
-    "deferred_at": "2026-05-19T21:51:57.038801Z",
-    "defer_count": 1,
+    "deferred_at": "2026-05-20T15:26:40.404638Z",
+    "defer_count": 2,
     "original_score": 65,
     "original_reason": "deferred: generation provider unavailable",
     "card_path": null
@@ -284,8 +284,8 @@
       "engagement_score": 0.0,
       "local_newsworthiness_score": 65
     },
-    "deferred_at": "2026-05-19T22:02:45.855661Z",
-    "defer_count": 1,
+    "deferred_at": "2026-05-20T15:26:40.405056Z",
+    "defer_count": 2,
     "original_score": 65,
     "original_reason": "deferred: generation provider unavailable",
     "card_path": null
@@ -306,8 +306,8 @@
       "engagement_score": 333.5,
       "local_newsworthiness_score": 60
     },
-    "deferred_at": "2026-05-20T08:30:38.359948Z",
-    "defer_count": 1,
+    "deferred_at": "2026-05-20T15:26:40.405708Z",
+    "defer_count": 2,
     "original_score": 60,
     "original_reason": "deferred: generation provider unavailable",
     "card_path": null
@@ -329,6 +329,28 @@
       "local_newsworthiness_score": 90
     },
     "deferred_at": "2026-05-20T13:44:44.829257Z",
+    "defer_count": 1,
+    "original_score": 90,
+    "original_reason": "deferred: generation provider unavailable",
+    "card_path": null
+  },
+  {
+    "id": "9eb8465fac7c",
+    "status": "deferred_generation_unavailable",
+    "created_at": "2026-05-20T15:26:40.406376Z",
+    "score": 90,
+    "reason": "deferred: generation provider unavailable",
+    "proposed_post": "",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Claude Code v2.1.141",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.141",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 90
+    },
+    "deferred_at": "2026-05-20T15:26:40.406356Z",
     "defer_count": 1,
     "original_score": 90,
     "original_reason": "deferred: generation provider unavailable",
