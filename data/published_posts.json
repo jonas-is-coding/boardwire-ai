@@ -11,5 +11,18 @@
     "card_path": "generated/cards/a419a5613d2e.png",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmblvh2sk32v",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmblvh2sk32v"
+  },
+  {
+    "id": "9eb8465fac7c",
+    "published_at": "2026-05-20T15:41:56.493782Z",
+    "platform": "bluesky",
+    "post": "Anthropic ships Claude Code v2.1.141.\n\nClaims improved performance on code generation tasks.\n\n#Anthropic #ClaudeCode #CodeGeneration",
+    "source_link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.141",
+    "source_title": "Claude Code v2.1.141",
+    "score": 90,
+    "reason": "local newsworthiness fallback",
+    "card_path": "generated/cards/9eb8465fac7c.png",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmcalkcwpo22",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmcalkcwpo22"
   }
 ]
