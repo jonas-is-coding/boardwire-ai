@@ -185,6 +185,11 @@ def _env_int(name: str, default: int) -> int:
         return default
 
 
+def _sarah_fallback_budget(high_score_candidates: int | None = None) -> int:
+    default_budget = 3 if high_score_candidates is None else min(3, max(1, int(high_score_candidates)))
+    return max(0, _env_int("BOARDWIRE_SARAH_FALLBACK_BUDGET", default_budget))
+
+
 def _has_artifact_link(link: str) -> bool:
     lowered = (link or "").lower()
     if not lowered:
@@ -1900,7 +1905,10 @@ def run(argv: list[str] | None = None) -> int:
     _claire_notes: dict[str, str] = {}          # link → Claire's LLM text (for Chloe context)
     _chloe_notes: dict[str, str] = {}           # link → Chloe's LLM text (for Madison context)
     _pending_claire: dict[str, tuple] = {}      # link → (title, link) — deferred until Chloe fires
-    sarah_fallback_budget = max(0, _env_int("BOARDWIRE_SARAH_FALLBACK_BUDGET", 1))
+    high_score_candidate_count = sum(
+        1 for candidate in candidate_pipeline if int(local_newsworthiness_by_link.get(candidate["feed_item"].link, 0)) >= 60
+    )
+    sarah_fallback_budget = _sarah_fallback_budget(high_score_candidate_count)
     sarah_fallback_attempts = 0
 
     notify.run_started(

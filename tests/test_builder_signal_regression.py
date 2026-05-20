@@ -4,7 +4,7 @@ from datetime import datetime, timezone
 from src.board import llm_evaluator
 from src.llm import gemini_budget
 from src.llm.client import LLMConfig, LLMError
-from src.main import is_meaningful_release, score_newsworthiness
+from src.main import _sarah_fallback_budget, is_meaningful_release, score_newsworthiness
 from src.models import FeedItem
 from src.quality.gates import QualityConfig, check_quality
 
@@ -26,6 +26,19 @@ def _item(
         published_at=datetime(2026, 5, 20, tzinfo=timezone.utc),
         source_tier=source_tier,
         engagement_score=engagement_score,
+    )
+
+
+def _quality_config() -> QualityConfig:
+    return QualityConfig(
+        max_post_length=280,
+        min_llm_score=0,
+        min_rule_score=0,
+        max_defer_count=3,
+        duplicate_lookback_hours=168,
+        fixture_duplicate_lookback_hours=1,
+        banned_phrases=[],
+        generic_phrases=[],
     )
 
 
@@ -169,26 +182,56 @@ def test_gemini_503_marks_provider_unavailable_for_run(monkeypatch, caplog) -> N
 
 
 def test_boring_generated_release_post_is_rejected() -> None:
-    config = QualityConfig(
-        max_post_length=280,
-        min_llm_score=0,
-        min_rule_score=0,
-        max_defer_count=3,
-        duplicate_lookback_hours=168,
-        fixture_duplicate_lookback_hours=1,
-        banned_phrases=[],
-        generic_phrases=[],
-    )
-
     result = check_quality(
         post="Claude Code ships version v2.1.141 and claims improved performance.",
         source_link="https://github.com/anthropics/claude-code/releases/tag/v2.1.141",
         score=80,
         is_llm_mode=True,
-        config=config,
+        config=_quality_config(),
         history_posts=[],
         context="review",
     )
 
     assert not result.passed
     assert any("Boring release" in reason for reason in result.reasons)
+
+
+def test_sarah_style_post_without_builder_implication_is_rejected() -> None:
+    result = check_quality(
+        post=(
+            "Agentmemory library ships persistent memory for AI coding agents.\n\n"
+            "Outperforms others on real-world benchmarks with +1121 stars on GitHub."
+        ),
+        source_link="https://github.com/rohitg00/agentmemory",
+        score=80,
+        is_llm_mode=True,
+        config=_quality_config(),
+        history_posts=[],
+        context="review",
+    )
+
+    assert not result.passed
+    assert any("builder implication" in reason for reason in result.reasons)
+
+
+def test_sarah_style_post_with_thesis_and_builder_implication_is_accepted() -> None:
+    result = check_quality(
+        post=(
+            "Coding agents are getting memory as a core primitive, not a plugin.\n\n"
+            "Agentmemory turns recall into infrastructure for coding-agent workflows, with +1121 GitHub stars today."
+        ),
+        source_link="https://github.com/rohitg00/agentmemory",
+        score=80,
+        is_llm_mode=True,
+        config=_quality_config(),
+        history_posts=[],
+        context="review",
+    )
+
+    assert result.passed
+
+
+def test_sarah_fallback_budget_default_allows_at_least_three_attempts(monkeypatch) -> None:
+    monkeypatch.delenv("BOARDWIRE_SARAH_FALLBACK_BUDGET", raising=False)
+
+    assert _sarah_fallback_budget(high_score_candidates=5) >= 3

@@ -35,6 +35,26 @@ _CONCRETE_BUILDER_TERMS = (
     "vector",
     "inference",
 )
+_BUILDER_IMPLICATION_TERMS = (
+    "builders",
+    "developers",
+    "workflow",
+    "workflows",
+    "infrastructure",
+    "primitive",
+    "production",
+    "deployment",
+    "coding loop",
+    "retrieval",
+    "cost",
+    "reliability",
+    "turns",
+    "enables",
+    "reduces",
+    "cuts",
+    "means",
+    "matters",
+)
 
 
 @dataclass(slots=True)
@@ -139,6 +159,21 @@ def _is_boring_release_post(text: str) -> bool:
     return True
 
 
+def _has_builder_implication(text: str) -> bool:
+    normalized = _normalize(text)
+    return any(term in normalized for term in _BUILDER_IMPLICATION_TERMS)
+
+
+def _is_dry_ships_outperforms_stars_post(text: str) -> bool:
+    normalized = _normalize(text)
+    has_ships_feature = bool(re.search(r"\b[\w.-]+\s+(?:library\s+)?ships\s+", normalized))
+    has_outperforms = "outperforms others" in normalized
+    has_stars = bool(re.search(r"\bwith\s+\+\d[\d,]*\s+stars\b", normalized))
+    if not (has_ships_feature and has_outperforms and has_stars):
+        return False
+    return not _has_builder_implication(normalized)
+
+
 def check_quality(
     post: str,
     source_link: str | None,
@@ -178,6 +213,9 @@ def check_quality(
 
     if _is_boring_release_post(post):
         reasons.append("Boring release phrasing without concrete builder capability")
+
+    if _is_dry_ships_outperforms_stars_post(post):
+        reasons.append("Dry ships/outperforms/stars post without builder implication")
 
     if context in {"review", "publish"} and _near_duplicate(post, history_posts):
         reasons.append("Duplicate or near-duplicate post detected")
