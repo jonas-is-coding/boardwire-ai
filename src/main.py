@@ -1547,6 +1547,7 @@ def run(argv: list[str] | None = None) -> int:
     # Load deferred items first and expire over-retried entries.
     max_defer_count = max(1, quality_config.max_defer_count)
     deferred_candidates: list[dict] = []
+    deferred_local_scores_by_link: dict[str, dict[str, int]] = {}
     deferred_expired = 0
     for item in review_queue_data:
         if item.get("status") not in {"deferred_due_to_cap", "deferred_generation_unavailable"}:
@@ -1572,6 +1573,14 @@ def run(argv: list[str] | None = None) -> int:
             engagement_score=float(src.get("engagement_score", 0.0)),
         )
         deferred_feed_item = _enrich_release_item_title(deferred_feed_item)
+        stored_local_score = int(src.get("local_newsworthiness_score") or 0)
+        recomputed_local_score = int(score_newsworthiness(deferred_feed_item, cluster_context=None))
+        effective_local_score = stored_local_score if stored_local_score > 0 else recomputed_local_score
+        deferred_local_scores_by_link[link] = {
+            "stored": stored_local_score,
+            "recomputed": recomputed_local_score,
+            "effective": effective_local_score,
+        }
         deferred_candidates.append(
             {
                 "id": item.get("id"),
@@ -1619,6 +1628,8 @@ def run(argv: list[str] | None = None) -> int:
     )
     fresh_candidates = [row[0] for row in local_ranked_rows]
     local_newsworthiness_by_link = {row[0].link: int(row[1]) for row in local_ranked_rows}
+    for link, score_parts in deferred_local_scores_by_link.items():
+        local_newsworthiness_by_link[link] = int(score_parts.get("effective", 0))
     for row in local_ranked_rows[:10]:
         logger.info(
             "Local rank score=%d | tier=%d | title=%s | reasons=%s",
@@ -1708,6 +1719,14 @@ def run(argv: list[str] | None = None) -> int:
         deferred_queue_item = candidate["queue_item"]
         if is_deferred:
             logger.info("Reprocessing deferred item: %s", item.title)
+            score_parts = deferred_local_scores_by_link.get(item.link, {})
+            logger.info(
+                "Deferred local score: %s local_score=%d stored=%d recomputed=%d",
+                item.title,
+                local_score,
+                int(score_parts.get("stored", 0)),
+                int(score_parts.get("recomputed", 0)),
+            )
             deferred_reprocessed += 1
         use_llm_for_item = llm_enabled and idx < llm_config.max_items
         gemini_unavailable = False
