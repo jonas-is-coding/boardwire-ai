@@ -21,11 +21,11 @@
   },
   {
     "id": "257a891bd1f4",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-05-20T19:31:15.866874Z",
     "score": 90,
     "reason": "Open-source library for agent memory ships today, addressing a core builder problem with real-world benchmarks.",
-    "proposed_post": "rohitg00/agentmemory, an open-source library, ships persistent memory for AI coding agents, backed by real-world benchmarks. Builders can integrate this to give their agents long-term state and recall, improving performance on complex, multi-session coding tasks.",
+    "proposed_post": "Agent memory is becoming infrastructure for coding workflows.\n\nAgentmemory adds persistent state to AI coding agents based on real-world benchmarks.\n\n#Agentmemory #CodingAgents #AIWorkflows",
     "source_angle": "Open-source library for agent persistent memory.",
     "source_item": {
       "title": "rohitg00/agentmemory — #1 Persistent memory for AI coding agents based on real-world benchmarks",
@@ -35,9 +35,20 @@
       "engagement_score": 1121.0,
       "local_newsworthiness_score": 105
     },
-    "card_path": null,
+    "card_path": "generated/cards/257a891bd1f4.png",
     "reactivated_at": "2026-05-20T19:31:15.866874Z",
-    "is_llm_mode": true
+    "is_llm_mode": true,
+    "sarah_package": {
+      "title": "Agent memory is becoming infrastructure for coding workflows.",
+      "subtitle": "Agentmemory adds persistent state to AI coding agents based on real-world benchmarks.",
+      "description": "Open-source library for long-term agent state with recall across sessions. Built for Claude Code, Codex, and Cursor workflows.",
+      "hashtags": [
+        "#Agentmemory",
+        "#CodingAgents",
+        "#AIWorkflows"
+      ]
+    },
+    "published_at": "2026-05-20T20:14:12.353340Z"
   },
   {
     "id": "e0a44f2f0e6a",

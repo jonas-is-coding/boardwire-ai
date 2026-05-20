@@ -1,0 +1,15 @@
+[
+  {
+    "id": "257a891bd1f4",
+    "published_at": "2026-05-20T20:14:12.353340Z",
+    "platform": "bluesky",
+    "post": "Agent memory is becoming infrastructure for coding workflows.\n\nAgentmemory adds persistent state to AI coding agents based on real-world benchmarks.\n\n#Agentmemory #CodingAgents #AIWorkflows",
+    "source_link": "https://github.com/rohitg00/agentmemory",
+    "source_title": "rohitg00/agentmemory — #1 Persistent memory for AI coding agents based on real-world benchmarks",
+    "score": 90,
+    "reason": "Open-source library for agent memory ships today, addressing a core builder problem with real-world benchmarks.",
+    "card_path": "generated/cards/257a891bd1f4.png",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmcpsfqhnt2s",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmcpsfqhnt2s"
+  }
+]
