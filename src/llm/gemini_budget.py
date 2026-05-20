@@ -40,3 +40,10 @@ def mark_gemini_provider_exhausted(stage: str, logger: Logger) -> None:
     total = configure_gemini_budget()
     _BUDGET_USED = total
     logger.warning("Gemini provider exhausted; using fallback for %s", stage)
+
+
+def mark_gemini_provider_temporarily_unavailable(stage: str, logger: Logger) -> None:
+    global _BUDGET_USED
+    total = configure_gemini_budget()
+    _BUDGET_USED = total
+    logger.warning("Gemini provider temporarily unavailable; using fallback for %s", stage)

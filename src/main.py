@@ -113,7 +113,34 @@ _BUILDER_TOOLING_TERMS = (
     "vector",
     "browser automation",
 )
-_EDUCATIONAL_TERMS = ("learn", "course", "beginners", "from scratch", "tutorial", "lessons", "awesome", "guide")
+_STRONG_BUILDER_ARTIFACT_TERMS = (
+    "cli",
+    "sdk",
+    "mcp",
+    "plugin",
+    "local runtime",
+    "local execution",
+    "local-first",
+    "local first",
+    "memory system",
+    "persistent memory",
+    "code index",
+    "code knowledge graph",
+    "inference engine",
+)
+_EDUCATIONAL_TERMS = (
+    "learn",
+    "course",
+    "skills",
+    "lessons",
+    "from scratch",
+    "beginner",
+    "beginners",
+    "guide",
+    "tutorial",
+    "research skills",
+    "methodology",
+)
 
 
 def _compose_sarah_post(package: dict[str, str | list[str]]) -> str:
@@ -196,11 +223,33 @@ def _release_version_parts(item: FeedItem) -> tuple[int, ...] | None:
 
 
 def _has_concrete_benchmark_signal(text: str) -> bool:
+    if re.search(r"\b\d+(?:\.\d+)?\s*%", text):
+        return True
     if re.search(r"\b\d+(?:\.\d+)?\s*%[^.\n]*(?:faster|improvement|better|lower|higher|reduction|speedup|pass rate|accuracy)", text):
         return True
     if re.search(r"\b(?:x|×)\s?\d+(?:\.\d+)?\b|\b\d+(?:\.\d+)?\s?(?:x|×)\b", text):
         return True
+    if _contains_any(text, ("fewer tokens", "faster", "benchmark", "eval result")):
+        return True
     return False
+
+
+def _has_strong_builder_artifact(item: FeedItem) -> bool:
+    text = f"{item.title} {item.summary}".lower()
+    return _contains_any(text, _STRONG_BUILDER_ARTIFACT_TERMS)
+
+
+def _has_known_strong_org(item: FeedItem) -> bool:
+    owner_repo = _github_owner_repo(item.link)
+    if owner_repo and owner_repo[0] in _KNOWN_ORG_REPOS:
+        return True
+    text = f"{item.title} {item.summary} {item.source}".lower()
+    return _contains_any(text, tuple(_KNOWN_ORG_REPOS))
+
+
+def _has_community_builder_breakout(item: FeedItem) -> bool:
+    text = f"{item.title} {item.summary}".lower()
+    return _has_concrete_benchmark_signal(text) or _has_strong_builder_artifact(item) or _has_known_strong_org(item)
 
 
 def is_boring_release(item: FeedItem) -> bool:
@@ -256,11 +305,13 @@ def _newsworthiness_reason_parts(item: FeedItem, cluster_context: dict | None = 
     gh_org_repo = _github_owner_repo(item.link)
     has_release_signal = _contains_any(text, ("release", "released", "ships", "shipped", "launched", "open-sourced", "benchmark", "cli", "sdk", "mcp", "weights", "dataset"))
     has_builder_tooling = _contains_any(text, _BUILDER_TOOLING_TERMS)
+    has_strong_builder_artifact = _has_strong_builder_artifact(item)
+    has_community_breakout = _has_community_builder_breakout(item)
     is_educational = _contains_any(text, _EDUCATIONAL_TERMS)
     gh_extra_signal = (
         float(item.engagement_score) >= 1500
         or has_release_signal
-        or has_builder_tooling
+        or has_strong_builder_artifact
         or (gh_org_repo is not None and gh_org_repo[0] in _KNOWN_ORG_REPOS)
     )
     if _has_artifact_link(item.link):
@@ -274,7 +325,7 @@ def _newsworthiness_reason_parts(item: FeedItem, cluster_context: dict | None = 
         parts.append("+builder_artifact")
     if float(item.engagement_score) >= 500:
         parts.append("+engagement500")
-        if is_community_source and has_builder_tooling:
+        if is_community_source and has_community_breakout:
             parts.append("+community_builder_breakout")
     elif float(item.engagement_score) >= 100:
         parts.append("+engagement100")
@@ -290,7 +341,7 @@ def _newsworthiness_reason_parts(item: FeedItem, cluster_context: dict | None = 
         parts.append("-boring_release")
     if _contains_any(text, ("workflow", "understanding", "lessons", "guide", "tutorial", "how to", "introduction", "perspective", "opinion")):
         parts.append("-education_opinion")
-    if is_educational and float(item.engagement_score) < 1500:
+    if is_educational:
         parts.append("-educational_repo")
     if _contains_any(text, ("adoption", "announcement", "partnership", "funding", "vision", "future")):
         parts.append("-vague_meta")
@@ -304,12 +355,13 @@ def score_newsworthiness(item: FeedItem, cluster_context: dict | None = None) ->
     is_community_source = _source_type(item) in {"github", "hackernews"}
     gh_org_repo = _github_owner_repo(item.link)
     has_release_signal = _contains_any(text, ("release", "released", "ships", "shipped", "launched", "open-sourced", "benchmark", "cli", "sdk", "mcp", "weights", "dataset"))
-    has_builder_tooling = _contains_any(text, _BUILDER_TOOLING_TERMS)
+    has_strong_builder_artifact = _has_strong_builder_artifact(item)
+    has_community_breakout = _has_community_builder_breakout(item)
     is_educational = _contains_any(text, _EDUCATIONAL_TERMS)
     gh_extra_signal = (
         float(item.engagement_score) >= 1500
         or has_release_signal
-        or has_builder_tooling
+        or has_strong_builder_artifact
         or (gh_org_repo is not None and gh_org_repo[0] in _KNOWN_ORG_REPOS)
     )
     if _has_artifact_link(item.link) and (not is_github_trending or gh_extra_signal):
@@ -320,7 +372,7 @@ def score_newsworthiness(item: FeedItem, cluster_context: dict | None = None) ->
         score += 20
     if float(item.engagement_score) >= 500:
         score += 20
-        if is_community_source and has_builder_tooling:
+        if is_community_source and has_community_breakout:
             score += 25
     elif float(item.engagement_score) >= 100:
         score += 10
@@ -332,7 +384,7 @@ def score_newsworthiness(item: FeedItem, cluster_context: dict | None = None) ->
         score += 15
     if _contains_any(text, ("workflow", "understanding", "lessons", "guide", "tutorial", "how to", "introduction", "perspective", "opinion")):
         score -= 30
-    if is_educational and float(item.engagement_score) < 1500:
+    if is_educational:
         score -= 35
     if _contains_any(text, ("adoption", "announcement", "partnership", "funding", "vision", "future")):
         score -= 25
@@ -341,6 +393,17 @@ def score_newsworthiness(item: FeedItem, cluster_context: dict | None = None) ->
     score = max(0, int(score))
     if _is_release_like_item(item) and not is_meaningful_release(item):
         score = min(score, 35)
+    if is_github_trending:
+        has_high_quality_signal = (
+            float(item.engagement_score) >= 500
+            and has_strong_builder_artifact
+            and not is_educational
+        ) or (
+            float(item.engagement_score) >= 1500
+            and has_strong_builder_artifact
+        )
+        if not has_high_quality_signal:
+            score = min(score, 55)
     return score
 
 
@@ -1978,7 +2041,6 @@ def run(argv: list[str] | None = None) -> int:
                 )
                 source_angle = "Rule-based"
         elif gemini_unavailable and local_score < 60:
-            logger.warning("Rejecting fallback candidate: no non-generic generation available")
             evaluation = type(evaluation)(
                 should_post=False,
                 score=int(evaluation.score),
