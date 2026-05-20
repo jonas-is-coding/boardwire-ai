@@ -10,6 +10,31 @@ _GENERIC_FALLBACK_SENTENCES = (
     "agent reliability in production is still the hard part",
     "training improvements matter most",
 )
+_BORING_RELEASE_PHRASES = (
+    "ships version",
+    "claims improved performance",
+    "released with enhancements",
+    "bug fixes and improvements",
+    "performance improvements",
+    "new version is available",
+)
+_CONCRETE_BUILDER_TERMS = (
+    "api",
+    "cli",
+    "sdk",
+    "mcp",
+    "plugin",
+    "integration",
+    "sandbox",
+    "local",
+    "weights",
+    "dataset",
+    "benchmark",
+    "browser automation",
+    "rag",
+    "vector",
+    "inference",
+)
 
 
 @dataclass(slots=True)
@@ -103,6 +128,17 @@ def _near_duplicate(text: str, history: list[str]) -> bool:
     return False
 
 
+def _is_boring_release_post(text: str) -> bool:
+    normalized = _normalize(text)
+    if not any(phrase in normalized for phrase in _BORING_RELEASE_PHRASES):
+        return False
+    if any(term in normalized for term in _CONCRETE_BUILDER_TERMS):
+        return False
+    if re.search(r"\b\d+(?:\.\d+)?\s*%|\b\d+(?:\.\d+)?\s?(?:x|×)\b", normalized):
+        return False
+    return True
+
+
 def check_quality(
     post: str,
     source_link: str | None,
@@ -139,6 +175,9 @@ def check_quality(
     for phrase in _GENERIC_FALLBACK_SENTENCES:
         if phrase in normalized:
             reasons.append(f"Generic fallback sentence detected: '{phrase}'")
+
+    if _is_boring_release_post(post):
+        reasons.append("Boring release phrasing without concrete builder capability")
 
     if context in {"review", "publish"} and _near_duplicate(post, history_posts):
         reasons.append("Duplicate or near-duplicate post detected")

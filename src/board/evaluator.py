@@ -27,11 +27,6 @@ _HIGH_SIGNAL = {
     "inference": 3,
     "deployment": 2,
     "production": 3,
-    # GitHub release feed items
-    "v0.": 4,
-    "v1.": 4,
-    "v2.": 4,
-    "v3.": 4,
     "changelog": 3,
     "mcp": 4,
     "claude code": 4,

@@ -59,6 +59,61 @@ VALID_REVIEW_STATUSES = {
 VALID_PUBLISHERS = {"dry_run", "bluesky"}
 _LOCAL_RANK_LIMIT = 25
 _KNOWN_ORG_REPOS = {"microsoft", "google", "anthropic", "openai", "meta", "nvidia", "huggingface", "langchain-ai"}
+_MEANINGFUL_RELEASE_TERMS = (
+    "major feature",
+    "new capability",
+    "breaking change",
+    "official plugin ecosystem",
+    "plugin ecosystem",
+    "mcp support",
+    "model context protocol",
+    "local execution",
+    "new model weights",
+    "model weights",
+    "open weights",
+    "new dataset",
+    "new cli",
+    "cli tool",
+    "new tool",
+    "new integration",
+    "ecosystem",
+    "plugin",
+    "mcp",
+    "sandbox",
+    "agent",
+    "coding assistant",
+    "benchmark",
+)
+_BORING_RELEASE_TERMS = (
+    "bug fixes",
+    "bugfixes",
+    "bug fixes and improvements",
+    "performance improvements",
+    "improved performance",
+    "maintenance",
+    "minor fixes",
+    "enhancements",
+    "new version is available",
+)
+_BUILDER_TOOLING_TERMS = (
+    "cli",
+    "mcp",
+    "agent",
+    "coding assistant",
+    "local-first",
+    "local first",
+    "devtool",
+    "developer tool",
+    "benchmark",
+    "eval",
+    "evaluation",
+    "inference",
+    "memory",
+    "rag",
+    "vector",
+    "browser automation",
+)
+_EDUCATIONAL_TERMS = ("learn", "course", "beginners", "from scratch", "tutorial", "lessons", "awesome", "guide")
 
 
 def _compose_sarah_post(package: dict[str, str | list[str]]) -> str:
@@ -132,15 +187,80 @@ def _contains_any(text: str, terms: tuple[str, ...]) -> bool:
     return any(t in text for t in terms)
 
 
+def _release_version_parts(item: FeedItem) -> tuple[int, ...] | None:
+    text = f"{item.title} {item.summary} {item.link}"
+    match = re.search(r"\bv?(\d+)\.(\d+)(?:\.(\d+))?(?:[-+][a-z0-9_.-]+)?\b", text, flags=re.IGNORECASE)
+    if not match:
+        return None
+    return tuple(int(part) for part in match.groups() if part is not None)
+
+
+def _has_concrete_benchmark_signal(text: str) -> bool:
+    if re.search(r"\b\d+(?:\.\d+)?\s*%[^.\n]*(?:faster|improvement|better|lower|higher|reduction|speedup|pass rate|accuracy)", text):
+        return True
+    if re.search(r"\b(?:x|×)\s?\d+(?:\.\d+)?\b|\b\d+(?:\.\d+)?\s?(?:x|×)\b", text):
+        return True
+    return False
+
+
+def is_boring_release(item: FeedItem) -> bool:
+    text = f"{item.title} {item.summary}".lower()
+    if not _is_release_like_item(item):
+        return False
+    return _contains_any(text, _BORING_RELEASE_TERMS) and not (
+        _contains_any(text, _MEANINGFUL_RELEASE_TERMS) or _has_concrete_benchmark_signal(text)
+    )
+
+
+def is_meaningful_release(item: FeedItem) -> bool:
+    """Return true only when a release carries a real builder signal."""
+    if not _is_release_like_item(item):
+        return False
+
+    text = f"{item.title} {item.summary}".lower()
+    if _contains_any(text, _MEANINGFUL_RELEASE_TERMS) or _has_concrete_benchmark_signal(text):
+        return True
+
+    version = _release_version_parts(item)
+    if version is None:
+        return False
+
+    if len(version) == 2:
+        return True
+
+    major, minor, patch = version[:3]
+    if major >= 1 and minor == 0 and patch == 0:
+        return True
+
+    return False
+
+
+def _source_type(item: FeedItem) -> str:
+    source = (item.source or "").lower()
+    if "github trending" in source:
+        return "github"
+    if "hackernews" in source or "hacker news" in source:
+        return "hackernews"
+    if _is_release_like_item(item):
+        return "release"
+    if "github.com/" in (item.link or "").lower():
+        return "github"
+    return "blog"
+
+
 def _newsworthiness_reason_parts(item: FeedItem, cluster_context: dict | None = None) -> list[str]:
     text = f"{item.title} {item.summary}".lower()
     parts: list[str] = []
     is_github_trending = (item.source or "").strip().lower() == "github trending"
+    is_community_source = _source_type(item) in {"github", "hackernews"}
     gh_org_repo = _github_owner_repo(item.link)
     has_release_signal = _contains_any(text, ("release", "released", "ships", "shipped", "launched", "open-sourced", "benchmark", "cli", "sdk", "mcp", "weights", "dataset"))
+    has_builder_tooling = _contains_any(text, _BUILDER_TOOLING_TERMS)
+    is_educational = _contains_any(text, _EDUCATIONAL_TERMS)
     gh_extra_signal = (
         float(item.engagement_score) >= 1500
         or has_release_signal
+        or has_builder_tooling
         or (gh_org_repo is not None and gh_org_repo[0] in _KNOWN_ORG_REPOS)
     )
     if _has_artifact_link(item.link):
@@ -154,6 +274,8 @@ def _newsworthiness_reason_parts(item: FeedItem, cluster_context: dict | None = 
         parts.append("+builder_artifact")
     if float(item.engagement_score) >= 500:
         parts.append("+engagement500")
+        if is_community_source and has_builder_tooling:
+            parts.append("+community_builder_breakout")
     elif float(item.engagement_score) >= 100:
         parts.append("+engagement100")
     if int(item.source_tier) == 1:
@@ -162,9 +284,13 @@ def _newsworthiness_reason_parts(item: FeedItem, cluster_context: dict | None = 
         parts.append("+tier2")
     if isinstance(cluster_context, dict) and int(cluster_context.get("source_count") or 0) >= 3:
         parts.append("+cluster3")
+    if _is_release_like_item(item):
+        parts.append("+meaningful_release" if is_meaningful_release(item) else "-non_meaningful_release")
+    if is_boring_release(item):
+        parts.append("-boring_release")
     if _contains_any(text, ("workflow", "understanding", "lessons", "guide", "tutorial", "how to", "introduction", "perspective", "opinion")):
         parts.append("-education_opinion")
-    if _contains_any(text, ("beginners", "lessons", "course", "tutorial", "awesome", "guide", "skills")):
+    if is_educational and float(item.engagement_score) < 1500:
         parts.append("-educational_repo")
     if _contains_any(text, ("adoption", "announcement", "partnership", "funding", "vision", "future")):
         parts.append("-vague_meta")
@@ -175,11 +301,15 @@ def score_newsworthiness(item: FeedItem, cluster_context: dict | None = None) ->
     text = f"{item.title} {item.summary}".lower()
     score = 0
     is_github_trending = (item.source or "").strip().lower() == "github trending"
+    is_community_source = _source_type(item) in {"github", "hackernews"}
     gh_org_repo = _github_owner_repo(item.link)
     has_release_signal = _contains_any(text, ("release", "released", "ships", "shipped", "launched", "open-sourced", "benchmark", "cli", "sdk", "mcp", "weights", "dataset"))
+    has_builder_tooling = _contains_any(text, _BUILDER_TOOLING_TERMS)
+    is_educational = _contains_any(text, _EDUCATIONAL_TERMS)
     gh_extra_signal = (
         float(item.engagement_score) >= 1500
         or has_release_signal
+        or has_builder_tooling
         or (gh_org_repo is not None and gh_org_repo[0] in _KNOWN_ORG_REPOS)
     )
     if _has_artifact_link(item.link) and (not is_github_trending or gh_extra_signal):
@@ -190,6 +320,8 @@ def score_newsworthiness(item: FeedItem, cluster_context: dict | None = None) ->
         score += 20
     if float(item.engagement_score) >= 500:
         score += 20
+        if is_community_source and has_builder_tooling:
+            score += 25
     elif float(item.engagement_score) >= 100:
         score += 10
     if int(item.source_tier) == 1:
@@ -200,13 +332,16 @@ def score_newsworthiness(item: FeedItem, cluster_context: dict | None = None) ->
         score += 15
     if _contains_any(text, ("workflow", "understanding", "lessons", "guide", "tutorial", "how to", "introduction", "perspective", "opinion")):
         score -= 30
-    if _contains_any(text, ("beginners", "lessons", "course", "tutorial", "awesome", "guide", "skills")):
+    if is_educational and float(item.engagement_score) < 1500:
         score -= 35
     if _contains_any(text, ("adoption", "announcement", "partnership", "funding", "vision", "future")):
         score -= 25
     if is_github_trending and not gh_extra_signal:
         score -= 35
-    return max(0, int(score))
+    score = max(0, int(score))
+    if _is_release_like_item(item) and not is_meaningful_release(item):
+        score = min(score, 35)
+    return score
 
 
 def _try_sarah_openrouter_fallback(
@@ -1631,9 +1766,12 @@ def run(argv: list[str] | None = None) -> int:
         local_newsworthiness_by_link[link] = int(score_parts.get("effective", 0))
     for row in local_ranked_rows[:10]:
         logger.info(
-            "Local rank score=%d | tier=%d | title=%s | reasons=%s",
+            "Local rank score=%d | tier=%d | source_type=%s | meaningful_release=%s | boring_release=%s | title=%s | reasons=%s",
             row[1],
             int(row[0].source_tier),
+            _source_type(row[0]),
+            is_meaningful_release(row[0]),
+            is_boring_release(row[0]),
             row[0].title[:120],
             ",".join(row[2]) if row[2] else "none",
         )
