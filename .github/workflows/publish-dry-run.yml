@@ -11,10 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-      BOARDWIRE_SARAH_PROVIDER: openrouter
-      BOARDWIRE_SARAH_MODEL: deepseek/deepseek-v4-flash:free
-      BOARDWIRE_SARAH_FALLBACK_MODEL: minimax/minimax-m2.5:free
-      BOARDWIRE_SARAH_EMERGENCY_MODEL: openrouter/free
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+      CEREBRAS_API_KEY: ${{ secrets.CEREBRAS_API_KEY }}
+      MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
       GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
@@ -44,6 +43,9 @@ jobs:
       - name: Publish approved in dry-run mode
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          CEREBRAS_API_KEY: ${{ secrets.CEREBRAS_API_KEY }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
         run: python -m src.main --publish-approved --publisher dry_run
 
       - name: Commit publishing state files

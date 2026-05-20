@@ -9,6 +9,7 @@ import time
 import requests
 
 from src.llm.gemini_budget import try_consume_gemini_budget
+from src.llm import sarah_generation
 
 _GEMINI_MODEL = "gemini-2.5-flash"
 _LOGGER = logging.getLogger("boardwire.persona_voice")
@@ -179,6 +180,7 @@ def reset_openrouter_state() -> None:
         _OPENROUTER_BUDGET = max(0, int(os.getenv("BOARDWIRE_OPENROUTER_CALL_BUDGET", "2").strip()))
     except ValueError:
         _OPENROUTER_BUDGET = 2
+    sarah_generation.reset_state()
 
 
 def openrouter_stats() -> dict[str, int | bool]:
@@ -197,6 +199,24 @@ def openrouter_attempted_models_since(cursor: int) -> list[str]:
     if cursor < 0:
         cursor = 0
     return list(_OPENROUTER_ATTEMPTED_MODELS[cursor:])
+
+
+def sarah_attempt_cursor() -> int:
+    provider = (os.getenv("BOARDWIRE_SARAH_PROVIDER", "").strip() or "chain").lower()
+    if provider == "openrouter":
+        return openrouter_attempt_cursor()
+    return sarah_generation.attempt_cursor()
+
+
+def sarah_attempted_models_since(cursor: int) -> list[str]:
+    provider = (os.getenv("BOARDWIRE_SARAH_PROVIDER", "").strip() or "chain").lower()
+    if provider == "openrouter":
+        return openrouter_attempted_models_since(cursor)
+    return sarah_generation.attempted_models_since(cursor)
+
+
+def sarah_runtime_stats() -> dict[str, object]:
+    return sarah_generation.runtime_stats()
 
 
 def _call_gemini(
@@ -592,16 +612,10 @@ def sarah_build_publish_package(
                 stage="sarah_gemini_fallback",
             )
     else:
-        sarah_model = os.getenv("BOARDWIRE_SARAH_MODEL", "gemini-2.5-flash").strip() or "gemini-2.5-flash"
-        sarah_fallback = os.getenv("BOARDWIRE_SARAH_FALLBACK_MODEL", "gemini-2.5-flash").strip() or "gemini-2.5-flash"
-        raw = _call_gemini(
+        raw = sarah_generation.generate_with_provider_chain(
             _SYSTEM_PROMPTS["sarah"],
             user,
-            model_override=sarah_model,
-            fallback_model=sarah_fallback,
             max_output_tokens=420,
-            enable_thinking=False,
-            stage="sarah",
         )
     if not raw:
         return None

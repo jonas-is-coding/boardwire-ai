@@ -232,7 +232,6 @@ def _try_sarah_openrouter_fallback(
         cluster_total_engagement=int(ctx.get("total_engagement_score") or 0),
         cluster_common_terms=[str(x) for x in ctx.get("common_terms", [])] if isinstance(ctx.get("common_terms"), list) else [],
         alternative_titles=[str(x) for x in ctx.get("alternative_titles", [])] if isinstance(ctx.get("alternative_titles"), list) else [],
-        provider_override="openrouter",
         allow_gemini_fallback=False,
     )
     if package:
@@ -1773,7 +1772,7 @@ def run(argv: list[str] | None = None) -> int:
             )
             if sarah_fallback_attempts < sarah_fallback_budget:
                 sarah_fallback_attempts += 1
-                openrouter_attempt_cursor = _pv.openrouter_attempt_cursor()
+                openrouter_attempt_cursor = _pv.sarah_attempt_cursor()
                 evaluation, post_text, source_angle = _try_sarah_openrouter_fallback(
                     item=item,
                     evaluation=evaluation,
@@ -1781,7 +1780,7 @@ def run(argv: list[str] | None = None) -> int:
                     logger=logger,
                     voice_module=_pv,
                 )
-                attempted_models = _pv.openrouter_attempted_models_since(openrouter_attempt_cursor)
+                attempted_models = _pv.sarah_attempted_models_since(openrouter_attempt_cursor)
             else:
                 evaluation = type(evaluation)(
                     should_post=False,
@@ -1794,7 +1793,7 @@ def run(argv: list[str] | None = None) -> int:
 
             if not post_text.strip():
                 now_iso = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
-                attempted_provider = (os.getenv("BOARDWIRE_SARAH_PROVIDER", "openrouter").strip() or "openrouter").lower()
+                attempted_provider = (os.getenv("BOARDWIRE_SARAH_PROVIDER", "").strip() or "chain").lower()
                 defer_count_val = 1
                 if deferred_queue_item is not None:
                     deferred_queue_item["status"] = "deferred_generation_unavailable"
@@ -2116,6 +2115,14 @@ def run(argv: list[str] | None = None) -> int:
         int(openrouter_runtime.get("budget", 0)),
         str(bool(openrouter_runtime.get("exhausted", False))).lower(),
         deferred_generation_unavailable_count,
+    )
+    sarah_runtime = _pv.sarah_runtime_stats()
+    logger.info(
+        "Sarah provider runtime: groq_used=%d cerebras_used=%d mistral_used=%d exhausted=%s",
+        int(sarah_runtime.get("groq_used", 0)),
+        int(sarah_runtime.get("cerebras_used", 0)),
+        int(sarah_runtime.get("mistral_used", 0)),
+        ",".join([str(x) for x in sarah_runtime.get("exhausted", [])]) if isinstance(sarah_runtime.get("exhausted"), list) else "",
     )
     logger.info("Boardwire AI dry run complete")
     logger.info("Sources loaded: %d", len(sources) if not args.use_fixtures else 0)
