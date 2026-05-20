@@ -1,12 +1,12 @@
 [
   {
     "id": "c8256f48ba9f",
-    "status": "deferred_generation_unavailable",
-    "created_at": "2026-05-20T16:27:37.950718Z",
+    "status": "approved",
+    "created_at": "2026-05-20T19:31:15.869851Z",
     "score": 85,
-    "reason": "deferred: generation provider unavailable",
-    "proposed_post": "",
-    "source_angle": "Rule-based",
+    "reason": "local newsworthiness fallback",
+    "proposed_post": "Codegraph indexes code knowledge for Claude Code, Codex and Cursor.\n\nPre-indexed graph reduces tokens and tool calls, 100% local, on GitHub Trending.\n\n#Codegraph #ClaudeCode #Codex",
+    "source_angle": "Local high-score + Sarah/OpenRouter fallback",
     "source_item": {
       "title": "colbymchenry/codegraph — Pre-indexed code knowledge graph for Claude Code, Codex, Cursor, and OpenCode — fewer tokens, fewer tool calls, 100% local",
       "source": "GitHub Trending",
@@ -15,20 +15,18 @@
       "engagement_score": 1910.0,
       "local_newsworthiness_score": 85
     },
-    "deferred_at": "2026-05-20T16:27:37.950652Z",
-    "defer_count": 1,
-    "original_score": 85,
-    "original_reason": "deferred: generation provider unavailable",
-    "card_path": null
+    "card_path": null,
+    "reactivated_at": "2026-05-20T19:31:15.869851Z",
+    "is_llm_mode": false
   },
   {
     "id": "257a891bd1f4",
-    "status": "deferred_generation_unavailable",
-    "created_at": "2026-05-20T16:27:37.951403Z",
-    "score": 105,
-    "reason": "deferred: generation provider unavailable",
-    "proposed_post": "",
-    "source_angle": "Rule-based",
+    "status": "approved",
+    "created_at": "2026-05-20T19:31:15.866874Z",
+    "score": 90,
+    "reason": "Open-source library for agent memory ships today, addressing a core builder problem with real-world benchmarks.",
+    "proposed_post": "rohitg00/agentmemory, an open-source library, ships persistent memory for AI coding agents, backed by real-world benchmarks. Builders can integrate this to give their agents long-term state and recall, improving performance on complex, multi-session coding tasks.",
+    "source_angle": "Open-source library for agent persistent memory.",
     "source_item": {
       "title": "rohitg00/agentmemory — #1 Persistent memory for AI coding agents based on real-world benchmarks",
       "source": "GitHub Trending",
@@ -37,11 +35,9 @@
       "engagement_score": 1121.0,
       "local_newsworthiness_score": 105
     },
-    "deferred_at": "2026-05-20T16:27:37.951388Z",
-    "defer_count": 1,
-    "original_score": 105,
-    "original_reason": "deferred: generation provider unavailable",
-    "card_path": null
+    "card_path": null,
+    "reactivated_at": "2026-05-20T19:31:15.866874Z",
+    "is_llm_mode": true
   },
   {
     "id": "e0a44f2f0e6a",
@@ -126,5 +122,72 @@
     "is_llm_mode": false,
     "claire_note": "Aus *GitHub Trending* ist ein starker Kandidat reingekommen: *anthropics/claude-plugins-official — Official, Anthropic-managed directory of high quality Claude Code Plugins.*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 85_",
     "chloe_note": "*anthropics/claude-plugins-official — Official, Anthropic-managed directory of high quality Claude Code Plugins.* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch local newsworthiness fallbackCluster context: 1 sources, engagement 706. Common terms: stars., anthropic-managed, high, claude. Bewertung: 85. Quelle: https://github.com/anthropics/claude-plugins-official"
+  },
+  {
+    "id": "d51089964276",
+    "status": "deferred_generation_unavailable",
+    "created_at": "2026-05-20T19:31:15.862021Z",
+    "score": 105,
+    "reason": "deferred: generation provider unavailable",
+    "proposed_post": "",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "HKUDS/CLI-Anything — \"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:  https://clianything.cc/",
+      "source": "GitHub Trending",
+      "link": "https://github.com/HKUDS/CLI-Anything",
+      "source_tier": 2,
+      "engagement_score": 930.0,
+      "local_newsworthiness_score": 105
+    },
+    "deferred_at": "2026-05-20T19:31:15.862001Z",
+    "defer_count": 1,
+    "original_score": 105,
+    "original_reason": "deferred: generation provider unavailable",
+    "card_path": null
+  },
+  {
+    "id": "fa7449dbc829",
+    "status": "approved",
+    "created_at": "2026-05-20T19:31:15.861325Z",
+    "score": 65,
+    "reason": "local newsworthiness fallback",
+    "proposed_post": "Anthropic SDK adds self-hosted sandbox primitives for agent control.\n\nAnthropic/anthropic-sdk-python v0.103.0 ships sandbox helpers for CMA, Apache 2.0.\n\n#Anthropic #PythonSDK #CMA",
+    "source_angle": "Local high-score + Sarah/OpenRouter fallback",
+    "source_item": {
+      "title": "Anthropic Python SDK v0.103.0",
+      "source": "Anthropic Python SDK Releases",
+      "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.103.0",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 65,
+      "summary": "<h2>0.103.0 (2026-05-19)</h2>\n<p>Full Changelog: <a href=\"https://github.com/anthropics/anthropic-sdk-python/compare/v0.102.0...v0.103.0\">v0.102.0...v0.103.0</a></p>\n<h3>Features</h3>\n<ul>\n<li><strong>client:</strong> Add support for self-hosted sandboxes in CMA with sandbox helpers (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/e5625b0ae2a1e9d25847a53217c8fd70fa67c5ed\">e5625b0</a>)</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: strong, /ul, python, features, /h2.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Anthropic Python SDK Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "strong",
+          "/ul",
+          "python",
+          "features",
+          "/h2",
+          "href",
+          "full",
+          "/h3"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: strong, /ul, python, features. Lead: Anthropic Python SDK v0.103.0",
+        "alternative_titles": [
+          "Anthropic Python SDK v0.102.0",
+          "Anthropic Python SDK v0.101.0"
+        ],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Aus *Anthropic Python SDK Releases* ist ein starker Kandidat reingekommen: *Anthropic Python SDK v0.103.0*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 65_",
+    "chloe_note": "Kurzes Update: *Anthropic Python SDK v0.103.0* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: strong, /ul, python, features. Ich habe es mit 65 Punkten bewertet. Hier der Link: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.103.0"
   }
 ]
