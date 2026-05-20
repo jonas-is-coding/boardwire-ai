@@ -5,7 +5,7 @@ from logging import Logger
 from urllib.parse import urlparse
 
 from src.board.evaluator import evaluate_item
-from src.llm.gemini_budget import try_consume_gemini_budget
+from src.llm.gemini_budget import mark_gemini_provider_exhausted, try_consume_gemini_budget
 from src.llm.client import GeminiClient, LLMConfig, LLMError, OpenAIClient
 from src.llm.schemas import LLMBoardResult
 from src.models import EvaluationResult, FeedItem, Persona
@@ -163,6 +163,8 @@ def evaluate_with_optional_llm(
         try:
             result = GeminiClient(api_key=llm_config.gemini_api_key, model=llm_config.gemini_model).evaluate_item(item)
         except LLMError as exc:
+            if " 429" in str(exc) or "error 429" in str(exc).lower():
+                mark_gemini_provider_exhausted("evaluation", logger)
             return _fallback(item, personas, str(exc), logger)
         except Exception as exc:  # noqa: BLE001
             return _fallback(item, personas, f"Unexpected LLM error: {exc}", logger)
@@ -199,6 +201,8 @@ def rank_candidates_with_llm(
     try:
         ranked = client.rank_candidates(items, top_k)
     except LLMError as exc:
+        if " 429" in str(exc) or "error 429" in str(exc).lower():
+            mark_gemini_provider_exhausted("ranking", logger)
         logger.warning("Batch ranking failed: %s", exc)
         return None
     except Exception as exc:  # noqa: BLE001

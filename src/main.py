@@ -103,22 +103,6 @@ def _env_int(name: str, default: int) -> int:
         return default
 
 
-def _sarah_attempt_metadata() -> tuple[str, list[str]]:
-    provider = (os.getenv("BOARDWIRE_SARAH_PROVIDER", "openrouter").strip() or "openrouter").lower()
-    if provider == "openrouter":
-        models = [
-            (os.getenv("BOARDWIRE_SARAH_MODEL", "deepseek/deepseek-v4-flash:free").strip() or "deepseek/deepseek-v4-flash:free"),
-            (os.getenv("BOARDWIRE_SARAH_FALLBACK_MODEL", "minimax/minimax-m2.5:free").strip() or "minimax/minimax-m2.5:free"),
-        ]
-        emergency = os.getenv("BOARDWIRE_SARAH_EMERGENCY_MODEL", "").strip()
-        if emergency:
-            models.append(emergency)
-        return provider, models
-    model = os.getenv("BOARDWIRE_SARAH_MODEL", "gemini-2.5-flash").strip() or "gemini-2.5-flash"
-    fallback = os.getenv("BOARDWIRE_SARAH_FALLBACK_MODEL", "gemini-2.5-flash").strip() or "gemini-2.5-flash"
-    return provider, [model, fallback]
-
-
 def _has_artifact_link(link: str) -> bool:
     lowered = (link or "").lower()
     if not lowered:
@@ -1578,19 +1562,21 @@ def run(argv: list[str] | None = None) -> int:
         link = str(src.get("link", "")).strip()
         if not link:
             continue
+        deferred_feed_item = FeedItem(
+            source=str(src.get("source", "Unknown Source")),
+            title=str(src.get("title", "Untitled")),
+            link=link,
+            summary=str(item.get("reason", "")),
+            published_at=_parse_dt(item.get("created_at")),
+            source_tier=int(src.get("source_tier", 3)),
+            engagement_score=float(src.get("engagement_score", 0.0)),
+        )
+        deferred_feed_item = _enrich_release_item_title(deferred_feed_item)
         deferred_candidates.append(
             {
                 "id": item.get("id"),
                 "queue_item": item,
-                "feed_item": FeedItem(
-                    source=str(src.get("source", "Unknown Source")),
-                    title=str(src.get("title", "Untitled")),
-                    link=link,
-                    summary=str(item.get("reason", "")),
-                    published_at=_parse_dt(item.get("created_at")),
-                    source_tier=int(src.get("source_tier", 3)),
-                    engagement_score=float(src.get("engagement_score", 0.0)),
-                ),
+                "feed_item": deferred_feed_item,
                 "score": int(item.get("score") or 0),
                 "is_deferred": True,
             }
@@ -1768,6 +1754,7 @@ def run(argv: list[str] | None = None) -> int:
             )
             if sarah_fallback_attempts < sarah_fallback_budget:
                 sarah_fallback_attempts += 1
+                openrouter_attempt_cursor = _pv.openrouter_attempt_cursor()
                 evaluation, post_text, source_angle = _try_sarah_openrouter_fallback(
                     item=item,
                     evaluation=evaluation,
@@ -1775,6 +1762,7 @@ def run(argv: list[str] | None = None) -> int:
                     logger=logger,
                     voice_module=_pv,
                 )
+                attempted_models = _pv.openrouter_attempted_models_since(openrouter_attempt_cursor)
             else:
                 evaluation = type(evaluation)(
                     should_post=False,
@@ -1783,10 +1771,11 @@ def run(argv: list[str] | None = None) -> int:
                 )
                 post_text = ""
                 source_angle = "Rule-based"
+                attempted_models = []
 
             if not post_text.strip():
                 now_iso = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
-                attempted_provider, attempted_models = _sarah_attempt_metadata()
+                attempted_provider = (os.getenv("BOARDWIRE_SARAH_PROVIDER", "openrouter").strip() or "openrouter").lower()
                 defer_count_val = 1
                 if deferred_queue_item is not None:
                     deferred_queue_item["status"] = "deferred_generation_unavailable"
@@ -1823,7 +1812,7 @@ def run(argv: list[str] | None = None) -> int:
                     item.title,
                     local_score,
                     attempted_provider,
-                    ",".join(attempted_models),
+                    ",".join(attempted_models) if attempted_models else "none",
                     defer_count_val,
                 )
                 evaluation = type(evaluation)(

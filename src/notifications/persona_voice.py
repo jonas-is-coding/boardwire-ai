@@ -15,6 +15,7 @@ _LOGGER = logging.getLogger("boardwire.persona_voice")
 _OPENROUTER_CALLS_USED = 0
 _OPENROUTER_EXHAUSTED = False
 _OPENROUTER_BUDGET = 0
+_OPENROUTER_ATTEMPTED_MODELS: list[str] = []
 
 _SYSTEM_PROMPTS = {
     "claire": (
@@ -170,9 +171,10 @@ def _available_keys() -> list[str]:
 
 
 def reset_openrouter_state() -> None:
-    global _OPENROUTER_CALLS_USED, _OPENROUTER_EXHAUSTED, _OPENROUTER_BUDGET
+    global _OPENROUTER_CALLS_USED, _OPENROUTER_EXHAUSTED, _OPENROUTER_BUDGET, _OPENROUTER_ATTEMPTED_MODELS
     _OPENROUTER_CALLS_USED = 0
     _OPENROUTER_EXHAUSTED = False
+    _OPENROUTER_ATTEMPTED_MODELS = []
     try:
         _OPENROUTER_BUDGET = max(0, int(os.getenv("BOARDWIRE_OPENROUTER_CALL_BUDGET", "2").strip()))
     except ValueError:
@@ -185,6 +187,16 @@ def openrouter_stats() -> dict[str, int | bool]:
         "budget": int(_OPENROUTER_BUDGET),
         "exhausted": bool(_OPENROUTER_EXHAUSTED),
     }
+
+
+def openrouter_attempt_cursor() -> int:
+    return len(_OPENROUTER_ATTEMPTED_MODELS)
+
+
+def openrouter_attempted_models_since(cursor: int) -> list[str]:
+    if cursor < 0:
+        cursor = 0
+    return list(_OPENROUTER_ATTEMPTED_MODELS[cursor:])
 
 
 def _call_gemini(
@@ -356,6 +368,7 @@ def _call_openrouter(
             return None, None
         _OPENROUTER_BUDGET -= 1
         _OPENROUTER_CALLS_USED += 1
+        _OPENROUTER_ATTEMPTED_MODELS.append(str(payload.get("model", "")))
         try:
             resp = requests.post(
                 "https://openrouter.ai/api/v1/chat/completions",

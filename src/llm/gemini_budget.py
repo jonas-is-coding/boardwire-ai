@@ -33,3 +33,10 @@ def try_consume_gemini_budget(stage: str, logger: Logger) -> bool:
         return False
     _BUDGET_USED += 1
     return True
+
+
+def mark_gemini_provider_exhausted(stage: str, logger: Logger) -> None:
+    global _BUDGET_USED
+    total = configure_gemini_budget()
+    _BUDGET_USED = total
+    logger.warning("Gemini provider exhausted; using fallback for %s", stage)
