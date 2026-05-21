@@ -136,12 +136,12 @@
   },
   {
     "id": "d51089964276",
-    "status": "deferred_generation_unavailable",
-    "created_at": "2026-05-20T19:31:15.862021Z",
-    "score": 105,
-    "reason": "deferred: generation provider unavailable",
-    "proposed_post": "",
-    "source_angle": "Rule-based",
+    "status": "approved",
+    "created_at": "2026-05-21T08:38:17.752623Z",
+    "score": 95,
+    "reason": "Open-source tool released on GitHub, directly enabling AI agents to interact with any CLI. High utility for builders.",
+    "proposed_post": "HKUDS launched CLI-Anything, an open-source tool that makes any CLI software agent-native. Builders can now integrate AI agents with existing tools without custom APIs, expanding automation possibilities.",
+    "source_angle": "Open-source tool for agent-native CLI interaction",
     "source_item": {
       "title": "HKUDS/CLI-Anything — \"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:  https://clianything.cc/",
       "source": "GitHub Trending",
@@ -150,11 +150,9 @@
       "engagement_score": 930.0,
       "local_newsworthiness_score": 105
     },
-    "deferred_at": "2026-05-20T19:31:15.862001Z",
-    "defer_count": 1,
-    "original_score": 105,
-    "original_reason": "deferred: generation provider unavailable",
-    "card_path": null
+    "card_path": null,
+    "reactivated_at": "2026-05-21T08:38:17.752623Z",
+    "is_llm_mode": true
   },
   {
     "id": "fa7449dbc829",
@@ -200,5 +198,69 @@
     "is_llm_mode": false,
     "claire_note": "Aus *Anthropic Python SDK Releases* ist ein starker Kandidat reingekommen: *Anthropic Python SDK v0.103.0*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 65_",
     "chloe_note": "Kurzes Update: *Anthropic Python SDK v0.103.0* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: strong, /ul, python, features. Ich habe es mit 65 Punkten bewertet. Hier der Link: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.103.0"
+  },
+  {
+    "id": "87f6c92f5d40",
+    "status": "deferred_generation_unavailable",
+    "created_at": "2026-05-21T08:38:16.410903Z",
+    "score": 65,
+    "reason": "deferred: generation provider unavailable",
+    "proposed_post": "",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Anthropic Python SDK v0.102.0",
+      "source": "Anthropic Python SDK Releases",
+      "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.102.0",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 65
+    },
+    "deferred_at": "2026-05-21T08:38:16.410867Z",
+    "defer_count": 1,
+    "original_score": 65,
+    "original_reason": "deferred: generation provider unavailable",
+    "card_path": null
+  },
+  {
+    "id": "2afa7269f2b4",
+    "status": "approved",
+    "created_at": "2026-05-21T08:38:17.742074Z",
+    "score": 95,
+    "reason": "local newsworthiness fallback",
+    "proposed_post": "Remove-AI-Watermarks ships a CLI for stripping AI image watermarks.\n\nStandalone CLI and Python library from wiltodelta removes invisible AI watermarks with 378 points to\n\n#AIWatermarks #StableDiffusion #CLI",
+    "source_angle": "Local high-score + Sarah/OpenRouter fallback",
+    "source_item": {
+      "title": "Remove-AI-Watermarks – CLI and library for removing AI watermarks from images",
+      "source": "HackerNews",
+      "link": "https://github.com/wiltodelta/remove-ai-watermarks",
+      "source_tier": 3,
+      "engagement_score": 504.0,
+      "local_newsworthiness_score": 95,
+      "summary": "378 points, 252 comments on Hacker News — submitted by janalsncm — original: https://github.com/wiltodelta/remove-ai-watermarks\n[Cluster context: 1 sources, engagement 504, common terms: watermarks, 378, original, cli, points.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 504,
+        "common_terms": [
+          "watermarks",
+          "378",
+          "original",
+          "cli",
+          "points",
+          "removing",
+          "hacker",
+          "comments"
+        ],
+        "cluster_summary": "1 sources, engagement 504. Common terms: watermarks, 378, original, cli. Lead: Remove-AI-Watermarks – CLI and library for removing AI watermarks from images",
+        "alternative_titles": [],
+        "cluster_score": 40
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Aus *HackerNews* ist ein starker Kandidat reingekommen: *Remove-AI-Watermarks – CLI and library for removing AI watermarks from images*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 95_",
+    "chloe_note": "*Remove-AI-Watermarks – CLI and library for removing AI watermarks from images* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch local newsworthiness fallbackCluster context: 1 sources, engagement 504. Common terms: watermarks, 378, original, cli. Bewertung: 95. Quelle: https://github.com/wiltodelta/remove-ai-watermarks"
   }
 ]
