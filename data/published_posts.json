@@ -24,5 +24,18 @@
     "card_path": "generated/cards/2afa7269f2b4.png",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mme4sm7fnt2j",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mme4sm7fnt2j"
+  },
+  {
+    "id": "d51089964276",
+    "published_at": "2026-05-21T15:23:01.986881Z",
+    "platform": "bluesky",
+    "post": "Agent-native CLI tools emerge.\n\nCLI-Anything integrates AI agents with existing CLIs, Apache 2.0 licensed.\n\n#CLIAnything #AgentNative #HKUDS",
+    "source_link": "https://github.com/HKUDS/CLI-Anything",
+    "source_title": "HKUDS/CLI-Anything — \"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:  https://clianything.cc/",
+    "score": 95,
+    "reason": "Open-source tool released on GitHub, directly enabling AI agents to interact with any CLI. High utility for builders.",
+    "card_path": "generated/cards/d51089964276.png",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmepymmqlv27",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmepymmqlv27"
   }
 ]

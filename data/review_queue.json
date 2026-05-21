@@ -136,11 +136,11 @@
   },
   {
     "id": "d51089964276",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-05-21T08:38:17.752623Z",
     "score": 95,
     "reason": "Open-source tool released on GitHub, directly enabling AI agents to interact with any CLI. High utility for builders.",
-    "proposed_post": "HKUDS launched CLI-Anything, an open-source tool that makes any CLI software agent-native. Builders can now integrate AI agents with existing tools without custom APIs, expanding automation possibilities.",
+    "proposed_post": "Agent-native CLI tools emerge.\n\nCLI-Anything integrates AI agents with existing CLIs, Apache 2.0 licensed.\n\n#CLIAnything #AgentNative #HKUDS",
     "source_angle": "Open-source tool for agent-native CLI interaction",
     "source_item": {
       "title": "HKUDS/CLI-Anything — \"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:  https://clianything.cc/",
@@ -150,9 +150,20 @@
       "engagement_score": 930.0,
       "local_newsworthiness_score": 105
     },
-    "card_path": null,
+    "card_path": "generated/cards/d51089964276.png",
     "reactivated_at": "2026-05-21T08:38:17.752623Z",
-    "is_llm_mode": true
+    "is_llm_mode": true,
+    "sarah_package": {
+      "title": "Agent-native CLI tools emerge.",
+      "subtitle": "CLI-Anything integrates AI agents with existing CLIs, Apache 2.0 licensed.",
+      "description": "HKUDS releases CLI-Anything, enabling direct AI agent interaction with any CLI software, available on CLI-Hub.",
+      "hashtags": [
+        "#CLIAnything",
+        "#AgentNative",
+        "#HKUDS"
+      ]
+    },
+    "published_at": "2026-05-21T15:23:01.986881Z"
   },
   {
     "id": "fa7449dbc829",
