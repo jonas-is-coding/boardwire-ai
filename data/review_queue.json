@@ -1,11 +1,11 @@
 [
   {
     "id": "c8256f48ba9f",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-05-20T19:31:15.869851Z",
     "score": 85,
     "reason": "local newsworthiness fallback",
-    "proposed_post": "Codegraph indexes code knowledge for Claude Code, Codex and Cursor.\n\nPre-indexed graph reduces tokens and tool calls, 100% local, on GitHub Trending.\n\n#Codegraph #ClaudeCode #Codex",
+    "proposed_post": "Codegraph ships a local code knowledge graph for AI editors.\n\nPre-indexed 100% local graph cuts tokens and tool calls for Claude Code, Codex, Cursor, and OpenCode\n\n#Codegraph #ClaudeCode #Codex",
     "source_angle": "Local high-score + Sarah/OpenRouter fallback",
     "source_item": {
       "title": "colbymchenry/codegraph — Pre-indexed code knowledge graph for Claude Code, Codex, Cursor, and OpenCode — fewer tokens, fewer tool calls, 100% local",
@@ -15,9 +15,20 @@
       "engagement_score": 1910.0,
       "local_newsworthiness_score": 85
     },
-    "card_path": null,
+    "card_path": "generated/cards/c8256f48ba9f.png",
     "reactivated_at": "2026-05-20T19:31:15.869851Z",
-    "is_llm_mode": false
+    "is_llm_mode": false,
+    "sarah_package": {
+      "title": "Codegraph ships a local code knowledge graph for AI editors.",
+      "subtitle": "Pre-indexed 100% local graph cuts tokens and tool calls for Claude Code, Codex, Cursor, and OpenCode",
+      "description": "Indexes full codebases into a persistent graph. No external API calls. Apache 2.0 license. CLI available today.",
+      "hashtags": [
+        "#Codegraph",
+        "#ClaudeCode",
+        "#Codex"
+      ]
+    },
+    "published_at": "2026-05-21T19:52:35.897408Z"
   },
   {
     "id": "257a891bd1f4",

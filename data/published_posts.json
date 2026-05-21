@@ -37,5 +37,18 @@
     "card_path": "generated/cards/d51089964276.png",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmepymmqlv27",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmepymmqlv27"
+  },
+  {
+    "id": "c8256f48ba9f",
+    "published_at": "2026-05-21T19:52:35.897408Z",
+    "platform": "bluesky",
+    "post": "Codegraph ships a local code knowledge graph for AI editors.\n\nPre-indexed 100% local graph cuts tokens and tool calls for Claude Code, Codex, Cursor, and OpenCode\n\n#Codegraph #ClaudeCode #Codex",
+    "source_link": "https://github.com/colbymchenry/codegraph",
+    "source_title": "colbymchenry/codegraph — Pre-indexed code knowledge graph for Claude Code, Codex, Cursor, and OpenCode — fewer tokens, fewer tool calls, 100% local",
+    "score": 85,
+    "reason": "local newsworthiness fallback",
+    "card_path": "generated/cards/c8256f48ba9f.png",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmf72mzgib2j",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmf72mzgib2j"
   }
 ]
