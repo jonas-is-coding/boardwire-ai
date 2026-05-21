@@ -212,12 +212,12 @@
   },
   {
     "id": "87f6c92f5d40",
-    "status": "deferred_generation_unavailable",
-    "created_at": "2026-05-21T08:38:16.410903Z",
+    "status": "approved",
+    "created_at": "2026-05-21T19:02:11.152540Z",
     "score": 65,
-    "reason": "deferred: generation provider unavailable",
-    "proposed_post": "",
-    "source_angle": "Rule-based",
+    "reason": "local newsworthiness fallback",
+    "proposed_post": "Anthropic adds local execution to Python SDK.\n\nv0.102.0 enables local model runs, Apache 2.0, +100 stars in a week.\n\n#Anthropic #LocalExecution #PythonSDK",
+    "source_angle": "Local high-score + Sarah/OpenRouter fallback",
     "source_item": {
       "title": "Anthropic Python SDK v0.102.0",
       "source": "Anthropic Python SDK Releases",
@@ -226,11 +226,9 @@
       "engagement_score": 0.0,
       "local_newsworthiness_score": 65
     },
-    "deferred_at": "2026-05-21T08:38:16.410867Z",
-    "defer_count": 1,
-    "original_score": 65,
-    "original_reason": "deferred: generation provider unavailable",
-    "card_path": null
+    "card_path": null,
+    "reactivated_at": "2026-05-21T19:02:11.152540Z",
+    "is_llm_mode": false
   },
   {
     "id": "2afa7269f2b4",
