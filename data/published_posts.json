@@ -11,5 +11,18 @@
     "card_path": "generated/cards/257a891bd1f4.png",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmcpsfqhnt2s",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmcpsfqhnt2s"
+  },
+  {
+    "id": "2afa7269f2b4",
+    "published_at": "2026-05-21T09:39:38.400313Z",
+    "platform": "bluesky",
+    "post": "AI image watermarks are becoming removable primitives.\n\nRemove-AI-Watermarks ships a CLI and Python library for stripping invisible signatures with 378 poin\n\n#AIWatermarks #StableDiffusion #CLI",
+    "source_link": "https://github.com/wiltodelta/remove-ai-watermarks",
+    "source_title": "Remove-AI-Watermarks – CLI and library for removing AI watermarks from images",
+    "score": 95,
+    "reason": "local newsworthiness fallback",
+    "card_path": "generated/cards/2afa7269f2b4.png",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mme4sm7fnt2j",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mme4sm7fnt2j"
   }
 ]
