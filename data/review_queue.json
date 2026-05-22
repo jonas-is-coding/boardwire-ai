@@ -223,11 +223,11 @@
   },
   {
     "id": "87f6c92f5d40",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-05-21T19:02:11.152540Z",
     "score": 65,
     "reason": "local newsworthiness fallback",
-    "proposed_post": "Anthropic adds local execution to Python SDK.\n\nv0.102.0 enables local model runs, Apache 2.0, +100 stars in a week.\n\n#Anthropic #LocalExecution #PythonSDK",
+    "proposed_post": "Anthropic Python SDK adds local execution.\n\nSDK v0.102.0 enables running models locally, Apache 2.0, 100+ stars in a week.\n\n#Anthropic #PythonSDK #LocalExecution",
     "source_angle": "Local high-score + Sarah/OpenRouter fallback",
     "source_item": {
       "title": "Anthropic Python SDK v0.102.0",
@@ -237,9 +237,20 @@
       "engagement_score": 0.0,
       "local_newsworthiness_score": 65
     },
-    "card_path": null,
+    "card_path": "generated/cards/87f6c92f5d40.png",
     "reactivated_at": "2026-05-21T19:02:11.152540Z",
-    "is_llm_mode": false
+    "is_llm_mode": false,
+    "sarah_package": {
+      "title": "Anthropic Python SDK adds local execution.",
+      "subtitle": "SDK v0.102.0 enables running models locally, Apache 2.0, 100+ stars in a week.",
+      "description": "Adds local model execution to the Anthropic SDK. Apache 2.0 license. First release to include offline inference capability.",
+      "hashtags": [
+        "#Anthropic",
+        "#PythonSDK",
+        "#LocalExecution"
+      ]
+    },
+    "published_at": "2026-05-22T09:21:20.362203Z"
   },
   {
     "id": "2afa7269f2b4",

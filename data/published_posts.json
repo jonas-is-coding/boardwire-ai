@@ -50,5 +50,18 @@
     "card_path": "generated/cards/c8256f48ba9f.png",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmf72mzgib2j",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmf72mzgib2j"
+  },
+  {
+    "id": "87f6c92f5d40",
+    "published_at": "2026-05-22T09:21:20.362203Z",
+    "platform": "bluesky",
+    "post": "Anthropic Python SDK adds local execution.\n\nSDK v0.102.0 enables running models locally, Apache 2.0, 100+ stars in a week.\n\n#Anthropic #PythonSDK #LocalExecution",
+    "source_link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.102.0",
+    "source_title": "Anthropic Python SDK v0.102.0",
+    "score": 65,
+    "reason": "local newsworthiness fallback",
+    "card_path": "generated/cards/87f6c92f5d40.png",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmgmarstj52o",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmgmarstj52o"
   }
 ]
