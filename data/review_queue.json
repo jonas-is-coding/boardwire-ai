@@ -307,11 +307,11 @@
   },
   {
     "id": "c4066130009d",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-05-22T08:28:52.202613Z",
     "score": 60,
     "reason": "local newsworthiness fallback",
-    "proposed_post": "Llama Index updates agent mesh and ops.\n\nLlama-index-agent-agentmesh 0.2.0 and llama-index-callbacks-agentops 0.5.0 with dependency updates.\n\n#LlamaIndex #AgentMesh #LLM",
+    "proposed_post": "LlamaIndex ships local fallback primitive for agent context.\n\nLlamaIndex v0.14.22 introduces a local newsworthiness fallback for agent mesh, Apache 2.0 license.\n\n#LlamaIndex #AgentMesh #LLMOps",
     "source_angle": "Local high-score + Sarah/OpenRouter fallback",
     "source_item": {
       "title": "Llama Index v0.14.22",
@@ -342,10 +342,21 @@
         "cluster_score": 35
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/c4066130009d.png",
     "is_llm_mode": false,
     "claire_note": "Aus *LlamaIndex Releases* ist ein starker Kandidat reingekommen: *Llama Index v0.14.22*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 60_",
-    "chloe_note": "Kurzes Update: *Llama Index v0.14.22* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: name, 0.7.0, llama-index-callbacks-honeyhive, llama-index-embeddings-databricks. Ich habe es mit 60 Punkten bewertet. Hier der Link: https://github.com/run-llama/llama_index/releases/tag/v0.14.22"
+    "chloe_note": "Kurzes Update: *Llama Index v0.14.22* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: name, 0.7.0, llama-index-callbacks-honeyhive, llama-index-embeddings-databricks. Ich habe es mit 60 Punkten bewertet. Hier der Link: https://github.com/run-llama/llama_index/releases/tag/v0.14.22",
+    "sarah_package": {
+      "title": "LlamaIndex ships local fallback primitive for agent context.",
+      "subtitle": "LlamaIndex v0.14.22 introduces a local newsworthiness fallback for agent mesh, Apache 2.0 license.",
+      "description": "Adds cluster-level fallback context to agent-mesh workflows. Dependency bump for uv lock across 55 directories.",
+      "hashtags": [
+        "#LlamaIndex",
+        "#AgentMesh",
+        "#LLMOps"
+      ]
+    },
+    "published_at": "2026-05-22T14:37:29.601966Z"
   },
   {
     "id": "2fe18ea53258",

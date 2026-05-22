@@ -63,5 +63,18 @@
     "card_path": "generated/cards/87f6c92f5d40.png",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmgmarstj52o",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmgmarstj52o"
+  },
+  {
+    "id": "c4066130009d",
+    "published_at": "2026-05-22T14:37:29.601966Z",
+    "platform": "bluesky",
+    "post": "LlamaIndex ships local fallback primitive for agent context.\n\nLlamaIndex v0.14.22 introduces a local newsworthiness fallback for agent mesh, Apache 2.0 license.\n\n#LlamaIndex #AgentMesh #LLMOps",
+    "source_link": "https://github.com/run-llama/llama_index/releases/tag/v0.14.22",
+    "source_title": "Llama Index v0.14.22",
+    "score": 60,
+    "reason": "local newsworthiness fallback",
+    "card_path": "generated/cards/c4066130009d.png",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmh5waf7zq27",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmh5waf7zq27"
   }
 ]
