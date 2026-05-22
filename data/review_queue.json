@@ -63,7 +63,7 @@
   },
   {
     "id": "e0a44f2f0e6a",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-05-20T16:27:35.013233Z",
     "score": 90,
     "reason": "Gemini 3.5 Flash is GA via API today, directly usable by developers. Clear ship, not a preview.",
@@ -101,11 +101,12 @@
     "card_path": null,
     "is_llm_mode": true,
     "claire_note": "Chloe, dieser Simon Willison-Post über Gemini 3.5 Flash ist ein Hit.\n\nDirekt GA, kein Preview-Gedöns – das ist der Punkt. Entwickler können das sofort in ihre Apps einbauen, ohne auf Stabilität warten zu müssen. Google setzt es selbst breit ein, was Vertrauen schafft und bedeutet, dass hier keine halbgaren Experimente laufen. Schnellerer Iterationszyklus, weniger Risiko.",
-    "chloe_note": "Hey, *Simon Willison v3.5* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Gemini 3.5 Flash is GA via API today, directly usable by developers. Clear ship, not a preview.Cluster context: 1 sources, engagement 0. Common terms: presumably, set, against, significantly. Score aktuell: 90. Link: https://simonwillison.net/2026/May/19/gemini-35-flash/#atom-entries"
+    "chloe_note": "Hey, *Simon Willison v3.5* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Gemini 3.5 Flash is GA via API today, directly usable by developers. Clear ship, not a preview.Cluster context: 1 sources, engagement 0. Common terms: presumably, set, against, significantly. Score aktuell: 90. Link: https://simonwillison.net/2026/May/19/gemini-35-flash/#atom-entries",
+    "expired_at": "2026-05-22T19:43:52.061711Z"
   },
   {
     "id": "66f7491508b7",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-05-20T16:27:37.382391Z",
     "score": 85,
     "reason": "local newsworthiness fallback",
@@ -143,7 +144,8 @@
     "card_path": null,
     "is_llm_mode": false,
     "claire_note": "Aus *GitHub Trending* ist ein starker Kandidat reingekommen: *anthropics/claude-plugins-official — Official, Anthropic-managed directory of high quality Claude Code Plugins.*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 85_",
-    "chloe_note": "*anthropics/claude-plugins-official — Official, Anthropic-managed directory of high quality Claude Code Plugins.* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch local newsworthiness fallbackCluster context: 1 sources, engagement 706. Common terms: stars., anthropic-managed, high, claude. Bewertung: 85. Quelle: https://github.com/anthropics/claude-plugins-official"
+    "chloe_note": "*anthropics/claude-plugins-official — Official, Anthropic-managed directory of high quality Claude Code Plugins.* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch local newsworthiness fallbackCluster context: 1 sources, engagement 706. Common terms: stars., anthropic-managed, high, claude. Bewertung: 85. Quelle: https://github.com/anthropics/claude-plugins-official",
+    "expired_at": "2026-05-22T19:43:52.061711Z"
   },
   {
     "id": "d51089964276",
@@ -178,7 +180,7 @@
   },
   {
     "id": "fa7449dbc829",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-05-20T19:31:15.861325Z",
     "score": 65,
     "reason": "local newsworthiness fallback",
@@ -219,7 +221,8 @@
     "card_path": null,
     "is_llm_mode": false,
     "claire_note": "Aus *Anthropic Python SDK Releases* ist ein starker Kandidat reingekommen: *Anthropic Python SDK v0.103.0*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 65_",
-    "chloe_note": "Kurzes Update: *Anthropic Python SDK v0.103.0* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: strong, /ul, python, features. Ich habe es mit 65 Punkten bewertet. Hier der Link: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.103.0"
+    "chloe_note": "Kurzes Update: *Anthropic Python SDK v0.103.0* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: strong, /ul, python, features. Ich habe es mit 65 Punkten bewertet. Hier der Link: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.103.0",
+    "expired_at": "2026-05-22T19:43:52.061711Z"
   },
   {
     "id": "87f6c92f5d40",
@@ -409,11 +412,11 @@
   },
   {
     "id": "313a14ca4a98",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-05-22T18:58:10.415860Z",
     "score": 88,
     "reason": "New Ollama pre-release ships with major architectural shift to llama.cpp/GGUF and MLX for Apple Silicon, available for testing now.",
-    "proposed_post": "Ollama v0.30.0 (pre-release) now directly uses llama.cpp, supports GGUF, and accelerates Apple Silicon inference with MLX. Builders can expect improved compatibility with the llama.cpp ecosystem and potential performance gains for local LLM deployment on Macs.",
+    "proposed_post": "Ollama abandons GGML for llama.cpp and GGUF.\n\nv0.30.0 pre-release drops GGML, adds GGUF support and MLX acceleration on Apple Silicon.\n\n#Ollama #GGUF #MLX",
     "source_angle": "Ollama v0.30.0 pre-release: llama.cpp, GGUF, MLX for Apple Silicon",
     "source_item": {
       "title": "Ollama v0.30.0",
@@ -450,10 +453,21 @@
         "cluster_score": 35
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/313a14ca4a98.png",
     "is_llm_mode": true,
     "claire_note": "Chloe, check this out: Ollama v0.30.0.\n\nDer Wechsel von GGML zu direkter 'llama.cpp'-Unterstützung ist ein Game Changer für Devs, die lokale LLMs nutzen. Das bedeutet GGUF-Kompatibilität out-of-the-box, was den Zugriff auf ein riesiges Modell-Ökosystem vereinfacht. Und mit MLX-Beschleunigung auf Apple Silicon kriegen Apple-Nutzer endlich ernsthaft schnelle Inferenzzeiten, direkt auf ihrer Hardware.",
-    "chloe_note": "Hey, *Ollama v0.30.0* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New Ollama pre-release ships with major architectural shift to llama.cpp/GGUF and MLX for Apple Silicon, available for testing now.Cluster context: 1 sources, engagement 0. Common terms: ollama, /ul, /li, mlx. Score aktuell: 88. Link: https://github.com/ollama/ollama/releases/tag/v0.30.0-rc23"
+    "chloe_note": "Hey, *Ollama v0.30.0* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New Ollama pre-release ships with major architectural shift to llama.cpp/GGUF and MLX for Apple Silicon, available for testing now.Cluster context: 1 sources, engagement 0. Common terms: ollama, /ul, /li, mlx. Score aktuell: 88. Link: https://github.com/ollama/ollama/releases/tag/v0.30.0-rc23",
+    "sarah_package": {
+      "title": "Ollama abandons GGML for llama.cpp and GGUF.",
+      "subtitle": "v0.30.0 pre-release drops GGML, adds GGUF support and MLX acceleration on Apple Silicon.",
+      "description": "First public build with native llama.cpp backend and MLX inference for Apple Silicon. Apache 2.0 license.",
+      "hashtags": [
+        "#Ollama",
+        "#GGUF",
+        "#MLX"
+      ]
+    },
+    "published_at": "2026-05-22T19:43:52.061711Z"
   },
   {
     "id": "fa833b715987",

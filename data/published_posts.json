@@ -76,5 +76,18 @@
     "card_path": "generated/cards/c4066130009d.png",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmh5waf7zq27",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmh5waf7zq27"
+  },
+  {
+    "id": "313a14ca4a98",
+    "published_at": "2026-05-22T19:43:52.061711Z",
+    "platform": "bluesky",
+    "post": "Ollama abandons GGML for llama.cpp and GGUF.\n\nv0.30.0 pre-release drops GGML, adds GGUF support and MLX acceleration on Apple Silicon.\n\n#Ollama #GGUF #MLX",
+    "source_link": "https://github.com/ollama/ollama/releases/tag/v0.30.0-rc23",
+    "source_title": "Ollama v0.30.0",
+    "score": 88,
+    "reason": "New Ollama pre-release ships with major architectural shift to llama.cpp/GGUF and MLX for Apple Silicon, available for testing now.",
+    "card_path": "generated/cards/313a14ca4a98.png",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmhozx3yko2q",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmhozx3yko2q"
   }
 ]
