@@ -612,5 +612,53 @@
     "is_llm_mode": true,
     "claire_note": "Hey Chloe,\n\nHab da was auf GitHub Trending gefunden, das für unsere Builder interessant sein könnte: \"mukul975/Anthropic-Cybersecurity-Skills\". Das ist eine Liste von 754 strukturierten Cybersecurity-Skills für KI-Agenten, gemappt auf fünf gängige Frameworks.\n\nDas ist super relevant, weil es Entwicklern einen direkten Startpunkt gibt, um ihre eigenen KI-Agenten sicherer zu machen oder Sicherheitsfeatures zu implementieren. Sie können diese Skills direkt nutzen, um Agenten zu trainieren, die Schwachstellen erkennen oder Abwehrmechanismen verstehen, ohne bei Null anfangen zu müssen. Das ist ein konkretes Toolkit für alle, die an AI-gestützten Sicherheitstools arbeiten oder ihre Agenten robuster gestalten wollen.",
     "chloe_note": "Kurzes Update: *mukul975/Anthropic-Cybersecurity-Skills — 754 structured cybersecurity skills for AI agents · Mapped to 5 frameworks: MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND & NIST AI RMF · agentskills.io sta* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Open-source release of 754 structured cybersecurity skills for AI agents, immediately usable by builders.Cluster context: 1 sources, engagement 238. Common terms: mitre, 754, agentskills.io, mukul975/anthropic-cybersecurity-skills. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://github.com/mukul975/Anthropic-Cybersecurity-Skills"
+  },
+  {
+    "id": "bcdb7cfa32f2",
+    "status": "approved",
+    "created_at": "2026-05-23T18:04:09.045339Z",
+    "score": 90,
+    "reason": "New Claude Code CLI version ships with an enhanced code review command and critical bug fixes for MCP integration.",
+    "proposed_post": "Claude Code v2.1.146 renames `/simplify` to `/code-review` with an optional effort level. Builders can now specify review depth and benefit from fixed MCP resource pagination.",
+    "source_angle": "Claude Code CLI update enhances code review and fixes MCP integration.",
+    "source_item": {
+      "title": "Claude Code v2.1.146",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.146",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 65,
+      "summary": "<h2>What's changed</h2>\n<ul>\n<li>Renamed <code>/simplify</code> to <code>/code-review</code> with an optional effort level (e.g. <code>/code-review high</code>)</li>\n<li>Auto mode no longer suppresses <code>AskUserQuestion</code> when the user or a skill explicitly relies on it</li>\n<li>Fixed Windows PowerShell tool failing with \"command line is invalid\" when <code>pwsh</code> is installed via winget or the Microsoft Store (regression in v2.1.124)</li>\n<li>Fixed MCP <code>resources/list</code>, <code>resources/templates/list</code>, and <code>prompts/list</code> dropping items past page 1 on paginating servers</li>\n<li>Fixed full-screen strobing in attached background sessions on Windows Terminal while Claude is streaming</li>\n<li>Fixed the auto-updater status line not showing your current version when an update fails</li>\n<li>Fixed on Windows, removing a background-job worktree no longer follows NTFS junctions into the main repo</li>\n<li>Fixed <code>/background</code> refusing sessions whose only typed input was a skill or custom slash command</li>\n<li>Fixed backgrounded sessions re-prompting for tool permissions you already granted with \"don't ask again\"</li>\n<li>Fixed <code>/theme</code> color editor and \"New custom theme\" dialogs not responding to Esc</li>\n<li>Fixed an uncaught exception at the end of streaming sessions when running via the Agent SDK</li>\n<li>Fixed <code>forceLoginOrgUUID</code> and <code>forceLoginMethod</code> managed-settings policies not being enforced against third-party-provider and API-key sessions</li>\n<li>Fixed GNOME Terminal right-click and middle-click paste not inserting text</li>\n<li>Fixed <code>CLAUDE_CODE_SUBAGENT_MODEL</code> not being forwarded to child processes in multi-agent sessions</li>\n<li>Improved auto-updater reliability: native version checks and downloads now retry transient network failures instead of failing immediately</li>\n<li>Improved diff rendering performance for large file edits</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: what, /code, servers, instead, claude.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Claude Code Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "what",
+          "/code",
+          "servers",
+          "instead",
+          "claude",
+          "/ul",
+          "fixed",
+          "windows"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: what, /code, servers, instead. Lead: Claude Code v2.1.146",
+        "alternative_titles": [
+          "Claude Code v2.1.145",
+          "Claude Code v2.1.144",
+          "Claude Code v2.1.143",
+          "Claude Code v2.1.142",
+          "Claude Code v2.1.141"
+        ],
+        "cluster_score": 15
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "claire_note": "Chloe, schau mal hier: Claude Code hat ein Update. Das ist relevant, weil sie '/simplify' in '/code-review' umbenannt haben und jetzt ein optionales Effort-Level anbieten. Das klingt nach einem direkten Win für Devs, die ihre Code-Reviews automatisieren oder zumindest beschleunigen wollen – die können jetzt granularer steuern, wie tief Claude da reingeht.",
+    "chloe_note": "Kurzes Update: *Claude Code v2.1.146* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um New Claude Code CLI version ships with an enhanced code review command and critical bug fixes for MCP integration.Cluster context: 1 sources, engagement 0. Common terms: what, /code, servers, instead. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.146"
   }
 ]
