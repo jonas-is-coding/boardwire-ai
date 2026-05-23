@@ -89,5 +89,18 @@
     "card_path": "generated/cards/313a14ca4a98.png",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmhozx3yko2q",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmhozx3yko2q"
+  },
+  {
+    "id": "e87f37b1b4ba",
+    "published_at": "2026-05-23T08:18:18.860409Z",
+    "platform": "bluesky",
+    "post": "Models.dev simplifies AI model selection.\n\nOpen-source database with specs, pricing, and capabilities, +23 comments on Hacker News.\n\n#ModelsDev #AIModelSelection #OpenSource",
+    "source_link": "https://github.com/anomalyco/models.dev",
+    "source_title": "Models.dev: open-source database of AI model specs, pricing, and capabilities",
+    "score": 90,
+    "reason": "New open-source tool (GitHub repo) launched, providing actionable data for builders.",
+    "card_path": "generated/cards/e87f37b1b4ba.png",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmiz6zbkmk2x",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmiz6zbkmk2x"
   }
 ]
