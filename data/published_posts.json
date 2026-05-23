@@ -102,5 +102,18 @@
     "card_path": "generated/cards/e87f37b1b4ba.png",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmiz6zbkmk2x",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmiz6zbkmk2x"
+  },
+  {
+    "id": "ceed0a7773e9",
+    "published_at": "2026-05-23T19:08:42.165198Z",
+    "platform": "bluesky",
+    "post": "Anthropic-Cybersecurity-Skills ships 754 structured skills for AI agen\n\nMapped to 5 frameworks: MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND & NIST AI RMF. Apache 2.0.\n\n#MITREATTACK #NISTCSF #AgentSecurity",
+    "source_link": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
+    "source_title": "mukul975/Anthropic-Cybersecurity-Skills — 754 structured cybersecurity skills for AI agents · Mapped to 5 frameworks: MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND & NIST AI RMF · agentskills.io sta",
+    "score": 90,
+    "reason": "Open-source release of 754 structured cybersecurity skills for AI agents, immediately usable by builders.",
+    "card_path": "generated/cards/ceed0a7773e9.png",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmk5jyqvdn23",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmk5jyqvdn23"
   }
 ]

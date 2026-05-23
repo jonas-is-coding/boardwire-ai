@@ -573,11 +573,11 @@
   },
   {
     "id": "ceed0a7773e9",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-05-23T12:03:20.080118Z",
     "score": 90,
     "reason": "Open-source release of 754 structured cybersecurity skills for AI agents, immediately usable by builders.",
-    "proposed_post": "mukul975 released 754 Apache 2.0 cybersecurity skills for AI agents, mapped to 5 industry frameworks. Builders can integrate these structured skills into agents for security tasks, compatible with Claude Code, Copilot, and other LLM platforms.",
+    "proposed_post": "Anthropic-Cybersecurity-Skills ships 754 structured skills for AI agen\n\nMapped to 5 frameworks: MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND & NIST AI RMF. Apache 2.0.\n\n#MITREATTACK #NISTCSF #AgentSecurity",
     "source_angle": "GitHub repo provides structured cybersecurity skills for AI agents.",
     "source_item": {
       "title": "mukul975/Anthropic-Cybersecurity-Skills — 754 structured cybersecurity skills for AI agents · Mapped to 5 frameworks: MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND & NIST AI RMF · agentskills.io sta",
@@ -608,10 +608,21 @@
         "cluster_score": 45
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/ceed0a7773e9.png",
     "is_llm_mode": true,
     "claire_note": "Hey Chloe,\n\nHab da was auf GitHub Trending gefunden, das für unsere Builder interessant sein könnte: \"mukul975/Anthropic-Cybersecurity-Skills\". Das ist eine Liste von 754 strukturierten Cybersecurity-Skills für KI-Agenten, gemappt auf fünf gängige Frameworks.\n\nDas ist super relevant, weil es Entwicklern einen direkten Startpunkt gibt, um ihre eigenen KI-Agenten sicherer zu machen oder Sicherheitsfeatures zu implementieren. Sie können diese Skills direkt nutzen, um Agenten zu trainieren, die Schwachstellen erkennen oder Abwehrmechanismen verstehen, ohne bei Null anfangen zu müssen. Das ist ein konkretes Toolkit für alle, die an AI-gestützten Sicherheitstools arbeiten oder ihre Agenten robuster gestalten wollen.",
-    "chloe_note": "Kurzes Update: *mukul975/Anthropic-Cybersecurity-Skills — 754 structured cybersecurity skills for AI agents · Mapped to 5 frameworks: MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND & NIST AI RMF · agentskills.io sta* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Open-source release of 754 structured cybersecurity skills for AI agents, immediately usable by builders.Cluster context: 1 sources, engagement 238. Common terms: mitre, 754, agentskills.io, mukul975/anthropic-cybersecurity-skills. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://github.com/mukul975/Anthropic-Cybersecurity-Skills"
+    "chloe_note": "Kurzes Update: *mukul975/Anthropic-Cybersecurity-Skills — 754 structured cybersecurity skills for AI agents · Mapped to 5 frameworks: MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND & NIST AI RMF · agentskills.io sta* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Open-source release of 754 structured cybersecurity skills for AI agents, immediately usable by builders.Cluster context: 1 sources, engagement 238. Common terms: mitre, 754, agentskills.io, mukul975/anthropic-cybersecurity-skills. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
+    "sarah_package": {
+      "title": "Anthropic-Cybersecurity-Skills ships 754 structured skills for AI agen",
+      "subtitle": "Mapped to 5 frameworks: MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND & NIST AI RMF. Apache 2.0.",
+      "description": "First open-source dataset of 754 cybersecurity skills for AI agents. Works with Claude Code, Copilot, Cursor, and 20+ platforms. Apache 2.0 ",
+      "hashtags": [
+        "#MITREATTACK",
+        "#NISTCSF",
+        "#AgentSecurity"
+      ]
+    },
+    "published_at": "2026-05-23T19:08:42.165198Z"
   },
   {
     "id": "bcdb7cfa32f2",
