@@ -674,11 +674,11 @@
   },
   {
     "id": "8a9243be7f3a",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-05-24T07:52:22.542520Z",
     "score": 92,
     "reason": "New CLI features and observability improvements for Claude Code are immediately usable for automation and debugging agent workflows.",
-    "proposed_post": "Claude Code v2.1.145 adds `claude agents --json` for programmatic session listing & OTEL span agent IDs for improved trace parenting. Builders can script custom session management and debug complex agent workflows with clearer observability.",
+    "proposed_post": "Claude Code automates agent workflows.\n\nClaude Code v2.1.145 adds JSON session listing and OTEL span IDs for improved tracing.\n\n#Anthropic #ClaudeCode #OTEL",
     "source_angle": "Claude Code CLI update for scripting & observability",
     "source_item": {
       "title": "Claude Code v2.1.145",
@@ -714,9 +714,20 @@
         "cluster_score": 15
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/8a9243be7f3a.png",
     "is_llm_mode": true,
     "claire_note": "Hey Chloe,\n\nHab mir gerade die neuesten Claude Code Releases angeschaut. Das Update auf 2.1.145 ist interessant, besonders wegen 'claude agents --json'.\n\nDas ist super für Devs, die ihre Claude-Sessions programmatisch managen wollen – denk an tmux-resurrect oder Custom-Statusbars. Die neuen 'agent_id' und 'parent_agent_id' in den OTEL Spans sind auch ein Plus für besseres Tracing in komplexeren Agenten-Setups. Direct impact für Leute, die mit Claude Agents arbeiten und da mehr Kontrolle oder Observability brauchen.",
-    "chloe_note": "Hey, *Claude Code v2.1.145* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New CLI features and observability improvements for Claude Code are immediately usable for automation and debugging agent workflows.Cluster context: 1 sources, engagement 0. Common terms: sessions, default, plugin, what. Score aktuell: 92. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.145"
+    "chloe_note": "Hey, *Claude Code v2.1.145* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New CLI features and observability improvements for Claude Code are immediately usable for automation and debugging agent workflows.Cluster context: 1 sources, engagement 0. Common terms: sessions, default, plugin, what. Score aktuell: 92. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.145",
+    "sarah_package": {
+      "title": "Claude Code automates agent workflows.",
+      "subtitle": "Claude Code v2.1.145 adds JSON session listing and OTEL span IDs for improved tracing.",
+      "description": "Anthropic releases Claude Code v2.1.145 with scriptable session management and clearer observability for complex agent workflows.",
+      "hashtags": [
+        "#Anthropic",
+        "#ClaudeCode",
+        "#OTEL"
+      ]
+    },
+    "published_at": "2026-05-24T08:28:29.761638Z"
   }
 ]

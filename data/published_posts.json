@@ -115,5 +115,18 @@
     "card_path": "generated/cards/ceed0a7773e9.png",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmk5jyqvdn23",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmk5jyqvdn23"
+  },
+  {
+    "id": "8a9243be7f3a",
+    "published_at": "2026-05-24T08:28:29.761638Z",
+    "platform": "bluesky",
+    "post": "Claude Code automates agent workflows.\n\nClaude Code v2.1.145 adds JSON session listing and OTEL span IDs for improved tracing.\n\n#Anthropic #ClaudeCode #OTEL",
+    "source_link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.145",
+    "source_title": "Claude Code v2.1.145",
+    "score": 92,
+    "reason": "New CLI features and observability improvements for Claude Code are immediately usable for automation and debugging agent workflows.",
+    "card_path": "generated/cards/8a9243be7f3a.png",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmlka52htl22",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmlka52htl22"
   }
 ]
