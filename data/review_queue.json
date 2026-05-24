@@ -870,5 +870,50 @@
     "is_llm_mode": false,
     "claire_note": "Aus *LangChain Releases* ist ein starker Kandidat reingekommen: *LangChain v1.4*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 60_",
     "chloe_note": "Kurzes Update: *LangChain v1.4* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: parsing, level, runnablelambda, mem-optimized. Ich habe es mit 60 Punkten bewertet. Hier der Link: https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.4.0"
+  },
+  {
+    "id": "a266b8e23436",
+    "status": "approved",
+    "created_at": "2026-05-24T18:02:20.898619Z",
+    "score": 92,
+    "reason": "New Claude Code version ships with plugin cost estimates and dependency enforcement, directly impacting developer workflow and cost management.",
+    "proposed_post": "Claude Code v2.1.143 adds projected context cost to the plugin marketplace and improves plugin dependency enforcement. Builders can now estimate token costs for plugins before use and manage plugin dependencies more reliably.",
+    "source_angle": "Claude Code official release notes",
+    "source_item": {
+      "title": "Claude Code v2.1.143",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.143",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 90,
+      "summary": "<h2>What's changed</h2>\n<ul>\n<li>Added plugin dependency enforcement: <code>claude plugin disable</code> now refuses when another enabled plugin depends on the target (with a copy-pasteable disable-chain hint), and <code>claude plugin enable</code> force-enables transitive dependencies</li>\n<li>Added projected context cost (per-turn and per-invocation token estimates) to the <code>/plugin</code> marketplace browse pane</li>\n<li>Added <code>worktree.bgIsolation: \"none\"</code> setting to let background sessions edit the working copy directly without <code>EnterWorktree</code>, for repos where worktrees are impractical</li>\n<li>PowerShell tool now passes <code>-ExecutionPolicy Bypass</code>. Opt out with <code>CLAUDE_CODE_POWERSHELL_RESPECT_EXECUTION_POLICY=1</code></li>\n<li>Background sessions now preserve the model and effort level you set after waking from idle</li>\n<li>Shift+Tab in attached agent sessions now includes auto mode in the cycle</li>\n<li>Fixed a corrupt <code>.credentials.json</code> with a non-array <code>scopes</code> value hanging the CLI on startup or silently aborting OAuth token refresh</li>\n<li>Fixed right-click paste in <code>claude agents</code> on Windows Terminal and WSL</li>\n<li>Fixed stop hooks that block repeatedly looping forever — the turn now ends with a warning after 8 consecutive blocks (override via <code>CLAUDE_CODE_STOP_HOOK_BLOCK_CAP</code>)</li>\n<li>Fixed Esc/Ctrl+C not cancelling a pending <code>/loop</code> wakeup while Claude is idle between iterations</li>\n<li>Fixed <code>/goal</code> evaluator firing while background shells or delegated subagents are still running</li>\n<li>Fixed <code>NO_COLOR</code>/<code>FORCE_COLOR</code> in settings.json <code>env</code> stripping Claude Code's own UI colors — they now apply to subprocesses only</li>\n<li>Fixed agent view spawning repeated PowerShell processes on Windows when listing sessions</li>\n<li>Fixed <code>/bg</code> without a prompt sending \"continue\" to the forked session — the fork now waits for input</li>\n<li>Fixed <code>--agent &lt;name&gt;</code> not finding plugin-contributed agents without the <code>plugin:</code> prefix</li>\n<li>Fixed deleting a session from agent view not removing its transcript file</li>\n<li>Fixed stale-fragment rendering when scrolling in attached background sessions on Windows Terminal</li>\n<li>Fixed background agents false-positive worker-stall detection storm after host sleep or macOS App Nap</li>\n<li>Fixed 5xx error messages pointing at status.claude.com instead of naming the configured gateway or cloud provider</li>\n<li>The PowerShell tool is now enabled by default on Windows for Bedrock, Vertex, and Foundry users. Opt out with <code>CLAUDE_CODE_USE_POWERSHELL_TOOL=0</code>.</li>\n<li><code>claude agents</code> now accepts <code>--add-dir</code>, <code>--settings</code>, <code>--mcp-config</code>, and <code>--plugin-dir</code> and applies them to the dashboard and to background sessions dispatched from it</li>\n<li><code>claude agents</code> accepts <code>--permission-mode</code>, <code>--model</code>, <code>--effort</code>, and <code>--dangerously-skip-permissions</code> to set defaults for sessions dispatched from the view</li>\n<li><code>claude --bg --dangerously-skip-permissions</code> now persists across retire→wake</li>\n<li>Fixed background sessions silently capturing IDE file references into the warm spare's input, which caused the reference to be prepended to the next prompt dispatched from <code>claude agents</code></li>\n<li>Worktree cleanup no longer falls back to <code>rm -rf</code> when <code>git worktree remove</code> fails, preventing loss of gitignored or in-progress files</li>\n<li>Fixed background-job sessions on macOS getting \"Operation not permitted\" errors when reading files under <code>~/Documents</code>, <code>~/Desktop</code>, or <code>~/Downloads</code>, even with Full Disk Access granted.</li>\n<li><code>/bg</code> now preserves <code>--mcp-config</code>, <code>--settings</code>, <code>--add-dir</code>, <code>--plugin-dir</code>, and <code>--strict-mcp-config</code>, so backgrounded sessions keep their MCP servers and settings across respawn.</li>\n<li>Background sessions launched from <code>claude agents</code> now honor <code>permissions.defaultMode</code> from settings.json (was previously overridden to auto mode)</li>\n<li>Fixed: on Windows, pressing ← in <code>claude agents</code> while a response was streaming could leave the agents list unresponsive to all input</li>\n<li><code>/bg</code> and <code>←</code>-detach now preserve <code>--fallback-model</code>, so backgrounded workers degrade to the fallback model on overload instead of hard-failing.</li>\n<li><code>/bg</code> and <code>←</code>-detach now preserve <code>--allow-dangerously-skip-permissions</code>, so the forked worker keeps bypass-permissions available in its Shift+Tab cycle.</li>\n<li>Fixed: background daemon spawn now falls back to the running binary when the <code>~/.local/bin/claude</code> launcher is missing or non-executable</li>\n<li>Fixed <code>claude agents --allow-dangerously-skip-permissions</code> defaulting dispatched sessions to bypass mode instead of making it available in the permission cycle</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: transcript, while, hook, instead, idle.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Claude Code Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "transcript",
+          "while",
+          "hook",
+          "instead",
+          "idle",
+          "sessions",
+          "fixed",
+          "when"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: transcript, while, hook, instead. Lead: Claude Code v2.1.143",
+        "alternative_titles": [
+          "Claude Code v2.1.142",
+          "Claude Code v2.1.141"
+        ],
+        "cluster_score": 15
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "claire_note": "Chloe, der Claude Code Release 2.1.143 ist interessant, weil er die Plugin-Verwaltung deutlich verbessert. Entwickler können jetzt Abhängigkeitskonflikte bei Plugins viel einfacher lösen und transitive Abhängigkeiten werden automatisch aktiviert. Das ist ein praktisches Update für jeden, der mit vielen Plugins arbeitet und Stabilität braucht.",
+    "chloe_note": "Hey, *Claude Code v2.1.143* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New Claude Code version ships with plugin cost estimates and dependency enforcement, directly impacting developer workflow and cost management.Cluster context: 1 sources, engagement 0. Common terms: transcript, while, hook, instead. Score aktuell: 92. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.143"
   }
 ]
