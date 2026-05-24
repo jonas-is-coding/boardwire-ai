@@ -128,5 +128,18 @@
     "card_path": "generated/cards/8a9243be7f3a.png",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmlka52htl22",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmlka52htl22"
+  },
+  {
+    "id": "ae33378628fa",
+    "published_at": "2026-05-24T13:24:37.790949Z",
+    "platform": "bluesky",
+    "post": "Claude Code adds resume for background sessions.\n\nv2.1.144 introduces /resume for bg sessions with elapsed time and plugin update tracking.\n\n#ClaudeCode #BackgroundSessions #PluginManagement",
+    "source_link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.144",
+    "source_title": "Claude Code v2.1.144",
+    "score": 65,
+    "reason": "local newsworthiness fallback",
+    "card_path": "generated/cards/ae33378628fa.png",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmm2rpgezg2u",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmm2rpgezg2u"
   }
 ]
