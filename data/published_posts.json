@@ -141,5 +141,18 @@
     "card_path": "generated/cards/ae33378628fa.png",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmm2rpgezg2u",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmm2rpgezg2u"
+  },
+  {
+    "id": "848c1f99f0c2",
+    "published_at": "2026-05-24T19:16:20.025274Z",
+    "platform": "bluesky",
+    "post": "LangChain v1.4 fixes pydantic v1 import drift.\n\nLangChain v1.4 resolves downstream tooling breakage from pydantic v1 imports with +1.4k GitHub stars\n\n#LangChain #pydantic",
+    "source_link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.4.0",
+    "source_title": "LangChain v1.4",
+    "score": 60,
+    "reason": "local newsworthiness fallback",
+    "card_path": "generated/cards/848c1f99f0c2.png",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmmogl2gzn22",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmmogl2gzn22"
   }
 ]
