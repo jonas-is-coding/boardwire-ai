@@ -180,5 +180,18 @@
     "card_path": "generated/cards/18d8d3c8ccfb.png",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmoq54v7vm2a",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmoq54v7vm2a"
+  },
+  {
+    "id": "a266b8e23436",
+    "published_at": "2026-05-25T19:28:57.975733Z",
+    "platform": "bluesky",
+    "post": "Claude Code enforces plugin costs and dependencies.\n\nv2.1.143 adds per-turn cost estimates to the plugin marketplace and transitive dependency enforcemen\n\n#ClaudeCode #PluginCost #DependencyEnforcement",
+    "source_link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.143",
+    "source_title": "Claude Code v2.1.143",
+    "score": 92,
+    "reason": "New Claude Code version ships with plugin cost estimates and dependency enforcement, directly impacting developer workflow and cost management.",
+    "card_path": "generated/cards/a266b8e23436.png",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmp7m5b2oz2n",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmp7m5b2oz2n"
   }
 ]
