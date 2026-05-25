@@ -167,5 +167,18 @@
     "card_path": "generated/cards/e39c13b9f06e.png",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmo7zszybw2a",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmo7zszybw2a"
+  },
+  {
+    "id": "18d8d3c8ccfb",
+    "published_at": "2026-05-25T14:52:10.234281Z",
+    "platform": "bluesky",
+    "post": "Agent harnesses are getting performance primitives.\n\nECC turns skills, memory and security into configurable primitives for Claude Code, Codex, Cursor an\n\n#ECC #AgentHarness #ClaudeCode",
+    "source_link": "https://github.com/affaan-m/ECC",
+    "source_title": "affaan-m/ECC — The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+    "score": 90,
+    "reason": "Open-source agent harness system `affaan-m/ECC` is available on GitHub, trending with high engagement. Directly usable by builders today.",
+    "card_path": "generated/cards/18d8d3c8ccfb.png",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmoq54v7vm2a",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmoq54v7vm2a"
   }
 ]
