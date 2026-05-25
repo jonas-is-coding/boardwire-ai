@@ -154,5 +154,18 @@
     "card_path": "generated/cards/848c1f99f0c2.png",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmmogl2gzn22",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmmogl2gzn22"
+  },
+  {
+    "id": "e39c13b9f06e",
+    "published_at": "2026-05-25T10:03:59.858855Z",
+    "platform": "bluesky",
+    "post": "Claude-code runs free in terminal, VSCode, and Discord.\n\nAlishahryar1/free-claude-code adds voice to local Claude-code workflows with 565 stars today.\n\n#OpenClaw #VSCode #ClaudeCode",
+    "source_link": "https://github.com/Alishahryar1/free-claude-code",
+    "source_title": "Alishahryar1/free-claude-code — Use claude-code for free in the terminal, VSCode extension or discord like OpenClaw (voice supported)",
+    "score": 90,
+    "reason": "New open-source tool provides free terminal/VSCode/Discord access to Claude-code. Ships today, high builder utility.",
+    "card_path": "generated/cards/e39c13b9f06e.png",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmo7zszybw2a",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmo7zszybw2a"
   }
 ]

@@ -734,11 +734,11 @@
   },
   {
     "id": "e39c13b9f06e",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-05-24T12:04:24.237754Z",
     "score": 90,
     "reason": "New open-source tool provides free terminal/VSCode/Discord access to Claude-code. Ships today, high builder utility.",
-    "proposed_post": "New open-source tool `free-claude-code` provides free terminal, VSCode, and Discord access to Claude's code generation features, including voice. Builders can integrate Claude into their dev workflow with less friction.",
+    "proposed_post": "Claude-code runs free in terminal, VSCode, and Discord.\n\nAlishahryar1/free-claude-code adds voice to local Claude-code workflows with 565 stars today.\n\n#OpenClaw #VSCode #ClaudeCode",
     "source_angle": "GitHub Trending: Open-source tool for Claude-code access",
     "source_item": {
       "title": "Alishahryar1/free-claude-code — Use claude-code for free in the terminal, VSCode extension or discord like OpenClaw (voice supported)",
@@ -769,10 +769,21 @@
         "cluster_score": 35
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/e39c13b9f06e.png",
     "is_llm_mode": true,
     "claire_note": "Chloe, das hier ist ein heißes Ding. \"free-claude-code\" auf GitHub trendet mit +565 Sternen.\n\nEntwickler können Claude-Code jetzt kostenlos direkt im Terminal, VSCode oder Discord nutzen, sogar mit Voice-Support. Das ist ein Game-Changer für schnelle Prototypen und Code-Reviews, ohne direkt in die Anthropic API zu investieren.",
-    "chloe_note": "Hey, *Alishahryar1/free-claude-code — Use claude-code for free in the terminal, VSCode extension or discord like OpenClaw (voice supported)* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New open-source tool provides free terminal/VSCode/Discord access to Claude-code. Ships today, high builder utility.Cluster context: 1 sources, engagement 565. Common terms: vscode, discord, use, like. Score aktuell: 90. Link: https://github.com/Alishahryar1/free-claude-code"
+    "chloe_note": "Hey, *Alishahryar1/free-claude-code — Use claude-code for free in the terminal, VSCode extension or discord like OpenClaw (voice supported)* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New open-source tool provides free terminal/VSCode/Discord access to Claude-code. Ships today, high builder utility.Cluster context: 1 sources, engagement 565. Common terms: vscode, discord, use, like. Score aktuell: 90. Link: https://github.com/Alishahryar1/free-claude-code",
+    "sarah_package": {
+      "title": "Claude-code runs free in terminal, VSCode, and Discord.",
+      "subtitle": "Alishahryar1/free-claude-code adds voice to local Claude-code workflows with 565 stars today.",
+      "description": "VSCode extension, Discord bot, and CLI plugin. No Anthropic API key required. OpenClaw-compatible voice support included.",
+      "hashtags": [
+        "#OpenClaw",
+        "#VSCode",
+        "#ClaudeCode"
+      ]
+    },
+    "published_at": "2026-05-25T10:03:59.858855Z"
   },
   {
     "id": "ae33378628fa",
