@@ -206,5 +206,18 @@
     "card_path": "generated/cards/d7f218c89670.png",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmrcg43fgv2j",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmrcg43fgv2j"
+  },
+  {
+    "id": "d969880e5f73",
+    "published_at": "2026-05-26T20:08:45.644880Z",
+    "platform": "bluesky",
+    "post": "Claude Code adds terminal output hooks and Git HTTPS mode.\n\nv2.1.141 adds terminalSequence field for desktop notifications and HTTPS cloning for GitHub plugins.\n\n#ClaudeCode #WorkloadIdentity",
+    "source_link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.141",
+    "source_title": "Claude Code v2.1.141",
+    "score": 90,
+    "reason": "local newsworthiness fallback",
+    "card_path": "generated/cards/d969880e5f73.png",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmrsc6mpk52v",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmrsc6mpk52v"
   }
 ]
