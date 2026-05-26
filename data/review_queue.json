@@ -1098,5 +1098,47 @@
       ]
     },
     "published_at": "2026-05-26T15:24:37.771210Z"
+  },
+  {
+    "id": "856664735281",
+    "status": "approved",
+    "created_at": "2026-05-26T19:23:36.455913Z",
+    "score": 90,
+    "reason": "New LangChain version with a concrete, immediately usable feature (PII redaction middleware) for builders.",
+    "proposed_post": "LangChain v1.3.2 adds `PIIMiddleware` for in-flight PII redaction in streamed outputs. Builders can now automatically redact sensitive data, improving compliance and security for LLM applications.",
+    "source_angle": "LangChain release adds PII redaction middleware.",
+    "source_item": {
+      "title": "LangChain v1.3.2",
+      "source": "LangChain Releases",
+      "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.3.2",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 35,
+      "summary": "<p>Changes since langchain==1.3.1</p>\n<p>chore(langchain): bump to 1.3.2, require langgraph&gt;=1.2.2 (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/37703\">#37703</a>)<br />\nfix(langchain): land final answer in last AIMessage for <code>TodoListMiddleware</code> (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/37643\">#37643</a>)<br />\nfeat(langchain): redact streamed PII in flight on <code>PIIMiddleware</code> (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/37616\">#37616</a>)<br />\nchore(infra): bump <code>langchain-tests</code> floor to 1.1.9 (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/37610\">#37610</a>)<br />\nrelease(standard-tests): 1.1.9 (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/37609\">#37609</a>)<br />\nfeat(langchain): register stream transformers on middleware (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/37591\">#37591</a>)<br />\nchore: bump idna from 3.11 to 3.15 in /libs/langchain_v1 (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/37534\">#37534</a>)<br />\nci(infra): harden Dependabot version-bound preservation (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/37510\">#37510</a>)<br />\nrefactor(langchain): clean redundancy ifelse. (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/37448\">#37448</a>)<br />\nhotfix: bump lockfiles (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/37508\">#37508</a>)<br />\nchore(core,langchain,openai): refresh stale OpenAI model references (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/37487\">#37487</a>)<br />\nfix(langchain): sort glob_search results by mtime (newest first) (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/37462\">#37462</a>)<br />\nchore: bump langsmith from 0.7.31 to 0.8.0 in /libs/langchain_v1 (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/37391\">#37391</a>)</p>\n[Cluster context: 1 sources, engagement 0, common terms: infra, harden, changes, require, aimessage.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "LangChain Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "infra",
+          "harden",
+          "changes",
+          "require",
+          "aimessage",
+          "todolistmiddleware",
+          "pii",
+          "register"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: infra, harden, changes, require. Lead: LangChain v1.3.2",
+        "alternative_titles": [],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "claire_note": "Aus *LangChain Releases* ist ein starker Kandidat reingekommen: *LangChain v1.3.2*.\nRelevanz fuer Builder: New LangChain version with a concrete, immediately usable feature (PII redaction middleware) for builders.\n_Score: 90_",
+    "chloe_note": "*LangChain v1.3.2* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New LangChain version with a concrete, immediately usable feature (PII redaction middleware) for builders.Cluster context: 1 sources, engagement 0. Common terms: infra, harden, changes, require. Bewertung: 90. Quelle: https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.3.2"
   }
 ]
