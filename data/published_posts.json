@@ -193,5 +193,18 @@
     "card_path": "generated/cards/a266b8e23436.png",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmp7m5b2oz2n",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmp7m5b2oz2n"
+  },
+  {
+    "id": "d7f218c89670",
+    "published_at": "2026-05-26T15:24:37.771210Z",
+    "platform": "bluesky",
+    "post": "Persistent context becomes infrastructure for AI agents.\n\nClaude-mem turns recall into persistent state for coding-agent workflows, with +319 stars today.\n\n#ClaudeMem #AIContext #CodingAgents",
+    "source_link": "https://github.com/thedotmack/claude-mem",
+    "source_title": "thedotmack/claude-mem — Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future s",
+    "score": 90,
+    "reason": "Open-source tool for persistent AI agent context. Ships today, solves a common builder problem.",
+    "card_path": "generated/cards/d7f218c89670.png",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmrcg43fgv2j",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmrcg43fgv2j"
   }
 ]
