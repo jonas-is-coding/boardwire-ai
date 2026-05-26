@@ -1045,5 +1045,47 @@
     "is_llm_mode": false,
     "claire_note": "Aus *Claude Code Releases* ist ein starker Kandidat reingekommen: *Claude Code v2.1.141*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 90_",
     "chloe_note": "Hey, *Claude Code v2.1.141* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: auth, fast, details, wrapping. Score aktuell: 90. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.141"
+  },
+  {
+    "id": "d7f218c89670",
+    "status": "approved",
+    "created_at": "2026-05-26T13:58:21.962814Z",
+    "score": 90,
+    "reason": "Open-source tool for persistent AI agent context. Ships today, solves a common builder problem.",
+    "proposed_post": "thedotmack/claude-mem is an open-source tool providing persistent, compressed context for AI agents across sessions. It integrates with Claude Code, Gemini, Copilot. Builders can use this to manage agent state and extend effective context windows.",
+    "source_angle": "GitHub Trending: New open-source tool for AI agent memory.",
+    "source_item": {
+      "title": "thedotmack/claude-mem — Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future s",
+      "source": "GitHub Trending",
+      "link": "https://github.com/thedotmack/claude-mem",
+      "source_tier": 2,
+      "engagement_score": 319.0,
+      "local_newsworthiness_score": 0,
+      "summary": "Trending on GitHub today: +319 stars. Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More\n[Cluster context: 1 sources, engagement 319, common terms: thedotmack/claude-mem, stars., works, context, across.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 319,
+        "common_terms": [
+          "thedotmack/claude-mem",
+          "stars.",
+          "works",
+          "context",
+          "across",
+          "every",
+          "everything",
+          "trending"
+        ],
+        "cluster_summary": "1 sources, engagement 319. Common terms: thedotmack/claude-mem, stars., works, context. Lead: thedotmack/claude-mem — Persistent Context Across Sessions for Every Agent – Captures everything your agent does during ",
+        "alternative_titles": [],
+        "cluster_score": 25
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "claire_note": "Chloe, das hier ist interessant. 'thedotmack/claude-mem' löst ein echtes Problem: Agenten vergessen ihren Kontext. Das Tool speichert und komprimiert den Session-Verlauf und füttert ihn bei Bedarf zurück. Für Entwickler, die mit KI-Agenten arbeiten, ist das ein Game-Changer – keine verlorenen Konversationen oder redundanten Anweisungen mehr.",
+    "chloe_note": "Kurzes Update: *thedotmack/claude-mem — Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future s* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Open-source tool for persistent AI agent context. Ships today, solves a common builder problem.Cluster context: 1 sources, engagement 319. Common terms: thedotmack/claude-mem, stars., works, context. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://github.com/thedotmack/claude-mem"
   }
 ]
