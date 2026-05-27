@@ -94,5 +94,47 @@
     "original_score": 60,
     "original_reason": "deferred: generation provider unavailable",
     "card_path": null
+  },
+  {
+    "id": "1a3f26f5ee02",
+    "status": "approved",
+    "created_at": "2026-05-27T19:29:44.224640Z",
+    "score": 105,
+    "reason": "local newsworthiness fallback",
+    "proposed_post": "AI LLMs generate short videos.\n\nMoneyPrinterTurbo adds one-click video generation, +1737 stars today.\n\nTrained on large models, MoneyPrinterTurbo enables local video creation with LLMs, available on GitHub.\n\n#LLM #VideoGeneration #AIModels",
+    "source_angle": "Local high-score + Sarah/OpenRouter fallback",
+    "source_item": {
+      "title": "harry0703/MoneyPrinterTurbo — 利用AI大模型，一键生成高清短视频 Generate short videos with one click using AI LLM.",
+      "source": "GitHub Trending",
+      "link": "https://github.com/harry0703/MoneyPrinterTurbo",
+      "source_tier": 2,
+      "engagement_score": 1737.0,
+      "local_newsworthiness_score": 105,
+      "summary": "Trending on GitHub today: +1737 stars. 利用AI大模型，一键生成高清短视频 Generate short videos with one click using AI LLM.\n[Cluster context: 1 sources, engagement 1737, common terms: llm., harry0703/moneyprinterturbo, +1737, videos, github.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 1737,
+        "common_terms": [
+          "llm.",
+          "harry0703/moneyprinterturbo",
+          "+1737",
+          "videos",
+          "github",
+          "trending",
+          "generate",
+          "click"
+        ],
+        "cluster_summary": "1 sources, engagement 1737. Common terms: llm., harry0703/moneyprinterturbo, +1737, videos. Lead: harry0703/MoneyPrinterTurbo — 利用AI大模型，一键生成高清短视频 Generate short videos with one click using AI LLM.",
+        "alternative_titles": [],
+        "cluster_score": 55
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Aus *GitHub Trending* ist ein starker Kandidat reingekommen: *harry0703/MoneyPrinterTurbo — 利用AI大模型，一键生成高清短视频 Generate short videos with one click using AI LLM.*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 105_",
+    "chloe_note": "*harry0703/MoneyPrinterTurbo — 利用AI大模型，一键生成高清短视频 Generate short videos with one click using AI LLM.* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch local newsworthiness fallbackCluster context: 1 sources, engagement 1737. Common terms: llm., harry0703/moneyprinterturbo, +1737, videos. Bewertung: 105. Quelle: https://github.com/harry0703/MoneyPrinterTurbo"
   }
 ]
