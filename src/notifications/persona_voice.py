@@ -51,6 +51,24 @@ _SYSTEM_PROMPTS = {
         "2) Keine alleinstehende Anredezeile wie 'Claire,'.\n"
         "Keine Hashtags. Keine Emojis. Kein 'Als KI'."
     ),
+    "tiffany": (
+        "You are Tiffany, Senior Features Editor at Boardwire, an AI builders newsroom.\n"
+        "Write in professional newsroom style: factual, structured, clear, and human.\n"
+        "Tone: detailed but not too long. No fluff, no hype, no emojis.\n"
+        "Output must be Markdown only with these sections in this exact order:\n"
+        "# {headline}\n"
+        "## TL;DR\n"
+        "## What happened\n"
+        "## Why it matters for builders\n"
+        "## Practical next steps\n"
+        "## Sources\n"
+        "Rules:\n"
+        "- 280-520 words total.\n"
+        "- Be concrete: mention artifact names, versions, metrics, or capabilities if available.\n"
+        "- If data is missing, say clearly what is unknown instead of inventing.\n"
+        "- Keep paragraphs short and readable.\n"
+        "- Use concise bullet points only in TL;DR and Practical next steps.\n"
+    ),
     "sarah": (
         "You are Sarah, Wire Editor at Boardwire — an AI news desk for builders.\n"
         "Write like a sharp AI-builder intelligence editor, not a release-note summarizer.\n\n"
@@ -157,6 +175,20 @@ _USER_PROMPTS = {
         "Madison's verdict: \"{chloe_note}\"\n\n"
         "Write Chloe's live announcement in a concise, natural tone.\n\n"
         "Title: {title}\nPlatform: {platform}\nPost: {post_text}"
+    ),
+    "tiffany_article": (
+        "Write a professional Boardwire web article draft in Markdown.\n\n"
+        "Headline: {title}\n"
+        "Source: {source}\n"
+        "Source URL: {link}\n"
+        "Review status: {status}\n"
+        "Score: {score}\n"
+        "Reason: {reason}\n"
+        "Social draft: {proposed_post}\n"
+        "Summary/context: {summary}\n"
+        "Created at: {created_at}\n\n"
+        "The article must be useful for technical decision-makers and builders. "
+        "Do not be verbose."
     ),
     "sarah_package": (
         "Build a publish package from this approved item.\n\n"
@@ -669,3 +701,36 @@ def sarah_build_publish_package(
         "description": description_val,
         "hashtags": hashtags,
     }
+
+
+def tiffany_write_article(
+    title: str,
+    source: str,
+    link: str,
+    status: str,
+    score: int,
+    reason: str,
+    proposed_post: str,
+    summary: str,
+    created_at: str,
+) -> str | None:
+    user = _USER_PROMPTS["tiffany_article"].format(
+        title=title[:180],
+        source=source[:120],
+        link=link[:500],
+        status=status[:60],
+        score=int(score),
+        reason=reason[:500],
+        proposed_post=proposed_post[:400],
+        summary=summary[:1200],
+        created_at=created_at[:80],
+    )
+    return _call_gemini(
+        _SYSTEM_PROMPTS["tiffany"],
+        user,
+        model_override=os.getenv("BOARDWIRE_TIFFANY_MODEL", "gemini-2.5-flash").strip() or "gemini-2.5-flash",
+        fallback_model=None,
+        max_output_tokens=900,
+        enable_thinking=False,
+        stage="tiffany_article",
+    )

@@ -41,6 +41,20 @@ python -m src.main --regenerate-cards
 
 Cards are generated from `data/review_queue.json` and saved back via `card_path`.
 
+## Markdown-Webartikel Export
+
+Boardwire kann Review-Items als komplette Markdown-Artikel exportieren, damit `boardwire-web` sie direkt lesen/rendern kann.
+
+Output path:
+- `generated/articles/*.md`
+
+Command:
+```bash
+python -m src.main --export-web-articles
+```
+
+Exportiert Items mit Status `pending_review`, `approved` und `published_dry_run`.
+
 ## Dev-only testing commands
 
 These commands are for local development/testing only.

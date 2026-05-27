@@ -21,6 +21,7 @@ from src.collector.github_trending_collector import fetch_github_trending
 from src.cards.card_data import from_review_item
 from src.cards.renderer import render_card_png
 from src.config import (
+    ARTICLES_DIR,
     CARDS_DIR,
     CLUSTERS_DEBUG_PATH,
     DRAFTS_PATH,
@@ -41,6 +42,7 @@ from src.publisher.base import PublishResult
 from src.publisher.bluesky_publisher import BlueskyPublisher
 from src.publisher.dry_run_publisher import DryRunPublisher
 from src.quality.gates import QualityConfig, check_quality
+from src.reports.article_export import export_review_articles
 from src.reports.review_report import generate_review_queue_report
 from src.storage.json_store import JsonStore
 from src.notifications import slack as notify
@@ -779,6 +781,7 @@ def _build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--regenerate-cards", action="store_true", help="Regenerate cards for pending_review and approved items, even if card_path exists.")
     parser.add_argument("--ignore-daily-cap", action="store_true", help="Development-only: bypass daily cap checks for this run.")
     parser.add_argument("--create-test-review-item", action="store_true", help="Development-only: create one pending review item from fixtures.")
+    parser.add_argument("--export-web-articles", action="store_true", help="Export review items as Markdown web articles to generated/articles.")
     return parser
 
 
@@ -1076,6 +1079,13 @@ def _regenerate_cards(logger) -> int:
     JsonStore.save(REVIEW_QUEUE_PATH, queue)
     generate_review_queue_report(REVIEW_QUEUE_PATH, REVIEW_REPORT_PATH)
     logger.info("Regenerated cards: %d", regenerated)
+    return 0
+
+
+def _export_web_articles(logger) -> int:
+    written = export_review_articles(REVIEW_QUEUE_PATH, ARTICLES_DIR)
+    logger.info("Exported web articles: %d", written)
+    logger.info("Articles directory: %s", ARTICLES_DIR)
     return 0
 
 
@@ -1636,6 +1646,8 @@ def run(argv: list[str] | None = None) -> int:
         return _generate_cards(logger)
     if args.regenerate_cards:
         return _regenerate_cards(logger)
+    if args.export_web_articles:
+        return _export_web_articles(logger)
     if args.create_test_review_item:
         if not args.use_fixtures:
             logger.error("--create-test-review-item requires --use-fixtures")
