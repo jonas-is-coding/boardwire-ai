@@ -1,12 +1,12 @@
 [
   {
     "id": "1aff08b34f88",
-    "status": "deferred_generation_unavailable",
-    "created_at": "2026-05-27T06:48:39.386229Z",
-    "score": 85,
-    "reason": "deferred: generation provider unavailable",
-    "proposed_post": "",
-    "source_angle": "Rule-based",
+    "status": "approved",
+    "created_at": "2026-05-27T08:42:39.594711Z",
+    "score": 90,
+    "reason": "Open-source plugins for Claude Cowork are immediately usable, offering concrete tools for builders integrating with Anthropic's platform.",
+    "proposed_post": "Anthropic released an open-source repository of knowledge-work plugins for Claude Cowork. Builders can leverage these pre-built tools or adapt their code for custom Claude integrations, accelerating development for common tasks.",
+    "source_angle": "Anthropic's official open-source plugin release for Claude Cowork",
     "source_item": {
       "title": "anthropics/knowledge-work-plugins — Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
       "source": "GitHub Trending",
@@ -15,11 +15,9 @@
       "engagement_score": 1718.0,
       "local_newsworthiness_score": 85
     },
-    "deferred_at": "2026-05-27T06:48:39.386194Z",
-    "defer_count": 1,
-    "original_score": 85,
-    "original_reason": "deferred: generation provider unavailable",
-    "card_path": null
+    "card_path": null,
+    "reactivated_at": "2026-05-27T08:42:39.594711Z",
+    "is_llm_mode": true
   },
   {
     "id": "7b2cede4e151",
