@@ -232,5 +232,18 @@
     "card_path": "generated/cards/6a2c02f810bd.png",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmsunkejsy27",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmsunkejsy27"
+  },
+  {
+    "id": "856664735281",
+    "published_at": "2026-05-27T06:33:59.420799Z",
+    "platform": "bluesky",
+    "post": "LangChain adds PII redaction middleware.\n\nLangChain v1.3.2 introduces PIIMiddleware for in-flight PII redaction, MIT license.\n\nAutomatically redact sensitive data in streamed outputs, improving compliance and security for LLM applications, compatible with langgraph>=\n\n📖 Read the ",
+    "source_link": "https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.3.2",
+    "source_title": "LangChain v1.3.2",
+    "score": 90,
+    "reason": "New LangChain version with a concrete, immediately usable feature (PII redaction middleware) for builders.",
+    "card_path": "generated/cards/856664735281.png",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmsva6kyu22x",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmsva6kyu22x"
   }
 ]
