@@ -1,11 +1,11 @@
 [
   {
     "id": "1aff08b34f88",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-05-27T08:42:39.594711Z",
     "score": 90,
     "reason": "Open-source plugins for Claude Cowork are immediately usable, offering concrete tools for builders integrating with Anthropic's platform.",
-    "proposed_post": "Anthropic released an open-source repository of knowledge-work plugins for Claude Cowork. Builders can leverage these pre-built tools or adapt their code for custom Claude integrations, accelerating development for common tasks.",
+    "proposed_post": "Claude Cowork gets open-source plugins.\n\nAnthropic's knowledge-work-plugins repository has 90 score on GitHub, usable for custom integrations\n\nPlugins accelerate common task development for builders, available for adaptation and reuse in Claude Cowork workflows.\n\n📖 Read the full ",
     "source_angle": "Anthropic's official open-source plugin release for Claude Cowork",
     "source_item": {
       "title": "anthropics/knowledge-work-plugins — Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
@@ -15,9 +15,21 @@
       "engagement_score": 1718.0,
       "local_newsworthiness_score": 85
     },
-    "card_path": null,
+    "card_path": "generated/cards/1aff08b34f88.png",
     "reactivated_at": "2026-05-27T08:42:39.594711Z",
-    "is_llm_mode": true
+    "is_llm_mode": true,
+    "sarah_package": {
+      "title": "Claude Cowork gets open-source plugins.",
+      "subtitle": "Anthropic's knowledge-work-plugins repository has 90 score on GitHub, usable for custom integrations",
+      "description": "Plugins accelerate common task development for builders, available for adaptation and reuse in Claude Cowork workflows.",
+      "hashtags": [
+        "#Anthropic",
+        "#ClaudeCowork",
+        "#KnowledgeWork"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-05-27-anthropics-knowledge-work-plugins-open-source-repository-of-plugins-primarily-intended-for-knowledge-workers-to-use-in-claude-cowork-1aff08b34f88.md",
+    "published_at": "2026-05-27T09:43:42.651035Z"
   },
   {
     "id": "7b2cede4e151",

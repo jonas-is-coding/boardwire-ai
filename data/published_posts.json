@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "id": "1aff08b34f88",
+    "published_at": "2026-05-27T09:43:42.651035Z",
+    "platform": "bluesky",
+    "post": "Claude Cowork gets open-source plugins.\n\nAnthropic's knowledge-work-plugins repository has 90 score on GitHub, usable for custom integrations\n\nPlugins accelerate common task development for builders, available for adaptation and reuse in Claude Cowork workflows.\n\n📖 Read the full ",
+    "source_link": "https://github.com/anthropics/knowledge-work-plugins",
+    "source_title": "anthropics/knowledge-work-plugins — Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+    "score": 90,
+    "reason": "Open-source plugins for Claude Cowork are immediately usable, offering concrete tools for builders integrating with Anthropic's platform.",
+    "card_path": "generated/cards/1aff08b34f88.png",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmt7tgp7rs2a",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmt7tgp7rs2a"
+  }
+]
