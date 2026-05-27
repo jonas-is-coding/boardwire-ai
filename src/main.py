@@ -42,7 +42,7 @@ from src.publisher.base import PublishResult
 from src.publisher.bluesky_publisher import BlueskyPublisher
 from src.publisher.dry_run_publisher import DryRunPublisher
 from src.quality.gates import QualityConfig, check_quality
-from src.reports.article_export import export_review_articles
+from src.reports.article_export import export_review_articles, write_article_for_item
 from src.reports.review_report import generate_review_queue_report
 from src.storage.json_store import JsonStore
 from src.notifications import slack as notify
@@ -145,9 +145,14 @@ _EDUCATIONAL_TERMS = (
 )
 
 
-def _compose_sarah_post(package: dict[str, str | list[str]]) -> str:
+def _compose_sarah_post(
+    package: dict[str, str | list[str]],
+    source_link: str | None = None,
+    article_url: str | None = None,
+) -> str:
     title = str(package.get("title", "")).strip()
     subtitle = str(package.get("subtitle", "")).strip()
+    description = str(package.get("description", "")).strip()
     raw_tags = package.get("hashtags", [])
     tags = [str(t).strip() for t in raw_tags] if isinstance(raw_tags, list) else []
     tags_line = " ".join(t for t in tags if t)[:60]
@@ -165,6 +170,14 @@ def _compose_sarah_post(package: dict[str, str | list[str]]) -> str:
     if subtitle:
         parts.append("")
         parts.append(subtitle)
+    if description:
+        parts.append("")
+        parts.append(description)
+    if article_url:
+        parts.append("")
+        parts.append(f"📖 Read the full article: {article_url.strip()}")
+    if source_link:
+        parts.append(f"Quelle: {source_link.strip()}")
     if tags_line:
         parts.append("")
         parts.append(tags_line)
@@ -1414,7 +1427,7 @@ def _publish_approved(args, logger) -> int:
             continue
 
         item["sarah_package"] = sarah_package
-        post_text = _compose_sarah_post(sarah_package)
+        post_text = _compose_sarah_post(sarah_package, source_link=source_link)
         item["proposed_post"] = post_text
         notify.sarah_packaged(
             title=str(sarah_package.get("title", "")),
@@ -1482,6 +1495,16 @@ def _publish_approved(args, logger) -> int:
             logger.warning("Publish blocked (no image available): %s", rid)
             blocked_missing_image_count += 1
             continue
+
+        article_path = write_article_for_item(item, ARTICLES_DIR)
+        item["article_path"] = str(article_path)
+        article_ref = article_path.resolve().as_uri()
+        post_text = _compose_sarah_post(
+            sarah_package,
+            source_link=source_link,
+            article_url=article_ref,
+        )
+        item["proposed_post"] = post_text
 
         result: PublishResult = publisher.publish(
             post=post_text,
