@@ -1150,5 +1150,47 @@
     "is_llm_mode": true,
     "claire_note": "Aus *LangChain Releases* ist ein starker Kandidat reingekommen: *LangChain v1.3.2*.\nRelevanz fuer Builder: New LangChain version with a concrete, immediately usable feature (PII redaction middleware) for builders.\n_Score: 90_",
     "chloe_note": "*LangChain v1.3.2* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New LangChain version with a concrete, immediately usable feature (PII redaction middleware) for builders.Cluster context: 1 sources, engagement 0. Common terms: infra, harden, changes, require. Bewertung: 90. Quelle: https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.3.2"
+  },
+  {
+    "id": "6a2c02f810bd",
+    "status": "approved",
+    "created_at": "2026-05-27T06:22:03.843710Z",
+    "score": 90,
+    "reason": "New version of an open-source tool with concrete, actionable features for developers, directly impacting workflow.",
+    "proposed_post": "Claude Code v2.1.152 adds `/code-review --fix` to automatically apply code review suggestions to your working tree. This streamlines iteration on code improvements, reducing manual copy-pasting and accelerating development.",
+    "source_angle": "Claude Code now auto-applies code review fixes.",
+    "source_item": {
+      "title": "Claude Code v2.1.152",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.152",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 0,
+      "summary": "<h2>What's changed</h2>\n<ul>\n<li><code>/code-review --fix</code> now applies review findings to your working tree after the review, surfacing reuse, simplification, and efficiency suggestions; <code>/simplify</code> now invokes <code>/code-review --fix</code></li>\n<li>Skills and slash commands can now set <code>disallowed-tools</code> in frontmatter to remove tools from the model while the skill is active</li>\n<li>Added <code>/reload-skills</code> command to re-scan skill directories without restarting the session</li>\n<li><code>SessionStart</code> hooks can now return <code>reloadSkills: true</code> to re-scan skill directories, making skills installed by the hook available in the same session</li>\n<li><code>SessionStart</code> hooks can now set the session title via <code>hookSpecificOutput.sessionTitle</code> on startup and resume</li>\n<li>Added a <code>MessageDisplay</code> hook event that lets hooks transform or hide assistant message text as it is displayed</li>\n<li>Added <code>pluginSuggestionMarketplaces</code> managed setting: admins can allowlist org marketplaces whose plugins may be suggested via context-aware tips</li>\n<li><code>claude plugin marketplace remove</code> now accepts <code>--scope user|project|local</code> for symmetry with <code>marketplace add</code>, <code>install</code>, and <code>uninstall</code></li>\n<li>Claude Code now switches to your configured <code>--fallback-model</code> for the rest of the session when the primary model is not found, instead of failing every request</li>\n<li>Auto mode no longer requires opt-in consent</li>\n<li>Vim mode: <code>/</code> in NORMAL mode now opens reverse history search (like Ctrl+R), matching bash/zsh vi-mode</li>\n<li>The <code>/usage</code> breakdown now includes large session files; files are scanned with a streaming read so memory usage stays flat</li>\n<li>Thinking summaries in the collapsed group now stay readable for at least 3 seconds, render as markdown, and cap at 10 lines (<code>Ctrl+O</code> shows the full thinking)</li>\n<li>In fullscreen mode, the \"Thinking for Ns\" indicator now counts up live while the model is thinking, and keeps its value if you interrupt mid-thought</li>\n<li>Simplified the Workflow tool's inline progress display — live agent counts now show only in the persistent workflow status row below the prompt</li>\n<li>The post-response timer now shows \"Waiting for N background agents/workflows to finish\" when backgrounded agents or workflows are still running, and reports the cumulative time once their results are processed</li>\n<li>Added the session entrypoint as an OpenTelemetry metric attribute (<code>app.entrypoint</code>, opt-in via <code>OTEL_METRICS_INCLUDE_ENTRYPOINT=true</code>)</li>\n<li>Fixed terminal styling degrading in very long sessions by recycling the renderer's style pool</li>\n<li>Fixed the sandbox-enabled warning not appearing in condensed startup mode — it now shows in every layout</li>\n<li>Fixed the loading spinner showing \"still thinking\"/\"almost done thinking\" while a tool is running, and reset the thinking status to \"thinking\" after each tool</li>\n<li>Fixed focus mode showing a spurious \"N messages hidden\" count on turns with no hidden activity</li>\n<li>Fixed clicking a link inside an expanded tool result collapsing the section instead of opening the link</li>\n<li>Fixed markdown table cell borders inheriting the color of inline code, wrapped continuation lines losing their style, and empty header cells showing a label in the narrow-terminal stacked layout</li>\n<li>Fixed plugin MCP servers with the same command but different environment variables being incorrectly deduplicated</li>\n<li>Fixed <code>/doctor</code> reporting \"marketplace not found\" or \"plugin not found\" for stale <code>enabledPlugins</code> entries referencing removed marketplaces or dropped plugins</li>\n<li>Fixed plugins that track a git branch silently no longer receiving updates after the plugin registry was rebuilt</li>\n<li>Fixed remote MCP servers failing to connect in Claude Code Remote sessions when the egress proxy is enabled</li>\n<li>Fixed the effort-change confirmation dialog appearing when the conversation has no messages or when switching between effort levels that resolve to the same underlying value</li>\n<li>Fixed the Agent tool description referencing an agent list that is never delivered when running with <code>--bare</code> or with attachments disabled</li>\n<li>Fixed a background worker crash in <code>claude agents</code> when accepting a stale permission prompt after a subagent was cancelled</li>\n<li>Fixed <code>cache_creation_input_tokens</code> reporting as 0 in transcript and result usage when the API reports cache writes only via the nested <code>cache_creation</code> breakdown</li>\n<li>Fixed the PushNotification tool incorrectly reporting \"Mobile push not sent (Remote Control inactive)\" in SDK-hosted sessions when Remote Control is enabled</li>\n<li>Fixed sessions getting stuck after a model or login switch left stale thinking-block signatures in history; now stripped proactively with a retry safety-net</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: re-scan, nested, suggested, add, results.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Claude Code Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "re-scan",
+          "nested",
+          "suggested",
+          "add",
+          "results",
+          "when",
+          "symmetry",
+          "color"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: re-scan, nested, suggested, add. Lead: Claude Code v2.1.152",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "claire_note": "Chloe, das ist ein direktes Update von Claude Code.\n\n'/code-review --fix' und '/simplify' sind jetzt mächtiger. Entwickler können damit Code-Reviews direkt anwenden und Vereinfachungen umsetzen. Das ist ein großer Effizienz-Boost für jeden, der mit Claude Code arbeitet.",
+    "chloe_note": "Hey, *Claude Code v2.1.152* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New version of an open-source tool with concrete, actionable features for developers, directly impacting workflow.Cluster context: 1 sources, engagement 0. Common terms: re-scan, nested, suggested, add. Score aktuell: 90. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.152"
   }
 ]
