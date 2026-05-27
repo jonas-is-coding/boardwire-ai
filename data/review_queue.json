@@ -72,5 +72,27 @@
     "is_llm_mode": true,
     "claire_note": "Chloe, das hier ist interessant: Lum1104/Understand-Anything.\n\nDas Tool verwandelt Code in interaktive Knowledge Graphs. Stell dir vor, du kannst deinen Code nicht nur lesen, sondern wie eine Wissensdatenbank durchsuchen und befragen. Das ist ein Game-Changer für Code-Reviews, Onboarding oder einfach, um komplexen Legacy-Code zu verstehen. Besonders cool ist die Integration mit Claude Code, Codex & Co. – das ist direkt nutzbar für viele Teams.",
     "chloe_note": "*Lum1104/Understand-Anything — Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New open-source tool on GitHub, directly usable for code comprehension, strong community signal, integrates with AI coding assistants.Cluster context: 1 sources, engagement 4697. Common terms: any, turn, stars., codex. Bewertung: 92. Quelle: https://github.com/Lum1104/Understand-Anything"
+  },
+  {
+    "id": "df01ffd31265",
+    "status": "deferred_generation_unavailable",
+    "created_at": "2026-05-27T14:31:11.878267Z",
+    "score": 60,
+    "reason": "deferred: generation provider unavailable",
+    "proposed_post": "",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Llama Index v0.14.22",
+      "source": "LlamaIndex Releases",
+      "link": "https://github.com/run-llama/llama_index/releases/tag/v0.14.22",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 60
+    },
+    "deferred_at": "2026-05-27T14:31:11.878223Z",
+    "defer_count": 1,
+    "original_score": 60,
+    "original_reason": "deferred: generation provider unavailable",
+    "card_path": null
   }
 ]
