@@ -126,3 +126,15 @@ def export_review_articles(review_queue_path: Path, output_dir: Path) -> int:
         target.write_text(body + "\n", encoding="utf-8")
         written += 1
     return written
+
+
+def write_article_for_item(item: dict, output_dir: Path) -> Path:
+    output_dir.mkdir(parents=True, exist_ok=True)
+    source_item = item.get("source_item", {})
+    title = str(source_item.get("title", "Untitled"))
+    date_prefix = _safe_iso_date(item.get("created_at"))
+    filename = f"{date_prefix}-{_slugify(title)}-{item.get('id', 'item')}.md"
+    target = output_dir / filename
+    body = _build_article_markdown(item)
+    target.write_text(body + "\n", encoding="utf-8")
+    return target
