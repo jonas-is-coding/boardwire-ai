@@ -1153,11 +1153,11 @@
   },
   {
     "id": "6a2c02f810bd",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-05-27T06:22:03.843710Z",
     "score": 90,
     "reason": "New version of an open-source tool with concrete, actionable features for developers, directly impacting workflow.",
-    "proposed_post": "Claude Code v2.1.152 adds `/code-review --fix` to automatically apply code review suggestions to your working tree. This streamlines iteration on code improvements, reducing manual copy-pasting and accelerating development.",
+    "proposed_post": "Claude Code automates code review fixes.\n\nClaude Code v2.1.152 adds /code-review --fix with 90 score, streamlining iteration.\n\n#ClaudeCode #CodeReview #Automation",
     "source_angle": "Claude Code now auto-applies code review fixes.",
     "source_item": {
       "title": "Claude Code v2.1.152",
@@ -1188,9 +1188,20 @@
         "cluster_score": 45
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/6a2c02f810bd.png",
     "is_llm_mode": true,
     "claire_note": "Chloe, das ist ein direktes Update von Claude Code.\n\n'/code-review --fix' und '/simplify' sind jetzt mächtiger. Entwickler können damit Code-Reviews direkt anwenden und Vereinfachungen umsetzen. Das ist ein großer Effizienz-Boost für jeden, der mit Claude Code arbeitet.",
-    "chloe_note": "Hey, *Claude Code v2.1.152* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New version of an open-source tool with concrete, actionable features for developers, directly impacting workflow.Cluster context: 1 sources, engagement 0. Common terms: re-scan, nested, suggested, add. Score aktuell: 90. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.152"
+    "chloe_note": "Hey, *Claude Code v2.1.152* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New version of an open-source tool with concrete, actionable features for developers, directly impacting workflow.Cluster context: 1 sources, engagement 0. Common terms: re-scan, nested, suggested, add. Score aktuell: 90. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.152",
+    "sarah_package": {
+      "title": "Claude Code automates code review fixes.",
+      "subtitle": "Claude Code v2.1.152 adds /code-review --fix with 90 score, streamlining iteration.",
+      "description": "Applies review findings to the working tree, reducing manual copy-pasting, with new /reload-skills command and disallowed-tools frontmatter.",
+      "hashtags": [
+        "#ClaudeCode",
+        "#CodeReview",
+        "#Automation"
+      ]
+    },
+    "published_at": "2026-05-27T06:23:36.260261Z"
   }
 ]

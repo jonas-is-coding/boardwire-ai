@@ -219,5 +219,18 @@
     "card_path": "generated/cards/d969880e5f73.png",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmrsc6mpk52v",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmrsc6mpk52v"
+  },
+  {
+    "id": "6a2c02f810bd",
+    "published_at": "2026-05-27T06:23:36.260261Z",
+    "platform": "bluesky",
+    "post": "Claude Code automates code review fixes.\n\nClaude Code v2.1.152 adds /code-review --fix with 90 score, streamlining iteration.\n\n#ClaudeCode #CodeReview #Automation",
+    "source_link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.152",
+    "source_title": "Claude Code v2.1.152",
+    "score": 90,
+    "reason": "New version of an open-source tool with concrete, actionable features for developers, directly impacting workflow.",
+    "card_path": "generated/cards/6a2c02f810bd.png",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmsunkejsy27",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmsunkejsy27"
   }
 ]
