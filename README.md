@@ -46,7 +46,7 @@ Cards are generated from `data/review_queue.json` and saved back via `card_path`
 Boardwire kann Review-Items als komplette Markdown-Artikel exportieren, damit `boardwire-web` sie direkt lesen/rendern kann.
 
 Output path:
-- `generated/articles/*.md`
+- `articles/*.md`
 
 Command:
 ```bash
