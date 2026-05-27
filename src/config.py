@@ -9,7 +9,7 @@ FIXTURES_DIR = PROJECT_ROOT / "fixtures"
 REPORTS_DIR = PROJECT_ROOT / "reports"
 GENERATED_DIR = PROJECT_ROOT / "generated"
 CARDS_DIR = GENERATED_DIR / "cards"
-ARTICLES_DIR = GENERATED_DIR / "articles"
+ARTICLES_DIR = PROJECT_ROOT / "articles"
 
 SOURCES_PATH = CONFIG_DIR / "sources.json"
 PERSONAS_PATH = CONFIG_DIR / "personas.json"
