@@ -1531,6 +1531,7 @@ def _publish_approved(args, logger) -> int:
             "score": item.get("score"),
             "reason": item.get("reason", ""),
             "card_path": card_path,
+            "article_path": str(article_path),
             "external_id": result.external_id,
             "url": result.url,
         }
