@@ -34,9 +34,11 @@ def _build_article_markdown(item: dict) -> str:
     status = str(item.get("status", "unknown")).strip()
     proposed_post = str(item.get("proposed_post", "")).strip()
 
+    escaped_title = title.replace('"', '\\"')
+
     lines = [
         "---",
-        f'title: "{title.replace(chr(34), "\\\"")}"',
+        f'title: "{escaped_title}"',
         f"source: {source}",
         f"source_url: {link or 'n/a'}",
         f"review_id: {item.get('id', '')}",
