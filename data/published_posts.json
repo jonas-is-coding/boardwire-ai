@@ -11,5 +11,19 @@
     "card_path": "generated/cards/1aff08b34f88.png",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmt7tgp7rs2a",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmt7tgp7rs2a"
+  },
+  {
+    "id": "7b2cede4e151",
+    "published_at": "2026-05-27T20:14:33.813017Z",
+    "platform": "bluesky",
+    "post": "Interactive code graphs are becoming a primitive for navigation.\n\nUnderstand-Anything turns any codebase into a searchable knowledge graph. +4697 stars, works with Cl\n\nMIT-licensed tool indexes code semantics into a persistent graph. Query relationships, explore call stacks, and ",
+    "source_link": "https://github.com/Lum1104/Understand-Anything",
+    "source_title": "Lum1104/Understand-Anything — Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex",
+    "score": 92,
+    "reason": "New open-source tool on GitHub, directly usable for code comprehension, strong community signal, integrates with AI coding assistants.",
+    "card_path": "generated/cards/7b2cede4e151.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-05-27-lum1104-understand-anything-graphs-that-teach-graphs-that-impress-turn-any-code-into-an-interactive-knowledge-graph-you-can-explore-search-and-ask-questions-about-works-with-claude-code-codex-7b2cede4e151.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmud3ji5q22a",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmud3ji5q22a"
   }
 ]

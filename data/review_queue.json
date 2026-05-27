@@ -33,11 +33,11 @@
   },
   {
     "id": "7b2cede4e151",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-05-27T06:48:37.341080Z",
     "score": 92,
     "reason": "New open-source tool on GitHub, directly usable for code comprehension, strong community signal, integrates with AI coding assistants.",
-    "proposed_post": "Lum1104/Understand-Anything is a new open-source tool that converts code into interactive knowledge graphs. Use it to explore, search, and query any codebase, integrating with Claude Code/Codex for faster comprehension and debugging.",
+    "proposed_post": "Interactive code graphs are becoming a primitive for navigation.\n\nUnderstand-Anything turns any codebase into a searchable knowledge graph. +4697 stars, works with Cl\n\nMIT-licensed tool indexes code semantics into a persistent graph. Query relationships, explore call stacks, and ",
     "source_angle": "Open-source tool for code comprehension and AI assistant integration",
     "source_item": {
       "title": "Lum1104/Understand-Anything — Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex",
@@ -68,10 +68,22 @@
         "cluster_score": 55
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/7b2cede4e151.png",
     "is_llm_mode": true,
     "claire_note": "Chloe, das hier ist interessant: Lum1104/Understand-Anything.\n\nDas Tool verwandelt Code in interaktive Knowledge Graphs. Stell dir vor, du kannst deinen Code nicht nur lesen, sondern wie eine Wissensdatenbank durchsuchen und befragen. Das ist ein Game-Changer für Code-Reviews, Onboarding oder einfach, um komplexen Legacy-Code zu verstehen. Besonders cool ist die Integration mit Claude Code, Codex & Co. – das ist direkt nutzbar für viele Teams.",
-    "chloe_note": "*Lum1104/Understand-Anything — Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New open-source tool on GitHub, directly usable for code comprehension, strong community signal, integrates with AI coding assistants.Cluster context: 1 sources, engagement 4697. Common terms: any, turn, stars., codex. Bewertung: 92. Quelle: https://github.com/Lum1104/Understand-Anything"
+    "chloe_note": "*Lum1104/Understand-Anything — Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New open-source tool on GitHub, directly usable for code comprehension, strong community signal, integrates with AI coding assistants.Cluster context: 1 sources, engagement 4697. Common terms: any, turn, stars., codex. Bewertung: 92. Quelle: https://github.com/Lum1104/Understand-Anything",
+    "sarah_package": {
+      "title": "Interactive code graphs are becoming a primitive for navigation.",
+      "subtitle": "Understand-Anything turns any codebase into a searchable knowledge graph. +4697 stars, works with Cl",
+      "description": "MIT-licensed tool indexes code semantics into a persistent graph. Query relationships, explore call stacks, and debug without grep. Integrat",
+      "hashtags": [
+        "#ClaudeCode",
+        "#Codex",
+        "#UnderstandAnything"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-05-27-lum1104-understand-anything-graphs-that-teach-graphs-that-impress-turn-any-code-into-an-interactive-knowledge-graph-you-can-explore-search-and-ask-questions-about-works-with-claude-code-codex-7b2cede4e151.md",
+    "published_at": "2026-05-27T20:14:33.813017Z"
   },
   {
     "id": "df01ffd31265",
