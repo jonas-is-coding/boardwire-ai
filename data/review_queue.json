@@ -148,5 +148,27 @@
     "is_llm_mode": false,
     "claire_note": "Aus *GitHub Trending* ist ein starker Kandidat reingekommen: *harry0703/MoneyPrinterTurbo — 利用AI大模型，一键生成高清短视频 Generate short videos with one click using AI LLM.*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 105_",
     "chloe_note": "*harry0703/MoneyPrinterTurbo — 利用AI大模型，一键生成高清短视频 Generate short videos with one click using AI LLM.* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch local newsworthiness fallbackCluster context: 1 sources, engagement 1737. Common terms: llm., harry0703/moneyprinterturbo, +1737, videos. Bewertung: 105. Quelle: https://github.com/harry0703/MoneyPrinterTurbo"
+  },
+  {
+    "id": "a895291cf349",
+    "status": "deferred_generation_unavailable",
+    "created_at": "2026-05-28T08:48:12.873168Z",
+    "score": 65,
+    "reason": "deferred: generation provider unavailable",
+    "proposed_post": "",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Anthropic Python SDK v0.103.0",
+      "source": "Anthropic Python SDK Releases",
+      "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.103.0",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 65
+    },
+    "deferred_at": "2026-05-28T08:48:12.873128Z",
+    "defer_count": 1,
+    "original_score": 65,
+    "original_reason": "deferred: generation provider unavailable",
+    "card_path": null
   }
 ]
