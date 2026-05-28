@@ -171,5 +171,69 @@
     "original_score": 65,
     "original_reason": "deferred: generation provider unavailable",
     "card_path": null
+  },
+  {
+    "id": "8e2a70910e19",
+    "status": "deferred_generation_unavailable",
+    "created_at": "2026-05-28T19:39:55.141026Z",
+    "score": 95,
+    "reason": "deferred: generation provider unavailable",
+    "proposed_post": "",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Claude Code v2.1.154",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.154",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 60
+    },
+    "deferred_at": "2026-05-28T19:39:55.140997Z",
+    "defer_count": 1,
+    "original_score": 95,
+    "original_reason": "deferred: generation provider unavailable",
+    "card_path": null
+  },
+  {
+    "id": "490b0ec2850d",
+    "status": "approved",
+    "created_at": "2026-05-28T19:39:56.446227Z",
+    "score": 65,
+    "reason": "local newsworthiness fallback",
+    "proposed_post": "Anthropic SDK adds mid-conversation system blocks and file size caps.\n\nClaude Opus 4.8 support, usage.output_tokens_details, and custom file caps in anthropic-sdk-python v\n\nNew primitives in v0.105.0 expose Claude Opus 4.8 mid-conversation system blocks and per-request file thres",
+    "source_angle": "Local high-score + Sarah/OpenRouter fallback",
+    "source_item": {
+      "title": "Anthropic Python SDK v0.105.0",
+      "source": "Anthropic Python SDK Releases",
+      "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.105.0",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 65,
+      "summary": "<h2>0.105.0 (2026-05-28)</h2>\n<p>Full Changelog: <a href=\"https://github.com/anthropics/anthropic-sdk-python/compare/v0.104.1...v0.105.0\">v0.104.1...v0.105.0</a></p>\n<h3>Features</h3>\n<ul>\n<li><strong>api:</strong> Add support for claude-opus-4-8, mid-conversation system blocks, and usage.output_tokens_details (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/f18b01414b21b49943a6ba2cdaa30ff7dd6a3025\">f18b014</a>)</li>\n<li>support custom file size caps (<a href=\"https://github.com/anthropics/anthropic-sdk-python/issues/1825\">#1825</a>) (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/7e5f944ad85bd99526d9df30dc034f657472adaa\">7e5f944</a>)</li>\n</ul>\n<h3>Chores</h3>\n<ul>\n<li><strong>examples:</strong> rename managed-agents private-sandbox-worker to self-hosted-sandbox-worker (<a href=\"https://github.com/anthropics/anthropic-sdk-python/issues/1822\">#1822</a>) (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/750f956a535b9e4772951d6bf1abd81203f27d4e\">750f956</a>)</li>\n</ul>\n<h3>Documentation</h3>\n<ul>\n<li>replace literal newlines (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/8f7f6c0d1b5ffb9563affdcf3dd2410dc72ed1b4\">8f7f6c0</a>)</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: 2026-05-28, /h3, mid-conversation, rename, add.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Anthropic Python SDK Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "2026-05-28",
+          "/h3",
+          "mid-conversation",
+          "rename",
+          "add",
+          "custom",
+          "/h2",
+          "0.105.0"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: 2026-05-28, /h3, mid-conversation, rename. Lead: Anthropic Python SDK v0.105.0",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Aus *Anthropic Python SDK Releases* ist ein starker Kandidat reingekommen: *Anthropic Python SDK v0.105.0*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 65_",
+    "chloe_note": "Hey, *Anthropic Python SDK v0.105.0* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: 2026-05-28, /h3, mid-conversation, rename. Score aktuell: 65. Link: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.105.0"
   }
 ]
