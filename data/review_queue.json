@@ -196,11 +196,11 @@
   },
   {
     "id": "490b0ec2850d",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-05-28T19:39:56.446227Z",
     "score": 65,
     "reason": "local newsworthiness fallback",
-    "proposed_post": "Anthropic SDK adds mid-conversation system blocks and file size caps.\n\nClaude Opus 4.8 support, usage.output_tokens_details, and custom file caps in anthropic-sdk-python v\n\nNew primitives in v0.105.0 expose Claude Opus 4.8 mid-conversation system blocks and per-request file thres",
+    "proposed_post": "Anthropic adds mid-conversation blocks.\n\nClaude Opus 4.8 support in anthropic-sdk-python v0.105.0 with custom file size caps.\n\nExposes mid-conversation system blocks and per-request file thresholds, built on top of usage.output_tokens_details API.\n\n📖 Read the full article: file:/",
     "source_angle": "Local high-score + Sarah/OpenRouter fallback",
     "source_item": {
       "title": "Anthropic Python SDK v0.105.0",
@@ -231,9 +231,21 @@
         "cluster_score": 45
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/490b0ec2850d.png",
     "is_llm_mode": false,
     "claire_note": "Aus *Anthropic Python SDK Releases* ist ein starker Kandidat reingekommen: *Anthropic Python SDK v0.105.0*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 65_",
-    "chloe_note": "Hey, *Anthropic Python SDK v0.105.0* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: 2026-05-28, /h3, mid-conversation, rename. Score aktuell: 65. Link: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.105.0"
+    "chloe_note": "Hey, *Anthropic Python SDK v0.105.0* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: 2026-05-28, /h3, mid-conversation, rename. Score aktuell: 65. Link: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.105.0",
+    "sarah_package": {
+      "title": "Anthropic adds mid-conversation blocks.",
+      "subtitle": "Claude Opus 4.8 support in anthropic-sdk-python v0.105.0 with custom file size caps.",
+      "description": "Exposes mid-conversation system blocks and per-request file thresholds, built on top of usage.output_tokens_details API.",
+      "hashtags": [
+        "#Anthropic",
+        "#ClaudeOpus",
+        "#MidConversationBlocks"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-05-28-anthropic-python-sdk-v0-105-0-490b0ec2850d.md",
+    "published_at": "2026-05-28T20:22:01.704565Z"
   }
 ]
