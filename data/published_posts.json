@@ -26,5 +26,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-05-29-claude-opus-4-8-496b870e9a4c.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmytxhiscw23",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmytxhiscw23"
+  },
+  {
+    "id": "0a2b9ee52be3",
+    "published_at": "2026-05-29T20:24:16.337304Z",
+    "platform": "bluesky",
+    "post": "MoneyPrinterTurbo turns text-to-video into a local primitive.\n\nharry0703/MoneyPrinterTurbo generates high-definition short videos in one click with 4,698 GitHub st\n\nVideo generation moves offline with a CLI that composes LLM prompts, image generation, and FFmpeg compositing in a ",
+    "source_link": "https://github.com/harry0703/MoneyPrinterTurbo",
+    "source_title": "harry0703/MoneyPrinterTurbo — 利用AI大模型，一键生成高清短视频 Generate short videos with one click using AI LLM.",
+    "score": 105,
+    "reason": "local newsworthiness fallback",
+    "card_path": "generated/cards/0a2b9ee52be3.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-05-29-harry0703-moneyprinterturbo-ai-generate-short-videos-with-one-click-using-ai-llm-0a2b9ee52be3.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmzekntzzm2s",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmzekntzzm2s"
   }
 ]

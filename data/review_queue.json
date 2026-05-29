@@ -43,11 +43,11 @@
   },
   {
     "id": "0a2b9ee52be3",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-05-29T07:58:50.814205Z",
     "score": 105,
     "reason": "local newsworthiness fallback",
-    "proposed_post": "AI models generate short videos locally.\n\nMoneyPrinterTurbo adds one-click video generation with +4698 stars on GitHub.\n\nTrained on large language models, MoneyPrinterTurbo enables high-definition video creation with a single click, available on GitHub under an\n\n#LLM #VideoGenera",
+    "proposed_post": "MoneyPrinterTurbo turns text-to-video into a local primitive.\n\nharry0703/MoneyPrinterTurbo generates high-definition short videos in one click with 4,698 GitHub st\n\nVideo generation moves offline with a CLI that composes LLM prompts, image generation, and FFmpeg compositing in a ",
     "source_angle": "Local high-score + Sarah/OpenRouter fallback",
     "source_item": {
       "title": "harry0703/MoneyPrinterTurbo — 利用AI大模型，一键生成高清短视频 Generate short videos with one click using AI LLM.",
@@ -78,10 +78,22 @@
         "cluster_score": 55
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/0a2b9ee52be3.png",
     "is_llm_mode": false,
     "claire_note": "Aus *GitHub Trending* ist ein starker Kandidat reingekommen: *harry0703/MoneyPrinterTurbo — 利用AI大模型，一键生成高清短视频 Generate short videos with one click using AI LLM.*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 105_",
-    "chloe_note": "Kurzes Update: *harry0703/MoneyPrinterTurbo — 利用AI大模型，一键生成高清短视频 Generate short videos with one click using AI LLM.* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um local newsworthiness fallbackCluster context: 1 sources, engagement 4698. Common terms: harry0703/moneyprinterturbo, llm., trending, stars. Ich habe es mit 105 Punkten bewertet. Hier der Link: https://github.com/harry0703/MoneyPrinterTurbo"
+    "chloe_note": "Kurzes Update: *harry0703/MoneyPrinterTurbo — 利用AI大模型，一键生成高清短视频 Generate short videos with one click using AI LLM.* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um local newsworthiness fallbackCluster context: 1 sources, engagement 4698. Common terms: harry0703/moneyprinterturbo, llm., trending, stars. Ich habe es mit 105 Punkten bewertet. Hier der Link: https://github.com/harry0703/MoneyPrinterTurbo",
+    "sarah_package": {
+      "title": "MoneyPrinterTurbo turns text-to-video into a local primitive.",
+      "subtitle": "harry0703/MoneyPrinterTurbo generates high-definition short videos in one click with 4,698 GitHub st",
+      "description": "Video generation moves offline with a CLI that composes LLM prompts, image generation, and FFmpeg compositing in a single command under MIT ",
+      "hashtags": [
+        "#MoneyPrinterTurbo",
+        "#LLM",
+        "#VideoGeneration"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-05-29-harry0703-moneyprinterturbo-ai-generate-short-videos-with-one-click-using-ai-llm-0a2b9ee52be3.md",
+    "published_at": "2026-05-29T20:24:16.337304Z"
   },
   {
     "id": "2c5114b21abc",
