@@ -124,5 +124,47 @@
     "is_llm_mode": false,
     "claire_note": "Aus *GitHub Trending* ist ein starker Kandidat reingekommen: *Lum1104/Understand-Anything — Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 105_",
     "chloe_note": "Kurzes Update: *Lum1104/Understand-Anything — Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um local newsworthiness fallbackCluster context: 1 sources, engagement 3776. Common terms: cursor, more., any, works. Ich habe es mit 105 Punkten bewertet. Hier der Link: https://github.com/Lum1104/Understand-Anything"
+  },
+  {
+    "id": "496b870e9a4c",
+    "status": "approved",
+    "created_at": "2026-05-29T08:46:08.639966Z",
+    "score": 95,
+    "reason": "New version of a flagship model from a primary lab, directly available via API. High builder relevance.",
+    "proposed_post": "Anthropic released Claude Opus 4.8. Builders can now access updated capabilities and performance via the Claude API. Evaluate for specific improvements in your AI applications.",
+    "source_angle": "Anthropic's official release of Claude Opus 4.8",
+    "source_item": {
+      "title": "Claude Opus 4.8",
+      "source": "HackerNews",
+      "link": "https://www.anthropic.com/news/claude-opus-4-8",
+      "source_tier": 3,
+      "engagement_score": 2073.5,
+      "local_newsworthiness_score": 45,
+      "summary": "1489 points, 1169 comments on Hacker News — submitted by craigmart — original: https://www.anthropic.com/news/claude-opus-4-8\n[Cluster context: 1 sources, engagement 2073, common terms: hacker, claude, points, 1489, craigmart.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 2073,
+        "common_terms": [
+          "hacker",
+          "claude",
+          "points",
+          "1489",
+          "craigmart",
+          "original",
+          "opus",
+          "submitted"
+        ],
+        "cluster_summary": "1 sources, engagement 2073. Common terms: hacker, claude, points, 1489. Lead: Claude Opus 4.8",
+        "alternative_titles": [],
+        "cluster_score": 20
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "claire_note": "Chloe, das Claude Opus 4.8 Update auf Hacker News ist durch die Decke gegangen. 1489 Punkte und über 1000 Kommentare, das ist ein klares Signal. Entwickler schauen hier genau hin, was Anthropic mit ihrem neuen Flaggschiffmodell liefert und wie sie es in ihre Produkte integrieren können.",
+    "chloe_note": "Hey, *Claude Opus 4.8* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New version of a flagship model from a primary lab, directly available via API. High builder relevance.Cluster context: 1 sources, engagement 2073. Common terms: hacker, claude, points, 1489. Score aktuell: 95. Link: https://www.anthropic.com/news/claude-opus-4-8"
   }
 ]
