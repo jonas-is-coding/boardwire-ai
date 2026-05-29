@@ -44,6 +44,9 @@ from src.models import DraftPost, FeedItem, Source
 from src.publisher.base import PublishResult
 from src.publisher.bluesky_publisher import BlueskyPublisher
 from src.publisher.dry_run_publisher import DryRunPublisher
+from src.publisher.instagram_publisher import InstagramPublisher
+from src.publisher.mastodon_publisher import MastodonPublisher
+from src.publisher.threads_publisher import ThreadsPublisher
 from src.quality.gates import QualityConfig, check_quality
 from src.reports.article_export import export_review_articles, write_article_for_item
 from src.reports.review_report import generate_review_queue_report
@@ -61,7 +64,9 @@ VALID_REVIEW_STATUSES = {
     "deferred_generation_unavailable",
     "expired_deferred",
 }
-VALID_PUBLISHERS = {"dry_run", "bluesky"}
+VALID_PUBLISHERS = {"dry_run", "bluesky", "mastodon", "instagram", "threads"}
+# Platforms that cannot publish without an attached card image.
+IMAGE_REQUIRED_PLATFORMS = {"bluesky", "instagram"}
 _LOCAL_RANK_LIMIT = 25
 _KNOWN_ORG_REPOS = {"microsoft", "google", "anthropic", "openai", "meta", "nvidia", "huggingface", "langchain-ai"}
 _MEANINGFUL_RELEASE_TERMS = (
@@ -788,7 +793,7 @@ def _build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--collect-engagement", action="store_true", help="Fetch Bluesky engagement for published posts and append snapshots to data/engagement.json.")
     parser.add_argument("--train-virality-model", action="store_true", help="Train the local virality model from collected engagement data (no-op until enough mature samples exist).")
     parser.add_argument("--engagement-report", action="store_true", help="Rank published posts by collected engagement and write reports/engagement_report.md.")
-    parser.add_argument("--publisher", choices=["dry_run", "bluesky"], default=None, help="Publisher backend for --publish-approved.")
+    parser.add_argument("--publisher", choices=["dry_run", "bluesky", "mastodon", "instagram", "threads"], default=None, help="Publisher backend for --publish-approved.")
     parser.add_argument("--confirm-real-publish", action="store_true", help="Required confirmation flag for real publishing.")
     parser.add_argument("--quality-report", action="store_true", help="Print quality gate pass/fail reasons for each candidate.")
     parser.add_argument("--self-check-writer", action="store_true", help="Generate fixture posts and run quality gates as a writer self-check.")
@@ -1179,6 +1184,51 @@ def _resolve_publisher(args, logger):
             logger.error("Refusing Bluesky publish: BLUESKY_HANDLE and BLUESKY_APP_PASSWORD are required")
             return None, "bluesky"
         return BlueskyPublisher(handle=handle, app_password=app_password), "bluesky"
+    if selected == "mastodon":
+        base_url = os.getenv("MASTODON_API_BASE_URL", "").strip()
+        access_token = os.getenv("MASTODON_ACCESS_TOKEN", "").strip()
+        if not base_url or not access_token:
+            logger.error("Refusing Mastodon publish: MASTODON_API_BASE_URL and MASTODON_ACCESS_TOKEN are required")
+            return None, "mastodon"
+        return MastodonPublisher(base_url=base_url, access_token=access_token), "mastodon"
+    if selected == "instagram":
+        user_id = os.getenv("INSTAGRAM_USER_ID", "").strip()
+        access_token = os.getenv("INSTAGRAM_ACCESS_TOKEN", "").strip()
+        image_base_url = os.getenv("INSTAGRAM_IMAGE_BASE_URL", "").strip()
+        if not user_id or not access_token or not image_base_url:
+            logger.error(
+                "Refusing Instagram publish: INSTAGRAM_USER_ID, INSTAGRAM_ACCESS_TOKEN and INSTAGRAM_IMAGE_BASE_URL are required"
+            )
+            return None, "instagram"
+        api_version = os.getenv("INSTAGRAM_GRAPH_API_VERSION", "").strip()
+        kwargs = {"api_version": api_version} if api_version else {}
+        return (
+            InstagramPublisher(
+                user_id=user_id,
+                access_token=access_token,
+                image_base_url=image_base_url,
+                **kwargs,
+            ),
+            "instagram",
+        )
+    if selected == "threads":
+        user_id = os.getenv("THREADS_USER_ID", "").strip()
+        access_token = os.getenv("THREADS_ACCESS_TOKEN", "").strip()
+        if not user_id or not access_token:
+            logger.error("Refusing Threads publish: THREADS_USER_ID and THREADS_ACCESS_TOKEN are required")
+            return None, "threads"
+        image_base_url = os.getenv("THREADS_IMAGE_BASE_URL", "").strip() or None
+        api_version = os.getenv("THREADS_GRAPH_API_VERSION", "").strip()
+        kwargs = {"api_version": api_version} if api_version else {}
+        return (
+            ThreadsPublisher(
+                user_id=user_id,
+                access_token=access_token,
+                image_base_url=image_base_url,
+                **kwargs,
+            ),
+            "threads",
+        )
     logger.error("Unsupported publisher: %s", selected)
     return None, selected
 
@@ -1393,10 +1443,10 @@ def _publish_approved(args, logger) -> int:
         except Exception as exc:
             logger.warning("Card regeneration after Sarah failed for %s: %s", rid, exc)
         card_path = item.get("card_path")
-        if selected_platform == "bluesky":
-            logger.info("Image required for Bluesky: %s", rid)
+        if selected_platform in IMAGE_REQUIRED_PLATFORMS:
+            logger.info("Image required for %s: %s", selected_platform, rid)
         abs_card_path = _resolve_card_image_path(item, logger)
-        if selected_platform == "bluesky" and not abs_card_path:
+        if selected_platform in IMAGE_REQUIRED_PLATFORMS and not abs_card_path:
             logger.info("Card missing, regenerating: %s", rid)
             try:
                 regenerated = _generate_card_for_item(item, logger)
@@ -1441,7 +1491,7 @@ def _publish_approved(args, logger) -> int:
             quality_rejected_count += 1
             continue
         logger.info("Quality pass: %s", rid)
-        if selected_platform == "bluesky" and not abs_card_path:
+        if selected_platform in IMAGE_REQUIRED_PLATFORMS and not abs_card_path:
             logger.warning("Publish blocked (no image available): %s", rid)
             blocked_missing_image_count += 1
             continue
