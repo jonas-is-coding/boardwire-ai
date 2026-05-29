@@ -40,11 +40,15 @@ jobs:
       - name: Train virality model (no-op until enough data)
         run: python -m src.main --train-virality-model
 
+      - name: Generate engagement report
+        run: python -m src.main --engagement-report
+
       - name: Commit engagement data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
+          git add reports/engagement_report.md
           # virality_model.json / embeddings.json only exist once training runs,
           # so add them best-effort and never fail the step on a missing file.
           git add data/engagement.json

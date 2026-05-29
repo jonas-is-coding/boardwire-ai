@@ -26,6 +26,7 @@ from src.config import (
     CLUSTERS_DEBUG_PATH,
     DRAFTS_PATH,
     ENGAGEMENT_PATH,
+    ENGAGEMENT_REPORT_PATH,
     MAX_ITEMS_PER_RUN,
     PERSONAS_PATH,
     PUBLISHED_POSTS_PATH,
@@ -786,6 +787,7 @@ def _build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--list-published", action="store_true", help="List published dry-run posts.")
     parser.add_argument("--collect-engagement", action="store_true", help="Fetch Bluesky engagement for published posts and append snapshots to data/engagement.json.")
     parser.add_argument("--train-virality-model", action="store_true", help="Train the local virality model from collected engagement data (no-op until enough mature samples exist).")
+    parser.add_argument("--engagement-report", action="store_true", help="Rank published posts by collected engagement and write reports/engagement_report.md.")
     parser.add_argument("--publisher", choices=["dry_run", "bluesky"], default=None, help="Publisher backend for --publish-approved.")
     parser.add_argument("--confirm-real-publish", action="store_true", help="Required confirmation flag for real publishing.")
     parser.add_argument("--quality-report", action="store_true", help="Print quality gate pass/fail reasons for each candidate.")
@@ -1635,6 +1637,40 @@ def _train_virality_model(logger) -> int:
     return 0
 
 
+def _engagement_report(logger) -> int:
+    from src.reports.engagement_report import generate_engagement_report
+
+    summary = generate_engagement_report(
+        PUBLISHED_POSTS_PATH, ENGAGEMENT_PATH, ENGAGEMENT_REPORT_PATH
+    )
+    if summary.measured == 0:
+        logger.info(
+            "No engagement data yet (%d posts published). Report written to %s",
+            summary.total_posts,
+            ENGAGEMENT_REPORT_PATH,
+        )
+        return 0
+
+    logger.info(
+        "Engagement report: %d/%d posts measured | median=%.1f avg=%.1f",
+        summary.measured,
+        summary.total_posts,
+        summary.median_peak,
+        summary.avg_peak,
+    )
+    for idx, perf in enumerate(summary.ranked[:10], start=1):
+        logger.info(
+            "  #%d  %d pts (likes %d, reposts %d) | %s",
+            idx,
+            perf.peak_engagement,
+            perf.likes,
+            perf.reposts,
+            perf.title[:90],
+        )
+    logger.info("Full report written to %s", ENGAGEMENT_REPORT_PATH)
+    return 0
+
+
 def _self_check_writer(logger) -> int:
     fixtures = _load_fixture_items()
     quality_config = _load_quality_config()
@@ -1751,6 +1787,8 @@ def run(argv: list[str] | None = None) -> int:
         return _collect_engagement(logger)
     if args.train_virality_model:
         return _train_virality_model(logger)
+    if args.engagement_report:
+        return _engagement_report(logger)
 
     sources = _load_sources()
     personas = load_personas(JsonStore.load(PERSONAS_PATH, default=[]))
