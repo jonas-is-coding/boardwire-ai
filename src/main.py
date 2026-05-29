@@ -25,9 +25,11 @@ from src.config import (
     CARDS_DIR,
     CLUSTERS_DEBUG_PATH,
     DRAFTS_PATH,
+    ENGAGEMENT_PATH,
     MAX_ITEMS_PER_RUN,
     PERSONAS_PATH,
     PUBLISHED_POSTS_PATH,
+    VIRALITY_MODEL_PATH,
     QUALITY_PATH,
     REVIEW_QUEUE_PATH,
     REVIEW_REPORT_PATH,
@@ -782,6 +784,8 @@ def _build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--reject-review", type=str, default=None, help="Reject one review queue item by ID.")
     parser.add_argument("--publish-approved", action="store_true", help="Publish approved review items in dry-run mode.")
     parser.add_argument("--list-published", action="store_true", help="List published dry-run posts.")
+    parser.add_argument("--collect-engagement", action="store_true", help="Fetch Bluesky engagement for published posts and append snapshots to data/engagement.json.")
+    parser.add_argument("--train-virality-model", action="store_true", help="Train the local virality model from collected engagement data (no-op until enough mature samples exist).")
     parser.add_argument("--publisher", choices=["dry_run", "bluesky"], default=None, help="Publisher backend for --publish-approved.")
     parser.add_argument("--confirm-real-publish", action="store_true", help="Required confirmation flag for real publishing.")
     parser.add_argument("--quality-report", action="store_true", help="Print quality gate pass/fail reasons for each candidate.")
@@ -1584,6 +1588,53 @@ def _list_published(logger) -> int:
     return 0
 
 
+def _collect_engagement(logger) -> int:
+    from src.feedback.collect import collect_engagement
+
+    published = JsonStore.load(PUBLISHED_POSTS_PATH, default=[])
+    if not published:
+        logger.info("No published posts to collect engagement for")
+        return 0
+
+    store = JsonStore.load(ENGAGEMENT_PATH, default={})
+    if not isinstance(store, dict):
+        logger.warning("engagement.json malformed; starting fresh")
+        store = {}
+
+    summary = collect_engagement(published, store, logger)
+    JsonStore.save(ENGAGEMENT_PATH, store)
+    logger.info(
+        "Engagement run complete: tracked=%d measured=%d missing=%d",
+        summary.tracked,
+        summary.measured,
+        summary.missing,
+    )
+    return 0
+
+
+def _train_virality_model(logger) -> int:
+    from src.feedback.dataset import build_training_data
+    from src.feedback.model import save_model, train_virality_model
+
+    published = JsonStore.load(PUBLISHED_POSTS_PATH, default=[])
+    store = JsonStore.load(ENGAGEMENT_PATH, default={})
+    if not isinstance(store, dict):
+        store = {}
+
+    data = build_training_data(published, store, logger)
+    if data is None:
+        logger.info("Virality model not trained: insufficient mature data")
+        return 0
+
+    payload = train_virality_model(data, logger)
+    if payload is None:
+        return 0
+
+    save_model(payload, VIRALITY_MODEL_PATH)
+    logger.info("Virality model saved to %s", VIRALITY_MODEL_PATH)
+    return 0
+
+
 def _self_check_writer(logger) -> int:
     fixtures = _load_fixture_items()
     quality_config = _load_quality_config()
@@ -1696,6 +1747,10 @@ def run(argv: list[str] | None = None) -> int:
         return _publish_approved(args, logger)
     if args.list_published:
         return _list_published(logger)
+    if args.collect_engagement:
+        return _collect_engagement(logger)
+    if args.train_virality_model:
+        return _train_virality_model(logger)
 
     sources = _load_sources()
     personas = load_personas(JsonStore.load(PERSONAS_PATH, default=[]))

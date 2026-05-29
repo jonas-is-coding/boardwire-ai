@@ -1,0 +1,58 @@
+name: Boardwire Collect Engagement
+
+on:
+  # Once daily at 04:00 UTC, before the first collect-llm run (05:00).
+  # Read-only public Bluesky API — no secrets required.
+  schedule:
+    - cron: "0 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  collect_engagement:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Cache embedding model weights
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/fastembed
+          key: fastembed-${{ runner.os }}-bge-small-en-v1.5
+
+      - name: Collect Bluesky engagement
+        run: python -m src.main --collect-engagement
+
+      - name: Train virality model (no-op until enough data)
+        run: python -m src.main --train-virality-model
+
+      - name: Commit engagement data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # virality_model.json / embeddings.json only exist once training runs,
+          # so add them best-effort and never fail the step on a missing file.
+          git add data/engagement.json
+          git add data/virality_model.json data/embeddings.json 2>/dev/null || true
+
+          if git diff --cached --quiet; then
+            echo "No engagement changes to commit"
+          else
+            git commit -m "chore: update engagement snapshots and virality model"
+            git push
+          fi
