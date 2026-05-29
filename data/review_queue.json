@@ -139,11 +139,11 @@
   },
   {
     "id": "496b870e9a4c",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-05-29T08:46:08.639966Z",
     "score": 95,
     "reason": "New version of a flagship model from a primary lab, directly available via API. High builder relevance.",
-    "proposed_post": "Anthropic released Claude Opus 4.8. Builders can now access updated capabilities and performance via the Claude API. Evaluate for specific improvements in your AI applications.",
+    "proposed_post": "Anthropic updates flagship model.\n\nClaude Opus 4.8 available via API, 1489 points on Hacker News.\n\nNew version from a primary lab, directly accessible for builder integration, scoring 95 on relevance.\n\n📖 Read the full article: file:///home/runner/work/boardwire-ai/boardwire-ai/ar",
     "source_angle": "Anthropic's official release of Claude Opus 4.8",
     "source_item": {
       "title": "Claude Opus 4.8",
@@ -174,9 +174,21 @@
         "cluster_score": 20
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/496b870e9a4c.png",
     "is_llm_mode": true,
     "claire_note": "Chloe, das Claude Opus 4.8 Update auf Hacker News ist durch die Decke gegangen. 1489 Punkte und über 1000 Kommentare, das ist ein klares Signal. Entwickler schauen hier genau hin, was Anthropic mit ihrem neuen Flaggschiffmodell liefert und wie sie es in ihre Produkte integrieren können.",
-    "chloe_note": "Hey, *Claude Opus 4.8* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New version of a flagship model from a primary lab, directly available via API. High builder relevance.Cluster context: 1 sources, engagement 2073. Common terms: hacker, claude, points, 1489. Score aktuell: 95. Link: https://www.anthropic.com/news/claude-opus-4-8"
+    "chloe_note": "Hey, *Claude Opus 4.8* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New version of a flagship model from a primary lab, directly available via API. High builder relevance.Cluster context: 1 sources, engagement 2073. Common terms: hacker, claude, points, 1489. Score aktuell: 95. Link: https://www.anthropic.com/news/claude-opus-4-8",
+    "sarah_package": {
+      "title": "Anthropic updates flagship model.",
+      "subtitle": "Claude Opus 4.8 available via API, 1489 points on Hacker News.",
+      "description": "New version from a primary lab, directly accessible for builder integration, scoring 95 on relevance.",
+      "hashtags": [
+        "#Anthropic",
+        "#ClaudeOpus",
+        "#AIModelUpdates"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-05-29-claude-opus-4-8-496b870e9a4c.md",
+    "published_at": "2026-05-29T15:27:12.079438Z"
   }
 ]

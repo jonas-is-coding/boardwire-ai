@@ -12,5 +12,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-05-29-lum1104-understand-anything-graphs-that-teach-graphs-that-impress-turn-any-code-into-an-interactive-knowledge-graph-you-can-explore-search-and-ask-questions-about-works-with-claude-code-codex-2c5114b21abc.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmybcsikok2w",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmybcsikok2w"
+  },
+  {
+    "id": "496b870e9a4c",
+    "published_at": "2026-05-29T15:27:12.079438Z",
+    "platform": "bluesky",
+    "post": "Anthropic updates flagship model.\n\nClaude Opus 4.8 available via API, 1489 points on Hacker News.\n\nNew version from a primary lab, directly accessible for builder integration, scoring 95 on relevance.\n\n📖 Read the full article: file:///home/runner/work/boardwire-ai/boardwire-ai/ar",
+    "source_link": "https://www.anthropic.com/news/claude-opus-4-8",
+    "source_title": "Claude Opus 4.8",
+    "score": 95,
+    "reason": "New version of a flagship model from a primary lab, directly available via API. High builder relevance.",
+    "card_path": "generated/cards/496b870e9a4c.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-05-29-claude-opus-4-8-496b870e9a4c.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmytxhiscw23",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmytxhiscw23"
   }
 ]
