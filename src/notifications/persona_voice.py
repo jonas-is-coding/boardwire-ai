@@ -536,17 +536,6 @@ def claire_on_found(title: str, source: str, score: int, summary: str) -> str | 
     return _call_gemini(_SYSTEM_PROMPTS["claire"], user, stage="claire")
 
 
-def chloe_on_approved(title: str, score: int, reason: str, is_llm: bool, claire_note: str = "") -> str | None:
-    user = _USER_PROMPTS["chloe_approved"].format(
-        title=title,
-        score=score,
-        reason=reason,
-        mode="LLM" if is_llm else "Regel",
-        claire_note=claire_note or "Sieht interessant aus für Builder.",
-    )
-    return _call_gemini(_SYSTEM_PROMPTS["chloe"], user, stage="chloe_approved")
-
-
 def madison_on_approved(
     title: str,
     link: str,
@@ -564,25 +553,6 @@ def madison_on_approved(
         claire_note=claire_note or "Sieht interessant aus fuer Builder.",
     )
     return _call_gemini(_SYSTEM_PROMPTS["madison"], user, stage="madison_approved")
-
-
-def chloe_on_rejected(title: str, reasons: list[str], claire_note: str = "") -> str | None:
-    user = _USER_PROMPTS["chloe_rejected"].format(
-        title=title,
-        reasons="; ".join(reasons),
-        claire_note=claire_note or "Sieht interessant aus für Builder.",
-    )
-    return _call_gemini(_SYSTEM_PROMPTS["chloe"], user, stage="chloe_rejected")
-
-
-def madison_on_published(title: str, platform: str, post_text: str, chloe_note: str = "") -> str | None:
-    user = _USER_PROMPTS["madison_published"].format(
-        title=title,
-        platform=platform,
-        post_text=post_text[:200],
-        chloe_note=chloe_note or "Ships Test bestanden.",
-    )
-    return _call_gemini(_SYSTEM_PROMPTS["madison"], user, stage="madison_published")
 
 
 def chloe_on_published(title: str, platform: str, post_text: str, chloe_note: str = "") -> str | None:
