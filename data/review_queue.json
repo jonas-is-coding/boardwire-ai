@@ -1,1 +1,128 @@
-[]
+[
+  {
+    "id": "627e4a1f82e5",
+    "status": "approved",
+    "created_at": "2026-05-29T07:58:49.311172Z",
+    "score": 90,
+    "reason": "Gemini 3.5 Flash is GA via API, immediately usable by developers in production via Google's dev platforms.",
+    "proposed_post": "Google released Gemini 3.5 Flash, now GA via API. Integrate this faster model today via Google AI Studio, Android Studio, and Antigravity for production applications.",
+    "source_angle": "Simon Willison reports Google's GA release of Gemini 3.5 Flash for developers.",
+    "source_item": {
+      "title": "Simon Willison v3.5",
+      "source": "Simon Willison",
+      "link": "https://simonwillison.net/2026/May/19/gemini-35-flash/#atom-entries",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 55,
+      "summary": "<p>Today at Google I/O, Google <a href=\"https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/\">released Gemini 3.5 Flash</a>. This one skipped the <code>-preview</code> modifier and went straight to general availability, and Google appear to be using it for a whole lot of their key products:</p>\n<blockquote>\n<p>3.5 Flash is available today to billions of people globally:</p>\n<ul>\n<li>For everyone via the Gemini app and AI Mode in <a href=\"https://blog.google/products-and-platforms/products/search/search-io-2026\">Google Search</a>\n</li>\n<li>For developers in our agent-first development platform Google Antigravity and Gemini API in Google AI Studio and Android Studio</li>\n<li>For enterprises in Gemini Enterprise Agent Platform and Gemini Enterprise.</li>\n</ul>\n</blockquote>\n<p>As usual with Gemini, the most interesting details are tucked away in the <a href=\"https://ai.google.dev/gemini-api/docs/whats-new-gemini-3.5\">What's new in Gemini 3.5 Flash</a> developer documentation. It mostly has the same set of platform features as the previous Gemini 3.x series, albeit with no <a href=\"https://ai.google.dev/gemini-api/docs/computer-use\">computer use</a>. The model ID is <code>gemini-3.5-flash</code>. The knowledge cut-off is January 2025, and it supports 1,048,576 input tokens and 65,536 maximum output tokens.</p>\n<p>Google are also pushing a new <a href=\"https://ai.google.dev/gemini-api/docs/interactions\">Interactions API</a>, currently in beta, which looks to me like their version of the patterns introduced by <a href=\"https://developers.openai.com/api/reference/responses/overview\">OpenAI Responses</a> - in particular server-side history management.</p>\n<h4 id=\"the-price-has-gone-up\">The price has gone up</h4>\n<p>Gemini 3.5 Flash is accompanied by a notable price bump. The previous models in the \"Flash\" family were <a href=\"https://ai.google.dev/gemini-api/docs/models/gemini-3-flash-preview\">Gemini 3 Flash Preview</a> and <a href=\"https://ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-lite\">Gemini 3.1 Flash-Lite</a>. The new 3.5 Flash is 3x the price of 3 Flash Preview and 6x the price of 3.1 Flash-Lite (see <a href=\"https://www.llm-prices.com/#sel=gemini-3-flash-preview%2Cgemini-3.5-flash%2Cgemini-3.1-flash-lite-preview\">price comparison here</a>).</p>\n<p>At $1.50/million input and $9/million output it's getting close in price to Google's Gemini 3.1 Pro, which is $2 and $12.</p>\n<p>The Gemini team promise that 3.5 Pro will roll out \"next month\" - presumably at an even higher price.</p>\n<p>This fits a trend: OpenAI's GPT-5.5 was 2x the price of GPT-5.4, and Claude Opus 4.7 is around 1.46x the price of 4.6 when you take the <a href=\"https://simonwillison.net/2026/Apr/20/claude-token-counts/\">new tokenizer into account</a>.</p>\n<p>Given the price increase it's interesting to see Google roll it out for so many of their own free-to-consumer products. It feels like all three of the major AI labs are starting to probe the price tolerance of their API customers.</p>\n<p>Artificial Analysis publish the cost to run their proprietary benchmark against models, which is a useful way to take things like tokenization and increased volume of reasoning tokens into account. Some numbers worth comparing:</p>\n<ul>\n<li>\n<a href=\"https://artificialanalysis.ai/models/gemini-3-5-flash\">Gemini 3.5 Flash (high)</a>: $1,551.60</li>\n<li>\n<a href=\"https://artificialanalysis.ai/models/gemini-3-1-pro-preview\">Gemini 3.1 Pro Preview</a>: $892.28</li>\n<li>\n<a href=\"https://artificialanalysis.ai/models/gemini-3-flash-reasoning\">Gemini 3 Flash Preview (Reasoning)</a>: $278.26</li>\n<li>\n<a href=\"https://artificialanalysis.ai/models/gemini-3-1-flash-lite-preview\">Gemini 3.1 Flash-Lite Preview</a>: $93.60</li>\n</ul>\n<p>Running the benchmark for 3.5 Flash (high) cost significantly more than 3.1 Pro Preview!</p>\n<p>Here are some numbers from other vendors:</p>\n<ul>\n<li>\n<a href=\"https://artificialanalysis.ai/models/claude-opus-4-7\">Claude Opus 4.7 (Adaptive Reasoning, Max Effort)</a>: $5,117.14</li>\n<li>\n<a href=\"https://artificialanalysis.ai/models/claude-opus-4-7-non-reasoning\">Claude Opus 4.7 (Non-reasoning, High Effort)</a>: $1,217.23</li>\n<li>\n<a href=\"https://artificialanalysis.ai/models/gpt-5-5\">GPT-5.5 (xhigh)</a>: $3,357.00</li>\n<li>\n<a href=\"https://artificialanalysis.ai/models/gpt-5-5-medium\">GPT-5.5 (medium)</a>: $1,199.14</li>\n</ul>\n<h4 id=\"a-pelican-on-a-bicycle\">A pelican on a bicycle</h4>\n<p>I ran \"Generate an SVG of a pelican riding a bicycle\" <a href=\"https://gist.github.com/simonw/09cc5a5545d7e75b33b75ffa92a34601\">against the Gemini API</a> and got back this pelican, which is a <em>lot</em>:</p>\n<p><img alt=\"Black background, bats in the sky against a stylized moon. Pelican is funky looking. Very good beak. Bicycle frame is a bit twisted, and the bar from pedals to back wheel is missing. Bike lamp illuminates the road in front. Quite stylish.\" src=\"https://static.simonwillison.net/static/2026/gemini-3.5-flash.png\" /></p>\n<p>From the code comments: <code>&lt;!-- Pelican Eye / Sunglasses (Cool Retro Aviators) --&gt;</code></p>\n<p><a href=\"https://news.ycombinator.com/item?id=48196570#48198275\">hedgehog on Hacker News</a>:</p>\n<blockquote>\n<p>That pelican looks like it's in Miami for a crypto conference.</p>\n</blockquote>\n<p>That one cost me 11 input tokens and 14,403 output tokens, for a total cost of <a href=\"https://www.llm-prices.com/#it=11&amp;ot=14403&amp;sel=gemini-3.5-flash\">just under 13 cents</a>.</p><p><em>You are only seeing the long-form articles from my blog. Subscribe to <a href=\"https://simonwillison.net/atom/everything/\">/atom/everything/</a> to get all of my posts, or take a look at my <a href=\"https://simonwillison.net/about/#subscribe\">other subscription options</a>.</em></p>\n[Cluster context: 1 sources, engagement 0, common terms: customers., out, app, gpt-5.5, 3.x.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Simon Willison"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "customers.",
+          "out",
+          "app",
+          "gpt-5.5",
+          "3.x",
+          "other",
+          "appear",
+          "history"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: customers., out, app, gpt-5.5. Lead: Simon Willison v3.5",
+        "alternative_titles": [],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "claire_note": "Okay Chloe, check this out: Simon Willison's take on Gemini 3.5 Flash hitting GA.\n\nThis isn't just another model update; it skipped the preview tag and Google's already integrating it heavily. For builders, this means a stable, production-ready model that's likely optimized for speed and cost, perfect for quick, high-volume tasks without waiting for a stable API.",
+    "chloe_note": "*Simon Willison v3.5* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Gemini 3.5 Flash is GA via API, immediately usable by developers in production via Google's dev platforms.Cluster context: 1 sources, engagement 0. Common terms: customers., out, app, gpt-5.5. Bewertung: 90. Quelle: https://simonwillison.net/2026/May/19/gemini-35-flash/#atom-entries"
+  },
+  {
+    "id": "0a2b9ee52be3",
+    "status": "approved",
+    "created_at": "2026-05-29T07:58:50.814205Z",
+    "score": 105,
+    "reason": "local newsworthiness fallback",
+    "proposed_post": "AI models generate short videos locally.\n\nMoneyPrinterTurbo adds one-click video generation with +4698 stars on GitHub.\n\nTrained on large language models, MoneyPrinterTurbo enables high-definition video creation with a single click, available on GitHub under an\n\n#LLM #VideoGenera",
+    "source_angle": "Local high-score + Sarah/OpenRouter fallback",
+    "source_item": {
+      "title": "harry0703/MoneyPrinterTurbo — 利用AI大模型，一键生成高清短视频 Generate short videos with one click using AI LLM.",
+      "source": "GitHub Trending",
+      "link": "https://github.com/harry0703/MoneyPrinterTurbo",
+      "source_tier": 2,
+      "engagement_score": 4698.0,
+      "local_newsworthiness_score": 105,
+      "summary": "Trending on GitHub today: +4698 stars. 利用AI大模型，一键生成高清短视频 Generate short videos with one click using AI LLM.\n[Cluster context: 1 sources, engagement 4698, common terms: harry0703/moneyprinterturbo, llm., trending, stars., +4698.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 4698,
+        "common_terms": [
+          "harry0703/moneyprinterturbo",
+          "llm.",
+          "trending",
+          "stars.",
+          "+4698",
+          "videos",
+          "short",
+          "github"
+        ],
+        "cluster_summary": "1 sources, engagement 4698. Common terms: harry0703/moneyprinterturbo, llm., trending, stars.. Lead: harry0703/MoneyPrinterTurbo — 利用AI大模型，一键生成高清短视频 Generate short videos with one click using AI LLM.",
+        "alternative_titles": [],
+        "cluster_score": 55
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Aus *GitHub Trending* ist ein starker Kandidat reingekommen: *harry0703/MoneyPrinterTurbo — 利用AI大模型，一键生成高清短视频 Generate short videos with one click using AI LLM.*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 105_",
+    "chloe_note": "Kurzes Update: *harry0703/MoneyPrinterTurbo — 利用AI大模型，一键生成高清短视频 Generate short videos with one click using AI LLM.* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um local newsworthiness fallbackCluster context: 1 sources, engagement 4698. Common terms: harry0703/moneyprinterturbo, llm., trending, stars. Ich habe es mit 105 Punkten bewertet. Hier der Link: https://github.com/harry0703/MoneyPrinterTurbo"
+  },
+  {
+    "id": "2c5114b21abc",
+    "status": "approved",
+    "created_at": "2026-05-29T07:58:51.894917Z",
+    "score": 105,
+    "reason": "local newsworthiness fallback",
+    "proposed_post": "Understand Anything turns code into interactive knowledge graphs.\n\nLum1104/Understand-Anything adds queryable graphs to any codebase with +3776 stars today.\n\nBuilds directed graphs from static analysis and LLM summaries. CLI and MCP server. Apache 2.0 license. Integrates with Cur",
+    "source_angle": "Local high-score + Sarah/OpenRouter fallback",
+    "source_item": {
+      "title": "Lum1104/Understand-Anything — Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex",
+      "source": "GitHub Trending",
+      "link": "https://github.com/Lum1104/Understand-Anything",
+      "source_tier": 2,
+      "engagement_score": 3776.0,
+      "local_newsworthiness_score": 105,
+      "summary": "Trending on GitHub today: +3776 stars. Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex, Cursor, Copilot, Gemini CLI, and more.\n[Cluster context: 1 sources, engagement 3776, common terms: cursor, more., any, works, +3776.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 3776,
+        "common_terms": [
+          "cursor",
+          "more.",
+          "any",
+          "works",
+          "+3776",
+          "impress.",
+          "interactive",
+          "claude"
+        ],
+        "cluster_summary": "1 sources, engagement 3776. Common terms: cursor, more., any, works. Lead: Lum1104/Understand-Anything — Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph",
+        "alternative_titles": [],
+        "cluster_score": 55
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Aus *GitHub Trending* ist ein starker Kandidat reingekommen: *Lum1104/Understand-Anything — Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 105_",
+    "chloe_note": "Kurzes Update: *Lum1104/Understand-Anything — Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um local newsworthiness fallbackCluster context: 1 sources, engagement 3776. Common terms: cursor, more., any, works. Ich habe es mit 105 Punkten bewertet. Hier der Link: https://github.com/Lum1104/Understand-Anything"
+  }
+]
