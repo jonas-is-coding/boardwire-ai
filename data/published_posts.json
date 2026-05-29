@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "id": "2c5114b21abc",
+    "published_at": "2026-05-29T09:53:31.595128Z",
+    "platform": "bluesky",
+    "post": "Understand Anything turns code into interactive knowledge graphs.\n\nLum1104/Understand-Anything adds queryable graphs to any codebase with +3776 stars today. Apache 2.0\n\nBuilds directed graphs from static analysis and LLM summaries. Works with Claude Code, Codex, Cursor, Copilot, ",
+    "source_link": "https://github.com/Lum1104/Understand-Anything",
+    "source_title": "Lum1104/Understand-Anything — Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex",
+    "score": 105,
+    "reason": "local newsworthiness fallback",
+    "card_path": "generated/cards/2c5114b21abc.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-05-29-lum1104-understand-anything-graphs-that-teach-graphs-that-impress-turn-any-code-into-an-interactive-knowledge-graph-you-can-explore-search-and-ask-questions-about-works-with-claude-code-codex-2c5114b21abc.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmybcsikok2w",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mmybcsikok2w"
+  }
+]
