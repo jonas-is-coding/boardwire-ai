@@ -1935,6 +1935,26 @@ def run(argv: list[str] | None = None) -> int:
             ",".join(row[2]) if row[2] else "none",
         )
 
+    # Local cross-encoder reranking: reorder the top pool the LLM (and the final
+    # pick) sees, scoring each candidate against a builder-virality profile.
+    # Runs on CPU in CI with no LLM credits, and still improves selection when
+    # the LLM is off or its budget is exhausted. No-op if the model is missing.
+    if _env_flag("BOARDWIRE_ENABLE_RERANKER", True) and not args.use_fixtures and len(fresh_candidates) > 1:
+        from src.board.reranker import Reranker
+
+        try:
+            rerank_pool_size = int(os.getenv("BOARDWIRE_RERANK_POOL_SIZE", str(_LOCAL_RANK_LIMIT)))
+        except ValueError:
+            rerank_pool_size = _LOCAL_RANK_LIMIT
+        rerank_pool_size = max(args.limit, min(rerank_pool_size, len(fresh_candidates)))
+        rerank_pool = fresh_candidates[:rerank_pool_size]
+        reranked_pool = Reranker(logger=logger).rerank(rerank_pool)
+        if [p.link for p in reranked_pool] != [p.link for p in rerank_pool]:
+            fresh_candidates = reranked_pool + fresh_candidates[rerank_pool_size:]
+            logger.info("Reranker reordered top %d candidates", len(reranked_pool))
+        else:
+            logger.info("Reranker kept local order (top %d)", len(rerank_pool))
+
     # Batch LLM pre-ranking: take top RANKING_POOL_SIZE story-scored reps,
     # have the LLM pick the best `--limit` from that pool in ONE call.
     batch_ranking_active = (
