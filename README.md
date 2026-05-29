@@ -41,6 +41,34 @@ python -m src.main --regenerate-cards
 
 Cards are generated from `data/review_queue.json` and saved back via `card_path`.
 
+## Publishing platforms
+
+Boardwire publishes via pluggable backends selected with `BOARDWIRE_PUBLISHER`
+(or `--publisher`). Real publishing additionally requires
+`BOARDWIRE_REAL_PUBLISH_ENABLED=true` and the `--confirm-real-publish` flag.
+
+| Publisher | Cost | Image | Credentials (`.env`) |
+|---|---|---|---|
+| `dry_run` | — | — | none (default) |
+| `bluesky` | free | required | `BLUESKY_HANDLE`, `BLUESKY_APP_PASSWORD` |
+| `mastodon` | free | optional | `MASTODON_API_BASE_URL`, `MASTODON_ACCESS_TOKEN` |
+| `instagram` | free API | required | `INSTAGRAM_USER_ID`, `INSTAGRAM_ACCESS_TOKEN`, `INSTAGRAM_IMAGE_BASE_URL` |
+| `threads` | free API | optional | `THREADS_USER_ID`, `THREADS_ACCESS_TOKEN`, (`THREADS_IMAGE_BASE_URL`) |
+
+Notes:
+- Instagram and Threads fetch the card by URL (the Graph API does not accept a
+  binary upload), so `*_IMAGE_BASE_URL` must point at where `generated/cards/`
+  is served publicly. For Instagram this is mandatory; for Threads it is optional
+  (text-only posts otherwise).
+- Instagram requires a Business/Creator account linked to a Facebook Page, and
+  both Instagram and Threads require Meta app review before posting to production.
+
+Example:
+```bash
+BOARDWIRE_PUBLISHER=mastodon BOARDWIRE_REAL_PUBLISH_ENABLED=true \
+  python -m src.main --publish-approved --confirm-real-publish
+```
+
 ## Markdown-Webartikel Export
 
 Boardwire kann Review-Items als komplette Markdown-Artikel exportieren, damit `boardwire-web` sie direkt lesen/rendern kann.

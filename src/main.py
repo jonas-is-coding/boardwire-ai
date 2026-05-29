@@ -46,6 +46,7 @@ from src.publisher.bluesky_publisher import BlueskyPublisher
 from src.publisher.dry_run_publisher import DryRunPublisher
 from src.publisher.instagram_publisher import InstagramPublisher
 from src.publisher.mastodon_publisher import MastodonPublisher
+from src.publisher.threads_publisher import ThreadsPublisher
 from src.quality.gates import QualityConfig, check_quality
 from src.reports.article_export import export_review_articles, write_article_for_item
 from src.reports.review_report import generate_review_queue_report
@@ -63,7 +64,7 @@ VALID_REVIEW_STATUSES = {
     "deferred_generation_unavailable",
     "expired_deferred",
 }
-VALID_PUBLISHERS = {"dry_run", "bluesky", "mastodon", "instagram"}
+VALID_PUBLISHERS = {"dry_run", "bluesky", "mastodon", "instagram", "threads"}
 # Platforms that cannot publish without an attached card image.
 IMAGE_REQUIRED_PLATFORMS = {"bluesky", "instagram"}
 _LOCAL_RANK_LIMIT = 25
@@ -792,7 +793,7 @@ def _build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--collect-engagement", action="store_true", help="Fetch Bluesky engagement for published posts and append snapshots to data/engagement.json.")
     parser.add_argument("--train-virality-model", action="store_true", help="Train the local virality model from collected engagement data (no-op until enough mature samples exist).")
     parser.add_argument("--engagement-report", action="store_true", help="Rank published posts by collected engagement and write reports/engagement_report.md.")
-    parser.add_argument("--publisher", choices=["dry_run", "bluesky", "mastodon", "instagram"], default=None, help="Publisher backend for --publish-approved.")
+    parser.add_argument("--publisher", choices=["dry_run", "bluesky", "mastodon", "instagram", "threads"], default=None, help="Publisher backend for --publish-approved.")
     parser.add_argument("--confirm-real-publish", action="store_true", help="Required confirmation flag for real publishing.")
     parser.add_argument("--quality-report", action="store_true", help="Print quality gate pass/fail reasons for each candidate.")
     parser.add_argument("--self-check-writer", action="store_true", help="Generate fixture posts and run quality gates as a writer self-check.")
@@ -1265,6 +1266,24 @@ def _resolve_publisher(args, logger):
                 **kwargs,
             ),
             "instagram",
+        )
+    if selected == "threads":
+        user_id = os.getenv("THREADS_USER_ID", "").strip()
+        access_token = os.getenv("THREADS_ACCESS_TOKEN", "").strip()
+        if not user_id or not access_token:
+            logger.error("Refusing Threads publish: THREADS_USER_ID and THREADS_ACCESS_TOKEN are required")
+            return None, "threads"
+        image_base_url = os.getenv("THREADS_IMAGE_BASE_URL", "").strip() or None
+        api_version = os.getenv("THREADS_GRAPH_API_VERSION", "").strip()
+        kwargs = {"api_version": api_version} if api_version else {}
+        return (
+            ThreadsPublisher(
+                user_id=user_id,
+                access_token=access_token,
+                image_base_url=image_base_url,
+                **kwargs,
+            ),
+            "threads",
         )
     logger.error("Unsupported publisher: %s", selected)
     return None, selected
