@@ -898,62 +898,6 @@ def _is_within_lookback(
     return delta.total_seconds() <= lookback_hours * 3600
 
 
-def _history_posts(
-    drafts_data: list[dict],
-    review_queue_data: list[dict],
-    published_data: list[dict],
-    now: datetime,
-    lookback_hours: int,
-    fixture_mode: bool,
-) -> list[str]:
-    posts: list[str] = []
-    for item in drafts_data:
-        if _is_within_lookback(item.get("created_at"), now, lookback_hours, fixture_mode):
-            post = str(item.get("post_text", ""))
-            if post.strip():
-                posts.append(post)
-    for item in review_queue_data:
-        if _is_within_lookback(item.get("created_at"), now, lookback_hours, fixture_mode):
-            post = str(item.get("proposed_post", ""))
-            if post.strip():
-                posts.append(post)
-    for item in published_data:
-        if _is_within_lookback(item.get("published_at"), now, lookback_hours, fixture_mode):
-            post = str(item.get("post", ""))
-            if post.strip():
-                posts.append(post)
-    return posts
-
-
-def _history_for_publish_item(
-    drafts_data: list[dict],
-    review_queue_data: list[dict],
-    published_data: list[dict],
-    review_id: str | None,
-    now: datetime,
-    lookback_hours: int,
-) -> list[str]:
-    posts: list[str] = []
-    for item in drafts_data:
-        if _is_within_lookback(item.get("created_at"), now, lookback_hours, fixture_mode=False):
-            post = str(item.get("post_text", ""))
-            if post.strip():
-                posts.append(post)
-    for item in review_queue_data:
-        if item.get("id") == review_id:
-            continue
-        if _is_within_lookback(item.get("created_at"), now, lookback_hours, fixture_mode=False):
-            post = str(item.get("proposed_post", ""))
-            if post.strip():
-                posts.append(post)
-    for item in published_data:
-        if _is_within_lookback(item.get("published_at"), now, lookback_hours, fixture_mode=False):
-            post = str(item.get("post", ""))
-            if post.strip():
-                posts.append(post)
-    return posts
-
-
 def _published_history_only(
     published_data: list[dict],
     now: datetime,

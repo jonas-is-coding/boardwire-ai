@@ -84,27 +84,6 @@ def _post_debug(text: str) -> None:
 # Public notification events
 # ---------------------------------------------------------------------------
 
-def pam_found_candidate(title: str, source: str, link: str, score: int) -> str:
-    return claire_found_candidate(title, source, link, score)
-
-
-def claire_found_candidate(title: str, source: str, link: str, score: int) -> str:
-    llm_text = voice.claire_on_found(title, source, score, summary="")
-    if llm_text:
-        text = llm_text
-    else:
-        seed = _variant_seed("claire", title, source)
-        variants = [
-            f"Aus *{source}* ist ein spannender Kandidat reingekommen: *{title}*.\nDas ist fuer Builder direkt relevant, weil sich daraus kurzfristig etwas Praktisches bauen oder testen laesst.\n_Score: {score}_",
-            f"Gerade aus *{source}* entdeckt: *{title}*.\nBuilder-Relevanz ist hoch, weil das Thema konkrete Auswirkungen auf Tooling, Deployments oder Modellbetrieb hat.\n_Score: {score}_",
-            f"Neuer Fund aus *{source}*: *{title}*.\nFuer Builder interessant, weil es eher um nutzbare Praxis als um reine Ankuendigung geht.\n_Score: {score}_",
-        ]
-        text = variants[seed % len(variants)]
-    text = _clean_message(text, recipient_name="Chloe")
-    _post("claire", text)
-    return text
-
-
 def claire_post_deferred(title: str, link: str, text: str) -> None:
     _post("claire", text)
 
