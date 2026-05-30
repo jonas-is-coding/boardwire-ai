@@ -227,11 +227,11 @@
   },
   {
     "id": "b1fd508aac93",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-05-29T19:35:20.190248Z",
     "score": 75,
     "reason": "Release candidate for a significant Ollama update, offering immediate testing of GGUF via llama.cpp and MLX acceleration on Apple Silicon.",
-    "proposed_post": "Ollama v0.30.0-rc31 shifts to llama.cpp for GGUF compatibility & adds MLX acceleration for Apple Silicon. Builders can test improved local model support and faster Mac inference, but note it's a release candidate.",
+    "proposed_post": "Ollama shifts to llama.cpp for GGUF compatibility.\n\nOllama v0.30.0 adds MLX acceleration on Apple Silicon with GGUF support.\n\nDirect llama.cpp integration replaces GGML, enabling GGUF file format compatibility and faster Mac inference via MLX.\n\n📖 Read the full article: file:///ho",
     "source_angle": "Ollama's shift to llama.cpp and MLX for Apple Silicon",
     "source_item": {
       "title": "Ollama v0.30.0",
@@ -269,9 +269,21 @@
         "cluster_score": 35
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/b1fd508aac93.png",
     "is_llm_mode": true,
     "claire_note": "Chloe, check this out: Ollama v0.30.0.\n\nDer Umstieg auf llama.cpp und GGUF-Support ist ein Game Changer. Das vereinfacht das lokale Experimentieren mit vielen Modellen massiv, weil man jetzt direkt auf das Ökosystem von llama.cpp zugreifen kann, ohne extra Konvertierungen. Und MLX für Apple Silicon ist ein klarer Win für alle, die auf Macs inferieren wollen – das sollte die Performance spürbar verbessern. Entwickler können damit einfacher und effizienter Modelle lokal testen und einsetzen.",
-    "chloe_note": "*Ollama v0.30.0* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Release candidate for a significant Ollama update, offering immediate testing of GGUF via llama.cpp and MLX acceleration on Apple Silicon.Cluster context: 1 sources, engagement 0. Common terms: ollama, version, bump, windows. Bewertung: 75. Quelle: https://github.com/ollama/ollama/releases/tag/v0.30.0-rc31"
+    "chloe_note": "*Ollama v0.30.0* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Release candidate for a significant Ollama update, offering immediate testing of GGUF via llama.cpp and MLX acceleration on Apple Silicon.Cluster context: 1 sources, engagement 0. Common terms: ollama, version, bump, windows. Bewertung: 75. Quelle: https://github.com/ollama/ollama/releases/tag/v0.30.0-rc31",
+    "sarah_package": {
+      "title": "Ollama shifts to llama.cpp for GGUF compatibility.",
+      "subtitle": "Ollama v0.30.0 adds MLX acceleration on Apple Silicon with GGUF support.",
+      "description": "Direct llama.cpp integration replaces GGML, enabling GGUF file format compatibility and faster Mac inference via MLX.",
+      "hashtags": [
+        "#Ollama",
+        "#LlamaCpp",
+        "#MLX"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-05-29-ollama-v0-30-0-b1fd508aac93.md",
+    "published_at": "2026-05-30T08:27:18.611906Z"
   }
 ]
