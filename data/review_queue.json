@@ -285,5 +285,27 @@
     },
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-05-29-ollama-v0-30-0-b1fd508aac93.md",
     "published_at": "2026-05-30T08:27:18.611906Z"
+  },
+  {
+    "id": "9d2c6b6622df",
+    "status": "deferred_generation_unavailable",
+    "created_at": "2026-05-30T18:06:02.535798Z",
+    "score": 92,
+    "reason": "deferred: generation provider unavailable",
+    "proposed_post": "",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Claude Code v2.1.154",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.154",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 60
+    },
+    "deferred_at": "2026-05-30T18:06:02.535763Z",
+    "defer_count": 1,
+    "original_score": 92,
+    "original_reason": "deferred: generation provider unavailable",
+    "card_path": null
   }
 ]
