@@ -1,7 +1,7 @@
 [
   {
     "id": "627e4a1f82e5",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-05-29T07:58:49.311172Z",
     "score": 90,
     "reason": "Gemini 3.5 Flash is GA via API, immediately usable by developers in production via Google's dev platforms.",
@@ -39,7 +39,8 @@
     "card_path": null,
     "is_llm_mode": true,
     "claire_note": "Okay Chloe, check this out: Simon Willison's take on Gemini 3.5 Flash hitting GA.\n\nThis isn't just another model update; it skipped the preview tag and Google's already integrating it heavily. For builders, this means a stable, production-ready model that's likely optimized for speed and cost, perfect for quick, high-volume tasks without waiting for a stable API.",
-    "chloe_note": "*Simon Willison v3.5* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Gemini 3.5 Flash is GA via API, immediately usable by developers in production via Google's dev platforms.Cluster context: 1 sources, engagement 0. Common terms: customers., out, app, gpt-5.5. Bewertung: 90. Quelle: https://simonwillison.net/2026/May/19/gemini-35-flash/#atom-entries"
+    "chloe_note": "*Simon Willison v3.5* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Gemini 3.5 Flash is GA via API, immediately usable by developers in production via Google's dev platforms.Cluster context: 1 sources, engagement 0. Common terms: customers., out, app, gpt-5.5. Bewertung: 90. Quelle: https://simonwillison.net/2026/May/19/gemini-35-flash/#atom-entries",
+    "expired_at": "2026-05-31T08:44:03.131584Z"
   },
   {
     "id": "0a2b9ee52be3",
@@ -308,11 +309,11 @@
   },
   {
     "id": "a5dd5bb42bb8",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-05-31T08:19:05.317566Z",
     "score": 65,
     "reason": "local newsworthiness fallback",
-    "proposed_post": "Anthropic Python SDK adds self-hosted sandbox support.\n\nclient v0.103.0 exposes CMA sandbox helpers for local execution. MIT license. 3.7K GitHub stars.\n\nSandbox helpers integrate into the SDK client, enabling local execution of CMA sandboxes. MIT license. Full changelog availabl",
+    "proposed_post": "Anthropic adds local sandbox helpers for CMA workflows.\n\nAnthropic Python SDK v0.103.0 exposes CMA sandbox helpers for local execution. MIT license. 3.7K Git\n\nSDK now bundles helpers to run CMA sandboxes locally, shifting development from cloud-first to local-first for debugging ",
     "source_angle": "Local high-score + Sarah/OpenRouter fallback",
     "source_item": {
       "title": "Anthropic Python SDK v0.103.0",
@@ -343,9 +344,21 @@
         "cluster_score": 45
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/a5dd5bb42bb8.png",
     "is_llm_mode": false,
     "claire_note": "Aus *Anthropic Python SDK Releases* ist ein starker Kandidat reingekommen: *Anthropic Python SDK v0.103.0*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 65_",
-    "chloe_note": "*Anthropic Python SDK v0.103.0* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: features, sandbox, add, python. Bewertung: 65. Quelle: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.103.0"
+    "chloe_note": "*Anthropic Python SDK v0.103.0* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: features, sandbox, add, python. Bewertung: 65. Quelle: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.103.0",
+    "sarah_package": {
+      "title": "Anthropic adds local sandbox helpers for CMA workflows.",
+      "subtitle": "Anthropic Python SDK v0.103.0 exposes CMA sandbox helpers for local execution. MIT license. 3.7K Git",
+      "description": "SDK now bundles helpers to run CMA sandboxes locally, shifting development from cloud-first to local-first for debugging and validation.",
+      "hashtags": [
+        "#Anthropic",
+        "#CMA",
+        "#PythonSDK"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-05-31-anthropic-python-sdk-v0-103-0-a5dd5bb42bb8.md",
+    "published_at": "2026-05-31T08:44:03.131584Z"
   }
 ]

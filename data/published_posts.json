@@ -54,5 +54,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-05-29-ollama-v0-30-0-b1fd508aac93.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mn2mxiopsc2s",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mn2mxiopsc2s"
+  },
+  {
+    "id": "a5dd5bb42bb8",
+    "published_at": "2026-05-31T08:44:03.131584Z",
+    "platform": "bluesky",
+    "post": "Anthropic adds local sandbox helpers for CMA workflows.\n\nAnthropic Python SDK v0.103.0 exposes CMA sandbox helpers for local execution. MIT license. 3.7K Git\n\nSDK now bundles helpers to run CMA sandboxes locally, shifting development from cloud-first to local-first for debugging ",
+    "source_link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.103.0",
+    "source_title": "Anthropic Python SDK v0.103.0",
+    "score": 65,
+    "reason": "local newsworthiness fallback",
+    "card_path": "generated/cards/a5dd5bb42bb8.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-05-31-anthropic-python-sdk-v0-103-0-a5dd5bb42bb8.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mn56ef4jtz2r",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mn56ef4jtz2r"
   }
 ]
