@@ -205,12 +205,12 @@
   },
   {
     "id": "a6c63c1c1e6e",
-    "status": "deferred_generation_unavailable",
-    "created_at": "2026-05-29T19:35:22.186303Z",
+    "status": "approved",
+    "created_at": "2026-05-31T08:19:05.330726Z",
     "score": 65,
-    "reason": "deferred: generation provider unavailable",
-    "proposed_post": "",
-    "source_angle": "Rule-based",
+    "reason": "local newsworthiness fallback",
+    "proposed_post": "Anthropic SDK extends local workflows.\n\nAnthropic Python SDK v0.105.0 adds new APIs, MIT license, with 0 engagement today.\n\nFirst SDK update in 6 weeks, targeting local model deployment, available on GitHub.\n\n#Anthropic #PythonSDK #MITLicense",
+    "source_angle": "Local high-score + Sarah/OpenRouter fallback",
     "source_item": {
       "title": "Anthropic Python SDK v0.105.0",
       "source": "Anthropic Python SDK Releases",
@@ -219,11 +219,9 @@
       "engagement_score": 0.0,
       "local_newsworthiness_score": 65
     },
-    "deferred_at": "2026-05-29T19:35:22.186265Z",
-    "defer_count": 1,
-    "original_score": 65,
-    "original_reason": "deferred: generation provider unavailable",
-    "card_path": null
+    "card_path": null,
+    "reactivated_at": "2026-05-31T08:19:05.330726Z",
+    "is_llm_mode": true
   },
   {
     "id": "b1fd508aac93",
@@ -307,5 +305,47 @@
     "original_score": 92,
     "original_reason": "deferred: generation provider unavailable",
     "card_path": null
+  },
+  {
+    "id": "a5dd5bb42bb8",
+    "status": "approved",
+    "created_at": "2026-05-31T08:19:05.317566Z",
+    "score": 65,
+    "reason": "local newsworthiness fallback",
+    "proposed_post": "Anthropic Python SDK adds self-hosted sandbox support.\n\nclient v0.103.0 exposes CMA sandbox helpers for local execution. MIT license. 3.7K GitHub stars.\n\nSandbox helpers integrate into the SDK client, enabling local execution of CMA sandboxes. MIT license. Full changelog availabl",
+    "source_angle": "Local high-score + Sarah/OpenRouter fallback",
+    "source_item": {
+      "title": "Anthropic Python SDK v0.103.0",
+      "source": "Anthropic Python SDK Releases",
+      "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.103.0",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 65,
+      "summary": "<h2>0.103.0 (2026-05-19)</h2>\n<p>Full Changelog: <a href=\"https://github.com/anthropics/anthropic-sdk-python/compare/v0.102.0...v0.103.0\">v0.102.0...v0.103.0</a></p>\n<h3>Features</h3>\n<ul>\n<li><strong>client:</strong> Add support for self-hosted sandboxes in CMA with sandbox helpers (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/e5625b0ae2a1e9d25847a53217c8fd70fa67c5ed\">e5625b0</a>)</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: features, sandbox, add, python, sandboxes.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Anthropic Python SDK Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "features",
+          "sandbox",
+          "add",
+          "python",
+          "sandboxes",
+          "changelog",
+          "client",
+          "strong"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: features, sandbox, add, python. Lead: Anthropic Python SDK v0.103.0",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Aus *Anthropic Python SDK Releases* ist ein starker Kandidat reingekommen: *Anthropic Python SDK v0.103.0*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 65_",
+    "chloe_note": "*Anthropic Python SDK v0.103.0* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: features, sandbox, add, python. Bewertung: 65. Quelle: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.103.0"
   }
 ]
