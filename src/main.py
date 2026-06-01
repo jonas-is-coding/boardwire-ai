@@ -24,6 +24,7 @@ from src.config import (
     ARTICLES_DIR,
     CARDS_DIR,
     CLUSTERS_DEBUG_PATH,
+    DOSSIERS_DIR,
     DRAFTS_PATH,
     ENGAGEMENT_PATH,
     ENGAGEMENT_REPORT_PATH,
@@ -51,6 +52,8 @@ from src.quality.gates import QualityConfig, check_quality
 from src.reports.article_export import export_review_articles, write_article_for_item
 from src.reports.review_report import generate_review_queue_report
 from src.storage.json_store import JsonStore
+from src.newsroom.config import load_newsroom_config
+from src.newsroom.orchestrator import run_newsroom_research
 from src.notifications import slack as notify
 from src.utils.logger import get_logger
 from src.writer.post_writer import generate_post
@@ -774,6 +777,68 @@ def _load_fixture_items() -> list[FeedItem]:
     return items
 
 
+def _run_newsroom_research(args, logger) -> int:
+    """Collect fresh items and run the newsroom deep-research pipeline.
+
+    Standalone entrypoint — does not touch the draft/review/publish pipeline.
+    Writes one dossier per researched story to data/dossiers/ and prints a
+    human-readable summary.
+    """
+
+    nr_config = load_newsroom_config()
+    if not nr_config.enabled:
+        logger.warning(
+            "Newsroom is disabled. Set BOARDWIRE_ENABLE_NEWSROOM=true to enable deep research."
+        )
+        return 1
+
+    llm_config = load_llm_config()
+    if args.llm_provider is not None:
+        llm_config.provider = args.llm_provider
+
+    if args.use_fixtures:
+        all_items = _load_fixture_items()
+        logger.info("Newsroom using fixtures: %d items", len(all_items))
+    else:
+        sources = _load_sources()
+        all_items, source_report = fetch_all(sources, logger=logger)
+        all_items = _collect_from_aggregators(all_items, source_report, logger)
+        all_items = _apply_freshness_filter(all_items, logger)
+    all_items = [_enrich_release_item_title(item) for item in all_items]
+
+    logger.info(
+        "Newsroom config: max_stories=%d fetch_fulltext=%s web_search=%s provider=%s",
+        nr_config.max_stories, nr_config.fetch_fulltext, nr_config.web_search, llm_config.provider,
+    )
+
+    dossiers = run_newsroom_research(
+        all_items,
+        config=nr_config,
+        llm_config=llm_config,
+        logger=logger,
+    )
+
+    if not dossiers:
+        logger.info("Newsroom produced no dossiers.")
+        return 0
+
+    for d in dossiers:
+        logger.info("=" * 72)
+        logger.info("STORY [%s]%s: %s", d.beat, " (follow-up)" if d.is_followup else "", d.headline)
+        logger.info("Angle: %s", d.angle)
+        logger.info("Summary: %s", d.summary)
+        for fact in d.key_facts:
+            logger.info("  - fact: %s", fact)
+        for claim in d.claims:
+            logger.info("  - claim [%s]: %s", claim.support, claim.text)
+        if d.open_questions:
+            logger.info("  open questions: %s", "; ".join(d.open_questions))
+        logger.info("Sources (%d): %s", len(d.source_urls), ", ".join(d.source_urls[:5]))
+    logger.info("=" * 72)
+    logger.info("Dossiers written to %s", DOSSIERS_DIR)
+    return 0
+
+
 def _build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Boardwire AI dry-run CLI")
     parser.add_argument("--debug-sources", action="store_true", help="Only fetch sources and print per-source counts and newest titles.")
@@ -806,6 +871,7 @@ def _build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--ignore-daily-cap", action="store_true", help="Development-only: bypass daily cap checks for this run.")
     parser.add_argument("--create-test-review-item", action="store_true", help="Development-only: create one pending review item from fixtures.")
     parser.add_argument("--export-web-articles", action="store_true", help="Export review items as Markdown web articles to generated/articles.")
+    parser.add_argument("--newsroom-research", action="store_true", help="Run the newsroom deep-research pipeline (desk -> reporter) and write dossiers to data/dossiers.")
     return parser
 
 
@@ -1753,6 +1819,8 @@ def run(argv: list[str] | None = None) -> int:
         return _regenerate_cards(logger)
     if args.export_web_articles:
         return _export_web_articles(logger)
+    if args.newsroom_research:
+        return _run_newsroom_research(args, logger)
     if args.create_test_review_item:
         if not args.use_fixtures:
             logger.error("--create-test-review-item requires --use-fixtures")

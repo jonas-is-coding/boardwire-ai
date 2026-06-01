@@ -8,3 +8,4 @@ __pycache__/
 .browser/
 data/embeddings.json
 data/clusters.json
+data/dossiers/

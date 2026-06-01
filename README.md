@@ -41,6 +41,44 @@ python -m src.main --regenerate-cards
 
 Cards are generated from `data/review_queue.json` and saved back via `card_path`.
 
+## Newsroom: deep multi-source research (experimental)
+
+Instead of "one source → one post", the newsroom works like a real agency: a
+**news desk** picks story leads from clusters (assigning a *beat* and *angle*),
+and a **reporter** researches each lead in depth — reading the **full text** of
+every source in the cluster (not just the RSS summary), optionally searching the
+web for background, and synthesising a structured **research dossier** (facts,
+checkable claims with a support level, numbers, quotes, open questions). A
+persistent **story memory** (`data/stories.json`) tracks running storylines so
+developments can be framed as follow-ups.
+
+This is fully opt-in and runs alongside — never instead of — the existing
+pipeline. Without `BOARDWIRE_ENABLE_NEWSROOM`, nothing changes.
+
+Run it:
+```bash
+BOARDWIRE_ENABLE_NEWSROOM=true python -m src.main --newsroom-research --llm-provider gemini
+```
+
+Dossiers are written to `data/dossiers/<lead_id>.json`. With no LLM configured
+the reporter still produces an extractive dossier from the fetched text.
+
+Config (`.env`):
+
+| Variable | Default | Purpose |
+|---|---|---|
+| `BOARDWIRE_ENABLE_NEWSROOM` | `false` | Master switch for the newsroom pipeline |
+| `BOARDWIRE_NEWSROOM_MAX_STORIES` | `2` | How many top leads to research per run (budget guard) |
+| `BOARDWIRE_NEWSROOM_FETCH_FULLTEXT` | `true` | Download & read article bodies |
+| `BOARDWIRE_NEWSROOM_MAX_FETCH` | `5` | Max source fetches per story |
+| `BOARDWIRE_NEWSROOM_FETCH_CHARS` | `8000` | Per-article text cap |
+| `BOARDWIRE_NEWSROOM_WEB_SEARCH` | `false` | Allow web search for background |
+| `BOARDWIRE_NEWSROOM_WEB_RESULTS` | `4` | Web results per story when enabled |
+| `BOARDWIRE_WEB_SEARCH_PROVIDER` | `none` | `none` or `gemini` (Google-Search grounding) |
+
+> Roadmap: fact-check gate, multi-format editor (short post / long article /
+> thread) and follow-up framing build on the dossier produced here.
+
 ## Publishing platforms
 
 Boardwire publishes via pluggable backends selected with `BOARDWIRE_PUBLISHER`
