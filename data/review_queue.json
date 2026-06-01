@@ -424,5 +424,47 @@
     "is_llm_mode": true,
     "claire_note": "Chloe, schau dir das mal an: 'can1357/oh-my-pi'. Ein AI Coding Agent direkt im Terminal. Das ist super relevant für Entwickler, die ihre Workflows mit KI-Tools optimieren wollen, ohne die IDE verlassen zu müssen.\n\nBesonders spannend sind die \"hash-anchored edits\" und die Subagents. Das könnte bedeuten, dass man sehr präzise Code-Änderungen durchführen und komplexe Aufgaben delegieren kann, was die Produktivität massiv steigert. Für jeden, der mit Python, LSP oder sogar Browser-Automation arbeitet, ist das ein Game-Changer.",
     "chloe_note": "Hey, *can1357/oh-my-pi — ⌥ AI Coding agent for the terminal — hash-anchored edits, optimized tool harness, LSP, Python, browser, subagents, and more* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New open-source AI coding agent released on GitHub, offers direct utility for developers. Passes Ships Test.Cluster context: 1 sources, engagement 333. Common terms: +333, subagents, trending, github. Score aktuell: 90. Link: https://github.com/can1357/oh-my-pi"
+  },
+  {
+    "id": "977511cd989c",
+    "status": "approved",
+    "created_at": "2026-06-01T20:59:22.624834Z",
+    "score": 90,
+    "reason": "New Ollama RC ships with direct llama.cpp integration, GGUF support, and MLX acceleration for Apple Silicon. Available now.",
+    "proposed_post": "Ollama v0.30.0-rc32 integrates llama.cpp directly, adds GGUF support, and uses MLX for Apple Silicon acceleration. Builders can test this RC today for improved local LLM compatibility and potentially faster inference on Apple Silicon.",
+    "source_angle": "Ollama v0.30.0-rc32: llama.cpp, GGUF, MLX for Apple Silicon",
+    "source_item": {
+      "title": "Ollama v0.30.0",
+      "source": "Ollama Releases",
+      "link": "https://github.com/ollama/ollama/releases/tag/v0.30.0-rc32",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 35,
+      "summary": "<p>This version of Ollama will change the architecture to directly support llama.cpp instead of building on top of GGML, and allows for compatibility with GGUF file format. MLX is used to accelerate model inference on Apple Silicon.</p>\n<p>While in pre-release we'd love <a href=\"https://github.com/ollama/ollama/pull/16031\">feedback</a> on:</p>\n<ul>\n<li>Performance improvements or degradation</li>\n<li>Errors or crashes that did not previously occur</li>\n<li>Memory utilization improvements or degradation</li>\n</ul>\n<h2>Known issues:</h2>\n<ul>\n<li><code>laguna-xs.2</code> is not yet supported on Windows/Linux.</li>\n<li><code>llama3.2-vision</code> is not yet supported</li>\n<li><code>nomic-embed-text</code> now converts inputs to lowercase per the model card where prior Ollama versions incorrectly preserved mixed case</li>\n</ul>\n<h2>Installing:</h2>\n<p><strong>Mac/Linux</strong></p>\n<div class=\"snippet-clipboard-content notranslate position-relative overflow-auto\"><pre class=\"notranslate\"><code>curl -fsSL https://ollama.com/install.sh | OLLAMA_VERSION=0.30.0-rc31 sh\n</code></pre></div>\n<p><strong>Windows</strong></p>\n<div class=\"snippet-clipboard-content notranslate position-relative overflow-auto\"><pre class=\"notranslate\"><code>$env:OLLAMA_VERSION=\"0.30.0-rc31\"; irm https://ollama.com/install.ps1 | iex\n</code></pre></div>\n[Cluster context: 1 sources, engagement 0, common terms: errors, prior, case, overflow-auto, /li.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Ollama Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "errors",
+          "prior",
+          "case",
+          "overflow-auto",
+          "/li",
+          "apple",
+          "inference",
+          "allows"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: errors, prior, case, overflow-auto. Lead: Ollama v0.30.0",
+        "alternative_titles": [],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "claire_note": "Chloe, das Ollama v0.30.0 Release ist ein Game Changer.\n\nDirekte llama.cpp Integration und GGUF-Support vereinfachen das Modell-Handling massiv. Für Apple Silicon gibt's jetzt MLX-Beschleunigung, das boostet die Performance für Devs, die lokal mit Modellen experimentieren. Das ist ein Muss für unsere Builder-Zielgruppe.",
+    "chloe_note": "Hey, *Ollama v0.30.0* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New Ollama RC ships with direct llama.cpp integration, GGUF support, and MLX acceleration for Apple Silicon. Available now.Cluster context: 1 sources, engagement 0. Common terms: errors, prior, case, overflow-auto. Score aktuell: 90. Link: https://github.com/ollama/ollama/releases/tag/v0.30.0-rc32"
   }
 ]
