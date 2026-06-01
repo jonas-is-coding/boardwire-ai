@@ -144,7 +144,7 @@ def test_cli_repo_with_concrete_token_reduction_scores_high() -> None:
     assert score_newsworthiness(item) >= 60
 
 
-def test_gemini_503_marks_provider_unavailable_for_run(monkeypatch, caplog) -> None:
+def test_gemini_503_does_not_exhaust_run_budget(monkeypatch, caplog) -> None:
     class UnavailableGeminiClient:
         def __init__(self, api_key: str, model: str) -> None:
             self.api_key = api_key
@@ -177,7 +177,10 @@ def test_gemini_503_marks_provider_unavailable_for_run(monkeypatch, caplog) -> N
         result = llm_evaluator.rank_candidates_with_llm([item], 1, config, logging.getLogger("test"))
 
     assert result is None
-    assert gemini_budget.remaining_gemini_budget() == 0
+    # A transient 503 only consumes the single call's budget unit (1 of 2) and
+    # falls back for this stage — it must NOT zero out the whole run budget, so
+    # later stages can still attempt Gemini.
+    assert gemini_budget.remaining_gemini_budget() == 1
     assert "Gemini provider temporarily unavailable; using fallback for ranking" in caplog.text
 
 
