@@ -151,6 +151,43 @@ It contains pending items only (newest first) and approve/reject commands.
 When daily cap blocks strong candidates, Boardwire stores them as `deferred_due_to_cap`.
 Deferred items are prioritized before fresh RSS items on the next run.
 
+## Virality model: learning from comparable channels
+
+Boardwire trains a small local model (`data/virality_model.json`) on the
+engagement its own posts collect, used as a ranking signal for candidates. Early
+on we have too few posts for this to learn anything useful (cold start).
+
+To fix that, training can **also learn from larger comparable channels** in our
+niche — fully opt-in. Their public posts are fetched via the same no-auth
+Bluesky AppView the engagement collector already uses
+(`app.bsky.feed.getAuthorFeed`), so no extra credentials are needed.
+
+The key trick: a big channel naturally gets more likes than we do, so training
+on raw counts would just teach "have more followers". Instead each account's
+engagement is turned into a **per-account z-score** — *how well a post did for
+that channel* — which is exactly the relative signal a ranking model needs. Our
+own posts are additionally up-weighted (`OWN_WEIGHT`) so the model stays anchored
+on our voice.
+
+Enable it by listing handles in `.env`:
+
+```bash
+BOARDWIRE_VIRALITY_REFERENCE_HANDLES=handle1.bsky.social,handle2.bsky.social
+python -m src.main --train-virality-model
+```
+
+Config (`.env`):
+
+| Variable | Default | Purpose |
+|---|---|---|
+| `BOARDWIRE_VIRALITY_REFERENCE_HANDLES` | _(empty)_ | Comma-separated reference handles. Empty = train on our posts only (unchanged). |
+| `BOARDWIRE_VIRALITY_REFERENCE_MAX_POSTS` | `100` | Max posts pulled per handle |
+| `BOARDWIRE_VIRALITY_REFERENCE_MIN_POSTS` | `5` | Min mature posts an account needs before its posts are used |
+| `BOARDWIRE_VIRALITY_OWN_WEIGHT` | `3.0` | Training weight for our posts vs. reference posts |
+
+Pick channels in the **same topic area** as us — the model learns from their
+content, so off-topic accounts would pull it in the wrong direction.
+
 ## LLM providers
 
 Supported providers:

@@ -38,6 +38,14 @@ jobs:
         run: python -m src.main --collect-engagement
 
       - name: Train virality model (no-op until enough data)
+        # Optional reference-channel learning (public, no-auth Bluesky API). Set
+        # the repo variable BOARDWIRE_VIRALITY_REFERENCE_HANDLES (comma-separated
+        # handles) to enable; empty keeps training on our own posts only.
+        env:
+          BOARDWIRE_VIRALITY_REFERENCE_HANDLES: ${{ vars.BOARDWIRE_VIRALITY_REFERENCE_HANDLES }}
+          BOARDWIRE_VIRALITY_REFERENCE_MAX_POSTS: ${{ vars.BOARDWIRE_VIRALITY_REFERENCE_MAX_POSTS }}
+          BOARDWIRE_VIRALITY_REFERENCE_MIN_POSTS: ${{ vars.BOARDWIRE_VIRALITY_REFERENCE_MIN_POSTS }}
+          BOARDWIRE_VIRALITY_OWN_WEIGHT: ${{ vars.BOARDWIRE_VIRALITY_OWN_WEIGHT }}
         run: python -m src.main --train-virality-model
 
       - name: Generate engagement report
