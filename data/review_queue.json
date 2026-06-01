@@ -385,11 +385,11 @@
   },
   {
     "id": "a4a220c2c2c0",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-01T16:44:03.568177Z",
     "score": 90,
     "reason": "New open-source AI coding agent released on GitHub, offers direct utility for developers. Passes Ships Test.",
-    "proposed_post": "New open-source AI coding agent `oh-my-pi` ships for terminal use. It offers hash-anchored edits, LSP, and subagents, enabling direct AI assistance for code tasks.",
+    "proposed_post": "Oh-my-pi ships terminal AI coding agent with hash-anchored edits and s\n\ncan1357/oh-my-pi turns terminal workflows into automated agents with LSP, Python, and browser contro\n\nFirst open-source terminal agent with hash-anchored edits for precise code changes and subagents for task ",
     "source_angle": "GitHub Trending: New open-source AI terminal agent",
     "source_item": {
       "title": "can1357/oh-my-pi — ⌥ AI Coding agent for the terminal — hash-anchored edits, optimized tool harness, LSP, Python, browser, subagents, and more",
@@ -420,10 +420,22 @@
         "cluster_score": 25
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/a4a220c2c2c0.png",
     "is_llm_mode": true,
     "claire_note": "Chloe, schau dir das mal an: 'can1357/oh-my-pi'. Ein AI Coding Agent direkt im Terminal. Das ist super relevant für Entwickler, die ihre Workflows mit KI-Tools optimieren wollen, ohne die IDE verlassen zu müssen.\n\nBesonders spannend sind die \"hash-anchored edits\" und die Subagents. Das könnte bedeuten, dass man sehr präzise Code-Änderungen durchführen und komplexe Aufgaben delegieren kann, was die Produktivität massiv steigert. Für jeden, der mit Python, LSP oder sogar Browser-Automation arbeitet, ist das ein Game-Changer.",
-    "chloe_note": "Hey, *can1357/oh-my-pi — ⌥ AI Coding agent for the terminal — hash-anchored edits, optimized tool harness, LSP, Python, browser, subagents, and more* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New open-source AI coding agent released on GitHub, offers direct utility for developers. Passes Ships Test.Cluster context: 1 sources, engagement 333. Common terms: +333, subagents, trending, github. Score aktuell: 90. Link: https://github.com/can1357/oh-my-pi"
+    "chloe_note": "Hey, *can1357/oh-my-pi — ⌥ AI Coding agent for the terminal — hash-anchored edits, optimized tool harness, LSP, Python, browser, subagents, and more* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New open-source AI coding agent released on GitHub, offers direct utility for developers. Passes Ships Test.Cluster context: 1 sources, engagement 333. Common terms: +333, subagents, trending, github. Score aktuell: 90. Link: https://github.com/can1357/oh-my-pi",
+    "sarah_package": {
+      "title": "Oh-my-pi ships terminal AI coding agent with hash-anchored edits and s",
+      "subtitle": "can1357/oh-my-pi turns terminal workflows into automated agents with LSP, Python, and browser contro",
+      "description": "First open-source terminal agent with hash-anchored edits for precise code changes and subagents for task delegation. MIT license. CLI-first",
+      "hashtags": [
+        "#TerminalAgent",
+        "#Subagents",
+        "#LSP"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-01-can1357-oh-my-pi-ai-coding-agent-for-the-terminal-hash-anchored-edits-optimized-tool-harness-lsp-python-browser-subagents-and-more-a4a220c2c2c0.md",
+    "published_at": "2026-06-01T21:32:13.398077Z"
   },
   {
     "id": "977511cd989c",
