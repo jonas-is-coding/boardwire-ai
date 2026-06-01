@@ -301,8 +301,8 @@
       "engagement_score": 0.0,
       "local_newsworthiness_score": 60
     },
-    "deferred_at": "2026-05-30T18:06:02.535763Z",
-    "defer_count": 1,
+    "deferred_at": "2026-06-01T10:21:10.934570Z",
+    "defer_count": 2,
     "original_score": 92,
     "original_reason": "deferred: generation provider unavailable",
     "card_path": null
