@@ -43,7 +43,11 @@ def mark_gemini_provider_exhausted(stage: str, logger: Logger) -> None:
 
 
 def mark_gemini_provider_temporarily_unavailable(stage: str, logger: Logger) -> None:
-    global _BUDGET_USED
-    total = configure_gemini_budget()
-    _BUDGET_USED = total
+    # A 503 ("high demand") is a transient blip, not a hard quota like a 429.
+    # The failing call already consumed its own budget unit via
+    # try_consume_gemini_budget, which bounds total attempts per run. We do NOT
+    # zero the remaining budget here, so later stages (evaluation, generation,
+    # quality) still get their own shot at Gemini instead of being forced onto
+    # the rule-based/local fallback by a single transient ranking failure.
+    configure_gemini_budget()
     logger.warning("Gemini provider temporarily unavailable; using fallback for %s", stage)
