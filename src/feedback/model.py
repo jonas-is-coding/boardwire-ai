@@ -10,7 +10,12 @@ import numpy as np
 
 from src.board.embeddings import DEFAULT_MODEL, EmbeddingService
 from src.config import EMBEDDINGS_CACHE_PATH, VIRALITY_MODEL_PATH
-from src.feedback.dataset import TrainingData, _post_to_feed_item, _structured_features
+from src.feedback.dataset import (
+    STRUCTURED_FEATURE_NAMES,
+    TrainingData,
+    _post_to_feed_item,
+    _structured_features,
+)
 from src.storage.json_store import JsonStore
 
 # Below this many mature samples the model would overfit noise, so training is
@@ -45,7 +50,7 @@ def train_virality_model(
     X_scaled = (data.X - mean) / std
 
     model = Ridge(alpha=1.0)
-    model.fit(X_scaled, data.y)
+    model.fit(X_scaled, data.y, sample_weight=data.sample_weight)
 
     payload = {
         "version": MODEL_VERSION,
@@ -53,12 +58,18 @@ def train_virality_model(
         "n_samples": int(n),
         "feature_dim": int(data.feature_dim),
         "embed_model": DEFAULT_MODEL,
+        # Label semantics + structured feature layout, so the scorer can
+        # reconstruct features and back-transform the prediction correctly.
+        "label_kind": data.label_kind,
+        "structured_features": list(data.structured_features),
         "feat_mean": mean.astype(float).tolist(),
         "feat_std": std.astype(float).tolist(),
         "coef": model.coef_.astype(float).tolist(),
         "intercept": float(model.intercept_),
     }
-    logger.info("Virality model trained on %d samples", n)
+    logger.info(
+        "Virality model trained on %d samples (label=%s)", n, data.label_kind
+    )
     return payload
 
 
@@ -91,6 +102,11 @@ class ViralityScorer:
             self._mean = np.asarray(self._model["feat_mean"], dtype=np.float32)
             self._std = np.asarray(self._model["feat_std"], dtype=np.float32)
             self._intercept = float(self._model["intercept"])
+            # Older models predate these fields; default to the original layout.
+            self._label_kind = self._model.get("label_kind", "log1p_engagement")
+            self._structured_features = tuple(
+                self._model.get("structured_features", STRUCTURED_FEATURE_NAMES)
+            )
 
     @property
     def available(self) -> bool:
@@ -102,7 +118,13 @@ class ViralityScorer:
         return self._embed_service
 
     def score(self, post: dict[str, Any]) -> float:
-        """Predicted engagement (back-transformed from log1p). 0.0 if no model."""
+        """Predicted virality as a ranking signal. 0.0 if no model.
+
+        For a ``log1p_engagement`` model this is the back-transformed engagement
+        estimate. For a ``zscore`` model (trained across reference channels) it is
+        the predicted per-account z-score — a relative "how well will this do"
+        signal that can be negative; callers use it only to order candidates.
+        """
         if self._model is None:
             return 0.0
         item = _post_to_feed_item(post)
@@ -110,7 +132,9 @@ class ViralityScorer:
         emb = embeddings.get(item.link)
         if emb is None:
             return 0.0
-        structured = np.asarray(_structured_features(post), dtype=np.float32)
+        structured = np.asarray(
+            _structured_features(post, self._structured_features), dtype=np.float32
+        )
         features = np.concatenate([emb, structured])
         if features.shape[0] != self._coef.shape[0]:
             if self.logger:
@@ -121,5 +145,7 @@ class ViralityScorer:
                 )
             return 0.0
         scaled = (features - self._mean) / self._std
-        predicted_log = float(np.dot(scaled, self._coef) + self._intercept)
-        return max(0.0, math.expm1(predicted_log))
+        predicted = float(np.dot(scaled, self._coef) + self._intercept)
+        if self._label_kind == "zscore":
+            return predicted
+        return max(0.0, math.expm1(predicted))

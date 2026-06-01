@@ -1677,13 +1677,36 @@ def _collect_engagement(logger) -> int:
 def _train_virality_model(logger) -> int:
     from src.feedback.dataset import build_training_data
     from src.feedback.model import save_model, train_virality_model
+    from src.feedback.reference_feeds import (
+        fetch_reference_posts,
+        load_reference_config,
+    )
 
     published = JsonStore.load(PUBLISHED_POSTS_PATH, default=[])
     store = JsonStore.load(ENGAGEMENT_PATH, default={})
     if not isinstance(store, dict):
         store = {}
 
-    data = build_training_data(published, store, logger)
+    # Opt-in: also learn from larger comparable channels to fix the cold-start
+    # problem when we have few of our own posts. Off unless handles are set.
+    ref_config = load_reference_config()
+    reference_posts = None
+    if ref_config.enabled:
+        logger.info(
+            "Virality training in reference mode: %d handle(s), own_weight=%.1f",
+            len(ref_config.handles),
+            ref_config.own_weight,
+        )
+        reference_posts = fetch_reference_posts(ref_config, logger)
+
+    data = build_training_data(
+        published,
+        store,
+        logger,
+        reference_posts=reference_posts,
+        own_weight=ref_config.own_weight,
+        min_account_posts=ref_config.min_account_posts,
+    )
     if data is None:
         logger.info("Virality model not trained: insufficient mature data")
         return 0
