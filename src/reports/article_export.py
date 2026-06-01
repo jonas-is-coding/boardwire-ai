@@ -23,65 +23,96 @@ def _safe_iso_date(value: str | None) -> str:
         return datetime.now(timezone.utc).date().isoformat()
 
 
-def _build_article_markdown(item: dict) -> str:
+_PLACEHOLDER_TEXT = {
+    "local newsworthiness fallback",
+    "n/a",
+    "unknown",
+}
+
+
+def _clean_text(value: str | None) -> str:
+    """Strip machine annotations so degraded-mode prose stays readable."""
+    if not value:
+        return ""
+    text = str(value)
+    # Drop internal cluster annotations like "[Cluster context: ...]".
+    text = re.sub(r"\[Cluster context:[^\]]*\]", "", text)
+    # Drop redundant "original: <url>" tails (the link lives in Sources).
+    text = re.sub(r"[—-]?\s*original:\s*\S+", "", text, flags=re.IGNORECASE)
+    # Collapse leftover whitespace.
+    text = re.sub(r"[ \t]+", " ", text)
+    text = re.sub(r"\n\s*\n\s*", "\n\n", text).strip()
+    if text.lower() in _PLACEHOLDER_TEXT:
+        return ""
+    return text
+
+
+def _front_matter(item: dict) -> str:
+    """Publishable front matter for the static blog site."""
     source_item = item.get("source_item", {})
     title = str(source_item.get("title", "Untitled")).strip() or "Untitled"
     source = str(source_item.get("source", "Unknown Source")).strip() or "Unknown Source"
     link = str(source_item.get("link", "")).strip()
-    score = int(item.get("score") or 0)
-    reason = str(item.get("reason", "")).strip()
-    created_at = str(item.get("created_at", "")).strip()
-    status = str(item.get("status", "unknown")).strip()
-    proposed_post = str(item.get("proposed_post", "")).strip()
+    date = _safe_iso_date(item.get("created_at"))
 
     escaped_title = title.replace('"', '\\"')
 
     lines = [
         "---",
         f'title: "{escaped_title}"',
+        f"date: {date}",
         f"source: {source}",
         f"source_url: {link or 'n/a'}",
-        f"review_id: {item.get('id', '')}",
-        f"status: {status}",
-        f"score: {score}",
-        f"created_at: {created_at or 'n/a'}",
         "---",
         "",
-        f"# {title}",
         "",
     ]
+    return "\n".join(lines)
 
-    if reason:
-        lines.extend(["## Warum das relevant ist", "", reason, ""])
 
-    if proposed_post:
-        lines.extend(["## Social Kurzfassung", "", proposed_post, ""])
+def _fallback_article_body(item: dict) -> str:
+    """Best-effort readable article when no LLM draft is available.
 
-    if link:
-        lines.extend(["## Quelle", "", f"- [{source}]({link})", ""])
+    This is a real blog post for a reader, not internal review documentation.
+    It only restates facts we actually have, woven into prose.
+    """
+    source_item = item.get("source_item", {})
+    title = str(source_item.get("title", "Untitled")).strip() or "Untitled"
+    source = str(source_item.get("source", "Unknown Source")).strip() or "Unknown Source"
+    link = str(source_item.get("link", "")).strip()
+    summary = _clean_text(source_item.get("summary"))
+    reason = _clean_text(item.get("reason"))
 
-    lines.extend(
+    paragraphs: list[str] = [f"# {title}", ""]
+
+    # Lead with the editorial angle when we have it; it reads more like prose
+    # than raw source metadata. Fall back to the cleaned source summary.
+    lede = reason or summary
+    if lede:
+        paragraphs.extend([lede, ""])
+
+    # Add the remaining grounded context as a second paragraph if distinct.
+    extra = summary if lede is reason else reason
+    if extra and extra != lede and extra.lower() not in lede.lower():
+        paragraphs.extend([extra, ""])
+
+    # Always give the reader the orientation of where this came from.
+    paragraphs.extend(
         [
-            "## Vollartikel (Entwurf)",
-            "",
-            "Dieser Artikel wurde aus dem Review-Queue-Eintrag erzeugt und ist als Markdown für boardwire-web gedacht.",
-            "",
-            "### Kontext",
-            f"- Quelle: **{source}**",
-            f"- Score: **{score}**",
-            "",
-            "### Einordnung",
-            "Boardwire bewertet hier primär den praktischen Nutzen für AI-Builders: Ändert das Thema messbar Capability, Zuverlässigkeit oder Kosten?",
-            "",
-            "### Nächste Schritte",
-            "- Fakten gegen Primärquelle prüfen",
-            "- Ggf. um Beispiele/Code ergänzen",
-            "- Für boardwire-web veröffentlichen",
+            f"This story surfaced via {source}. For the original details and any "
+            "numbers we have not confirmed here, follow the source below.",
             "",
         ]
     )
 
-    return "\n".join(lines)
+    if link:
+        paragraphs.extend(["## Sources", "", f"- [{source}]({link})", ""])
+
+    return "\n".join(paragraphs)
+
+
+def _build_article_markdown(item: dict) -> str:
+    return _front_matter(item) + _fallback_article_body(item)
 
 
 def export_review_articles(review_queue_path: Path, output_dir: Path) -> int:
@@ -122,7 +153,10 @@ def export_review_articles(review_queue_path: Path, output_dir: Path) -> int:
             created_at=str(item.get("created_at", "")),
             )
             llm_calls += 1
-        body = ai_article.strip() if isinstance(ai_article, str) and ai_article.strip() else _build_article_markdown(item)
+        if isinstance(ai_article, str) and ai_article.strip():
+            body = _front_matter(item) + ai_article.strip()
+        else:
+            body = _build_article_markdown(item)
         target.write_text(body + "\n", encoding="utf-8")
         written += 1
     return written

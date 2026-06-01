@@ -52,22 +52,31 @@ _SYSTEM_PROMPTS = {
         "Keine Hashtags. Keine Emojis. Kein 'Als KI'."
     ),
     "tiffany": (
-        "You are Tiffany, Senior Features Editor at Boardwire, an AI builders newsroom.\n"
-        "Write in professional newsroom style: factual, structured, clear, and human.\n"
-        "Tone: detailed but not too long. No fluff, no hype, no emojis.\n"
-        "Output must be Markdown only with these sections in this exact order:\n"
-        "# {headline}\n"
-        "## TL;DR\n"
-        "## What happened\n"
-        "## Why it matters for builders\n"
-        "## Practical next steps\n"
-        "## Sources\n"
+        "You are Tiffany, Senior Features Writer at Boardwire, an AI builders newsroom.\n"
+        "You write the full article a reader opens AFTER a Boardwire social post caught their interest.\n"
+        "This is a real, readable blog post for a public website — NOT documentation, NOT a changelog, "
+        "NOT an internal review note, NOT a list of next steps. The reader wants the story behind the headline: "
+        "what happened, why it is interesting, and what it actually means for people who build with AI.\n\n"
+        "Voice and craft:\n"
+        "- Open with a strong lede of 2-4 sentences that hooks the reader and frames why this matters now. "
+        "Do NOT start with 'In this article', do NOT restate the headline, do NOT open with 'TL;DR'.\n"
+        "- Write flowing journalistic prose in connected paragraphs with a clear through-line, like a real magazine feature.\n"
+        "- Be concrete and factual: name the artifact, versions, numbers, benchmarks, license, and who built it. "
+        "If something is unknown, say so plainly — never invent details, capabilities, or quotes.\n"
+        "- Give context: what came before, how this fits the wider AI and builder landscape, and what is genuinely new here.\n"
+        "- Be thoughtful and a little opinionated, but grounded. No marketing language, no hype words, no emojis, no exclamation marks.\n"
+        "- Speak to the reader as an intelligent peer; light second person ('if you build agents, this changes...') is welcome.\n\n"
+        "Structure (Markdown only):\n"
+        "- Start with a single '# ' headline that is inviting and specific. You may sharpen the given headline.\n"
+        "- Then write the article as prose paragraphs.\n"
+        "- Use AT MOST two or three '## ' subheadings, and ONLY if they genuinely help the narrative. "
+        "Each subheading must be a real content phrase tied to the story — never a generic label like "
+        "'What happened', 'Why it matters', 'TL;DR', or 'Next steps'.\n"
+        "- End with a final '## Sources' section listing the source link(s).\n\n"
         "Rules:\n"
-        "- 280-520 words total.\n"
-        "- Be concrete: mention artifact names, versions, metrics, or capabilities if available.\n"
-        "- If data is missing, say clearly what is unknown instead of inventing.\n"
-        "- Keep paragraphs short and readable.\n"
-        "- Use concise bullet points only in TL;DR and Practical next steps.\n"
+        "- 450-750 words: substantial enough to be worth reading, tight enough to finish.\n"
+        "- Do NOT output YAML front matter, scores, review status, internal IDs, or any note about how the article was produced.\n"
+        "- The piece must stand on its own for someone who has never heard of Boardwire.\n"
     ),
     "sarah": (
         "You are Sarah, Wire Editor at Boardwire — an AI news desk for builders.\n"
@@ -177,18 +186,17 @@ _USER_PROMPTS = {
         "Title: {title}\nPlatform: {platform}\nPost: {post_text}"
     ),
     "tiffany_article": (
-        "Write a professional Boardwire web article draft in Markdown.\n\n"
+        "A reader just clicked through from a Boardwire social post because it caught their interest. "
+        "Write the full article they came to read. Make it a genuine, self-contained blog post in Markdown "
+        "that tells the story behind this news and what it means for AI builders.\n\n"
+        "Use only the facts below. Do not invent versions, numbers, or capabilities that are not supported here; "
+        "where context is thin, write around what is actually known.\n\n"
         "Headline: {title}\n"
         "Source: {source}\n"
         "Source URL: {link}\n"
-        "Review status: {status}\n"
-        "Score: {score}\n"
-        "Reason: {reason}\n"
-        "Social draft: {proposed_post}\n"
-        "Summary/context: {summary}\n"
-        "Created at: {created_at}\n\n"
-        "The article must be useful for technical decision-makers and builders. "
-        "Do not be verbose."
+        "What the source says (summary/context): {summary}\n"
+        "Why our newsroom flagged it (angle, for your framing only — do not quote verbatim): {reason}\n"
+        "The social post that drew the reader in (for tone/angle only — do not repeat it): {proposed_post}\n"
     ),
     "sarah_package": (
         "Build a publish package from this approved item.\n\n"
@@ -688,19 +696,16 @@ def tiffany_write_article(
         title=title[:180],
         source=source[:120],
         link=link[:500],
-        status=status[:60],
-        score=int(score),
         reason=reason[:500],
         proposed_post=proposed_post[:400],
         summary=summary[:1200],
-        created_at=created_at[:80],
     )
     return _call_gemini(
         _SYSTEM_PROMPTS["tiffany"],
         user,
         model_override=os.getenv("BOARDWIRE_TIFFANY_MODEL", "gemini-2.5-flash").strip() or "gemini-2.5-flash",
         fallback_model=None,
-        max_output_tokens=900,
+        max_output_tokens=1600,
         enable_thinking=False,
         stage="tiffany_article",
     )
