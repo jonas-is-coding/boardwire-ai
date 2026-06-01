@@ -206,11 +206,11 @@
   },
   {
     "id": "a6c63c1c1e6e",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-05-31T08:19:05.330726Z",
     "score": 65,
     "reason": "local newsworthiness fallback",
-    "proposed_post": "Anthropic SDK extends local workflows.\n\nAnthropic Python SDK v0.105.0 adds new APIs, MIT license, with 0 engagement today.\n\nFirst SDK update in 6 weeks, targeting local model deployment, available on GitHub.\n\n#Anthropic #PythonSDK #MITLicense",
+    "proposed_post": "Anthropic Python SDK adds local deployment APIs.\n\nv0.105.0 targets local model deployment with new APIs and MIT license, 0 stars today.\n\nFirst SDK update in six weeks. Enables local workflows via new deployment endpoints. Available on GitHub under MIT license.\n\n📖 Read the full ar",
     "source_angle": "Local high-score + Sarah/OpenRouter fallback",
     "source_item": {
       "title": "Anthropic Python SDK v0.105.0",
@@ -220,9 +220,21 @@
       "engagement_score": 0.0,
       "local_newsworthiness_score": 65
     },
-    "card_path": null,
+    "card_path": "generated/cards/a6c63c1c1e6e.png",
     "reactivated_at": "2026-05-31T08:19:05.330726Z",
-    "is_llm_mode": true
+    "is_llm_mode": true,
+    "sarah_package": {
+      "title": "Anthropic Python SDK adds local deployment APIs.",
+      "subtitle": "v0.105.0 targets local model deployment with new APIs and MIT license, 0 stars today.",
+      "description": "First SDK update in six weeks. Enables local workflows via new deployment endpoints. Available on GitHub under MIT license.",
+      "hashtags": [
+        "#Anthropic",
+        "#PythonSDK",
+        "#MITLicense"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-05-31-anthropic-python-sdk-v0-105-0-a6c63c1c1e6e.md",
+    "published_at": "2026-06-01T11:31:47.368237Z"
   },
   {
     "id": "b1fd508aac93",

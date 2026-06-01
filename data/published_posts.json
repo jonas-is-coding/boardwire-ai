@@ -68,5 +68,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-05-31-anthropic-python-sdk-v0-103-0-a5dd5bb42bb8.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mn56ef4jtz2r",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mn56ef4jtz2r"
+  },
+  {
+    "id": "a6c63c1c1e6e",
+    "published_at": "2026-06-01T11:31:47.368237Z",
+    "platform": "bluesky",
+    "post": "Anthropic Python SDK adds local deployment APIs.\n\nv0.105.0 targets local model deployment with new APIs and MIT license, 0 stars today.\n\nFirst SDK update in six weeks. Enables local workflows via new deployment endpoints. Available on GitHub under MIT license.\n\n📖 Read the full ar",
+    "source_link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.105.0",
+    "source_title": "Anthropic Python SDK v0.105.0",
+    "score": 65,
+    "reason": "local newsworthiness fallback",
+    "card_path": "generated/cards/a6c63c1c1e6e.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-05-31-anthropic-python-sdk-v0-105-0-a6c63c1c1e6e.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mn7y7anj7w2z",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mn7y7anj7w2z"
   }
 ]
