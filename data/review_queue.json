@@ -439,11 +439,11 @@
   },
   {
     "id": "977511cd989c",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-01T20:59:22.624834Z",
     "score": 90,
     "reason": "New Ollama RC ships with direct llama.cpp integration, GGUF support, and MLX acceleration for Apple Silicon. Available now.",
-    "proposed_post": "Ollama v0.30.0-rc32 integrates llama.cpp directly, adds GGUF support, and uses MLX for Apple Silicon acceleration. Builders can test this RC today for improved local LLM compatibility and potentially faster inference on Apple Silicon.",
+    "proposed_post": "Ollama upgrades to direct llama.cpp runtime.\n\nv0.30.0 RC32 drops GGML for GGUF, adds MLX acceleration on Apple Silicon, 16031+ GitHub stars.\n\nSwitches from GGML to direct llama.cpp integration and adopts GGUF for broader model compatibility. Uses Apple Silicon’s MLX for faster lo",
     "source_angle": "Ollama v0.30.0-rc32: llama.cpp, GGUF, MLX for Apple Silicon",
     "source_item": {
       "title": "Ollama v0.30.0",
@@ -474,10 +474,22 @@
         "cluster_score": 35
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/977511cd989c.png",
     "is_llm_mode": true,
     "claire_note": "Chloe, das Ollama v0.30.0 Release ist ein Game Changer.\n\nDirekte llama.cpp Integration und GGUF-Support vereinfachen das Modell-Handling massiv. Für Apple Silicon gibt's jetzt MLX-Beschleunigung, das boostet die Performance für Devs, die lokal mit Modellen experimentieren. Das ist ein Muss für unsere Builder-Zielgruppe.",
-    "chloe_note": "Hey, *Ollama v0.30.0* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New Ollama RC ships with direct llama.cpp integration, GGUF support, and MLX acceleration for Apple Silicon. Available now.Cluster context: 1 sources, engagement 0. Common terms: errors, prior, case, overflow-auto. Score aktuell: 90. Link: https://github.com/ollama/ollama/releases/tag/v0.30.0-rc32"
+    "chloe_note": "Hey, *Ollama v0.30.0* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New Ollama RC ships with direct llama.cpp integration, GGUF support, and MLX acceleration for Apple Silicon. Available now.Cluster context: 1 sources, engagement 0. Common terms: errors, prior, case, overflow-auto. Score aktuell: 90. Link: https://github.com/ollama/ollama/releases/tag/v0.30.0-rc32",
+    "sarah_package": {
+      "title": "Ollama upgrades to direct llama.cpp runtime.",
+      "subtitle": "v0.30.0 RC32 drops GGML for GGUF, adds MLX acceleration on Apple Silicon, 16031+ GitHub stars.",
+      "description": "Switches from GGML to direct llama.cpp integration and adopts GGUF for broader model compatibility. Uses Apple Silicon’s MLX for faster loca",
+      "hashtags": [
+        "#Ollama",
+        "#llama.cpp",
+        "#GGUF"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-01-ollama-v0-30-0-977511cd989c.md",
+    "published_at": "2026-06-02T16:22:59.469578Z"
   },
   {
     "id": "fc183e36ed18",

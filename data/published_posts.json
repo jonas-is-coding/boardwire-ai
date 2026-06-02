@@ -110,5 +110,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-01-can1357-oh-my-pi-ai-coding-agent-for-the-terminal-hash-anchored-edits-optimized-tool-harness-lsp-python-browser-subagents-and-more-a4a220c2c2c0.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mnazqyyik42n",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mnazqyyik42n"
+  },
+  {
+    "id": "977511cd989c",
+    "published_at": "2026-06-02T16:22:59.469578Z",
+    "platform": "bluesky",
+    "post": "Ollama upgrades to direct llama.cpp runtime.\n\nv0.30.0 RC32 drops GGML for GGUF, adds MLX acceleration on Apple Silicon, 16031+ GitHub stars.\n\nSwitches from GGML to direct llama.cpp integration and adopts GGUF for broader model compatibility. Uses Apple Silicon’s MLX for faster lo",
+    "source_link": "https://github.com/ollama/ollama/releases/tag/v0.30.0-rc32",
+    "source_title": "Ollama v0.30.0",
+    "score": 90,
+    "reason": "New Ollama RC ships with direct llama.cpp integration, GGUF support, and MLX acceleration for Apple Silicon. Available now.",
+    "card_path": "generated/cards/977511cd989c.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-01-ollama-v0-30-0-977511cd989c.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mncywwduhb24",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mncywwduhb24"
   }
 ]
