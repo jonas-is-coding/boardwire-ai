@@ -535,11 +535,11 @@
   },
   {
     "id": "4499083427bd",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-02T20:10:25.852832Z",
     "score": 75,
     "reason": "LangChain v1.3.4 released with a specific fix for HITL rejection guidance. Actionable for builders using LangChain agents.",
-    "proposed_post": "LangChain v1.3.4 improves Human-in-the-Loop (HITL) rejection guidance. Builders using HITL in LangChain agents should update to clarify rejection flows and improve system robustness.",
+    "proposed_post": "LangChain updates HITL rejection guidance.\n\nLangChain v1.3.4 fixes HITL rejection flows, clarifying agent workflows with +37859 fix.\n\nLangChain v1.3.4 improves system robustness for builders using Human-in-the-Loop in LangChain agents, available on GitHub.\n\n📖 Read the full articl",
     "source_angle": "LangChain v1.3.4 improves HITL rejection guidance.",
     "source_item": {
       "title": "LangChain v1.3.4",
@@ -572,9 +572,21 @@
         "cluster_score": 35
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/4499083427bd.png",
     "is_llm_mode": true,
     "claire_note": "Chloe, das ist ein kleineres Update, aber relevant für alle, die LangChain nutzen. Es geht um verbesserte Guidance bei der Ablehnung von Human-in-the-Loop-Interventionen. Das ist wichtig, wenn du an stabilen, zuverlässigen LLM-Workflows baust, bei denen menschliches Eingreifen präzise gehandhabt werden muss. Entwickler können damit ihre HITL-Strategien schärfen und die Akzeptanzraten ihrer Modelle optimieren.",
-    "chloe_note": "Hey, *LangChain v1.3.4* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen LangChain v1.3.4 released with a specific fix for HITL rejection guidance. Actionable for builders using LangChain agents.Cluster context: 1 sources, engagement 0. Common terms: since, class, 1.3.3, href. Score aktuell: 75. Link: https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.3.4"
+    "chloe_note": "Hey, *LangChain v1.3.4* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen LangChain v1.3.4 released with a specific fix for HITL rejection guidance. Actionable for builders using LangChain agents.Cluster context: 1 sources, engagement 0. Common terms: since, class, 1.3.3, href. Score aktuell: 75. Link: https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.3.4",
+    "sarah_package": {
+      "title": "LangChain updates HITL rejection guidance.",
+      "subtitle": "LangChain v1.3.4 fixes HITL rejection flows, clarifying agent workflows with +37859 fix.",
+      "description": "LangChain v1.3.4 improves system robustness for builders using Human-in-the-Loop in LangChain agents, available on GitHub.",
+      "hashtags": [
+        "#LangChain",
+        "#HITL",
+        "#HumanInTheLoop"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-02-langchain-v1-3-4-4499083427bd.md",
+    "published_at": "2026-06-02T20:48:05.038132Z"
   }
 ]
