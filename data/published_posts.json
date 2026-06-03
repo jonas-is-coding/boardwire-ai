@@ -138,5 +138,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-02-langchain-v1-3-4-4499083427bd.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mndhqut2jt2a",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mndhqut2jt2a"
+  },
+  {
+    "id": "7f37036d9f25",
+    "published_at": "2026-06-03T16:47:17.596401Z",
+    "platform": "bluesky",
+    "post": "Ollama supports Gemma 4-12B.\n\nOllama v0.30.3 enables local deployment for builders with 1 new model.\n\nGemma 4-12B support added in Ollama v0.30.3, expanding local inference options.\n\n📖 Read the full article: file:///home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-03-o",
+    "source_link": "https://github.com/ollama/ollama/releases/tag/v0.30.3",
+    "source_title": "Ollama v0.30.3",
+    "score": 90,
+    "reason": "Ollama v0.30.3 adds concrete support for Gemma 4-12B, enabling immediate local deployment for builders.",
+    "card_path": "generated/cards/7f37036d9f25.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-03-ollama-v0-30-3-7f37036d9f25.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mnfkravz4a2q",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mnfkravz4a2q"
   }
 ]
