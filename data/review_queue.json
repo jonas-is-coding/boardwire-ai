@@ -588,5 +588,50 @@
     },
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-02-langchain-v1-3-4-4499083427bd.md",
     "published_at": "2026-06-02T20:48:05.038132Z"
+  },
+  {
+    "id": "7f37036d9f25",
+    "status": "approved",
+    "created_at": "2026-06-03T15:50:40.877624Z",
+    "score": 90,
+    "reason": "Ollama v0.30.3 adds concrete support for Gemma 4-12B, enabling immediate local deployment for builders.",
+    "proposed_post": "Ollama v0.30.3 now supports Gemma 4-12B. Builders can run this model locally with Ollama, expanding options for local inference and experimentation today.",
+    "source_angle": "Ollama adds Gemma 4-12B support for local inference",
+    "source_item": {
+      "title": "Ollama v0.30.3",
+      "source": "Ollama Releases",
+      "link": "https://github.com/ollama/ollama/releases/tag/v0.30.3",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 35,
+      "summary": "<p>models: add support for gemma4-12b (<a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/16457\">#16457</a>)</p>\n[Cluster context: 1 sources, engagement 0, common terms: ollama, href, js-issue-link, issue-link, class.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Ollama Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "ollama",
+          "href",
+          "js-issue-link",
+          "issue-link",
+          "class",
+          "are",
+          "v0.30.3",
+          "support"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: ollama, href, js-issue-link, issue-link. Lead: Ollama v0.30.3",
+        "alternative_titles": [
+          "Ollama v0.30.2-rc0",
+          "Ollama v0.30.1"
+        ],
+        "cluster_score": 15
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "claire_note": "Chloe, Ollama v0.30.3 ist da. Support für Gemma4-12B direkt in Ollama. Das ist ein schneller Weg für Entwickler, das neue Google-Modell lokal zu testen und zu integrieren, ohne sich um komplizierte Setups zu kümmern.",
+    "chloe_note": "Hey, *Ollama v0.30.3* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Ollama v0.30.3 adds concrete support for Gemma 4-12B, enabling immediate local deployment for builders.Cluster context: 1 sources, engagement 0. Common terms: ollama, href, js-issue-link, issue-link. Score aktuell: 90. Link: https://github.com/ollama/ollama/releases/tag/v0.30.3"
   }
 ]
