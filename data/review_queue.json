@@ -493,11 +493,11 @@
   },
   {
     "id": "fc183e36ed18",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-02T14:59:19.213267Z",
     "score": 95,
     "reason": "Passes Ships Test: new open-source library/proxy/server released, offers 60-95% token reduction for LLM inputs. High builder relevance.",
-    "proposed_post": "chopratejas/headroom is a new open-source library/proxy/server that compresses LLM inputs (logs, RAG, tool outputs) by 60-95%. Builders can use it to cut token costs and fit more data into context windows without losing answer quality.",
+    "proposed_post": "Headroom compresses LLM context before inference.\n\nchopratejas/headroom library, proxy, and MCP server cuts tool outputs, logs, and RAG chunks by 60-95\n\nOpen-source tool drops tokens pre-inference via lossless compression. MIT license. Local or proxy deployment. No model changes ",
     "source_angle": "GitHub Trending: New open-source tool for LLM input compression.",
     "source_item": {
       "title": "chopratejas/headroom — Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 60-95% fewer tokens, same answers. Library, proxy, MCP server.",
@@ -528,10 +528,22 @@
         "cluster_score": 35
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/fc183e36ed18.png",
     "is_llm_mode": true,
     "claire_note": "Hey Chloe,\n\nCheck this out: 'chopratejas/headroom'. Das ist ein spannendes Projekt, das auf GitHub gerade durch die Decke geht.\n\nFür Builder ist das Gold wert, weil es Tool-Outputs, Logs und RAG-Chunks um 60-95% komprimiert, bevor sie zum LLM gehen. Weniger Tokens bei gleichen Antworten bedeutet signifikante Kostenersparnisse und schnellere Inferenzzeiten für alle, die mit großen Kontextfenstern kämpfen. Das ist ein direkter Performance- und Kosten-Win.",
-    "chloe_note": "Hey, *chopratejas/headroom — Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 60-95% fewer tokens, same answers. Library, proxy, MCP server.* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Passes Ships Test: new open-source library/proxy/server released, offers 60-95% token reduction for LLM inputs. High builder relevance.Cluster context: 1 sources, engagement 1266. Common terms: logs, files, github, stars. Score aktuell: 95. Link: https://github.com/chopratejas/headroom"
+    "chloe_note": "Hey, *chopratejas/headroom — Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 60-95% fewer tokens, same answers. Library, proxy, MCP server.* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Passes Ships Test: new open-source library/proxy/server released, offers 60-95% token reduction for LLM inputs. High builder relevance.Cluster context: 1 sources, engagement 1266. Common terms: logs, files, github, stars. Score aktuell: 95. Link: https://github.com/chopratejas/headroom",
+    "sarah_package": {
+      "title": "Headroom compresses LLM context before inference.",
+      "subtitle": "chopratejas/headroom library, proxy, and MCP server cuts tool outputs, logs, and RAG chunks by 60-95",
+      "description": "Open-source tool drops tokens pre-inference via lossless compression. MIT license. Local or proxy deployment. No model changes needed.",
+      "hashtags": [
+        "#Headroom",
+        "#LLMInference",
+        "#RAG"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-02-chopratejas-headroom-compress-tool-outputs-logs-files-and-rag-chunks-before-they-reach-the-llm-60-95-fewer-tokens-same-answers-library-proxy-mcp-server-fc183e36ed18.md",
+    "published_at": "2026-06-03T20:54:43.027284Z"
   },
   {
     "id": "4499083427bd",
