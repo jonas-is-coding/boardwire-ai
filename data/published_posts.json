@@ -180,5 +180,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-03-nousresearch-hermes-agent-the-agent-that-grows-with-you-06f2a7156fee.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mnighp3wjq2y",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mnighp3wjq2y"
+  },
+  {
+    "id": "fe941acdf6e8",
+    "published_at": "2026-06-05T19:53:38.468686Z",
+    "platform": "bluesky",
+    "post": "Code review is getting an AI-powered CLI primitive.\n\nOpen Code Review provides MCP integration and sandboxed runs, with Apache 2.0 license.\n\nBuilt by operating engineers, Open Code Review runs locally or in CI to catch issues before humans review, supporting Python.\n\n📖 Read the f",
+    "source_link": "https://github.com/alibaba/open-code-review",
+    "source_title": "Open Code Review – An AI-powered code review CLI tool",
+    "score": 60,
+    "reason": "local newsworthiness fallback",
+    "card_path": "generated/cards/fe941acdf6e8.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-05-open-code-review-an-ai-powered-code-review-cli-tool-fe941acdf6e8.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mnkw4bhnst26",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mnkw4bhnst26"
   }
 ]

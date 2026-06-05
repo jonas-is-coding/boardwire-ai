@@ -733,11 +733,11 @@
   },
   {
     "id": "fe941acdf6e8",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-05T19:00:20.602032Z",
     "score": 60,
     "reason": "local newsworthiness fallback",
-    "proposed_post": "Code review is getting an AI-powered CLI primitive.\n\nOpen Code Review provides an AI-first code review CLI with MCP integration and sandboxed runs.\n\nBuilt by operating engineers, Open Code Review runs locally or in CI to catch issues before humans review. Apache 2.0. Supports Pyt",
+    "proposed_post": "Code review is getting an AI-powered CLI primitive.\n\nOpen Code Review provides MCP integration and sandboxed runs, with Apache 2.0 license.\n\nBuilt by operating engineers, Open Code Review runs locally or in CI to catch issues before humans review, supporting Python.\n\n📖 Read the f",
     "source_angle": "Local high-score + Sarah/OpenRouter fallback",
     "source_item": {
       "title": "Open Code Review – An AI-powered code review CLI tool",
@@ -747,8 +747,20 @@
       "engagement_score": 188.0,
       "local_newsworthiness_score": 60
     },
-    "card_path": null,
+    "card_path": "generated/cards/fe941acdf6e8.png",
     "reactivated_at": "2026-06-05T19:00:20.602032Z",
-    "is_llm_mode": false
+    "is_llm_mode": false,
+    "sarah_package": {
+      "title": "Code review is getting an AI-powered CLI primitive.",
+      "subtitle": "Open Code Review provides MCP integration and sandboxed runs, with Apache 2.0 license.",
+      "description": "Built by operating engineers, Open Code Review runs locally or in CI to catch issues before humans review, supporting Python.",
+      "hashtags": [
+        "#OpenCodeReview",
+        "#MCP",
+        "#AIcodeReview"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-05-open-code-review-an-ai-powered-code-review-cli-tool-fe941acdf6e8.md",
+    "published_at": "2026-06-05T19:53:38.468686Z"
   }
 ]
