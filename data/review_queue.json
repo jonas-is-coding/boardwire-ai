@@ -732,5 +732,27 @@
     },
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-03-nousresearch-hermes-agent-the-agent-that-grows-with-you-06f2a7156fee.md",
     "published_at": "2026-06-04T20:08:22.239126Z"
+  },
+  {
+    "id": "fe941acdf6e8",
+    "status": "deferred_generation_unavailable",
+    "created_at": "2026-06-05T08:47:08.867401Z",
+    "score": 60,
+    "reason": "deferred: generation provider unavailable",
+    "proposed_post": "",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Open Code Review – An AI-powered code review CLI tool",
+      "source": "HackerNews",
+      "link": "https://github.com/alibaba/open-code-review",
+      "source_tier": 3,
+      "engagement_score": 188.0,
+      "local_newsworthiness_score": 60
+    },
+    "deferred_at": "2026-06-05T08:47:08.867357Z",
+    "defer_count": 1,
+    "original_score": 60,
+    "original_reason": "deferred: generation provider unavailable",
+    "card_path": null
   }
 ]
