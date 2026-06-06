@@ -765,12 +765,12 @@
   },
   {
     "id": "fd88d9f6ce59",
-    "status": "deferred_generation_unavailable",
-    "created_at": "2026-06-06T07:49:55.759564Z",
-    "score": 60,
-    "reason": "deferred: generation provider unavailable",
-    "proposed_post": "",
-    "source_angle": "Rule-based",
+    "status": "approved",
+    "created_at": "2026-06-06T12:09:49.683755Z",
+    "score": 90,
+    "reason": "New open-source CLI tool for LLM token reduction. Ships today, clear cost-saving potential for builders.",
+    "proposed_post": "Lowfat, a new CLI tool, filters LLM input to reduce token usage. It claims up to 91.8% token savings, offering a direct way to cut LLM API costs for prompt engineering.",
+    "source_angle": "HackerNews: New open-source CLI tool for LLM token reduction",
     "source_item": {
       "title": "Show HN: Lowfat – pluggable CLI filter that saved 91.8% of my LLM tokens",
       "source": "HackerNews",
@@ -779,11 +779,9 @@
       "engagement_score": 157.0,
       "local_newsworthiness_score": 60
     },
-    "deferred_at": "2026-06-06T07:49:55.759525Z",
-    "defer_count": 1,
-    "original_score": 60,
-    "original_reason": "deferred: generation provider unavailable",
-    "card_path": null
+    "card_path": null,
+    "reactivated_at": "2026-06-06T12:09:49.683755Z",
+    "is_llm_mode": true
   },
   {
     "id": "23de9b3f10aa",
@@ -838,5 +836,47 @@
     },
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-06-anthropic-python-sdk-v0-106-0-23de9b3f10aa.md",
     "published_at": "2026-06-06T08:32:55.039096Z"
+  },
+  {
+    "id": "2369cf56a4e0",
+    "status": "approved",
+    "created_at": "2026-06-06T12:09:49.654803Z",
+    "score": 65,
+    "reason": "local newsworthiness fallback",
+    "proposed_post": "Claude Code adds fallback models for overload handling.\n\nFallbackModel setting supports up to three models, with glob pattern support in deny rules and harde\n\nNew capability allows configuration of multiple fallback models for primary model overload, with Apache-compatible deny r",
+    "source_angle": "Local high-score + Sarah/OpenRouter fallback",
+    "source_item": {
+      "title": "Claude Code v2.1.166",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.166",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 65,
+      "summary": "<h2>What's changed</h2>\n<ul>\n<li>Added <code>fallbackModel</code> setting to configure up to three fallback models tried in order when the primary model is overloaded or unavailable; <code>--fallback-model</code> now also applies to interactive sessions</li>\n<li>Added glob pattern support in deny rule tool-name position (<code>\"*\"</code> denies all tools); allow rules reject non-MCP globs, and unknown tool names in deny rules warn at startup</li>\n<li>Hardened cross-session messaging: messages relayed via <code>SendMessage</code> from other Claude sessions no longer carry user authority — receivers refuse relayed permission requests, and auto mode blocks them</li>\n<li><code>MAX_THINKING_TOKENS=0</code>, <code>--thinking disabled</code>, and the per-model thinking toggle now disable thinking on models that think by default via the Claude API (3P providers unchanged)</li>\n<li>Claude Code now retries a turn once on the fallback model when the API rejects an unexpected non-retryable error; auth, rate-limit, request-size, and transport errors still surface immediately</li>\n<li><code>claude update</code> now announces the target version before downloading instead of going silent</li>\n<li><code>claude agents</code>: typing a URL into the list now filters to the session whose first prompt contained it</li>\n<li>Fixed a recurring \"image could not be processed\" error and extra token usage when an unprocessable image was sent in a session</li>\n<li>Fixed remote sessions becoming permanently stuck when a brief backend disruption occurred during worker registration at startup</li>\n<li>Fixed flickering in JetBrains IDE terminals (IntelliJ, PyCharm, WebStorm, etc.) on 2026.1+ by enabling synchronized output</li>\n<li>Fixed Shift+non-ASCII characters (e.g. Shift+ä → Ä) being dropped in terminals using the Kitty keyboard protocol (WezTerm, Ghostty, kitty)</li>\n<li>Fixed PowerShell command validation occasionally hanging far past its time budget on Windows when a killed process's children held its output pipes</li>\n<li>Fixed orphaned <code>claude --bg-pty-host</code> processes spinning at 100% CPU after the daemon dies while connected on macOS</li>\n<li>Fixed voice mode requiring <code>/login</code> to clear a stale auth check after toggling <code>/voice</code></li>\n<li>Fixed managed settings with an invalid entry silently disabling enforcement of their remaining valid policies</li>\n<li>Fixed managed-settings <code>allowedMcpServers</code>/<code>deniedMcpServers</code> predicates not matching when they use <code>${VAR}</code> references</li>\n<li>Fixed background agent sessions that entered a git worktree crash-looping with \"No conversation found\" when reopened from <code>claude agents</code></li>\n<li>Fixed duplicated thinking text in the Ctrl+O transcript view while streaming</li>\n<li>Fixed <code>/doctor</code> showing a contradictory failed \"Not inside a remote session\" check when run inside a remote session</li>\n<li>Fixed the cursor sticking at the end of the first line when typing a multiline prompt in the <code>claude agents</code> dispatch and reply inputs</li>\n<li>Fixed blank lines appearing between background agent rows in the task list on terminals without Unicode support</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: transcript, extra, changed, permanently, auto.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Claude Code Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "transcript",
+          "extra",
+          "changed",
+          "permanently",
+          "auto",
+          "etc.",
+          "e.g.",
+          "per-model"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: transcript, extra, changed, permanently. Lead: Claude Code v2.1.166",
+        "alternative_titles": [],
+        "cluster_score": 15
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Aus *Claude Code Releases* ist ein starker Kandidat reingekommen: *Claude Code v2.1.166*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 65_",
+    "chloe_note": "Hey, *Claude Code v2.1.166* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: transcript, extra, changed, permanently. Score aktuell: 65. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.166"
   }
 ]
