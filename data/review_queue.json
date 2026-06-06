@@ -762,5 +762,69 @@
     },
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-05-open-code-review-an-ai-powered-code-review-cli-tool-fe941acdf6e8.md",
     "published_at": "2026-06-05T19:53:38.468686Z"
+  },
+  {
+    "id": "fd88d9f6ce59",
+    "status": "deferred_generation_unavailable",
+    "created_at": "2026-06-06T07:49:55.759564Z",
+    "score": 60,
+    "reason": "deferred: generation provider unavailable",
+    "proposed_post": "",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Show HN: Lowfat – pluggable CLI filter that saved 91.8% of my LLM tokens",
+      "source": "HackerNews",
+      "link": "https://github.com/zdk/lowfat",
+      "source_tier": 3,
+      "engagement_score": 157.0,
+      "local_newsworthiness_score": 60
+    },
+    "deferred_at": "2026-06-06T07:49:55.759525Z",
+    "defer_count": 1,
+    "original_score": 60,
+    "original_reason": "deferred: generation provider unavailable",
+    "card_path": null
+  },
+  {
+    "id": "23de9b3f10aa",
+    "status": "approved",
+    "created_at": "2026-06-06T07:49:54.133926Z",
+    "score": 85,
+    "reason": "Concrete SDK release from a primary lab, directly impacting developers using a specific model version.",
+    "proposed_post": "Anthropic Python SDK v0.106.0 marks Claude Opus 4.1 as deprecated. Developers using Opus 4.1 should plan migration to a supported model version to ensure continued compatibility.",
+    "source_angle": "Anthropic SDK update: Claude Opus 4.1 deprecated",
+    "source_item": {
+      "title": "Anthropic Python SDK v0.106.0",
+      "source": "Anthropic Python SDK Releases",
+      "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.106.0",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 35,
+      "summary": "<h2>0.106.0 (2026-06-05)</h2>\n<p>Full Changelog: <a href=\"https://github.com/anthropics/anthropic-sdk-python/compare/v0.105.2...v0.106.0\">v0.105.2...v0.106.0</a></p>\n<h3>Features</h3>\n<ul>\n<li><strong>api:</strong> mark Claude Opus 4.1 as deprecated (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/85068cc4cb42feecb80a378942cec71e1baa8dcf\">85068cc</a>)</li>\n</ul>\n<h3>Bug Fixes</h3>\n<ul>\n<li><strong>client:</strong> make Foundry client copy() and with_options() work (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/94146acdc1c6f66f187d5a42e4afbb911e692fe8\">94146ac</a>)</li>\n<li><strong>transform schema:</strong> preserve $defs when schema root is a $ref (<a href=\"https://github.com/anthropics/anthropic-sdk-python/issues/1642\">#1642</a>) (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/fc58e06b78407b447c50dfea109c6fb300f4b97d\">fc58e06</a>)</li>\n</ul>\n<h3>Chores</h3>\n<ul>\n<li><strong>internal:</strong> fix artifact url (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/a6ed0c4124d29989a568a27293dadf66e7ebcd6f\">a6ed0c4</a>)</li>\n<li><strong>internal:</strong> fix branch names (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/3b0337074f0bbab47bf7f5a2b76b4d240cff719a\">3b03370</a>)</li>\n<li><strong>internal:</strong> update private repo name (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/7dbcb05706f1865afeee62fb06e400f5c4bf619e\">7dbcb05</a>)</li>\n</ul>\n<h3>Documentation</h3>\n<ul>\n<li>point security reports to Anthropic's HackerOne program (<a href=\"https://github.com/anthropics/anthropic-sdk-python/issues/10\">#10</a>) (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/80f2c97b8e9534f9879945de11c11aba00cf8704\">80f2c97</a>)</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: copy, chores, /strong, foundry, /h3.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Anthropic Python SDK Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "copy",
+          "chores",
+          "/strong",
+          "foundry",
+          "/h3",
+          "ref",
+          "reports",
+          "bug"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: copy, chores, /strong, foundry. Lead: Anthropic Python SDK v0.106.0",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "claire_note": "Chloe, schau dir das an: Anthropic Python SDK v0.106.0 ist draußen. Die markieren Claude Opus 4.1 als deprecated. Das ist ein klares Signal für Entwickler, die auf Anthropic bauen: Zeit, die Modelle zu checken und gegebenenfalls auf neuere Versionen umzustellen. Wer jetzt noch mit 4.1 arbeitet, muss bald umplanen.",
+    "chloe_note": "Kurzes Update: *Anthropic Python SDK v0.106.0* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Concrete SDK release from a primary lab, directly impacting developers using a specific model version.Cluster context: 1 sources, engagement 0. Common terms: copy, chores, /strong, foundry. Ich habe es mit 85 Punkten bewertet. Hier der Link: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.106.0"
   }
 ]
