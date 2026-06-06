@@ -660,11 +660,11 @@
   },
   {
     "id": "64d6679f30db",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-05T19:00:20.574883Z",
     "score": 60,
     "reason": "local newsworthiness fallback",
-    "proposed_post": "LangChain adds local execution.\n\nLangChain v1.1.0 supports new generation providers, MPL 2.0 licensed.\n\nLangChain v1.1.0 extends local model support for builders, targeting improved reliability and cost for coding workflows.\n\n#LangChain #MPL #LocalExecution",
+    "proposed_post": "LangChain v1.1.0 ships local execution for coding agents.\n\nAdds new generation providers under MPL 2.0 license with local model support.\n\nLangChain v1.1.0 integrates local model backends like Ollama and vLLM, enabling private, offline coding loops without vendor lock-in.\n\n📖 Read ",
     "source_angle": "Local high-score + Sarah/OpenRouter fallback",
     "source_item": {
       "title": "LangChain v1.1.0",
@@ -674,9 +674,21 @@
       "engagement_score": 0.0,
       "local_newsworthiness_score": 60
     },
-    "card_path": null,
+    "card_path": "generated/cards/64d6679f30db.png",
     "reactivated_at": "2026-06-05T19:00:20.574883Z",
-    "is_llm_mode": false
+    "is_llm_mode": false,
+    "sarah_package": {
+      "title": "LangChain v1.1.0 ships local execution for coding agents.",
+      "subtitle": "Adds new generation providers under MPL 2.0 license with local model support.",
+      "description": "LangChain v1.1.0 integrates local model backends like Ollama and vLLM, enabling private, offline coding loops without vendor lock-in.",
+      "hashtags": [
+        "#LangChain",
+        "#MPL20",
+        "#LocalModels"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-05-langchain-v1-1-0-64d6679f30db.md",
+    "published_at": "2026-06-06T19:21:35.191408Z"
   },
   {
     "id": "06f2a7156fee",
