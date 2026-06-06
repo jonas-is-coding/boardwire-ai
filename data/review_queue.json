@@ -787,11 +787,11 @@
   },
   {
     "id": "23de9b3f10aa",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-06T07:49:54.133926Z",
     "score": 85,
     "reason": "Concrete SDK release from a primary lab, directly impacting developers using a specific model version.",
-    "proposed_post": "Anthropic Python SDK v0.106.0 marks Claude Opus 4.1 as deprecated. Developers using Opus 4.1 should plan migration to a supported model version to ensure continued compatibility.",
+    "proposed_post": "Anthropic deprecates Claude Opus 4.1.\n\nAnthropic Python SDK v0.106.0 marks Opus 4.1 as deprecated, with 1 source and 0 engagement.\n\nDevelopers using Opus 4.1 should plan migration to a supported model version for continued compatibility, as per the SDK update.\n\n📖 Read the full ar",
     "source_angle": "Anthropic SDK update: Claude Opus 4.1 deprecated",
     "source_item": {
       "title": "Anthropic Python SDK v0.106.0",
@@ -822,9 +822,21 @@
         "cluster_score": 45
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/23de9b3f10aa.png",
     "is_llm_mode": true,
     "claire_note": "Chloe, schau dir das an: Anthropic Python SDK v0.106.0 ist draußen. Die markieren Claude Opus 4.1 als deprecated. Das ist ein klares Signal für Entwickler, die auf Anthropic bauen: Zeit, die Modelle zu checken und gegebenenfalls auf neuere Versionen umzustellen. Wer jetzt noch mit 4.1 arbeitet, muss bald umplanen.",
-    "chloe_note": "Kurzes Update: *Anthropic Python SDK v0.106.0* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Concrete SDK release from a primary lab, directly impacting developers using a specific model version.Cluster context: 1 sources, engagement 0. Common terms: copy, chores, /strong, foundry. Ich habe es mit 85 Punkten bewertet. Hier der Link: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.106.0"
+    "chloe_note": "Kurzes Update: *Anthropic Python SDK v0.106.0* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Concrete SDK release from a primary lab, directly impacting developers using a specific model version.Cluster context: 1 sources, engagement 0. Common terms: copy, chores, /strong, foundry. Ich habe es mit 85 Punkten bewertet. Hier der Link: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.106.0",
+    "sarah_package": {
+      "title": "Anthropic deprecates Claude Opus 4.1.",
+      "subtitle": "Anthropic Python SDK v0.106.0 marks Opus 4.1 as deprecated, with 1 source and 0 engagement.",
+      "description": "Developers using Opus 4.1 should plan migration to a supported model version for continued compatibility, as per the SDK update.",
+      "hashtags": [
+        "#Anthropic",
+        "#ClaudeOpus",
+        "#PythonSDK"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-06-anthropic-python-sdk-v0-106-0-23de9b3f10aa.md",
+    "published_at": "2026-06-06T08:32:55.039096Z"
   }
 ]
