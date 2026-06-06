@@ -208,5 +208,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-06-anthropic-python-sdk-v0-106-0-23de9b3f10aa.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mnmajxvaza2r",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mnmajxvaza2r"
+  },
+  {
+    "id": "fd88d9f6ce59",
+    "published_at": "2026-06-06T13:40:29.224971Z",
+    "platform": "bluesky",
+    "post": "LLM token usage drops with pluggable CLI filters.\n\nLowfat reduces LLM input tokens by up to 91.8%, Apache 2.0 licensed.\n\nLowfat is a new open-source CLI tool that filters LLM input to cut API costs, available for prompt engineering workflows.\n\n📖 Read the full article: file:///hom",
+    "source_link": "https://github.com/zdk/lowfat",
+    "source_title": "Show HN: Lowfat – pluggable CLI filter that saved 91.8% of my LLM tokens",
+    "score": 90,
+    "reason": "New open-source CLI tool for LLM token reduction. Ships today, clear cost-saving potential for builders.",
+    "card_path": "generated/cards/fd88d9f6ce59.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-06-show-hn-lowfat-pluggable-cli-filter-that-saved-91-8-of-my-llm-tokens-fd88d9f6ce59.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mnmrpyq5wr2c",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mnmrpyq5wr2c"
   }
 ]
