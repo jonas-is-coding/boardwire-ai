@@ -863,11 +863,11 @@
   },
   {
     "id": "2369cf56a4e0",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-06T12:09:49.654803Z",
     "score": 65,
     "reason": "local newsworthiness fallback",
-    "proposed_post": "Claude Code adds fallback models for overload handling.\n\nFallbackModel setting supports up to three models, with glob pattern support in deny rules and harde\n\nNew capability allows configuration of multiple fallback models for primary model overload, with Apache-compatible deny r",
+    "proposed_post": "Claude Code adds overload handling.\n\nFallback models support up to three models, with Apache-compatible deny rules and glob pattern suppo\n\nAnthropic's Claude Code v2.1.166 introduces a new capability for configuring multiple fallback models for primary model overload, with harde\n",
     "source_angle": "Local high-score + Sarah/OpenRouter fallback",
     "source_item": {
       "title": "Claude Code v2.1.166",
@@ -898,10 +898,22 @@
         "cluster_score": 15
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/2369cf56a4e0.png",
     "is_llm_mode": false,
     "claire_note": "Aus *Claude Code Releases* ist ein starker Kandidat reingekommen: *Claude Code v2.1.166*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 65_",
-    "chloe_note": "Hey, *Claude Code v2.1.166* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: transcript, extra, changed, permanently. Score aktuell: 65. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.166"
+    "chloe_note": "Hey, *Claude Code v2.1.166* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: transcript, extra, changed, permanently. Score aktuell: 65. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.166",
+    "sarah_package": {
+      "title": "Claude Code adds overload handling.",
+      "subtitle": "Fallback models support up to three models, with Apache-compatible deny rules and glob pattern suppo",
+      "description": "Anthropic's Claude Code v2.1.166 introduces a new capability for configuring multiple fallback models for primary model overload, with harde",
+      "hashtags": [
+        "#Anthropic",
+        "#ClaudeCode",
+        "#MCP"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-06-claude-code-v2-1-166-2369cf56a4e0.md",
+    "published_at": "2026-06-07T08:54:55.059181Z"
   },
   {
     "id": "b698d031d28e",
