@@ -917,11 +917,11 @@
   },
   {
     "id": "b698d031d28e",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-08T14:51:18.940498Z",
     "score": 65,
     "reason": "local newsworthiness fallback",
-    "proposed_post": "Anthropic SDK enables local model deployment.\n\nAnthropic Python SDK v0.107.0 supports local inference, Apache 2.0 licensed.\n\nAllows for on-premises model serving with Anthropic models, reducing reliance on cloud services.\n\n#Anthropic #LocalInference #Apache2",
+    "proposed_post": "Anthropic enables local model deployment.\n\nAnthropic Python SDK v0.107.0 supports local inference, Apache 2.0 licensed.\n\nOn-premises model serving reduces reliance on cloud services for Anthropic models.\n\n📖 Read the full article: file:///home/runner/work/boardwire-ai/boardwire-ai",
     "source_angle": "Local high-score + Sarah/OpenRouter fallback",
     "source_item": {
       "title": "Anthropic Python SDK v0.107.0",
@@ -931,9 +931,21 @@
       "engagement_score": 0.0,
       "local_newsworthiness_score": 65
     },
-    "card_path": null,
+    "card_path": "generated/cards/b698d031d28e.png",
     "reactivated_at": "2026-06-08T14:51:18.940498Z",
-    "is_llm_mode": false
+    "is_llm_mode": false,
+    "sarah_package": {
+      "title": "Anthropic enables local model deployment.",
+      "subtitle": "Anthropic Python SDK v0.107.0 supports local inference, Apache 2.0 licensed.",
+      "description": "On-premises model serving reduces reliance on cloud services for Anthropic models.",
+      "hashtags": [
+        "#Anthropic",
+        "#LocalInference",
+        "#Apache2"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-08-anthropic-python-sdk-v0-107-0-b698d031d28e.md",
+    "published_at": "2026-06-08T15:50:18.611330Z"
   },
   {
     "id": "a6f62d2cd6a9",
