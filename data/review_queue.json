@@ -988,5 +988,47 @@
     "is_llm_mode": false,
     "claire_note": "Aus *HackerNews* ist ein starker Kandidat reingekommen: *Anthropic, please ship an official Claude Desktop for Linux*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 75_",
     "chloe_note": "Hey, *Anthropic, please ship an official Claude Desktop for Linux* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen local newsworthiness fallbackCluster context: 1 sources, engagement 633. Common terms: claude, official, 493, ship. Score aktuell: 75. Link: https://github.com/anthropics/claude-code/issues/65697"
+  },
+  {
+    "id": "bde716759755",
+    "status": "approved",
+    "created_at": "2026-06-08T19:25:22.250635Z",
+    "score": 85,
+    "reason": "Practical GitHub guide with copy-paste Claude Code templates. Directly enables builders to ship today.",
+    "proposed_post": "New GitHub guide luongnv89/claude-howto provides copy-paste templates for Claude Code. Builders can use these examples to accelerate agent development and integrate Claude Code features today.",
+    "source_angle": "GitHub Trending: Practical guide for Claude Code agents",
+    "source_item": {
+      "title": "luongnv89/claude-howto — A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that bring immediate value.",
+      "source": "GitHub Trending",
+      "link": "https://github.com/luongnv89/claude-howto",
+      "source_tier": 2,
+      "engagement_score": 393.0,
+      "local_newsworthiness_score": 0,
+      "summary": "Trending on GitHub today: +393 stars. A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that bring immediate value.\n[Cluster context: 1 sources, engagement 393, common terms: immediate, advanced, copy-paste, value., stars..]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 393,
+        "common_terms": [
+          "immediate",
+          "advanced",
+          "copy-paste",
+          "value.",
+          "stars.",
+          "example-driven",
+          "visual",
+          "+393"
+        ],
+        "cluster_summary": "1 sources, engagement 393. Common terms: immediate, advanced, copy-paste, value.. Lead: luongnv89/claude-howto — A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with co",
+        "alternative_titles": [],
+        "cluster_score": 25
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "claire_note": "Aus *GitHub Trending* ist ein starker Kandidat reingekommen: *luongnv89/claude-howto — A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that bring immediate value.*.\nRelevanz fuer Builder: Practical GitHub guide with copy-paste Claude Code templates. Directly enables builders to ship today.\n_Score: 85_",
+    "chloe_note": "Hey, *luongnv89/claude-howto — A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that bring immediate value.* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Practical GitHub guide with copy-paste Claude Code templates. Directly enables builders to ship today.Cluster context: 1 sources, engagement 393. Common terms: immediate, advanced, copy-paste, value. Score aktuell: 85. Link: https://github.com/luongnv89/claude-howto"
   }
 ]
