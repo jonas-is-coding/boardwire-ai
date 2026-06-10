@@ -278,5 +278,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-08-anthropic-please-ship-an-official-claude-desktop-for-linux-a6f62d2cd6a9.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mnsimquruy2a",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mnsimquruy2a"
+  },
+  {
+    "id": "bde716759755",
+    "published_at": "2026-06-10T15:32:38.822048Z",
+    "platform": "bluesky",
+    "post": "Claude-howto delivers copy-paste templates for Claude Code workflows.\n\nluongnv89/claude-howto visual guide accelerates agent development with 393 stars today.\n\n50+ examples from basic commands to advanced agents. MIT-licensed. Runs in any Claude Code project.\n\n📖 Read the full art",
+    "source_link": "https://github.com/luongnv89/claude-howto",
+    "source_title": "luongnv89/claude-howto — A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that bring immediate value.",
+    "score": 85,
+    "reason": "Practical GitHub guide with copy-paste Claude Code templates. Directly enables builders to ship today.",
+    "card_path": "generated/cards/bde716759755.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-08-luongnv89-claude-howto-a-visual-example-driven-guide-to-claude-code-from-basic-concepts-to-advanced-agents-with-copy-paste-templates-that-bring-immediate-value-bde716759755.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mnwzuambyr2i",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mnwzuambyr2i"
   }
 ]

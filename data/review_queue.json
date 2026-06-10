@@ -1003,11 +1003,11 @@
   },
   {
     "id": "bde716759755",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-08T19:25:22.250635Z",
     "score": 85,
     "reason": "Practical GitHub guide with copy-paste Claude Code templates. Directly enables builders to ship today.",
-    "proposed_post": "New GitHub guide luongnv89/claude-howto provides copy-paste templates for Claude Code. Builders can use these examples to accelerate agent development and integrate Claude Code features today.",
+    "proposed_post": "Claude-howto delivers copy-paste templates for Claude Code workflows.\n\nluongnv89/claude-howto visual guide accelerates agent development with 393 stars today.\n\n50+ examples from basic commands to advanced agents. MIT-licensed. Runs in any Claude Code project.\n\n📖 Read the full art",
     "source_angle": "GitHub Trending: Practical guide for Claude Code agents",
     "source_item": {
       "title": "luongnv89/claude-howto — A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that bring immediate value.",
@@ -1038,10 +1038,21 @@
         "cluster_score": 25
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/bde716759755.png",
     "is_llm_mode": true,
     "claire_note": "Aus *GitHub Trending* ist ein starker Kandidat reingekommen: *luongnv89/claude-howto — A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that bring immediate value.*.\nRelevanz fuer Builder: Practical GitHub guide with copy-paste Claude Code templates. Directly enables builders to ship today.\n_Score: 85_",
-    "chloe_note": "Hey, *luongnv89/claude-howto — A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that bring immediate value.* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Practical GitHub guide with copy-paste Claude Code templates. Directly enables builders to ship today.Cluster context: 1 sources, engagement 393. Common terms: immediate, advanced, copy-paste, value. Score aktuell: 85. Link: https://github.com/luongnv89/claude-howto"
+    "chloe_note": "Hey, *luongnv89/claude-howto — A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that bring immediate value.* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Practical GitHub guide with copy-paste Claude Code templates. Directly enables builders to ship today.Cluster context: 1 sources, engagement 393. Common terms: immediate, advanced, copy-paste, value. Score aktuell: 85. Link: https://github.com/luongnv89/claude-howto",
+    "sarah_package": {
+      "title": "Claude-howto delivers copy-paste templates for Claude Code workflows.",
+      "subtitle": "luongnv89/claude-howto visual guide accelerates agent development with 393 stars today.",
+      "description": "50+ examples from basic commands to advanced agents. MIT-licensed. Runs in any Claude Code project.",
+      "hashtags": [
+        "#ClaudeCode",
+        "#GitHub"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-08-luongnv89-claude-howto-a-visual-example-driven-guide-to-claude-code-from-basic-concepts-to-advanced-agents-with-copy-paste-templates-that-bring-immediate-value-bde716759755.md",
+    "published_at": "2026-06-10T15:32:38.822048Z"
   },
   {
     "id": "d912544740ca",
