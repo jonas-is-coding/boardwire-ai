@@ -1095,5 +1095,91 @@
     "is_llm_mode": true,
     "claire_note": "Chloe, das ist ein direkter Hit für unsere Devs. Claude Fable 5 ist jetzt draußen – ein \"Mythos-class\" Modell, das Anthropic für den allgemeinen Gebrauch freigegeben hat. Das bedeutet, unsere Leute bekommen jetzt Zugriff auf ein deutlich leistungsfähigeres Modell für ihre Projekte.",
     "chloe_note": "Kurzes Update: *Claude Code v2.1.170* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um New model (Claude Fable 5) made generally available via Claude Code update. Direct release, immediate utility for builders.Cluster context: 1 sources, engagement 0. Common terms: available., ever, --resume, when. Ich habe es mit 95 Punkten bewertet. Hier der Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.170"
+  },
+  {
+    "id": "865c4bbc318e",
+    "status": "approved",
+    "created_at": "2026-06-10T19:39:17.649272Z",
+    "score": 95,
+    "reason": "Anthropic released a new Claude model, Fable 5, accessible via API. Passes Ships Test with direct builder utility.",
+    "proposed_post": "Anthropic released Claude Fable 5. This new model offers enhanced capabilities for builders via API. Test its performance for complex reasoning and long-context tasks.",
+    "source_angle": "Anthropic's official release of a new Claude model",
+    "source_item": {
+      "title": "Claude Fable 5",
+      "source": "HackerNews",
+      "link": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "source_tier": 3,
+      "engagement_score": 3552.5,
+      "local_newsworthiness_score": 45,
+      "summary": "2531 points, 2043 comments on Hacker News — submitted by Philpax — original: https://www.anthropic.com/news/claude-fable-5-mythos-5\n[Cluster context: 1 sources, engagement 3552, common terms: claude, fable, philpax, points, hacker.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 3552,
+        "common_terms": [
+          "claude",
+          "fable",
+          "philpax",
+          "points",
+          "hacker",
+          "2043",
+          "submitted",
+          "original"
+        ],
+        "cluster_summary": "1 sources, engagement 3552. Common terms: claude, fable, philpax, points. Lead: Claude Fable 5",
+        "alternative_titles": [],
+        "cluster_score": 20
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "claire_note": "Hey Chloe,\n\nHab mir gerade \"Claude Fable 5\" angeschaut. Die krasse Engagement auf Hacker News zeigt, dass hier wirklich was dran ist, das Entwickler anspricht.\n\nDas ist nicht nur ein PR-Post von Anthropic, sondern die Diskussion drumherum könnte tiefe Einblicke geben, wie Leute Claude 3 in der Praxis nutzen und wo die Grenzen liegen. Für unsere Builder ist das Gold wert, um zu verstehen, was die Konkurrenz macht und wie sie ihre eigenen Modelle verbessern können oder welche Use Cases jetzt wirklich machbar sind. Wenn die Fable 5-Version signifikante Verbesserungen bringt, ist das direkt relevant für alle, die mit LLMs arbeiten.",
+    "chloe_note": "Kurzes Update: *Claude Fable 5* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Anthropic released a new Claude model, Fable 5, accessible via API. Passes Ships Test with direct builder utility.Cluster context: 1 sources, engagement 3552. Common terms: claude, fable, philpax, points. Ich habe es mit 95 Punkten bewertet. Hier der Link: https://www.anthropic.com/news/claude-fable-5-mythos-5"
+  },
+  {
+    "id": "616e41368e9d",
+    "status": "approved",
+    "created_at": "2026-06-10T19:39:19.636719Z",
+    "score": 65,
+    "reason": "local newsworthiness fallback",
+    "proposed_post": "Anthropic adds Managed Agents to Python SDK.\n\nSupports environment variable credentials, Apache 2.0 license.\n\nEnables deployment of Managed Agents with v0.109.0 update, available on GitHub and PyPI.\n\n#Anthropic #ManagedAgents #PythonSDK",
+    "source_angle": "Local high-score + Sarah/OpenRouter fallback",
+    "source_item": {
+      "title": "Anthropic Python SDK v0.109.0",
+      "source": "Anthropic Python SDK Releases",
+      "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.109.0",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 65,
+      "summary": "<h2>0.109.0 (2026-06-09)</h2>\n<p>Full Changelog: <a href=\"https://github.com/anthropics/anthropic-sdk-python/compare/v0.108.0...v0.109.0\">v0.108.0...v0.109.0</a></p>\n<h3>Features</h3>\n<ul>\n<li><strong>api:</strong> add support for Managed Agents deployments and environment variable credentials (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/47633bff658d4aaced3cd920ef6782c48cf31a9a\">47633bf</a>)</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: sdk, support, changelog, full, strong.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Anthropic Python SDK Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "sdk",
+          "support",
+          "changelog",
+          "full",
+          "strong",
+          "/h3",
+          "2026-06-09",
+          "href"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: sdk, support, changelog, full. Lead: Anthropic Python SDK v0.109.0",
+        "alternative_titles": [
+          "Anthropic Python SDK v0.108.0"
+        ],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "claire_note": "Aus *Anthropic Python SDK Releases* ist ein starker Kandidat reingekommen: *Anthropic Python SDK v0.109.0*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 65_",
+    "chloe_note": "Kurzes Update: *Anthropic Python SDK v0.109.0* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: sdk, support, changelog, full. Ich habe es mit 65 Punkten bewertet. Hier der Link: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.109.0"
   }
 ]
