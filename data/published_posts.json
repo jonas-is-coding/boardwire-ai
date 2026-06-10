@@ -292,5 +292,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-08-luongnv89-claude-howto-a-visual-example-driven-guide-to-claude-code-from-basic-concepts-to-advanced-agents-with-copy-paste-templates-that-bring-immediate-value-bde716759755.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mnwzuambyr2i",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mnwzuambyr2i"
+  },
+  {
+    "id": "865c4bbc318e",
+    "published_at": "2026-06-10T20:29:22.152596Z",
+    "platform": "bluesky",
+    "post": "Claude Fable 5 ships for reasoning-heavy workflows.\n\nAnthropic releases Fable 5 with long-context scaling to 200K tokens under Apache 2.0 via API today.\n\nOutperforms prior Fable variants on coherence and long-context retrieval. Drop-in replacement for Claude 3.7 Sonnet in reasoni",
+    "source_link": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+    "source_title": "Claude Fable 5",
+    "score": 95,
+    "reason": "Anthropic released a new Claude model, Fable 5, accessible via API. Passes Ships Test with direct builder utility.",
+    "card_path": "generated/cards/865c4bbc318e.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-10-claude-fable-5-865c4bbc318e.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mnxkgt2qpp2b",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mnxkgt2qpp2b"
   }
 ]
