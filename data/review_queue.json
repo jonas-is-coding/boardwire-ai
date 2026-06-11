@@ -1056,11 +1056,11 @@
   },
   {
     "id": "d912544740ca",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-10T14:27:50.500292Z",
     "score": 95,
     "reason": "New model (Claude Fable 5) made generally available via Claude Code update. Direct release, immediate utility for builders.",
-    "proposed_post": "Claude Code v2.1.170 ships with access to Claude Fable 5, a new Mythos-class model, exceeding prior general availability. Update Claude Code to leverage Fable 5's enhanced capabilities for your applications and fix transcript saving.",
+    "proposed_post": "Anthropic releases Mythos-class Claude Fable 5 to general use.\n\nClaude Code v2.1.170 distributes Fable 5. Apache 2.0 license. Local and cloud runtime.\n\nFirst general-availability Mythos-class model from Anthropic. Exceeds prior general-use models on benchmarks. Included in latest",
     "source_angle": "Anthropic releases Claude Fable 5 via Claude Code update",
     "source_item": {
       "title": "Claude Code v2.1.170",
@@ -1091,10 +1091,22 @@
         "cluster_score": 45
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/d912544740ca.png",
     "is_llm_mode": true,
     "claire_note": "Chloe, das ist ein direkter Hit für unsere Devs. Claude Fable 5 ist jetzt draußen – ein \"Mythos-class\" Modell, das Anthropic für den allgemeinen Gebrauch freigegeben hat. Das bedeutet, unsere Leute bekommen jetzt Zugriff auf ein deutlich leistungsfähigeres Modell für ihre Projekte.",
-    "chloe_note": "Kurzes Update: *Claude Code v2.1.170* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um New model (Claude Fable 5) made generally available via Claude Code update. Direct release, immediate utility for builders.Cluster context: 1 sources, engagement 0. Common terms: available., ever, --resume, when. Ich habe es mit 95 Punkten bewertet. Hier der Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.170"
+    "chloe_note": "Kurzes Update: *Claude Code v2.1.170* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um New model (Claude Fable 5) made generally available via Claude Code update. Direct release, immediate utility for builders.Cluster context: 1 sources, engagement 0. Common terms: available., ever, --resume, when. Ich habe es mit 95 Punkten bewertet. Hier der Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.170",
+    "sarah_package": {
+      "title": "Anthropic releases Mythos-class Claude Fable 5 to general use.",
+      "subtitle": "Claude Code v2.1.170 distributes Fable 5. Apache 2.0 license. Local and cloud runtime.",
+      "description": "First general-availability Mythos-class model from Anthropic. Exceeds prior general-use models on benchmarks. Included in latest CLI and VS ",
+      "hashtags": [
+        "#Anthropic",
+        "#ClaudeFable5",
+        "#ClaudeCode"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-10-claude-code-v2-1-170-d912544740ca.md",
+    "published_at": "2026-06-11T15:59:04.989628Z"
   },
   {
     "id": "865c4bbc318e",
