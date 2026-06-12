@@ -1164,11 +1164,11 @@
   },
   {
     "id": "616e41368e9d",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-10T19:39:19.636719Z",
     "score": 65,
     "reason": "local newsworthiness fallback",
-    "proposed_post": "Anthropic adds Managed Agents to Python SDK.\n\nSupports environment variable credentials, Apache 2.0 license.\n\nEnables deployment of Managed Agents with v0.109.0 update, available on GitHub and PyPI.\n\n#Anthropic #ManagedAgents #PythonSDK",
+    "proposed_post": "Anthropic adds Managed Agents to Python SDK.\n\nanthropic-sdk-python v0.109.0 enables MCP-backed managed agent deployments with env creds, Apache 2.\n\nFirst SDK support for Anthropic Managed Agents with environment variable credential handling. Apache 2.0. Available on GitHub and Py",
     "source_angle": "Local high-score + Sarah/OpenRouter fallback",
     "source_item": {
       "title": "Anthropic Python SDK v0.109.0",
@@ -1201,10 +1201,22 @@
         "cluster_score": 45
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/616e41368e9d.png",
     "is_llm_mode": false,
     "claire_note": "Aus *Anthropic Python SDK Releases* ist ein starker Kandidat reingekommen: *Anthropic Python SDK v0.109.0*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 65_",
-    "chloe_note": "Kurzes Update: *Anthropic Python SDK v0.109.0* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: sdk, support, changelog, full. Ich habe es mit 65 Punkten bewertet. Hier der Link: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.109.0"
+    "chloe_note": "Kurzes Update: *Anthropic Python SDK v0.109.0* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: sdk, support, changelog, full. Ich habe es mit 65 Punkten bewertet. Hier der Link: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.109.0",
+    "sarah_package": {
+      "title": "Anthropic adds Managed Agents to Python SDK.",
+      "subtitle": "anthropic-sdk-python v0.109.0 enables MCP-backed managed agent deployments with env creds, Apache 2.",
+      "description": "First SDK support for Anthropic Managed Agents with environment variable credential handling. Apache 2.0. Available on GitHub and PyPI.",
+      "hashtags": [
+        "#Anthropic",
+        "#ManagedAgents",
+        "#PythonSDK"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-10-anthropic-python-sdk-v0-109-0-616e41368e9d.md",
+    "published_at": "2026-06-12T14:56:37.151351Z"
   },
   {
     "id": "e9f4885e3d06",
