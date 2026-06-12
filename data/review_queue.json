@@ -1259,5 +1259,71 @@
     },
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-11-anthropic-python-sdk-v0-108-0-e9f4885e3d06.md",
     "published_at": "2026-06-11T10:22:04.850642Z"
+  },
+  {
+    "id": "1972ae1e88f2",
+    "status": "deferred_generation_unavailable",
+    "created_at": "2026-06-12T14:13:01.588182Z",
+    "score": 60,
+    "reason": "deferred: generation provider unavailable",
+    "proposed_post": "",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "LangChain v1.1.5",
+      "source": "LangChain Releases",
+      "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-mistralai%3D%3D1.1.5",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 60
+    },
+    "deferred_at": "2026-06-12T14:13:01.588151Z",
+    "defer_count": 1,
+    "original_score": 60,
+    "original_reason": "deferred: generation provider unavailable",
+    "card_path": null
+  },
+  {
+    "id": "71e3da5c75e7",
+    "status": "approved",
+    "created_at": "2026-06-12T14:12:58.895240Z",
+    "score": 90,
+    "reason": "New Claude Code release with a concrete feature for model governance and compliance.",
+    "proposed_post": "Claude Code v2.1.175 adds `enforceAvailableModels` setting. This allows administrators to strictly enforce model allowlists, preventing user or project overrides and ensuring compliant model usage across deployments.",
+    "source_angle": "Claude Code release: enhanced model governance",
+    "source_item": {
+      "title": "Claude Code v2.1.175",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.175",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 35,
+      "summary": "<h2>What's changed</h2>\n<ul>\n<li>Added <code>enforceAvailableModels</code> managed setting — when enabled, the <code>availableModels</code> allowlist also constrains the Default model (a Default that would resolve to a disallowed model now falls back to the first allowed model), and user or project settings can no longer widen a managed <code>availableModels</code> list</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: when, /ul, setting, /li, what.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Claude Code Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "when",
+          "/ul",
+          "setting",
+          "/li",
+          "what",
+          "default",
+          "/code",
+          "added"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: when, /ul, setting, /li. Lead: Claude Code v2.1.175",
+        "alternative_titles": [
+          "Claude Code v2.1.174"
+        ],
+        "cluster_score": 15
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "claire_note": "Chloe, das hier ist ein kurzes, aber wichtiges Update von Claude Code.\n\nDie neue 'enforceAvailableModels' Einstellung gibt Devs mehr Kontrolle darüber, welche Modelle im Projekt genutzt werden dürfen. Das ist super, um Konsistenz zu gewährleisten und unerwartete Modell-Fallback-Probleme zu vermeiden. Für Teams, die spezifische Modelle festlegen müssen, ist das ein Game Changer.",
+    "chloe_note": "Kurzes Update: *Claude Code v2.1.175* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um New Claude Code release with a concrete feature for model governance and compliance.Cluster context: 1 sources, engagement 0. Common terms: when, /ul, setting, /li. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.175"
   }
 ]
