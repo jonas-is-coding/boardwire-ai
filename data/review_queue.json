@@ -1274,12 +1274,12 @@
   },
   {
     "id": "1972ae1e88f2",
-    "status": "deferred_generation_unavailable",
-    "created_at": "2026-06-12T14:13:01.588182Z",
+    "status": "approved",
+    "created_at": "2026-06-13T18:13:34.740003Z",
     "score": 60,
-    "reason": "deferred: generation provider unavailable",
-    "proposed_post": "",
-    "source_angle": "Rule-based",
+    "reason": "local newsworthiness fallback",
+    "proposed_post": "LangChain enables local model serving.\n\nLangChain v1.1.5 supports local model deployment, Apache 2.0 licensed.\n\nLangChain v1.1.5 allows builders to deploy models locally, reducing reliance on cloud services.\n\n#LangChain #LocalModelServing #Apache2",
+    "source_angle": "Local high-score + Sarah/OpenRouter fallback",
     "source_item": {
       "title": "LangChain v1.1.5",
       "source": "LangChain Releases",
@@ -1288,11 +1288,9 @@
       "engagement_score": 0.0,
       "local_newsworthiness_score": 60
     },
-    "deferred_at": "2026-06-12T14:13:01.588151Z",
-    "defer_count": 1,
-    "original_score": 60,
-    "original_reason": "deferred: generation provider unavailable",
-    "card_path": null
+    "card_path": null,
+    "reactivated_at": "2026-06-13T18:13:34.740003Z",
+    "is_llm_mode": false
   },
   {
     "id": "71e3da5c75e7",
