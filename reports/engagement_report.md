@@ -1,138 +1,143 @@
 # Boardwire Engagement Report
 
-Generated: `2026-06-12T08:16:03.824155Z`
+Generated: `2026-06-13T07:39:42.699379Z`
 
 ## Summary
 
-- Measured posts: **24** of 24 published
+- Measured posts: **25** of 25 published
 - Median peak engagement: **0.0**
-- Average peak engagement: **0.8**
-- Top: **4** — Anthropic, please ship an official Claude Desktop for Linux
+- Average peak engagement: **0.9**
+- Top: **4** — Ollama v0.30.0
 
 ## Patterns
 
-- Release-keyword posts: avg **0.7** (n=14) vs others avg **1.0** (n=10)
-- GitHub sources: avg **0.9** (n=22) vs other sources avg **0.0** (n=2)
+- Release-keyword posts: avg **0.7** (n=15) vs others avg **1.3** (n=10)
+- GitHub sources: avg **1.0** (n=23) vs other sources avg **0.0** (n=2)
 
 ## Ranked posts
 
-1. **4 pts** — Anthropic, please ship an official Claude Desktop for Linux
-   likes 1 · reposts 1 · replies 1 · quotes 0 · age 84h · score 75
-   https://github.com/anthropics/claude-code/issues/65697
-   > Claude Desktop needs Linux support as a first-class target. 493 upvotes on HackerNews issue 65697 demand native Linux builds for Anthropic's…
-
-2. **3 pts** — harry0703/MoneyPrinterTurbo — 利用AI大模型，一键生成高清短视频 Generate short videos with one click using AI LLM.
-   likes 1 · reposts 0 · replies 0 · quotes 1 · age 324h · score 105
-   https://github.com/harry0703/MoneyPrinterTurbo
-   > MoneyPrinterTurbo turns text-to-video into a local primitive. harry0703/MoneyPrinterTurbo generates high-definition short videos in one clic…
-
-3. **2 pts** — chopratejas/headroom — Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 60-95% fewer tokens, same answers. Library, proxy, MCP server.
-   likes 2 · reposts 0 · replies 0 · quotes 0 · age 203h · score 95
-   https://github.com/chopratejas/headroom
-   > Headroom compresses LLM context before inference. chopratejas/headroom library, proxy, and MCP server cuts tool outputs, logs, and RAG chunk…
-
-4. **2 pts** — NousResearch/hermes-agent — The agent that grows with you
-   likes 1 · reposts 0 · replies 1 · quotes 0 · age 180h · score 90
-   https://github.com/NousResearch/hermes-agent
-   > Agent memory is becoming infrastructure. Hermes-agent turns recall into persistent state for coding-agent workflows, with +1736 stars today.…
-
-5. **2 pts** — Show HN: Lowfat – pluggable CLI filter that saved 91.8% of my LLM tokens
-   likes 2 · reposts 0 · replies 0 · quotes 0 · age 139h · score 90
-   https://github.com/zdk/lowfat
-   > LLM token usage drops with pluggable CLI filters. Lowfat reduces LLM input tokens by up to 91.8%, Apache 2.0 licensed. Lowfat is a new open-…
-
-6. **2 pts** — LangChain v1.1.0
-   likes 0 · reposts 1 · replies 0 · quotes 0 · age 133h · score 60
-   https://github.com/langchain-ai/langchain/releases/tag/langchain-deepseek%3D%3D1.1.0
-   > LangChain v1.1.0 ships local execution for coding agents. Adds new generation providers under MPL 2.0 license with local model support. Lang…
-
-7. **1 pts** — Lum1104/Understand-Anything — Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex
-   likes 1 · reposts 0 · replies 0 · quotes 0 · age 334h · score 105
-   https://github.com/Lum1104/Understand-Anything
-   > Understand Anything turns code into interactive knowledge graphs. Lum1104/Understand-Anything adds queryable graphs to any codebase with +37…
-
-8. **1 pts** — Ollama v0.30.0
-   likes 1 · reposts 0 · replies 0 · quotes 0 · age 312h · score 75
+1. **4 pts** — Ollama v0.30.0
+   likes 3 · reposts 0 · replies 1 · quotes 0 · age 335h · score 75
    https://github.com/ollama/ollama/releases/tag/v0.30.0-rc31
    > Ollama shifts to llama.cpp for GGUF compatibility. Ollama v0.30.0 adds MLX acceleration on Apple Silicon with GGUF support. Direct llama.cpp…
 
+2. **4 pts** — Anthropic, please ship an official Claude Desktop for Linux
+   likes 1 · reposts 1 · replies 1 · quotes 0 · age 107h · score 75
+   https://github.com/anthropics/claude-code/issues/65697
+   > Claude Desktop needs Linux support as a first-class target. 493 upvotes on HackerNews issue 65697 demand native Linux builds for Anthropic's…
+
+3. **3 pts** — harry0703/MoneyPrinterTurbo — 利用AI大模型，一键生成高清短视频 Generate short videos with one click using AI LLM.
+   likes 1 · reposts 0 · replies 0 · quotes 1 · age 347h · score 105
+   https://github.com/harry0703/MoneyPrinterTurbo
+   > MoneyPrinterTurbo turns text-to-video into a local primitive. harry0703/MoneyPrinterTurbo generates high-definition short videos in one clic…
+
+4. **2 pts** — chopratejas/headroom — Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 60-95% fewer tokens, same answers. Library, proxy, MCP server.
+   likes 2 · reposts 0 · replies 0 · quotes 0 · age 227h · score 95
+   https://github.com/chopratejas/headroom
+   > Headroom compresses LLM context before inference. chopratejas/headroom library, proxy, and MCP server cuts tool outputs, logs, and RAG chunk…
+
+5. **2 pts** — NousResearch/hermes-agent — The agent that grows with you
+   likes 1 · reposts 0 · replies 1 · quotes 0 · age 204h · score 90
+   https://github.com/NousResearch/hermes-agent
+   > Agent memory is becoming infrastructure. Hermes-agent turns recall into persistent state for coding-agent workflows, with +1736 stars today.…
+
+6. **2 pts** — Show HN: Lowfat – pluggable CLI filter that saved 91.8% of my LLM tokens
+   likes 2 · reposts 0 · replies 0 · quotes 0 · age 162h · score 90
+   https://github.com/zdk/lowfat
+   > LLM token usage drops with pluggable CLI filters. Lowfat reduces LLM input tokens by up to 91.8%, Apache 2.0 licensed. Lowfat is a new open-…
+
+7. **2 pts** — LangChain v1.1.0
+   likes 0 · reposts 1 · replies 0 · quotes 0 · age 156h · score 60
+   https://github.com/langchain-ai/langchain/releases/tag/langchain-deepseek%3D%3D1.1.0
+   > LangChain v1.1.0 ships local execution for coding agents. Adds new generation providers under MPL 2.0 license with local model support. Lang…
+
+8. **1 pts** — Lum1104/Understand-Anything — Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex
+   likes 1 · reposts 0 · replies 0 · quotes 0 · age 358h · score 105
+   https://github.com/Lum1104/Understand-Anything
+   > Understand Anything turns code into interactive knowledge graphs. Lum1104/Understand-Anything adds queryable graphs to any codebase with +37…
+
 9. **1 pts** — Anthropic Python SDK v0.103.0
-   likes 1 · reposts 0 · replies 0 · quotes 0 · age 288h · score 65
+   likes 1 · reposts 0 · replies 0 · quotes 0 · age 311h · score 65
    https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.103.0
    > Anthropic adds local sandbox helpers for CMA workflows. Anthropic Python SDK v0.103.0 exposes CMA sandbox helpers for local execution. MIT l…
 
 10. **1 pts** — luongnv89/claude-howto — A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that bring immediate value.
-   likes 1 · reposts 0 · replies 0 · quotes 0 · age 41h · score 85
+   likes 1 · reposts 0 · replies 0 · quotes 0 · age 64h · score 85
    https://github.com/luongnv89/claude-howto
    > Claude-howto delivers copy-paste templates for Claude Code workflows. luongnv89/claude-howto visual guide accelerates agent development with…
 
 11. **1 pts** — Anthropic Python SDK v0.108.0
-   likes 1 · reposts 0 · replies 0 · quotes 0 · age 22h · score 90
+   likes 1 · reposts 0 · replies 0 · quotes 0 · age 45h · score 90
    https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.108.0
    > Anthropic adds client-side fallbacks to Python SDK. Supports claude-mythos-5 and claude-fable-5 models with server-side fallbacks. Improves …
 
 12. **0 pts** — Claude Opus 4.8
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 329h · score 95
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 352h · score 95
    https://www.anthropic.com/news/claude-opus-4-8
    > Anthropic updates flagship model. Claude Opus 4.8 available via API, 1489 points on Hacker News. New version from a primary lab, directly ac…
 
 13. **0 pts** — Anthropic Python SDK v0.105.0
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 261h · score 65
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 284h · score 65
    https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.105.0
    > Anthropic Python SDK adds local deployment APIs. v0.105.0 targets local model deployment with new APIs and MIT license, 0 stars today. First…
 
 14. **0 pts** — Claude Code v2.1.154
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 255h · score 60
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 278h · score 60
    https://github.com/anthropics/claude-code/releases/tag/v2.1.154
    > Claude Code ships local execution for coding agents. Claude Code v2.1.154 enables local coding-agent runs under Apache 2.0. First local-weig…
 
 15. **0 pts** — can1357/oh-my-pi — ⌥ AI Coding agent for the terminal — hash-anchored edits, optimized tool harness, LSP, Python, browser, subagents, and more
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 251h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 274h · score 90
    https://github.com/can1357/oh-my-pi
    > Oh-my-pi ships terminal AI coding agent with hash-anchored edits and s can1357/oh-my-pi turns terminal workflows into automated agents with …
 
 16. **0 pts** — Ollama v0.30.0
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 232h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 255h · score 90
    https://github.com/ollama/ollama/releases/tag/v0.30.0-rc32
    > Ollama upgrades to direct llama.cpp runtime. v0.30.0 RC32 drops GGML for GGUF, adds MLX acceleration on Apple Silicon, 16031+ GitHub stars. …
 
 17. **0 pts** — LangChain v1.3.4
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 227h · score 75
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 251h · score 75
    https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.3.4
    > LangChain updates HITL rejection guidance. LangChain v1.3.4 fixes HITL rejection flows, clarifying agent workflows with +37859 fix. LangChai…
 
 18. **0 pts** — Ollama v0.30.3
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 207h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 231h · score 90
    https://github.com/ollama/ollama/releases/tag/v0.30.3
    > Ollama supports Gemma 4-12B. Ollama v0.30.3 enables local deployment for builders with 1 new model. Gemma 4-12B support added in Ollama v0.3…
 
 19. **0 pts** — Open Code Review – An AI-powered code review CLI tool
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 156h · score 60
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 180h · score 60
    https://github.com/alibaba/open-code-review
    > Code review is getting an AI-powered CLI primitive. Open Code Review provides MCP integration and sandboxed runs, with Apache 2.0 license. B…
 
 20. **0 pts** — Anthropic Python SDK v0.106.0
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 144h · score 85
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 167h · score 85
    https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.106.0
    > Anthropic deprecates Claude Opus 4.1. Anthropic Python SDK v0.106.0 marks Opus 4.1 as deprecated, with 1 source and 0 engagement. Developers…
 
 21. **0 pts** — Claude Code v2.1.166
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 119h · score 65
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 143h · score 65
    https://github.com/anthropics/claude-code/releases/tag/v2.1.166
    > Claude Code adds overload handling. Fallback models support up to three models, with Apache-compatible deny rules and glob pattern suppo Ant…
 
 22. **0 pts** — Anthropic Python SDK v0.107.0
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 88h · score 65
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 112h · score 65
    https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.107.0
    > Anthropic enables local model deployment. Anthropic Python SDK v0.107.0 supports local inference, Apache 2.0 licensed. On-premises model ser…
 
 23. **0 pts** — Claude Fable 5
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 36h · score 95
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 59h · score 95
    https://www.anthropic.com/news/claude-fable-5-mythos-5
    > Claude Fable 5 ships for reasoning-heavy workflows. Anthropic releases Fable 5 with long-context scaling to 200K tokens under Apache 2.0 via…
 
 24. **0 pts** — Claude Code v2.1.170
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 16h · score 95
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 40h · score 95
    https://github.com/anthropics/claude-code/releases/tag/v2.1.170
    > Anthropic releases Mythos-class Claude Fable 5 to general use. Claude Code v2.1.170 distributes Fable 5. Apache 2.0 license. Local and cloud…
+
+25. **0 pts** — Anthropic Python SDK v0.109.0
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 17h · score 65
+   https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.109.0
+   > Anthropic adds Managed Agents to Python SDK. anthropic-sdk-python v0.109.0 enables MCP-backed managed agent deployments with env creds, Apac…
 
