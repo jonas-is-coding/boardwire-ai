@@ -362,5 +362,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-12-claude-code-v2-1-175-71e3da5c75e7.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mo6fxxqog22s",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mo6fxxqog22s"
+  },
+  {
+    "id": "1972ae1e88f2",
+    "published_at": "2026-06-13T19:24:29.220223Z",
+    "platform": "bluesky",
+    "post": "Local model serving becomes infrastructure.\n\nLangChain v1.1.5 enables local deployment, Apache 2.0 licensed.\n\nReduces reliance on cloud services for model deployment, allowing local model serving workflows.\n\n📖 Read the full article: file:///home/runner/work/boardwire-ai/boardwire",
+    "source_link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-mistralai%3D%3D1.1.5",
+    "source_title": "LangChain v1.1.5",
+    "score": 60,
+    "reason": "local newsworthiness fallback",
+    "card_path": "generated/cards/1972ae1e88f2.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-13-langchain-v1-1-5-1972ae1e88f2.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mo6y7j4t242l",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mo6y7j4t242l"
   }
 ]

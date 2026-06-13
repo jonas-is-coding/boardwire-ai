@@ -1274,11 +1274,11 @@
   },
   {
     "id": "1972ae1e88f2",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-13T18:13:34.740003Z",
     "score": 60,
     "reason": "local newsworthiness fallback",
-    "proposed_post": "LangChain enables local model serving.\n\nLangChain v1.1.5 supports local model deployment, Apache 2.0 licensed.\n\nLangChain v1.1.5 allows builders to deploy models locally, reducing reliance on cloud services.\n\n#LangChain #LocalModelServing #Apache2",
+    "proposed_post": "Local model serving becomes infrastructure.\n\nLangChain v1.1.5 enables local deployment, Apache 2.0 licensed.\n\nReduces reliance on cloud services for model deployment, allowing local model serving workflows.\n\n📖 Read the full article: file:///home/runner/work/boardwire-ai/boardwire",
     "source_angle": "Local high-score + Sarah/OpenRouter fallback",
     "source_item": {
       "title": "LangChain v1.1.5",
@@ -1288,9 +1288,21 @@
       "engagement_score": 0.0,
       "local_newsworthiness_score": 60
     },
-    "card_path": null,
+    "card_path": "generated/cards/1972ae1e88f2.png",
     "reactivated_at": "2026-06-13T18:13:34.740003Z",
-    "is_llm_mode": false
+    "is_llm_mode": false,
+    "sarah_package": {
+      "title": "Local model serving becomes infrastructure.",
+      "subtitle": "LangChain v1.1.5 enables local deployment, Apache 2.0 licensed.",
+      "description": "Reduces reliance on cloud services for model deployment, allowing local model serving workflows.",
+      "hashtags": [
+        "#LangChain",
+        "#LocalModelServing",
+        "#Apache2"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-13-langchain-v1-1-5-1972ae1e88f2.md",
+    "published_at": "2026-06-13T19:24:29.220223Z"
   },
   {
     "id": "71e3da5c75e7",
