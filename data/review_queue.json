@@ -1296,11 +1296,11 @@
   },
   {
     "id": "71e3da5c75e7",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-12T14:12:58.895240Z",
     "score": 90,
     "reason": "New Claude Code release with a concrete feature for model governance and compliance.",
-    "proposed_post": "Claude Code v2.1.175 adds `enforceAvailableModels` setting. This allows administrators to strictly enforce model allowlists, preventing user or project overrides and ensuring compliant model usage across deployments.",
+    "proposed_post": "Claude Code adds governance primitive for model allowlists.\n\nClaude Code v2.1.175 enforces `enforceAvailableModels` to lock model usage in CI/CD and deployments.\n\nManaged `availableModels` setting now blocks user overrides to enforce consistent compliance across environments. Ant",
     "source_angle": "Claude Code release: enhanced model governance",
     "source_item": {
       "title": "Claude Code v2.1.175",
@@ -1333,10 +1333,22 @@
         "cluster_score": 15
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/71e3da5c75e7.png",
     "is_llm_mode": true,
     "claire_note": "Chloe, das hier ist ein kurzes, aber wichtiges Update von Claude Code.\n\nDie neue 'enforceAvailableModels' Einstellung gibt Devs mehr Kontrolle darüber, welche Modelle im Projekt genutzt werden dürfen. Das ist super, um Konsistenz zu gewährleisten und unerwartete Modell-Fallback-Probleme zu vermeiden. Für Teams, die spezifische Modelle festlegen müssen, ist das ein Game Changer.",
-    "chloe_note": "Kurzes Update: *Claude Code v2.1.175* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um New Claude Code release with a concrete feature for model governance and compliance.Cluster context: 1 sources, engagement 0. Common terms: when, /ul, setting, /li. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.175"
+    "chloe_note": "Kurzes Update: *Claude Code v2.1.175* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um New Claude Code release with a concrete feature for model governance and compliance.Cluster context: 1 sources, engagement 0. Common terms: when, /ul, setting, /li. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.175",
+    "sarah_package": {
+      "title": "Claude Code adds governance primitive for model allowlists.",
+      "subtitle": "Claude Code v2.1.175 enforces `enforceAvailableModels` to lock model usage in CI/CD and deployments.",
+      "description": "Managed `availableModels` setting now blocks user overrides to enforce consistent compliance across environments. Anthropic CLI flag.",
+      "hashtags": [
+        "#Anthropic",
+        "#ClaudeCode",
+        "#ModelGovernance"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-12-claude-code-v2-1-175-71e3da5c75e7.md",
+    "published_at": "2026-06-13T13:58:05.770590Z"
   },
   {
     "id": "e567453c27c7",
