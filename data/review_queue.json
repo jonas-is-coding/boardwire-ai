@@ -1337,5 +1337,47 @@
     "is_llm_mode": true,
     "claire_note": "Chloe, das hier ist ein kurzes, aber wichtiges Update von Claude Code.\n\nDie neue 'enforceAvailableModels' Einstellung gibt Devs mehr Kontrolle darüber, welche Modelle im Projekt genutzt werden dürfen. Das ist super, um Konsistenz zu gewährleisten und unerwartete Modell-Fallback-Probleme zu vermeiden. Für Teams, die spezifische Modelle festlegen müssen, ist das ein Game Changer.",
     "chloe_note": "Kurzes Update: *Claude Code v2.1.175* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um New Claude Code release with a concrete feature for model governance and compliance.Cluster context: 1 sources, engagement 0. Common terms: when, /ul, setting, /li. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.175"
+  },
+  {
+    "id": "e567453c27c7",
+    "status": "approved",
+    "created_at": "2026-06-13T12:54:02.487332Z",
+    "score": 90,
+    "reason": "local newsworthiness fallback",
+    "proposed_post": "Claude Code adds regex link badges and improved credential caching.\n\nSession titles now localized, configurable via user settings, with cache expiration tied to AWS cred\n\nNew settings include footerLinksRegexes and language, enhancing workflow customization and credential managem",
+    "source_angle": "Local high-score + Sarah/OpenRouter fallback",
+    "source_item": {
+      "title": "Claude Code v2.1.176",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.176",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 65,
+      "summary": "<h2>What's changed</h2>\n<ul>\n<li>Session titles are now generated in the language of your conversation (set the <code>language</code> setting to pin a specific language)</li>\n<li>Added <code>footerLinksRegexes</code> setting for regex-matched link badges in the footer row, configurable via user or managed settings</li>\n<li>Improved Bedrock credential caching: credentials from <code>awsCredentialExport</code> are now cached until their <code>Expiration</code> instead of a fixed 1 hour</li>\n<li>Fixed <code>availableModels</code> enforcement: alias model picks can no longer be redirected to a blocked model via <code>ANTHROPIC_DEFAULT_*_MODEL</code> environment variables, and <code>/fast</code> now refuses to toggle when it would switch to a model outside the allowlist</li>\n<li>Fixed auto mode failing on Fable 5 for organizations without Opus 4.8 enabled — the classifier now falls back to the best available Opus model</li>\n<li>Fixed hook <code>if</code> conditions for Read/Edit/Write tool paths: documented patterns like <code>Edit(src/**)</code>, <code>Read(~/.ssh/**)</code>, and <code>Read(.env)</code> now match correctly</li>\n<li>Fixed Linux sandbox failing to start when <code>.claude/settings.json</code> is a symlink with an absolute target</li>\n<li>Fixed <code>/copy</code> and mouse-selection copy not reaching the system clipboard inside tmux over SSH, and tmux paste buffer not loading on versions older than 3.2</li>\n<li>Fixed Remote Control connecting from web/mobile silently switching the session's model</li>\n<li>Fixed Remote Control disconnect notifications showing a bare numeric code instead of a human-readable reason, and connection failures adding a duplicate line to the conversation transcript</li>\n<li>Fixed Remote Control sessions not disconnecting when you sign in to a different account</li>\n<li>Fixed <code>/cd</code> and worktree moves leaving the session reporting the previous directory's git branch</li>\n<li>Fixed <code>claude agents</code>: pressing back in one window no longer detaches other windows attached to the same session</li>\n<li>Fixed backgrounded sessions showing \"Working\" forever when <code>/bg</code> mid-turn had nothing left to continue</li>\n<li>Fixed background agent search by PR URL: PRs opened during scheduled wakeups or while a job was blocked now appear in <code>claude agents</code> search</li>\n<li>Fixed the agents view input showing no text cursor on Windows</li>\n<li>Fixed <code>claude --bg -cn &lt;name&gt;</code> not seeding the session name</li>\n<li>Fixed background sessions to neutralize Windows network paths in persisted state before respawn</li>\n<li>Fixed background-session respawn rejecting malformed resume IDs from corrupted state files</li>\n<li>Fixed the Windows background-service daemon not starting when <code>~/.claude/daemon</code> has the ReadOnly attribute set</li>\n<li>Fixed cloud sessions failing with \"Could not resolve authentication method\" when idle for too long before being claimed</li>\n<li>Background sessions now show clearer guidance when a window left open across an auto-update can't submit a reply, and <code>claude daemon status</code> explains version-skew behavior</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: failures, line, /copy, now, sandbox.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Claude Code Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "failures",
+          "line",
+          "/copy",
+          "now",
+          "sandbox",
+          "attribute",
+          "opened",
+          "method"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: failures, line, /copy, now. Lead: Claude Code v2.1.176",
+        "alternative_titles": [],
+        "cluster_score": 15
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "claire_note": "Aus *Claude Code Releases* ist ein starker Kandidat reingekommen: *Claude Code v2.1.176*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 90_",
+    "chloe_note": "Kurzes Update: *Claude Code v2.1.176* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: failures, line, /copy, now. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.176"
   }
 ]
