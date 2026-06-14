@@ -5906,5 +5906,47 @@
     "engagement_score": 60.0,
     "local_newsworthiness_score": 0,
     "created_at": "2026-06-14T18:18:02.757078Z"
+  },
+  {
+    "title": "Why Is Claude Turning into an a**Hole?",
+    "link": "https://bramcohen.com/p/why-is-claude-turning-into-an-asshole",
+    "source": "HackerNews",
+    "score": 45,
+    "should_post": false,
+    "reason": "Fails Ships Test. User reports on perceived model degradation lack official data, a new release, or a verifiable benchmark.",
+    "post_text": "Users report Claude's conversational quality has degraded, leading to less helpful responses. Builders relying on Claude's API should monitor model behavior for consistency.",
+    "source_angle": "Community reports on Claude's perceived behavioral shift.",
+    "source_tier": 3,
+    "engagement_score": 119.5,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-06-14T22:59:52.862155Z"
+  },
+  {
+    "title": "Did Anthropic ask for this?",
+    "link": "https://www.verysane.ai/p/did-anthropic-ask-for-this",
+    "source": "HackerNews",
+    "score": 10,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "No source angle provided",
+    "source_tier": 3,
+    "engagement_score": 53.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-14T22:59:57.847072Z"
+  },
+  {
+    "title": "FTX's former Anthropic stake would be worth about $75B at today's valuation",
+    "link": "https://news.ycombinator.com/item?id=48529190",
+    "source": "HackerNews",
+    "score": 0,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 49.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-14T22:59:57.847428Z"
   }
 ]
