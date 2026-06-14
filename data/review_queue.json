@@ -1362,11 +1362,11 @@
   },
   {
     "id": "e567453c27c7",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-13T12:54:02.487332Z",
     "score": 90,
     "reason": "local newsworthiness fallback",
-    "proposed_post": "Claude Code adds regex link badges and improved credential caching.\n\nSession titles now localized, configurable via user settings, with cache expiration tied to AWS cred\n\nNew settings include footerLinksRegexes and language, enhancing workflow customization and credential managem",
+    "proposed_post": "Credential caching becomes more reliable.\n\nClaude Code v2.1.176 adds regex link badges and improves credential caching with AWS cred expiration\n\nSession titles are now localized and configurable via user settings, with cache expiration tied to AWS credentials, enhancing workflow ",
     "source_angle": "Local high-score + Sarah/OpenRouter fallback",
     "source_item": {
       "title": "Claude Code v2.1.176",
@@ -1397,10 +1397,22 @@
         "cluster_score": 15
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/e567453c27c7.png",
     "is_llm_mode": true,
     "claire_note": "Aus *Claude Code Releases* ist ein starker Kandidat reingekommen: *Claude Code v2.1.176*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 90_",
-    "chloe_note": "Kurzes Update: *Claude Code v2.1.176* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: failures, line, /copy, now. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.176"
+    "chloe_note": "Kurzes Update: *Claude Code v2.1.176* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: failures, line, /copy, now. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.176",
+    "sarah_package": {
+      "title": "Credential caching becomes more reliable.",
+      "subtitle": "Claude Code v2.1.176 adds regex link badges and improves credential caching with AWS cred expiration",
+      "description": "Session titles are now localized and configurable via user settings, with cache expiration tied to AWS credentials, enhancing workflow custo",
+      "hashtags": [
+        "#Anthropic",
+        "#ClaudeCode",
+        "#AWS"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-13-claude-code-v2-1-176-e567453c27c7.md",
+    "published_at": "2026-06-14T14:00:48.465135Z"
   },
   {
     "id": "942fe7bbcff8",

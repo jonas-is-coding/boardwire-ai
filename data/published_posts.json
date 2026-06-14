@@ -390,5 +390,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-14-langchain-v1-3-9-942fe7bbcff8.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3moahltzvqm24",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3moahltzvqm24"
+  },
+  {
+    "id": "e567453c27c7",
+    "published_at": "2026-06-14T14:00:48.465135Z",
+    "platform": "bluesky",
+    "post": "Credential caching becomes more reliable.\n\nClaude Code v2.1.176 adds regex link badges and improves credential caching with AWS cred expiration\n\nSession titles are now localized and configurable via user settings, with cache expiration tied to AWS credentials, enhancing workflow ",
+    "source_link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.176",
+    "source_title": "Claude Code v2.1.176",
+    "score": 90,
+    "reason": "local newsworthiness fallback",
+    "card_path": "generated/cards/e567453c27c7.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-13-claude-code-v2-1-176-e567453c27c7.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3moawlofj6i25",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3moawlofj6i25"
   }
 ]
