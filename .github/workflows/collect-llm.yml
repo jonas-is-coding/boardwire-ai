@@ -1,11 +1,13 @@
 name: Boardwire Collect with LLM
 
 on:
-  # 3x daily: 05:00, 11:00, 17:00 UTC
-  # = 06/12/18 CET (winter) or 07/13/19 CEST (summer)
-  # Publish workflow runs 1h later (06/12/18 UTC).
+  # Every 2 hours (even hours UTC) so the channel stays current and a
+  # fast-developing story is picked up within ~2h instead of waiting for one
+  # of 3 daily slots. The daily *publish* budget still caps routine output;
+  # only breaking-news items (high score + corroboration) may exceed it.
+  # Publish workflow runs on the odd hours, ~1h after each collect.
   schedule:
-    - cron: "0 5,11,17 * * *"
+    - cron: "0 */2 * * *"
   workflow_dispatch:
     inputs:
       limit:

@@ -183,6 +183,7 @@ def check_quality(
     history_posts: list[str],
     context: str = "review",
     context_text: str | None = None,
+    allow_duplicate: bool = False,
 ) -> QualityResult:
     reasons: list[str] = []
     normalized = _normalize(post)
@@ -217,7 +218,10 @@ def check_quality(
     if _is_dry_ships_outperforms_stars_post(post):
         reasons.append("Dry ships/outperforms/stars post without builder implication")
 
-    if context in {"review", "publish"} and _near_duplicate(post, history_posts):
+    # Breaking items are exempted from the near-duplicate gate: a fast-developing
+    # story (e.g. a release followed by a ban/suspension) legitimately reuses the
+    # same terms as the earlier post, but is genuine news rather than a repost.
+    if context in {"review", "publish"} and not allow_duplicate and _near_duplicate(post, history_posts):
         reasons.append("Duplicate or near-duplicate post detected")
 
     min_score = config.min_llm_score if is_llm_mode else config.min_rule_score
