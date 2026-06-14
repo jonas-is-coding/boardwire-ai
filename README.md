@@ -151,6 +151,46 @@ It contains pending items only (newest first) and approve/reject commands.
 When daily cap blocks strong candidates, Boardwire stores them as `deferred_due_to_cap`.
 Deferred items are prioritized before fresh RSS items on the next run.
 
+## Staying current & breaking-news burst
+
+Boardwire collects every 2 hours (`collect-llm.yml`) and publishes every 2 hours
+(`publish-bluesky.yml`, offset by ~1h), so a fast-developing story is picked up
+and posted within hours instead of waiting for one of a few daily slots.
+
+Routine output is still bounded by `BOARDWIRE_MAX_POSTS_PER_DAY` (default 3) to
+keep the feed from turning into release-notes spam. But a **breaking** item is
+allowed to exceed that cap:
+
+- **What counts as breaking:** score ≥ `BOARDWIRE_BREAKING_SCORE_THRESHOLD`
+  **and** (unless `BOARDWIRE_BREAKING_REQUIRE_CORROBORATION=false`) the story is
+  corroborated — reported by more than one source in its cluster, or carrying
+  community engagement ≥ `BOARDWIRE_BREAKING_MIN_ENGAGEMENT`.
+- **Separate budget:** breaking items draw from `BOARDWIRE_BREAKING_MAX_EXTRA_PER_DAY`
+  (default 3) *on top of* the normal daily cap, so a big day can post up to 6.
+- **No early stop:** once the normal cap is hit the pipeline keeps running in
+  breaking-only mode instead of short-circuiting, so a late-breaking story still
+  gets evaluated.
+- **Follow-ups aren't duplicates:** breaking items bypass the near-duplicate
+  gate, so a development of an ongoing story (e.g. a model release followed by a
+  suspension) isn't suppressed as a repeat of the original post.
+- **Fast lane on publish:** the publish loop prefers breaking items, then newest,
+  and a breaking item can trigger up to `BOARDWIRE_BREAKING_MAX_EXTRA_PER_RUN`
+  extra posts within a single run.
+
+Approved breaking items are flagged with `breaking: true` in
+`data/review_queue.json` / `data/published_posts.json` and logged as `[BREAKING]`.
+
+Config (`.env`):
+
+| Variable | Default | Purpose |
+|---|---|---|
+| `BOARDWIRE_BREAKING_ENABLED` | `true` | Master switch for the breaking-news burst |
+| `BOARDWIRE_BREAKING_SCORE_THRESHOLD` | `92` | Min score to qualify as breaking |
+| `BOARDWIRE_BREAKING_MAX_EXTRA_PER_DAY` | `3` | Extra posts/day allowed beyond the normal cap |
+| `BOARDWIRE_BREAKING_MAX_EXTRA_PER_RUN` | `2` | Extra publishes allowed within one publish run |
+| `BOARDWIRE_BREAKING_REQUIRE_CORROBORATION` | `true` | Require multi-source / high engagement |
+| `BOARDWIRE_BREAKING_MIN_ENGAGEMENT` | `100` | Engagement that counts as corroboration |
+
 ## Virality model: learning from comparable channels
 
 Boardwire trains a small local model (`data/virality_model.json`) on the

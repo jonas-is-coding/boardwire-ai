@@ -754,6 +754,94 @@ def _apply_freshness_filter(items: list[FeedItem], logger) -> list[FeedItem]:
     return kept
 
 
+def _breaking_config() -> dict:
+    """Read breaking-news burst configuration from the environment.
+
+    Breaking items are high-scoring AND corroborated developments that are
+    allowed to exceed the normal daily post cap (up to a separate, smaller
+    breaking budget) so a genuinely important story isn't held back behind
+    routine release-notes.
+    """
+
+    def _int(name: str, default: int) -> int:
+        try:
+            return int(os.getenv(name, str(default)))
+        except (TypeError, ValueError):
+            return default
+
+    def _float(name: str, default: float) -> float:
+        try:
+            return float(os.getenv(name, str(default)))
+        except (TypeError, ValueError):
+            return default
+
+    def _bool(name: str, default: bool) -> bool:
+        raw = os.getenv(name)
+        if raw is None:
+            return default
+        return raw.strip().lower() in {"1", "true", "yes", "on"}
+
+    return {
+        "enabled": _bool("BOARDWIRE_BREAKING_ENABLED", True),
+        "threshold": _int("BOARDWIRE_BREAKING_SCORE_THRESHOLD", 92),
+        "max_extra_per_day": max(0, _int("BOARDWIRE_BREAKING_MAX_EXTRA_PER_DAY", 3)),
+        "max_extra_per_run": max(0, _int("BOARDWIRE_BREAKING_MAX_EXTRA_PER_RUN", 2)),
+        "require_corroboration": _bool("BOARDWIRE_BREAKING_REQUIRE_CORROBORATION", True),
+        "min_engagement": _float("BOARDWIRE_BREAKING_MIN_ENGAGEMENT", 100.0),
+    }
+
+
+def _is_breaking_item(review_item: dict, score_val: int, cfg: dict) -> bool:
+    """Decide whether a review-queue item qualifies as breaking news.
+
+    Qualifies when the score clears the breaking threshold and (unless
+    corroboration is disabled) the story is corroborated — either reported by
+    more than one source in its cluster or carrying high community engagement.
+    """
+    if not cfg.get("enabled", True):
+        return False
+    if score_val < int(cfg.get("threshold", 92)):
+        return False
+    if not cfg.get("require_corroboration", True):
+        return True
+
+    source_item = review_item.get("source_item", {})
+    if not isinstance(source_item, dict):
+        return False
+    cluster = source_item.get("cluster_context", {})
+    if not isinstance(cluster, dict):
+        cluster = {}
+
+    def _num(value, default=0.0):
+        try:
+            return float(value)
+        except (TypeError, ValueError):
+            return default
+
+    source_count = int(_num(cluster.get("source_count"), 1))
+    cluster_engagement = _num(cluster.get("total_engagement_score"))
+    engagement = _num(source_item.get("engagement_score"))
+    min_engagement = float(cfg.get("min_engagement", 100.0))
+    return source_count >= 2 or cluster_engagement >= min_engagement or engagement >= min_engagement
+
+
+def _count_today_by_kind(review_queue_data: list[dict], today) -> tuple[int, int]:
+    """Return (normal_today, breaking_today) counts of live items created today."""
+    normal_today = 0
+    breaking_today = 0
+    for q in review_queue_data:
+        if q.get("status") not in {"pending_review", "approved", "published_dry_run"}:
+            continue
+        dt = _parse_dt(q.get("created_at"))
+        if not (dt and dt.date() == today):
+            continue
+        if q.get("breaking"):
+            breaking_today += 1
+        else:
+            normal_today += 1
+    return normal_today, breaking_today
+
+
 def _load_fixture_items() -> list[FeedItem]:
     raw = JsonStore.load(SAMPLE_ITEMS_PATH, default=[])
     items: list[FeedItem] = []
@@ -1405,6 +1493,9 @@ def _publish_approved(args, logger) -> int:
     approved_max_age_hours = int(os.getenv("BOARDWIRE_APPROVED_MAX_AGE_HOURS", "48"))
     publish_try_limit = int(os.getenv("BOARDWIRE_PUBLISH_TRY_LIMIT", "5"))
     max_publish_per_run = int(os.getenv("BOARDWIRE_MAX_PUBLISH_PER_RUN", "1"))
+    # Breaking items may push extra posts out within a single run so two
+    # genuinely important developments don't have to wait for separate slots.
+    breaking_extra_per_run = max(0, _breaking_config()["max_extra_per_run"])
 
     candidates: list[dict] = []
     expired_count = 0
@@ -1435,20 +1526,31 @@ def _publish_approved(args, logger) -> int:
 
         candidates.append(item)
 
-    # Newest-first: sort by created_at descending.
-    candidates.sort(key=lambda it: _parse_dt(it.get("created_at")), reverse=True)
+    # Breaking items first, then newest-first by created_at.
+    candidates.sort(
+        key=lambda it: (1 if it.get("breaking") else 0, _parse_dt(it.get("created_at"))),
+        reverse=True,
+    )
     logger.info(
-        "Publish candidates: %d (expired %d, try limit %d, max per run %d)",
+        "Publish candidates: %d (expired %d, try limit %d, max per run %d, breaking extra/run %d)",
         len(candidates),
         expired_count,
         publish_try_limit,
         max_publish_per_run,
+        breaking_extra_per_run,
     )
 
     tried = 0
+    breaking_published = 0
     for item in candidates:
+        is_breaking = bool(item.get("breaking"))
+        # Base slot is shared by any item; once it's used only breaking items may
+        # continue, up to the per-run breaking budget.
         if published_count >= max_publish_per_run:
-            break
+            if not (is_breaking and breaking_published < breaking_extra_per_run):
+                # Keep scanning for a breaking item further down rather than
+                # stopping outright (candidates may mix breaking and routine).
+                continue
         if tried >= publish_try_limit:
             logger.info("Hit publish try limit (%d), stopping", publish_try_limit)
             break
@@ -1608,9 +1710,11 @@ def _publish_approved(args, logger) -> int:
         item["status"] = "published_dry_run"
         item["published_at"] = now
         published_count += 1
+        if is_breaking and published_count > max_publish_per_run:
+            breaking_published += 1
         if abs_card_path:
             posted_with_image_count += 1
-        logger.info("Published %s item: %s", selected_platform, rid)
+        logger.info("Published %s item%s: %s", selected_platform, " [BREAKING]" if is_breaking else "", rid)
         notify.jim_published(
             platform=selected_platform,
             title=source_item.get("title", rid),
@@ -1904,6 +2008,7 @@ def run(argv: list[str] | None = None) -> int:
         llm_config.provider = args.llm_provider
     if args.max_posts_per_day is not None and args.max_posts_per_day > 0:
         max_posts_per_day = args.max_posts_per_day
+    breaking_cfg = _breaking_config()
     ignore_daily_cap = False
     if args.ignore_daily_cap:
         if os.getenv("GITHUB_EVENT_NAME", "").strip().lower() == "schedule":
@@ -1916,21 +2021,24 @@ def run(argv: list[str] | None = None) -> int:
     # when today's publish budget is already exhausted.
     if not ignore_daily_cap:
         today = datetime.now(timezone.utc).date()
-        existing_today = 0
-        for q in review_queue_data:
-            status = q.get("status")
-            if status not in {"pending_review", "approved", "published_dry_run"}:
-                continue
-            dt = _parse_dt(q.get("created_at"))
-            if dt and dt.date() == today:
-                existing_today += 1
-        if existing_today >= max_posts_per_day:
+        normal_today, breaking_today = _count_today_by_kind(review_queue_data, today)
+        normal_remaining = max(0, max_posts_per_day - normal_today)
+        breaking_remaining = max(0, breaking_cfg["max_extra_per_day"] - breaking_today)
+        if normal_remaining <= 0 and breaking_remaining <= 0:
             logger.info(
-                "Daily post cap already reached: existing_today=%d cap=%d. Skipping collect-to-publish pipeline.",
-                existing_today,
+                "Daily post cap reached (normal=%d/%d, breaking=%d/%d). Skipping collect-to-publish pipeline.",
+                normal_today,
                 max_posts_per_day,
+                breaking_today,
+                breaking_cfg["max_extra_per_day"],
             )
             return 0
+        if normal_remaining <= 0:
+            logger.info(
+                "Normal daily cap reached (%d); continuing in breaking-only mode (breaking budget left: %d).",
+                max_posts_per_day,
+                breaking_remaining,
+            )
 
     if args.use_fixtures:
         all_items = _load_fixture_items()
@@ -2371,15 +2479,9 @@ def run(argv: list[str] | None = None) -> int:
         lookback_hours = max(1, lookback_hours)
         passed_queue_items: list[dict] = []
         today = datetime.now(timezone.utc).date()
-        existing_today = 0
-        for q in review_queue_data:
-            status = q.get("status")
-            if status not in {"pending_review", "approved", "published_dry_run"}:
-                continue
-            dt = _parse_dt(q.get("created_at"))
-            if dt and dt.date() == today:
-                existing_today += 1
-        remaining_today = max(0, max_posts_per_day - existing_today)
+        normal_today, breaking_today = _count_today_by_kind(review_queue_data, today)
+        remaining_today = max(0, max_posts_per_day - normal_today)
+        breaking_remaining = max(0, breaking_cfg["max_extra_per_day"] - breaking_today)
 
         deferred_rejected = 0
         for item in queue_items:
@@ -2389,6 +2491,7 @@ def run(argv: list[str] | None = None) -> int:
             score_val = int(item.get("score") or 0)
             is_llm_mode = llm_mode_by_link.get(source_link, False)
             item["is_llm_mode"] = is_llm_mode
+            is_breaking = _is_breaking_item(item, score_val, breaking_cfg)
             linked_deferred = deferred_queue_by_link.get(source_link)
             is_reprocessed_deferred = bool(linked_deferred and linked_deferred.get("_reprocessed"))
             if is_reprocessed_deferred and args.quality_report:
@@ -2413,6 +2516,7 @@ def run(argv: list[str] | None = None) -> int:
                 history_posts=history,
                 context="review",
                 context_text=f"{source_title} {item.get('reason', '')}",
+                allow_duplicate=is_breaking,
             )
             local_score_val = int(item.get("source_item", {}).get("local_newsworthiness_score") or 0)
             fallback_mode = (not is_llm_mode) or (llm_config.provider == "gemini" and remaining_gemini_budget() <= 0)
@@ -2425,7 +2529,16 @@ def run(argv: list[str] | None = None) -> int:
                     local_score_val,
                 )
             if quality.passed:
-                if (not ignore_daily_cap) and remaining_today <= 0:
+                use_breaking_budget = False
+                if (not ignore_daily_cap) and remaining_today <= 0 and is_breaking and breaking_remaining > 0:
+                    use_breaking_budget = True
+                    logger.info(
+                        "Breaking-news override: approving past normal cap (breaking budget left: %d) | title=%s | score=%d",
+                        breaking_remaining,
+                        source_title,
+                        score_val,
+                    )
+                if (not ignore_daily_cap) and remaining_today <= 0 and not use_breaking_budget:
                     quality_reject += 1
                     logger.warning("Quality reject: daily post cap reached (%d)", max_posts_per_day)
                     if is_reprocessed_deferred:
@@ -2448,10 +2561,11 @@ def run(argv: list[str] | None = None) -> int:
                     if args.quality_report:
                         logger.info("Quality report [REJECT] ID=%s | title=%s | score=%d", item.get("id"), source_title, score_val)
                         logger.info("Proposed post: %s", proposed_post)
-                        logger.info("Reason: daily post cap reached (%d). Existing today=%d", max_posts_per_day, existing_today)
+                        logger.info("Reason: daily post cap reached (%d). Existing today=%d", max_posts_per_day, normal_today)
                     continue
                 if is_reprocessed_deferred:
                     linked_deferred["status"] = "approved"
+                    linked_deferred["breaking"] = is_breaking
                     linked_deferred["score"] = score_val
                     linked_deferred["reason"] = item.get("reason", "")
                     linked_deferred["proposed_post"] = proposed_post
@@ -2465,16 +2579,23 @@ def run(argv: list[str] | None = None) -> int:
                     linked_deferred.pop("original_score", None)
                     linked_deferred.pop("original_reason", None)
                     quality_pass += 1
-                    remaining_today -= 1
-                    logger.info("Quality pass: %s", linked_deferred.get("id"))
+                    if use_breaking_budget:
+                        breaking_remaining -= 1
+                    else:
+                        remaining_today -= 1
+                    logger.info("Quality pass%s: %s", " [BREAKING]" if is_breaking else "", linked_deferred.get("id"))
                     deferred_became_review += 1
                 else:
                     item["status"] = "approved"
+                    item["breaking"] = is_breaking
                     passed_queue_items.append(item)
                     history.append(proposed_post)
                     quality_pass += 1
-                    remaining_today -= 1
-                    logger.info("Quality pass: %s", item.get("id"))
+                    if use_breaking_budget:
+                        breaking_remaining -= 1
+                    else:
+                        remaining_today -= 1
+                    logger.info("Quality pass%s: %s", " [BREAKING]" if is_breaking else "", item.get("id"))
                     # Send Claire's deferred notification first — then Chloe's immediately after
                     if source_link in _pending_claire:
                         c_title, c_link = _pending_claire.pop(source_link)
