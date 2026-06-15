@@ -5948,5 +5948,61 @@
     "engagement_score": 49.5,
     "local_newsworthiness_score": 0,
     "created_at": "2026-06-14T22:59:57.847428Z"
+  },
+  {
+    "title": "Introducing the OpenAI Partner Network",
+    "link": "https://openai.com/index/introducing-openai-partner-network",
+    "source": "OpenAI News",
+    "score": 20,
+    "should_post": false,
+    "reason": "Fails Ships Test. Business initiative, not a new model, API, or tool for builders to use or deploy today.",
+    "post_text": "No post generated",
+    "source_angle": "No source angle provided",
+    "source_tier": 1,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-15T02:42:07.309459Z"
+  },
+  {
+    "title": "Ponytail – make your AI agent think like the laziest senior dev in the room",
+    "link": "https://github.com/DietrichGebert/ponytail",
+    "source": "HackerNews",
+    "score": 70,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Open-source tool for agent efficiency",
+    "source_tier": 3,
+    "engagement_score": 39.0,
+    "local_newsworthiness_score": 30,
+    "created_at": "2026-06-15T02:42:13.774901Z"
+  },
+  {
+    "title": "AI is code – and can't be prompted into being smarter",
+    "link": "https://www.theregister.com/ai-and-ml/2026/06/14/ai-is-code-and-cant-be-prompted-into-being-smarter/5254141",
+    "source": "HackerNews",
+    "score": 3,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 112.0,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-06-15T02:42:13.775360Z"
+  },
+  {
+    "title": "The Jqwik Anti-AI Affair",
+    "link": "https://blog.johanneslink.net/2026/06/09/the-jqwik-anti-ai-affair/",
+    "source": "HackerNews",
+    "score": 2,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 75.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-15T02:42:13.775549Z"
   }
 ]
