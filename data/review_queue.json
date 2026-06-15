@@ -1513,11 +1513,11 @@
   },
   {
     "id": "73359004071a",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-15T22:11:06.802962Z",
     "score": 90,
     "reason": "New Claude Code CLI release with concrete features for agent control and project organization. Ships today.",
-    "proposed_post": "Claude Code v2.1.178 adds `Tool(param:value)` syntax for permission rules, enabling granular control over subagent model usage. Builders can now precisely block or allow specific models for subagents.",
+    "proposed_post": "Claude Code gains granular agent control.\n\nClaude Code v2.1.178 adds Tool(param:value) syntax for permission rules with 90 score.\n\nAnthropics releases Claude Code v2.1.178 with new CLI features for agent control and project organization, enabling builders to block or all\n\n📖 Read ",
     "source_angle": "Claude Code CLI update for agent control and project structure",
     "source_item": {
       "title": "Claude Code v2.1.178",
@@ -1548,10 +1548,22 @@
         "cluster_score": 15
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/73359004071a.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das hier ist interessant. Die neue 'Tool(param:value)' Syntax für Permission Rules ist ein Game-Changer. Entwickler können jetzt viel präziser steuern, welche Tools ihre Agents nutzen dürfen, basierend auf den Input-Parametern. Das ist ein großer Schritt für Sicherheit und Kontrolle in komplexen Agenten-Setups.",
-    "chloe_note": "*Claude Code v2.1.178* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New Claude Code CLI release with concrete features for agent control and project organization. Ships today.Cluster context: 1 sources, engagement 0. Common terms: classifier, daemon, account, specs. Bewertung: 90. Quelle: https://github.com/anthropics/claude-code/releases/tag/v2.1.178"
+    "chloe_note": "*Claude Code v2.1.178* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New Claude Code CLI release with concrete features for agent control and project organization. Ships today.Cluster context: 1 sources, engagement 0. Common terms: classifier, daemon, account, specs. Bewertung: 90. Quelle: https://github.com/anthropics/claude-code/releases/tag/v2.1.178",
+    "sarah_package": {
+      "title": "Claude Code gains granular agent control.",
+      "subtitle": "Claude Code v2.1.178 adds Tool(param:value) syntax for permission rules with 90 score.",
+      "description": "Anthropics releases Claude Code v2.1.178 with new CLI features for agent control and project organization, enabling builders to block or all",
+      "hashtags": [
+        "#ClaudeCode",
+        "#Anthropic",
+        "#AgentControl"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-15-claude-code-v2-1-178-73359004071a.md",
+    "published_at": "2026-06-15T23:05:29.601109Z"
   }
 ]

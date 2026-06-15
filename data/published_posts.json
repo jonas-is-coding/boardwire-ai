@@ -404,5 +404,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-13-claude-code-v2-1-176-e567453c27c7.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3moawlofj6i25",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3moawlofj6i25"
+  },
+  {
+    "id": "73359004071a",
+    "published_at": "2026-06-15T23:05:29.601109Z",
+    "platform": "bluesky",
+    "post": "Claude Code gains granular agent control.\n\nClaude Code v2.1.178 adds Tool(param:value) syntax for permission rules with 90 score.\n\nAnthropics releases Claude Code v2.1.178 with new CLI features for agent control and project organization, enabling builders to block or all\n\n📖 Read ",
+    "source_link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.178",
+    "source_title": "Claude Code v2.1.178",
+    "score": 90,
+    "reason": "New Claude Code CLI release with concrete features for agent control and project organization. Ships today.",
+    "card_path": "generated/cards/73359004071a.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-15-claude-code-v2-1-178-73359004071a.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3moefil2wi32b",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3moefil2wi32b"
   }
 ]
