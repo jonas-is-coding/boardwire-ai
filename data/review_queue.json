@@ -1510,5 +1510,48 @@
     "breaking": false,
     "claire_note": "Hey Chloe,\n\nHab mir die Anthropic Python SDK Release Notes angeschaut. Die Entfernung von \"retired models\" aus der API und den SDKs ist wichtig. Für Entwickler bedeutet das: Alte Modelle fliegen raus, was Code-Refactoring und Updates erzwingen kann, aber auch sicherstellt, dass man immer mit den aktuellsten und besten Modellen arbeitet. Direkter Impact auf Deployment-Strategien und zukünftige Integrationen.",
     "chloe_note": "Kurzes Update: *Anthropic Python SDK v0.109.2* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Anthropic SDK update removes retired models, requiring immediate action for builders using them.Cluster context: 1 sources, engagement 0. Common terms: strong, /h2, /h3, full. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.109.2"
+  },
+  {
+    "id": "73359004071a",
+    "status": "approved",
+    "created_at": "2026-06-15T22:11:06.802962Z",
+    "score": 90,
+    "reason": "New Claude Code CLI release with concrete features for agent control and project organization. Ships today.",
+    "proposed_post": "Claude Code v2.1.178 adds `Tool(param:value)` syntax for permission rules, enabling granular control over subagent model usage. Builders can now precisely block or allow specific models for subagents.",
+    "source_angle": "Claude Code CLI update for agent control and project structure",
+    "source_item": {
+      "title": "Claude Code v2.1.178",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.178",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 0,
+      "summary": "<h2>What's changed</h2>\n<ul>\n<li>Added <code>Tool(param:value)</code> syntax for permission rules to match a tool's input parameters (with <code>*</code> wildcard), e.g. <code>Agent(model:opus)</code> to block Opus subagents</li>\n<li>Skills in nested <code>.claude/skills</code> directories now load when working on files there; on a name clash, the nested skill appears as <code>&lt;dir&gt;:&lt;name&gt;</code> so both stay available</li>\n<li>Nested <code>.claude/</code> directories: the agent, workflow, and output-style closest to the working directory now wins when names collide; project-scope workflow saves now target the closest existing <code>.claude/workflows/</code></li>\n<li>Improved auto mode: subagent spawns are now evaluated by the classifier before launch, closing a gap where a subagent could request a blocked action without review</li>\n<li>Improved <code>/doctor</code> with consistent flat tree layout across all sections, clearer section status icons, and highlighted command names</li>\n<li>Improved the skill listing truncation warning to show how many skill descriptions are affected</li>\n<li>Changed the workflow prompt keyword to use a purple shimmer highlight and trigger only on explicit phrases like \"run a workflow\" or \"workflow:\", not on any mention of the word</li>\n<li>Improved Remote Control error messages: connection failures now show a persistent red \"/rc failed\" indicator in the footer, and the \"not yet enabled\" error now explains whether it's a gate, a check failure, stale entitlement, or org policy</li>\n<li><code>/bug</code> now requires a description before submitting, and no longer uses model-refusal text as the GitHub issue title</li>\n<li>Fixed a crash (out-of-memory) when the CLI inherits a stale websocket/OAuth file-descriptor environment variable from a parent process</li>\n<li>Fixed Claude in Chrome silently failing to connect when the OAuth token belongs to a different account than the Claude Code login</li>\n<li>Fixed nested <code>.claude/skills</code> skills with directory-qualified names being blocked by permission prompts in non-interactive runs</li>\n<li>Fixed several subagent issues: viewing a subagent's transcript now shows tool results and live progress, messages sent while it finishes its turn are no longer dropped, and backgrounding a running subagent (ctrl+b) no longer restarts it from scratch</li>\n<li>Fixed <code>claude agents</code> workers failing with <code>401 Invalid bearer token</code> when the daemon was started from a shell with a custom API gateway via <code>ANTHROPIC_BASE_URL</code> and <code>ANTHROPIC_AUTH_TOKEN</code></li>\n<li>Fixed compaction not honoring <code>--fallback-model</code>: compaction now falls back to the configured fallback model chain on overload or model-availability errors</li>\n<li>Fixed model requests continuing to fail with auth errors after credentials were refreshed outside the session, due to a stale cached request configuration</li>\n<li>Fixed background sessions created with <code>/bg</code> or <code>←←</code> after a turn finished showing \"Working\" forever in the agents list</li>\n<li>Fixed <code>CLAUDE_CODE_PLUGIN_KEEP_MARKETPLACE_ON_FAILURE=1</code> preventing fresh marketplace installs from cloning</li>\n<li>Fixed MCP server-level specs (<code>mcp__server</code>, <code>mcp__server__*</code>, <code>mcp__*</code>) in subagent <code>disallowedTools</code> being silently ignored</li>\n<li>Fixed vim mode undo: <code>u</code> now steps through NORMAL/VISUAL-mode commands one at a time instead of merging commands in quick succession into a single undo step</li>\n<li>Fixed statusline links with custom URI schemes (e.g. <code>vscode://</code>) not opening when clicked in <code>claude agents</code></li>\n<li>[VSCode] Fixed pressing Esc to dismiss a CJK IME candidate window canceling the running Claude task</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: classifier, daemon, account, specs, finishes.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Claude Code Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "classifier",
+          "daemon",
+          "account",
+          "specs",
+          "finishes",
+          "esc",
+          "/rc",
+          "failed"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: classifier, daemon, account, specs. Lead: Claude Code v2.1.178",
+        "alternative_titles": [],
+        "cluster_score": 15
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, das hier ist interessant. Die neue 'Tool(param:value)' Syntax für Permission Rules ist ein Game-Changer. Entwickler können jetzt viel präziser steuern, welche Tools ihre Agents nutzen dürfen, basierend auf den Input-Parametern. Das ist ein großer Schritt für Sicherheit und Kontrolle in komplexen Agenten-Setups.",
+    "chloe_note": "*Claude Code v2.1.178* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New Claude Code CLI release with concrete features for agent control and project organization. Ships today.Cluster context: 1 sources, engagement 0. Common terms: classifier, daemon, account, specs. Bewertung: 90. Quelle: https://github.com/anthropics/claude-code/releases/tag/v2.1.178"
   }
 ]
