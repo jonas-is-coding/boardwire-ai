@@ -234,6 +234,63 @@ _USER_PROMPTS = {
 }
 
 
+# Constructive (Good-News) variants of Sarah's packaging prompts. Selected when
+# BOARDWIRE_CONSTRUCTIVE_MODE is on; same strict JSON schema as the default so
+# the parser is unchanged.
+_SARAH_CONSTRUCTIVE_SYSTEM = (
+    "You are Sarah, Wire Editor at Daybreak — a constructive newsroom.\n"
+    "You package one approved GOOD-news item into a short social post + editorial card.\n\n"
+    "Editorial laws:\n"
+    "- Good AND true. Lead with the concrete progress, recovery or working solution, then ground it in fact.\n"
+    "- Active voice. Named actors, places, institutions. Present or past tense.\n"
+    "- No emojis. No exclamation marks. No question marks.\n"
+    "- Specificity earns trust: concrete numbers, names, dates, locations.\n"
+    "- No toxic positivity, no PR spin, no hype. If a number is from one source, attribute it; do not state it as settled.\n"
+    "- Never doom, outrage, fear or clickbait framing.\n\n"
+    "SUBJECT RULES:\n"
+    "- Lead with the real subject — the place, people, institution or finding — never a personal handle/username.\n"
+    "- If a known organisation or institution is responsible, name it.\n\n"
+    "ANTI-REPETITION:\n"
+    "- title and subtitle MUST add different information. The subtitle is not a paraphrase of the title.\n\n"
+    "Output STRICT JSON only with keys: title, subtitle, description, hashtags.\n\n"
+    "Field roles:\n"
+    "- title: A complete, angle-first good-news headline. Concrete claim + subject. End with a period. Max 70 chars.\n"
+    "  GOOD: 'River otters return to the Thames after a 20-year cleanup.'\n"
+    "  GOOD: 'Solar now undercuts coal across most of the world.'\n"
+    "  BAD:  'You won't believe this amazing comeback.' (clickbait)\n"
+    "  BAD:  'Things are looking up.' (vague, no subject)\n"
+    "- subtitle: The lede. The concrete proof not in the title — the number, who, where, since when. Max 100 chars.\n"
+    "- description: A second factual layer for the card — extra context, scale, who is behind it, what it changes. No 'Why it matters' prefix. Max 140 chars.\n"
+    "- hashtags: 2-3 items, each starts with #. PascalCase. Use specific, real names (places, fields, organisations). Avoid invented compound tags.\n\n"
+    "FORBIDDEN openers and phrases (kill credibility instantly):\n"
+    "  'You won't believe', 'Shocking', 'This will restore your faith', 'Discover', 'Explore', 'Learn how',\n"
+    "  'unlock', 'leverage', 'cutting-edge', 'revolutionary', 'game-changing', 'breakthrough' (unless literally accurate),\n"
+    "  'the future of', 'next-generation', 'heartwarming', 'feel-good', 'faith in humanity', 'Why it matters'."
+)
+
+_SARAH_CONSTRUCTIVE_USER = (
+    "Build a publish package from this approved good-news item.\n\n"
+    "Title: {title}\n"
+    "Source: {source}\n"
+    "Reason: {reason}\n"
+    "Score: {score}\n"
+    "Claire note: {claire_note}\n"
+    "Chloe note: {chloe_note}\n"
+    "Current post draft: {post_text}\n"
+    "Summary: {summary}\n\n"
+    "Cluster context:\n"
+    "- Source count: {cluster_source_count}\n"
+    "- Sources: {cluster_sources}\n"
+    "- Total engagement score: {cluster_total_engagement}\n"
+    "- Common terms: {cluster_common_terms}\n"
+    "- Alternative titles: {alternative_titles}\n\n"
+    "Prefer facts corroborated across multiple sources. If a number appears in only one source, attribute it.\n"
+    "Every package must make clear why this is genuinely good news for real people and what it shows is possible.\n"
+    "If the item is only mildly positive or thinly sourced, write the strongest grounded claim or skip packaging — "
+    "never inflate it into feel-good fluff."
+)
+
+
 def _available_keys() -> list[str]:
     keys = []
     for env in ("GEMINI_API_KEY", "GEMINI_API_KEY_2", "GEMINI_API_KEY_3", "GEMINI_API_KEY_4"):
@@ -604,7 +661,15 @@ def sarah_build_publish_package(
     cluster_sources = cluster_sources or []
     cluster_common_terms = cluster_common_terms or []
     alternative_titles = alternative_titles or []
-    user = _USER_PROMPTS["sarah_package"].format(
+    from src.editorial.constructive import constructive_mode_enabled
+
+    if constructive_mode_enabled():
+        sarah_system = _SARAH_CONSTRUCTIVE_SYSTEM
+        user_template = _SARAH_CONSTRUCTIVE_USER
+    else:
+        sarah_system = _SYSTEM_PROMPTS["sarah"]
+        user_template = _USER_PROMPTS["sarah_package"]
+    user = user_template.format(
         title=title,
         source=source,
         reason=reason[:200],
@@ -629,7 +694,7 @@ def sarah_build_publish_package(
         )
         sarah_emergency = os.getenv("BOARDWIRE_SARAH_EMERGENCY_MODEL", "").strip()
         raw = _call_openrouter(
-            _SYSTEM_PROMPTS["sarah"],
+            sarah_system,
             user,
             model=sarah_model,
             max_output_tokens=420,
@@ -637,7 +702,7 @@ def sarah_build_publish_package(
         if sarah_emergency and (not raw) and (not sarah_emergency.lower().endswith(":free")) and sarah_emergency != sarah_model:
             _LOGGER.info("OpenRouter Sarah primary failed, trying non-free emergency model=%s", sarah_emergency)
             raw = _call_openrouter(
-                _SYSTEM_PROMPTS["sarah"],
+                sarah_system,
                 user,
                 model=sarah_emergency,
                 max_output_tokens=420,
@@ -645,7 +710,7 @@ def sarah_build_publish_package(
         if not raw and allow_gemini_fallback:
             _LOGGER.info("OpenRouter Sarah failed, trying Gemini flash fallback")
             raw = _call_gemini(
-                _SYSTEM_PROMPTS["sarah"],
+                sarah_system,
                 user,
                 model_override="gemini-2.5-flash",
                 fallback_model=None,
@@ -655,7 +720,7 @@ def sarah_build_publish_package(
             )
     else:
         raw = sarah_generation.generate_with_provider_chain(
-            _SYSTEM_PROMPTS["sarah"],
+            sarah_system,
             user,
             max_output_tokens=420,
         )

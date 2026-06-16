@@ -298,8 +298,9 @@ LLM board and ranking are gated, and `constructive_mode` defaults off. To go liv
 1. Set `BOARDWIRE_CONSTRUCTIVE_MODE=true` (or `constructive_mode: true` in `config/editorial.json`).
 2. Enable the good-news sources (`"lens": "good_news"`) in `config/sources.json`, and disable the AI/builder sources you no longer want.
 
-With the switch on, the editorial board, the ranking and the local newsworthiness
-score all use the constructive line; with it off, behaviour is unchanged.
+With the switch on, the editorial board, the ranking, the local newsworthiness
+score and Sarah's social-post voice all use the constructive line; with it off,
+behaviour is unchanged. (Tiffany's long-form articles are always constructive.)
 
 ## LLM providers
 
