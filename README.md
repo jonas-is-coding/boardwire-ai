@@ -15,9 +15,11 @@ Output path:
 
 Card style:
 - 1200x1200
-- black/white
-- minimal editorial layout
+- warm "daybreak" sunrise theme by default (light); `dark` and plain `light` also available
+- minimal editorial layout with a DAYBREAK wordmark
 - no external assets
+
+Theme is selectable via `BOARDWIRE_CARD_THEME` (`daybreak` default | `light` | `dark`).
 
 ### Setup (one-time)
 

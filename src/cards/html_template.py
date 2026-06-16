@@ -1,16 +1,29 @@
 from __future__ import annotations
 
+import os
 from html import escape
 
 from src.cards.card_data import CardData
 
 
-DEFAULT_ACCENT = "#FFD21E"
+DEFAULT_ACCENT = "#F97316"  # sunrise orange
 
 
 def _accent_for(source: str) -> str:
     _ = source
     return DEFAULT_ACCENT
+
+
+def _card_theme(card: CardData) -> str:
+    """Resolve the card theme.
+
+    Env BOARDWIRE_CARD_THEME wins (dark | light | daybreak); otherwise default
+    to the warm 'daybreak' look. Only 'dark' opts out of the light palette.
+    """
+    env = (os.getenv("BOARDWIRE_CARD_THEME") or "").strip().lower()
+    if env in {"dark", "light", "daybreak"}:
+        return env
+    return "daybreak"
 
 
 def _split_headline(headline: str) -> tuple[str, str]:
@@ -45,26 +58,45 @@ def render_card_html(card: CardData) -> str:
         or getattr(card, "source", None)
         or ""
     )
-    visual_theme = getattr(card, "visual_theme", "dark") or "dark"
+    brand = getattr(card, "footer", None) or "DAYBREAK"
 
     accent = _accent_for(source)
-    is_light = visual_theme.lower() == "light"
+    theme = _card_theme(card)
 
     body, period = _split_headline(headline)
 
     # Theme tokens
-    if is_light:
-        bg = "#fafafa"
-        fg = "#0a0a0a"
-        subtle = "#525252"
-        bloom_fg = "rgba(0,0,0,0.03)"
-        grid_alpha = "0.025"
-    else:
+    if theme == "dark":
         bg = "#000000"
         fg = "#ffffff"
         subtle = "#a1a1a1"
-        bloom_fg = "rgba(255,255,255,0.025)"
+        grid_rgb = "255,255,255"
         grid_alpha = "0.015"
+        bloom = (
+            f"radial-gradient(900px 600px at 100% 100%, {accent}10, transparent 60%),"
+            "radial-gradient(700px 500px at 0% 0%, rgba(255,255,255,0.025), transparent 55%)"
+        )
+    elif theme == "light":
+        bg = "#fafafa"
+        fg = "#0a0a0a"
+        subtle = "#525252"
+        grid_rgb = "0,0,0"
+        grid_alpha = "0.025"
+        bloom = (
+            f"radial-gradient(900px 600px at 100% 100%, {accent}14, transparent 60%),"
+            "radial-gradient(700px 500px at 0% 0%, rgba(0,0,0,0.03), transparent 55%)"
+        )
+    else:  # daybreak — warm sunrise on warm paper
+        bg = "#FFF7ED"
+        fg = "#1C1917"
+        subtle = "#78716C"
+        grid_rgb = "120,53,15"
+        grid_alpha = "0.04"
+        bloom = (
+            "radial-gradient(1100px 760px at 100% 100%, rgba(249,115,22,0.20), transparent 62%),"
+            "radial-gradient(900px 640px at 0% 100%, rgba(251,191,36,0.16), transparent 58%),"
+            "radial-gradient(700px 520px at 0% 0%, rgba(244,114,182,0.08), transparent 55%)"
+        )
 
     # Pre-escape user content
     headline_html = (
@@ -74,6 +106,7 @@ def render_card_html(card: CardData) -> str:
     )
     summary_html = escape(summary)
     source_html = escape(source)
+    brand_html = escape(brand)
 
     return f"""<!doctype html>
 <html lang="en">
@@ -112,9 +145,7 @@ def render_card_html(card: CardData) -> str:
       content: "";
       position: absolute;
       inset: 0;
-      background:
-        radial-gradient(900px 600px at 100% 100%, {accent}10, transparent 60%),
-        radial-gradient(700px 500px at 0% 0%, {bloom_fg}, transparent 55%);
+      background: {bloom};
       pointer-events: none;
     }}
     .card::after {{
@@ -122,12 +153,19 @@ def render_card_html(card: CardData) -> str:
       position: absolute;
       inset: 0;
       background-image:
-        linear-gradient(rgba(255,255,255,{grid_alpha}) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,{grid_alpha}) 1px, transparent 1px);
+        linear-gradient(rgba({grid_rgb},{grid_alpha}) 1px, transparent 1px),
+        linear-gradient(90deg, rgba({grid_rgb},{grid_alpha}) 1px, transparent 1px);
       background-size: 80px 80px;
       pointer-events: none;
       -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
               mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+    }}
+    .brand {{
+      margin-left: auto;
+      flex-shrink: 0;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      color: var(--accent);
     }}
     .source {{
       display: flex;
@@ -192,6 +230,7 @@ def render_card_html(card: CardData) -> str:
     <div class="source">
       <span class="dot"></span>
       <span class="source-text">{source_html}</span>
+      <span class="brand">{brand_html}</span>
     </div>
     <div class="headline-block">
       <h1 class="headline">{headline_html}</h1>
