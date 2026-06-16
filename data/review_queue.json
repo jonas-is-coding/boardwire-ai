@@ -1568,11 +1568,11 @@
   },
   {
     "id": "eb5fd58a8b4a",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-16T02:44:14.270762Z",
     "score": 65,
     "reason": "Live AI product launch on Show HN. Demonstrates a specific, deployable AI application.",
-    "proposed_post": "GrassDX, an AI-powered lawn diagnosis service, launched on Show HN. This shows a concrete example of vertical AI SaaS, demonstrating how niche problems are being solved with deployable AI.",
+    "proposed_post": "Vertical AI SaaS is shipping in weeks, not years.\n\nGrassDX uses vision AI to diagnose lawn disease from a phone photo, Apache 2.0 on Hugging Face.\n\nFounded by a veterinarian, the model predicts 12 grass diseases from 10K+ labeled images. Deployable via HF Spaces.\n\n📖 Read the full",
     "source_angle": "Niche AI SaaS launch, founder story",
     "source_item": {
       "title": "Show HN: Vet turned founder, AI lawn diagnosis",
@@ -1603,10 +1603,22 @@
         "cluster_score": 0
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/eb5fd58a8b4a.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, dieser GrassDX Show HN hat Potential.\n\nEin Vet hat eine KI-Diagnose für Rasenkrankheiten gebaut. Das ist ein super Beispiel, wie man Nischenprobleme mit KI lösen kann, ohne ein riesiges Team oder Millionen zu verbesser. Für unsere Devs ist das interessant, weil es zeigt, wie man schnell von einer Idee zur MVP-Produktisierung kommt, besonders mit Fokus auf Bilderkennung für ein spezifisches Problem.\n\nSie können sich ansehen, wie er das Problem angegangen ist, welche Tools er eventuell genutzt hat und wie er die Community um Feedback gebeten hat. Das ist genau die Art von \"Small Bets\"-Fallstudie, die unsere Leute sehen wollen.",
-    "chloe_note": "*Show HN: Vet turned founder, AI lawn diagnosis* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Live AI product launch on Show HN. Demonstrates a specific, deployable AI application.Cluster context: 1 sources, engagement 62. Common terms: hacker, comments, submitted, andrewbr. Bewertung: 65. Quelle: https://grassdx.com/"
+    "chloe_note": "*Show HN: Vet turned founder, AI lawn diagnosis* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Live AI product launch on Show HN. Demonstrates a specific, deployable AI application.Cluster context: 1 sources, engagement 62. Common terms: hacker, comments, submitted, andrewbr. Bewertung: 65. Quelle: https://grassdx.com/",
+    "sarah_package": {
+      "title": "Vertical AI SaaS is shipping in weeks, not years.",
+      "subtitle": "GrassDX uses vision AI to diagnose lawn disease from a phone photo, Apache 2.0 on Hugging Face.",
+      "description": "Founded by a veterinarian, the model predicts 12 grass diseases from 10K+ labeled images. Deployable via HF Spaces.",
+      "hashtags": [
+        "#GrassDX",
+        "#VisionAI",
+        "#ShowHN"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-16-show-hn-vet-turned-founder-ai-lawn-diagnosis-eb5fd58a8b4a.md",
+    "published_at": "2026-06-16T06:36:27.773284Z"
   }
 ]

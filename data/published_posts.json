@@ -418,5 +418,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-15-claude-code-v2-1-178-73359004071a.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3moefil2wi32b",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3moefil2wi32b"
+  },
+  {
+    "id": "eb5fd58a8b4a",
+    "published_at": "2026-06-16T06:36:27.773284Z",
+    "platform": "bluesky",
+    "post": "Vertical AI SaaS is shipping in weeks, not years.\n\nGrassDX uses vision AI to diagnose lawn disease from a phone photo, Apache 2.0 on Hugging Face.\n\nFounded by a veterinarian, the model predicts 12 grass diseases from 10K+ labeled images. Deployable via HF Spaces.\n\n📖 Read the full",
+    "source_link": "https://grassdx.com/",
+    "source_title": "Show HN: Vet turned founder, AI lawn diagnosis",
+    "score": 65,
+    "reason": "Live AI product launch on Show HN. Demonstrates a specific, deployable AI application.",
+    "card_path": "generated/cards/eb5fd58a8b4a.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-16-show-hn-vet-turned-founder-ai-lawn-diagnosis-eb5fd58a8b4a.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mof6oyvq4c2t",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mof6oyvq4c2t"
   }
 ]
