@@ -25,7 +25,7 @@ def generate_review_queue_report(review_queue_path: Path, report_path: Path) -> 
     pending_sorted = sorted(pending, key=lambda x: _parse_dt(x.get("created_at")), reverse=True)
 
     lines: list[str] = []
-    lines.append("# Daybreak Review Queue")
+    lines.append("# Boardwire Review Queue")
     lines.append("")
     lines.append(f"## Pending: {len(pending_sorted)}")
     lines.append("")

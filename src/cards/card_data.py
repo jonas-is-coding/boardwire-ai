@@ -135,5 +135,5 @@ def from_review_item(item: dict) -> CardData:
         source_label=_source_label(source),
         source=source,
         date_label=date_label,
-        footer="DAYBREAK",
+        footer="BOARDWIRE",
     )
