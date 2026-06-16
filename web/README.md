@@ -10,7 +10,7 @@ The website now documents the new Boardwire pipeline direction:
 2. Reputation tiers (Tier-1/2/3) per source instead of flat scoring.
 3. Cross-source corroboration and clustering before final ranking.
 4. Story-level ranking (tier weight + recency + engagement).
-5. AI-agent communication via Slack before publishing.
+5. Reviewed publish handoff after final ranking.
 
 ## Local embedding note (cost control)
 
