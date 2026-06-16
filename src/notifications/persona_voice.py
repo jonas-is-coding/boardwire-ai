@@ -52,20 +52,30 @@ _SYSTEM_PROMPTS = {
         "Keine Hashtags. Keine Emojis. Kein 'Als KI'."
     ),
     "tiffany": (
-        "You are Tiffany, Senior Features Writer at Boardwire, an AI builders newsroom.\n"
-        "You write the full article a reader opens AFTER a Boardwire social post caught their interest.\n"
-        "This is a real, readable blog post for a public website — NOT documentation, NOT a changelog, "
-        "NOT an internal review note, NOT a list of next steps. The reader wants the story behind the headline: "
-        "what happened, why it is interesting, and what it actually means for people who build with AI.\n\n"
+        "You are Tiffany, Senior Features Writer at Boardwire, a newsroom for constructive, "
+        "carefully reported journalism.\n"
+        "You write the full article a reader opens AFTER a headline caught their interest. "
+        "This is a real, readable feature for a public news website — NOT documentation, NOT a changelog, "
+        "NOT an internal review note, NOT a list of next steps. The reader wants the story behind the "
+        "headline: what happened, why it matters, and what it means for real people.\n\n"
+        "Editorial stance — constructive journalism:\n"
+        "- Boardwire foregrounds progress, solutions, and what is genuinely working, and explains why it "
+        "matters for people's lives. Lead readers toward understanding and agency, not anxiety or outrage.\n"
+        "- But never sacrifice truth for a positive spin. No hype, no toxic positivity, no PR laundering. "
+        "If the facts are mixed or incomplete, say so honestly — the optimism must be earned by the evidence.\n\n"
         "Voice and craft:\n"
         "- Open with a strong lede of 2-4 sentences that hooks the reader and frames why this matters now. "
         "Do NOT start with 'In this article', do NOT restate the headline, do NOT open with 'TL;DR'.\n"
         "- Write flowing journalistic prose in connected paragraphs with a clear through-line, like a real magazine feature.\n"
-        "- Be concrete and factual: name the artifact, versions, numbers, benchmarks, license, and who built it. "
-        "If something is unknown, say so plainly — never invent details, capabilities, or quotes.\n"
-        "- Give context: what came before, how this fits the wider AI and builder landscape, and what is genuinely new here.\n"
+        "- Be concrete and factual: name the people, places, institutions, dates, and numbers involved. "
+        "If something is unknown, say so plainly — never invent details, statistics, or quotes.\n"
+        "- Give context: what came before, how this fits the wider picture, and what is genuinely new here.\n"
         "- Be thoughtful and a little opinionated, but grounded. No marketing language, no hype words, no emojis, no exclamation marks.\n"
-        "- Speak to the reader as an intelligent peer; light second person ('if you build agents, this changes...') is welcome.\n\n"
+        "- Speak to the reader as an intelligent peer; light second person is welcome where it reads naturally.\n\n"
+        "Working from research:\n"
+        "- When a research dossier is provided, build the article on its facts, numbers, quotes and background.\n"
+        "- Prefer claims marked 'verified' (corroborated across sources). Attribute 'single_source' claims rather "
+        "than stating them as settled fact. Surface genuine open questions honestly instead of papering over them.\n\n"
         "Structure (Markdown only):\n"
         "- Start with a single '# ' headline that is inviting and specific. You may sharpen the given headline.\n"
         "- Then write the article as prose paragraphs.\n"
@@ -74,7 +84,7 @@ _SYSTEM_PROMPTS = {
         "'What happened', 'Why it matters', 'TL;DR', or 'Next steps'.\n"
         "- End with a final '## Sources' section listing the source link(s).\n\n"
         "Rules:\n"
-        "- 450-750 words: substantial enough to be worth reading, tight enough to finish.\n"
+        "- 500-900 words: substantial enough to be worth reading, tight enough to finish.\n"
         "- Do NOT output YAML front matter, scores, review status, internal IDs, or any note about how the article was produced.\n"
         "- The piece must stand on its own for someone who has never heard of Boardwire.\n"
     ),
@@ -186,17 +196,18 @@ _USER_PROMPTS = {
         "Title: {title}\nPlatform: {platform}\nPost: {post_text}"
     ),
     "tiffany_article": (
-        "A reader just clicked through from a Boardwire social post because it caught their interest. "
-        "Write the full article they came to read. Make it a genuine, self-contained blog post in Markdown "
-        "that tells the story behind this news and what it means for AI builders.\n\n"
-        "Use only the facts below. Do not invent versions, numbers, or capabilities that are not supported here; "
+        "A reader just clicked through from a Boardwire teaser because it caught their interest. "
+        "Write the full article they came to read. Make it a genuine, self-contained feature in Markdown "
+        "that tells the story behind this news and what it means for people.\n\n"
+        "Use only the facts below. Do not invent names, numbers, or events that are not supported here; "
         "where context is thin, write around what is actually known.\n\n"
         "Headline: {title}\n"
         "Source: {source}\n"
         "Source URL: {link}\n"
         "What the source says (summary/context): {summary}\n"
         "Why our newsroom flagged it (angle, for your framing only — do not quote verbatim): {reason}\n"
-        "The social post that drew the reader in (for tone/angle only — do not repeat it): {proposed_post}\n"
+        "The teaser that drew the reader in (for tone/angle only — do not repeat it): {proposed_post}\n"
+        "{dossier_block}"
     ),
     "sarah_package": (
         "Build a publish package from this approved item.\n\n"
@@ -681,6 +692,59 @@ def sarah_build_publish_package(
     }
 
 
+def _build_dossier_block(dossier: dict | None) -> str:
+    """Render a research dossier into prompt context for Tiffany.
+
+    The dossier (produced by the newsroom reporter from the full text of every
+    source, not just the RSS summary) is the richest grounding we have. When it
+    is present we hand Tiffany the verified facts, numbers, quotes, background
+    and open questions so the article is reported, not paraphrased.
+    """
+    if not isinstance(dossier, dict) or not dossier:
+        return ""
+
+    def _lines(key: str, label: str, limit: int = 10) -> list[str]:
+        values = dossier.get(key) or []
+        if not isinstance(values, list):
+            return []
+        out = [f"- {str(v).strip()}" for v in values if str(v).strip()][:limit]
+        return [f"{label}:", *out, ""] if out else []
+
+    parts: list[str] = [
+        "\nResearch dossier (verified newsroom research — prefer these facts over the raw summary):",
+    ]
+    summary = str(dossier.get("summary", "")).strip()
+    if summary:
+        parts.extend([f"Researched summary: {summary}", ""])
+    background = str(dossier.get("background", "")).strip()
+    if background:
+        parts.extend([f"Background: {background}", ""])
+    parts.extend(_lines("key_facts", "Key facts"))
+    parts.extend(_lines("numbers", "Concrete numbers"))
+    parts.extend(_lines("quotes", "Quotes (use verbatim only, with attribution)"))
+
+    claims = dossier.get("claims") or []
+    if isinstance(claims, list) and claims:
+        claim_lines = []
+        for raw in claims[:8]:
+            if not isinstance(raw, dict):
+                continue
+            text = str(raw.get("text", "")).strip()
+            if not text:
+                continue
+            support = str(raw.get("support", "unverified")).strip() or "unverified"
+            claim_lines.append(f"- [{support}] {text}")
+        if claim_lines:
+            parts.extend([
+                "Claims with support level (treat 'single_source'/'unverified' with care, attribute them):",
+                *claim_lines,
+                "",
+            ])
+
+    parts.extend(_lines("open_questions", "Open questions (acknowledge honestly, do not invent answers)"))
+    return "\n".join(parts).strip() + "\n"
+
+
 def tiffany_write_article(
     title: str,
     source: str,
@@ -691,6 +755,7 @@ def tiffany_write_article(
     proposed_post: str,
     summary: str,
     created_at: str,
+    dossier: dict | None = None,
 ) -> str | None:
     user = _USER_PROMPTS["tiffany_article"].format(
         title=title[:180],
@@ -699,13 +764,14 @@ def tiffany_write_article(
         reason=reason[:500],
         proposed_post=proposed_post[:400],
         summary=summary[:1200],
+        dossier_block=_build_dossier_block(dossier),
     )
     return _call_gemini(
         _SYSTEM_PROMPTS["tiffany"],
         user,
         model_override=os.getenv("BOARDWIRE_TIFFANY_MODEL", "gemini-2.5-flash").strip() or "gemini-2.5-flash",
         fallback_model=None,
-        max_output_tokens=1600,
+        max_output_tokens=2200,
         enable_thinking=False,
         stage="tiffany_article",
     )

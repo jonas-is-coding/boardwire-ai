@@ -109,7 +109,7 @@ BOARDWIRE_PUBLISHER=mastodon BOARDWIRE_REAL_PUBLISH_ENABLED=true \
 
 ## Markdown-Webartikel Export
 
-Boardwire kann Review-Items als komplette Markdown-Artikel exportieren, damit `boardwire-web` sie direkt lesen/rendern kann.
+Boardwire kann Review-Items als komplette Markdown-Artikel exportieren, damit `boardwire-web` sie direkt lesen/rendern kann. Die Artikel werden von der Persona **Tiffany** (Senior Features Writer) als echte, konstruktiv-journalistische Langform geschrieben (500–900 Wörter).
 
 Output path:
 - `articles/*.md`
@@ -120,6 +120,34 @@ python -m src.main --export-web-articles
 ```
 
 Exportiert Items mit Status `pending_review`, `approved` und `published_dry_run`.
+
+### Dossier-gestützte Artikel (empfohlen)
+
+Wenn vorher die Newsroom-Deep-Research lief (`--newsroom-research`, siehe oben),
+liegen **Dossiers** in `data/dossiers/`. Der Export verknüpft jedes Review-Item
+über seinen Quell-Link automatisch mit dem passenden Dossier und schreibt den
+Artikel dann aus **verifizierten Fakten, Zahlen, Zitaten, Hintergrund und
+Claims mit Support-Level** statt aus der dünnen RSS-Zusammenfassung — sowohl im
+LLM-Pfad (Tiffany) als auch im LLM-freien Fallback. Empfohlener Ablauf:
+
+```bash
+BOARDWIRE_ENABLE_NEWSROOM=true python -m src.main --newsroom-research --llm-provider gemini
+python -m src.main --export-web-articles
+```
+
+### Front matter
+
+Jeder Artikel trägt publizierbares Front matter für die Website: `title`, `date`,
+`source`, `source_url`, `description` (SEO/Social-Preview), `beat`, `reading_time`
+und einen `hero_image`-Slot. Liegt ein Dossier vor, kommen `verified` (sind die
+Kernclaims mehrquellen-bestätigt?) und eine strukturierte `sources`-Liste dazu.
+
+### Config (`.env`)
+
+| Variable | Default | Purpose |
+|---|---|---|
+| `BOARDWIRE_TIFFANY_MODEL` | `gemini-2.5-flash` | Modell für die Langform-Artikel. Für hochwertigere Leitartikel auf ein stärkeres Modell zeigen lassen. |
+| `BOARDWIRE_TIFFANY_CALL_BUDGET` | `3` | Wie viele Artikel pro Lauf via LLM geschrieben werden (Rest nutzt den dossier-gestützten Fallback). |
 
 ## Dev-only testing commands
 
