@@ -1,0 +1,134 @@
+.wrap {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  border-bottom: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: saturate(180%) blur(10px);
+  -webkit-backdrop-filter: saturate(180%) blur(10px);
+}
+
+.topbarInner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0.9rem 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+.backLink,
+.repoLink {
+  font-size: 0.85rem;
+  color: var(--muted);
+  transition: color 160ms ease;
+}
+
+.backLink:hover,
+.repoLink:hover {
+  color: var(--text);
+}
+
+.hero {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 2.2rem 1.2rem 1.2rem;
+}
+
+.eyebrow {
+  font-family: var(--font-geist-mono), monospace;
+  letter-spacing: 0.18em;
+  font-size: 0.7rem;
+  color: var(--accent);
+  margin-bottom: 0.8rem;
+}
+
+.hero h1 {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  letter-spacing: -0.02em;
+  line-height: 1.02;
+  margin-bottom: 0.9rem;
+}
+
+.hero p {
+  color: var(--muted);
+  max-width: 70ch;
+}
+
+.list {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0.75rem 1.2rem 2rem;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.item {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.95rem 1rem;
+  background: linear-gradient(160deg, #0c0c0c, #090909);
+}
+
+.itemMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 0.55rem;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.7rem;
+  color: var(--dim);
+  letter-spacing: 0.08em;
+}
+
+.itemTitle {
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.4;
+  transition: color 160ms ease;
+}
+
+.itemTitle:hover {
+  color: #ffe7a8;
+}
+
+.pager {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0.2rem 1.2rem 2.4rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+.pageBtn,
+.pageBtnDisabled {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: 1px solid var(--border-strong);
+  padding: 0.5rem 0.8rem;
+  font-size: 0.84rem;
+  min-width: 104px;
+}
+
+.pageBtn {
+  color: var(--text);
+}
+
+.pageBtn:hover {
+  border-color: rgba(245, 180, 0, 0.42);
+}
+
+.pageBtnDisabled {
+  color: var(--dim);
+  border-color: var(--border);
+}
