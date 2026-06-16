@@ -6312,5 +6312,19 @@
     "engagement_score": 85.5,
     "local_newsworthiness_score": 0,
     "created_at": "2026-06-15T22:11:07.737612Z"
+  },
+  {
+    "title": "Show HN: Vet turned founder, AI lawn diagnosis",
+    "link": "https://grassdx.com/",
+    "source": "HackerNews",
+    "score": 65,
+    "should_post": true,
+    "reason": "Live AI product launch on Show HN. Demonstrates a specific, deployable AI application.",
+    "post_text": "GrassDX, an AI-powered lawn diagnosis service, launched on Show HN. This shows a concrete example of vertical AI SaaS, demonstrating how niche problems are being solved with deployable AI.",
+    "source_angle": "Niche AI SaaS launch, founder story",
+    "source_tier": 3,
+    "engagement_score": 62.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-16T02:44:14.270762Z"
   }
 ]
