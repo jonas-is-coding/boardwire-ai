@@ -121,47 +121,5 @@
     "url": "https://export.arxiv.org/rss/cs.LG",
     "enabled": false,
     "tier": 3
-  },
-  {
-    "name": "Positive News",
-    "url": "https://www.positive.news/feed/",
-    "enabled": false,
-    "tier": 2,
-    "lens": "good_news"
-  },
-  {
-    "name": "Reasons to be Cheerful",
-    "url": "https://reasonstobecheerful.world/feed/",
-    "enabled": false,
-    "tier": 2,
-    "lens": "good_news"
-  },
-  {
-    "name": "Good News Network",
-    "url": "https://www.goodnewsnetwork.org/feed/",
-    "enabled": false,
-    "tier": 3,
-    "lens": "good_news"
-  },
-  {
-    "name": "The Optimist Daily",
-    "url": "https://www.optimistdaily.com/feed/",
-    "enabled": false,
-    "tier": 3,
-    "lens": "good_news"
-  },
-  {
-    "name": "Our World in Data",
-    "url": "https://ourworldindata.org/atom.xml",
-    "enabled": false,
-    "tier": 2,
-    "lens": "good_news"
-  },
-  {
-    "name": "Future Crunch",
-    "url": "https://futurecrunch.com/feed/",
-    "enabled": false,
-    "tier": 3,
-    "lens": "good_news"
   }
 ]

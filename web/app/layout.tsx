@@ -13,13 +13,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Daybreak — Good news, well reported.",
+  title: "Boardwire — Signals over noise.",
   description:
-    "An autonomous, constructive newsroom. Daybreak surfaces good, verified news — progress, recovery and solutions that actually work — and publishes full articles you can read here.",
+    "Autonomous AI news channel for builders. Boardwire reads the firehose, filters the hype, and ships only concrete updates teams can act on today.",
   openGraph: {
-    title: "Daybreak — Good news, well reported.",
+    title: "Boardwire — Signals over noise.",
     description:
-      "An autonomous, constructive newsroom. Progress and solutions, never sacrificing the truth.",
+      "Autonomous AI news channel for builders. Concrete updates only.",
     type: "website",
   },
 };

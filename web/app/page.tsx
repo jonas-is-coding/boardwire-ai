@@ -5,20 +5,20 @@ import styles from "./page.module.css";
 import Workflow from "./_workflow";
 
 const stats = [
-  { value: "good", label: "news first" },
-  { value: "multi", label: "source verified" },
-  { value: "full", label: "articles" },
+  { value: "20", label: "active sources" },
+  { value: "3", label: "reputation tiers" },
+  { value: "local", label: "embeddings" },
   { value: "2", label: "LLM passes" },
   { value: "3/day", label: "publish cap" },
 ];
 
 const trustBadges = [
-  "constructive line",
-  "truth guard",
-  "multi-source verified",
-  "no doom · no clickbait",
+  "dry-run default",
+  "daily cap",
+  "dedupe",
+  "quality gates",
   "review queue",
-  "sources cited",
+  "source tiers",
 ];
 
 const runMetrics = [
@@ -29,39 +29,51 @@ const runMetrics = [
 ];
 
 const sourceRows = [
-  { name: "Positive News", tier: "T2" },
-  { name: "Reasons to be Cheerful", tier: "T2" },
-  { name: "Our World in Data", tier: "T2" },
-  { name: "Good News Network", tier: "T3" },
-  { name: "The Optimist Daily", tier: "T3" },
-  { name: "Future Crunch", tier: "T3" },
+  { name: "OpenAI News", tier: "T1" },
+  { name: "Google DeepMind Blog", tier: "T1" },
+  { name: "Claude Code Releases", tier: "T1" },
+  { name: "Anthropic Python SDK Releases", tier: "T1" },
+  { name: "MCP Spec Releases", tier: "T1" },
+  { name: "Hugging Face Blog", tier: "T2" },
+  { name: "GitHub Blog AI", tier: "T2" },
+  { name: "Simon Willison", tier: "T2" },
+  { name: "Import AI (Jack Clark)", tier: "T2" },
+  { name: "SemiAnalysis", tier: "T2" },
+  { name: "Nathan Lambert (Interconnects)", tier: "T2" },
+  { name: "Sebastian Raschka (Ahead of AI)", tier: "T2" },
+  { name: "MCP Servers Releases", tier: "T2" },
+  { name: "Ollama Releases", tier: "T2" },
+  { name: "vLLM Releases", tier: "T2" },
+  { name: "LlamaIndex Releases", tier: "T2" },
+  { name: "LangChain Releases", tier: "T2" },
+  { name: "The Gradient", tier: "T3" },
 ];
 
 const pillars = [
   {
     no: "01",
-    title: "Good news, but only if it's true",
-    body: "Daybreak foregrounds progress, recovery and solutions that actually work — then makes that the lede. A built-in truth guard rejects PR spin, toxic positivity and unverifiable feel-good claims. The optimism has to be earned by the evidence.",
-    meta: "constructive line · integrity check",
+    title: "Cross-source truth over single-link hype",
+    body: "Boardwire does not rank links in isolation anymore. It groups overlapping reports across 18 RSS/Atom feeds, Hacker News, and GitHub Trending and promotes stories corroborated by multiple independent signals.",
+    meta: "corroboration · clustering · story score",
   },
   {
     no: "02",
-    title: "Cross-source truth over single-link hype",
-    body: "Stories are grouped across many independent feeds and promoted only when corroborated by multiple sources. Every claim carries a support level, and every article cites where it came from.",
-    meta: "corroboration · clustering · support levels",
+    title: "Reputation-aware ranking",
+    body: "Every source is weighted by tier (Tier-1, Tier-2, Tier-3), then combined with recency and engagement. That means DeepMind/OpenAI updates are contextualized differently than random long-tail posts.",
+    meta: "tier weights · engagement · recency",
   },
   {
     no: "03",
-    title: "Real articles, not just posts",
-    body: "Each story is researched into a dossier of verified facts, then written up as a full long-form feature you can read here — alongside the short social posts that point back to it.",
-    meta: "research dossier · long-form · social",
+    title: "Cheap compute, strict editorial gate",
+    body: "Embeddings run locally on GitHub Actions CPU runners to avoid burning API quota. LLM calls stay focused on final editorial choices, while Slack is used as the agent-to-agent communication layer.",
+    meta: "local embeddings · batch LLM · agent comms",
   },
 ];
 
 const principles = [
-  "Good news, but never at the expense of the truth.",
-  "Progress and solutions over doom, outrage and clickbait.",
-  "Every claim sourced. Review before publish. Always.",
+  "No isolated links without cross-source context.",
+  "One story, one implication, one actionable takeaway.",
+  "Review before publish. Always.",
 ];
 
 export default function Home() {
@@ -70,7 +82,7 @@ export default function Home() {
       <header className={styles.nav}>
         <div className={styles.navInner}>
           <div className={styles.brandCluster}>
-            <Link href="/" className={styles.brand} aria-label="Daybreak home">
+            <Link href="/" className={styles.brand} aria-label="Boardwire home">
               <span className={styles.brandLogo}>
                 <Image
                   src="/logo.png"
@@ -80,14 +92,13 @@ export default function Home() {
                   priority
                 />
               </span>
-              <span className={styles.brandName}>Daybreak</span>
+              <span className={styles.brandName}>Boardwire</span>
             </Link>
             <Link href="/changelog" className={styles.brandTag}>
               v0
             </Link>
           </div>
           <nav className={styles.navLinks} aria-label="Primary">
-            <Link href="/articles">Articles</Link>
             <a href="#pipeline">Pipeline</a>
             <a href="#sources">Sources</a>
             <a href="#principles">Principles</a>
@@ -98,7 +109,7 @@ export default function Home() {
               className={styles.socialIcon}
               target="_blank"
               rel="noreferrer"
-              aria-label="Daybreak on GitHub"
+              aria-label="Boardwire on GitHub"
             >
               <SiGithub size={20} />
             </a>
@@ -107,7 +118,7 @@ export default function Home() {
               className={styles.socialIcon}
               target="_blank"
               rel="noreferrer"
-              aria-label="Daybreak on Bluesky"
+              aria-label="Boardwire on Bluesky"
             >
               <SiBluesky size={20} />
             </a>
@@ -120,15 +131,15 @@ export default function Home() {
           <div className={styles.heroContent}>
             <p className={styles.eyebrow}>
               <span className={styles.eyebrowDot} aria-hidden />
-              LIVE · AUTONOMOUS · CONSTRUCTIVE
+              LIVE · AUTONOMOUS · BUILDER-FIRST
             </p>
             <h1 className={styles.heroTitle}>
-              Good news, well reported<span className={styles.period}>.</span>
+              Signals over noise<span className={styles.period}>.</span>
             </h1>
             <p className={styles.heroSub}>
-              Verified good news in, full articles out, up to 3 posts per day.
-              Daybreak runs as an autonomous, constructive newsroom — progress
-              and solutions, never at the expense of the truth.
+              20 active sources in, clustered stories out, up to 3 shipped posts
+              per day. Boardwire runs as an autonomous AI newsroom with strict
+              quality constraints.
             </p>
             <div className={styles.heroCta}>
               <a href="#pipeline" className={styles.btnPrimary}>
@@ -202,9 +213,9 @@ export default function Home() {
               <h2 className={styles.sectionTitle}>Transparent input surface.</h2>
             </div>
             <p className={styles.sectionSub}>
-              A starter set of constructive, solutions-focused sources, grouped with
-              tier context. Ranking uses these tiers, recency and corroboration
-              before anything is published.
+              Core active inputs, grouped with tier context. Ranking uses these
+              tiers as weighting signals before publish. Hacker News and GitHub
+              Trending are collected as separate aggregator streams.
             </p>
           </div>
           <div className={styles.sourceGrid}>
@@ -228,13 +239,13 @@ export default function Home() {
           <div className={styles.sectionHead}>
             <div>
               <p className={styles.sectionLabel}>WHAT IT IS</p>
-              <h2 className={styles.sectionTitle}>A newsroom for good news.</h2>
+              <h2 className={styles.sectionTitle}>An editor that ships.</h2>
             </div>
             <p className={styles.sectionSub}>
-              Daybreak is a fully automated editorial pipeline that behaves like a
-              small newsroom for good news. It corroborates stories across
-              sources, researches each into a verified dossier, then ships only
-              what survives the constructive editorial gate and review.
+              Boardwire is a fully automated editorial pipeline that behaves
+              like a small newsroom. It compares competing narratives across
+              sources before a post is selected, then ships only what survives
+              ranking and review.
             </p>
           </div>
           <div className={styles.pillars}>
@@ -288,7 +299,7 @@ export default function Home() {
             <div>
               <p className={styles.sectionLabel}>PRINCIPLES</p>
               <h2 className={styles.sectionTitle}>
-                What Daybreak refuses to do.
+                What Boardwire refuses to do.
               </h2>
             </div>
           </div>
@@ -311,11 +322,11 @@ export default function Home() {
           <div className={styles.outroCard}>
             <p className={styles.sectionLabel}>FOLLOW THE FEED</p>
             <h2 className={styles.outroTitle}>
-              Up to three good things a day.
+              Up to three concrete updates a day.
             </h2>
             <p className={styles.outroSub}>
-              Daybreak publishes full articles here and short posts to Bluesky and X —
-              progress and solutions worth your attention, when they land.
+              Boardwire publishes to Bluesky and X. No newsletter, no roundups,
+              no week-in-review — just the signal, when it lands.
             </p>
             <div className={styles.heroCta}>
               <a
@@ -343,9 +354,9 @@ export default function Home() {
         <div className={styles.footerInner}>
           <div className={styles.footerBrand}>
             <Image src="/logo.png" alt="" width={20} height={20} />
-            <span>Daybreak</span>
+            <span>Boardwire</span>
           </div>
-          <p>Good news, well reported. © {new Date().getFullYear()}</p>
+          <p>Signals over noise. © {new Date().getFullYear()}</p>
         </div>
       </footer>
     </>
