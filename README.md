@@ -139,8 +139,15 @@ python -m src.main --export-web-articles
 
 Jeder Artikel trägt publizierbares Front matter für die Website: `title`, `date`,
 `source`, `source_url`, `description` (SEO/Social-Preview), `beat`, `reading_time`
-und einen `hero_image`-Slot. Liegt ein Dossier vor, kommen `verified` (sind die
-Kernclaims mehrquellen-bestätigt?) und eine strukturierte `sources`-Liste dazu.
+und `hero_image`. Liegt ein Dossier vor, kommen `verified` (sind die Kernclaims
+mehrquellen-bestätigt?) und eine strukturierte `sources`-Liste dazu.
+
+`hero_image` wird mit der bereits gerenderten Editorial-Card des Items
+(`card_path`) gefüllt, sodass jeder Artikel ohne neue Infrastruktur ein Bild
+bekommt. Ist `BOARDWIRE_ARTICLE_IMAGE_BASE_URL` gesetzt, wird die Card als
+öffentliche absolute URL referenziert (für Frontends, die den Repo-Pfad nicht
+ausliefern). Ein dedizierter Wide-Hero-Generator (16:9/OG-Format) ist der
+nächste Ausbauschritt.
 
 ### Config (`.env`)
 

@@ -116,6 +116,24 @@ def _yaml_escape(value: str) -> str:
     return value.replace("\\", "\\\\").replace('"', '\\"')
 
 
+def _hero_image(item: dict) -> str:
+    """Hero image for the article.
+
+    Reuses the editorial card already rendered for the review item, so every
+    article ships with an image and no new infrastructure. If
+    ``BOARDWIRE_ARTICLE_IMAGE_BASE_URL`` is set the card is referenced as a
+    public absolute URL (the web frontend may not serve the repo path),
+    mirroring how the Instagram/Threads publishers resolve card URLs.
+    """
+    card_path = str(item.get("card_path") or "").strip()
+    if not card_path:
+        return ""
+    base = os.getenv("BOARDWIRE_ARTICLE_IMAGE_BASE_URL", "").strip()
+    if base:
+        return f"{base.rstrip('/')}/{Path(card_path).name}"
+    return card_path
+
+
 def _front_matter(item: dict, body: str, dossier: dict | None = None) -> str:
     """Publishable front matter for the static news site.
 
@@ -141,7 +159,7 @@ def _front_matter(item: dict, body: str, dossier: dict | None = None) -> str:
         f'description: "{_yaml_escape(description)}"',
         f"beat: {beat}",
         f"reading_time: {_reading_time_minutes(body)}",
-        'hero_image: ""',
+        f'hero_image: "{_yaml_escape(_hero_image(item))}"',
     ]
 
     if dossier:

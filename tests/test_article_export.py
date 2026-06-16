@@ -114,6 +114,48 @@ def test_dossier_passed_to_tiffany(tmp_path, monkeypatch):
     assert text.startswith("---")  # front matter prepended to the LLM body
 
 
+def test_hero_image_uses_card_path(tmp_path, monkeypatch):
+    monkeypatch.delenv("BOARDWIRE_ARTICLE_IMAGE_BASE_URL", raising=False)
+    monkeypatch.setattr(article_export.voice, "tiffany_write_article", lambda **kw: None)
+    item = _review_item()
+    item["card_path"] = "generated/cards/abc123.png"
+
+    queue = tmp_path / "review_queue.json"
+    JsonStore.save(queue, [item])
+    out = tmp_path / "articles"
+    article_export.export_review_articles(queue, out, dossiers_dir=tmp_path / "none")
+
+    text = next(out.glob("*.md")).read_text(encoding="utf-8")
+    assert 'hero_image: "generated/cards/abc123.png"' in text
+
+
+def test_hero_image_uses_public_base_url(tmp_path, monkeypatch):
+    monkeypatch.setenv("BOARDWIRE_ARTICLE_IMAGE_BASE_URL", "https://cdn.example/cards/")
+    monkeypatch.setattr(article_export.voice, "tiffany_write_article", lambda **kw: None)
+    item = _review_item()
+    item["card_path"] = "generated/cards/abc123.png"
+
+    queue = tmp_path / "review_queue.json"
+    JsonStore.save(queue, [item])
+    out = tmp_path / "articles"
+    article_export.export_review_articles(queue, out, dossiers_dir=tmp_path / "none")
+
+    text = next(out.glob("*.md")).read_text(encoding="utf-8")
+    assert 'hero_image: "https://cdn.example/cards/abc123.png"' in text
+
+
+def test_hero_image_empty_without_card(tmp_path, monkeypatch):
+    monkeypatch.delenv("BOARDWIRE_ARTICLE_IMAGE_BASE_URL", raising=False)
+    monkeypatch.setattr(article_export.voice, "tiffany_write_article", lambda **kw: None)
+    queue = tmp_path / "review_queue.json"
+    JsonStore.save(queue, [_review_item()])  # no card_path
+    out = tmp_path / "articles"
+    article_export.export_review_articles(queue, out, dossiers_dir=tmp_path / "none")
+
+    text = next(out.glob("*.md")).read_text(encoding="utf-8")
+    assert 'hero_image: ""' in text
+
+
 def test_export_without_dossier_is_backward_compatible(tmp_path, monkeypatch):
     monkeypatch.setattr(article_export.voice, "tiffany_write_article", lambda **kw: None)
 
