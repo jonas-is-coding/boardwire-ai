@@ -1,0 +1,50 @@
+{
+  "_comment": "Constructive-journalism editorial signals. Used to rank GOOD, solution-oriented information up and doom/outrage/clickbait down. Tunable without code changes. The master switch is BOARDWIRE_CONSTRUCTIVE_MODE (env) or constructive_mode below.",
+  "constructive_mode": false,
+  "weights": {
+    "constructive": 12,
+    "solution": 15,
+    "doom": 14,
+    "outrage": 13,
+    "clickbait": 20
+  },
+  "max_terms_per_category": 3,
+  "score_floor": -100,
+  "score_ceiling": 100,
+  "doomscroll_drop_threshold": 28,
+  "constructive_terms": [
+    "recovery", "recovered", "rebound", "rebounded", "revival", "revived",
+    "restored", "restoration", "healing", "healed", "thriving", "flourish",
+    "milestone", "record high", "record low emissions", "first-ever", "progress",
+    "improving", "improved", "breakthrough", "discovery", "innovation",
+    "life expectancy", "literacy", "poverty falls", "declining poverty",
+    "renewable", "reforestation", "reforested", "conservation", "protected area",
+    "endangered species returns", "comeback", "donated", "volunteers", "community-led",
+    "rebuilt", "rebuilding", "hope", "kindness", "generosity", "rescued", "rescue"
+  ],
+  "solution_terms": [
+    "solution", "solutions", "how they fixed", "what worked", "scalable fix",
+    "pilot program", "proven approach", "evidence shows", "measurable improvement",
+    "cuts emissions", "reduced by", "saved lives", "cure", "cured", "treatment that works",
+    "vaccine", "eradicated", "clean water access", "off-grid power", "affordable housing",
+    "restores", "cleanup", "cleaned up", "turning the tide", "reversed the decline"
+  ],
+  "doom_terms": [
+    "killed", "dead", "dies", "death toll", "murder", "shooting", "massacre",
+    "war breaks", "airstrike", "bombing", "terror attack", "hostage", "atrocity",
+    "disaster", "catastrophe", "devastating", "collapse", "crisis deepens",
+    "plunge", "plummet", "worst ever", "horror", "tragedy", "victim", "abuse",
+    "doom", "apocalypse", "no way out", "hopeless", "spiraling", "out of control"
+  ],
+  "outrage_terms": [
+    "slams", "slammed", "blasts", "blasted", "destroys", "eviscerates", "rips into",
+    "furious", "fury", "outrage", "backlash", "sparks anger", "feud", "war of words",
+    "humiliated", "owned", "torched", "lashes out", "fires back", "clap back"
+  ],
+  "clickbait_terms": [
+    "you won't believe", "you wont believe", "shocking", "jaw-dropping",
+    "mind-blowing", "this one trick", "doctors hate", "what happened next",
+    "the reason will", "breaks the internet", "goes viral", "will leave you",
+    "number ", "gone wrong", "you need to see", "this is why everyone"
+  ]
+}
