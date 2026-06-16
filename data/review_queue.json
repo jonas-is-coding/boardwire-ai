@@ -1632,5 +1632,48 @@
     },
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-16-show-hn-vet-turned-founder-ai-lawn-diagnosis-eb5fd58a8b4a.md",
     "published_at": "2026-06-16T06:36:27.773284Z"
+  },
+  {
+    "id": "ced8c093b2a7",
+    "status": "approved",
+    "created_at": "2026-06-16T14:53:05.327677Z",
+    "score": 90,
+    "reason": "Alibaba released zvec, an open-source in-process vector database. Ships today, clear utility for builders.",
+    "proposed_post": "Alibaba released zvec, an in-process vector database. Use it for lightweight, fast vector search directly within your applications, simplifying deployment and reducing latency for specific use cases.",
+    "source_angle": "Alibaba's new in-process vector database for fast, embedded search.",
+    "source_item": {
+      "title": "alibaba/zvec — A lightweight, lightning-fast, in-process vector database",
+      "source": "GitHub Trending",
+      "link": "https://github.com/alibaba/zvec",
+      "source_tier": 2,
+      "engagement_score": 251.0,
+      "local_newsworthiness_score": 0,
+      "summary": "Trending on GitHub today: +251 stars. A lightweight, lightning-fast, in-process vector database\n[Cluster context: 1 sources, engagement 251, common terms: in-process, alibaba/zvec, stars., database, trending.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 251,
+        "common_terms": [
+          "in-process",
+          "alibaba/zvec",
+          "stars.",
+          "database",
+          "trending",
+          "github",
+          "lightning-fast",
+          "vector"
+        ],
+        "cluster_summary": "1 sources, engagement 251. Common terms: in-process, alibaba/zvec, stars., database. Lead: alibaba/zvec — A lightweight, lightning-fast, in-process vector database",
+        "alternative_titles": [],
+        "cluster_score": 25
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, schau dir das mal an: 'alibaba/zvec'.\n\nEin In-Process-Vektordatenbank von Alibaba, trendet gerade auf GitHub. Das ist spannend, weil es eine extrem schnelle und schlanke Option für lokale Embedding-Speicherung und -Suche bieten könnte. Entwickler, die an performanten RAG-Anwendungen arbeiten und Latenz minimieren wollen, könnten das direkt in ihre Services einbetten. Stell dir vor, du hast deine Vektoren direkt im Speicher deiner Anwendung, ohne den Overhead eines separaten Dienstes.",
+    "chloe_note": "Hey, *alibaba/zvec — A lightweight, lightning-fast, in-process vector database* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Alibaba released zvec, an open-source in-process vector database. Ships today, clear utility for builders.Cluster context: 1 sources, engagement 251. Common terms: in-process, alibaba/zvec, stars., database. Score aktuell: 90. Link: https://github.com/alibaba/zvec"
   }
 ]
