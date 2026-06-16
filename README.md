@@ -256,6 +256,28 @@ Config (`.env`):
 Pick channels in the **same topic area** as us — the model learns from their
 content, so off-topic accounts would pull it in the wrong direction.
 
+## Constructive editorial line (Good-News pivot)
+
+Boardwire's editorial direction is constructive journalism: prioritise GOOD,
+solution-oriented information and push doom, outrage and clickbait down — without
+ever sacrificing truth.
+
+When constructive mode is ON, the local newsworthiness ranking folds in a
+constructive signal: items about progress, recovery and working solutions get
+lifted, while overwhelmingly negative or clickbait items get buried. The signal
+is keyword-heuristic and fully tunable in `config/editorial.json` (term lists,
+weights, thresholds) — no code change needed.
+
+Master switch (`.env`):
+
+| Variable | Default | Purpose |
+|---|---|---|
+| `BOARDWIRE_CONSTRUCTIVE_MODE` | _(unset → config)_ | `true`/`false`. Overrides `constructive_mode` in `config/editorial.json`. Both default off; turn on once Good-News sources are in place. |
+
+The scoring layer (`src/editorial/constructive.py`) exposes
+`constructiveness_score()`, `is_doomscroll()` and `adjust_newsworthiness()` and
+is unit-tested independently of the pipeline.
+
 ## LLM providers
 
 Supported providers:

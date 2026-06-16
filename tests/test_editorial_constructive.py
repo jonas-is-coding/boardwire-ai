@@ -58,6 +58,33 @@ def test_env_master_switch(monkeypatch):
     assert c.constructive_mode_enabled(cfg) is False
 
 
+def test_adjust_newsworthiness_lifts_good_news():
+    good = _item(
+        "Community-led recovery restores the river and rescues its otters",
+        "A proven approach reversed the decline; volunteers saved lives.",
+    )
+    assert c.adjust_newsworthiness(50, good) > 50
+
+
+def test_adjust_newsworthiness_buries_doom():
+    doom = _item(
+        "Catastrophe deepens as death toll climbs in worst disaster",
+        "Hopeless; the crisis deepens with no way out.",
+    )
+    # Soft penalty plus the doomscroll gate penalty pull a mid score down hard.
+    assert c.adjust_newsworthiness(50, doom) < 20
+
+
+def test_adjust_newsworthiness_never_negative():
+    doom = _item("Massacre and atrocity: devastating, hopeless, no way out")
+    assert c.adjust_newsworthiness(5, doom) >= 0
+
+
+def test_adjust_newsworthiness_neutral_unchanged():
+    neutral = _item("Library ships v2.1 with new flags", "Adds options.")
+    assert c.adjust_newsworthiness(40, neutral) == 40
+
+
 def test_term_cap_limits_runaway_scores():
     cfg = c.load_editorial_config()
     # Repeating the same kind of term shouldn't scale unbounded.

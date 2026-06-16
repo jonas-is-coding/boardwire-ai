@@ -2134,11 +2134,21 @@ def run(argv: list[str] | None = None) -> int:
         fresh_candidates = sorted(unseen_items, key=lambda x: x.published_at, reverse=True)
 
     # Local newsworthiness ranking (Gemini-independent) before any LLM ranking.
+    # When the constructive-journalism editorial line is on, fold the Good-News
+    # signal into the score so progress/solutions surface and doom/clickbait sinks.
+    from src.editorial import constructive as _constructive
+    _editorial_cfg = _constructive.load_editorial_config()
+    _constructive_on = _constructive.constructive_mode_enabled(_editorial_cfg)
+    if _constructive_on:
+        logger.info("Constructive editorial mode: ON")
     local_ranked_rows: list[tuple[FeedItem, int, list[str]]] = []
     for item in fresh_candidates:
         ctx = cluster_context_by_link.get(item.link)
         score = score_newsworthiness(item, cluster_context=ctx)
         reasons = _newsworthiness_reason_parts(item, cluster_context=ctx)
+        if _constructive_on:
+            score = _constructive.adjust_newsworthiness(score, item, _editorial_cfg)
+            reasons = reasons + _constructive.constructive_reason_parts(item, _editorial_cfg)
         local_ranked_rows.append((item, score, reasons))
     local_ranked_rows.sort(
         key=lambda row: (

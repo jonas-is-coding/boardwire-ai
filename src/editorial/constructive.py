@@ -142,6 +142,27 @@ def is_doomscroll(item: FeedItem, config: EditorialConfig | None = None) -> bool
     return breakdown["negative"] >= cfg.doomscroll_drop_threshold
 
 
+def adjust_newsworthiness(
+    base_score: int,
+    item: FeedItem,
+    config: EditorialConfig | None = None,
+) -> int:
+    """Fold the constructive signal into a newsworthiness score.
+
+    The constructiveness score (-100..+100) is scaled into newsworthiness
+    space and added to the base; pure doom/clickbait items take an extra
+    penalty so they sink rather than surface. Never returns below 0. This is
+    only applied when constructive mode is enabled (the caller guards on
+    :func:`constructive_mode_enabled`).
+    """
+    cfg = config or load_editorial_config()
+    delta = constructiveness_score(item, cfg)
+    adjusted = int(base_score) + round(delta * 0.5)
+    if is_doomscroll(item, cfg):
+        adjusted -= 60
+    return max(0, int(adjusted))
+
+
 def constructive_reason_parts(item: FeedItem, config: EditorialConfig | None = None) -> list[str]:
     """Human-readable tags for logs/debugging, mirroring newsworthiness reasons."""
     breakdown = classify(item, config)
