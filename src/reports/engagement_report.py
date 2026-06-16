@@ -122,7 +122,7 @@ def _group_avg(performances: list[PostPerformance], predicate) -> tuple[float, i
 def _render_markdown(summary: ReportSummary) -> str:
     generated = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
     lines: list[str] = []
-    lines.append("# Boardwire Engagement Report")
+    lines.append("# Daybreak Engagement Report")
     lines.append("")
     lines.append(f"Generated: `{generated}`")
     lines.append("")

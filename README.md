@@ -1,19 +1,25 @@
-# Boardwire AI
+# Daybreak
 
-Boardwire AI is a CLI-first MVP for an autonomous AI news channel with safe defaults.
+Daybreak is an autonomous, constructive newsroom: it surfaces GOOD, well-reported
+news — progress, recovery and solutions that actually work — and publishes both
+short social posts and full long-form articles to its website. CLI-first MVP with
+safe defaults. (Technical identifiers still use the `BOARDWIRE_`/`boardwire-ai`
+prefix for continuity with existing automation and secrets.)
 
 ## Branded image cards
 
-Boardwire can generate square editorial image cards for review/publish flows.
+Daybreak can generate square editorial image cards for review/publish flows.
 
 Output path:
 - `generated/cards/<review_id>.png`
 
 Card style:
 - 1200x1200
-- black/white
-- minimal editorial layout
+- warm "daybreak" sunrise theme by default (light); `dark` and plain `light` also available
+- minimal editorial layout with a DAYBREAK wordmark
 - no external assets
+
+Theme is selectable via `BOARDWIRE_CARD_THEME` (`daybreak` default | `light` | `dark`).
 
 ### Setup (one-time)
 
@@ -81,7 +87,7 @@ Config (`.env`):
 
 ## Publishing platforms
 
-Boardwire publishes via pluggable backends selected with `BOARDWIRE_PUBLISHER`
+Daybreak publishes via pluggable backends selected with `BOARDWIRE_PUBLISHER`
 (or `--publisher`). Real publishing additionally requires
 `BOARDWIRE_REAL_PUBLISH_ENABLED=true` and the `--confirm-real-publish` flag.
 
@@ -109,7 +115,7 @@ BOARDWIRE_PUBLISHER=mastodon BOARDWIRE_REAL_PUBLISH_ENABLED=true \
 
 ## Markdown-Webartikel Export
 
-Boardwire kann Review-Items als komplette Markdown-Artikel exportieren, damit `boardwire-web` sie direkt lesen/rendern kann.
+Daybreak kann Review-Items als komplette Markdown-Artikel exportieren, damit die Website unter `web/` sie direkt lesen/rendern kann. Die Artikel werden von der Persona **Tiffany** (Senior Features Writer) als echte, konstruktiv-journalistische Langform geschrieben (500–900 Wörter).
 
 Output path:
 - `articles/*.md`
@@ -120,6 +126,41 @@ python -m src.main --export-web-articles
 ```
 
 Exportiert Items mit Status `pending_review`, `approved` und `published_dry_run`.
+
+### Dossier-gestützte Artikel (empfohlen)
+
+Wenn vorher die Newsroom-Deep-Research lief (`--newsroom-research`, siehe oben),
+liegen **Dossiers** in `data/dossiers/`. Der Export verknüpft jedes Review-Item
+über seinen Quell-Link automatisch mit dem passenden Dossier und schreibt den
+Artikel dann aus **verifizierten Fakten, Zahlen, Zitaten, Hintergrund und
+Claims mit Support-Level** statt aus der dünnen RSS-Zusammenfassung — sowohl im
+LLM-Pfad (Tiffany) als auch im LLM-freien Fallback. Empfohlener Ablauf:
+
+```bash
+BOARDWIRE_ENABLE_NEWSROOM=true python -m src.main --newsroom-research --llm-provider gemini
+python -m src.main --export-web-articles
+```
+
+### Front matter
+
+Jeder Artikel trägt publizierbares Front matter für die Website: `title`, `date`,
+`source`, `source_url`, `description` (SEO/Social-Preview), `beat`, `reading_time`
+und `hero_image`. Liegt ein Dossier vor, kommen `verified` (sind die Kernclaims
+mehrquellen-bestätigt?) und eine strukturierte `sources`-Liste dazu.
+
+`hero_image` wird mit der bereits gerenderten Editorial-Card des Items
+(`card_path`) gefüllt, sodass jeder Artikel ohne neue Infrastruktur ein Bild
+bekommt. Ist `BOARDWIRE_ARTICLE_IMAGE_BASE_URL` gesetzt, wird die Card als
+öffentliche absolute URL referenziert (für Frontends, die den Repo-Pfad nicht
+ausliefern). Ein dedizierter Wide-Hero-Generator (16:9/OG-Format) ist der
+nächste Ausbauschritt.
+
+### Config (`.env`)
+
+| Variable | Default | Purpose |
+|---|---|---|
+| `BOARDWIRE_TIFFANY_MODEL` | `gemini-2.5-flash` | Modell für die Langform-Artikel. Für hochwertigere Leitartikel auf ein stärkeres Modell zeigen lassen. |
+| `BOARDWIRE_TIFFANY_CALL_BUDGET` | `3` | Wie viele Artikel pro Lauf via LLM geschrieben werden (Rest nutzt den dossier-gestützten Fallback). |
 
 ## Dev-only testing commands
 
@@ -141,19 +182,19 @@ Notes:
 
 ## Review report
 
-Boardwire maintains:
+Daybreak maintains:
 - `reports/review_queue.md`
 
 It contains pending items only (newest first) and approve/reject commands.
 
 ## Deferred queue prioritization
 
-When daily cap blocks strong candidates, Boardwire stores them as `deferred_due_to_cap`.
+When daily cap blocks strong candidates, Daybreak stores them as `deferred_due_to_cap`.
 Deferred items are prioritized before fresh RSS items on the next run.
 
 ## Staying current & breaking-news burst
 
-Boardwire collects every 2 hours (`collect-llm.yml`) and publishes every 2 hours
+Daybreak collects every 2 hours (`collect-llm.yml`) and publishes every 2 hours
 (`publish-bluesky.yml`, offset by ~1h), so a fast-developing story is picked up
 and posted within hours instead of waiting for one of a few daily slots.
 
@@ -193,7 +234,7 @@ Config (`.env`):
 
 ## Virality model: learning from comparable channels
 
-Boardwire trains a small local model (`data/virality_model.json`) on the
+Daybreak trains a small local model (`data/virality_model.json`) on the
 engagement its own posts collect, used as a ranking signal for candidates. Early
 on we have too few posts for this to learn anything useful (cold start).
 
@@ -227,6 +268,41 @@ Config (`.env`):
 
 Pick channels in the **same topic area** as us — the model learns from their
 content, so off-topic accounts would pull it in the wrong direction.
+
+## Constructive editorial line (Good-News pivot)
+
+Daybreak's editorial direction is constructive journalism: prioritise GOOD,
+solution-oriented information and push doom, outrage and clickbait down — without
+ever sacrificing truth.
+
+When constructive mode is ON, the local newsworthiness ranking folds in a
+constructive signal: items about progress, recovery and working solutions get
+lifted, while overwhelmingly negative or clickbait items get buried. The signal
+is keyword-heuristic and fully tunable in `config/editorial.json` (term lists,
+weights, thresholds) — no code change needed.
+
+Master switch (`.env`):
+
+| Variable | Default | Purpose |
+|---|---|---|
+| `BOARDWIRE_CONSTRUCTIVE_MODE` | _(unset → config)_ | `true`/`false`. Overrides `constructive_mode` in `config/editorial.json`. Both default off; turn on once Good-News sources are in place. |
+
+The scoring layer (`src/editorial/constructive.py`) exposes
+`constructiveness_score()`, `is_doomscroll()` and `adjust_newsworthiness()` and
+is unit-tested independently of the pipeline.
+
+### Activating the Good-News pivot
+
+The pivot is staged so the live pipeline stays stable until you flip it. Good-News
+sources are present in `config/sources.json` but `enabled: false`, the constructive
+LLM board and ranking are gated, and `constructive_mode` defaults off. To go live:
+
+1. Set `BOARDWIRE_CONSTRUCTIVE_MODE=true` (or `constructive_mode: true` in `config/editorial.json`).
+2. Enable the good-news sources (`"lens": "good_news"`) in `config/sources.json`, and disable the AI/builder sources you no longer want.
+
+With the switch on, the editorial board, the ranking, the local newsworthiness
+score and Sarah's social-post voice all use the constructive line; with it off,
+behaviour is unchanged. (Tiffany's long-form articles are always constructive.)
 
 ## LLM providers
 

@@ -24,7 +24,7 @@ const REPO = "boardwire-ai";
 const PER_PAGE = 100;
 
 export const metadata: Metadata = {
-  title: "Boardwire Changelog",
+  title: "Daybreak Changelog",
   description: "Commit changelog for the boardwire-ai repository.",
 };
 
@@ -77,7 +77,7 @@ export default async function ChangelogPage({ searchParams }: ChangelogProps) {
       <header className={styles.topbar}>
         <div className={styles.topbarInner}>
           <Link href="/" className={styles.backLink}>
-            ← Back to Boardwire
+            ← Back to Daybreak
           </Link>
           <a
             href={`https://github.com/${OWNER}/${REPO}`}
@@ -92,7 +92,7 @@ export default async function ChangelogPage({ searchParams }: ChangelogProps) {
 
       <section className={styles.hero}>
         <p className={styles.eyebrow}>CHANGELOG</p>
-        <h1>Boardwire AI Commits</h1>
+        <h1>Daybreak Commits</h1>
         <p>
           Alle Commit-Nachrichten mit Datum aus dem Repository. Seite {page}
           {hasNextPage ? " (weitere vorhanden)" : ""}.

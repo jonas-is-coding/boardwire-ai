@@ -5,6 +5,7 @@ import re
 from datetime import datetime, timezone
 from pathlib import Path
 
+from src.config import DOSSIERS_DIR
 from src.storage.json_store import JsonStore
 from src.notifications import persona_voice as voice
 
@@ -47,34 +48,147 @@ def _clean_text(value: str | None) -> str:
     return text
 
 
-def _front_matter(item: dict) -> str:
-    """Publishable front matter for the static blog site."""
+# -- research dossiers -----------------------------------------------------
+
+
+def load_dossier_index(dossiers_dir: Path = DOSSIERS_DIR) -> dict[str, dict]:
+    """Index persisted research dossiers by every source URL they cover.
+
+    The newsroom reporter writes one dossier per researched story to
+    ``data/dossiers/<lead_id>.json``. A review item is matched to its dossier
+    by shared source link, so an article can be written from deep, verified
+    research instead of a thin RSS summary.
+    """
+    index: dict[str, dict] = {}
+    try:
+        paths = sorted(Path(dossiers_dir).glob("*.json"))
+    except (OSError, ValueError):
+        return index
+    for path in paths:
+        dossier = JsonStore.load(path, default=None)
+        if not isinstance(dossier, dict):
+            continue
+        urls = dossier.get("source_urls") or []
+        if not isinstance(urls, list):
+            continue
+        for url in urls:
+            key = str(url).strip()
+            if key and key not in index:
+                index[key] = dossier
+    return index
+
+
+def _dossier_for_item(item: dict, dossier_index: dict[str, dict]) -> dict | None:
+    if not dossier_index:
+        return None
+    link = str(item.get("source_item", {}).get("link", "")).strip()
+    if link and link in dossier_index:
+        return dossier_index[link]
+    return None
+
+
+# -- front matter ----------------------------------------------------------
+
+
+def _reading_time_minutes(body: str) -> int:
+    words = len(re.findall(r"\w+", body or ""))
+    return max(1, round(words / 220))
+
+
+def _meta_description(item: dict, dossier: dict | None) -> str:
+    """A short, plain-prose description for SEO and social previews."""
+    candidates = []
+    if dossier:
+        candidates.append(_clean_text(dossier.get("summary")))
+    source_item = item.get("source_item", {})
+    candidates.append(_clean_text(item.get("reason")))
+    candidates.append(_clean_text(source_item.get("summary")))
+    for text in candidates:
+        if text:
+            one_line = " ".join(text.split())
+            if len(one_line) > 200:
+                one_line = one_line[:197].rstrip() + "..."
+            return one_line
+    return ""
+
+
+def _yaml_escape(value: str) -> str:
+    return value.replace("\\", "\\\\").replace('"', '\\"')
+
+
+def _hero_image(item: dict) -> str:
+    """Hero image for the article.
+
+    Reuses the editorial card already rendered for the review item, so every
+    article ships with an image and no new infrastructure. If
+    ``BOARDWIRE_ARTICLE_IMAGE_BASE_URL`` is set the card is referenced as a
+    public absolute URL (the web frontend may not serve the repo path),
+    mirroring how the Instagram/Threads publishers resolve card URLs.
+    """
+    card_path = str(item.get("card_path") or "").strip()
+    if not card_path:
+        return ""
+    base = os.getenv("BOARDWIRE_ARTICLE_IMAGE_BASE_URL", "").strip()
+    if base:
+        return f"{base.rstrip('/')}/{Path(card_path).name}"
+    return card_path
+
+
+def _front_matter(item: dict, body: str, dossier: dict | None = None) -> str:
+    """Publishable front matter for the static news site.
+
+    Backward compatible: keeps the original title/date/source/source_url keys
+    and only *adds* fields the web frontend can progressively adopt
+    (description, beat, reading time, a hero-image slot, a verified flag and a
+    structured source list).
+    """
     source_item = item.get("source_item", {})
     title = str(source_item.get("title", "Untitled")).strip() or "Untitled"
     source = str(source_item.get("source", "Unknown Source")).strip() or "Unknown Source"
     link = str(source_item.get("link", "")).strip()
     date = _safe_iso_date(item.get("created_at"))
-
-    escaped_title = title.replace('"', '\\"')
+    description = _meta_description(item, dossier)
+    beat = str((dossier or {}).get("beat", "")).strip() or "news"
 
     lines = [
         "---",
-        f'title: "{escaped_title}"',
+        f'title: "{_yaml_escape(title)}"',
         f"date: {date}",
         f"source: {source}",
         f"source_url: {link or 'n/a'}",
-        "---",
-        "",
-        "",
+        f'description: "{_yaml_escape(description)}"',
+        f"beat: {beat}",
+        f"reading_time: {_reading_time_minutes(body)}",
+        f'hero_image: "{_yaml_escape(_hero_image(item))}"',
     ]
+
+    if dossier:
+        claims = dossier.get("claims") or []
+        verified = any(
+            isinstance(c, dict) and str(c.get("support", "")).strip().lower() == "verified"
+            for c in claims
+        )
+        lines.append(f"verified: {'true' if verified else 'false'}")
+        source_urls = [str(u).strip() for u in (dossier.get("source_urls") or []) if str(u).strip()]
+        if source_urls:
+            lines.append("sources:")
+            for url in source_urls[:10]:
+                lines.append(f'  - "{_yaml_escape(url)}"')
+
+    lines.extend(["---", "", ""])
     return "\n".join(lines)
 
 
-def _fallback_article_body(item: dict) -> str:
+# -- fallback article body (no LLM) ----------------------------------------
+
+
+def _fallback_article_body(item: dict, dossier: dict | None = None) -> str:
     """Best-effort readable article when no LLM draft is available.
 
-    This is a real blog post for a reader, not internal review documentation.
-    It only restates facts we actually have, woven into prose.
+    This is a real news piece for a reader, not internal review documentation.
+    It only restates facts we actually have. When a research dossier exists it
+    is woven into prose (summary, background, key facts, attributed claims and
+    the full source list); otherwise we fall back to the cleaned summary.
     """
     source_item = item.get("source_item", {})
     title = str(source_item.get("title", "Untitled")).strip() or "Untitled"
@@ -85,18 +199,74 @@ def _fallback_article_body(item: dict) -> str:
 
     paragraphs: list[str] = [f"# {title}", ""]
 
-    # Lead with the editorial angle when we have it; it reads more like prose
-    # than raw source metadata. Fall back to the cleaned source summary.
+    if dossier:
+        lede = _clean_text(dossier.get("summary")) or reason or summary
+        if lede:
+            paragraphs.extend([lede, ""])
+
+        background = _clean_text(dossier.get("background"))
+        if background and background.lower() not in lede.lower():
+            paragraphs.extend([background, ""])
+
+        key_facts = [str(f).strip() for f in (dossier.get("key_facts") or []) if str(f).strip()]
+        if key_facts:
+            paragraphs.append("Here is what the reporting establishes:")
+            paragraphs.append("")
+            paragraphs.extend(f"- {fact}" for fact in key_facts[:6])
+            paragraphs.append("")
+
+        claims = dossier.get("claims") or []
+        attributed = []
+        for raw in claims[:6]:
+            if not isinstance(raw, dict):
+                continue
+            text = str(raw.get("text", "")).strip()
+            if not text:
+                continue
+            support = str(raw.get("support", "unverified")).strip().lower()
+            if support == "verified":
+                attributed.append(f"- {text} (corroborated across multiple sources)")
+            elif support == "single_source":
+                attributed.append(f"- {text} (reported by a single source so far)")
+            else:
+                attributed.append(f"- {text} (unconfirmed)")
+        if attributed:
+            paragraphs.append("The key claims, with how well they are supported:")
+            paragraphs.append("")
+            paragraphs.extend(attributed)
+            paragraphs.append("")
+
+        open_questions = [str(q).strip() for q in (dossier.get("open_questions") or []) if str(q).strip()]
+        if open_questions:
+            joined = "; ".join(open_questions[:3])
+            tail = "" if joined.endswith((".", "?", "!")) else "."
+            paragraphs.append(
+                "Some things remain genuinely open, and it is worth being honest about them: "
+                + joined
+                + tail
+            )
+            paragraphs.append("")
+
+        source_urls = [str(u).strip() for u in (dossier.get("source_urls") or []) if str(u).strip()]
+        if source_urls or link:
+            paragraphs.extend(["## Sources", ""])
+            seen: set[str] = set()
+            for url in source_urls + ([link] if link else []):
+                if url and url not in seen:
+                    seen.add(url)
+                    paragraphs.append(f"- [{source}]({url})")
+            paragraphs.append("")
+        return "\n".join(paragraphs)
+
+    # No dossier: weave the cleaned source metadata into prose.
     lede = reason or summary
     if lede:
         paragraphs.extend([lede, ""])
 
-    # Add the remaining grounded context as a second paragraph if distinct.
     extra = summary if lede is reason else reason
     if extra and extra != lede and extra.lower() not in lede.lower():
         paragraphs.extend([extra, ""])
 
-    # Always give the reader the orientation of where this came from.
     paragraphs.extend(
         [
             f"This story surfaced via {source}. For the original details and any "
@@ -111,13 +281,22 @@ def _fallback_article_body(item: dict) -> str:
     return "\n".join(paragraphs)
 
 
-def _build_article_markdown(item: dict) -> str:
-    return _front_matter(item) + _fallback_article_body(item)
+def _build_article_markdown(item: dict, dossier: dict | None = None) -> str:
+    body = _fallback_article_body(item, dossier)
+    return _front_matter(item, body, dossier) + body
 
 
-def export_review_articles(review_queue_path: Path, output_dir: Path) -> int:
+# -- export ----------------------------------------------------------------
+
+
+def export_review_articles(
+    review_queue_path: Path,
+    output_dir: Path,
+    dossiers_dir: Path = DOSSIERS_DIR,
+) -> int:
     queue = JsonStore.load(review_queue_path, default=[])
     output_dir.mkdir(parents=True, exist_ok=True)
+    dossier_index = load_dossier_index(dossiers_dir)
 
     exportable = [
         item
@@ -138,26 +317,28 @@ def export_review_articles(review_queue_path: Path, output_dir: Path) -> int:
         date_prefix = _safe_iso_date(item.get("created_at"))
         filename = f"{date_prefix}-{_slugify(title)}-{item.get('id', 'item')}.md"
         target = output_dir / filename
-        source_item = item.get("source_item", {})
+        dossier = _dossier_for_item(item, dossier_index)
         ai_article = None
         if llm_calls < llm_budget:
             ai_article = voice.tiffany_write_article(
-            title=str(source_item.get("title", "Untitled")),
-            source=str(source_item.get("source", "Unknown Source")),
-            link=str(source_item.get("link", "")),
-            status=str(item.get("status", "unknown")),
-            score=int(item.get("score") or 0),
-            reason=str(item.get("reason", "")),
-            proposed_post=str(item.get("proposed_post", "")),
-            summary=str(source_item.get("summary", "")),
-            created_at=str(item.get("created_at", "")),
+                title=str(source_item.get("title", "Untitled")),
+                source=str(source_item.get("source", "Unknown Source")),
+                link=str(source_item.get("link", "")),
+                status=str(item.get("status", "unknown")),
+                score=int(item.get("score") or 0),
+                reason=str(item.get("reason", "")),
+                proposed_post=str(item.get("proposed_post", "")),
+                summary=str(source_item.get("summary", "")),
+                created_at=str(item.get("created_at", "")),
+                dossier=dossier,
             )
             llm_calls += 1
         if isinstance(ai_article, str) and ai_article.strip():
-            body = _front_matter(item) + ai_article.strip()
+            body = ai_article.strip()
+            full = _front_matter(item, body, dossier) + body
         else:
-            body = _build_article_markdown(item)
-        target.write_text(body + "\n", encoding="utf-8")
+            full = _build_article_markdown(item, dossier)
+        target.write_text(full + "\n", encoding="utf-8")
         written += 1
     return written
 

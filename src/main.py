@@ -928,7 +928,7 @@ def _run_newsroom_research(args, logger) -> int:
 
 
 def _build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Boardwire AI dry-run CLI")
+    parser = argparse.ArgumentParser(description="Daybreak dry-run CLI")
     parser.add_argument("--debug-sources", action="store_true", help="Only fetch sources and print per-source counts and newest titles.")
     parser.add_argument("--limit", type=int, default=MAX_ITEMS_PER_RUN, help=f"Limit total candidates to process (default: {MAX_ITEMS_PER_RUN}).")
     parser.add_argument("--llm", action="store_true", help="Force LLM mode if provider is configured.")
@@ -1392,29 +1392,29 @@ def _build_publish_caption(item: dict) -> str:
     title = str(source_item.get("title", "")).strip()
     lower = title.lower()
     core = "Check whether this changes measurable capability, reliability, or cost in real AI workloads."
-    tags = ["#AI", "#Boardwire"]
+    tags = ["#AI", "#Daybreak"]
 
     if any(k in lower for k in ("agent", "workflow", "tooling", "agentic")):
         core = "Agent reliability in production is still the hard part — check whether the evals reflect real task completion."
-        tags = ["#AIAgents", "#BuildersAI", "#Boardwire"]
+        tags = ["#AIAgents", "#BuildersAI", "#Daybreak"]
     elif any(k in lower for k in ("open source", "open-source", "open model", "open-weight", "weights")):
         core = "Open weights: you can inspect it, run it locally, and fine-tune — worth evaluating against your current stack."
-        tags = ["#OpenSource", "#LLM", "#Boardwire"]
+        tags = ["#OpenSource", "#LLM", "#Daybreak"]
     elif any(k in lower for k in ("benchmark", "evaluation", "leaderboard", " eval ")):
         core = "A benchmark only matters if the eval setup is public and the tasks map to something you need in production."
-        tags = ["#Benchmark", "#BuildersAI", "#Boardwire"]
+        tags = ["#Benchmark", "#BuildersAI", "#Daybreak"]
     elif any(k in lower for k in ("robot", "robotics")):
         core = "Robotics progress is meaningful when it holds outside curated demos — look for generalization results."
-        tags = ["#Robotics", "#AI", "#Boardwire"]
+        tags = ["#Robotics", "#AI", "#Daybreak"]
     elif any(k in lower for k in ("infra", "inference", "deployment", "serving", "latency")):
         core = "Inference improvements compound fast — check whether the numbers hold under sustained load, not just peak tests."
-        tags = ["#MLOps", "#Inference", "#Boardwire"]
+        tags = ["#MLOps", "#Inference", "#Daybreak"]
     elif any(k in lower for k in ("fine-tun", "training", "dataset")):
         core = "Training improvements matter most when they reduce cost or data requirements — see if the method is reproducible."
-        tags = ["#MLTraining", "#BuildersAI", "#Boardwire"]
+        tags = ["#MLTraining", "#BuildersAI", "#Daybreak"]
     elif any(k in lower for k in ("rag", "retrieval", "embedding")):
         core = "Retrieval quality is the bottleneck most RAG systems hit first — check recall on domain-specific data."
-        tags = ["#RAG", "#BuildersAI", "#Boardwire"]
+        tags = ["#RAG", "#BuildersAI", "#Daybreak"]
 
     tag_str = " ".join(tags)
     if title:
@@ -1452,12 +1452,12 @@ def _build_image_alt_text(item: dict) -> str:
     title = " ".join(str(source_item.get("title", "")).split()).strip()
     source = " ".join(str(source_item.get("source", "")).split()).strip()
     if title and source:
-        return f"Boardwire card: {title} ({source})"
+        return f"Daybreak card: {title} ({source})"
     if title:
-        return f"Boardwire card: {title}"
+        return f"Daybreak card: {title}"
     if source:
-        return f"Boardwire card from {source}"
-    return "Boardwire news card"
+        return f"Daybreak card from {source}"
+    return "Daybreak news card"
 
 
 def _publish_approved(args, logger) -> int:
@@ -2134,11 +2134,21 @@ def run(argv: list[str] | None = None) -> int:
         fresh_candidates = sorted(unseen_items, key=lambda x: x.published_at, reverse=True)
 
     # Local newsworthiness ranking (Gemini-independent) before any LLM ranking.
+    # When the constructive-journalism editorial line is on, fold the Good-News
+    # signal into the score so progress/solutions surface and doom/clickbait sinks.
+    from src.editorial import constructive as _constructive
+    _editorial_cfg = _constructive.load_editorial_config()
+    _constructive_on = _constructive.constructive_mode_enabled(_editorial_cfg)
+    if _constructive_on:
+        logger.info("Constructive editorial mode: ON")
     local_ranked_rows: list[tuple[FeedItem, int, list[str]]] = []
     for item in fresh_candidates:
         ctx = cluster_context_by_link.get(item.link)
         score = score_newsworthiness(item, cluster_context=ctx)
         reasons = _newsworthiness_reason_parts(item, cluster_context=ctx)
+        if _constructive_on:
+            score = _constructive.adjust_newsworthiness(score, item, _editorial_cfg)
+            reasons = reasons + _constructive.constructive_reason_parts(item, _editorial_cfg)
         local_ranked_rows.append((item, score, reasons))
     local_ranked_rows.sort(
         key=lambda row: (
@@ -2687,7 +2697,7 @@ def run(argv: list[str] | None = None) -> int:
         int(sarah_runtime.get("mistral_used", 0)),
         ",".join([str(x) for x in sarah_runtime.get("exhausted", [])]) if isinstance(sarah_runtime.get("exhausted"), list) else "",
     )
-    logger.info("Boardwire AI dry run complete")
+    logger.info("Daybreak dry run complete")
     logger.info("Sources loaded: %d", len(sources) if not args.use_fixtures else 0)
     logger.info("Fetched items: %d", len(all_items))
     logger.info("Unseen items: %d", len(unseen_items))

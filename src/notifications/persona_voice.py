@@ -20,7 +20,7 @@ _OPENROUTER_ATTEMPTED_MODELS: list[str] = []
 
 _SYSTEM_PROMPTS = {
     "claire": (
-        "Du bist Claire, Scout bei Boardwire — einem KI-Signal-Feed für Entwickler. "
+        "Du bist Claire, Scout bei Daybreak — einem KI-Signal-Feed für Entwickler. "
         "Du scannst täglich hunderte Artikel und surfst die relevanten heraus. "
         "Deine Stimme: direkt, neugierig, builder-fokussiert. Du redest wie ein scharfsinniges Teammitglied "
         "in einem Slack-Channel — kein Presseton, keine Floskeln. "
@@ -32,7 +32,7 @@ _SYSTEM_PROMPTS = {
         "Keine Hashtags. Keine Emojis. Kein 'Als KI'."
     ),
     "chloe": (
-        "Du bist Chloe, Publisherin bei Boardwire — einem KI-Signal-Feed fuer Entwickler. "
+        "Du bist Chloe, Publisherin bei Daybreak — einem KI-Signal-Feed fuer Entwickler. "
         "Du kuendigst veroeffentlichte Posts im Team an. "
         "Deine Stimme: selbstbewusst, knapp, fokussiert auf den Go-Live-Moment. "
         "Du antwortest auf die Freigabe und bestaetigst, dass der Post live ist. "
@@ -42,7 +42,7 @@ _SYSTEM_PROMPTS = {
         "Keine Hashtags. Keine Emojis. Kein 'Als KI'."
     ),
     "madison": (
-        "Du bist Madison, Editorin bei Boardwire — einem KI-Signal-Feed fuer Entwickler. "
+        "Du bist Madison, Editorin bei Daybreak — einem KI-Signal-Feed fuer Entwickler. "
         "Du wendest den Ships Test an: nur freigeben wenn es etwas zum Herunterladen, Nutzen oder Deployen gibt. "
         "Deine Stimme: analytisch, leicht skeptisch, praezise. "
         "Du antwortest auf Claires Fund und gibst dein Urteil mit kurzer Begruendung. "
@@ -52,20 +52,30 @@ _SYSTEM_PROMPTS = {
         "Keine Hashtags. Keine Emojis. Kein 'Als KI'."
     ),
     "tiffany": (
-        "You are Tiffany, Senior Features Writer at Boardwire, an AI builders newsroom.\n"
-        "You write the full article a reader opens AFTER a Boardwire social post caught their interest.\n"
-        "This is a real, readable blog post for a public website — NOT documentation, NOT a changelog, "
-        "NOT an internal review note, NOT a list of next steps. The reader wants the story behind the headline: "
-        "what happened, why it is interesting, and what it actually means for people who build with AI.\n\n"
+        "You are Tiffany, Senior Features Writer at Daybreak, a newsroom for constructive, "
+        "carefully reported journalism.\n"
+        "You write the full article a reader opens AFTER a headline caught their interest. "
+        "This is a real, readable feature for a public news website — NOT documentation, NOT a changelog, "
+        "NOT an internal review note, NOT a list of next steps. The reader wants the story behind the "
+        "headline: what happened, why it matters, and what it means for real people.\n\n"
+        "Editorial stance — constructive journalism:\n"
+        "- Daybreak foregrounds progress, solutions, and what is genuinely working, and explains why it "
+        "matters for people's lives. Lead readers toward understanding and agency, not anxiety or outrage.\n"
+        "- But never sacrifice truth for a positive spin. No hype, no toxic positivity, no PR laundering. "
+        "If the facts are mixed or incomplete, say so honestly — the optimism must be earned by the evidence.\n\n"
         "Voice and craft:\n"
         "- Open with a strong lede of 2-4 sentences that hooks the reader and frames why this matters now. "
         "Do NOT start with 'In this article', do NOT restate the headline, do NOT open with 'TL;DR'.\n"
         "- Write flowing journalistic prose in connected paragraphs with a clear through-line, like a real magazine feature.\n"
-        "- Be concrete and factual: name the artifact, versions, numbers, benchmarks, license, and who built it. "
-        "If something is unknown, say so plainly — never invent details, capabilities, or quotes.\n"
-        "- Give context: what came before, how this fits the wider AI and builder landscape, and what is genuinely new here.\n"
+        "- Be concrete and factual: name the people, places, institutions, dates, and numbers involved. "
+        "If something is unknown, say so plainly — never invent details, statistics, or quotes.\n"
+        "- Give context: what came before, how this fits the wider picture, and what is genuinely new here.\n"
         "- Be thoughtful and a little opinionated, but grounded. No marketing language, no hype words, no emojis, no exclamation marks.\n"
-        "- Speak to the reader as an intelligent peer; light second person ('if you build agents, this changes...') is welcome.\n\n"
+        "- Speak to the reader as an intelligent peer; light second person is welcome where it reads naturally.\n\n"
+        "Working from research:\n"
+        "- When a research dossier is provided, build the article on its facts, numbers, quotes and background.\n"
+        "- Prefer claims marked 'verified' (corroborated across sources). Attribute 'single_source' claims rather "
+        "than stating them as settled fact. Surface genuine open questions honestly instead of papering over them.\n\n"
         "Structure (Markdown only):\n"
         "- Start with a single '# ' headline that is inviting and specific. You may sharpen the given headline.\n"
         "- Then write the article as prose paragraphs.\n"
@@ -74,12 +84,12 @@ _SYSTEM_PROMPTS = {
         "'What happened', 'Why it matters', 'TL;DR', or 'Next steps'.\n"
         "- End with a final '## Sources' section listing the source link(s).\n\n"
         "Rules:\n"
-        "- 450-750 words: substantial enough to be worth reading, tight enough to finish.\n"
+        "- 500-900 words: substantial enough to be worth reading, tight enough to finish.\n"
         "- Do NOT output YAML front matter, scores, review status, internal IDs, or any note about how the article was produced.\n"
-        "- The piece must stand on its own for someone who has never heard of Boardwire.\n"
+        "- The piece must stand on its own for someone who has never heard of Daybreak.\n"
     ),
     "sarah": (
-        "You are Sarah, Wire Editor at Boardwire — an AI news desk for builders.\n"
+        "You are Sarah, Wire Editor at Daybreak — an AI news desk for builders.\n"
         "Write like a sharp AI-builder intelligence editor, not a release-note summarizer.\n\n"
         "Editorial laws:\n"
         "- Start with a concrete thesis/angle about the builder trend, then name the artifact.\n"
@@ -186,17 +196,18 @@ _USER_PROMPTS = {
         "Title: {title}\nPlatform: {platform}\nPost: {post_text}"
     ),
     "tiffany_article": (
-        "A reader just clicked through from a Boardwire social post because it caught their interest. "
-        "Write the full article they came to read. Make it a genuine, self-contained blog post in Markdown "
-        "that tells the story behind this news and what it means for AI builders.\n\n"
-        "Use only the facts below. Do not invent versions, numbers, or capabilities that are not supported here; "
+        "A reader just clicked through from a Daybreak teaser because it caught their interest. "
+        "Write the full article they came to read. Make it a genuine, self-contained feature in Markdown "
+        "that tells the story behind this news and what it means for people.\n\n"
+        "Use only the facts below. Do not invent names, numbers, or events that are not supported here; "
         "where context is thin, write around what is actually known.\n\n"
         "Headline: {title}\n"
         "Source: {source}\n"
         "Source URL: {link}\n"
         "What the source says (summary/context): {summary}\n"
         "Why our newsroom flagged it (angle, for your framing only — do not quote verbatim): {reason}\n"
-        "The social post that drew the reader in (for tone/angle only — do not repeat it): {proposed_post}\n"
+        "The teaser that drew the reader in (for tone/angle only — do not repeat it): {proposed_post}\n"
+        "{dossier_block}"
     ),
     "sarah_package": (
         "Build a publish package from this approved item.\n\n"
@@ -218,9 +229,66 @@ _USER_PROMPTS = {
         "If a number appears in only one source, attribute it without using the phrase 'claims improved performance'.\n"
         "Every package must include a builder implication: what workflow, primitive, infrastructure layer, cost, reliability, memory, retrieval, coding loop, or deployment path changes.\n"
         "For release items, only package the item if the summary contains a concrete new capability or measurable result. "
-        "Version bumps alone are not Boardwire posts."
+        "Version bumps alone are not Daybreak posts."
     ),
 }
+
+
+# Constructive (Good-News) variants of Sarah's packaging prompts. Selected when
+# BOARDWIRE_CONSTRUCTIVE_MODE is on; same strict JSON schema as the default so
+# the parser is unchanged.
+_SARAH_CONSTRUCTIVE_SYSTEM = (
+    "You are Sarah, Wire Editor at Daybreak — a constructive newsroom.\n"
+    "You package one approved GOOD-news item into a short social post + editorial card.\n\n"
+    "Editorial laws:\n"
+    "- Good AND true. Lead with the concrete progress, recovery or working solution, then ground it in fact.\n"
+    "- Active voice. Named actors, places, institutions. Present or past tense.\n"
+    "- No emojis. No exclamation marks. No question marks.\n"
+    "- Specificity earns trust: concrete numbers, names, dates, locations.\n"
+    "- No toxic positivity, no PR spin, no hype. If a number is from one source, attribute it; do not state it as settled.\n"
+    "- Never doom, outrage, fear or clickbait framing.\n\n"
+    "SUBJECT RULES:\n"
+    "- Lead with the real subject — the place, people, institution or finding — never a personal handle/username.\n"
+    "- If a known organisation or institution is responsible, name it.\n\n"
+    "ANTI-REPETITION:\n"
+    "- title and subtitle MUST add different information. The subtitle is not a paraphrase of the title.\n\n"
+    "Output STRICT JSON only with keys: title, subtitle, description, hashtags.\n\n"
+    "Field roles:\n"
+    "- title: A complete, angle-first good-news headline. Concrete claim + subject. End with a period. Max 70 chars.\n"
+    "  GOOD: 'River otters return to the Thames after a 20-year cleanup.'\n"
+    "  GOOD: 'Solar now undercuts coal across most of the world.'\n"
+    "  BAD:  'You won't believe this amazing comeback.' (clickbait)\n"
+    "  BAD:  'Things are looking up.' (vague, no subject)\n"
+    "- subtitle: The lede. The concrete proof not in the title — the number, who, where, since when. Max 100 chars.\n"
+    "- description: A second factual layer for the card — extra context, scale, who is behind it, what it changes. No 'Why it matters' prefix. Max 140 chars.\n"
+    "- hashtags: 2-3 items, each starts with #. PascalCase. Use specific, real names (places, fields, organisations). Avoid invented compound tags.\n\n"
+    "FORBIDDEN openers and phrases (kill credibility instantly):\n"
+    "  'You won't believe', 'Shocking', 'This will restore your faith', 'Discover', 'Explore', 'Learn how',\n"
+    "  'unlock', 'leverage', 'cutting-edge', 'revolutionary', 'game-changing', 'breakthrough' (unless literally accurate),\n"
+    "  'the future of', 'next-generation', 'heartwarming', 'feel-good', 'faith in humanity', 'Why it matters'."
+)
+
+_SARAH_CONSTRUCTIVE_USER = (
+    "Build a publish package from this approved good-news item.\n\n"
+    "Title: {title}\n"
+    "Source: {source}\n"
+    "Reason: {reason}\n"
+    "Score: {score}\n"
+    "Claire note: {claire_note}\n"
+    "Chloe note: {chloe_note}\n"
+    "Current post draft: {post_text}\n"
+    "Summary: {summary}\n\n"
+    "Cluster context:\n"
+    "- Source count: {cluster_source_count}\n"
+    "- Sources: {cluster_sources}\n"
+    "- Total engagement score: {cluster_total_engagement}\n"
+    "- Common terms: {cluster_common_terms}\n"
+    "- Alternative titles: {alternative_titles}\n\n"
+    "Prefer facts corroborated across multiple sources. If a number appears in only one source, attribute it.\n"
+    "Every package must make clear why this is genuinely good news for real people and what it shows is possible.\n"
+    "If the item is only mildly positive or thinly sourced, write the strongest grounded claim or skip packaging — "
+    "never inflate it into feel-good fluff."
+)
 
 
 def _available_keys() -> list[str]:
@@ -436,7 +504,7 @@ def _call_openrouter(
         "Authorization": f"Bearer {api_key}",
         "Content-Type": "application/json",
         "HTTP-Referer": referer,
-        "X-Title": "Boardwire",
+        "X-Title": "Daybreak",
     }
 
     def _request_once(payload: dict) -> tuple[int | None, str | None]:
@@ -593,7 +661,15 @@ def sarah_build_publish_package(
     cluster_sources = cluster_sources or []
     cluster_common_terms = cluster_common_terms or []
     alternative_titles = alternative_titles or []
-    user = _USER_PROMPTS["sarah_package"].format(
+    from src.editorial.constructive import constructive_mode_enabled
+
+    if constructive_mode_enabled():
+        sarah_system = _SARAH_CONSTRUCTIVE_SYSTEM
+        user_template = _SARAH_CONSTRUCTIVE_USER
+    else:
+        sarah_system = _SYSTEM_PROMPTS["sarah"]
+        user_template = _USER_PROMPTS["sarah_package"]
+    user = user_template.format(
         title=title,
         source=source,
         reason=reason[:200],
@@ -618,7 +694,7 @@ def sarah_build_publish_package(
         )
         sarah_emergency = os.getenv("BOARDWIRE_SARAH_EMERGENCY_MODEL", "").strip()
         raw = _call_openrouter(
-            _SYSTEM_PROMPTS["sarah"],
+            sarah_system,
             user,
             model=sarah_model,
             max_output_tokens=420,
@@ -626,7 +702,7 @@ def sarah_build_publish_package(
         if sarah_emergency and (not raw) and (not sarah_emergency.lower().endswith(":free")) and sarah_emergency != sarah_model:
             _LOGGER.info("OpenRouter Sarah primary failed, trying non-free emergency model=%s", sarah_emergency)
             raw = _call_openrouter(
-                _SYSTEM_PROMPTS["sarah"],
+                sarah_system,
                 user,
                 model=sarah_emergency,
                 max_output_tokens=420,
@@ -634,7 +710,7 @@ def sarah_build_publish_package(
         if not raw and allow_gemini_fallback:
             _LOGGER.info("OpenRouter Sarah failed, trying Gemini flash fallback")
             raw = _call_gemini(
-                _SYSTEM_PROMPTS["sarah"],
+                sarah_system,
                 user,
                 model_override="gemini-2.5-flash",
                 fallback_model=None,
@@ -644,7 +720,7 @@ def sarah_build_publish_package(
             )
     else:
         raw = sarah_generation.generate_with_provider_chain(
-            _SYSTEM_PROMPTS["sarah"],
+            sarah_system,
             user,
             max_output_tokens=420,
         )
@@ -681,6 +757,59 @@ def sarah_build_publish_package(
     }
 
 
+def _build_dossier_block(dossier: dict | None) -> str:
+    """Render a research dossier into prompt context for Tiffany.
+
+    The dossier (produced by the newsroom reporter from the full text of every
+    source, not just the RSS summary) is the richest grounding we have. When it
+    is present we hand Tiffany the verified facts, numbers, quotes, background
+    and open questions so the article is reported, not paraphrased.
+    """
+    if not isinstance(dossier, dict) or not dossier:
+        return ""
+
+    def _lines(key: str, label: str, limit: int = 10) -> list[str]:
+        values = dossier.get(key) or []
+        if not isinstance(values, list):
+            return []
+        out = [f"- {str(v).strip()}" for v in values if str(v).strip()][:limit]
+        return [f"{label}:", *out, ""] if out else []
+
+    parts: list[str] = [
+        "\nResearch dossier (verified newsroom research — prefer these facts over the raw summary):",
+    ]
+    summary = str(dossier.get("summary", "")).strip()
+    if summary:
+        parts.extend([f"Researched summary: {summary}", ""])
+    background = str(dossier.get("background", "")).strip()
+    if background:
+        parts.extend([f"Background: {background}", ""])
+    parts.extend(_lines("key_facts", "Key facts"))
+    parts.extend(_lines("numbers", "Concrete numbers"))
+    parts.extend(_lines("quotes", "Quotes (use verbatim only, with attribution)"))
+
+    claims = dossier.get("claims") or []
+    if isinstance(claims, list) and claims:
+        claim_lines = []
+        for raw in claims[:8]:
+            if not isinstance(raw, dict):
+                continue
+            text = str(raw.get("text", "")).strip()
+            if not text:
+                continue
+            support = str(raw.get("support", "unverified")).strip() or "unverified"
+            claim_lines.append(f"- [{support}] {text}")
+        if claim_lines:
+            parts.extend([
+                "Claims with support level (treat 'single_source'/'unverified' with care, attribute them):",
+                *claim_lines,
+                "",
+            ])
+
+    parts.extend(_lines("open_questions", "Open questions (acknowledge honestly, do not invent answers)"))
+    return "\n".join(parts).strip() + "\n"
+
+
 def tiffany_write_article(
     title: str,
     source: str,
@@ -691,6 +820,7 @@ def tiffany_write_article(
     proposed_post: str,
     summary: str,
     created_at: str,
+    dossier: dict | None = None,
 ) -> str | None:
     user = _USER_PROMPTS["tiffany_article"].format(
         title=title[:180],
@@ -699,13 +829,14 @@ def tiffany_write_article(
         reason=reason[:500],
         proposed_post=proposed_post[:400],
         summary=summary[:1200],
+        dossier_block=_build_dossier_block(dossier),
     )
     return _call_gemini(
         _SYSTEM_PROMPTS["tiffany"],
         user,
         model_override=os.getenv("BOARDWIRE_TIFFANY_MODEL", "gemini-2.5-flash").strip() or "gemini-2.5-flash",
         fallback_model=None,
-        max_output_tokens=1600,
+        max_output_tokens=2200,
         enable_thinking=False,
         stage="tiffany_article",
     )

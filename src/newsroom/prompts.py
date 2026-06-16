@@ -9,7 +9,7 @@ from __future__ import annotations
 
 import json
 
-REPORTER_SYSTEM_PROMPT = """You are a senior reporter at Boardwire, an AI news desk for builders.
+REPORTER_SYSTEM_PROMPT = """You are a senior reporter at Daybreak, an AI news desk for builders.
 
 You are handed ONE story (a cluster of articles from multiple sources about the
 same event) and the full text of those sources. Your job is to RESEARCH it the

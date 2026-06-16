@@ -1,10 +1,10 @@
-# Boardwire Web
+# Daybreak Web
 
 Marketing and changelog site for the open-source `boardwire-ai` pipeline
 
 ## Workflow shown on the site
 
-The website now documents the new Boardwire pipeline direction:
+The website now documents the Daybreak pipeline direction:
 
 1. Multi-source collection beyond plain RSS (18 RSS/Atom feeds + HN + GitHub Trending).
 2. Reputation tiers (Tier-1/2/3) per source instead of flat scoring.
