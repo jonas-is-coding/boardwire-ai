@@ -432,5 +432,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-16-show-hn-vet-turned-founder-ai-lawn-diagnosis-eb5fd58a8b4a.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mof6oyvq4c2t",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mof6oyvq4c2t"
+  },
+  {
+    "id": "6abd41311936",
+    "published_at": "2026-06-16T12:14:48.850276Z",
+    "platform": "bluesky",
+    "post": "Anthropic removes retired models from API.\n\nAnthropic Python SDK v0.109.2 enforces updates to supported models, with 1 source and 0 engagement.\n\nBuilders must refactor code to use current models, ensuring deployment reliability and up-to-date workflows.\n\n📖 Read the full article: ",
+    "source_link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.109.2",
+    "source_title": "Anthropic Python SDK v0.109.2",
+    "score": 90,
+    "reason": "Anthropic SDK update removes retired models, requiring immediate action for builders using them.",
+    "card_path": "generated/cards/6abd41311936.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-15-anthropic-python-sdk-v0-109-2-6abd41311936.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mofrm25t352f",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mofrm25t352f"
   }
 ]
