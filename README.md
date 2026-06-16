@@ -278,6 +278,18 @@ The scoring layer (`src/editorial/constructive.py`) exposes
 `constructiveness_score()`, `is_doomscroll()` and `adjust_newsworthiness()` and
 is unit-tested independently of the pipeline.
 
+### Activating the Good-News pivot
+
+The pivot is staged so the live pipeline stays stable until you flip it. Good-News
+sources are present in `config/sources.json` but `enabled: false`, the constructive
+LLM board and ranking are gated, and `constructive_mode` defaults off. To go live:
+
+1. Set `BOARDWIRE_CONSTRUCTIVE_MODE=true` (or `constructive_mode: true` in `config/editorial.json`).
+2. Enable the good-news sources (`"lens": "good_news"`) in `config/sources.json`, and disable the AI/builder sources you no longer want.
+
+With the switch on, the editorial board, the ranking and the local newsworthiness
+score all use the constructive line; with it off, behaviour is unchanged.
+
 ## LLM providers
 
 Supported providers:
