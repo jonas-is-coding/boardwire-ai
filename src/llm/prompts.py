@@ -4,7 +4,7 @@ import json
 
 from src.models import FeedItem
 
-SYSTEM_PROMPT = """You are the editorial board of Boardwire — an AI signal feed for builders.
+SYSTEM_PROMPT = """You are the editorial board of Daybreak — an AI signal feed for builders.
 
 Mission: surface AI news that a developer, researcher, or AI founder can act on TODAY.
 Voice: direct, specific, skeptical of hype. Never generic.
@@ -39,7 +39,7 @@ Return STRICT JSON only:
 """
 
 
-CONSTRUCTIVE_SYSTEM_PROMPT = """You are the editorial board of Boardwire — a constructive newsroom.
+CONSTRUCTIVE_SYSTEM_PROMPT = """You are the editorial board of Daybreak — a constructive newsroom.
 
 Mission: bring people GOOD, true, substantive information — stories of progress, recovery, and solutions that actually work — and keep doom, outrage and clickbait out of the feed.
 
@@ -73,7 +73,7 @@ Return STRICT JSON only:
 """
 
 
-CONSTRUCTIVE_RANKING_SYSTEM_PROMPT = """You are the editorial board of Boardwire ranking a pool of news candidates for a constructive newsroom.
+CONSTRUCTIVE_RANKING_SYSTEM_PROMPT = """You are the editorial board of Daybreak ranking a pool of news candidates for a constructive newsroom.
 
 Mission: pick the items that are the best GOOD, true, substantive news for ordinary people TODAY.
 
@@ -126,7 +126,7 @@ def build_user_prompt(item: FeedItem) -> str:
     )
 
 
-RANKING_SYSTEM_PROMPT = """You are the editorial board of Boardwire ranking a pool of AI news candidates.
+RANKING_SYSTEM_PROMPT = """You are the editorial board of Daybreak ranking a pool of AI news candidates.
 
 Mission: pick the items most worth posting TODAY for AI builders/developers.
 

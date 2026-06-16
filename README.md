@@ -1,10 +1,14 @@
-# Boardwire AI
+# Daybreak
 
-Boardwire AI is a CLI-first MVP for an autonomous AI news channel with safe defaults.
+Daybreak is an autonomous, constructive newsroom: it surfaces GOOD, well-reported
+news — progress, recovery and solutions that actually work — and publishes both
+short social posts and full long-form articles to its website. CLI-first MVP with
+safe defaults. (Technical identifiers still use the `BOARDWIRE_`/`boardwire-ai`
+prefix for continuity with existing automation and secrets.)
 
 ## Branded image cards
 
-Boardwire can generate square editorial image cards for review/publish flows.
+Daybreak can generate square editorial image cards for review/publish flows.
 
 Output path:
 - `generated/cards/<review_id>.png`
@@ -81,7 +85,7 @@ Config (`.env`):
 
 ## Publishing platforms
 
-Boardwire publishes via pluggable backends selected with `BOARDWIRE_PUBLISHER`
+Daybreak publishes via pluggable backends selected with `BOARDWIRE_PUBLISHER`
 (or `--publisher`). Real publishing additionally requires
 `BOARDWIRE_REAL_PUBLISH_ENABLED=true` and the `--confirm-real-publish` flag.
 
@@ -109,7 +113,7 @@ BOARDWIRE_PUBLISHER=mastodon BOARDWIRE_REAL_PUBLISH_ENABLED=true \
 
 ## Markdown-Webartikel Export
 
-Boardwire kann Review-Items als komplette Markdown-Artikel exportieren, damit `boardwire-web` sie direkt lesen/rendern kann. Die Artikel werden von der Persona **Tiffany** (Senior Features Writer) als echte, konstruktiv-journalistische Langform geschrieben (500–900 Wörter).
+Daybreak kann Review-Items als komplette Markdown-Artikel exportieren, damit die Website unter `web/` sie direkt lesen/rendern kann. Die Artikel werden von der Persona **Tiffany** (Senior Features Writer) als echte, konstruktiv-journalistische Langform geschrieben (500–900 Wörter).
 
 Output path:
 - `articles/*.md`
@@ -176,19 +180,19 @@ Notes:
 
 ## Review report
 
-Boardwire maintains:
+Daybreak maintains:
 - `reports/review_queue.md`
 
 It contains pending items only (newest first) and approve/reject commands.
 
 ## Deferred queue prioritization
 
-When daily cap blocks strong candidates, Boardwire stores them as `deferred_due_to_cap`.
+When daily cap blocks strong candidates, Daybreak stores them as `deferred_due_to_cap`.
 Deferred items are prioritized before fresh RSS items on the next run.
 
 ## Staying current & breaking-news burst
 
-Boardwire collects every 2 hours (`collect-llm.yml`) and publishes every 2 hours
+Daybreak collects every 2 hours (`collect-llm.yml`) and publishes every 2 hours
 (`publish-bluesky.yml`, offset by ~1h), so a fast-developing story is picked up
 and posted within hours instead of waiting for one of a few daily slots.
 
@@ -228,7 +232,7 @@ Config (`.env`):
 
 ## Virality model: learning from comparable channels
 
-Boardwire trains a small local model (`data/virality_model.json`) on the
+Daybreak trains a small local model (`data/virality_model.json`) on the
 engagement its own posts collect, used as a ranking signal for candidates. Early
 on we have too few posts for this to learn anything useful (cold start).
 
@@ -265,7 +269,7 @@ content, so off-topic accounts would pull it in the wrong direction.
 
 ## Constructive editorial line (Good-News pivot)
 
-Boardwire's editorial direction is constructive journalism: prioritise GOOD,
+Daybreak's editorial direction is constructive journalism: prioritise GOOD,
 solution-oriented information and push doom, outrage and clickbait down — without
 ever sacrificing truth.
 

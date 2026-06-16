@@ -80,7 +80,7 @@ def render_card_html(card: CardData) -> str:
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Boardwire</title>
+  <title>Daybreak</title>
   <style>
     :root {{
       --bg: {bg};

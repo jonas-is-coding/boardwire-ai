@@ -49,7 +49,7 @@ class MastodonPublisher:
                             f"{self.base_url}/api/v2/media",
                             headers=self._headers(),
                             files={"file": (path.name, fh, mime)},
-                            data={"description": (image_alt or "Boardwire news card")[:1500]},
+                            data={"description": (image_alt or "Daybreak news card")[:1500]},
                             timeout=60,
                         )
                 except OSError as exc:

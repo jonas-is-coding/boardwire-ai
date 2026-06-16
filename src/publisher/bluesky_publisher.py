@@ -162,7 +162,7 @@ class BlueskyPublisher:
                 "$type": "app.bsky.embed.images",
                 "images": [
                     {
-                        "alt": (image_alt or "Boardwire news card")[:1000],
+                        "alt": (image_alt or "Daybreak news card")[:1000],
                         "image": blob,
                     }
                 ],
