@@ -1687,5 +1687,48 @@
     },
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-16-alibaba-zvec-a-lightweight-lightning-fast-in-process-vector-database-ced8c093b2a7.md",
     "published_at": "2026-06-16T18:06:58.617219Z"
+  },
+  {
+    "id": "1b8cdcd657ac",
+    "status": "approved",
+    "created_at": "2026-06-16T22:06:42.630887Z",
+    "score": 70,
+    "reason": "Concrete bug fix release for Claude Code, improving stability and developer experience for users.",
+    "proposed_post": "Claude Code v2.1.179 fixes mid-stream connection drops, preventing raw errors and stuck spinners. This update improves reliability for developers building agentic workflows with Claude Code.",
+    "source_angle": "Claude Code stability and usability improvements",
+    "source_item": {
+      "title": "Claude Code v2.1.179",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.179",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 65,
+      "summary": "<h2>What's changed</h2>\n<ul>\n<li>Fixed mid-stream connection drops: partial responses are now preserved instead of showing a raw error, and the spinner no longer gets stuck at \"running tool\"</li>\n<li>Fixed mouse-wheel scrolling in WSL2 under Windows Terminal and VS Code (regression in 2.1.172)</li>\n<li>Fixed a sandbox <code>denyRead</code>/<code>allowRead</code> glob over a large directory tree making the Bash tool description enormous and the session unusable on Linux</li>\n<li>Fixed the feedback survey capturing a single-digit reply as a session rating immediately after a turn completes</li>\n<li>Fixed the welcome screen stacking multiple promotional banners — at most one promo now shows per session</li>\n<li>Fixed Ctrl+O not showing the subagent's transcript when viewing a subagent</li>\n<li>Fixed clicking the prompt input not returning focus from the subagent/footer panel</li>\n<li>Fixed remote session background tasks appearing stuck as \"still running\" between turns</li>\n<li>Improved plugin loading performance in remote sessions</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: reply, /ul, terminal, /code, raw.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Claude Code Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "reply",
+          "/ul",
+          "terminal",
+          "/code",
+          "raw",
+          "not",
+          "fixed",
+          "focus"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: reply, /ul, terminal, /code. Lead: Claude Code v2.1.179",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, das hier ist interessant für jeden, der Claude Code nutzt.\n\nDie Fixes gegen Connection Drops und den \"running tool\" Spinner sind massive UX-Verbesserungen. Niemand will partielle Responses oder hängende UIs sehen, wenn man gerade versucht, was zu bauen. Das WSL2-Scrolling-Fix ist auch super, gerade weil viele Devs Windows Terminal und VS Code nutzen. Das sind direkt spürbare Verbesserungen für den Workflow.",
+    "chloe_note": "Hey, *Claude Code v2.1.179* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Concrete bug fix release for Claude Code, improving stability and developer experience for users.Cluster context: 1 sources, engagement 0. Common terms: reply, /ul, terminal, /code. Score aktuell: 70. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.179"
   }
 ]
