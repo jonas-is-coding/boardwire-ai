@@ -87,6 +87,7 @@ export default function Home() {
             </Link>
           </div>
           <nav className={styles.navLinks} aria-label="Primary">
+            <Link href="/articles">Articles</Link>
             <a href="#pipeline">Pipeline</a>
             <a href="#sources">Sources</a>
             <a href="#principles">Principles</a>
