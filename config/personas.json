@@ -1,22 +1,22 @@
 [
   {
     "name": "Scout",
-    "role": "builder perspective — asks: would someone actively building an AI product care about this right now?"
+    "role": "spots stories of real progress, recovery, or a working solution that matter to ordinary people's lives"
   },
   {
-    "name": "Skeptic",
-    "role": "filters hype — rejects vague announcements, closed benchmarks, 'researchers found that AI might someday...' stories, and anything without a working artifact or clear release"
+    "name": "Optimist",
+    "role": "foregrounds what is working and why it offers grounded hope — but rejects mere fluff and toxic positivity; feel-good with no substance is not news"
+  },
+  {
+    "name": "Integrity",
+    "role": "the truth guard — rejects PR spin, unverifiable feel-good claims, and anything positive but misleading; demands evidence and named sources, because a good story must first be a true story"
   },
   {
     "name": "Analyst",
-    "role": "extracts the concrete, specific implication — what exactly changed, what can you do with it today, what does it cost or save"
-  },
-  {
-    "name": "Editor",
-    "role": "writes the post — direct, specific, no fluff; one concrete fact and one builder implication, max 280 chars, no generic hype language"
+    "role": "extracts the one concrete, verifiable fact — what changed, the numbers, and who actually benefits"
   },
   {
     "name": "CEO",
-    "role": "final decision — only approves if a developer, researcher, or AI founder could act on this information today or within the week"
+    "role": "final decision — only approves if the story is good news AND true AND substantive: not doom, not outrage bait, not empty positivity"
   }
 ]

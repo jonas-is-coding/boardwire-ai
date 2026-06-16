@@ -7,10 +7,10 @@ from dataclasses import dataclass
 import requests
 
 from src.llm.prompts import (
-    RANKING_SYSTEM_PROMPT,
-    SYSTEM_PROMPT,
     build_ranking_user_prompt,
     build_user_prompt,
+    get_ranking_system_prompt,
+    get_system_prompt,
 )
 from src.llm.schemas import LLMBoardResult, validate_llm_result
 from src.models import FeedItem
@@ -48,7 +48,7 @@ class OpenAIClient:
         body = {
             "model": self.model,
             "input": [
-                {"role": "system", "content": [{"type": "input_text", "text": SYSTEM_PROMPT}]},
+                {"role": "system", "content": [{"type": "input_text", "text": get_system_prompt()}]},
                 {"role": "user", "content": [{"type": "input_text", "text": build_user_prompt(item)}]},
             ],
             "text": {"format": {"type": "json_object"}},
@@ -136,7 +136,7 @@ class GeminiClient:
         raise LLMError("Gemini key rotation failed without response")
 
     def rank_candidates(self, items: list[FeedItem], top_k: int) -> list[dict]:
-        prompt = f"{RANKING_SYSTEM_PROMPT}\n\n{build_ranking_user_prompt(items, top_k)}"
+        prompt = f"{get_ranking_system_prompt()}\n\n{build_ranking_user_prompt(items, top_k)}"
         body = {
             "contents": [{"parts": [{"text": prompt}]}],
             "generationConfig": {
@@ -167,7 +167,7 @@ class GeminiClient:
         return ranked
 
     def evaluate_item(self, item: FeedItem) -> LLMBoardResult:
-        prompt = f"{SYSTEM_PROMPT}\n\n{build_user_prompt(item)}"
+        prompt = f"{get_system_prompt()}\n\n{build_user_prompt(item)}"
         body = {
             "contents": [{"parts": [{"text": prompt}]}],
             "generationConfig": {
