@@ -460,5 +460,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-16-alibaba-zvec-a-lightweight-lightning-fast-in-process-vector-database-ced8c093b2a7.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mogfbrpsoo2q",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mogfbrpsoo2q"
+  },
+  {
+    "id": "1b8cdcd657ac",
+    "published_at": "2026-06-17T06:19:27.354016Z",
+    "platform": "bluesky",
+    "post": "Claude Code v2.1.179 stabilizes agentic workflows in Windows and WSL2.\n\nFixes connection drops, stuck spinners, and WSL2 mouse-wheel scrolling with targeted patches.\n\nAnthropic resolves mid-stream connection drops that left partial responses and raw errors as well as a WSL2 scrol",
+    "source_link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.179",
+    "source_title": "Claude Code v2.1.179",
+    "score": 70,
+    "reason": "Concrete bug fix release for Claude Code, improving stability and developer experience for users.",
+    "card_path": "generated/cards/1b8cdcd657ac.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-16-claude-code-v2-1-179-1b8cdcd657ac.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3moho7ikgtx22",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3moho7ikgtx22"
   }
 ]

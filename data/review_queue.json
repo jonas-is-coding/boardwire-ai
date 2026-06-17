@@ -1690,11 +1690,11 @@
   },
   {
     "id": "1b8cdcd657ac",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-16T22:06:42.630887Z",
     "score": 70,
     "reason": "Concrete bug fix release for Claude Code, improving stability and developer experience for users.",
-    "proposed_post": "Claude Code v2.1.179 fixes mid-stream connection drops, preventing raw errors and stuck spinners. This update improves reliability for developers building agentic workflows with Claude Code.",
+    "proposed_post": "Claude Code v2.1.179 stabilizes agentic workflows in Windows and WSL2.\n\nFixes connection drops, stuck spinners, and WSL2 mouse-wheel scrolling with targeted patches.\n\nAnthropic resolves mid-stream connection drops that left partial responses and raw errors as well as a WSL2 scrol",
     "source_angle": "Claude Code stability and usability improvements",
     "source_item": {
       "title": "Claude Code v2.1.179",
@@ -1725,11 +1725,22 @@
         "cluster_score": 45
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/1b8cdcd657ac.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das hier ist interessant für jeden, der Claude Code nutzt.\n\nDie Fixes gegen Connection Drops und den \"running tool\" Spinner sind massive UX-Verbesserungen. Niemand will partielle Responses oder hängende UIs sehen, wenn man gerade versucht, was zu bauen. Das WSL2-Scrolling-Fix ist auch super, gerade weil viele Devs Windows Terminal und VS Code nutzen. Das sind direkt spürbare Verbesserungen für den Workflow.",
-    "chloe_note": "Hey, *Claude Code v2.1.179* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Concrete bug fix release for Claude Code, improving stability and developer experience for users.Cluster context: 1 sources, engagement 0. Common terms: reply, /ul, terminal, /code. Score aktuell: 70. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.179"
+    "chloe_note": "Hey, *Claude Code v2.1.179* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Concrete bug fix release for Claude Code, improving stability and developer experience for users.Cluster context: 1 sources, engagement 0. Common terms: reply, /ul, terminal, /code. Score aktuell: 70. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.179",
+    "sarah_package": {
+      "title": "Claude Code v2.1.179 stabilizes agentic workflows in Windows and WSL2.",
+      "subtitle": "Fixes connection drops, stuck spinners, and WSL2 mouse-wheel scrolling with targeted patches.",
+      "description": "Anthropic resolves mid-stream connection drops that left partial responses and raw errors as well as a WSL2 scrolling regression introduced ",
+      "hashtags": [
+        "#Anthropic",
+        "#ClaudeCode"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-16-claude-code-v2-1-179-1b8cdcd657ac.md",
+    "published_at": "2026-06-17T06:19:27.354016Z"
   },
   {
     "id": "de557a3a864d",
