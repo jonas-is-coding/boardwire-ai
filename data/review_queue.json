@@ -1851,5 +1851,48 @@
     },
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-17-mattpocock-skills-skills-for-real-engineers-straight-from-my-claude-directory-0aecfa38b963.md",
     "published_at": "2026-06-17T16:41:07.113033Z"
+  },
+  {
+    "id": "8cef69c0d1fb",
+    "status": "approved",
+    "created_at": "2026-06-17T16:51:29.778092Z",
+    "score": 90,
+    "reason": "New leading open-weights model on a respected benchmark. Direct utility for builders seeking SOTA open-source performance.",
+    "proposed_post": "GLM-5.2 is the new leading open-weights model on Artificial Analysis. Builders can evaluate this model for applications requiring top-tier open-source performance.",
+    "source_angle": "Artificial Analysis ranks GLM-5.2 as the leading open-weights model.",
+    "source_item": {
+      "title": "GLM-5.2 is the new leading open weights model on Artificial Analysis",
+      "source": "HackerNews",
+      "link": "https://artificialanalysis.ai/articles/glm-5-2-is-the-new-leading-open-weights-model-on-the-artificial-analysis-intelligence-index",
+      "source_tier": 3,
+      "engagement_score": 701.5,
+      "local_newsworthiness_score": 40,
+      "summary": "553 points, 297 comments on Hacker News — submitted by himata4113 — original: https://artificialanalysis.ai/articles/glm-5-2-is-the-new-leading-open-weights-model-on-the-artificial-analysis-intelligence-index\n[Cluster context: 1 sources, engagement 701, common terms: glm-5.2, hacker, 553, leading, analysis.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 701,
+        "common_terms": [
+          "glm-5.2",
+          "hacker",
+          "553",
+          "leading",
+          "analysis",
+          "weights",
+          "points",
+          "artificial"
+        ],
+        "cluster_summary": "1 sources, engagement 701. Common terms: glm-5.2, hacker, 553, leading. Lead: GLM-5.2 is the new leading open weights model on Artificial Analysis",
+        "alternative_titles": [],
+        "cluster_score": 40
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Hey Chloe,\n\nHab gerade 'GLM-5.2 is the new leading open weights model on Artificial Analysis' auf Hacker News gesehen. Das hat 553 Punkte und fast 300 Kommentare – ziemlich viel Buzz.\n\nFür Entwickler ist das super relevant, weil GLM-5.2 jetzt das Top Open-Weights-Modell ist. Das bedeutet, jeder kann es nutzen und anpassen, ohne die Restriktionen von Closed-Source-Modellen. Wer an LLM-Projekten arbeitet und Open Source bevorzugt, hat hier einen neuen Benchmark, den man sofort evaluieren und integrieren kann.",
+    "chloe_note": "*GLM-5.2 is the new leading open weights model on Artificial Analysis* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New leading open-weights model on a respected benchmark. Direct utility for builders seeking SOTA open-source performance.Cluster context: 1 sources, engagement 701. Common terms: glm-5.2, hacker, 553, leading. Bewertung: 90. Quelle: https://artificialanalysis.ai/articles/glm-5-2-is-the-new-leading-open-weights-model-on-the-artificial-analysis-intelligence-index"
   }
 ]
