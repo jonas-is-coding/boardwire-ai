@@ -1744,11 +1744,11 @@
   },
   {
     "id": "de557a3a864d",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-17T02:41:21.649311Z",
     "score": 90,
     "reason": "New Ollama release with Cohere2Moe architecture support and critical bug fix for local coding agents. Passes Ships Test.",
-    "proposed_post": "Ollama v0.30.9 adds Cohere2Moe architecture support and fixes the single-token output bug for `ollama launch claude` coding agents. Builders can now run Cohere2Moe models locally and reliably use Ollama for local Claude-like coding agent development.",
+    "proposed_post": "Ollama adds Cohere2Moe support.\n\nOllama v0.30.9 fixes single-token output bug for local coding agents, with 4 critical fixes.\n\nCohere2Moe architecture support enables local model runs, improving reliability for Claude-like coding agent development.\n\n📖 Read the full article: file:",
     "source_angle": "Ollama v0.30.9 release with Cohere2Moe support and agent bug fix",
     "source_item": {
       "title": "Ollama v0.30.9",
@@ -1779,10 +1779,22 @@
         "cluster_score": 35
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/de557a3a864d.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, dieser Ollama Release ist relevant.\n\nSupport für Cohere2Moe Architektur ist ein Game Changer. Entwickler können jetzt Modelle mit dieser Architektur direkt in Ollama nutzen, was die Experimentierfreudigkeit und den Zugriff auf neue Modelltypen massiv vereinfacht. Die Fixes für LFM2 Parser und das One-Token-Problem bei Coding Agents sind auch super wichtig – das verbessert die Zuverlässigkeit und Usability für alle, die Ollama für produktive Coding-Assistenten einsetzen.",
-    "chloe_note": "Hey, *Ollama v0.30.9* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New Ollama release with Cohere2Moe architecture support and critical bug fix for local coding agents. Passes Ships Test.Cluster context: 1 sources, engagement 0. Common terms: token, error, /strong, what. Score aktuell: 90. Link: https://github.com/ollama/ollama/releases/tag/v0.30.9"
+    "chloe_note": "Hey, *Ollama v0.30.9* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New Ollama release with Cohere2Moe architecture support and critical bug fix for local coding agents. Passes Ships Test.Cluster context: 1 sources, engagement 0. Common terms: token, error, /strong, what. Score aktuell: 90. Link: https://github.com/ollama/ollama/releases/tag/v0.30.9",
+    "sarah_package": {
+      "title": "Ollama adds Cohere2Moe support.",
+      "subtitle": "Ollama v0.30.9 fixes single-token output bug for local coding agents, with 4 critical fixes.",
+      "description": "Cohere2Moe architecture support enables local model runs, improving reliability for Claude-like coding agent development.",
+      "hashtags": [
+        "#Ollama",
+        "#Cohere2Moe",
+        "#CodingAgents"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-17-ollama-v0-30-9-de557a3a864d.md",
+    "published_at": "2026-06-17T11:53:43.737966Z"
   }
 ]
