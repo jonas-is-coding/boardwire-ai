@@ -1730,5 +1730,48 @@
     "breaking": false,
     "claire_note": "Chloe, das hier ist interessant für jeden, der Claude Code nutzt.\n\nDie Fixes gegen Connection Drops und den \"running tool\" Spinner sind massive UX-Verbesserungen. Niemand will partielle Responses oder hängende UIs sehen, wenn man gerade versucht, was zu bauen. Das WSL2-Scrolling-Fix ist auch super, gerade weil viele Devs Windows Terminal und VS Code nutzen. Das sind direkt spürbare Verbesserungen für den Workflow.",
     "chloe_note": "Hey, *Claude Code v2.1.179* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Concrete bug fix release for Claude Code, improving stability and developer experience for users.Cluster context: 1 sources, engagement 0. Common terms: reply, /ul, terminal, /code. Score aktuell: 70. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.179"
+  },
+  {
+    "id": "de557a3a864d",
+    "status": "approved",
+    "created_at": "2026-06-17T02:41:21.649311Z",
+    "score": 90,
+    "reason": "New Ollama release with Cohere2Moe architecture support and critical bug fix for local coding agents. Passes Ships Test.",
+    "proposed_post": "Ollama v0.30.9 adds Cohere2Moe architecture support and fixes the single-token output bug for `ollama launch claude` coding agents. Builders can now run Cohere2Moe models locally and reliably use Ollama for local Claude-like coding agent development.",
+    "source_angle": "Ollama v0.30.9 release with Cohere2Moe support and agent bug fix",
+    "source_item": {
+      "title": "Ollama v0.30.9",
+      "source": "Ollama Releases",
+      "link": "https://github.com/ollama/ollama/releases/tag/v0.30.9",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 40,
+      "summary": "<h2>What's Changed</h2>\n<ul>\n<li>Support for Cohere2Moe architecture</li>\n<li>Fixed LFM2 parser/render for cases where thinking was not emitted</li>\n<li>Fixed issue where <code>ollama launch claude</code> and other coding agent or assistant use cases would only output one token</li>\n<li>Ollama will now return an error if a single message is larger than the current context window</li>\n</ul>\n<p><strong>Full Changelog</strong>: <a class=\"commit-link\" href=\"https://github.com/ollama/ollama/compare/v0.30.8...v0.30.9-rc1\"><tt>v0.30.8...v0.30.9-rc1</tt></a></p>\n[Cluster context: 1 sources, engagement 0, common terms: token, error, /strong, what, /ul.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Ollama Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "token",
+          "error",
+          "/strong",
+          "what",
+          "/ul",
+          "/li",
+          "output",
+          "cases"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: token, error, /strong, what. Lead: Ollama v0.30.9",
+        "alternative_titles": [],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, dieser Ollama Release ist relevant.\n\nSupport für Cohere2Moe Architektur ist ein Game Changer. Entwickler können jetzt Modelle mit dieser Architektur direkt in Ollama nutzen, was die Experimentierfreudigkeit und den Zugriff auf neue Modelltypen massiv vereinfacht. Die Fixes für LFM2 Parser und das One-Token-Problem bei Coding Agents sind auch super wichtig – das verbessert die Zuverlässigkeit und Usability für alle, die Ollama für produktive Coding-Assistenten einsetzen.",
+    "chloe_note": "Hey, *Ollama v0.30.9* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New Ollama release with Cohere2Moe architecture support and critical bug fix for local coding agents. Passes Ships Test.Cluster context: 1 sources, engagement 0. Common terms: token, error, /strong, what. Score aktuell: 90. Link: https://github.com/ollama/ollama/releases/tag/v0.30.9"
   }
 ]
