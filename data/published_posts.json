@@ -502,5 +502,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-17-mattpocock-skills-skills-for-real-engineers-straight-from-my-claude-directory-0aecfa38b963.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3moiqx4ud5c2v",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3moiqx4ud5c2v"
+  },
+  {
+    "id": "8cef69c0d1fb",
+    "published_at": "2026-06-17T22:47:41.709070Z",
+    "platform": "bluesky",
+    "post": "Open-source LLMs get a new leader.\n\nGLM-5.2 tops Artificial Analysis benchmarks with open weights, 553 points on Hacker News.\n\nGLM-5.2 beats prior models on the Artificial Analysis intelligence index, offering direct utility for builders seeking state-of-the-art open\n\n📖 Read the ",
+    "source_link": "https://artificialanalysis.ai/articles/glm-5-2-is-the-new-leading-open-weights-model-on-the-artificial-analysis-intelligence-index",
+    "source_title": "GLM-5.2 is the new leading open weights model on Artificial Analysis",
+    "score": 90,
+    "reason": "New leading open-weights model on a respected benchmark. Direct utility for builders seeking SOTA open-source performance.",
+    "card_path": "generated/cards/8cef69c0d1fb.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-17-glm-5-2-is-the-new-leading-open-weights-model-on-artificial-analysis-8cef69c0d1fb.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mojfgm7btm26",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mojfgm7btm26"
   }
 ]
