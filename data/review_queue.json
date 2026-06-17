@@ -1799,11 +1799,11 @@
   },
   {
     "id": "0aecfa38b963",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-17T13:37:13.105903Z",
     "score": 95,
     "reason": "GitHub repo of Claude skills/prompts released. Directly actionable for builders using Claude.",
-    "proposed_post": "Matt Pocock released `mattpocock/skills`, a GitHub repo of prompt engineering techniques and tools for Claude. Builders can integrate these directly into their Claude workflows to improve agent performance or streamline tasks.",
+    "proposed_post": "Claude skills become open infrastructure.\n\nmattpocock/skills adds 1849 stars with prompt engineering techniques for real engineers.\n\nDirectly actionable for builders using Claude, integrating these skills into workflows improves agent performance.\n\n📖 Read the full article: file:/",
     "source_angle": "GitHub Trending: Matt Pocock's Claude skills repo",
     "source_item": {
       "title": "mattpocock/skills — Skills for Real Engineers. Straight from my .claude directory.",
@@ -1834,10 +1834,22 @@
         "cluster_score": 35
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/0aecfa38b963.png",
     "is_llm_mode": true,
     "breaking": true,
     "claire_note": "Hey Chloe,\n\nHab mir \"mattpocock/skills\" auf GitHub Trending angeschaut. Der Typ hat seine .claude-Prompts für \"Real Engineers\" geteilt – das ist super wertvoll für jeden, der mit LLMs produktiv sein will. Entwickler können sich hier direkt gute Prompt-Strategien abgucken, um ihre eigenen Use Cases zu verbessern oder schneller Prototypen zu bauen. Das spart Zeit und liefert bessere Ergebnisse, wenn man mit Claude oder ähnlichen Modellen arbeitet.",
-    "chloe_note": "Kurzes Update: *mattpocock/skills — Skills for Real Engineers. Straight from my .claude directory.* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um GitHub repo of Claude skills/prompts released. Directly actionable for builders using Claude.Cluster context: 1 sources, engagement 1849. Common terms: github, stars., engineers., skills. Ich habe es mit 95 Punkten bewertet. Hier der Link: https://github.com/mattpocock/skills"
+    "chloe_note": "Kurzes Update: *mattpocock/skills — Skills for Real Engineers. Straight from my .claude directory.* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um GitHub repo of Claude skills/prompts released. Directly actionable for builders using Claude.Cluster context: 1 sources, engagement 1849. Common terms: github, stars., engineers., skills. Ich habe es mit 95 Punkten bewertet. Hier der Link: https://github.com/mattpocock/skills",
+    "sarah_package": {
+      "title": "Claude skills become open infrastructure.",
+      "subtitle": "mattpocock/skills adds 1849 stars with prompt engineering techniques for real engineers.",
+      "description": "Directly actionable for builders using Claude, integrating these skills into workflows improves agent performance.",
+      "hashtags": [
+        "#Claude",
+        "#PromptEngineering",
+        "#GitHub"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-17-mattpocock-skills-skills-for-real-engineers-straight-from-my-claude-directory-0aecfa38b963.md",
+    "published_at": "2026-06-17T16:41:07.113033Z"
   }
 ]
