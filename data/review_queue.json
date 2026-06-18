@@ -2074,11 +2074,11 @@
   },
   {
     "id": "9da805f543df",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-18T16:51:18.775180Z",
     "score": 85,
     "reason": "Migration guide for a specific agent implies a concrete, usable alternative is available now.",
-    "proposed_post": "Nous Research released a migration guide from OpenClaw to their Hermes Agent. Builders using OpenClaw can now evaluate Hermes Agent as a documented alternative for their projects.",
+    "proposed_post": "Hermes Agent replaces OpenClaw.\n\nNousResearch migration guide has 58 comments and 85 points on HackerNews.\n\nNousResearch released a migration guide from OpenClaw to Hermes Agent, providing a documented alternative for builders.\n\n📖 Read the full article: file:///home/runner/work/b",
     "source_angle": "Hacker News discussion on migrating between AI agents/platforms.",
     "source_item": {
       "title": "Migrate from OpenClaw",
@@ -2109,10 +2109,22 @@
         "cluster_score": 10
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/9da805f543df.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, schau dir das an: \"Migrate from OpenClaw\" auf Hacker News. 85 Punkte, 58 Kommentare – das ist ein klares Signal.\n\nNousResearch hat da einen Guide veröffentlicht, wie man von OpenClaw migriert. Für Entwickler, die noch auf der Plattform sitzen, ist das super relevant. Das zeigt, dass OpenClaw anscheinend nicht mehr die erste Wahl ist und es Alternativen gibt, die jetzt aktiver gepflegt werden. Ein Builder kann hier direkt sehen, welche Schritte er unternehmen muss, um seine Projekte auf eine zukunftsfähigere Basis zu stellen. Das spart Zeit und vermeidet Abhängigkeiten.",
-    "chloe_note": "Kurzes Update: *Migrate from OpenClaw* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Migration guide for a specific agent implies a concrete, usable alternative is available now.Cluster context: 1 sources, engagement 101. Common terms: points, hacker, submitted, original. Ich habe es mit 85 Punkten bewertet. Hier der Link: https://hermes-agent.nousresearch.com/docs/guides/migrate-from-openclaw"
+    "chloe_note": "Kurzes Update: *Migrate from OpenClaw* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Migration guide for a specific agent implies a concrete, usable alternative is available now.Cluster context: 1 sources, engagement 101. Common terms: points, hacker, submitted, original. Ich habe es mit 85 Punkten bewertet. Hier der Link: https://hermes-agent.nousresearch.com/docs/guides/migrate-from-openclaw",
+    "sarah_package": {
+      "title": "Hermes Agent replaces OpenClaw.",
+      "subtitle": "NousResearch migration guide has 58 comments and 85 points on HackerNews.",
+      "description": "NousResearch released a migration guide from OpenClaw to Hermes Agent, providing a documented alternative for builders.",
+      "hashtags": [
+        "#HermesAgent",
+        "#OpenClaw",
+        "#NousResearch"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-18-migrate-from-openclaw-9da805f543df.md",
+    "published_at": "2026-06-18T19:33:48.693604Z"
   }
 ]

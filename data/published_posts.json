@@ -558,5 +558,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-18-kilo-org-kilocode-kilo-is-the-all-in-one-agentic-engineering-platform-build-ship-and-iterate-faster-with-the-most-popular-open-source-coding-agent-d20df1754383.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3molba6hnl42a",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3molba6hnl42a"
+  },
+  {
+    "id": "9da805f543df",
+    "published_at": "2026-06-18T19:33:48.693604Z",
+    "platform": "bluesky",
+    "post": "Hermes Agent replaces OpenClaw.\n\nNousResearch migration guide has 58 comments and 85 points on HackerNews.\n\nNousResearch released a migration guide from OpenClaw to Hermes Agent, providing a documented alternative for builders.\n\n📖 Read the full article: file:///home/runner/work/b",
+    "source_link": "https://hermes-agent.nousresearch.com/docs/guides/migrate-from-openclaw",
+    "source_title": "Migrate from OpenClaw",
+    "score": 85,
+    "reason": "Migration guide for a specific agent implies a concrete, usable alternative is available now.",
+    "card_path": "generated/cards/9da805f543df.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-18-migrate-from-openclaw-9da805f543df.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3moll2tvpjk2v",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3moll2tvpjk2v"
   }
 ]
