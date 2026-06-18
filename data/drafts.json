@@ -7222,5 +7222,61 @@
     "engagement_score": 256.5,
     "local_newsworthiness_score": 10,
     "created_at": "2026-06-17T23:27:36.057617Z"
+  },
+  {
+    "title": "Simon Willison v4.1",
+    "link": "https://simonwillison.net/2026/Jun/17/glm-52/#atom-entries",
+    "source": "Simon Willison",
+    "score": 95,
+    "should_post": true,
+    "reason": "Open weights (MIT license) for a 753B MoE model with 1M context window released. Directly actionable for builders.",
+    "post_text": "Z.ai released GLM-5.2, a 753B MoE model with a 1M token context window, under an MIT license. Builders can now download the 1.51TB open weights from HuggingFace to deploy for long-context applications.",
+    "source_angle": "Z.ai releases GLM-5.2 open weights with 1M token context",
+    "source_tier": 2,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-18T02:38:20.756202Z"
+  },
+  {
+    "title": "Midjourney Medical",
+    "link": "https://www.midjourney.com/medical",
+    "source": "HackerNews",
+    "score": 1,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 88.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-18T02:38:21.803162Z"
+  },
+  {
+    "title": "Midjourney Full Body Ultrasonic CT Scanner",
+    "link": "https://www.midjourney.com/medical/blogpost",
+    "source": "HackerNews",
+    "score": 1,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 48.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-18T02:38:21.803369Z"
+  },
+  {
+    "title": "ChatGPT Spontaneously Generates Sexual Violence and Hardcore Snuff Imagery",
+    "link": "https://mindgard.ai/blog/chatgpt-spontaneously-generated-violent-images-from-a-viral-prompt",
+    "source": "HackerNews",
+    "score": 2,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 89.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-18T02:38:21.803642Z"
   }
 ]
