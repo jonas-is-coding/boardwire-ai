@@ -2129,11 +2129,11 @@
   },
   {
     "id": "007a170d4562",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-18T20:11:13.842737Z",
     "score": 85,
     "reason": "New SDK version with concrete feature for observability of model refusal handling. Ships today.",
-    "proposed_post": "Anthropic Python SDK v0.111.0 adds refusal-fallback middleware request tagging. This allows developers to track and analyze requests handled by fallback logic, improving observability for model refusal strategies.",
+    "proposed_post": "Anthropic models get refusal handling observability.\n\nAnthropic Python SDK v0.111.0 adds fallback middleware request tagging, with 1 source and 85 score.\n\nDevelopers can now track and analyze requests handled by fallback logic, improving model refusal strategy observability, via ",
     "source_angle": "Anthropic Python SDK update for refusal handling observability",
     "source_item": {
       "title": "Anthropic Python SDK v0.111.0",
@@ -2166,10 +2166,22 @@
         "cluster_score": 45
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/007a170d4562.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das Anthropic Python SDK Update ist relevant. Die neue Version taggt Refusal-Fallback-Middleware-Requests. Das ist wichtig für Entwickler, die mit Anthropic-Modellen arbeiten, um Fallbacks besser zu debuggen und zu verstehen, wann und warum ein Modell eine Anfrage ablehnt. Direkt nutzbar für zuverlässigere KI-Integrationen.",
-    "chloe_note": "Kurzes Update: *Anthropic Python SDK v0.111.0* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um New SDK version with concrete feature for observability of model refusal handling. Ships today.Cluster context: 1 sources, engagement 0. Common terms: /ul, features, sdk, changelog. Ich habe es mit 85 Punkten bewertet. Hier der Link: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.111.0"
+    "chloe_note": "Kurzes Update: *Anthropic Python SDK v0.111.0* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um New SDK version with concrete feature for observability of model refusal handling. Ships today.Cluster context: 1 sources, engagement 0. Common terms: /ul, features, sdk, changelog. Ich habe es mit 85 Punkten bewertet. Hier der Link: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.111.0",
+    "sarah_package": {
+      "title": "Anthropic models get refusal handling observability.",
+      "subtitle": "Anthropic Python SDK v0.111.0 adds fallback middleware request tagging, with 1 source and 85 score.",
+      "description": "Developers can now track and analyze requests handled by fallback logic, improving model refusal strategy observability, via the updated SDK",
+      "hashtags": [
+        "#Anthropic",
+        "#ModelRefusalHandling",
+        "#PythonSDK"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-18-anthropic-python-sdk-v0-111-0-007a170d4562.md",
+    "published_at": "2026-06-18T22:58:27.839963Z"
   }
 ]
