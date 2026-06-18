@@ -1952,11 +1952,11 @@
   },
   {
     "id": "e3e8addf2317",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-18T02:38:20.756202Z",
     "score": 95,
     "reason": "Open weights (MIT license) for a 753B MoE model with 1M context window released. Directly actionable for builders.",
-    "proposed_post": "Z.ai released GLM-5.2, a 753B MoE model with a 1M token context window, under an MIT license. Builders can now download the 1.51TB open weights from HuggingFace to deploy for long-context applications.",
+    "proposed_post": "Z.ai releases 753B MoE model.\n\nGLM-5.2 with 1M context window under MIT license, 1.51TB open weights on HuggingFace.\n\nMIT-licensed GLM-5.2 model is a 753B parameter text input model with 40 active parameters, available for long-context applications.\n\n📖 Read the full article: file",
     "source_angle": "Z.ai releases GLM-5.2 open weights with 1M token context",
     "source_item": {
       "title": "Simon Willison v4.1",
@@ -1987,10 +1987,22 @@
         "cluster_score": 35
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/e3e8addf2317.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das hier ist ein Treffer. Z.ai hat GLM-5.2 mit MIT-Lizenz veröffentlicht. Das ist ein großer Deal für jeden, der eigene Modelle hosten oder anpassen will, ohne sich an die üblichen Player zu binden. Entwickler können jetzt mit einem starken, Open-Source-Modell experimentieren und es direkt in ihre Projekte integrieren.",
-    "chloe_note": "*Simon Willison v4.1* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Open weights (MIT license) for a 753B MoE model with 1M context window released. Directly actionable for builders.Cluster context: 1 sources, engagement 0. Common terms: respected, riding, take, uses. Bewertung: 95. Quelle: https://simonwillison.net/2026/Jun/17/glm-52/#atom-entries"
+    "chloe_note": "*Simon Willison v4.1* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Open weights (MIT license) for a 753B MoE model with 1M context window released. Directly actionable for builders.Cluster context: 1 sources, engagement 0. Common terms: respected, riding, take, uses. Bewertung: 95. Quelle: https://simonwillison.net/2026/Jun/17/glm-52/#atom-entries",
+    "sarah_package": {
+      "title": "Z.ai releases 753B MoE model.",
+      "subtitle": "GLM-5.2 with 1M context window under MIT license, 1.51TB open weights on HuggingFace.",
+      "description": "MIT-licensed GLM-5.2 model is a 753B parameter text input model with 40 active parameters, available for long-context applications.",
+      "hashtags": [
+        "#Zai",
+        "#GLM52",
+        "#MoeModel"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-18-simon-willison-v4-1-e3e8addf2317.md",
+    "published_at": "2026-06-18T05:59:09.458170Z"
   }
 ]
