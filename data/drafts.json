@@ -7614,5 +7614,61 @@
     "engagement_score": 46.5,
     "local_newsworthiness_score": 0,
     "created_at": "2026-06-18T20:11:14.861808Z"
+  },
+  {
+    "title": "Anthropic Python SDK v0.110.0",
+    "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.110.0",
+    "source": "Anthropic Python SDK Releases",
+    "score": 95,
+    "should_post": true,
+    "reason": "Anthropic SDK update adds support for a new code execution tool, enabling direct integration for builders.",
+    "post_text": "Anthropic's Python SDK v0.110.0 adds support for the new `code_execution_20260120` tool. Builders can now integrate Claude's code execution capabilities directly into agents, improving reasoning and complex task automation.",
+    "source_angle": "Anthropic Python SDK adds code execution tool support.",
+    "source_tier": 1,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 35,
+    "created_at": "2026-06-18T23:29:06.437869Z"
+  },
+  {
+    "title": "LangChain v1.4.8",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.4.8",
+    "source": "LangChain Releases",
+    "score": 10,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 2,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 35,
+    "created_at": "2026-06-18T23:29:07.396129Z"
+  },
+  {
+    "title": "MosaicLeaks: Can your research agent keep a secret?",
+    "link": "https://huggingface.co/blog/ServiceNow/mosaicleaks",
+    "source": "Hugging Face Blog",
+    "score": 6,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 2,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-06-18T23:29:07.396362Z"
+  },
+  {
+    "title": "The Korean telecom giant at the center of Anthropic's Mythos controversy",
+    "link": "https://www.wired.com/story/sk-telecom-anthropic-mythos-export-controls/",
+    "source": "HackerNews",
+    "score": 2,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 101.5,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-06-18T23:29:07.396563Z"
   }
 ]

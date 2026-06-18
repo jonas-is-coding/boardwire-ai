@@ -2183,5 +2183,48 @@
     },
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-18-anthropic-python-sdk-v0-111-0-007a170d4562.md",
     "published_at": "2026-06-18T22:58:27.839963Z"
+  },
+  {
+    "id": "4f91248a74e0",
+    "status": "approved",
+    "created_at": "2026-06-18T23:29:06.437869Z",
+    "score": 95,
+    "reason": "Anthropic SDK update adds support for a new code execution tool, enabling direct integration for builders.",
+    "proposed_post": "Anthropic's Python SDK v0.110.0 adds support for the new `code_execution_20260120` tool. Builders can now integrate Claude's code execution capabilities directly into agents, improving reasoning and complex task automation.",
+    "source_angle": "Anthropic Python SDK adds code execution tool support.",
+    "source_item": {
+      "title": "Anthropic Python SDK v0.110.0",
+      "source": "Anthropic Python SDK Releases",
+      "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.110.0",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 35,
+      "summary": "<h2>0.110.0 (2026-06-18)</h2>\n<p>Full Changelog: <a href=\"https://github.com/anthropics/anthropic-sdk-python/compare/v0.109.2...v0.110.0\">v0.109.2...v0.110.0</a></p>\n<h3>Features</h3>\n<ul>\n<li><strong>api:</strong> add support for new code_execution_20260120 tool (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/5e23212dc0883174c879b97ef8e7e33ead4e8da5\">5e23212</a>)</li>\n</ul>\n<h3>Bug Fixes</h3>\n<ul>\n<li>append x-stainless-helper across header merges instead of clobbering (<a href=\"https://github.com/anthropics/anthropic-sdk-python/issues/105\">#105</a>) (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/922558e2ce52e18863dab27bcc04067068827364\">922558e</a>)</li>\n<li><strong>bedrock:</strong> preserve stream event type (<a href=\"https://github.com/anthropics/anthropic-sdk-python/issues/1682\">#1682</a>) (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/b27e3439699174dbc41e34e2d6ef5cb1e2930c18\">b27e343</a>)</li>\n<li><strong>helpers:</strong> single source of truth for x-stainless-helper key + closed value vocabulary (<a href=\"https://github.com/anthropics/anthropic-sdk-python/issues/95\">#95</a>) (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/e6f7a56bb624f4c946cb15ba7973fd6fe052e10f\">e6f7a56</a>)</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: merges, 20260120, preserve, bedrock, truth.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Anthropic Python SDK Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "merges",
+          "20260120",
+          "preserve",
+          "bedrock",
+          "truth",
+          "instead",
+          "type",
+          "clobbering"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: merges, 20260120, preserve, bedrock. Lead: Anthropic Python SDK v0.110.0",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, schau dir das an: Anthropic Python SDK v0.110.0 ist draußen. Die neue 'code_execution_20260120' Tool-Unterstützung ist der Knackpunkt. Entwickler können damit jetzt direkt in ihre Anwendungen Code-Ausführung integrieren – das öffnet Türen für smartere Agenten und automatisierte Workflows mit Claude.",
+    "chloe_note": "Hey, *Anthropic Python SDK v0.110.0* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Anthropic SDK update adds support for a new code execution tool, enabling direct integration for builders.Cluster context: 1 sources, engagement 0. Common terms: merges, 20260120, preserve, bedrock. Score aktuell: 95. Link: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.110.0"
   }
 ]
