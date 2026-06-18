@@ -530,5 +530,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-18-simon-willison-v4-1-e3e8addf2317.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mok5k3jal72x",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mok5k3jal72x"
+  },
+  {
+    "id": "92ae50d0c07c",
+    "published_at": "2026-06-18T11:11:50.918099Z",
+    "platform": "bluesky",
+    "post": "Claude Code adds dynamic config control.\n\nv2.1.181 introduces /config key=value syntax and macOS automation via sandbox.allowAppleEvents, Apac\n\nAnthropic's Claude Code update enables prompt-based setting control and deeper macOS integration, available on GitHub with 90 score.\n\n📖 ",
+    "source_link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.181",
+    "source_title": "Claude Code v2.1.181",
+    "score": 90,
+    "reason": "New CLI version with concrete features for dynamic control, macOS integration, and runtime upgrade.",
+    "card_path": "generated/cards/92ae50d0c07c.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-17-claude-code-v2-1-181-92ae50d0c07c.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mokoz7pi2k2k",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mokoz7pi2k2k"
   }
 ]
