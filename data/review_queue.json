@@ -2019,11 +2019,11 @@
   },
   {
     "id": "d20df1754383",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-18T12:46:10.883992Z",
     "score": 90,
     "reason": "Open-source agentic engineering platform trending on GitHub, ships today for builders to use.",
-    "proposed_post": "Kilo-Org/kilocode, an open-source agentic engineering platform, is trending on GitHub. Use this coding agent to automate parts of your development workflow, from building to shipping.",
+    "proposed_post": "Agentic engineering platforms are gaining traction.\n\nKilocode turns recall into persistent state for coding-agent workflows, with +1339 stars today.\n\nFirst open-source agentic engineering platform to trend on GitHub, automating development workflows from building to shipping, ava",
     "source_angle": "GitHub Trending: Open-source agentic engineering platform for builders.",
     "source_item": {
       "title": "Kilo-Org/kilocode — Kilo is the all-in-one agentic engineering platform. Build, ship, and iterate faster with the most popular open source coding agent.",
@@ -2054,10 +2054,22 @@
         "cluster_score": 35
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/d20df1754383.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, schau dir Kilo an. Das ist ein agentisches Engineering-Framework, das gerade auf GitHub durch die Decke geht.\n\nFür Entwickler ist das interessant, weil es verspricht, den Build-, Ship- und Iterate-Zyklus massiv zu beschleunigen. Wenn die das Versprechen halten können, mit einem Open-Source-Agenten, dann ist das ein Game-Changer für Produktivität.",
-    "chloe_note": "Kurzes Update: *Kilo-Org/kilocode — Kilo is the all-in-one agentic engineering platform. Build, ship, and iterate faster with the most popular open source coding agent.* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Open-source agentic engineering platform trending on GitHub, ships today for builders to use.Cluster context: 1 sources, engagement 1339. Common terms: iterate, coding, popular, agentic. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://github.com/Kilo-Org/kilocode"
+    "chloe_note": "Kurzes Update: *Kilo-Org/kilocode — Kilo is the all-in-one agentic engineering platform. Build, ship, and iterate faster with the most popular open source coding agent.* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Open-source agentic engineering platform trending on GitHub, ships today for builders to use.Cluster context: 1 sources, engagement 1339. Common terms: iterate, coding, popular, agentic. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://github.com/Kilo-Org/kilocode",
+    "sarah_package": {
+      "title": "Agentic engineering platforms are gaining traction.",
+      "subtitle": "Kilocode turns recall into persistent state for coding-agent workflows, with +1339 stars today.",
+      "description": "First open-source agentic engineering platform to trend on GitHub, automating development workflows from building to shipping, available for",
+      "hashtags": [
+        "#KiloCode",
+        "#AgenticEngineering",
+        "#CodingAgents"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-18-kilo-org-kilocode-kilo-is-the-all-in-one-agentic-engineering-platform-build-ship-and-iterate-faster-with-the-most-popular-open-source-coding-agent-d20df1754383.md",
+    "published_at": "2026-06-18T16:37:51.351012Z"
   }
 ]
