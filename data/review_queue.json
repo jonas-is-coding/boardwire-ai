@@ -2296,11 +2296,11 @@
   },
   {
     "id": "c2b0f39a663d",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-19T13:28:29.630396Z",
     "score": 90,
     "reason": "New macOS AI video editor launched on GitHub, immediately usable for builders.",
-    "proposed_post": "palmier-pro, a new macOS video editor built for AI, is trending on GitHub with 749 stars. Builders can explore its AI-focused features for integrating AI into video production workflows.",
+    "proposed_post": "AI video editors are becoming native on macOS.\n\nPalmier-pro gains +749 stars with AI-focused features for video production workflows.\n\nmacOS video editor built for AI integration, immediately usable for builders, with a strong start of 749 stars on GitHub.\n\n📖 Read the full articl",
     "source_angle": "GitHub Trending: New macOS AI video editor",
     "source_item": {
       "title": "palmier-io/palmier-pro — macOS video editor built for AI",
@@ -2331,10 +2331,22 @@
         "cluster_score": 35
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/c2b0f39a663d.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das hier ist ein Blick wert: 'palmier-io/palmier-pro'. Ein macOS Video-Editor, der speziell für KI gebaut wurde.\n\nDas Projekt ist heute auf GitHub hochgeschossen, +749 Sterne. Zeigt, dass es echten Bedarf gibt, Tools zu bauen, die KI-Workflows in kreative Anwendungen integrieren. Für Entwickler, die an Multimedia- oder KI-Anwendungen arbeiten, ist das ein starkes Beispiel, wie man eine moderne App-Architektur aufzieht, die KI direkt in den Kern der User Experience einbettet, statt sie als nachträgliche Funktion anzubauen.",
-    "chloe_note": "*palmier-io/palmier-pro — macOS video editor built for AI* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New macOS AI video editor launched on GitHub, immediately usable for builders.Cluster context: 1 sources, engagement 749. Common terms: palmier-io/palmier-pro, stars., +749, github. Bewertung: 90. Quelle: https://github.com/palmier-io/palmier-pro"
+    "chloe_note": "*palmier-io/palmier-pro — macOS video editor built for AI* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New macOS AI video editor launched on GitHub, immediately usable for builders.Cluster context: 1 sources, engagement 749. Common terms: palmier-io/palmier-pro, stars., +749, github. Bewertung: 90. Quelle: https://github.com/palmier-io/palmier-pro",
+    "sarah_package": {
+      "title": "AI video editors are becoming native on macOS.",
+      "subtitle": "Palmier-pro gains +749 stars with AI-focused features for video production workflows.",
+      "description": "macOS video editor built for AI integration, immediately usable for builders, with a strong start of 749 stars on GitHub.",
+      "hashtags": [
+        "#PalmierPro",
+        "#MacOS",
+        "#AIVideoEditing"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-19-palmier-io-palmier-pro-macos-video-editor-built-for-ai-c2b0f39a663d.md",
+    "published_at": "2026-06-19T19:00:09.063417Z"
   }
 ]
