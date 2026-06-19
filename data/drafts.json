@@ -7880,5 +7880,33 @@
     "engagement_score": 165.5,
     "local_newsworthiness_score": 0,
     "created_at": "2026-06-19T19:25:15.283438Z"
+  },
+  {
+    "title": "John Jumper to join Anthropic",
+    "link": "https://twitter.com/JohnJumperSci/status/2068001285173834106",
+    "source": "HackerNews",
+    "score": 15,
+    "should_post": false,
+    "reason": "Personnel announcement. No product, API, or code release. Fails Ships Test: nothing to download, use, or deploy today.",
+    "post_text": "No post generated",
+    "source_angle": "Personnel move at major AI lab",
+    "source_tier": 3,
+    "engagement_score": 54.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-19T21:01:06.978923Z"
+  },
+  {
+    "title": "Amazon drops Sam Altman movie after announcing OpenAI partnership",
+    "link": "https://www.the-independent.com/arts-entertainment/films/news/sam-altman-biopic-amazon-openai-deal-b2999321.html",
+    "source": "HackerNews",
+    "score": 1,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 83.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-19T21:01:08.196273Z"
   }
 ]
