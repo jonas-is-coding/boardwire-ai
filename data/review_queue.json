@@ -2226,5 +2226,48 @@
     "breaking": false,
     "claire_note": "Chloe, schau dir das an: Anthropic Python SDK v0.110.0 ist draußen. Die neue 'code_execution_20260120' Tool-Unterstützung ist der Knackpunkt. Entwickler können damit jetzt direkt in ihre Anwendungen Code-Ausführung integrieren – das öffnet Türen für smartere Agenten und automatisierte Workflows mit Claude.",
     "chloe_note": "Hey, *Anthropic Python SDK v0.110.0* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Anthropic SDK update adds support for a new code execution tool, enabling direct integration for builders.Cluster context: 1 sources, engagement 0. Common terms: merges, 20260120, preserve, bedrock. Score aktuell: 95. Link: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.110.0"
+  },
+  {
+    "id": "ee5258cb31f9",
+    "status": "approved",
+    "created_at": "2026-06-19T02:54:20.640488Z",
+    "score": 90,
+    "reason": "New CLI version with immediate safety improvements for developers using Claude Code for automation.",
+    "proposed_post": "Claude Code v2.1.183 blocks destructive git/infra commands (e.g., `git reset --hard`, `terraform destroy`) by default in auto mode. This update reduces risk for developers automating code changes or infra deployments with Claude Code.",
+    "source_angle": "Claude Code CLI update enhances safety for automated dev workflows.",
+    "source_item": {
+      "title": "Claude Code v2.1.183",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.183",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 30,
+      "summary": "<h2>What's changed</h2>\n<ul>\n<li>Improved auto mode safety: destructive git commands (<code>git reset --hard</code>, <code>git checkout -- .</code>, <code>git clean -fd</code>, <code>git stash drop</code>) are now blocked when you didn't ask to discard local work, <code>git commit --amend</code> is blocked when the commit wasn't made by the agent this session, and <code>terraform destroy</code>/<code>pulumi destroy</code>/<code>cdk destroy</code> are blocked unless you asked for the specific stack</li>\n<li>Added a warning when the requested model is deprecated or automatically updated to a newer model, shown on stderr in print mode (<code>-p</code>) and now also covering models set in agent frontmatter</li>\n<li>Added <code>attribution.sessionUrl</code> setting to omit the claude.ai session link from commits and PRs in web and Remote Control sessions</li>\n<li>Added <code>/config --help</code> to list all available shorthand keys for <code>/config key=value</code></li>\n<li>Changed <code>/config</code> toggle behavior: Enter and Space both change the selected setting, and Esc now saves and closes instead of reverting</li>\n<li>Removed the startup \"setup issues\" line under the logo — run <code>/doctor</code> to see configuration issues or use <code>--debug</code></li>\n<li>Fixed <code>thinking.disabled.display: Extra inputs are not permitted</code> 400 errors on subagent spawns and session-title generation for affected configurations</li>\n<li>Fixed WebSearch returning empty results in subagents</li>\n<li>Fixed the terminal cursor being stranded above the prompt after navigating history in vim mode with the native cursor enabled</li>\n<li>Fixed fullscreen TUI corruption (statusline mid-screen, duplicated spinner rows, merged text) in Windows Terminal under heavy nested-subagent load</li>\n<li>Fixed turns silently completing with no visible output when the model returned only a thinking block; Claude now re-prompts once</li>\n<li>Fixed user-level skills appearing multiple times in slash-command autocomplete when multiple plugins are enabled</li>\n<li>Fixed MCP servers requiring authentication exposing auth-stub tools to the model in headless/SDK mode</li>\n<li>Fixed tmux teammate panes failing to launch when the shell has slow rc-file initialization, and keystrokes typed during agent spawn leaking into the new tmux pane instead of the leader prompt</li>\n<li>Fixed background tasks started by a teammate being killed when the teammate finishes a turn</li>\n<li>Fixed scheduled task and webhook trigger deliveries being treated as keyboard input; they now classify as task notifications and can no longer approve a pending action or set the session title in auto mode</li>\n<li>Fixed focus mode showing \"Ran N PostToolUse hooks\" timing lines under each response</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: classify, enabled, clean, prs, toggle.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Claude Code Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "classify",
+          "enabled",
+          "clean",
+          "prs",
+          "toggle",
+          "shell",
+          "warning",
+          "websearch"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: classify, enabled, clean, prs. Lead: Claude Code v2.1.183",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, das ist ein direktes Update von Claude Code.\n\nDie neuen Safety-Features für Git-Kommandos sind ein Game Changer. Entwickler, die viel mit AI-Assistenten arbeiten, wissen, wie schnell da mal ein 'git reset --hard' passieren kann, wenn man nicht aufpasst. Das ist ein konkreter Schritt, um die Zusammenarbeit mit AI beim Coden sicherer zu machen und Vertrauen aufzubauen. Jeder, der schon mal einen AI-Vorschlag blind übernommen hat und dann seinen lokalen Branch zerschossen hat, wird das zu schätzen wissen.",
+    "chloe_note": "Hey, *Claude Code v2.1.183* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New CLI version with immediate safety improvements for developers using Claude Code for automation.Cluster context: 1 sources, engagement 0. Common terms: classify, enabled, clean, prs. Score aktuell: 90. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.183"
   }
 ]
