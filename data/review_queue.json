@@ -2241,11 +2241,11 @@
   },
   {
     "id": "ee5258cb31f9",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-19T02:54:20.640488Z",
     "score": 90,
     "reason": "New CLI version with immediate safety improvements for developers using Claude Code for automation.",
-    "proposed_post": "Claude Code v2.1.183 blocks destructive git/infra commands (e.g., `git reset --hard`, `terraform destroy`) by default in auto mode. This update reduces risk for developers automating code changes or infra deployments with Claude Code.",
+    "proposed_post": "Claude Code blocks destructive git commands by default.\n\nv2.1.183 adds auto-mode safety for git reset --hard, git clean, and terraform destroy. MIT license.\n\nBlocks high-risk shell commands unless explicitly allowed in auto mode. Open-source CLI for developers automating code cha",
     "source_angle": "Claude Code CLI update enhances safety for automated dev workflows.",
     "source_item": {
       "title": "Claude Code v2.1.183",
@@ -2276,11 +2276,23 @@
         "cluster_score": 45
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/ee5258cb31f9.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das ist ein direktes Update von Claude Code.\n\nDie neuen Safety-Features für Git-Kommandos sind ein Game Changer. Entwickler, die viel mit AI-Assistenten arbeiten, wissen, wie schnell da mal ein 'git reset --hard' passieren kann, wenn man nicht aufpasst. Das ist ein konkreter Schritt, um die Zusammenarbeit mit AI beim Coden sicherer zu machen und Vertrauen aufzubauen. Jeder, der schon mal einen AI-Vorschlag blind übernommen hat und dann seinen lokalen Branch zerschossen hat, wird das zu schätzen wissen.",
-    "chloe_note": "Hey, *Claude Code v2.1.183* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New CLI version with immediate safety improvements for developers using Claude Code for automation.Cluster context: 1 sources, engagement 0. Common terms: classify, enabled, clean, prs. Score aktuell: 90. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.183"
+    "chloe_note": "Hey, *Claude Code v2.1.183* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New CLI version with immediate safety improvements for developers using Claude Code for automation.Cluster context: 1 sources, engagement 0. Common terms: classify, enabled, clean, prs. Score aktuell: 90. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.183",
+    "sarah_package": {
+      "title": "Claude Code blocks destructive git commands by default.",
+      "subtitle": "v2.1.183 adds auto-mode safety for git reset --hard, git clean, and terraform destroy. MIT license.",
+      "description": "Blocks high-risk shell commands unless explicitly allowed in auto mode. Open-source CLI for developers automating code changes.",
+      "hashtags": [
+        "#ClaudeCode",
+        "#CLI",
+        "#Git"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-19-claude-code-v2-1-183-ee5258cb31f9.md",
+    "published_at": "2026-06-19T16:09:44.196432Z"
   },
   {
     "id": "c2b0f39a663d",

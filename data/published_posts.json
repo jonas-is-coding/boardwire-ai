@@ -600,5 +600,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-18-anthropic-python-sdk-v0-110-0-4f91248a74e0.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3momwrxrpjn2v",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3momwrxrpjn2v"
+  },
+  {
+    "id": "ee5258cb31f9",
+    "published_at": "2026-06-19T16:09:44.196432Z",
+    "platform": "bluesky",
+    "post": "Claude Code blocks destructive git commands by default.\n\nv2.1.183 adds auto-mode safety for git reset --hard, git clean, and terraform destroy. MIT license.\n\nBlocks high-risk shell commands unless explicitly allowed in auto mode. Open-source CLI for developers automating code cha",
+    "source_link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.183",
+    "source_title": "Claude Code v2.1.183",
+    "score": 90,
+    "reason": "New CLI version with immediate safety improvements for developers using Claude Code for automation.",
+    "card_path": "generated/cards/ee5258cb31f9.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-19-claude-code-v2-1-183-ee5258cb31f9.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3monq4v3o2q2r",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3monq4v3o2q2r"
   }
 ]
