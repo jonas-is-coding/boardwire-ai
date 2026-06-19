@@ -2281,5 +2281,48 @@
     "breaking": false,
     "claire_note": "Chloe, das ist ein direktes Update von Claude Code.\n\nDie neuen Safety-Features für Git-Kommandos sind ein Game Changer. Entwickler, die viel mit AI-Assistenten arbeiten, wissen, wie schnell da mal ein 'git reset --hard' passieren kann, wenn man nicht aufpasst. Das ist ein konkreter Schritt, um die Zusammenarbeit mit AI beim Coden sicherer zu machen und Vertrauen aufzubauen. Jeder, der schon mal einen AI-Vorschlag blind übernommen hat und dann seinen lokalen Branch zerschossen hat, wird das zu schätzen wissen.",
     "chloe_note": "Hey, *Claude Code v2.1.183* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New CLI version with immediate safety improvements for developers using Claude Code for automation.Cluster context: 1 sources, engagement 0. Common terms: classify, enabled, clean, prs. Score aktuell: 90. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.183"
+  },
+  {
+    "id": "c2b0f39a663d",
+    "status": "approved",
+    "created_at": "2026-06-19T13:28:29.630396Z",
+    "score": 90,
+    "reason": "New macOS AI video editor launched on GitHub, immediately usable for builders.",
+    "proposed_post": "palmier-pro, a new macOS video editor built for AI, is trending on GitHub with 749 stars. Builders can explore its AI-focused features for integrating AI into video production workflows.",
+    "source_angle": "GitHub Trending: New macOS AI video editor",
+    "source_item": {
+      "title": "palmier-io/palmier-pro — macOS video editor built for AI",
+      "source": "GitHub Trending",
+      "link": "https://github.com/palmier-io/palmier-pro",
+      "source_tier": 2,
+      "engagement_score": 749.0,
+      "local_newsworthiness_score": 0,
+      "summary": "Trending on GitHub today: +749 stars. macOS video editor built for AI\n[Cluster context: 1 sources, engagement 749, common terms: palmier-io/palmier-pro, stars., +749, github, built.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 749,
+        "common_terms": [
+          "palmier-io/palmier-pro",
+          "stars.",
+          "+749",
+          "github",
+          "built",
+          "editor",
+          "video",
+          "macos"
+        ],
+        "cluster_summary": "1 sources, engagement 749. Common terms: palmier-io/palmier-pro, stars., +749, github. Lead: palmier-io/palmier-pro — macOS video editor built for AI",
+        "alternative_titles": [],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, das hier ist ein Blick wert: 'palmier-io/palmier-pro'. Ein macOS Video-Editor, der speziell für KI gebaut wurde.\n\nDas Projekt ist heute auf GitHub hochgeschossen, +749 Sterne. Zeigt, dass es echten Bedarf gibt, Tools zu bauen, die KI-Workflows in kreative Anwendungen integrieren. Für Entwickler, die an Multimedia- oder KI-Anwendungen arbeiten, ist das ein starkes Beispiel, wie man eine moderne App-Architektur aufzieht, die KI direkt in den Kern der User Experience einbettet, statt sie als nachträgliche Funktion anzubauen.",
+    "chloe_note": "*palmier-io/palmier-pro — macOS video editor built for AI* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New macOS AI video editor launched on GitHub, immediately usable for builders.Cluster context: 1 sources, engagement 749. Common terms: palmier-io/palmier-pro, stars., +749, github. Bewertung: 90. Quelle: https://github.com/palmier-io/palmier-pro"
   }
 ]
