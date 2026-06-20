@@ -8076,5 +8076,33 @@
     "engagement_score": 94.5,
     "local_newsworthiness_score": 0,
     "created_at": "2026-06-20T17:15:55.101653Z"
+  },
+  {
+    "title": "Agency stole bestselling author's book, used AI to relaunch as their own",
+    "link": "https://waxy.org/2026/06/the-wholesale-plagiarism-of-obscure-sorrows/",
+    "source": "HackerNews",
+    "score": 30,
+    "should_post": false,
+    "reason": "Fails Ships Test: Describes an alleged misuse of existing AI, not a new model, API, tool, or measurable performance improvement for builders to act on directly.",
+    "post_text": "An agency allegedly used AI to plagiarize a bestselling author's book for relaunch. Builders must consider immediate legal & ethical risks of AI content generation, demanding robust provenance checks.",
+    "source_angle": "AI plagiarism incident highlights legal risks for content generation.",
+    "source_tier": 3,
+    "engagement_score": 174.0,
+    "local_newsworthiness_score": 30,
+    "created_at": "2026-06-20T19:09:11.079578Z"
+  },
+  {
+    "title": "Ubisoft co-founder Claude Guillemot has died in a plane crash",
+    "link": "https://www.reuters.com/world/ubisofts-co-founder-claude-guillemot-dies-plane-crash-2026-06-20/",
+    "source": "HackerNews",
+    "score": 0,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "No source angle provided",
+    "source_tier": 3,
+    "engagement_score": 151.0,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-06-20T19:09:15.973940Z"
   }
 ]
