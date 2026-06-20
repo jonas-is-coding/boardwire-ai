@@ -8034,5 +8034,47 @@
     "engagement_score": 76.5,
     "local_newsworthiness_score": 0,
     "created_at": "2026-06-20T13:26:18.315816Z"
+  },
+  {
+    "title": "Temporary Cloudflare Accounts for AI Agents",
+    "link": "https://blog.cloudflare.com/temporary-accounts/",
+    "source": "HackerNews",
+    "score": 85,
+    "should_post": true,
+    "reason": "Cloudflare launched a concrete feature for AI agent security and access management, available now.",
+    "post_text": "Cloudflare launched temporary accounts for AI agents. Builders can now grant ephemeral, scoped access to Cloudflare services, simplifying credential management and enhancing security for automated agent tasks.",
+    "source_angle": "Cloudflare feature for AI agent security",
+    "source_tier": 3,
+    "engagement_score": 66.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-20T17:15:54.065434Z"
+  },
+  {
+    "title": "US Scientist John Jumper to Leave Google DeepMind for Anthropic",
+    "link": "https://www.reuters.com/technology/us-scientist-john-jumper-leave-google-deepmind-anthropic-2026-06-19/",
+    "source": "HackerNews",
+    "score": 1,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 43.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-20T17:15:55.101411Z"
+  },
+  {
+    "title": "Ubisoft co-founder Claude Guillemot has died in a plane crash",
+    "link": "https://www.bloomberg.com/news/articles/2026-06-20/ubisoft-co-founder-claude-guillemot-dies-in-air-crash-at-age-69",
+    "source": "HackerNews",
+    "score": 5,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 94.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-20T17:15:55.101653Z"
   }
 ]
