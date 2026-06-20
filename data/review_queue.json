@@ -2461,11 +2461,11 @@
   },
   {
     "id": "6d83dcba28d3",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-20T17:15:54.065434Z",
     "score": 85,
     "reason": "Cloudflare launched a concrete feature for AI agent security and access management, available now.",
-    "proposed_post": "Cloudflare launched temporary accounts for AI agents. Builders can now grant ephemeral, scoped access to Cloudflare services, simplifying credential management and enhancing security for automated agent tasks.",
+    "proposed_post": "Cloudflare introduces ephemeral access for AI agents.\n\nTemporary accounts simplify credential management with scoped access to Cloudflare services, 52 poin\n\nCloudflare launched temporary accounts for AI agents, enhancing security for automated tasks, available now on Cloudflare b",
     "source_angle": "Cloudflare feature for AI agent security",
     "source_item": {
       "title": "Temporary Cloudflare Accounts for AI Agents",
@@ -2496,10 +2496,22 @@
         "cluster_score": 0
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/6d83dcba28d3.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das Cloudflare-Ding mit den temporären Accounts für AI-Agents ist interessant.\n\nEntwickler, die AI-Agenten bauen, brauchen oft temporären, sicheren Zugang zu Ressourcen. Cloudflare bietet hier eine Lösung, die das Management von Zugangsdaten vereinfacht und Sicherheitsrisiken reduziert. Das ist direkt nützlich für jeden, der an verteilten AI-Systemen arbeitet und dabei nicht im Credential-Chaos versinken will.",
-    "chloe_note": "*Temporary Cloudflare Accounts for AI Agents* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Cloudflare launched a concrete feature for AI agent security and access management, available now.Cluster context: 1 sources, engagement 66. Common terms: farhadhf, points, accounts, comments. Bewertung: 85. Quelle: https://blog.cloudflare.com/temporary-accounts/"
+    "chloe_note": "*Temporary Cloudflare Accounts for AI Agents* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Cloudflare launched a concrete feature for AI agent security and access management, available now.Cluster context: 1 sources, engagement 66. Common terms: farhadhf, points, accounts, comments. Bewertung: 85. Quelle: https://blog.cloudflare.com/temporary-accounts/",
+    "sarah_package": {
+      "title": "Cloudflare introduces ephemeral access for AI agents.",
+      "subtitle": "Temporary accounts simplify credential management with scoped access to Cloudflare services, 52 poin",
+      "description": "Cloudflare launched temporary accounts for AI agents, enhancing security for automated tasks, available now on Cloudflare blog.",
+      "hashtags": [
+        "#Cloudflare",
+        "#AIAgents",
+        "#EphemeralAccess"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-20-temporary-cloudflare-accounts-for-ai-agents-6d83dcba28d3.md",
+    "published_at": "2026-06-20T20:19:25.246799Z"
   }
 ]

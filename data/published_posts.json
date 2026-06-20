@@ -656,5 +656,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-20-gpt-5-5-hallucinates-3x-more-than-mit-licensed-glm-5-2-4a500a1002d2.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3moqhp7q5262y",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3moqhp7q5262y"
+  },
+  {
+    "id": "6d83dcba28d3",
+    "published_at": "2026-06-20T20:19:25.246799Z",
+    "platform": "bluesky",
+    "post": "Cloudflare introduces ephemeral access for AI agents.\n\nTemporary accounts simplify credential management with scoped access to Cloudflare services, 52 poin\n\nCloudflare launched temporary accounts for AI agents, enhancing security for automated tasks, available now on Cloudflare b",
+    "source_link": "https://blog.cloudflare.com/temporary-accounts/",
+    "source_title": "Temporary Cloudflare Accounts for AI Agents",
+    "score": 85,
+    "reason": "Cloudflare launched a concrete feature for AI agent security and access management, available now.",
+    "card_path": "generated/cards/6d83dcba28d3.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-20-temporary-cloudflare-accounts-for-ai-agents-6d83dcba28d3.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3moqok746z32x",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3moqok746z32x"
   }
 ]
