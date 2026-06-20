@@ -8104,5 +8104,19 @@
     "engagement_score": 151.0,
     "local_newsworthiness_score": 10,
     "created_at": "2026-06-20T19:09:15.973940Z"
+  },
+  {
+    "title": "Claude Code v2.1.185",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.185",
+    "source": "Claude Code Releases",
+    "score": 15,
+    "should_post": false,
+    "reason": "Minor UI/UX change in Claude Code tool (retry message/delay). No new builder capabilities or API changes.",
+    "post_text": "Claude Code v2.1.185 updates stream-stall hint trigger from 10s to 20s and rewords the message. This is a minor UX tweak for users of the Claude Code tool, not a functional API or model update.",
+    "source_angle": "Claude Code UI/UX update",
+    "source_tier": 1,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 35,
+    "created_at": "2026-06-20T21:04:26.913059Z"
   }
 ]
