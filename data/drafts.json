@@ -7992,5 +7992,47 @@
     "engagement_score": 43.0,
     "local_newsworthiness_score": 0,
     "created_at": "2026-06-20T10:26:12.737317Z"
+  },
+  {
+    "title": "jamiepine/voicebox — The open-source AI voice studio. Clone, dictate, create.",
+    "link": "https://github.com/jamiepine/voicebox",
+    "source": "GitHub Trending",
+    "score": 90,
+    "should_post": true,
+    "reason": "Open-source tool launch on GitHub, passes Ships Test. Direct utility for voice AI builders.",
+    "post_text": "jamiepine/voicebox, an open-source AI voice studio, is live on GitHub. Builders can now use it for voice cloning, dictation, and audio creation, providing an accessible tool for integrating advanced voice capabilities.",
+    "source_angle": "New open-source AI voice studio for cloning, dictation, and audio creation.",
+    "source_tier": 2,
+    "engagement_score": 140.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-20T13:26:17.306346Z"
+  },
+  {
+    "title": "1jehuang/jcode — Coding Agent Harness",
+    "link": "https://github.com/1jehuang/jcode",
+    "source": "GitHub Trending",
+    "score": 5,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 2,
+    "engagement_score": 70.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-20T13:26:18.315616Z"
+  },
+  {
+    "title": "LLMs Are Complicated Now",
+    "link": "https://ianbarber.blog/2026/06/19/llms-are-complicated-now/",
+    "source": "HackerNews",
+    "score": 4,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 76.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-20T13:26:18.315816Z"
   }
 ]
