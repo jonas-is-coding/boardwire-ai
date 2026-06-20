@@ -2348,5 +2348,48 @@
     },
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-19-palmier-io-palmier-pro-macos-video-editor-built-for-ai-c2b0f39a663d.md",
     "published_at": "2026-06-19T19:00:09.063417Z"
+  },
+  {
+    "id": "4a500a1002d2",
+    "status": "approved",
+    "created_at": "2026-06-20T10:26:11.496197Z",
+    "score": 90,
+    "reason": "Direct performance comparison of an MIT-licensed model against a proprietary one on a critical metric (hallucination). Highly actionable for builders.",
+    "proposed_post": "MIT-licensed GLM-5.2 demonstrates 3x lower hallucination rates than GPT-5.5 in recent benchmarks. Builders prioritizing factual accuracy can evaluate GLM-5.2 as an open-source alternative.",
+    "source_angle": "Open-source model outperforms proprietary on hallucination.",
+    "source_item": {
+      "title": "GPT-5.5 hallucinates 3x more than MIT-licensed GLM-5.2",
+      "source": "HackerNews",
+      "link": "https://arrowtsx.dev/bigger-models/",
+      "source_tier": 3,
+      "engagement_score": 193.5,
+      "local_newsworthiness_score": 10,
+      "summary": "169 points, 49 comments on Hacker News — submitted by oshrimpton — original: https://arrowtsx.dev/bigger-models/\n[Cluster context: 1 sources, engagement 193, common terms: submitted, comments, mit-licensed, 169, gpt-5.5.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 193,
+        "common_terms": [
+          "submitted",
+          "comments",
+          "mit-licensed",
+          "169",
+          "gpt-5.5",
+          "glm-5.2",
+          "points",
+          "hallucinates"
+        ],
+        "cluster_summary": "1 sources, engagement 193. Common terms: submitted, comments, mit-licensed, 169. Lead: GPT-5.5 hallucinates 3x more than MIT-licensed GLM-5.2",
+        "alternative_titles": [],
+        "cluster_score": 10
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, das ist interessant: \"GPT-5.5 hallucinates 3x more than MIT-licensed GLM-5.2\". \n\nWenn ein kleineres, MIT-lizenziertes Modell wie GLM-5.2 eine dreimal niedrigere Halluzinationsrate hat als GPT-5.5, ist das ein klares Signal für Builder, die nach Alternativen suchen. Weniger Halluzinationen bedeuten stabilere Anwendungen und weniger Aufwand für Nachbearbeitung, gerade wenn es um Fakten oder Code geht. Entwickler, die nicht auf die größte Blackbox angewiesen sind, könnten hier eine Open-Source-Lösung finden, die ihre Use Cases besser erfüllt und gleichzeitig Kosten senkt.",
+    "chloe_note": "Kurzes Update: *GPT-5.5 hallucinates 3x more than MIT-licensed GLM-5.2* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Direct performance comparison of an MIT-licensed model against a proprietary one on a critical metric (hallucination). Highly actionable for builders.Cluster context: 1 sources, engagement 193. Common terms: submitted, comments, mit-licensed, 169. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://arrowtsx.dev/bigger-models/"
   }
 ]

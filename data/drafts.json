@@ -7950,5 +7950,47 @@
     "engagement_score": 490.0,
     "local_newsworthiness_score": 10,
     "created_at": "2026-06-20T02:15:18.265437Z"
+  },
+  {
+    "title": "GPT-5.5 hallucinates 3x more than MIT-licensed GLM-5.2",
+    "link": "https://arrowtsx.dev/bigger-models/",
+    "source": "HackerNews",
+    "score": 90,
+    "should_post": true,
+    "reason": "Direct performance comparison of an MIT-licensed model against a proprietary one on a critical metric (hallucination). Highly actionable for builders.",
+    "post_text": "MIT-licensed GLM-5.2 demonstrates 3x lower hallucination rates than GPT-5.5 in recent benchmarks. Builders prioritizing factual accuracy can evaluate GLM-5.2 as an open-source alternative.",
+    "source_angle": "Open-source model outperforms proprietary on hallucination.",
+    "source_tier": 3,
+    "engagement_score": 193.5,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-06-20T10:26:11.496197Z"
+  },
+  {
+    "title": "MiniMax M3 vs. GLM 5.2: Codegen comparison across autonomous coding tasks",
+    "link": "https://thinkwright.ai/minimax-m3-vs-glm-5-2-coding-benchmark",
+    "source": "HackerNews",
+    "score": 4,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 37.0,
+    "local_newsworthiness_score": 20,
+    "created_at": "2026-06-20T10:26:12.737110Z"
+  },
+  {
+    "title": "I solved my mystery fatigue with AI",
+    "link": "https://metalearn.substack.com/p/i-solved-my-mystery-fatigue-with-ai",
+    "source": "HackerNews",
+    "score": 2,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 43.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-20T10:26:12.737317Z"
   }
 ]
