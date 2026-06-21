@@ -8328,5 +8328,47 @@
     "engagement_score": 32.0,
     "local_newsworthiness_score": 0,
     "created_at": "2026-06-21T21:04:34.637899Z"
+  },
+  {
+    "title": "Apertus – Open Foundation Model for Sovereign AI",
+    "link": "https://apertvs.ai/",
+    "source": "HackerNews",
+    "score": 30,
+    "should_post": false,
+    "reason": "No explicit release of model weights, API, or concrete artifact. Appears to be an announcement about a project, not a shipment.",
+    "post_text": "No post generated",
+    "source_angle": "No source angle provided",
+    "source_tier": 3,
+    "engagement_score": 101.0,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-06-21T23:00:17.933060Z"
+  },
+  {
+    "title": "Show HN: Pulse – Dashboard for Claude Code, approve tool calls from your phone",
+    "link": "https://github.com/nikitadoudikov/claude-pulse",
+    "source": "HackerNews",
+    "score": 85,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Open-source tool for Claude Code agents",
+    "source_tier": 3,
+    "engagement_score": 37.0,
+    "local_newsworthiness_score": 30,
+    "created_at": "2026-06-21T23:00:25.107934Z"
+  },
+  {
+    "title": "The anatomy of an AI-native org",
+    "link": "https://ajeygore.in/content/the-anatomy-of-an-ai-native-org",
+    "source": "HackerNews",
+    "score": 2,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 50.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-21T23:00:25.108283Z"
   }
 ]
