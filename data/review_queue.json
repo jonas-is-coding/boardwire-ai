@@ -2516,11 +2516,11 @@
   },
   {
     "id": "d35b40d93d61",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-21T12:05:54.850753Z",
     "score": 90,
     "reason": "Open-source LLM system for stock analysis with deployable code and cost-free scheduled runs. Passes Ships Test.",
-    "proposed_post": "ZhuLinsen/daily_stock_analysis is an open-source LLM system for multi-market stock analysis, featuring real-time news and a decision dashboard. Builders can use its cost-free scheduled runs as a reference for deploying automated data processing workflows.",
+    "proposed_post": "Stock analysis gets LLM infrastructure.\n\nZhuLinsen/daily_stock_analysis adds real-time news and decision dashboard with +519 stars.\n\nOpen-source LLM system for multi-market stock analysis with deployable code and cost-free scheduled runs, processing multiple data sources i\n\n📖 Rea",
     "source_angle": "GitHub Trending: LLM-powered stock analysis system with cost-free scheduled runs.",
     "source_item": {
       "title": "ZhuLinsen/daily_stock_analysis — LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, aut",
@@ -2551,10 +2551,22 @@
         "cluster_score": 35
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/d35b40d93d61.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, schau dir das hier an: ZhuLinsen/daily_stock_analysis. Ein LLM-gestütztes System für Aktienanalyse, das auf GitHub hochgeht.\n\nDas ist spannend, weil es zeigt, wie Devs LLMs nutzen, um komplexe Daten zu aggregieren und actionable Insights zu generieren – hier eben für den Finanzmarkt. Ein Builder kann sich ansehen, wie sie multiple Datenquellen (Kurse, Nachrichten) in Echtzeit verarbeiten und in einem Dashboard aufbereiten. Besonders interessant ist der \"zero-cost scheduled run\" Aspekt; das ist ein Muster, das man sicher auch für andere Anwendungsfälle adaptieren kann, um effiziente, automatisierte Analyse-Pipelines zu bauen.",
-    "chloe_note": "*ZhuLinsen/daily_stock_analysis — LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, aut* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Open-source LLM system for stock analysis with deployable code and cost-free scheduled runs. Passes Ships Test.Cluster context: 1 sources, engagement 519. Common terms: multi-market, +519, cost-free, github. Bewertung: 90. Quelle: https://github.com/ZhuLinsen/daily_stock_analysis"
+    "chloe_note": "*ZhuLinsen/daily_stock_analysis — LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, aut* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Open-source LLM system for stock analysis with deployable code and cost-free scheduled runs. Passes Ships Test.Cluster context: 1 sources, engagement 519. Common terms: multi-market, +519, cost-free, github. Bewertung: 90. Quelle: https://github.com/ZhuLinsen/daily_stock_analysis",
+    "sarah_package": {
+      "title": "Stock analysis gets LLM infrastructure.",
+      "subtitle": "ZhuLinsen/daily_stock_analysis adds real-time news and decision dashboard with +519 stars.",
+      "description": "Open-source LLM system for multi-market stock analysis with deployable code and cost-free scheduled runs, processing multiple data sources i",
+      "hashtags": [
+        "#LLM",
+        "#StockAnalysis",
+        "#MultiMarket"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-21-zhulinsen-daily-stock-analysis-llm-llm-powered-multi-market-stock-analysis-system-with-multi-source-market-data-real-time-news-decision-dashboard-aut-d35b40d93d61.md",
+    "published_at": "2026-06-21T13:11:02.506060Z"
   }
 ]
