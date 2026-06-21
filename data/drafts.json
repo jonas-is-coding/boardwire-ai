@@ -8118,5 +8118,33 @@
     "engagement_score": 0.0,
     "local_newsworthiness_score": 35,
     "created_at": "2026-06-20T21:04:26.913059Z"
+  },
+  {
+    "title": "Project Fetch: Phase Two",
+    "link": "https://www.anthropic.com/research/project-fetch-phase-two",
+    "source": "HackerNews",
+    "score": 25,
+    "should_post": false,
+    "reason": "Title suggests a research update, not a concrete release of an API, weights, or tool. Fails Ships Test.",
+    "post_text": "No post generated",
+    "source_angle": "No source angle provided",
+    "source_tier": 3,
+    "engagement_score": 36.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-21T02:40:33.074177Z"
+  },
+  {
+    "title": "When I reject AI code even if it works",
+    "link": "https://vinibrasil.com/when-i-reject-ai-code-even-if-it-works/",
+    "source": "HackerNews",
+    "score": 20,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Opinion piece on AI-generated code quality and review.",
+    "source_tier": 3,
+    "engagement_score": 38.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-21T02:40:38.048877Z"
   }
 ]
