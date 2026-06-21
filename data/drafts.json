@@ -8258,5 +8258,19 @@
     "engagement_score": 60.5,
     "local_newsworthiness_score": 0,
     "created_at": "2026-06-21T12:05:56.277690Z"
+  },
+  {
+    "title": "Anthropic to Require ID Verification for Certain Capabilities Starting July 8",
+    "link": "https://old.reddit.com/r/ClaudeAI/comments/1ubm53n/official_anthropic_to_require_identity/",
+    "source": "HackerNews",
+    "score": 30,
+    "should_post": false,
+    "reason": "Fails Ships Test. Announcement of future policy change, not a new artifact to download, use, or deploy right now.",
+    "post_text": "No post generated",
+    "source_angle": "No source angle provided",
+    "source_tier": 3,
+    "engagement_score": 182.5,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-06-21T15:46:13.551418Z"
   }
 ]
