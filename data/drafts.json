@@ -8314,5 +8314,19 @@
     "engagement_score": 51.0,
     "local_newsworthiness_score": 0,
     "created_at": "2026-06-21T19:14:41.176452Z"
+  },
+  {
+    "title": "Bending Emacs Ep. 14: Prototype iOS apps with agent-shell artist-mode and skills [video]",
+    "link": "https://www.youtube.com/watch?v=7fdHeUoRRgg",
+    "source": "HackerNews",
+    "score": 20,
+    "should_post": false,
+    "reason": "Video demonstrates an Emacs workflow for iOS prototyping, but lacks a clear, new, downloadable tool or API for immediate builder action. Low signal.",
+    "post_text": "No post generated",
+    "source_angle": "Emacs workflow for iOS prototyping via agent-shell and artist-mode.",
+    "source_tier": 3,
+    "engagement_score": 32.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-21T21:04:34.637899Z"
   }
 ]
