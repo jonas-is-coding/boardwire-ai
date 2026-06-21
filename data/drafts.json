@@ -8272,5 +8272,19 @@
     "engagement_score": 182.5,
     "local_newsworthiness_score": 10,
     "created_at": "2026-06-21T15:46:13.551418Z"
+  },
+  {
+    "title": "AI Has Broken Hiring",
+    "link": "https://hbr.org/2026/06/ai-has-broken-hiring-heres-how-to-fix-it",
+    "source": "HackerNews",
+    "score": 15,
+    "should_post": false,
+    "reason": "Fails Ships Test. Opinion piece on AI's impact on hiring, not a release, tool, or actionable artifact for builders. Low engagement for Tier 3.",
+    "post_text": "No post generated",
+    "source_angle": "HBR opinion on AI's impact on hiring practices",
+    "source_tier": 3,
+    "engagement_score": 49.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-21T17:18:48.160250Z"
   }
 ]
