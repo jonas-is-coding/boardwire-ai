@@ -2733,5 +2733,48 @@
     },
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-22-good-results-fine-tuning-a-local-llm-like-qwen-3-0-6b-to-categorize-questions-7f88c511006a.md",
     "published_at": "2026-06-22T12:53:12.587117Z"
+  },
+  {
+    "id": "5d6a872e0a8f",
+    "status": "approved",
+    "created_at": "2026-06-22T15:14:18.354855Z",
+    "score": 90,
+    "reason": "GitHub repo with 23 Claude Code tools released, directly usable for agentic workflows. Passes Ships Test.",
+    "proposed_post": "Garry Tan released `gstack`, a GitHub repo with 23 opinionated tools for Claude Code. Builders can now deploy a pre-configured agentic workflow for product roles, accelerating Claude Code agent development.",
+    "source_angle": "Garry Tan's Claude Code setup for agentic product roles",
+    "source_item": {
+      "title": "garrytan/gstack — Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA",
+      "source": "GitHub Trending",
+      "link": "https://github.com/garrytan/gstack",
+      "source_tier": 2,
+      "engagement_score": 454.0,
+      "local_newsworthiness_score": 20,
+      "summary": "Trending on GitHub today: +454 stars. Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA\n[Cluster context: 1 sources, engagement 454, common terms: doc, opinionated, garrytan/gstack, setup, trending.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 454,
+        "common_terms": [
+          "doc",
+          "opinionated",
+          "garrytan/gstack",
+          "setup",
+          "trending",
+          "claude",
+          "eng",
+          "stars."
+        ],
+        "cluster_summary": "1 sources, engagement 454. Common terms: doc, opinionated, garrytan/gstack, setup. Lead: garrytan/gstack — Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager",
+        "alternative_titles": [],
+        "cluster_score": 15
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, das hier ist ein Hit für unsere Developer. Garry Tan's 'gstack' ist gerade auf GitHub am Trenden und bietet ein komplettes Claude-Setup mit 23 Tools.\n\nEntwickler können sich hier direkt eine einsatzbereite AI-Infrastruktur reinziehen, die von CEO bis QA alles abdeckt. Das spart massiv Zeit beim Experimentieren und gibt einen bewährten Startpunkt, um AI-Agents für verschiedene Rollen zu nutzen.",
+    "chloe_note": "Hey, *garrytan/gstack — Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen GitHub repo with 23 Claude Code tools released, directly usable for agentic workflows. Passes Ships Test.Cluster context: 1 sources, engagement 454. Common terms: doc, opinionated, garrytan/gstack, setup. Score aktuell: 90. Link: https://github.com/garrytan/gstack"
   }
 ]
