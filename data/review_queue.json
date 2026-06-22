@@ -2623,5 +2623,48 @@
     },
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-21-identity-verification-on-claude-a3104bc9495f.md",
     "published_at": "2026-06-21T20:27:19.524883Z"
+  },
+  {
+    "id": "933a126ea2fa",
+    "status": "approved",
+    "created_at": "2026-06-22T02:44:03.416449Z",
+    "score": 90,
+    "reason": "New open-source tool provides local memory for Claude Code, directly actionable for builders.",
+    "proposed_post": "Recall, an open-source tool, now offers fully-local project memory for Claude Code. Builders can use this to persist context for Claude agents, enabling more robust, long-running interactions without external databases.",
+    "source_angle": "Open-source local memory for Claude Code",
+    "source_item": {
+      "title": "Show HN: Recall – fully-local project memory for Claude Code",
+      "source": "HackerNews",
+      "link": "https://github.com/raiyanyahya/recall",
+      "source_tier": 3,
+      "engagement_score": 106.0,
+      "local_newsworthiness_score": 40,
+      "summary": "77 points, 58 comments on Hacker News — submitted by mateenah — original: https://github.com/raiyanyahya/recall\n[Cluster context: 1 sources, engagement 106, common terms: fully-local, original, memory, recall, submitted.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 106,
+        "common_terms": [
+          "fully-local",
+          "original",
+          "memory",
+          "recall",
+          "submitted",
+          "show",
+          "claude",
+          "hacker"
+        ],
+        "cluster_summary": "1 sources, engagement 106. Common terms: fully-local, original, memory, recall. Lead: Show HN: Recall – fully-local project memory for Claude Code",
+        "alternative_titles": [],
+        "cluster_score": 10
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, dieser \"Recall\" auf HN ist interessant. Ein fully-local Projektgedächtnis für Claude Code – das ist genau das, was viele Devs suchen, die LLMs produktiv nutzen wollen, aber ihre Daten nicht nach draußen geben können oder wollen.\n\nKonkret: Entwickler können damit ihre Codebases oder Projekte in Claude nutzen, ohne IP-Risiken einzugehen oder auf externe APIs angewiesen zu sein. Das ist ein Game-Changer für interne Projekte oder sensiblere Daten. Direkt zum Ausprobieren auf GitHub.",
+    "chloe_note": "Kurzes Update: *Show HN: Recall – fully-local project memory for Claude Code* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um New open-source tool provides local memory for Claude Code, directly actionable for builders.Cluster context: 1 sources, engagement 106. Common terms: fully-local, original, memory, recall. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://github.com/raiyanyahya/recall"
   }
 ]
