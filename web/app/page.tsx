@@ -65,8 +65,8 @@ const pillars = [
   {
     no: "03",
     title: "Cheap compute, strict editorial gate",
-    body: "Embeddings run locally on GitHub Actions CPU runners to avoid burning API quota. LLM calls stay focused on final editorial choices, while Slack is used as the agent-to-agent communication layer.",
-    meta: "local embeddings · batch LLM · agent comms",
+    body: "Embeddings run locally on GitHub Actions CPU runners to avoid burning API quota. LLM calls stay focused on final editorial choices before a reviewed publish step.",
+    meta: "local embeddings · batch LLM · review gate",
   },
 ];
 
@@ -200,7 +200,7 @@ export default function Home() {
             <p className={styles.sectionSub}>
               From raw firehose to approved publish artifact: source expansion,
               reputation tiers, local embedding-based clustering, story ranking,
-              then AI-agent coordination in Slack.
+              then a reviewed publish handoff.
             </p>
           </div>
           <Workflow />
@@ -325,7 +325,7 @@ export default function Home() {
               Up to three concrete updates a day.
             </h2>
             <p className={styles.outroSub}>
-              Boardwire publishes to Bluesky and X. No newsletter, no roundups,
+              Boardwire publishes to Bluesky. No newsletter, no roundups,
               no week-in-review — just the signal, when it lands.
             </p>
             <div className={styles.heroCta}>
@@ -336,14 +336,6 @@ export default function Home() {
                 rel="noreferrer"
               >
                 Follow on Bluesky
-              </a>
-              <a
-                href="https://x.com/boardwire_ai"
-                className={styles.btnGhost}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Follow on X →
               </a>
             </div>
           </div>
