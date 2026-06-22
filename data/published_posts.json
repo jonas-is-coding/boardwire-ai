@@ -726,5 +726,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-22-good-results-fine-tuning-a-local-llm-like-qwen-3-0-6b-to-categorize-questions-7f88c511006a.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mouwk5yn5r2y",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mouwk5yn5r2y"
+  },
+  {
+    "id": "5d6a872e0a8f",
+    "published_at": "2026-06-22T17:42:00.566574Z",
+    "platform": "bluesky",
+    "post": "Gstack provides Claude Code setup with 23 tools.\n\nGarrytan/gstack gains +454 stars with opinionated tools for CEO to QA roles.\n\nPre-configured agentic workflow for product roles accelerates Claude Code agent development, directly usable with 23 tools.\n\n📖 Read the full article: fi",
+    "source_link": "https://github.com/garrytan/gstack",
+    "source_title": "garrytan/gstack — Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA",
+    "score": 90,
+    "reason": "GitHub repo with 23 Claude Code tools released, directly usable for agentic workflows. Passes Ships Test.",
+    "card_path": "generated/cards/5d6a872e0a8f.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-22-garrytan-gstack-use-garry-tan-s-exact-claude-code-setup-23-opinionated-tools-that-serve-as-ceo-designer-eng-manager-release-manager-doc-engineer-and-qa-5d6a872e0a8f.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3movgomqzob23",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3movgomqzob23"
   }
 ]

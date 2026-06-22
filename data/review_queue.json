@@ -2736,11 +2736,11 @@
   },
   {
     "id": "5d6a872e0a8f",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-22T15:14:18.354855Z",
     "score": 90,
     "reason": "GitHub repo with 23 Claude Code tools released, directly usable for agentic workflows. Passes Ships Test.",
-    "proposed_post": "Garry Tan released `gstack`, a GitHub repo with 23 opinionated tools for Claude Code. Builders can now deploy a pre-configured agentic workflow for product roles, accelerating Claude Code agent development.",
+    "proposed_post": "Gstack provides Claude Code setup with 23 tools.\n\nGarrytan/gstack gains +454 stars with opinionated tools for CEO to QA roles.\n\nPre-configured agentic workflow for product roles accelerates Claude Code agent development, directly usable with 23 tools.\n\n📖 Read the full article: fi",
     "source_angle": "Garry Tan's Claude Code setup for agentic product roles",
     "source_item": {
       "title": "garrytan/gstack — Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA",
@@ -2771,10 +2771,22 @@
         "cluster_score": 15
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/5d6a872e0a8f.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das hier ist ein Hit für unsere Developer. Garry Tan's 'gstack' ist gerade auf GitHub am Trenden und bietet ein komplettes Claude-Setup mit 23 Tools.\n\nEntwickler können sich hier direkt eine einsatzbereite AI-Infrastruktur reinziehen, die von CEO bis QA alles abdeckt. Das spart massiv Zeit beim Experimentieren und gibt einen bewährten Startpunkt, um AI-Agents für verschiedene Rollen zu nutzen.",
-    "chloe_note": "Hey, *garrytan/gstack — Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen GitHub repo with 23 Claude Code tools released, directly usable for agentic workflows. Passes Ships Test.Cluster context: 1 sources, engagement 454. Common terms: doc, opinionated, garrytan/gstack, setup. Score aktuell: 90. Link: https://github.com/garrytan/gstack"
+    "chloe_note": "Hey, *garrytan/gstack — Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen GitHub repo with 23 Claude Code tools released, directly usable for agentic workflows. Passes Ships Test.Cluster context: 1 sources, engagement 454. Common terms: doc, opinionated, garrytan/gstack, setup. Score aktuell: 90. Link: https://github.com/garrytan/gstack",
+    "sarah_package": {
+      "title": "Gstack provides Claude Code setup with 23 tools.",
+      "subtitle": "Garrytan/gstack gains +454 stars with opinionated tools for CEO to QA roles.",
+      "description": "Pre-configured agentic workflow for product roles accelerates Claude Code agent development, directly usable with 23 tools.",
+      "hashtags": [
+        "#Gstack",
+        "#ClaudeCode",
+        "#AgenticWorkflows"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-22-garrytan-gstack-use-garry-tan-s-exact-claude-code-setup-23-opinionated-tools-that-serve-as-ceo-designer-eng-manager-release-manager-doc-engineer-and-qa-5d6a872e0a8f.md",
+    "published_at": "2026-06-22T17:42:00.566574Z"
   }
 ]
