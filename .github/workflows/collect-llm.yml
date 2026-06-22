@@ -35,6 +35,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: boardwire-collect-llm-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   collect_llm:
     runs-on: ubuntu-latest
@@ -59,6 +63,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -106,5 +112,17 @@ jobs:
             echo "No data changes to commit"
           else
             git commit -m "chore: update LLM-collected drafts and review queue"
-            git push
+
+            for attempt in 1 2 3; do
+              if git push; then
+                exit 0
+              fi
+
+              echo "Push failed on attempt ${attempt}; rebasing onto latest ${GITHUB_REF_NAME} before retrying"
+              git fetch origin "${GITHUB_REF_NAME}"
+              git rebase "origin/${GITHUB_REF_NAME}"
+            done
+
+            echo "Push failed after 3 attempts" >&2
+            exit 1
           fi
