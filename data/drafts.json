@@ -8706,5 +8706,33 @@
     "engagement_score": 0.0,
     "local_newsworthiness_score": 0,
     "created_at": "2026-06-22T21:55:37.139595Z"
+  },
+  {
+    "title": "Unsloth GLM-5.2 – How to Run Locally",
+    "link": "https://unsloth.ai/docs/models/glm-5.2",
+    "source": "HackerNews",
+    "score": 4,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 63.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-22T23:12:04.533551Z"
+  },
+  {
+    "title": "LangChain v1.3.11",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.3.11",
+    "source": "LangChain Releases",
+    "score": 85,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "LangChain update improves tool calling reliability for OpenAI-compatible models.",
+    "source_tier": 2,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 35,
+    "created_at": "2026-06-22T23:12:09.972555Z"
   }
 ]
