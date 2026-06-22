@@ -2678,5 +2678,48 @@
     },
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-22-show-hn-recall-fully-local-project-memory-for-claude-code-933a126ea2fa.md",
     "published_at": "2026-06-22T06:32:35.695429Z"
+  },
+  {
+    "id": "7f88c511006a",
+    "status": "approved",
+    "created_at": "2026-06-22T09:39:05.878892Z",
+    "score": 85,
+    "reason": "Practical demonstration of fine-tuning an open-weight 0.6B LLM for local classification. Ships Test: PASS.",
+    "proposed_post": "Qwen 0.6B can be fine-tuned for effective local question categorization. Builders can deploy specialized, low-resource models for classification tasks, reducing API costs and improving privacy/latency.",
+    "source_angle": "Guide on fine-tuning Qwen 0.6B for local classification.",
+    "source_item": {
+      "title": "Good results fine tuning a local LLM like Qwen 3:0.6B to categorize questions",
+      "source": "HackerNews",
+      "link": "https://www.teachmecoolstuff.com/viewarticle/fine-tuning-a-local-llm-to-categorize-questions",
+      "source_tier": 3,
+      "engagement_score": 144.0,
+      "local_newsworthiness_score": 10,
+      "summary": "129 points, 30 comments on Hacker News — submitted by dev-experiments — original: https://www.teachmecoolstuff.com/viewarticle/fine-tuning-a-local-llm-to-categorize-questions\n[Cluster context: 1 sources, engagement 144, common terms: fine, 0.6b, results, points, qwen.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 144,
+        "common_terms": [
+          "fine",
+          "0.6b",
+          "results",
+          "points",
+          "qwen",
+          "tuning",
+          "local",
+          "good"
+        ],
+        "cluster_summary": "1 sources, engagement 144. Common terms: fine, 0.6b, results, points. Lead: Good results fine tuning a local LLM like Qwen 3:0.6B to categorize questions",
+        "alternative_titles": [],
+        "cluster_score": 10
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, dieser HackerNews-Thread zu Qwen 0.6B ist spannend. Die Fine-Tuning-Ergebnisse für Kategorisierung sind vielversprechend. Für Devs, die lokale LLMs mit minimalem Overhead für spezifische Klassifikationsaufgaben nutzen wollen, ist das ein direkter Anwendungsfall.",
+    "chloe_note": "*Good results fine tuning a local LLM like Qwen 3:0.6B to categorize questions* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Practical demonstration of fine-tuning an open-weight 0.6B LLM for local classification. Ships Test: PASS.Cluster context: 1 sources, engagement 144. Common terms: fine, 0.6b, results, points. Bewertung: 85. Quelle: https://www.teachmecoolstuff.com/viewarticle/fine-tuning-a-local-llm-to-categorize-questions"
   }
 ]

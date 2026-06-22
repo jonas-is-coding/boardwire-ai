@@ -8440,5 +8440,61 @@
     "engagement_score": 74.0,
     "local_newsworthiness_score": 0,
     "created_at": "2026-06-22T02:44:04.720238Z"
+  },
+  {
+    "title": "Good results fine tuning a local LLM like Qwen 3:0.6B to categorize questions",
+    "link": "https://www.teachmecoolstuff.com/viewarticle/fine-tuning-a-local-llm-to-categorize-questions",
+    "source": "HackerNews",
+    "score": 85,
+    "should_post": true,
+    "reason": "Practical demonstration of fine-tuning an open-weight 0.6B LLM for local classification. Ships Test: PASS.",
+    "post_text": "Qwen 0.6B can be fine-tuned for effective local question categorization. Builders can deploy specialized, low-resource models for classification tasks, reducing API costs and improving privacy/latency.",
+    "source_angle": "Guide on fine-tuning Qwen 0.6B for local classification.",
+    "source_tier": 3,
+    "engagement_score": 144.0,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-06-22T09:39:05.878892Z"
+  },
+  {
+    "title": "Sakana Fugu",
+    "link": "https://sakana.ai/fugu/",
+    "source": "HackerNews",
+    "score": 3,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 158.0,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-06-22T09:39:06.753724Z"
+  },
+  {
+    "title": "Codex logging bug may write TBs to local SSDs",
+    "link": "https://github.com/openai/codex/issues/28224",
+    "source": "HackerNews",
+    "score": 2,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 96.0,
+    "local_newsworthiness_score": 30,
+    "created_at": "2026-06-22T09:39:06.753905Z"
+  },
+  {
+    "title": "Tech Workers Are Fighting Against Silicon Valley's AI Push",
+    "link": "https://www.techpolicy.press/tech-workers-are-fighting-against-silicon-valleys-ai-push/",
+    "source": "HackerNews",
+    "score": 2,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 44.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-22T09:39:06.754061Z"
   }
 ]
