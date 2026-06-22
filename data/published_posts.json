@@ -698,5 +698,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-21-identity-verification-on-claude-a3104bc9495f.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mot7hanhsu2v",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mot7hanhsu2v"
+  },
+  {
+    "id": "933a126ea2fa",
+    "published_at": "2026-06-22T06:32:35.695429Z",
+    "platform": "bluesky",
+    "post": "Claude Code gets local project memory.\n\nRecall provides fully-local storage with 58 comments and 77 points on Hacker News.\n\nBuilders can now persist context for Claude agents without external databases, available on GitHub as Recall.\n\n📖 Read the full article: file:///home/runner/",
+    "source_link": "https://github.com/raiyanyahya/recall",
+    "source_title": "Show HN: Recall – fully-local project memory for Claude Code",
+    "score": 90,
+    "reason": "New open-source tool provides local memory for Claude Code, directly actionable for builders.",
+    "card_path": "generated/cards/933a126ea2fa.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-22-show-hn-recall-fully-local-project-memory-for-claude-code-933a126ea2fa.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3moubbmuwzc2z",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3moubbmuwzc2z"
   }
 ]
