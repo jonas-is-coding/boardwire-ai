@@ -740,5 +740,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-22-garrytan-gstack-use-garry-tan-s-exact-claude-code-setup-23-opinionated-tools-that-serve-as-ceo-designer-eng-manager-release-manager-doc-engineer-and-qa-5d6a872e0a8f.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3movgomqzob23",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3movgomqzob23"
+  },
+  {
+    "id": "ff387b0fc147",
+    "published_at": "2026-06-23T17:20:26.407132Z",
+    "platform": "bluesky",
+    "post": "LangChain drops file workarounds for OpenRouter.\n\nLangChain v0.2.4 replaces file uploads with native OpenRouter integration, adds cache_control passth\n\nOpenRouter 0.9.2 integration replaces prior file workaround in LangChain v0.2.4. Adds cache_control testing for tool definitions",
+    "source_link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-openrouter%3D%3D0.2.4",
+    "source_title": "LangChain v0.2.4",
+    "score": 60,
+    "reason": "local newsworthiness fallback",
+    "card_path": "generated/cards/ff387b0fc147.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-23-langchain-v0-2-4-ff387b0fc147.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3moxvwxoynr2f",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3moxvwxoynr2f"
   }
 ]

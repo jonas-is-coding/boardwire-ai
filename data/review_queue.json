@@ -2791,11 +2791,11 @@
   },
   {
     "id": "ff387b0fc147",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-23T07:39:13.824656Z",
     "score": 60,
     "reason": "local newsworthiness fallback",
-    "proposed_post": "LangChain updates openrouter to 0.9.2.\n\nLangChain v0.2.4 bumps openrouter floor, drops file workaround, with cache_control passthrough tests\n\nOpenrouter 0.9.2 integration replaces prior file workaround, adds cache_control testing for tool definitions.\n\n#LangChain #OpenRouter #v0_",
+    "proposed_post": "LangChain drops file workarounds for OpenRouter.\n\nLangChain v0.2.4 replaces file uploads with native OpenRouter integration, adds cache_control passth\n\nOpenRouter 0.9.2 integration replaces prior file workaround in LangChain v0.2.4. Adds cache_control testing for tool definitions",
     "source_angle": "Local high-score + Sarah/OpenRouter fallback",
     "source_item": {
       "title": "LangChain v0.2.4",
@@ -2828,11 +2828,23 @@
         "cluster_score": 35
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/ff387b0fc147.png",
     "is_llm_mode": false,
     "breaking": false,
     "claire_note": "Aus *LangChain Releases* ist ein starker Kandidat reingekommen: *LangChain v0.2.4*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 60_",
-    "chloe_note": "*LangChain v0.2.4* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: js-issue-link, changes, refresh, 1.3.3. Bewertung: 60. Quelle: https://github.com/langchain-ai/langchain/releases/tag/langchain-openrouter%3D%3D0.2.4"
+    "chloe_note": "*LangChain v0.2.4* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: js-issue-link, changes, refresh, 1.3.3. Bewertung: 60. Quelle: https://github.com/langchain-ai/langchain/releases/tag/langchain-openrouter%3D%3D0.2.4",
+    "sarah_package": {
+      "title": "LangChain drops file workarounds for OpenRouter.",
+      "subtitle": "LangChain v0.2.4 replaces file uploads with native OpenRouter integration, adds cache_control passth",
+      "description": "OpenRouter 0.9.2 integration replaces prior file workaround in LangChain v0.2.4. Adds cache_control testing for tool definitions. Apache 2.0",
+      "hashtags": [
+        "#LangChain",
+        "#OpenRouter",
+        "#vLLM"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-23-langchain-v0-2-4-ff387b0fc147.md",
+    "published_at": "2026-06-23T17:20:26.407132Z"
   },
   {
     "id": "4368fc0493f7",
