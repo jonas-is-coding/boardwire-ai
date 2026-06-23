@@ -2943,5 +2943,48 @@
     },
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-23-mistral-ocr-4-e6f5e2c35ee3.md",
     "published_at": "2026-06-23T21:02:06.298739Z"
+  },
+  {
+    "id": "751ce9c20f72",
+    "status": "approved",
+    "created_at": "2026-06-23T21:23:54.727689Z",
+    "score": 90,
+    "reason": "Direct release of Claude Code v2.1.187 with new security settings and organizational model restrictions. Immediately actionable for builders.",
+    "proposed_post": "Claude Code v2.1.187 adds `sandbox.credentials` to block sandboxed commands from reading sensitive files and enables org-configured model restrictions. This improves security and control for teams deploying Claude Code, allowing safer integration into enterprise workflows.",
+    "source_angle": "Claude Code CLI update with enhanced security and enterprise controls.",
+    "source_item": {
+      "title": "Claude Code v2.1.187",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.187",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 35,
+      "summary": "<h2>What's changed</h2>\n<ul>\n<li>Added <code>sandbox.credentials</code> setting to block sandboxed commands from reading credential files and secret environment variables</li>\n<li>Added org-configured model restrictions to the model picker, <code>--model</code>, <code>/model</code>, and <code>ANTHROPIC_MODEL</code>, with a \"restricted by your organization's settings\" message when a restricted model is selected</li>\n<li>Added mouse click support to select menus (permission prompts, <code>/model</code>, <code>/config</code>, etc.) in fullscreen mode</li>\n<li>Fixed <code>--resume</code> failing with \"No conversation found\" when the original <code>-p</code> run produced no model turns</li>\n<li>Fixed <code>--json-schema</code> and workflow <code>agent({schema})</code> structured output: the model can no longer re-call <code>StructuredOutput</code> indefinitely after a successful call, and follow-up turns now reliably return structured output</li>\n<li>Fixed remote MCP tool calls that hang with no response for 5 minutes — they now abort with an error instead of blocking indefinitely (override with <code>CLAUDE_CODE_MCP_TOOL_IDLE_TIMEOUT</code>)</li>\n<li>Fixed Claude Code Remote sessions taking ~2.7s longer to start after the agent proxy CA system-trust install was added</li>\n<li>Fixed pasted Korean/CJK text turning into mojibake in terminals that deliver paste as per-byte extended-key events</li>\n<li>Fixed <code>/update</code> over Remote Control hanging when a startup trust dialog would have shown</li>\n<li>Fixed background jobs in the agents view getting stuck in \"working\" indefinitely when the agent ended a turn without producing structured output</li>\n<li>Fixed channel connections dropping after navigating to the agents view and back, and after <code>/bg</code>, <code>/tui</code>, or <code>/update</code></li>\n<li>Fixed agent stop notifications not correctly attributing who stopped the agent, and improved wording (\"finished\"/\"stopped\" instead of \"came to rest\")</li>\n<li>Fixed subagent depth tracking: resumed subagents now restore their original spawn depth, and forked subagents now count toward the depth cap</li>\n<li>Fixed leaked agent worktree registrations: locked <code>.git/worktrees/</code> entries from killed agents are now cleaned up automatically</li>\n<li>Fixed Cmd+click not opening URLs in fullscreen mode in Ghostty on macOS</li>\n<li>Fixed <code>claude --help</code> not listing the <code>--bg</code>/<code>--background</code> flag</li>\n<li>Fixed Esc, Ctrl-C, and Ctrl-D not working while <code>/share</code> is uploading</li>\n<li>Improved <code>/install-github-app</code>: GitHub Actions workflow setup is now optional — you can install just the GitHub App and skip the workflow/secret steps</li>\n<li>Improved <code>/btw</code> with ←/→ arrow navigation to step through earlier answers</li>\n<li>Improved <code>/plugin</code> to surface plugins you haven't used recently so you can clean them up</li>\n<li>[VSCode] Fixed extension becoming unresponsive when resuming a large session</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: pasted, flag, workflow, can, korean/cjk.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Claude Code Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "pasted",
+          "flag",
+          "workflow",
+          "can",
+          "korean/cjk",
+          "spawn",
+          "/model",
+          "mode"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: pasted, flag, workflow, can. Lead: Claude Code v2.1.187",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, das Claude Code Update 2.1.187 ist relevant. Die neue 'sandbox.credentials'-Einstellung ist ein direkter Win für Sicherheit, weil sie verhindert, dass Sandboxed Commands auf Credential-Files zugreifen. Das ist wichtig für Teams, die mit sensiblen Daten arbeiten und ihre CI/CD-Pipelines absichern wollen.",
+    "chloe_note": "*Claude Code v2.1.187* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Direct release of Claude Code v2.1.187 with new security settings and organizational model restrictions. Immediately actionable for builders.Cluster context: 1 sources, engagement 0. Common terms: pasted, flag, workflow, can. Bewertung: 90. Quelle: https://github.com/anthropics/claude-code/releases/tag/v2.1.187"
   }
 ]
