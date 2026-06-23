@@ -8734,5 +8734,61 @@
     "engagement_score": 0.0,
     "local_newsworthiness_score": 35,
     "created_at": "2026-06-22T23:12:09.972555Z"
+  },
+  {
+    "title": "LangChain v1.4.7",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-anthropic%3D%3D1.4.7",
+    "source": "LangChain Releases",
+    "score": 30,
+    "should_post": false,
+    "reason": "Minor LangChain Anthropic library update with hotfix and dependency bumps. No new features or significant changes for builders to act on.",
+    "post_text": "No post generated",
+    "source_angle": "No source angle provided",
+    "source_tier": 2,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 35,
+    "created_at": "2026-06-23T02:09:50.559667Z"
+  },
+  {
+    "title": "Simon Willison v4.8",
+    "link": "https://simonwillison.net/2026/Jun/22/porting-moebius/#atom-entries",
+    "source": "Simon Willison",
+    "score": 90,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Simon Willison ports Moebius to WebGPU for browser inpainting.",
+    "source_tier": 2,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-23T02:10:03.589693Z"
+  },
+  {
+    "title": "Show HN: Selector Forge – browser extension for AI-generated resilient selectors",
+    "link": "https://github.com/Intuned/selector-forge",
+    "source": "HackerNews",
+    "score": 4,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 31.5,
+    "local_newsworthiness_score": 30,
+    "created_at": "2026-06-23T02:10:03.590051Z"
+  },
+  {
+    "title": "Meta pauses AI training program tracking employee keystrokes after internal leak",
+    "link": "https://www.businessinsider.com/meta-ai-training-data-leak-exposed-employee-activity-across-company-2026-6",
+    "source": "HackerNews",
+    "score": 4,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 45.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-23T02:10:03.590183Z"
   }
 ]
