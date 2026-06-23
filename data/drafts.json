@@ -8860,5 +8860,61 @@
     "engagement_score": 70.5,
     "local_newsworthiness_score": 0,
     "created_at": "2026-06-23T07:39:13.825174Z"
+  },
+  {
+    "title": "Shipping huggingface_hub every week with AI, open tools, and a human in the loop",
+    "link": "https://huggingface.co/blog/huggingface-hub-release-ci",
+    "source": "Hugging Face Blog",
+    "score": 4,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 2,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-06-23T10:54:19.633816Z"
+  },
+  {
+    "title": "LangChain v1.3.3",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.3.3",
+    "source": "LangChain Releases",
+    "score": 15,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 2,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 35,
+    "created_at": "2026-06-23T10:54:20.358263Z"
+  },
+  {
+    "title": "AI Built a Nuke and Still Lost",
+    "link": "https://www.lwilko.com/blog/i-gave-an-ai-a-civilization",
+    "source": "HackerNews",
+    "score": 3,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 100.5,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-06-23T10:54:20.358700Z"
+  },
+  {
+    "title": "How Omio is building the future of conversational travel",
+    "link": "https://openai.com/index/omio",
+    "source": "OpenAI News",
+    "score": 4,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 1,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-23T10:54:20.358857Z"
   }
 ]
