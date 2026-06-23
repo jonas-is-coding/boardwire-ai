@@ -2833,5 +2833,48 @@
     "breaking": false,
     "claire_note": "Aus *LangChain Releases* ist ein starker Kandidat reingekommen: *LangChain v0.2.4*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 60_",
     "chloe_note": "*LangChain v0.2.4* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: js-issue-link, changes, refresh, 1.3.3. Bewertung: 60. Quelle: https://github.com/langchain-ai/langchain/releases/tag/langchain-openrouter%3D%3D0.2.4"
+  },
+  {
+    "id": "4368fc0493f7",
+    "status": "approved",
+    "created_at": "2026-06-23T14:26:15.079846Z",
+    "score": 85,
+    "reason": "Official directory of Claude Code plugins provides immediate integration resources for developers.",
+    "proposed_post": "Anthropic launched an official GitHub directory for Claude Code Plugins. Builders can now find and integrate curated tools to extend Claude Code's capabilities, streamlining development of agentic workflows.",
+    "source_angle": "Anthropic's official plugin directory for Claude Code",
+    "source_item": {
+      "title": "anthropics/claude-plugins-official — Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+      "source": "GitHub Trending",
+      "link": "https://github.com/anthropics/claude-plugins-official",
+      "source_tier": 2,
+      "engagement_score": 66.0,
+      "local_newsworthiness_score": 40,
+      "summary": "Trending on GitHub today: +66 stars. Official, Anthropic-managed directory of high quality Claude Code Plugins.\n[Cluster context: 1 sources, engagement 66, common terms: directory, trending, anthropics/claude-plugins-official, plugins., github.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 66,
+        "common_terms": [
+          "directory",
+          "trending",
+          "anthropics/claude-plugins-official",
+          "plugins.",
+          "github",
+          "quality",
+          "anthropic-managed",
+          "claude"
+        ],
+        "cluster_summary": "1 sources, engagement 66. Common terms: directory, trending, anthropics/claude-plugins-official, plugins.. Lead: anthropics/claude-plugins-official — Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+        "alternative_titles": [],
+        "cluster_score": 15
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Aus *GitHub Trending* ist ein starker Kandidat reingekommen: *anthropics/claude-plugins-official — Official, Anthropic-managed directory of high quality Claude Code Plugins.*.\nRelevanz fuer Builder: Official directory of Claude Code plugins provides immediate integration resources for developers.\n_Score: 85_",
+    "chloe_note": "*anthropics/claude-plugins-official — Official, Anthropic-managed directory of high quality Claude Code Plugins.* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Official directory of Claude Code plugins provides immediate integration resources for developers.Cluster context: 1 sources, engagement 66. Common terms: directory, trending, anthropics/claude-plugins-official, plugins. Bewertung: 85. Quelle: https://github.com/anthropics/claude-plugins-official"
   }
 ]

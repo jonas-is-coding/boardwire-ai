@@ -8916,5 +8916,47 @@
     "engagement_score": 0.0,
     "local_newsworthiness_score": 0,
     "created_at": "2026-06-23T10:54:20.358857Z"
+  },
+  {
+    "title": "anthropics/claude-plugins-official — Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+    "link": "https://github.com/anthropics/claude-plugins-official",
+    "source": "GitHub Trending",
+    "score": 85,
+    "should_post": true,
+    "reason": "Official directory of Claude Code plugins provides immediate integration resources for developers.",
+    "post_text": "Anthropic launched an official GitHub directory for Claude Code Plugins. Builders can now find and integrate curated tools to extend Claude Code's capabilities, streamlining development of agentic workflows.",
+    "source_angle": "Anthropic's official plugin directory for Claude Code",
+    "source_tier": 2,
+    "engagement_score": 66.0,
+    "local_newsworthiness_score": 40,
+    "created_at": "2026-06-23T14:26:15.079846Z"
+  },
+  {
+    "title": "shanraisshan/claude-code-best-practice — from vibe coding to agentic engineering - practice makes claude perfect",
+    "link": "https://github.com/shanraisshan/claude-code-best-practice",
+    "source": "GitHub Trending",
+    "score": 10,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 2,
+    "engagement_score": 329.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-23T14:26:15.499016Z"
+  },
+  {
+    "title": "Build real agentic apps using CUGA: two dozen working examples on a lightweight harness",
+    "link": "https://huggingface.co/blog/ibm-research/cuga-apps",
+    "source": "Hugging Face Blog",
+    "score": 4,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 2,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-06-23T14:26:15.499184Z"
   }
 ]
