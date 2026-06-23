@@ -2888,5 +2888,48 @@
     "breaking": false,
     "claire_note": "Aus *GitHub Trending* ist ein starker Kandidat reingekommen: *anthropics/claude-plugins-official — Official, Anthropic-managed directory of high quality Claude Code Plugins.*.\nRelevanz fuer Builder: Official directory of Claude Code plugins provides immediate integration resources for developers.\n_Score: 85_",
     "chloe_note": "*anthropics/claude-plugins-official — Official, Anthropic-managed directory of high quality Claude Code Plugins.* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Official directory of Claude Code plugins provides immediate integration resources for developers.Cluster context: 1 sources, engagement 66. Common terms: directory, trending, anthropics/claude-plugins-official, plugins. Bewertung: 85. Quelle: https://github.com/anthropics/claude-plugins-official"
+  },
+  {
+    "id": "e6f5e2c35ee3",
+    "status": "approved",
+    "created_at": "2026-06-23T17:45:33.421738Z",
+    "score": 90,
+    "reason": "Mistral's official release of a new OCR model (OCR 4) offers concrete performance improvements for builders.",
+    "proposed_post": "Mistral launched OCR 4. This new model delivers improved accuracy and speed for optical character recognition, enabling builders to enhance document processing and automation workflows.",
+    "source_angle": "Mistral official release via Hacker News discussion",
+    "source_item": {
+      "title": "Mistral OCR 4",
+      "source": "HackerNews",
+      "link": "https://mistral.ai/news/ocr-4/",
+      "source_tier": 3,
+      "engagement_score": 306.0,
+      "local_newsworthiness_score": 10,
+      "summary": "271 points, 70 comments on Hacker News — submitted by meetpateltech — original: https://mistral.ai/news/ocr-4/\n[Cluster context: 1 sources, engagement 306, common terms: hacker, original, points, meetpateltech, mistral.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 306,
+        "common_terms": [
+          "hacker",
+          "original",
+          "points",
+          "meetpateltech",
+          "mistral",
+          "ocr",
+          "271",
+          "comments"
+        ],
+        "cluster_summary": "1 sources, engagement 306. Common terms: hacker, original, points, meetpateltech. Lead: Mistral OCR 4",
+        "alternative_titles": [],
+        "cluster_score": 10
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Aus *HackerNews* ist ein starker Kandidat reingekommen: *Mistral OCR 4*.\nRelevanz fuer Builder: Mistral's official release of a new OCR model (OCR 4) offers concrete performance improvements for builders.\n_Score: 90_",
+    "chloe_note": "Kurzes Update: *Mistral OCR 4* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Mistral's official release of a new OCR model (OCR 4) offers concrete performance improvements for builders.Cluster context: 1 sources, engagement 306. Common terms: hacker, original, points, meetpateltech. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://mistral.ai/news/ocr-4/"
   }
 ]
