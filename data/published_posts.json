@@ -796,5 +796,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-24-introducing-computer-use-in-gemini-3-5-flash-e3b517f69eda.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mp2s63cijo2f",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mp2s63cijo2f"
+  },
+  {
+    "id": "751ce9c20f72",
+    "published_at": "2026-06-24T22:22:23.262797Z",
+    "platform": "bluesky",
+    "post": "Claude Code enhances security with sandbox credentials.\n\nAdds sandbox.credentials setting, org-configured model restrictions, and has 90 score.\n\nAnthropic releases Claude Code v2.1.187 with new security settings, blocking sandboxed commands from reading sensitive files and enabli",
+    "source_link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.187",
+    "source_title": "Claude Code v2.1.187",
+    "score": 90,
+    "reason": "Direct release of Claude Code v2.1.187 with new security settings and organizational model restrictions. Immediately actionable for builders.",
+    "card_path": "generated/cards/751ce9c20f72.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-23-claude-code-v2-1-187-751ce9c20f72.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mp2xbrrcmh2y",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mp2xbrrcmh2y"
   }
 ]

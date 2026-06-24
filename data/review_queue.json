@@ -2958,11 +2958,11 @@
   },
   {
     "id": "751ce9c20f72",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-23T21:23:54.727689Z",
     "score": 90,
     "reason": "Direct release of Claude Code v2.1.187 with new security settings and organizational model restrictions. Immediately actionable for builders.",
-    "proposed_post": "Claude Code v2.1.187 adds `sandbox.credentials` to block sandboxed commands from reading sensitive files and enables org-configured model restrictions. This improves security and control for teams deploying Claude Code, allowing safer integration into enterprise workflows.",
+    "proposed_post": "Claude Code enhances security with sandbox credentials.\n\nAdds sandbox.credentials setting, org-configured model restrictions, and has 90 score.\n\nAnthropic releases Claude Code v2.1.187 with new security settings, blocking sandboxed commands from reading sensitive files and enabli",
     "source_angle": "Claude Code CLI update with enhanced security and enterprise controls.",
     "source_item": {
       "title": "Claude Code v2.1.187",
@@ -2993,11 +2993,23 @@
         "cluster_score": 45
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/751ce9c20f72.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das Claude Code Update 2.1.187 ist relevant. Die neue 'sandbox.credentials'-Einstellung ist ein direkter Win für Sicherheit, weil sie verhindert, dass Sandboxed Commands auf Credential-Files zugreifen. Das ist wichtig für Teams, die mit sensiblen Daten arbeiten und ihre CI/CD-Pipelines absichern wollen.",
-    "chloe_note": "*Claude Code v2.1.187* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Direct release of Claude Code v2.1.187 with new security settings and organizational model restrictions. Immediately actionable for builders.Cluster context: 1 sources, engagement 0. Common terms: pasted, flag, workflow, can. Bewertung: 90. Quelle: https://github.com/anthropics/claude-code/releases/tag/v2.1.187"
+    "chloe_note": "*Claude Code v2.1.187* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Direct release of Claude Code v2.1.187 with new security settings and organizational model restrictions. Immediately actionable for builders.Cluster context: 1 sources, engagement 0. Common terms: pasted, flag, workflow, can. Bewertung: 90. Quelle: https://github.com/anthropics/claude-code/releases/tag/v2.1.187",
+    "sarah_package": {
+      "title": "Claude Code enhances security with sandbox credentials.",
+      "subtitle": "Adds sandbox.credentials setting, org-configured model restrictions, and has 90 score.",
+      "description": "Anthropic releases Claude Code v2.1.187 with new security settings, blocking sandboxed commands from reading sensitive files and enabling or",
+      "hashtags": [
+        "#Anthropic",
+        "#ClaudeCode",
+        "#ModelRestrictions"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-23-claude-code-v2-1-187-751ce9c20f72.md",
+    "published_at": "2026-06-24T22:22:23.262797Z"
   },
   {
     "id": "e3b517f69eda",
