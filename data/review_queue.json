@@ -2848,11 +2848,11 @@
   },
   {
     "id": "4368fc0493f7",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-23T14:26:15.079846Z",
     "score": 85,
     "reason": "Official directory of Claude Code plugins provides immediate integration resources for developers.",
-    "proposed_post": "Anthropic launched an official GitHub directory for Claude Code Plugins. Builders can now find and integrate curated tools to extend Claude Code's capabilities, streamlining development of agentic workflows.",
+    "proposed_post": "Agentic workflows get a curated plugin registry for Claude Code.\n\nanthropics/claude-plugins-official provides 66+ curated plugins today. Apache 2.0.\n\nOfficial Anthropic directory curates high-quality plugins for Claude Code. Streamlines agentic workflow integration.\n\n📖 Read the f",
     "source_angle": "Anthropic's official plugin directory for Claude Code",
     "source_item": {
       "title": "anthropics/claude-plugins-official — Official, Anthropic-managed directory of high quality Claude Code Plugins.",
@@ -2883,11 +2883,23 @@
         "cluster_score": 15
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/4368fc0493f7.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Aus *GitHub Trending* ist ein starker Kandidat reingekommen: *anthropics/claude-plugins-official — Official, Anthropic-managed directory of high quality Claude Code Plugins.*.\nRelevanz fuer Builder: Official directory of Claude Code plugins provides immediate integration resources for developers.\n_Score: 85_",
-    "chloe_note": "*anthropics/claude-plugins-official — Official, Anthropic-managed directory of high quality Claude Code Plugins.* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Official directory of Claude Code plugins provides immediate integration resources for developers.Cluster context: 1 sources, engagement 66. Common terms: directory, trending, anthropics/claude-plugins-official, plugins. Bewertung: 85. Quelle: https://github.com/anthropics/claude-plugins-official"
+    "chloe_note": "*anthropics/claude-plugins-official — Official, Anthropic-managed directory of high quality Claude Code Plugins.* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Official directory of Claude Code plugins provides immediate integration resources for developers.Cluster context: 1 sources, engagement 66. Common terms: directory, trending, anthropics/claude-plugins-official, plugins. Bewertung: 85. Quelle: https://github.com/anthropics/claude-plugins-official",
+    "sarah_package": {
+      "title": "Agentic workflows get a curated plugin registry for Claude Code.",
+      "subtitle": "anthropics/claude-plugins-official provides 66+ curated plugins today. Apache 2.0.",
+      "description": "Official Anthropic directory curates high-quality plugins for Claude Code. Streamlines agentic workflow integration.",
+      "hashtags": [
+        "#ClaudeCode",
+        "#MCP",
+        "#AgentWorkflows"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-23-anthropics-claude-plugins-official-official-anthropic-managed-directory-of-high-quality-claude-code-plugins-4368fc0493f7.md",
+    "published_at": "2026-06-24T00:03:05.895510Z"
   },
   {
     "id": "e6f5e2c35ee3",
