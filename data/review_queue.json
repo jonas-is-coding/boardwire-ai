@@ -2998,5 +2998,46 @@
     "breaking": false,
     "claire_note": "Chloe, das Claude Code Update 2.1.187 ist relevant. Die neue 'sandbox.credentials'-Einstellung ist ein direkter Win für Sicherheit, weil sie verhindert, dass Sandboxed Commands auf Credential-Files zugreifen. Das ist wichtig für Teams, die mit sensiblen Daten arbeiten und ihre CI/CD-Pipelines absichern wollen.",
     "chloe_note": "*Claude Code v2.1.187* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Direct release of Claude Code v2.1.187 with new security settings and organizational model restrictions. Immediately actionable for builders.Cluster context: 1 sources, engagement 0. Common terms: pasted, flag, workflow, can. Bewertung: 90. Quelle: https://github.com/anthropics/claude-code/releases/tag/v2.1.187"
+  },
+  {
+    "id": "e3b517f69eda",
+    "status": "approved",
+    "created_at": "2026-06-24T17:47:59.257363Z",
+    "score": 90,
+    "reason": "New 'computer use' capability for Gemini 3.5 Flash from a primary lab. Direct builder utility for agents/tooling.",
+    "proposed_post": "Gemini 3.5 Flash now features \"computer use,\" enabling the model to interact with external tools and environments. Builders can leverage this for more autonomous agents or enhanced data retrieval within existing applications.",
+    "source_angle": "Google DeepMind adds tool use to Gemini 3.5 Flash.",
+    "source_item": {
+      "title": "Introducing computer use in Gemini 3.5 Flash",
+      "source": "Google DeepMind Blog",
+      "link": "https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash/",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 15,
+      "summary": "Introducing computer use in Gemini 3.5 Flash\n[Cluster context: 1 sources, engagement 0, common terms: introducing, 3.5, flash, computer, gemini.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Google DeepMind Blog"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "introducing",
+          "3.5",
+          "flash",
+          "computer",
+          "gemini",
+          "use"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: introducing, 3.5, flash, computer. Lead: Introducing computer use in Gemini 3.5 Flash",
+        "alternative_titles": [],
+        "cluster_score": 25
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, dieser Artikel ist ein Volltreffer für unsere Devs. Gemini 3.5 Flash kann jetzt Computer bedienen – das ist ein Game Changer für Agenten-Entwicklung. Stell dir vor, du kannst KI-Workflows bauen, die direkt mit jeder beliebigen Software interagieren, nicht nur mit APIs. Das eröffnet ganz neue Möglichkeiten für Automatisierung und Tools, die über reine Text- oder Code-Generierung hinausgehen.",
+    "chloe_note": "*Introducing computer use in Gemini 3.5 Flash* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New 'computer use' capability for Gemini 3.5 Flash from a primary lab. Direct builder utility for agents/tooling.Cluster context: 1 sources, engagement 0. Common terms: introducing, 3.5, flash, computer. Bewertung: 90. Quelle: https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash/"
   }
 ]
