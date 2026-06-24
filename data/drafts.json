@@ -9126,5 +9126,19 @@
     "engagement_score": 0.0,
     "local_newsworthiness_score": 15,
     "created_at": "2026-06-23T21:23:55.607670Z"
+  },
+  {
+    "title": "Oracle workforce shrinks by about 21,000 employees amid AI adoption",
+    "link": "https://www.reuters.com/business/world-at-work/oracle-workforce-shrinks-by-about-13-2026-06-22/",
+    "source": "HackerNews",
+    "score": 0,
+    "should_post": false,
+    "reason": "Fails Ships Test. News about workforce reduction, not a new AI product, tool, API, or model release for builders to act on.",
+    "post_text": "No post generated",
+    "source_angle": "No source angle provided",
+    "source_tier": 3,
+    "engagement_score": 34.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-24T02:11:56.517877Z"
   }
 ]
