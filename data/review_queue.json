@@ -3063,5 +3063,48 @@
     },
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-24-introducing-computer-use-in-gemini-3-5-flash-e3b517f69eda.md",
     "published_at": "2026-06-24T20:50:50.188617Z"
+  },
+  {
+    "id": "cad0d4e4638d",
+    "status": "approved",
+    "created_at": "2026-06-24T22:59:29.018766Z",
+    "score": 90,
+    "reason": "New feature in Claude Code directly improves developer workflow for context management.",
+    "proposed_post": "Claude Code v2.1.191 adds `/rewind` to resume conversations after `/clear`. Builders can now recover context and iterate more efficiently without losing prior work.",
+    "source_angle": "Claude Code release adds workflow improvement for developers.",
+    "source_item": {
+      "title": "Claude Code v2.1.191",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.191",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 35,
+      "summary": "<h2>What's changed</h2>\n<ul>\n<li>Added <code>/rewind</code> support for resuming a conversation from before <code>/clear</code> was run</li>\n<li>Fixed scroll position jumping to the bottom while reading earlier output during a streaming response</li>\n<li>Fixed background agents resurrecting after being stopped — stopping an agent from the tasks panel is now permanent</li>\n<li>Fixed <code>/voice</code> showing a generic \"not available\" message when disabled by an organization's policy — it now explains the restriction</li>\n<li>Fixed <code>/login</code> URL opening truncated in Windows Terminal when it wraps across lines</li>\n<li>Fixed Cmd+click on links in fullscreen mode for Ghostty over ssh/tmux</li>\n<li>Fixed <code>claude agents</code> sending builtin slash commands like <code>/usage</code> to background sessions as prompt text instead of showing a hint</li>\n<li>Fixed <code>claude agents</code> job rows showing full filesystem paths for pasted images instead of the <code>[Image #N]</code> placeholder</li>\n<li>Fixed hooks with comma-separated matchers (e.g. <code>\"Bash,PowerShell\"</code>) silently never firing</li>\n<li>Fixed <code>/permissions</code> Recently-denied tab: approving a denial now persists on close instead of being silently discarded</li>\n<li>Fixed the agent panel jumping by one row when scrolling the roster past the overflow cap</li>\n<li>Fixed the welcome splash art overflowing the default 80×24 macOS Terminal window</li>\n<li>Fixed managed settings: <code>forceRemoteSettingsRefresh</code> now takes effect when set via MDM or file policy, and the fetch sends <code>Cache-Control: no-cache</code> to prevent proxies from serving stale responses</li>\n<li>Improved sandbox network permission dialog: hosts you allow with \"Yes\" are now remembered for the rest of the session instead of re-prompting on every connection</li>\n<li>Improved MCP server reliability: capability discovery (<code>tools/list</code>, <code>prompts/list</code>, <code>resources/list</code>) now retries transient network errors with short backoff</li>\n<li>Improved MCP OAuth: discovery and token requests now retry once after transient network errors, and headless environments skip the browser popup and go straight to the paste-the-URL prompt</li>\n<li>Improved MCP error messages: HTTP 404 errors now show the URL and point to your MCP config</li>\n<li>Improved vim mode prompt-history search (NORMAL <code>/</code>) to hint how to reach slash commands</li>\n<li>Reduced CPU usage during streaming responses by ~37% by coalescing text updates to 100ms</li>\n<li>Reduced long-session memory growth from terminal output cache</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: position, one, cpu, dialog, full.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Claude Code Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "position",
+          "one",
+          "cpu",
+          "dialog",
+          "full",
+          "firing",
+          "short",
+          "while"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: position, one, cpu, dialog. Lead: Claude Code v2.1.191",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, schau mal hier: Claude Code hat ein Update. Das '/rewind'-Feature, um Unterhaltungen nach einem '/clear' fortzusetzen, ist ziemlich nützlich. Das spart Entwicklern Zeit, die nicht mehr mühsam Kontext neu aufbauen müssen.",
+    "chloe_note": "Hey, *Claude Code v2.1.191* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New feature in Claude Code directly improves developer workflow for context management.Cluster context: 1 sources, engagement 0. Common terms: position, one, cpu, dialog. Score aktuell: 90. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.191"
   }
 ]
