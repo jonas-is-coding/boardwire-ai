@@ -9532,5 +9532,33 @@
     "engagement_score": 262.0,
     "local_newsworthiness_score": 10,
     "created_at": "2026-06-24T19:26:19.031692Z"
+  },
+  {
+    "title": "Llama Index v0.14.23",
+    "link": "https://github.com/run-llama/llama_index/releases/tag/v0.14.23",
+    "source": "LlamaIndex Releases",
+    "score": 20,
+    "should_post": false,
+    "reason": "LlamaIndex v0.14.23 is a minor release with only dependency updates. No new features or capabilities for builders.",
+    "post_text": "No post generated",
+    "source_angle": "No source angle provided",
+    "source_tier": 2,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 5,
+    "created_at": "2026-06-24T21:17:05.027446Z"
+  },
+  {
+    "title": "Big AI labs are hiring philosophers",
+    "link": "https://www.economist.com/science-and-technology/2026/06/24/why-big-ai-labs-are-hiring-so-many-philosophers",
+    "source": "HackerNews",
+    "score": 20,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Analysis of AI lab hiring trends and the role of philosophers.",
+    "source_tier": 3,
+    "engagement_score": 97.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-24T21:17:10.204635Z"
   }
 ]
