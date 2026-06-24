@@ -782,5 +782,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-23-anthropics-claude-plugins-official-official-anthropic-managed-directory-of-high-quality-claude-code-plugins-4368fc0493f7.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3moymgy7f6222",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3moymgy7f6222"
+  },
+  {
+    "id": "e3b517f69eda",
+    "published_at": "2026-06-24T20:50:50.188617Z",
+    "platform": "bluesky",
+    "post": "Gemini 3.5 Flash integrates computer use.\n\nEnables model interaction with external tools, 90 score from Google DeepMind Blog.\n\nDirect builder utility for agents and tooling, allowing more autonomous workflows and enhanced data retrieval within existing applications.\n\n📖 Read the f",
+    "source_link": "https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash/",
+    "source_title": "Introducing computer use in Gemini 3.5 Flash",
+    "score": 90,
+    "reason": "New 'computer use' capability for Gemini 3.5 Flash from a primary lab. Direct builder utility for agents/tooling.",
+    "card_path": "generated/cards/e3b517f69eda.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-24-introducing-computer-use-in-gemini-3-5-flash-e3b517f69eda.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mp2s63cijo2f",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mp2s63cijo2f"
   }
 ]

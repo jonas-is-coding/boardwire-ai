@@ -3001,11 +3001,11 @@
   },
   {
     "id": "e3b517f69eda",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-24T17:47:59.257363Z",
     "score": 90,
     "reason": "New 'computer use' capability for Gemini 3.5 Flash from a primary lab. Direct builder utility for agents/tooling.",
-    "proposed_post": "Gemini 3.5 Flash now features \"computer use,\" enabling the model to interact with external tools and environments. Builders can leverage this for more autonomous agents or enhanced data retrieval within existing applications.",
+    "proposed_post": "Gemini 3.5 Flash integrates computer use.\n\nEnables model interaction with external tools, 90 score from Google DeepMind Blog.\n\nDirect builder utility for agents and tooling, allowing more autonomous workflows and enhanced data retrieval within existing applications.\n\n📖 Read the f",
     "source_angle": "Google DeepMind adds tool use to Gemini 3.5 Flash.",
     "source_item": {
       "title": "Introducing computer use in Gemini 3.5 Flash",
@@ -3034,10 +3034,22 @@
         "cluster_score": 25
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/e3b517f69eda.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, dieser Artikel ist ein Volltreffer für unsere Devs. Gemini 3.5 Flash kann jetzt Computer bedienen – das ist ein Game Changer für Agenten-Entwicklung. Stell dir vor, du kannst KI-Workflows bauen, die direkt mit jeder beliebigen Software interagieren, nicht nur mit APIs. Das eröffnet ganz neue Möglichkeiten für Automatisierung und Tools, die über reine Text- oder Code-Generierung hinausgehen.",
-    "chloe_note": "*Introducing computer use in Gemini 3.5 Flash* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New 'computer use' capability for Gemini 3.5 Flash from a primary lab. Direct builder utility for agents/tooling.Cluster context: 1 sources, engagement 0. Common terms: introducing, 3.5, flash, computer. Bewertung: 90. Quelle: https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash/"
+    "chloe_note": "*Introducing computer use in Gemini 3.5 Flash* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New 'computer use' capability for Gemini 3.5 Flash from a primary lab. Direct builder utility for agents/tooling.Cluster context: 1 sources, engagement 0. Common terms: introducing, 3.5, flash, computer. Bewertung: 90. Quelle: https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash/",
+    "sarah_package": {
+      "title": "Gemini 3.5 Flash integrates computer use.",
+      "subtitle": "Enables model interaction with external tools, 90 score from Google DeepMind Blog.",
+      "description": "Direct builder utility for agents and tooling, allowing more autonomous workflows and enhanced data retrieval within existing applications.",
+      "hashtags": [
+        "#GoogleDeepMind",
+        "#Gemini35Flash",
+        "#ComputerUse"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-24-introducing-computer-use-in-gemini-3-5-flash-e3b517f69eda.md",
+    "published_at": "2026-06-24T20:50:50.188617Z"
   }
 ]
