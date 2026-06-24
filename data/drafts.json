@@ -9182,5 +9182,47 @@
     "engagement_score": 31.0,
     "local_newsworthiness_score": 30,
     "created_at": "2026-06-24T07:32:32.864518Z"
+  },
+  {
+    "title": "vLLM v0.24.0rc1",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.24.0rc1",
+    "source": "vLLM Releases",
+    "score": 5,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 2,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 40,
+    "created_at": "2026-06-24T10:40:48.243786Z"
+  },
+  {
+    "title": "'The Worst It's Ever Been': Why Meta's AI Reorg Backfired Spectacularly",
+    "link": "https://www.inc.com/jessica-stillman/the-worst-its-ever-been-why-metas-massive-ai-reorg-backfired-spectacularly/91363370",
+    "source": "HackerNews",
+    "score": 10,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "No source angle provided",
+    "source_tier": 3,
+    "engagement_score": 34.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-24T10:40:55.668322Z"
+  },
+  {
+    "title": "How to Passive-Aggressively Shame People Who Use LLMs Selfishly",
+    "link": "https://joshmoody.org/blog/selfish-ai/",
+    "source": "HackerNews",
+    "score": 5,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 40.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-24T10:40:55.668656Z"
   }
 ]
