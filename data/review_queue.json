@@ -3106,5 +3106,48 @@
     "breaking": false,
     "claire_note": "Chloe, schau mal hier: Claude Code hat ein Update. Das '/rewind'-Feature, um Unterhaltungen nach einem '/clear' fortzusetzen, ist ziemlich nützlich. Das spart Entwicklern Zeit, die nicht mehr mühsam Kontext neu aufbauen müssen.",
     "chloe_note": "Hey, *Claude Code v2.1.191* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New feature in Claude Code directly improves developer workflow for context management.Cluster context: 1 sources, engagement 0. Common terms: position, one, cpu, dialog. Score aktuell: 90. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.191"
+  },
+  {
+    "id": "b95311b42b06",
+    "status": "approved",
+    "created_at": "2026-06-25T02:11:47.522748Z",
+    "score": 90,
+    "reason": "New Ollama release with direct feature additions (auto-install Claude Code, opencode thinking detection) for builders.",
+    "proposed_post": "Ollama v0.30.11 now auto-installs Claude Code and detects thinking capabilities for opencode models. This simplifies local deployment of Anthropic's Code models and improves integration for reasoning tasks with other local LLMs.",
+    "source_angle": "Ollama simplifies local Claude Code deployment & enhances opencode reasoning.",
+    "source_item": {
+      "title": "Ollama v0.30.11",
+      "source": "Ollama Releases",
+      "link": "https://github.com/ollama/ollama/releases/tag/v0.30.11-rc0",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 35,
+      "summary": "<h2>What's Changed</h2>\n<ul>\n<li>launch: add thinking capability detection to opencode by <a class=\"user-mention notranslate\" href=\"https://github.com/hoyyeva\">@hoyyeva</a> in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/15434\">#15434</a></li>\n<li>launch: auto-install Claude Code by <a class=\"user-mention notranslate\" href=\"https://github.com/hoyyeva\">@hoyyeva</a> in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/16802\">#16802</a></li>\n<li>launch: auto-install opencode when missing by <a class=\"user-mention notranslate\" href=\"https://github.com/hoyyeva\">@hoyyeva</a> in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/16806\">#16806</a></li>\n<li>discover: fix inverted iGPU/dGPU Vulkan classification on Windows hybrid graphics by <a class=\"user-mention notranslate\" href=\"https://github.com/Sahil170595\">@Sahil170595</a> in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/16669\">#16669</a></li>\n<li>mlxrunner: unify and tune speculative decoding by <a class=\"user-mention notranslate\" href=\"https://github.com/jessegross\">@jessegross</a> in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/16791\">#16791</a></li>\n<li>launch/codex: detect model drift when Codex App UI switches by <a class=\"user-mention notranslate\" href=\"https://github.com/BruceMacD\">@BruceMacD</a> in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/16864\">#16864</a></li>\n<li>llama: add sm_86 architecture to cuda_v13_windows preset by <a class=\"user-mention notranslate\" href=\"https://github.com/anishesg\">@anishesg</a> in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/16834\">#16834</a></li>\n<li>llm: size mmproj offload by projector memory by <a class=\"user-mention notranslate\" href=\"https://github.com/dhiltgen\">@dhiltgen</a> in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/16866\">#16866</a></li>\n<li>docs: document max think level by <a class=\"user-mention notranslate\" href=\"https://github.com/ParthSareen\">@ParthSareen</a> in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/16877\">#16877</a></li>\n<li>llm: preserve generation headroom for shifted prompts by <a class=\"user-mention notranslate\" href=\"https://github.com/ParthSareen\">@ParthSareen</a> in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/16856\">#16856</a></li>\n<li>llama: default qwen2.5vl window attention metadata by <a class=\"user-mention notranslate\" href=\"https://github.com/dhiltgen\">@dhiltgen</a> in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/16868\">#16868</a></li>\n<li>llm: use host Vulkan loader on Windows by <a class=\"user-mention notranslate\" href=\"https://github.com/dhiltgen\">@dhiltgen</a> in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/16869\">#16869</a></li>\n<li>mlx: update and fix CUDA JIT packaging by <a class=\"user-mention notranslate\" href=\"https://github.com/dhiltgen\">@dhiltgen</a> in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/16871\">#16871</a></li>\n<li>llm: fix ollama ps double-counting mmap'd weights on partial offload by <a class=\"user-mention notranslate\" href=\"https://github.com/discobot\">@discobot</a> in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/16709\">#16709</a></li>\n<li>docs: redesign docs landing and integrations overview by <a class=\"user-mention notranslate\" href=\"https://github.com/hoyyeva\">@hoyyeva</a> in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/16807\">#16807</a></li>\n<li>server: align generate with native chat templates by <a class=\"user-mention notranslate\" href=\"https://github.com/dhiltgen\">@dhiltgen</a> in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/16878\">#16878</a></li>\n<li>jetson: add CC 87 for CUDA v13 by <a class=\"user-mention notranslate\" href=\"https://github.com/dhiltgen\">@dhiltgen</a> in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/16628\">#16628</a></li>\n<li>llama.cpp version update by <a class=\"user-mention notranslate\" href=\"https://github.com/dhiltgen\">@dhiltgen</a> in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/16548\">#16548</a></li>\n</ul>\n<h2>New Contributors</h2>\n<ul>\n<li><a class=\"user-mention notranslate\" href=\"https://github.com/Sahil170595\">@Sahil170595</a> made their first contribution in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/16669\">#16669</a></li>\n<li><a class=\"user-mention notranslate\" href=\"https://github.com/anishesg\">@anishesg</a> made their first contribution in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/16834\">#16834</a></li>\n<li><a class=\"user-mention notranslate\" href=\"https://github.com/discobot\">@discobot</a> made their first contribution in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/16709\">#16709</a></li>\n</ul>\n<p><strong>Full Changelog</strong>: <a class=\"commit-link\" href=\"https://github.com/ollama/ollama/compare/v0.30.10...v0.30.11-rc0\"><tt>v0.30.10...v0.30.11-rc0</tt></a></p>\n[Cluster context: 1 sources, engagement 0, common terms: unify, changed, mlxrunner, codex, projector.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Ollama Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "unify",
+          "changed",
+          "mlxrunner",
+          "codex",
+          "projector",
+          "landing",
+          "windows",
+          "update"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: unify, changed, mlxrunner, codex. Lead: Ollama v0.30.11",
+        "alternative_titles": [],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, Ollama v0.30.11 ist ein schnelles Update, das direkt die \"Denkfähigkeit\" von OpenCode-Modellen verbessert. Entwickler können jetzt Modelle mit besserer Argumentation und Kontextverständnis direkt in ihre lokalen Setups integrieren. Das ist ein Game-Changer für Offline-Code-Generierung und intelligente Agenten.",
+    "chloe_note": "Hey, *Ollama v0.30.11* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New Ollama release with direct feature additions (auto-install Claude Code, opencode thinking detection) for builders.Cluster context: 1 sources, engagement 0. Common terms: unify, changed, mlxrunner, codex. Score aktuell: 90. Link: https://github.com/ollama/ollama/releases/tag/v0.30.11-rc0"
   }
 ]
