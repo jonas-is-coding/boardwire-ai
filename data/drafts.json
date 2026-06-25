@@ -9826,5 +9826,47 @@
     "engagement_score": 149.0,
     "local_newsworthiness_score": 10,
     "created_at": "2026-06-25T18:02:40.522617Z"
+  },
+  {
+    "title": "vLLM v0.24.0rc2",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.24.0rc2",
+    "source": "vLLM Releases",
+    "score": 30,
+    "should_post": false,
+    "reason": "Summary lacks concrete details on what changed in the vLLM release candidate; no actionable information for builders.",
+    "post_text": "No post generated",
+    "source_angle": "vLLM release candidate without feature details",
+    "source_tier": 2,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 40,
+    "created_at": "2026-06-25T21:21:50.765885Z"
+  },
+  {
+    "title": "Run a vLLM Server on HF Jobs in One Command",
+    "link": "https://huggingface.co/blog/vllm-jobs",
+    "source": "Hugging Face Blog",
+    "score": 90,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Hugging Face simplifies vLLM deployment on their managed compute.",
+    "source_tier": 2,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-06-25T21:21:54.898760Z"
+  },
+  {
+    "title": "Show HN: OpenKnowledge – open source AI-first alternative to Obsidian/Notion",
+    "link": "https://github.com/inkeep/open-knowledge",
+    "source": "HackerNews",
+    "score": 7,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 126.5,
+    "local_newsworthiness_score": 40,
+    "created_at": "2026-06-25T21:21:54.899094Z"
   }
 ]
