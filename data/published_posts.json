@@ -810,5 +810,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-23-claude-code-v2-1-187-751ce9c20f72.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mp2xbrrcmh2y",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mp2xbrrcmh2y"
+  },
+  {
+    "id": "cad0d4e4638d",
+    "published_at": "2026-06-25T05:09:02.515260Z",
+    "platform": "bluesky",
+    "post": "Claude Code ships conversation recovery primitives.\n\n/rewind restores context after /clear without rebuilding dialog state. MIT license. v2.1.191 CLI age\n\nClaude Code v2.1.191 adds /rewind to resume conversations after /clear, fixing scroll jumps and stopped-agent resurrects. MIT",
+    "source_link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.191",
+    "source_title": "Claude Code v2.1.191",
+    "score": 90,
+    "reason": "New feature in Claude Code directly improves developer workflow for context management.",
+    "card_path": "generated/cards/cad0d4e4638d.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-24-claude-code-v2-1-191-cad0d4e4638d.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mp3nyylupg2r",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mp3nyylupg2r"
   }
 ]
