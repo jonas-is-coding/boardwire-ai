@@ -9868,5 +9868,61 @@
     "engagement_score": 126.5,
     "local_newsworthiness_score": 40,
     "created_at": "2026-06-25T21:21:54.899094Z"
+  },
+  {
+    "title": "Claude Code v2.1.193",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.193",
+    "source": "Claude Code Releases",
+    "score": 90,
+    "should_post": true,
+    "reason": "New Claude Code version ships OpenTelemetry logging for assistant responses and enhanced shell command classification. Immediate builder value.",
+    "post_text": "Claude Code v2.1.193 adds OpenTelemetry logging for assistant responses. This enables deeper monitoring and auditing of model outputs, crucial for production deployments and compliance. Also includes new shell command classification settings.",
+    "source_angle": "Claude Code update for observability and control",
+    "source_tier": 1,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 65,
+    "created_at": "2026-06-25T23:07:51.348017Z"
+  },
+  {
+    "title": "Evaluating performance and efficiency of the GitHub Copilot agentic harness across models and tasks",
+    "link": "https://github.blog/ai-and-ml/github-copilot/evaluating-performance-and-efficiency-of-the-github-copilot-agentic-harness-across-models-and-tasks/",
+    "source": "GitHub Blog AI",
+    "score": 9,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 2,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 30,
+    "created_at": "2026-06-25T23:07:52.692378Z"
+  },
+  {
+    "title": "Un-0: Generating Images with Coupled Oscillators",
+    "link": "https://unconv.ai/blog/introducing-un-0-generating-images-with-coupled-oscillators/",
+    "source": "HackerNews",
+    "score": 2,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 74.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-25T23:07:52.692812Z"
+  },
+  {
+    "title": "OpenAI Leans Toward Waiting Until Next Year for IPO",
+    "link": "https://www.nytimes.com/2026/06/25/technology/openai-ipo-artificial-intelligence.html",
+    "source": "HackerNews",
+    "score": 2,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 81.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-25T23:07:52.693006Z"
   }
 ]

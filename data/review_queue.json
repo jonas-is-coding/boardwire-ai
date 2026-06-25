@@ -3173,5 +3173,48 @@
     },
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-25-ollama-v0-30-11-b95311b42b06.md",
     "published_at": "2026-06-25T17:14:19.751481Z"
+  },
+  {
+    "id": "ada59ec6113c",
+    "status": "approved",
+    "created_at": "2026-06-25T23:07:51.348017Z",
+    "score": 90,
+    "reason": "New Claude Code version ships OpenTelemetry logging for assistant responses and enhanced shell command classification. Immediate builder value.",
+    "proposed_post": "Claude Code v2.1.193 adds OpenTelemetry logging for assistant responses. This enables deeper monitoring and auditing of model outputs, crucial for production deployments and compliance. Also includes new shell command classification settings.",
+    "source_angle": "Claude Code update for observability and control",
+    "source_item": {
+      "title": "Claude Code v2.1.193",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.193",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 65,
+      "summary": "<h2>What's changed</h2>\n<ul>\n<li>Added <code>autoMode.classifyAllShell</code> setting to route all Bash/PowerShell commands through the auto-mode classifier instead of only arbitrary-code-execution patterns</li>\n<li>Added auto-mode denial reasons to the transcript, the denial toast, and <code>/permissions</code> recent denials</li>\n<li>Added <code>claude_code.assistant_response</code> OpenTelemetry log event containing the model's response text. Redacted unless <code>OTEL_LOG_ASSISTANT_RESPONSES=1</code>; when that var is unset it follows <code>OTEL_LOG_USER_PROMPTS</code>, so deployments that already log prompt content will start receiving response content on upgrade — set <code>OTEL_LOG_ASSISTANT_RESPONSES=0</code> to keep prompts-only.</li>\n<li>Added live file path autocomplete to bash mode (<code>!</code>)</li>\n<li>Added a startup notice when MCP servers need authentication, pointing at <code>/mcp</code></li>\n<li>Added automatic memory-pressure reaping for idle background shell commands (disable with <code>CLAUDE_CODE_DISABLE_BG_SHELL_PRESSURE_REAP=1</code>)</li>\n<li>Fixed <code>/model</code> and other client-data-gated UI showing stale/empty state immediately after <code>/login</code></li>\n<li>Fixed backgrounding (←←) spuriously cancelling with \"N background tasks would be abandoned\" when all running tasks carry over to the new session</li>\n<li>Fixed pinned background agents being re-prompted to \"Continue from where you left off\" after every auto-update</li>\n<li>Fixed backgrounding the main turn spawning a phantom \"general-purpose (resumed)\" subagent that re-ran the main conversation</li>\n<li>Fixed agent panel hiding sibling agents when viewing a subagent</li>\n<li>Improved background agents: the launch result no longer instructs Claude to \"end your response\" — it keeps working on other tasks while the agent runs</li>\n<li>Improved MCP <code>headersHelper</code> auth: the helper now re-runs and reconnects automatically when a tool call returns 401/403</li>\n<li>Improved plugin auto-rename: marketplace <code>renames</code> maps are now followed automatically, updating your settings to the new name</li>\n<li>Improved <code>/add-dir</code> message when the directory is already a working directory</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: when, turn, auto-mode, stale/empty, classifier.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Claude Code Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "when",
+          "turn",
+          "auto-mode",
+          "stale/empty",
+          "classifier",
+          "startup",
+          "instructs",
+          "spawning"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: when, turn, auto-mode, stale/empty. Lead: Claude Code v2.1.193",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, schau dir das an. Claude Code hat ein Update rausgehauen.\n\nDie neue 'autoMode.classifyAllShell' Einstellung leitet jetzt *alle* Bash/PowerShell-Befehle durch den Classifier, nicht nur die \"gefährlichen\". Das ist ein massiver Schritt für Entwickler, die mit Claude Code arbeiten – bedeutet bessere Kontrolle und Transparenz bei Shell-Befehlen. Man sieht jetzt auch die Denial Reasons direkt im Transcript, was beim Debugging und Verstehen von Auto-Mode-Entscheidungen extrem hilft. Für uns Builder heißt das: weniger Rätselraten, mehr produktives Arbeiten mit der KI.",
+    "chloe_note": "*Claude Code v2.1.193* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New Claude Code version ships OpenTelemetry logging for assistant responses and enhanced shell command classification. Immediate builder value.Cluster context: 1 sources, engagement 0. Common terms: when, turn, auto-mode, stale/empty. Bewertung: 90. Quelle: https://github.com/anthropics/claude-code/releases/tag/v2.1.193"
   }
 ]
