@@ -3176,11 +3176,11 @@
   },
   {
     "id": "ada59ec6113c",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-25T23:07:51.348017Z",
     "score": 90,
     "reason": "New Claude Code version ships OpenTelemetry logging for assistant responses and enhanced shell command classification. Immediate builder value.",
-    "proposed_post": "Claude Code v2.1.193 adds OpenTelemetry logging for assistant responses. This enables deeper monitoring and auditing of model outputs, crucial for production deployments and compliance. Also includes new shell command classification settings.",
+    "proposed_post": "Claude Code adds OpenTelemetry logging and shell command control.\n\nClaude Code v2.1.193 ships autoMode.classifyAllShell, OpenTelemetry logs for assistant responses, an\n\nNew setting forces classification of all shell commands. Assistant responses logged via OTEL without exposing P",
     "source_angle": "Claude Code update for observability and control",
     "source_item": {
       "title": "Claude Code v2.1.193",
@@ -3211,11 +3211,23 @@
         "cluster_score": 45
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/ada59ec6113c.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, schau dir das an. Claude Code hat ein Update rausgehauen.\n\nDie neue 'autoMode.classifyAllShell' Einstellung leitet jetzt *alle* Bash/PowerShell-Befehle durch den Classifier, nicht nur die \"gefährlichen\". Das ist ein massiver Schritt für Entwickler, die mit Claude Code arbeiten – bedeutet bessere Kontrolle und Transparenz bei Shell-Befehlen. Man sieht jetzt auch die Denial Reasons direkt im Transcript, was beim Debugging und Verstehen von Auto-Mode-Entscheidungen extrem hilft. Für uns Builder heißt das: weniger Rätselraten, mehr produktives Arbeiten mit der KI.",
-    "chloe_note": "*Claude Code v2.1.193* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New Claude Code version ships OpenTelemetry logging for assistant responses and enhanced shell command classification. Immediate builder value.Cluster context: 1 sources, engagement 0. Common terms: when, turn, auto-mode, stale/empty. Bewertung: 90. Quelle: https://github.com/anthropics/claude-code/releases/tag/v2.1.193"
+    "chloe_note": "*Claude Code v2.1.193* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New Claude Code version ships OpenTelemetry logging for assistant responses and enhanced shell command classification. Immediate builder value.Cluster context: 1 sources, engagement 0. Common terms: when, turn, auto-mode, stale/empty. Bewertung: 90. Quelle: https://github.com/anthropics/claude-code/releases/tag/v2.1.193",
+    "sarah_package": {
+      "title": "Claude Code adds OpenTelemetry logging and shell command control.",
+      "subtitle": "Claude Code v2.1.193 ships autoMode.classifyAllShell, OpenTelemetry logs for assistant responses, an",
+      "description": "New setting forces classification of all shell commands. Assistant responses logged via OTEL without exposing PII. Denial reasons appear in ",
+      "hashtags": [
+        "#Anthropic",
+        "#ClaudeCode",
+        "#OpenTelemetry"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-25-claude-code-v2-1-193-ada59ec6113c.md",
+    "published_at": "2026-06-26T13:15:28.402521Z"
   },
   {
     "id": "44ccb562df2c",
