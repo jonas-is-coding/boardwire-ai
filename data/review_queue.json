@@ -3219,11 +3219,11 @@
   },
   {
     "id": "44ccb562df2c",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-26T07:42:46.786352Z",
     "score": 90,
     "reason": "New Ollama version adds auto-install for Claude Code and thinking detection for opencode, directly impacting local LLM workflows.",
-    "proposed_post": "Ollama v0.30.11 adds auto-install for Claude Code and thinking detection for opencode. Builders can now streamline local LLM setup and leverage new model capabilities directly within Ollama.",
+    "proposed_post": "Ollama adds thinking detection and auto-install for Claude Code.\n\nv0.30.11 turns local LLM workflows into agentic pipelines with MCP-backed capabilities.\n\nAuto-installs Claude Code via MCP. Adds thinking-state detection for opencode. No external API calls required.\n\n📖 Read the fu",
     "source_angle": "Ollama release adds Claude Code auto-install and opencode thinking detection.",
     "source_item": {
       "title": "Ollama v0.30.11",
@@ -3254,11 +3254,23 @@
         "cluster_score": 35
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/44ccb562df2c.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, check this Ollama update.\n\nDie neue Version 0.30.11 ist raus und hat \"thinking capability detection\" für opencode. Das klingt nach einem Schritt, um die lokalen Modelle intelligenter zu machen, besonders wenn es um Code-Generierung oder -Analyse geht. Entwickler, die Ollama für ihre lokalen LLM-Workflows nutzen, könnten hier Verbesserungen bei der \"Intelligenz\" der Modelle sehen, was die Code-Qualität oder die Problemlösung direkt beeinflusst.",
-    "chloe_note": "Hey, *Ollama v0.30.11* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New Ollama version adds auto-install for Claude Code and thinking detection for opencode, directly impacting local LLM workflows.Cluster context: 1 sources, engagement 0. Common terms: mmap, user-mention, launch, templates. Score aktuell: 90. Link: https://github.com/ollama/ollama/releases/tag/v0.30.11-rc1"
+    "chloe_note": "Hey, *Ollama v0.30.11* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New Ollama version adds auto-install for Claude Code and thinking detection for opencode, directly impacting local LLM workflows.Cluster context: 1 sources, engagement 0. Common terms: mmap, user-mention, launch, templates. Score aktuell: 90. Link: https://github.com/ollama/ollama/releases/tag/v0.30.11-rc1",
+    "sarah_package": {
+      "title": "Ollama adds thinking detection and auto-install for Claude Code.",
+      "subtitle": "v0.30.11 turns local LLM workflows into agentic pipelines with MCP-backed capabilities.",
+      "description": "Auto-installs Claude Code via MCP. Adds thinking-state detection for opencode. No external API calls required.",
+      "hashtags": [
+        "#Ollama",
+        "#ClaudeCode",
+        "#MCP"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-26-ollama-v0-30-11-44ccb562df2c.md",
+    "published_at": "2026-06-26T10:25:38.643397Z"
   },
   {
     "id": "d6b12f53c3f0",

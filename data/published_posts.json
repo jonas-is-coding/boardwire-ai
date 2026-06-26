@@ -838,5 +838,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-25-ollama-v0-30-11-b95311b42b06.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mp4wjtuzku2l",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mp4wjtuzku2l"
+  },
+  {
+    "id": "44ccb562df2c",
+    "published_at": "2026-06-26T10:25:38.643397Z",
+    "platform": "bluesky",
+    "post": "Ollama adds thinking detection and auto-install for Claude Code.\n\nv0.30.11 turns local LLM workflows into agentic pipelines with MCP-backed capabilities.\n\nAuto-installs Claude Code via MCP. Adds thinking-state detection for opencode. No external API calls required.\n\n📖 Read the fu",
+    "source_link": "https://github.com/ollama/ollama/releases/tag/v0.30.11-rc1",
+    "source_title": "Ollama v0.30.11",
+    "score": 90,
+    "reason": "New Ollama version adds auto-install for Claude Code and thinking detection for opencode, directly impacting local LLM workflows.",
+    "card_path": "generated/cards/44ccb562df2c.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-26-ollama-v0-30-11-44ccb562df2c.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mp6q63mwgw2t",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mp6q63mwgw2t"
   }
 ]
