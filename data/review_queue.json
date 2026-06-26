@@ -3216,5 +3216,91 @@
     "breaking": false,
     "claire_note": "Chloe, schau dir das an. Claude Code hat ein Update rausgehauen.\n\nDie neue 'autoMode.classifyAllShell' Einstellung leitet jetzt *alle* Bash/PowerShell-Befehle durch den Classifier, nicht nur die \"gefährlichen\". Das ist ein massiver Schritt für Entwickler, die mit Claude Code arbeiten – bedeutet bessere Kontrolle und Transparenz bei Shell-Befehlen. Man sieht jetzt auch die Denial Reasons direkt im Transcript, was beim Debugging und Verstehen von Auto-Mode-Entscheidungen extrem hilft. Für uns Builder heißt das: weniger Rätselraten, mehr produktives Arbeiten mit der KI.",
     "chloe_note": "*Claude Code v2.1.193* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New Claude Code version ships OpenTelemetry logging for assistant responses and enhanced shell command classification. Immediate builder value.Cluster context: 1 sources, engagement 0. Common terms: when, turn, auto-mode, stale/empty. Bewertung: 90. Quelle: https://github.com/anthropics/claude-code/releases/tag/v2.1.193"
+  },
+  {
+    "id": "44ccb562df2c",
+    "status": "approved",
+    "created_at": "2026-06-26T07:42:46.786352Z",
+    "score": 90,
+    "reason": "New Ollama version adds auto-install for Claude Code and thinking detection for opencode, directly impacting local LLM workflows.",
+    "proposed_post": "Ollama v0.30.11 adds auto-install for Claude Code and thinking detection for opencode. Builders can now streamline local LLM setup and leverage new model capabilities directly within Ollama.",
+    "source_angle": "Ollama release adds Claude Code auto-install and opencode thinking detection.",
+    "source_item": {
+      "title": "Ollama v0.30.11",
+      "source": "Ollama Releases",
+      "link": "https://github.com/ollama/ollama/releases/tag/v0.30.11-rc1",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 35,
+      "summary": "<h2>What's Changed</h2>\n<ul>\n<li>launch: add thinking capability detection to opencode by <a class=\"user-mention notranslate\" href=\"https://github.com/hoyyeva\">@hoyyeva</a> in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/15434\">#15434</a></li>\n<li>launch: auto-install Claude Code by <a class=\"user-mention notranslate\" href=\"https://github.com/hoyyeva\">@hoyyeva</a> in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/16802\">#16802</a></li>\n<li>launch: auto-install opencode when missing by <a class=\"user-mention notranslate\" href=\"https://github.com/hoyyeva\">@hoyyeva</a> in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/16806\">#16806</a></li>\n<li>discover: fix inverted iGPU/dGPU Vulkan classification on Windows hybrid graphics by <a class=\"user-mention notranslate\" href=\"https://github.com/Sahil170595\">@Sahil170595</a> in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/16669\">#16669</a></li>\n<li>mlxrunner: unify and tune speculative decoding by <a class=\"user-mention notranslate\" href=\"https://github.com/jessegross\">@jessegross</a> in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/16791\">#16791</a></li>\n<li>launch/codex: detect model drift when Codex App UI switches by <a class=\"user-mention notranslate\" href=\"https://github.com/BruceMacD\">@BruceMacD</a> in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/16864\">#16864</a></li>\n<li>llama: add sm_86 architecture to cuda_v13_windows preset by <a class=\"user-mention notranslate\" href=\"https://github.com/anishesg\">@anishesg</a> in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/16834\">#16834</a></li>\n<li>llm: size mmproj offload by projector memory by <a class=\"user-mention notranslate\" href=\"https://github.com/dhiltgen\">@dhiltgen</a> in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/16866\">#16866</a></li>\n<li>docs: document max think level by <a class=\"user-mention notranslate\" href=\"https://github.com/ParthSareen\">@ParthSareen</a> in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/16877\">#16877</a></li>\n<li>llm: preserve generation headroom for shifted prompts by <a class=\"user-mention notranslate\" href=\"https://github.com/ParthSareen\">@ParthSareen</a> in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/16856\">#16856</a></li>\n<li>llama: default qwen2.5vl window attention metadata by <a class=\"user-mention notranslate\" href=\"https://github.com/dhiltgen\">@dhiltgen</a> in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/16868\">#16868</a></li>\n<li>llm: use host Vulkan loader on Windows by <a class=\"user-mention notranslate\" href=\"https://github.com/dhiltgen\">@dhiltgen</a> in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/16869\">#16869</a></li>\n<li>mlx: update and fix CUDA JIT packaging by <a class=\"user-mention notranslate\" href=\"https://github.com/dhiltgen\">@dhiltgen</a> in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/16871\">#16871</a></li>\n<li>llm: fix ollama ps double-counting mmap'd weights on partial offload by <a class=\"user-mention notranslate\" href=\"https://github.com/discobot\">@discobot</a> in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/16709\">#16709</a></li>\n<li>docs: redesign docs landing and integrations overview by <a class=\"user-mention notranslate\" href=\"https://github.com/hoyyeva\">@hoyyeva</a> in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/16807\">#16807</a></li>\n<li>server: align generate with native chat templates by <a class=\"user-mention notranslate\" href=\"https://github.com/dhiltgen\">@dhiltgen</a> in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/16878\">#16878</a></li>\n<li>jetson: add CC 87 for CUDA v13 by <a class=\"user-mention notranslate\" href=\"https://github.com/dhiltgen\">@dhiltgen</a> in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/16628\">#16628</a></li>\n<li>llama.cpp version update by <a class=\"user-mention notranslate\" href=\"https://github.com/dhiltgen\">@dhiltgen</a> in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/16548\">#16548</a></li>\n</ul>\n<h2>New Contributors</h2>\n<ul>\n<li><a class=\"user-mention notranslate\" href=\"https://github.com/Sahil170595\">@Sahil170595</a> made their first contribution in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/16669\">#16669</a></li>\n<li><a class=\"user-mention notranslate\" href=\"https://github.com/anishesg\">@anishesg</a> made their first contribution in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/16834\">#16834</a></li>\n<li><a class=\"user-mention notranslate\" href=\"https://github.com/discobot\">@discobot</a> made their first contribution in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/16709\">#16709</a></li>\n</ul>\n<p><strong>Full Changelog</strong>: <a class=\"commit-link\" href=\"https://github.com/ollama/ollama/compare/v0.30.10...v0.30.11-rc0\"><tt>v0.30.10...v0.30.11-rc0</tt></a></p>\n[Cluster context: 1 sources, engagement 0, common terms: mmap, user-mention, launch, templates, hybrid.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Ollama Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "mmap",
+          "user-mention",
+          "launch",
+          "templates",
+          "hybrid",
+          "shifted",
+          "when",
+          "href"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: mmap, user-mention, launch, templates. Lead: Ollama v0.30.11",
+        "alternative_titles": [],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, check this Ollama update.\n\nDie neue Version 0.30.11 ist raus und hat \"thinking capability detection\" für opencode. Das klingt nach einem Schritt, um die lokalen Modelle intelligenter zu machen, besonders wenn es um Code-Generierung oder -Analyse geht. Entwickler, die Ollama für ihre lokalen LLM-Workflows nutzen, könnten hier Verbesserungen bei der \"Intelligenz\" der Modelle sehen, was die Code-Qualität oder die Problemlösung direkt beeinflusst.",
+    "chloe_note": "Hey, *Ollama v0.30.11* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New Ollama version adds auto-install for Claude Code and thinking detection for opencode, directly impacting local LLM workflows.Cluster context: 1 sources, engagement 0. Common terms: mmap, user-mention, launch, templates. Score aktuell: 90. Link: https://github.com/ollama/ollama/releases/tag/v0.30.11-rc1"
+  },
+  {
+    "id": "d6b12f53c3f0",
+    "status": "approved",
+    "created_at": "2026-06-26T07:42:48.611666Z",
+    "score": 60,
+    "reason": "local newsworthiness fallback",
+    "proposed_post": "LangChain updates fireworks with dependency bumps.\n\nv1.4.3 bumps vcrpy to 8.2.1 and langsmith to 0.8.18, with 2 dependency updates.\n\nLangChain updated fireworks in v1.4.3 with bumped dependencies for vcrpy and langsmith, available on GitHub.\n\n#LangChain #vcrpy #langsmith",
+    "source_angle": "Local high-score + Sarah/OpenRouter fallback",
+    "source_item": {
+      "title": "LangChain v1.4.3",
+      "source": "LangChain Releases",
+      "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-fireworks%3D%3D1.4.3",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 60,
+      "summary": "<p>Changes since langchain-fireworks==1.4.2</p>\n<p>release(fireworks): 1.4.3<br />\nchore: bump vcrpy from 8.1.1 to 8.2.1 in /libs/partners/fireworks (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/38314\">#38314</a>)<br />\nchore: bump langsmith from 0.8.16 to 0.8.18 in /libs/partners/fireworks (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/38313\">#38313</a>)<br />\nchore: bump langsmith from 0.8.14 to 0.8.16 in /libs/partners/fireworks (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/38235\">#38235</a>)<br />\nchore: bump pytest from 9.0.3 to 9.1.0 in /libs/partners/fireworks (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/38233\">#38233</a>)<br />\nchore(model-profiles): refresh model profile data (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/38210\">#38210</a>)<br />\nchore(model-profiles): refresh model profile data (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/38191\">#38191</a>)<br />\nchore(model-profiles): refresh model profile data (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/38133\">#38133</a>)<br />\ndocs: refresh <code>README</code> installation and resources (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/38119\">#38119</a>)<br />\nrelease(core): 1.4.7 (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/38111\">#38111</a>)<br />\nfix(core,partners): rename package version trace metadata (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/38110\">#38110</a>)<br />\nstyle(core,langchain,langchain-classic,partners): replace double backticks in docstrings (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/38095\">#38095</a>)<br />\nchore: bump langsmith from 0.8.9 to 0.8.14 in /libs/partners/fireworks (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/38093\">#38093</a>)<br />\nrelease(core): 1.4.6 (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/38061\">#38061</a>)<br />\nfeat(core,partners): add package version tracking to tracing metadata (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/35295\">#35295</a>)<br />\nchore(infra): bump mypy to 2.1 and unify type-check config across the monorepo (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/36470\">#36470</a>)<br />\nfeat(standard-tests): validate tool call chunks during streaming (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/34707\">#34707</a>)<br />\nchore(partners): bump locks (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/38052\">#38052</a>)<br />\nhotfix(openai): min core dep (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/37990\">#37990</a>)<br />\nchore(model-profiles): refresh model profile data (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/37973\">#37973</a>)<br />\nchore(model-profiles): refresh model profile data (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/37936\">#37936</a>)<br />\ntest(langchain,partners): disable pytest-benchmark under xdist to silence <code>PytestBenchmarkWarning</code> (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/37901\">#37901</a>)<br />\nfix(partners): cap aiohttp below 3.14 for vcrpy compat (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/37898\">#37898</a>)<br />\nchore(model-profiles): refresh model profile data (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/37895\">#37895</a>)<br />\nchore: bump aiohttp from 3.13.5 to 3.14.0 in /libs/partners/fireworks (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/37882\">#37882</a>)<br />\nchore: bump langsmith from 0.8.7 to 0.8.9 in /libs/partners/fireworks (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/37883\">#37883</a>)<br />\nchore: bump langsmith from 0.8.0 to 0.8.7 in /libs/partners/fireworks (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/37781\">#37781</a>)<br />\nchore: bump requests from 2.34.0 to 2.34.2 in /libs/partners/fireworks (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/37782\">#37782</a>)</p>\n[Cluster context: 1 sources, engagement 0, common terms: partners, chunks, 0.8.0, mypy, 0.8.7.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "LangChain Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "partners",
+          "chunks",
+          "0.8.0",
+          "mypy",
+          "0.8.7",
+          "cap",
+          "2.34.0",
+          "/libs/partners/fireworks"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: partners, chunks, 0.8.0, mypy. Lead: LangChain v1.4.3",
+        "alternative_titles": [],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "breaking": false,
+    "claire_note": "Aus *LangChain Releases* ist ein starker Kandidat reingekommen: *LangChain v1.4.3*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 60_",
+    "chloe_note": "*LangChain v1.4.3* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: partners, chunks, 0.8.0, mypy. Bewertung: 60. Quelle: https://github.com/langchain-ai/langchain/releases/tag/langchain-fireworks%3D%3D1.4.3"
   }
 ]
