@@ -3434,5 +3434,48 @@
     "breaking": false,
     "claire_note": "Hey Chloe,\n\nOllama v0.30.11 ist raus. Das \"thinking capability detection\" für opencode ist ein Game-Changer. Entwickler können jetzt Modelle, die mit \"Denkfähigkeit\" trainiert wurden, besser nutzen und integrieren – das bedeutet präzisere und kontextsensitivere Ergebnisse in ihren Apps. Das vereinfacht die Arbeit mit komplexeren Modellen erheblich.",
     "chloe_note": "*Ollama v0.30.11* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New Ollama version with concrete features for model installation and capability detection. Passes Ships Test.Cluster context: 1 sources, engagement 0. Common terms: server, llama.cpp, ollama, jit. Bewertung: 90. Quelle: https://github.com/ollama/ollama/releases/tag/v0.30.11"
+  },
+  {
+    "id": "b106072b47e4",
+    "status": "approved",
+    "created_at": "2026-06-26T22:59:22.652981Z",
+    "score": 90,
+    "reason": "Direct release of Claude Code with new feature and critical bug fixes for tool matching and voice dictation.",
+    "proposed_post": "Claude Code v2.1.195 adds `CLAUDE_CODE_DISABLE_MOUSE_CLICKS` and fixes hyphenated hook matcher exact-matching. Builders using MCP servers or custom tools should update to ensure correct tool invocation and avoid unintended matches.",
+    "source_angle": "Claude Code v2.1.195 release with tool matching fix and new mouse click disable option.",
+    "source_item": {
+      "title": "Claude Code v2.1.195",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.195",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 40,
+      "summary": "<h2>What's changed</h2>\n<ul>\n<li>Added <code>CLAUDE_CODE_DISABLE_MOUSE_CLICKS</code> to disable mouse click/drag/hover in fullscreen mode while keeping wheel scroll</li>\n<li>Fixed hook matchers with hyphenated identifiers (e.g. <code>code-reviewer</code>, <code>mcp__brave-search</code>) accidentally substring-matching — they now exact-match. Use <code>mcp__brave-search__.*</code> to match all tools from a hyphenated MCP server.</li>\n<li>Fixed voice dictation on macOS capturing silence in long-running sessions after the default input device changes</li>\n<li>Fixed voice dictation auto-submit never firing for languages written without spaces (Japanese, Chinese, Thai)</li>\n<li>Fixed external plugins enabled only by project <code>.claude/settings.json</code> not requiring explicit install consent on every loader path</li>\n<li>Fixed <code>/plugin</code> Enable/Disable not working when a plugin's <code>plugin.json</code> <code>name</code> differs from its marketplace entry name</li>\n<li>Fixed background jobs disappearing from <code>claude agents</code> or losing data when written by a newer Claude Code version</li>\n<li>Fixed reopening a crashed background task showing a blank screen for up to 5 seconds instead of its restart</li>\n<li>Fixed background agent daemons running unreachable when the control socket fails to start, blocking restarts</li>\n<li>Improved voice mode on Linux: now distinguishes \"no microphone\" from \"SoX not installed\" when SoX is present but no audio capture device exists</li>\n<li>Improved <code>claude agents</code> completed list to fill available vertical space; on short terminals the header compacts so live sessions stay visible</li>\n<li>Improved Remote session startup with a provisioning checklist while the container starts</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: compacts, scroll, provisioning, mode, every.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Claude Code Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "compacts",
+          "scroll",
+          "provisioning",
+          "mode",
+          "every",
+          "matchers",
+          "/ul",
+          "enabled"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: compacts, scroll, provisioning, mode. Lead: Claude Code v2.1.195",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, check this Claude Code release. Das 'CLAUDE_CODE_DISABLE_MOUSE_CLICKS' Flag ist ein kleines Detail, aber für Devs, die viel mit Fullscreen-Tools arbeiten, ist das Gold wert. Endlich keine versehentlichen Klicks mehr, wenn man nur scrollen will. Das macht den Workflow smoother.",
+    "chloe_note": "*Claude Code v2.1.195* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Direct release of Claude Code with new feature and critical bug fixes for tool matching and voice dictation.Cluster context: 1 sources, engagement 0. Common terms: compacts, scroll, provisioning, mode. Bewertung: 90. Quelle: https://github.com/anthropics/claude-code/releases/tag/v2.1.195"
   }
 ]
