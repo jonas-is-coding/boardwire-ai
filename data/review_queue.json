@@ -3326,5 +3326,46 @@
     "breaking": false,
     "claire_note": "Aus *LangChain Releases* ist ein starker Kandidat reingekommen: *LangChain v1.4.3*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 60_",
     "chloe_note": "*LangChain v1.4.3* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: partners, chunks, 0.8.0, mypy. Bewertung: 60. Quelle: https://github.com/langchain-ai/langchain/releases/tag/langchain-fireworks%3D%3D1.4.3"
+  },
+  {
+    "id": "f5276ec187af",
+    "status": "approved",
+    "created_at": "2026-06-26T14:02:17.180432Z",
+    "score": 85,
+    "reason": "Open-source agent skill for Nuwa.skill framework released on GitHub, offering specific cognitive capabilities for builders.",
+    "proposed_post": "alchaincyf/zhangxuefeng-skill, a new open-source 'skill' for the Nuwa.skill agent framework, is trending on GitHub. It provides a cognitive system for college/career planning. Builders can integrate this component into Nuwa.skill agents for specialized guidance applications.",
+    "source_angle": "Open-source agent skill for Nuwa.skill framework",
+    "source_item": {
+      "title": "alchaincyf/zhangxuefeng-skill — 张雪峰.skill — 张雪峰的认知操作系统。高考志愿/考研/职业规划的实战思维框架。由女娲.skill生成。",
+      "source": "GitHub Trending",
+      "link": "https://github.com/alchaincyf/zhangxuefeng-skill",
+      "source_tier": 2,
+      "engagement_score": 220.0,
+      "local_newsworthiness_score": 0,
+      "summary": "Trending on GitHub today: +220 stars. 张雪峰.skill — 张雪峰的认知操作系统。高考志愿/考研/职业规划的实战思维框架。由女娲.skill生成。\n[Cluster context: 1 sources, engagement 220, common terms: +220, .skill, stars., github, alchaincyf/zhangxuefeng-skill.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 220,
+        "common_terms": [
+          "+220",
+          ".skill",
+          "stars.",
+          "github",
+          "alchaincyf/zhangxuefeng-skill",
+          "trending"
+        ],
+        "cluster_summary": "1 sources, engagement 220. Common terms: +220, .skill, stars., github. Lead: alchaincyf/zhangxuefeng-skill — 张雪峰.skill — 张雪峰的认知操作系统。高考志愿/考研/职业规划的实战思维框架。由女娲.skill生成。",
+        "alternative_titles": [],
+        "cluster_score": 25
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, schau dir das an: 'alchaincyf/zhangxuefeng-skill' trendet auf GitHub. Das ist ein praktisches Skill-Paket für Zhang Xuefengs Denkweise, generiert mit Nüwa.skill.\n\nFür Entwickler ist das interessant, weil es zeigt, wie man spezifisches Domänenwissen – hier Studien- und Karriereberatung – in ein AI-Skill-Framework packt. Man kann sich ansehen, wie die Wissensbasis strukturiert ist und wie die Prompts oder Logik für die \"Beratung\" aufgebaut sind, um ähnliche, spezialisierte AI-Anwendungen zu bauen. Könnte ein guter Case Study für Nüwa.skill sein und wie man Expertenwissen in AI-Tools überführt.",
+    "chloe_note": "*alchaincyf/zhangxuefeng-skill — 张雪峰.skill — 张雪峰的认知操作系统。高考志愿/考研/职业规划的实战思维框架。由女娲.skill生成。* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Open-source agent skill for Nuwa.skill framework released on GitHub, offering specific cognitive capabilities for builders.Cluster context: 1 sources, engagement 220. Common terms: +220, .skill, stars., github. Bewertung: 85. Quelle: https://github.com/alchaincyf/zhangxuefeng-skill"
   }
 ]

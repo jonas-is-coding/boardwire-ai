@@ -10078,5 +10078,33 @@
     "engagement_score": 160.5,
     "local_newsworthiness_score": 10,
     "created_at": "2026-06-26T10:43:49.417183Z"
+  },
+  {
+    "title": "alchaincyf/zhangxuefeng-skill — 张雪峰.skill — 张雪峰的认知操作系统。高考志愿/考研/职业规划的实战思维框架。由女娲.skill生成。",
+    "link": "https://github.com/alchaincyf/zhangxuefeng-skill",
+    "source": "GitHub Trending",
+    "score": 85,
+    "should_post": true,
+    "reason": "Open-source agent skill for Nuwa.skill framework released on GitHub, offering specific cognitive capabilities for builders.",
+    "post_text": "alchaincyf/zhangxuefeng-skill, a new open-source 'skill' for the Nuwa.skill agent framework, is trending on GitHub. It provides a cognitive system for college/career planning. Builders can integrate this component into Nuwa.skill agents for specialized guidance applications.",
+    "source_angle": "Open-source agent skill for Nuwa.skill framework",
+    "source_tier": 2,
+    "engagement_score": 220.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-26T14:02:17.180432Z"
+  },
+  {
+    "title": "commaai/openpilot — openpilot is an operating system for robotics. Currently, it upgrades the driver assistance system on 300+ supported cars.",
+    "link": "https://github.com/commaai/openpilot",
+    "source": "GitHub Trending",
+    "score": 5,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 2,
+    "engagement_score": 67.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-26T14:02:18.722316Z"
   }
 ]
