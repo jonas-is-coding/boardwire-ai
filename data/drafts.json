@@ -10064,5 +10064,19 @@
     "engagement_score": 47.0,
     "local_newsworthiness_score": 0,
     "created_at": "2026-06-26T07:42:48.612429Z"
+  },
+  {
+    "title": "Why current LLM costs are not sustainable",
+    "link": "https://aditya.patadia.org/p/ai-and-cloud-costs",
+    "source": "HackerNews",
+    "score": 20,
+    "should_post": false,
+    "reason": "Analysis/opinion piece on LLM costs. No concrete artifact (model, API, tool, benchmark) to download, use, or deploy.",
+    "post_text": "Analysis: current LLM costs are unsustainable. Builders should model future cost volatility and explore efficiency gains for long-term product viability.",
+    "source_angle": "HackerNews discussion on LLM economic viability.",
+    "source_tier": 3,
+    "engagement_score": 160.5,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-06-26T10:43:49.417183Z"
   }
 ]
