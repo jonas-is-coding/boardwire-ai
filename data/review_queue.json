@@ -3286,11 +3286,11 @@
   },
   {
     "id": "d6b12f53c3f0",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-26T07:42:48.611666Z",
     "score": 60,
     "reason": "local newsworthiness fallback",
-    "proposed_post": "LangChain updates fireworks with dependency bumps.\n\nv1.4.3 bumps vcrpy to 8.2.1 and langsmith to 0.8.18, with 2 dependency updates.\n\nLangChain updated fireworks in v1.4.3 with bumped dependencies for vcrpy and langsmith, available on GitHub.\n\n#LangChain #vcrpy #langsmith",
+    "proposed_post": "LangChain v1.4.3 fixes Fireworks integration.\n\nLangChain v1.4.3 updates Fireworks dependencies for vcrpy 8.2.1 and langsmith 0.8.18.\n\nFireworks integration now uses vcrpy 8.2.1 and langsmith 0.8.18 for improved reliability in LangChain workflows.\n\n📖 Read the full article: file://",
     "source_angle": "Local high-score + Sarah/OpenRouter fallback",
     "source_item": {
       "title": "LangChain v1.4.3",
@@ -3321,11 +3321,23 @@
         "cluster_score": 35
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/d6b12f53c3f0.png",
     "is_llm_mode": false,
     "breaking": false,
     "claire_note": "Aus *LangChain Releases* ist ein starker Kandidat reingekommen: *LangChain v1.4.3*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 60_",
-    "chloe_note": "*LangChain v1.4.3* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: partners, chunks, 0.8.0, mypy. Bewertung: 60. Quelle: https://github.com/langchain-ai/langchain/releases/tag/langchain-fireworks%3D%3D1.4.3"
+    "chloe_note": "*LangChain v1.4.3* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: partners, chunks, 0.8.0, mypy. Bewertung: 60. Quelle: https://github.com/langchain-ai/langchain/releases/tag/langchain-fireworks%3D%3D1.4.3",
+    "sarah_package": {
+      "title": "LangChain v1.4.3 fixes Fireworks integration.",
+      "subtitle": "LangChain v1.4.3 updates Fireworks dependencies for vcrpy 8.2.1 and langsmith 0.8.18.",
+      "description": "Fireworks integration now uses vcrpy 8.2.1 and langsmith 0.8.18 for improved reliability in LangChain workflows.",
+      "hashtags": [
+        "#LangChain",
+        "#vcrpy",
+        "#langsmith"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-26-langchain-v1-4-3-d6b12f53c3f0.md",
+    "published_at": "2026-06-26T17:04:05.095718Z"
   },
   {
     "id": "f5276ec187af",
