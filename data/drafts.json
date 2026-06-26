@@ -10176,5 +10176,61 @@
     "engagement_score": 177.0,
     "local_newsworthiness_score": 10,
     "created_at": "2026-06-26T17:30:01.085746Z"
+  },
+  {
+    "title": "Ollama v0.30.11",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.30.11",
+    "source": "Ollama Releases",
+    "score": 90,
+    "should_post": true,
+    "reason": "New Ollama version with concrete features for model installation and capability detection. Passes Ships Test.",
+    "post_text": "Ollama v0.30.11 now auto-installs Claude Code and opencode models, adding thinking capability detection for opencode. This simplifies local setup for builders, reducing friction when experimenting or deploying these specific models via Ollama.",
+    "source_angle": "Ollama simplifies local Claude Code/opencode setup.",
+    "source_tier": 2,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 35,
+    "created_at": "2026-06-26T19:28:21.441335Z"
+  },
+  {
+    "title": "Show HN: Smart model routing directly in Claude, Codex and Cursor",
+    "link": "https://github.com/workweave/router",
+    "source": "HackerNews",
+    "score": 4,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 104.0,
+    "local_newsworthiness_score": 40,
+    "created_at": "2026-06-26T19:28:22.324222Z"
+  },
+  {
+    "title": "Polygraph: A Meta-Harness for Maximum Agent Autonomy",
+    "link": "https://nx.dev/blog/announcing-polygraph",
+    "source": "HackerNews",
+    "score": 4,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 46.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-26T19:28:22.324427Z"
+  },
+  {
+    "title": "U.S. government will decide who gets to use GPT-5.6",
+    "link": "https://www.washingtonpost.com/technology/2026/06/26/openai-says-us-government-will-vet-users-its-latest-ai-model/",
+    "source": "HackerNews",
+    "score": 5,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 349.0,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-06-26T19:28:22.324615Z"
   }
 ]
