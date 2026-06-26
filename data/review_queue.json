@@ -3341,11 +3341,11 @@
   },
   {
     "id": "f5276ec187af",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-26T14:02:17.180432Z",
     "score": 85,
     "reason": "Open-source agent skill for Nuwa.skill framework released on GitHub, offering specific cognitive capabilities for builders.",
-    "proposed_post": "alchaincyf/zhangxuefeng-skill, a new open-source 'skill' for the Nuwa.skill agent framework, is trending on GitHub. It provides a cognitive system for college/career planning. Builders can integrate this component into Nuwa.skill agents for specialized guidance applications.",
+    "proposed_post": "ZhangXuefeng.skill ships a cognitive OS for agent guidance.\n\nalchaincyf/zhangxuefeng-skill packages Chinese exam/career planning as a Nuwa.skill agent primitive\n\nNuwa.skill-generated framework replaces brittle prompting with reusable cognitive primitives for college entrance, gra",
     "source_angle": "Open-source agent skill for Nuwa.skill framework",
     "source_item": {
       "title": "alchaincyf/zhangxuefeng-skill — 张雪峰.skill — 张雪峰的认知操作系统。高考志愿/考研/职业规划的实战思维框架。由女娲.skill生成。",
@@ -3374,11 +3374,23 @@
         "cluster_score": 25
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/f5276ec187af.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, schau dir das an: 'alchaincyf/zhangxuefeng-skill' trendet auf GitHub. Das ist ein praktisches Skill-Paket für Zhang Xuefengs Denkweise, generiert mit Nüwa.skill.\n\nFür Entwickler ist das interessant, weil es zeigt, wie man spezifisches Domänenwissen – hier Studien- und Karriereberatung – in ein AI-Skill-Framework packt. Man kann sich ansehen, wie die Wissensbasis strukturiert ist und wie die Prompts oder Logik für die \"Beratung\" aufgebaut sind, um ähnliche, spezialisierte AI-Anwendungen zu bauen. Könnte ein guter Case Study für Nüwa.skill sein und wie man Expertenwissen in AI-Tools überführt.",
-    "chloe_note": "*alchaincyf/zhangxuefeng-skill — 张雪峰.skill — 张雪峰的认知操作系统。高考志愿/考研/职业规划的实战思维框架。由女娲.skill生成。* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Open-source agent skill for Nuwa.skill framework released on GitHub, offering specific cognitive capabilities for builders.Cluster context: 1 sources, engagement 220. Common terms: +220, .skill, stars., github. Bewertung: 85. Quelle: https://github.com/alchaincyf/zhangxuefeng-skill"
+    "chloe_note": "*alchaincyf/zhangxuefeng-skill — 张雪峰.skill — 张雪峰的认知操作系统。高考志愿/考研/职业规划的实战思维框架。由女娲.skill生成。* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Open-source agent skill for Nuwa.skill framework released on GitHub, offering specific cognitive capabilities for builders.Cluster context: 1 sources, engagement 220. Common terms: +220, .skill, stars., github. Bewertung: 85. Quelle: https://github.com/alchaincyf/zhangxuefeng-skill",
+    "sarah_package": {
+      "title": "ZhangXuefeng.skill ships a cognitive OS for agent guidance.",
+      "subtitle": "alchaincyf/zhangxuefeng-skill packages Chinese exam/career planning as a Nuwa.skill agent primitive ",
+      "description": "Nuwa.skill-generated framework replaces brittle prompting with reusable cognitive primitives for college entrance, grad school and career ad",
+      "hashtags": [
+        "#NuwaSkill",
+        "#AgentPrimitives",
+        "#CareerGuidance"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-26-alchaincyf-zhangxuefeng-skill-skill-skill-f5276ec187af.md",
+    "published_at": "2026-06-26T20:49:24.340117Z"
   },
   {
     "id": "e1ba9eb2c231",

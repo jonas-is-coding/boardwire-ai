@@ -880,5 +880,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-26-langchain-v1-4-3-d6b12f53c3f0.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mp7ggiua7z2h",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mp7ggiua7z2h"
+  },
+  {
+    "id": "f5276ec187af",
+    "published_at": "2026-06-26T20:49:24.340117Z",
+    "platform": "bluesky",
+    "post": "ZhangXuefeng.skill ships a cognitive OS for agent guidance.\n\nalchaincyf/zhangxuefeng-skill packages Chinese exam/career planning as a Nuwa.skill agent primitive\n\nNuwa.skill-generated framework replaces brittle prompting with reusable cognitive primitives for college entrance, gra",
+    "source_link": "https://github.com/alchaincyf/zhangxuefeng-skill",
+    "source_title": "alchaincyf/zhangxuefeng-skill — 张雪峰.skill — 张雪峰的认知操作系统。高考志愿/考研/职业规划的实战思维框架。由女娲.skill生成。",
+    "score": 85,
+    "reason": "Open-source agent skill for Nuwa.skill framework released on GitHub, offering specific cognitive capabilities for builders.",
+    "card_path": "generated/cards/f5276ec187af.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-26-alchaincyf-zhangxuefeng-skill-skill-skill-f5276ec187af.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mp7szfulgy2g",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mp7szfulgy2g"
   }
 ]
