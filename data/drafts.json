@@ -10274,5 +10274,47 @@
     "engagement_score": 88.5,
     "local_newsworthiness_score": 20,
     "created_at": "2026-06-26T22:59:23.368044Z"
+  },
+  {
+    "title": "vLLM v0.24.0",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.24.0",
+    "source": "vLLM Releases",
+    "score": 90,
+    "should_post": true,
+    "reason": "New vLLM release with direct impact on MoE and Qwen3 serving efficiency. Builders can update now.",
+    "post_text": "vLLM v0.24.0 released, adding improved MoE support and Qwen3 NVFP4 configs. Update to serve Mixture-of-Experts models and Qwen3 with better efficiency and lower memory footprint.",
+    "source_angle": "vLLM release improves MoE & Qwen3 serving",
+    "source_tier": 2,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 35,
+    "created_at": "2026-06-27T02:08:25.221794Z"
+  },
+  {
+    "title": "US allows Anthropic to release Mythos to 'trusted partners'",
+    "link": "https://www.reuters.com/technology/us-releases-anthropic-model-mythos-some-us-companies-semafor-reports-2026-06-26/",
+    "source": "HackerNews",
+    "score": 8,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 301.0,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-06-27T02:08:26.371291Z"
+  },
+  {
+    "title": "AI in mathematics is forcing big questions",
+    "link": "https://spectrum.ieee.org/ai-in-mathematics",
+    "source": "HackerNews",
+    "score": 2,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 50.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-27T02:08:26.371431Z"
   }
 ]
