@@ -3598,5 +3598,47 @@
     },
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-27-deepseek-open-sources-inference-optimizations-with-60-85-faster-generation-pdf-b837d4c5f32f.md",
     "published_at": "2026-06-27T11:00:17.041909Z"
+  },
+  {
+    "id": "c3921d1efba5",
+    "status": "approved",
+    "created_at": "2026-06-27T11:21:41.725640Z",
+    "score": 90,
+    "reason": "New open-source coding agent available on GitHub, highly trending. Passes Ships Test.",
+    "proposed_post": "anomalyco/opencode, a new open-source coding agent, is trending on GitHub. Builders can deploy this agent to automate coding tasks or integrate agentic workflows into their development pipelines.",
+    "source_angle": "Open-source coding agent launch on GitHub.",
+    "source_item": {
+      "title": "anomalyco/opencode — The open source coding agent.",
+      "source": "GitHub Trending",
+      "link": "https://github.com/anomalyco/opencode",
+      "source_tier": 2,
+      "engagement_score": 573.0,
+      "local_newsworthiness_score": 0,
+      "summary": "Trending on GitHub today: +573 stars. The open source coding agent.\n[Cluster context: 1 sources, engagement 573, common terms: +573, agent., github, coding, anomalyco/opencode.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 573,
+        "common_terms": [
+          "+573",
+          "agent.",
+          "github",
+          "coding",
+          "anomalyco/opencode",
+          "trending",
+          "stars."
+        ],
+        "cluster_summary": "1 sources, engagement 573. Common terms: +573, agent., github, coding. Lead: anomalyco/opencode — The open source coding agent.",
+        "alternative_titles": [],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, das hier ist interessant: 'anomalyco/opencode'.\n\nEin Open-Source-Coding-Agent, der gerade auf GitHub trendet. Das ist direkt relevant für jeden, der überlegt, wie man KI-Agenten in den eigenen Dev-Workflow integrieren kann, ohne auf proprietäre Lösungen angewiesen zu sein. Entwickler können das Ding fork-en, anpassen und sehen, wie weit man mit einem Community-gesteuerten Coding-Agenten kommt. Das gibt uns einen guten Blick auf die aktuelle Traction im Bereich Open-Source-Dev-Tools mit Agenten-Fokus.",
+    "chloe_note": "Kurzes Update: *anomalyco/opencode — The open source coding agent.* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um New open-source coding agent available on GitHub, highly trending. Passes Ships Test.Cluster context: 1 sources, engagement 573. Common terms: +573, agent., github, coding. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://github.com/anomalyco/opencode"
   }
 ]

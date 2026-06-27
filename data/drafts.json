@@ -10344,5 +10344,61 @@
     "engagement_score": 48.0,
     "local_newsworthiness_score": 30,
     "created_at": "2026-06-27T09:56:33.492794Z"
+  },
+  {
+    "title": "anomalyco/opencode — The open source coding agent.",
+    "link": "https://github.com/anomalyco/opencode",
+    "source": "GitHub Trending",
+    "score": 90,
+    "should_post": true,
+    "reason": "New open-source coding agent available on GitHub, highly trending. Passes Ships Test.",
+    "post_text": "anomalyco/opencode, a new open-source coding agent, is trending on GitHub. Builders can deploy this agent to automate coding tasks or integrate agentic workflows into their development pipelines.",
+    "source_angle": "Open-source coding agent launch on GitHub.",
+    "source_tier": 2,
+    "engagement_score": 573.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-27T11:21:41.725640Z"
+  },
+  {
+    "title": "hugohe3/ppt-master — AI generates a real, editable PowerPoint from any document — native shapes & animations, speaker notes voiced as audio narration, and the option to follow your own .pptx template,",
+    "link": "https://github.com/hugohe3/ppt-master",
+    "source": "GitHub Trending",
+    "score": 4,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 2,
+    "engagement_score": 589.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-27T11:21:43.081673Z"
+  },
+  {
+    "title": "Anil-matcha/Open-Generative-AI — Unrestricted Open-source alternative to AI video platforms — Free AI image & video generation studio with 200+ models (Flux, Midjourney, Kling, Sora, Veo). No content ",
+    "link": "https://github.com/Anil-matcha/Open-Generative-AI",
+    "source": "GitHub Trending",
+    "score": 10,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 2,
+    "engagement_score": 254.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-27T11:21:43.081887Z"
+  },
+  {
+    "title": "Fission-AI/OpenSpec — Spec-driven development (SDD) for AI coding assistants.",
+    "link": "https://github.com/Fission-AI/OpenSpec",
+    "source": "GitHub Trending",
+    "score": 4,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 2,
+    "engagement_score": 167.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-27T11:21:43.082061Z"
   }
 ]
