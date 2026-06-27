@@ -10330,5 +10330,19 @@
     "engagement_score": 533.5,
     "local_newsworthiness_score": 35,
     "created_at": "2026-06-27T06:46:38.528425Z"
+  },
+  {
+    "title": "DeepSeek open-sources inference optimizations with 60–85% faster generation [pdf]",
+    "link": "https://github.com/deepseek-ai/DeepSpec/blob/main/DSpark_paper.pdf",
+    "source": "HackerNews",
+    "score": 85,
+    "should_post": true,
+    "reason": "DeepSeek open-sourced DSpark inference optimizations, delivering 60-85% faster generation. Direct, actionable performance gain.",
+    "post_text": "DeepSeek open-sourced DSpark inference optimizations, achieving 60-85% faster generation. Builders can integrate these methods to significantly reduce LLM inference costs and latency.",
+    "source_angle": "DeepSeek's DSpark offers substantial LLM inference speedup via open-sourced optimizations.",
+    "source_tier": 3,
+    "engagement_score": 48.0,
+    "local_newsworthiness_score": 30,
+    "created_at": "2026-06-27T09:56:33.492794Z"
   }
 ]

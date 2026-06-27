@@ -3543,5 +3543,48 @@
     "breaking": false,
     "claire_note": "Okay, Chloe, das ist ein Release-Post, aber vLLM 0.24.0 ist relevant, weil sie hier an MoE-Optimierungen für Qwen3 NVFP4 arbeiten. Das bedeutet potenziell effizientere und performantere MoE-Modelle auf NVIDIA-Hardware, was für jeden, der mit großen Sprachmodellen und ihren Kosten kämpft, ein großes Ding ist. Direkt anwendbar für Leute, die Qwen3 einsetzen oder MoE-Architekturen untersuchen.",
     "chloe_note": "Hey, *vLLM v0.24.0* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New vLLM release with direct impact on MoE and Qwen3 serving efficiency. Builders can update now.Cluster context: 1 sources, engagement 0. Common terms: moe, v0.24.0, raise, timeout. Score aktuell: 90. Link: https://github.com/vllm-project/vllm/releases/tag/v0.24.0"
+  },
+  {
+    "id": "b837d4c5f32f",
+    "status": "approved",
+    "created_at": "2026-06-27T09:56:33.492794Z",
+    "score": 85,
+    "reason": "DeepSeek open-sourced DSpark inference optimizations, delivering 60-85% faster generation. Direct, actionable performance gain.",
+    "proposed_post": "DeepSeek open-sourced DSpark inference optimizations, achieving 60-85% faster generation. Builders can integrate these methods to significantly reduce LLM inference costs and latency.",
+    "source_angle": "DeepSeek's DSpark offers substantial LLM inference speedup via open-sourced optimizations.",
+    "source_item": {
+      "title": "DeepSeek open-sources inference optimizations with 60–85% faster generation [pdf]",
+      "source": "HackerNews",
+      "link": "https://github.com/deepseek-ai/DeepSpec/blob/main/DSpark_paper.pdf",
+      "source_tier": 3,
+      "engagement_score": 48.0,
+      "local_newsworthiness_score": 30,
+      "summary": "48 points, 0 comments on Hacker News — submitted by aurenvale — original: https://github.com/deepseek-ai/DeepSpec/blob/main/DSpark_paper.pdf\n[Cluster context: 1 sources, engagement 48, common terms: submitted, comments, original, points, faster.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 48,
+        "common_terms": [
+          "submitted",
+          "comments",
+          "original",
+          "points",
+          "faster",
+          "optimizations",
+          "pdf",
+          "aurenvale"
+        ],
+        "cluster_summary": "1 sources, engagement 48. Common terms: submitted, comments, original, points. Lead: DeepSeek open-sources inference optimizations with 60–85% faster generation [pdf]",
+        "alternative_titles": [],
+        "cluster_score": 20
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, schau dir das an: DeepSeek hat Inference-Optimierungen veröffentlicht, die 60-85% schnellere Generierung versprechen. Das bedeutet, Entwickler können ihre LLM-Anwendungen deutlich performanter machen, ohne große Code-Änderungen. Das ist ein direkter Win für jeden, der mit DeepSeek-Modellen arbeitet und Latenz reduzieren will.",
+    "chloe_note": "*DeepSeek open-sources inference optimizations with 60–85% faster generation [pdf]* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch DeepSeek open-sourced DSpark inference optimizations, delivering 60-85% faster generation. Direct, actionable performance gain.Cluster context: 1 sources, engagement 48. Common terms: submitted, comments, original, points. Bewertung: 85. Quelle: https://github.com/deepseek-ai/DeepSpec/blob/main/DSpark_paper.pdf"
   }
 ]
