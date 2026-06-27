@@ -922,5 +922,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-26-claude-code-v2-1-195-b106072b47e4.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpaoba2oqd2s",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpaoba2oqd2s"
+  },
+  {
+    "id": "b837d4c5f32f",
+    "published_at": "2026-06-27T11:00:17.041909Z",
+    "platform": "bluesky",
+    "post": "Inference speeds up 60-85% with DSpark.\n\nDeepSeek open-sources DSpark with 85 score and 48 engagement points.\n\nDelivers 60-85% faster generation, reducing LLM inference costs and latency, available on GitHub.\n\n📖 Read the full article: file:///home/runner/work/boardwire-ai/boardwi",
+    "source_link": "https://github.com/deepseek-ai/DeepSpec/blob/main/DSpark_paper.pdf",
+    "source_title": "DeepSeek open-sources inference optimizations with 60–85% faster generation [pdf]",
+    "score": 85,
+    "reason": "DeepSeek open-sourced DSpark inference optimizations, delivering 60-85% faster generation. Direct, actionable performance gain.",
+    "card_path": "generated/cards/b837d4c5f32f.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-27-deepseek-open-sources-inference-optimizations-with-60-85-faster-generation-pdf-b837d4c5f32f.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpbckton7c2q",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpbckton7c2q"
   }
 ]

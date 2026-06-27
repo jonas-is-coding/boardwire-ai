@@ -3546,11 +3546,11 @@
   },
   {
     "id": "b837d4c5f32f",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-27T09:56:33.492794Z",
     "score": 85,
     "reason": "DeepSeek open-sourced DSpark inference optimizations, delivering 60-85% faster generation. Direct, actionable performance gain.",
-    "proposed_post": "DeepSeek open-sourced DSpark inference optimizations, achieving 60-85% faster generation. Builders can integrate these methods to significantly reduce LLM inference costs and latency.",
+    "proposed_post": "Inference speeds up 60-85% with DSpark.\n\nDeepSeek open-sources DSpark with 85 score and 48 engagement points.\n\nDelivers 60-85% faster generation, reducing LLM inference costs and latency, available on GitHub.\n\n📖 Read the full article: file:///home/runner/work/boardwire-ai/boardwi",
     "source_angle": "DeepSeek's DSpark offers substantial LLM inference speedup via open-sourced optimizations.",
     "source_item": {
       "title": "DeepSeek open-sources inference optimizations with 60–85% faster generation [pdf]",
@@ -3581,10 +3581,22 @@
         "cluster_score": 20
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/b837d4c5f32f.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, schau dir das an: DeepSeek hat Inference-Optimierungen veröffentlicht, die 60-85% schnellere Generierung versprechen. Das bedeutet, Entwickler können ihre LLM-Anwendungen deutlich performanter machen, ohne große Code-Änderungen. Das ist ein direkter Win für jeden, der mit DeepSeek-Modellen arbeitet und Latenz reduzieren will.",
-    "chloe_note": "*DeepSeek open-sources inference optimizations with 60–85% faster generation [pdf]* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch DeepSeek open-sourced DSpark inference optimizations, delivering 60-85% faster generation. Direct, actionable performance gain.Cluster context: 1 sources, engagement 48. Common terms: submitted, comments, original, points. Bewertung: 85. Quelle: https://github.com/deepseek-ai/DeepSpec/blob/main/DSpark_paper.pdf"
+    "chloe_note": "*DeepSeek open-sources inference optimizations with 60–85% faster generation [pdf]* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch DeepSeek open-sourced DSpark inference optimizations, delivering 60-85% faster generation. Direct, actionable performance gain.Cluster context: 1 sources, engagement 48. Common terms: submitted, comments, original, points. Bewertung: 85. Quelle: https://github.com/deepseek-ai/DeepSpec/blob/main/DSpark_paper.pdf",
+    "sarah_package": {
+      "title": "Inference speeds up 60-85% with DSpark.",
+      "subtitle": "DeepSeek open-sources DSpark with 85 score and 48 engagement points.",
+      "description": "Delivers 60-85% faster generation, reducing LLM inference costs and latency, available on GitHub.",
+      "hashtags": [
+        "#DeepSeek",
+        "#DSpark",
+        "#LLM"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-27-deepseek-open-sources-inference-optimizations-with-60-85-faster-generation-pdf-b837d4c5f32f.md",
+    "published_at": "2026-06-27T11:00:17.041909Z"
   }
 ]
