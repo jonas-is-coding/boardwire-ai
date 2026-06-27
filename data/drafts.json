@@ -10428,5 +10428,19 @@
     "engagement_score": 70.5,
     "local_newsworthiness_score": 0,
     "created_at": "2026-06-27T15:08:13.116477Z"
+  },
+  {
+    "title": "AgentKits – 60 production-ready AI agent blueprints with guardrails",
+    "link": "https://www.agent-kits.com",
+    "source": "HackerNews",
+    "score": 20,
+    "should_post": false,
+    "reason": "Vague. \"Blueprints\" does not confirm a deployable artifact, open code, or API. Low engagement for a community source.",
+    "post_text": "No post generated",
+    "source_angle": "No source angle provided",
+    "source_tier": 3,
+    "engagement_score": 34.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-27T16:56:29.689136Z"
   }
 ]
