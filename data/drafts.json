@@ -10316,5 +10316,19 @@
     "engagement_score": 50.5,
     "local_newsworthiness_score": 0,
     "created_at": "2026-06-27T02:08:26.371431Z"
+  },
+  {
+    "title": "U.S. allows Anthropic to release Mythos AI to ‘trusted’ US organizations",
+    "link": "https://www.semafor.com/article/06/27/2026/us-releases-powerful-anthropic-model-mythos-to-some-us-companies",
+    "source": "HackerNews",
+    "score": 25,
+    "should_post": false,
+    "reason": "Limited release to 'trusted organizations' means no public API or weights for builders to use today. Fails Ships Test.",
+    "post_text": "No post generated",
+    "source_angle": "No source angle provided",
+    "source_tier": 3,
+    "engagement_score": 533.5,
+    "local_newsworthiness_score": 35,
+    "created_at": "2026-06-27T06:46:38.528425Z"
   }
 ]
