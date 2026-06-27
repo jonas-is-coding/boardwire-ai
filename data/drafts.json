@@ -10414,5 +10414,19 @@
     "engagement_score": 0.0,
     "local_newsworthiness_score": 10,
     "created_at": "2026-06-27T13:08:24.940662Z"
+  },
+  {
+    "title": "Asian AI startups launch Mythos-like models",
+    "link": "https://techcrunch.com/2026/06/27/asian-ai-startups-launch-mythos-like-models-as-anthropics-export-ban-drags-on/",
+    "source": "HackerNews",
+    "score": 20,
+    "should_post": false,
+    "reason": "No concrete model weights, API, or accessible product. Title implies launch, but summary lacks actionable artifact.",
+    "post_text": "No post generated",
+    "source_angle": "Asian AI startups announce new models",
+    "source_tier": 3,
+    "engagement_score": 70.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-27T15:08:13.116477Z"
   }
 ]
