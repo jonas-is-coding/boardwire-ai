@@ -3394,11 +3394,11 @@
   },
   {
     "id": "e1ba9eb2c231",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-26T19:28:21.441335Z",
     "score": 90,
     "reason": "New Ollama version with concrete features for model installation and capability detection. Passes Ships Test.",
-    "proposed_post": "Ollama v0.30.11 now auto-installs Claude Code and opencode models, adding thinking capability detection for opencode. This simplifies local setup for builders, reducing friction when experimenting or deploying these specific models via Ollama.",
+    "proposed_post": "Ollama ships thinking capability detection for code models.\n\nv0.30.11 auto-installs Claude Code and opencode, with MCP-aware capability metadata.\n\nDetects 'thinking' capability in opencode models and auto-installs Claude Code via Ollama server.\n\n📖 Read the full article: file:///h",
     "source_angle": "Ollama simplifies local Claude Code/opencode setup.",
     "source_item": {
       "title": "Ollama v0.30.11",
@@ -3429,11 +3429,23 @@
         "cluster_score": 35
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/e1ba9eb2c231.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Hey Chloe,\n\nOllama v0.30.11 ist raus. Das \"thinking capability detection\" für opencode ist ein Game-Changer. Entwickler können jetzt Modelle, die mit \"Denkfähigkeit\" trainiert wurden, besser nutzen und integrieren – das bedeutet präzisere und kontextsensitivere Ergebnisse in ihren Apps. Das vereinfacht die Arbeit mit komplexeren Modellen erheblich.",
-    "chloe_note": "*Ollama v0.30.11* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New Ollama version with concrete features for model installation and capability detection. Passes Ships Test.Cluster context: 1 sources, engagement 0. Common terms: server, llama.cpp, ollama, jit. Bewertung: 90. Quelle: https://github.com/ollama/ollama/releases/tag/v0.30.11"
+    "chloe_note": "*Ollama v0.30.11* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New Ollama version with concrete features for model installation and capability detection. Passes Ships Test.Cluster context: 1 sources, engagement 0. Common terms: server, llama.cpp, ollama, jit. Bewertung: 90. Quelle: https://github.com/ollama/ollama/releases/tag/v0.30.11",
+    "sarah_package": {
+      "title": "Ollama ships thinking capability detection for code models.",
+      "subtitle": "v0.30.11 auto-installs Claude Code and opencode, with MCP-aware capability metadata.",
+      "description": "Detects 'thinking' capability in opencode models and auto-installs Claude Code via Ollama server.",
+      "hashtags": [
+        "#Ollama",
+        "#ClaudeCode",
+        "#Opencode"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-26-ollama-v0-30-11-e1ba9eb2c231.md",
+    "published_at": "2026-06-27T00:13:31.618101Z"
   },
   {
     "id": "b106072b47e4",

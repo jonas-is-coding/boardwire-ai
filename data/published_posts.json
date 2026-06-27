@@ -894,5 +894,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-26-alchaincyf-zhangxuefeng-skill-skill-skill-f5276ec187af.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mp7szfulgy2g",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mp7szfulgy2g"
+  },
+  {
+    "id": "e1ba9eb2c231",
+    "published_at": "2026-06-27T00:13:31.618101Z",
+    "platform": "bluesky",
+    "post": "Ollama ships thinking capability detection for code models.\n\nv0.30.11 auto-installs Claude Code and opencode, with MCP-aware capability metadata.\n\nDetects 'thinking' capability in opencode models and auto-installs Claude Code via Ollama server.\n\n📖 Read the full article: file:///h",
+    "source_link": "https://github.com/ollama/ollama/releases/tag/v0.30.11",
+    "source_title": "Ollama v0.30.11",
+    "score": 90,
+    "reason": "New Ollama version with concrete features for model installation and capability detection. Passes Ships Test.",
+    "card_path": "generated/cards/e1ba9eb2c231.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-26-ollama-v0-30-11-e1ba9eb2c231.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpa6gfapin2s",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpa6gfapin2s"
   }
 ]
