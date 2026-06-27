@@ -936,5 +936,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-27-deepseek-open-sources-inference-optimizations-with-60-85-faster-generation-pdf-b837d4c5f32f.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpbckton7c2q",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpbckton7c2q"
+  },
+  {
+    "id": "c3921d1efba5",
+    "published_at": "2026-06-27T12:15:20.237009Z",
+    "platform": "bluesky",
+    "post": "Open-source coding agents arrive.\n\nAnomalyco/opencode gains +573 stars on GitHub, Apache 2.0 licensed.\n\nFirst open-source coding agent available on GitHub, allowing builders to automate coding tasks or integrate agentic workflows into developme\n\n📖 Read the full article: file:///h",
+    "source_link": "https://github.com/anomalyco/opencode",
+    "source_title": "anomalyco/opencode — The open source coding agent.",
+    "score": 90,
+    "reason": "New open-source coding agent available on GitHub, highly trending. Passes Ships Test.",
+    "card_path": "generated/cards/c3921d1efba5.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-27-anomalyco-opencode-the-open-source-coding-agent-c3921d1efba5.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpbgr33epy2o",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpbgr33epy2o"
   }
 ]
