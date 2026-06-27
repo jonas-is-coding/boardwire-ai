@@ -3652,5 +3652,48 @@
     },
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-27-anomalyco-opencode-the-open-source-coding-agent-c3921d1efba5.md",
     "published_at": "2026-06-27T12:15:20.237009Z"
+  },
+  {
+    "id": "943e8430c235",
+    "status": "approved",
+    "created_at": "2026-06-27T13:08:24.940662Z",
+    "score": 90,
+    "reason": "Practical guide for deploying open-weight models in local coding harnesses, offering a direct alternative to proprietary APIs.",
+    "proposed_post": "Sebastian Raschka details using open-weight models in local coding harnesses. This provides a self-hosted alternative to Claude Code or Codex, offering builders more control over cost and data privacy for their development workflows.",
+    "source_angle": "Guide to local, open-weight coding agents as alternative to proprietary APIs",
+    "source_item": {
+      "title": "Using Local Coding Agents",
+      "source": "Sebastian Raschka (Ahead of AI)",
+      "link": "https://magazine.sebastianraschka.com/p/using-local-coding-agents",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 10,
+      "summary": "Using Open-Weight Models in Local Coding Harnesses as an Alternative to Claude Code and Codex Subscriptions\n[Cluster context: 1 sources, engagement 0, common terms: claude, coding, codex, harnesses, open-weight.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Sebastian Raschka (Ahead of AI)"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "claude",
+          "coding",
+          "codex",
+          "harnesses",
+          "open-weight",
+          "subscriptions",
+          "local",
+          "alternative"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: claude, coding, codex, harnesses. Lead: Using Local Coding Agents",
+        "alternative_titles": [],
+        "cluster_score": 15
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, der Artikel von Raschka ist relevant, weil er zeigt, wie man Open-Weight-Modelle lokal für Code-Generierung nutzt. Das ist ein direkter Weg, um die teuren Claude/Codex-Abos zu umgehen und trotzdem leistungsfähige Coding-Agents einzusetzen. Entwickler können damit ihre Toolchain selbst in die Hand nehmen und Kosten sparen.",
+    "chloe_note": "Kurzes Update: *Using Local Coding Agents* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Practical guide for deploying open-weight models in local coding harnesses, offering a direct alternative to proprietary APIs.Cluster context: 1 sources, engagement 0. Common terms: claude, coding, codex, harnesses. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://magazine.sebastianraschka.com/p/using-local-coding-agents"
   }
 ]

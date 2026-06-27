@@ -10400,5 +10400,19 @@
     "engagement_score": 167.0,
     "local_newsworthiness_score": 0,
     "created_at": "2026-06-27T11:21:43.082061Z"
+  },
+  {
+    "title": "Using Local Coding Agents",
+    "link": "https://magazine.sebastianraschka.com/p/using-local-coding-agents",
+    "source": "Sebastian Raschka (Ahead of AI)",
+    "score": 90,
+    "should_post": true,
+    "reason": "Practical guide for deploying open-weight models in local coding harnesses, offering a direct alternative to proprietary APIs.",
+    "post_text": "Sebastian Raschka details using open-weight models in local coding harnesses. This provides a self-hosted alternative to Claude Code or Codex, offering builders more control over cost and data privacy for their development workflows.",
+    "source_angle": "Guide to local, open-weight coding agents as alternative to proprietary APIs",
+    "source_tier": 2,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-06-27T13:08:24.940662Z"
   }
 ]
