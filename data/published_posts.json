@@ -950,5 +950,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-27-anomalyco-opencode-the-open-source-coding-agent-c3921d1efba5.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpbgr33epy2o",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpbgr33epy2o"
+  },
+  {
+    "id": "1101f8abff28",
+    "published_at": "2026-06-27T14:45:38.685724Z",
+    "platform": "bluesky",
+    "post": "vLLM v0.24.0 ships Mixture-of-Experts speedups for Qwen3.\n\nNative NVFP4 configs cut MoE serving latency on NVIDIA hardware, Apache 2.0.\n\nQwen3 NVFP4 configs and MoE refactor land in vLLM 0.24.0. Apache 2.0 license. Drop-in replacement for vLLM 0.23.x.\n\n📖 Read the full article: fi",
+    "source_link": "https://github.com/vllm-project/vllm/releases/tag/v0.24.0",
+    "source_title": "vLLM v0.24.0",
+    "score": 90,
+    "reason": "New vLLM release with direct impact on MoE and Qwen3 serving efficiency. Builders can update now.",
+    "card_path": "generated/cards/1101f8abff28.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-27-vllm-v0-24-0-1101f8abff28.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpbp5v24tq26",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpbp5v24tq26"
   }
 ]

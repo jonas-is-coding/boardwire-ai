@@ -3503,11 +3503,11 @@
   },
   {
     "id": "1101f8abff28",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-27T02:08:25.221794Z",
     "score": 90,
     "reason": "New vLLM release with direct impact on MoE and Qwen3 serving efficiency. Builders can update now.",
-    "proposed_post": "vLLM v0.24.0 released, adding improved MoE support and Qwen3 NVFP4 configs. Update to serve Mixture-of-Experts models and Qwen3 with better efficiency and lower memory footprint.",
+    "proposed_post": "vLLM v0.24.0 ships Mixture-of-Experts speedups for Qwen3.\n\nNative NVFP4 configs cut MoE serving latency on NVIDIA hardware, Apache 2.0.\n\nQwen3 NVFP4 configs and MoE refactor land in vLLM 0.24.0. Apache 2.0 license. Drop-in replacement for vLLM 0.23.x.\n\n📖 Read the full article: fi",
     "source_angle": "vLLM release improves MoE & Qwen3 serving",
     "source_item": {
       "title": "vLLM v0.24.0",
@@ -3538,11 +3538,23 @@
         "cluster_score": 15
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/1101f8abff28.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Okay, Chloe, das ist ein Release-Post, aber vLLM 0.24.0 ist relevant, weil sie hier an MoE-Optimierungen für Qwen3 NVFP4 arbeiten. Das bedeutet potenziell effizientere und performantere MoE-Modelle auf NVIDIA-Hardware, was für jeden, der mit großen Sprachmodellen und ihren Kosten kämpft, ein großes Ding ist. Direkt anwendbar für Leute, die Qwen3 einsetzen oder MoE-Architekturen untersuchen.",
-    "chloe_note": "Hey, *vLLM v0.24.0* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New vLLM release with direct impact on MoE and Qwen3 serving efficiency. Builders can update now.Cluster context: 1 sources, engagement 0. Common terms: moe, v0.24.0, raise, timeout. Score aktuell: 90. Link: https://github.com/vllm-project/vllm/releases/tag/v0.24.0"
+    "chloe_note": "Hey, *vLLM v0.24.0* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New vLLM release with direct impact on MoE and Qwen3 serving efficiency. Builders can update now.Cluster context: 1 sources, engagement 0. Common terms: moe, v0.24.0, raise, timeout. Score aktuell: 90. Link: https://github.com/vllm-project/vllm/releases/tag/v0.24.0",
+    "sarah_package": {
+      "title": "vLLM v0.24.0 ships Mixture-of-Experts speedups for Qwen3.",
+      "subtitle": "Native NVFP4 configs cut MoE serving latency on NVIDIA hardware, Apache 2.0.",
+      "description": "Qwen3 NVFP4 configs and MoE refactor land in vLLM 0.24.0. Apache 2.0 license. Drop-in replacement for vLLM 0.23.x.",
+      "hashtags": [
+        "#vLLM",
+        "#Qwen3",
+        "#MixtureOfExperts"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-27-vllm-v0-24-0-1101f8abff28.md",
+    "published_at": "2026-06-27T14:45:38.685724Z"
   },
   {
     "id": "b837d4c5f32f",
