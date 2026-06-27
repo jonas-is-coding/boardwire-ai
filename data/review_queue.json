@@ -3719,5 +3719,48 @@
     },
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-27-using-local-coding-agents-943e8430c235.md",
     "published_at": "2026-06-27T20:11:39.730076Z"
+  },
+  {
+    "id": "b812dd07b6d2",
+    "status": "approved",
+    "created_at": "2026-06-27T22:54:28.145262Z",
+    "score": 85,
+    "reason": "Open-source Mac utility for managing sleep during local AI agent runs. Ships today, clear practical value for developers.",
+    "proposed_post": "Adrafinil is a new open-source Mac utility that keeps your machine awake only when specified processes (e.g., AI agents) are active, even with the lid closed. This prevents local AI agent runs from being interrupted by sleep, streamlining local development and testing workflows.",
+    "source_angle": "Mac utility for local AI agent development",
+    "source_item": {
+      "title": "Show HN: Adrafinil – keep a lid-closed Mac awake only while agents work",
+      "source": "HackerNews",
+      "link": "https://github.com/kageroumado/adrafinil",
+      "source_tier": 3,
+      "engagement_score": 64.5,
+      "local_newsworthiness_score": 30,
+      "summary": "48 points, 33 comments on Hacker News — submitted by kageroumado — original: https://github.com/kageroumado/adrafinil\n[Cluster context: 1 sources, engagement 64, common terms: keep, kageroumado, while, hacker, mac.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 64,
+        "common_terms": [
+          "keep",
+          "kageroumado",
+          "while",
+          "hacker",
+          "mac",
+          "comments",
+          "lid-closed",
+          "awake"
+        ],
+        "cluster_summary": "1 sources, engagement 64. Common terms: keep, kageroumado, while, hacker. Lead: Show HN: Adrafinil – keep a lid-closed Mac awake only while agents work",
+        "alternative_titles": [],
+        "cluster_score": 0
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, schau dir das mal an: Adrafinil auf HN.\n\nDas ist ein Tool, das deinen Mac wachhält, aber nur, wenn Agents aktiv sind. Für Entwickler, die viel mit Hintergrundprozessen, CI/CD oder lokalen Tests arbeiten, die nicht unterbrochen werden sollen, wenn der Laptop zugeklappt ist, ist das super praktisch. Keine abgebrochenen Builds mehr, nur weil der Mac in den Ruhemodus geht.",
+    "chloe_note": "*Show HN: Adrafinil – keep a lid-closed Mac awake only while agents work* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Open-source Mac utility for managing sleep during local AI agent runs. Ships today, clear practical value for developers.Cluster context: 1 sources, engagement 64. Common terms: keep, kageroumado, while, hacker. Bewertung: 85. Quelle: https://github.com/kageroumado/adrafinil"
   }
 ]

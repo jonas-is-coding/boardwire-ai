@@ -10442,5 +10442,33 @@
     "engagement_score": 34.5,
     "local_newsworthiness_score": 0,
     "created_at": "2026-06-27T16:56:29.689136Z"
+  },
+  {
+    "title": "Show HN: Adrafinil – keep a lid-closed Mac awake only while agents work",
+    "link": "https://github.com/kageroumado/adrafinil",
+    "source": "HackerNews",
+    "score": 85,
+    "should_post": true,
+    "reason": "Open-source Mac utility for managing sleep during local AI agent runs. Ships today, clear practical value for developers.",
+    "post_text": "Adrafinil is a new open-source Mac utility that keeps your machine awake only when specified processes (e.g., AI agents) are active, even with the lid closed. This prevents local AI agent runs from being interrupted by sleep, streamlining local development and testing workflows.",
+    "source_angle": "Mac utility for local AI agent development",
+    "source_tier": 3,
+    "engagement_score": 64.5,
+    "local_newsworthiness_score": 30,
+    "created_at": "2026-06-27T22:54:28.145262Z"
+  },
+  {
+    "title": "Ask HN: MacBook vs. Dedicated GPU for LLM",
+    "link": "https://news.ycombinator.com/item?id=48694802",
+    "source": "HackerNews",
+    "score": 5,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 61.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-27T22:54:29.120650Z"
   }
 ]
