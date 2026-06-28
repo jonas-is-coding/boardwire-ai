@@ -10470,5 +10470,47 @@
     "engagement_score": 61.5,
     "local_newsworthiness_score": 0,
     "created_at": "2026-06-27T22:54:29.120650Z"
+  },
+  {
+    "title": "AMD Strix Halo RDMA Cluster Setup Guide",
+    "link": "https://github.com/kyuz0/amd-strix-halo-vllm-toolboxes/blob/main/rdma_cluster/setup_guide.md",
+    "source": "HackerNews",
+    "score": 65,
+    "should_post": true,
+    "reason": "GitHub guide provides actionable steps for setting up RDMA clusters on AMD Strix Halo. Low community engagement.",
+    "post_text": "A GitHub guide details setting up an RDMA cluster for AMD Strix Halo. This offers builders a path to optimize high-performance AI workloads on AMD hardware, potentially improving inference/training efficiency.",
+    "source_angle": "AMD Strix Halo RDMA cluster setup guide on GitHub",
+    "source_tier": 3,
+    "engagement_score": 34.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-28T02:29:55.852051Z"
+  },
+  {
+    "title": "Anthropic says Alibaba used 25k accounts to mine Claude",
+    "link": "https://arstechnica.com/tech-policy/2026/06/anthropic-claims-alibaba-defied-trump-to-attack-claude-and-steal-capabilities/",
+    "source": "HackerNews",
+    "score": 5,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 46.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-28T02:29:57.421522Z"
+  },
+  {
+    "title": "Everyone feared AI taking over; the real danger is AI serving just the few",
+    "link": "https://news.ycombinator.com/item?id=48701615",
+    "source": "HackerNews",
+    "score": 2,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 43.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-28T02:29:57.421775Z"
   }
 ]
