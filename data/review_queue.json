@@ -3817,5 +3817,48 @@
     "breaking": false,
     "claire_note": "Chloe, check this out: AMD Strix Halo RDMA Cluster Setup Guide.\n\nDas ist direkt ein How-to für Leute, die AMDs neue APUs für AI-Workloads nutzen wollen. Mit dem Guide können Entwickler RDMA-Cluster auf Strix Halo-Hardware aufsetzen – das ist kritisch für High-Performance-Interconnects in AI-Clustern. Wer mit vLLM oder ähnlichem auf AMD-Hardware skaliert, bekommt hier eine konkrete Anleitung, um die Latenz zwischen den Nodes zu drücken. Das ist ein echtes Builder-Tool.",
     "chloe_note": "Kurzes Update: *AMD Strix Halo RDMA Cluster Setup Guide* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um GitHub guide provides actionable steps for setting up RDMA clusters on AMD Strix Halo. Low community engagement.Cluster context: 1 sources, engagement 34. Common terms: guide, rdma, jakogut, cluster. Ich habe es mit 65 Punkten bewertet. Hier der Link: https://github.com/kyuz0/amd-strix-halo-vllm-toolboxes/blob/main/rdma_cluster/setup_guide.md"
+  },
+  {
+    "id": "8f2884302640",
+    "status": "approved",
+    "created_at": "2026-06-28T13:15:08.015952Z",
+    "score": 90,
+    "reason": "Open-source tool for programmatic video editing with agents. Ships today, clear utility for automation.",
+    "proposed_post": "New open-source tool `browser-use/video-use` enables video editing via coding agents. Builders can now automate complex video manipulation tasks and integrate AI agents into content pipelines.",
+    "source_angle": "GitHub Trending: Open-source tool for video editing with coding agents.",
+    "source_item": {
+      "title": "browser-use/video-use — Edit videos with coding agents",
+      "source": "GitHub Trending",
+      "link": "https://github.com/browser-use/video-use",
+      "source_tier": 2,
+      "engagement_score": 186.0,
+      "local_newsworthiness_score": 0,
+      "summary": "Trending on GitHub today: +186 stars. Edit videos with coding agents\n[Cluster context: 1 sources, engagement 186, common terms: +186, github, browser-use/video-use, stars., trending.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 186,
+        "common_terms": [
+          "+186",
+          "github",
+          "browser-use/video-use",
+          "stars.",
+          "trending",
+          "videos",
+          "edit",
+          "coding"
+        ],
+        "cluster_summary": "1 sources, engagement 186. Common terms: +186, github, browser-use/video-use, stars.. Lead: browser-use/video-use — Edit videos with coding agents",
+        "alternative_titles": [],
+        "cluster_score": 25
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, das hier ist interessant: 'browser-use/video-use' auf GitHub trendet.\n\nDer Projektansatz, Videos mit Coding Agents zu bearbeiten, ist für Builder super relevant. Denk an automatisierte Workflows für Content-Erstellung oder schnelle Prototypen von Video-Features, ohne schwere Editing-Software. Das ist ein praktisches Tool für Developer, die direkt im Browser mit Video-Content arbeiten wollen.",
+    "chloe_note": "*browser-use/video-use — Edit videos with coding agents* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Open-source tool for programmatic video editing with agents. Ships today, clear utility for automation.Cluster context: 1 sources, engagement 186. Common terms: +186, github, browser-use/video-use, stars. Bewertung: 90. Quelle: https://github.com/browser-use/video-use"
   }
 ]
