@@ -3831,11 +3831,11 @@
   },
   {
     "id": "8f2884302640",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-28T13:15:08.015952Z",
     "score": 90,
     "reason": "Open-source tool for programmatic video editing with agents. Ships today, clear utility for automation.",
-    "proposed_post": "New open-source tool `browser-use/video-use` enables video editing via coding agents. Builders can now automate complex video manipulation tasks and integrate AI agents into content pipelines.",
+    "proposed_post": "VideoUse adds programmatic video editing for coding agents.\n\nbrowser-use/vid enables agent-driven video edits in browser workflows with +186 stars today.\n\nOpen-source CLI and MCP server for video manipulation via agents, replacing manual NLEs in automation pipelines.\n\n📖 Read the ",
     "source_angle": "GitHub Trending: Open-source tool for video editing with coding agents.",
     "source_item": {
       "title": "browser-use/video-use — Edit videos with coding agents",
@@ -3866,11 +3866,23 @@
         "cluster_score": 25
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/8f2884302640.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das hier ist interessant: 'browser-use/video-use' auf GitHub trendet.\n\nDer Projektansatz, Videos mit Coding Agents zu bearbeiten, ist für Builder super relevant. Denk an automatisierte Workflows für Content-Erstellung oder schnelle Prototypen von Video-Features, ohne schwere Editing-Software. Das ist ein praktisches Tool für Developer, die direkt im Browser mit Video-Content arbeiten wollen.",
-    "chloe_note": "*browser-use/video-use — Edit videos with coding agents* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Open-source tool for programmatic video editing with agents. Ships today, clear utility for automation.Cluster context: 1 sources, engagement 186. Common terms: +186, github, browser-use/video-use, stars. Bewertung: 90. Quelle: https://github.com/browser-use/video-use"
+    "chloe_note": "*browser-use/video-use — Edit videos with coding agents* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Open-source tool for programmatic video editing with agents. Ships today, clear utility for automation.Cluster context: 1 sources, engagement 186. Common terms: +186, github, browser-use/video-use, stars. Bewertung: 90. Quelle: https://github.com/browser-use/video-use",
+    "sarah_package": {
+      "title": "VideoUse adds programmatic video editing for coding agents.",
+      "subtitle": "browser-use/vid enables agent-driven video edits in browser workflows with +186 stars today.",
+      "description": "Open-source CLI and MCP server for video manipulation via agents, replacing manual NLEs in automation pipelines.",
+      "hashtags": [
+        "#BrowserUse",
+        "#MCP",
+        "#AgentVideo"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-28-browser-use-video-use-edit-videos-with-coding-agents-8f2884302640.md",
+    "published_at": "2026-06-28T22:05:21.410182Z"
   },
   {
     "id": "937dd7bc1f99",

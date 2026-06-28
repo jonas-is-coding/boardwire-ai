@@ -1006,5 +1006,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-28-amd-strix-halo-rdma-cluster-setup-guide-c7179b75fc67.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpe7vtsa5i2m",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpe7vtsa5i2m"
+  },
+  {
+    "id": "8f2884302640",
+    "published_at": "2026-06-28T22:05:21.410182Z",
+    "platform": "bluesky",
+    "post": "VideoUse adds programmatic video editing for coding agents.\n\nbrowser-use/vid enables agent-driven video edits in browser workflows with +186 stars today.\n\nOpen-source CLI and MCP server for video manipulation via agents, replacing manual NLEs in automation pipelines.\n\n📖 Read the ",
+    "source_link": "https://github.com/browser-use/video-use",
+    "source_title": "browser-use/video-use — Edit videos with coding agents",
+    "score": 90,
+    "reason": "Open-source tool for programmatic video editing with agents. Ships today, clear utility for automation.",
+    "card_path": "generated/cards/8f2884302640.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-28-browser-use-video-use-edit-videos-with-coding-agents-8f2884302640.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpey6zdhjw2k",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpey6zdhjw2k"
   }
 ]
