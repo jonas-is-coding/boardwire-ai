@@ -10652,5 +10652,47 @@
     "engagement_score": 36.0,
     "local_newsworthiness_score": 0,
     "created_at": "2026-06-28T15:12:05.174159Z"
+  },
+  {
+    "title": "Reflections on Software Engineering in the Age of AI",
+    "link": "https://adiamond.me/2026/06/software-engineering-in-the-age-of-ai/",
+    "source": "HackerNews",
+    "score": 10,
+    "should_post": false,
+    "reason": "Opinion piece, not a concrete artifact or actionable release. Fails the Ships Test.",
+    "post_text": "No post generated",
+    "source_angle": "HackerNews discussion on AI's impact on software engineering.",
+    "source_tier": 3,
+    "engagement_score": 70.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-28T19:01:58.766202Z"
+  },
+  {
+    "title": "Latest open artifacts (#22): Zyphra, Cohere, and Poolside are expanding the breadth of the ecosystem",
+    "link": "https://www.interconnects.ai/p/artifacts-22-zyphra-cohere-and-poolside",
+    "source": "Nathan Lambert (Interconnects)",
+    "score": 20,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Analysis of open ecosystem trends and motivations",
+    "source_tier": 2,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-06-28T19:02:04.357526Z"
+  },
+  {
+    "title": "I used Claude Code to get a second opinion on my MRI",
+    "link": "https://antoine.fi/mri-analysis-using-claude-code-opus",
+    "source": "HackerNews",
+    "score": 7,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 224.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-28T19:02:04.358040Z"
   }
 ]
