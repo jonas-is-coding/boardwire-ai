@@ -10512,5 +10512,47 @@
     "engagement_score": 43.0,
     "local_newsworthiness_score": 0,
     "created_at": "2026-06-28T02:29:57.421775Z"
+  },
+  {
+    "title": "Ford hired AI and sacked humans. It backfired badly",
+    "link": "https://www.the-independent.com/tech/ford-ai-automation-human-workers-b3003787.html",
+    "source": "HackerNews",
+    "score": 30,
+    "should_post": false,
+    "reason": "Fails Ships Test. No new artifact, tool, or measurable improvement for builders to use or deploy today.",
+    "post_text": "No post generated",
+    "source_angle": "Ford's AI automation backfire",
+    "source_tier": 3,
+    "engagement_score": 193.5,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-06-28T07:43:46.185969Z"
+  },
+  {
+    "title": "The best response to AI slop and online noise is from Robin Williams",
+    "link": "https://jayacunzo.com/blog/your-move-chief",
+    "source": "HackerNews",
+    "score": 10,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Opinion on AI impact, not a builder-actionable release.",
+    "source_tier": 3,
+    "engagement_score": 240.0,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-06-28T07:43:50.878952Z"
+  },
+  {
+    "title": "Wayfinder Router: deterministic routing of queries between local and hosted LLM",
+    "link": "https://github.com/itsthelore/wayfinder-router",
+    "source": "HackerNews",
+    "score": 4,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 46.0,
+    "local_newsworthiness_score": 30,
+    "created_at": "2026-06-28T07:43:50.879492Z"
   }
 ]
