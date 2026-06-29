@@ -1034,5 +1034,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-28-semgrep-glm-5-2-beats-claude-in-our-cyber-benchmarks-937dd7bc1f99.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpf7dds6lg2q",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpf7dds6lg2q"
+  },
+  {
+    "id": "86f71c0933a6",
+    "published_at": "2026-06-29T12:03:14.749774Z",
+    "platform": "bluesky",
+    "post": "Coding primitives get a framework-free GPT-2 in C/CUDA.\n\nNanoEuler ships a GPT-2 scale model in 4k lines of pure C/CUDA, Apache 2.0 on GitHub today.\n\nApache 2.0 implementation of GPT-2 scale model in 4,000 lines of C/CUDA with no framework overhead. Use as a reference for custom ",
+    "source_link": "https://github.com/JustVugg/nanoeuler",
+    "source_title": "Show HN: NanoEuler – GPT-2 scale model in pure C/CUDA from scratch",
+    "score": 70,
+    "reason": "Open-source C/CUDA implementation of GPT-2 scale model. Ships today, offers low-level builder value.",
+    "card_path": "generated/cards/86f71c0933a6.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-29-show-hn-nanoeuler-gpt-2-scale-model-in-pure-c-cuda-from-scratch-86f71c0933a6.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpggzdjrb325",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpggzdjrb325"
   }
 ]
