@@ -10960,5 +10960,61 @@
     "engagement_score": 68.5,
     "local_newsworthiness_score": 0,
     "created_at": "2026-06-29T13:58:40.395431Z"
+  },
+  {
+    "title": "Anthropic Python SDK v0.113.0",
+    "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.113.0",
+    "source": "Anthropic Python SDK Releases",
+    "score": 90,
+    "should_post": true,
+    "reason": "New SDK version with direct support for web fetch and tools, enabling more capable agentic applications.",
+    "post_text": "Anthropic Python SDK v0.113.0 adds support for web fetch and tools. Builders can now integrate real-time web data and external functions directly into their Claude applications.",
+    "source_angle": "Anthropic SDK update enables web fetch and tools.",
+    "source_tier": 1,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 35,
+    "created_at": "2026-06-29T16:52:41.019405Z"
+  },
+  {
+    "title": "Ollama v0.30.12-rc0",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.30.12-rc0",
+    "source": "Ollama Releases",
+    "score": 0,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 2,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 35,
+    "created_at": "2026-06-29T16:52:42.231804Z"
+  },
+  {
+    "title": "DeepSeek V4 Peak Valley Pricing Change",
+    "link": "https://www.kucoin.com/news/flash/deepseek-v4-launches-in-mid-july-with-peak-valley-pricing",
+    "source": "HackerNews",
+    "score": 5,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 38.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-29T16:52:42.232101Z"
+  },
+  {
+    "title": "Import AI 463: Self-improving robots; a 10k Chinese GPU cluster; and an elegiac essay for the human era",
+    "link": "https://jack-clark.net/2026/06/29/import-ai-463-self-improving-robots-a-10k-chinese-gpu-cluster-and-an-elegiac-essay-for-the-human-era/",
+    "source": "Import AI (Jack Clark)",
+    "score": 8,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 2,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-06-29T16:52:42.232335Z"
   }
 ]
