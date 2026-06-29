@@ -1062,5 +1062,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-29-herdr-agent-multiplexer-that-lives-in-your-terminal-e96d6ef360e1.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpgwi4o67q26",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpgwi4o67q26"
+  },
+  {
+    "id": "c54d068cfe6c",
+    "published_at": "2026-06-29T19:10:30.449129Z",
+    "platform": "bluesky",
+    "post": "Council-of-high-intelligence ships multi-agent deliberation as a primi\n\n0xNyk/council-of-high-intelligence runs 18 AI personas across LLM providers with structured debate,\n\nUses Aristotle, Feynman, Kahneman, Torvalds personas with one CLI command. MIT license. Forces explicit tra",
+    "source_link": "https://github.com/0xNyk/council-of-high-intelligence",
+    "source_title": "0xNyk/council-of-high-intelligence — 18 AI personas deliberate your hardest decisions across multiple LLM providers. Aristotle, Feynman, Kahneman, Torvalds & more — structured multi-round deliberation",
+    "score": 90,
+    "reason": "Open-source tool for multi-agent deliberation is available now. Passes Ships Test with clear builder utility.",
+    "card_path": "generated/cards/c54d068cfe6c.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-29-0xnyk-council-of-high-intelligence-18-ai-personas-deliberate-your-hardest-decisions-across-multiple-llm-providers-aristotle-feynman-kahneman-torvalds-more-structured-multi-round-deliberation-c54d068cfe6c.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mph6vc3rdk2e",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mph6vc3rdk2e"
   }
 ]

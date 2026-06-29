@@ -4051,11 +4051,11 @@
   },
   {
     "id": "c54d068cfe6c",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-29T13:58:38.868919Z",
     "score": 90,
     "reason": "Open-source tool for multi-agent deliberation is available now. Passes Ships Test with clear builder utility.",
-    "proposed_post": "0xNyk/council-of-high-intelligence is a new open-source tool for multi-round, multi-LLM deliberation using 18 AI personas. Builders can use this framework to get structured, diverse perspectives on complex problems or integrate multi-agent patterns into their applications.",
+    "proposed_post": "Council-of-high-intelligence ships multi-agent deliberation as a primi\n\n0xNyk/council-of-high-intelligence runs 18 AI personas across LLM providers with structured debate,\n\nUses Aristotle, Feynman, Kahneman, Torvalds personas with one CLI command. MIT license. Forces explicit tra",
     "source_angle": "Open-source multi-agent deliberation tool for complex decision-making",
     "source_item": {
       "title": "0xNyk/council-of-high-intelligence — 18 AI personas deliberate your hardest decisions across multiple LLM providers. Aristotle, Feynman, Kahneman, Torvalds & more — structured multi-round deliberation",
@@ -4086,11 +4086,23 @@
         "cluster_score": 25
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/c54d068cfe6c.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, schau dir das hier an: 0xNyk/council-of-high-intelligence.\n\nDas ist mehr als nur ein Prompt-Engineering-Trick. Hier wird ein Framework gebaut, um Entscheidungen durch verschiedene LLMs und deren spezifische Persona-Modelle zu iterieren. Entwickler können damit komplexe Probleme strukturierter angehen, indem sie nicht nur eine, sondern diverse \"Denkweisen\" von KIs simulieren und vergleichen. Das ist direkt anwendbar für Architekturentscheidungen oder Debugging, wo man sonst verschiedene Experten befragen würde.",
-    "chloe_note": "Kurzes Update: *0xNyk/council-of-high-intelligence — 18 AI personas deliberate your hardest decisions across multiple LLM providers. Aristotle, Feynman, Kahneman, Torvalds & more — structured multi-round deliberation* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Open-source tool for multi-agent deliberation is available now. Passes Ships Test with clear builder utility.Cluster context: 1 sources, engagement 323. Common terms: /council, personas, one, providers. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://github.com/0xNyk/council-of-high-intelligence"
+    "chloe_note": "Kurzes Update: *0xNyk/council-of-high-intelligence — 18 AI personas deliberate your hardest decisions across multiple LLM providers. Aristotle, Feynman, Kahneman, Torvalds & more — structured multi-round deliberation* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Open-source tool for multi-agent deliberation is available now. Passes Ships Test with clear builder utility.Cluster context: 1 sources, engagement 323. Common terms: /council, personas, one, providers. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://github.com/0xNyk/council-of-high-intelligence",
+    "sarah_package": {
+      "title": "Council-of-high-intelligence ships multi-agent deliberation as a primi",
+      "subtitle": "0xNyk/council-of-high-intelligence runs 18 AI personas across LLM providers with structured debate, ",
+      "description": "Uses Aristotle, Feynman, Kahneman, Torvalds personas with one CLI command. MIT license. Forces explicit trade-offs in complex decisions.",
+      "hashtags": [
+        "#MCP",
+        "#LLMProviders",
+        "#MultiAgent"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-29-0xnyk-council-of-high-intelligence-18-ai-personas-deliberate-your-hardest-decisions-across-multiple-llm-providers-aristotle-feynman-kahneman-torvalds-more-structured-multi-round-deliberation-c54d068cfe6c.md",
+    "published_at": "2026-06-29T19:10:30.449129Z"
   },
   {
     "id": "01cb07c827df",
