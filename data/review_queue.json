@@ -3886,11 +3886,11 @@
   },
   {
     "id": "937dd7bc1f99",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-28T20:51:46.978670Z",
     "score": 85,
     "reason": "Semgrep's production benchmark shows GLM 5.2 outperforming Claude in cyber tasks. Clear, actionable performance data.",
-    "proposed_post": "Semgrep's benchmarks show GLM 5.2 outperforms Claude in cyber security tasks. Builders should evaluate GLM for code analysis and security applications requiring strong reasoning.",
+    "proposed_post": "Open-source GLM 5.2 beats Claude in cyber tasks.\n\nSemgrep's production benchmark shows GLM 5.2 outperforming Claude, with 57 points and 20 comments on\n\nGLM 5.2 demonstrates strong reasoning in code analysis and security applications, potentially replacing commercial models like C",
     "source_angle": "Semgrep's internal benchmarks highlight GLM 5.2's performance in cyber security.",
     "source_item": {
       "title": "Semgrep: GLM 5.2 beats Claude in our Cyber Benchmarks",
@@ -3921,10 +3921,22 @@
         "cluster_score": 20
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/937dd7bc1f99.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, dieser Semgrep-Post ist interessant, weil sie GLM 5.2 gegen Claude in Cyber-Benchmarks testen. Für Entwickler ist das relevant: Ein Open-Source-Modell schlägt hier ein kommerzielles in spezifischen Sicherheits-Szenarien. Das zeigt, dass man für bestimmte Anwendungsfälle nicht unbedingt auf die großen, teuren Modelle angewiesen ist und stattdessen auf leistungsfähige, potenziell anpassbare Alternativen setzen kann. Das ist ein starkes Signal für alle, die überlegen, welche LLMs sie in ihre Sicherheits-Workflows integrieren wollen.",
-    "chloe_note": "Kurzes Update: *Semgrep: GLM 5.2 beats Claude in our Cyber Benchmarks* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Semgrep's production benchmark shows GLM 5.2 outperforming Claude in cyber tasks. Clear, actionable performance data.Cluster context: 1 sources, engagement 67. Common terms: semgrep, glm, 5.2, points. Ich habe es mit 85 Punkten bewertet. Hier der Link: https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/"
+    "chloe_note": "Kurzes Update: *Semgrep: GLM 5.2 beats Claude in our Cyber Benchmarks* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Semgrep's production benchmark shows GLM 5.2 outperforming Claude in cyber tasks. Clear, actionable performance data.Cluster context: 1 sources, engagement 67. Common terms: semgrep, glm, 5.2, points. Ich habe es mit 85 Punkten bewertet. Hier der Link: https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/",
+    "sarah_package": {
+      "title": "Open-source GLM 5.2 beats Claude in cyber tasks.",
+      "subtitle": "Semgrep's production benchmark shows GLM 5.2 outperforming Claude, with 57 points and 20 comments on",
+      "description": "GLM 5.2 demonstrates strong reasoning in code analysis and security applications, potentially replacing commercial models like Claude.",
+      "hashtags": [
+        "#GLM52",
+        "#Semgrep",
+        "#CyberSecurity"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-28-semgrep-glm-5-2-beats-claude-in-our-cyber-benchmarks-937dd7bc1f99.md",
+    "published_at": "2026-06-29T00:13:03.697526Z"
   }
 ]

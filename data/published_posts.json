@@ -1020,5 +1020,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-28-browser-use-video-use-edit-videos-with-coding-agents-8f2884302640.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpey6zdhjw2k",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpey6zdhjw2k"
+  },
+  {
+    "id": "937dd7bc1f99",
+    "published_at": "2026-06-29T00:13:03.697526Z",
+    "platform": "bluesky",
+    "post": "Open-source GLM 5.2 beats Claude in cyber tasks.\n\nSemgrep's production benchmark shows GLM 5.2 outperforming Claude, with 57 points and 20 comments on\n\nGLM 5.2 demonstrates strong reasoning in code analysis and security applications, potentially replacing commercial models like C",
+    "source_link": "https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/",
+    "source_title": "Semgrep: GLM 5.2 beats Claude in our Cyber Benchmarks",
+    "score": 85,
+    "reason": "Semgrep's production benchmark shows GLM 5.2 outperforming Claude in cyber tasks. Clear, actionable performance data.",
+    "card_path": "generated/cards/937dd7bc1f99.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-28-semgrep-glm-5-2-beats-claude-in-our-cyber-benchmarks-937dd7bc1f99.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpf7dds6lg2q",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpf7dds6lg2q"
   }
 ]
