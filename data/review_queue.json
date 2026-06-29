@@ -3996,11 +3996,11 @@
   },
   {
     "id": "e96d6ef360e1",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-29T08:50:12.884869Z",
     "score": 85,
     "reason": "Open-source terminal tool for agent orchestration. Ships today, direct GitHub release.",
-    "proposed_post": "Herdr, an open-source terminal-based agent multiplexer, was released on GitHub. Builders can now manage and orchestrate multiple AI agents directly from their command line interface.",
+    "proposed_post": "Herdr ships a terminal agent multiplexer for CLI-native agent orchestr\n\nHerdr provides a local terminal multiplexer for AI agents, with +100 stars on launch day.\n\nOpen-source CLI tool that runs in iTerm2, Warp, or Kitty to orchestrate multiple agents from one session without extr",
     "source_angle": "GitHub release of an open-source agent multiplexer",
     "source_item": {
       "title": "Herdr: Agent multiplexer that lives in your terminal",
@@ -4031,11 +4031,23 @@
         "cluster_score": 0
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/e96d6ef360e1.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das Herdr-Tool ist interessant. Es ist ein Agent-Multiplexer, der direkt im Terminal läuft. Entwickler, die viel mit verschiedenen KI-Agenten arbeiten, könnten damit ihre Workflows deutlich straffen und alles an einem Ort managen.",
-    "chloe_note": "Kurzes Update: *Herdr: Agent multiplexer that lives in your terminal* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Open-source terminal tool for agent orchestration. Ships today, direct GitHub release.Cluster context: 1 sources, engagement 65. Common terms: lives, herdr, comments, multiplexer. Ich habe es mit 85 Punkten bewertet. Hier der Link: https://github.com/ogulcancelik/herdr"
+    "chloe_note": "Kurzes Update: *Herdr: Agent multiplexer that lives in your terminal* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Open-source terminal tool for agent orchestration. Ships today, direct GitHub release.Cluster context: 1 sources, engagement 65. Common terms: lives, herdr, comments, multiplexer. Ich habe es mit 85 Punkten bewertet. Hier der Link: https://github.com/ogulcancelik/herdr",
+    "sarah_package": {
+      "title": "Herdr ships a terminal agent multiplexer for CLI-native agent orchestr",
+      "subtitle": "Herdr provides a local terminal multiplexer for AI agents, with +100 stars on launch day.",
+      "description": "Open-source CLI tool that runs in iTerm2, Warp, or Kitty to orchestrate multiple agents from one session without extra services.",
+      "hashtags": [
+        "#Herdr",
+        "#AgentOrchestration",
+        "#CLI"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-29-herdr-agent-multiplexer-that-lives-in-your-terminal-e96d6ef360e1.md",
+    "published_at": "2026-06-29T16:39:58.153361Z"
   },
   {
     "id": "c54d068cfe6c",

@@ -1048,5 +1048,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-29-show-hn-nanoeuler-gpt-2-scale-model-in-pure-c-cuda-from-scratch-86f71c0933a6.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpggzdjrb325",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpggzdjrb325"
+  },
+  {
+    "id": "e96d6ef360e1",
+    "published_at": "2026-06-29T16:39:58.153361Z",
+    "platform": "bluesky",
+    "post": "Herdr ships a terminal agent multiplexer for CLI-native agent orchestr\n\nHerdr provides a local terminal multiplexer for AI agents, with +100 stars on launch day.\n\nOpen-source CLI tool that runs in iTerm2, Warp, or Kitty to orchestrate multiple agents from one session without extr",
+    "source_link": "https://github.com/ogulcancelik/herdr",
+    "source_title": "Herdr: Agent multiplexer that lives in your terminal",
+    "score": 85,
+    "reason": "Open-source terminal tool for agent orchestration. Ships today, direct GitHub release.",
+    "card_path": "generated/cards/e96d6ef360e1.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-29-herdr-agent-multiplexer-that-lives-in-your-terminal-e96d6ef360e1.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpgwi4o67q26",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpgwi4o67q26"
   }
 ]
