@@ -3938,5 +3938,48 @@
     },
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-28-semgrep-glm-5-2-beats-claude-in-our-cyber-benchmarks-937dd7bc1f99.md",
     "published_at": "2026-06-29T00:13:03.697526Z"
+  },
+  {
+    "id": "86f71c0933a6",
+    "status": "approved",
+    "created_at": "2026-06-29T02:30:47.597533Z",
+    "score": 70,
+    "reason": "Open-source C/CUDA implementation of GPT-2 scale model. Ships today, offers low-level builder value.",
+    "proposed_post": "NanoEuler, a GPT-2 scale model, is now available in pure C/CUDA on GitHub. Builders can use this low-level implementation as a reference for custom inference optimization or deep dives into transformer architecture.",
+    "source_angle": "Low-level C/CUDA transformer implementation for optimization and learning.",
+    "source_item": {
+      "title": "Show HN: NanoEuler – GPT-2 scale model in pure C/CUDA from scratch",
+      "source": "HackerNews",
+      "link": "https://github.com/JustVugg/nanoeuler",
+      "source_tier": 3,
+      "engagement_score": 42.5,
+      "local_newsworthiness_score": 0,
+      "summary": "38 points, 9 comments on Hacker News — submitted by vforno — original: https://github.com/JustVugg/nanoeuler\n[Cluster context: 1 sources, engagement 42, common terms: c/cuda, hacker, original, pure, comments.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 42,
+        "common_terms": [
+          "c/cuda",
+          "hacker",
+          "original",
+          "pure",
+          "comments",
+          "points",
+          "show",
+          "vforno"
+        ],
+        "cluster_summary": "1 sources, engagement 42. Common terms: c/cuda, hacker, original, pure. Lead: Show HN: NanoEuler – GPT-2 scale model in pure C/CUDA from scratch",
+        "alternative_titles": [],
+        "cluster_score": 0
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, schau dir das hier an: NanoEuler auf HackerNews.\n\nDas ist ein GPT-2-Modell, komplett in C/CUDA von Grund auf neu gebaut. Für Entwickler, die wirklich tief in die Performance-Optimierung von LLMs einsteigen wollen, ist das Gold wert. Man sieht hier direkt, wie man so ein Modell ohne Framework-Overhead implementiert, und kann das für eigene, spezialisierte Hardware oder Nischen-Anwendungen adaptieren.",
+    "chloe_note": "Kurzes Update: *Show HN: NanoEuler – GPT-2 scale model in pure C/CUDA from scratch* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Open-source C/CUDA implementation of GPT-2 scale model. Ships today, offers low-level builder value.Cluster context: 1 sources, engagement 42. Common terms: c/cuda, hacker, original, pure. Ich habe es mit 70 Punkten bewertet. Hier der Link: https://github.com/JustVugg/nanoeuler"
   }
 ]
