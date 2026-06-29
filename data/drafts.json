@@ -11114,5 +11114,19 @@
     "engagement_score": 0.0,
     "local_newsworthiness_score": 35,
     "created_at": "2026-06-29T21:17:18.618960Z"
+  },
+  {
+    "title": "Micro-Agent: Beat Frontier Models with Collaboration Inside Model API",
+    "link": "https://vllm.ai/blog/2026-06-29-micro-agent-frontier-models",
+    "source": "HackerNews",
+    "score": 65,
+    "should_post": true,
+    "reason": "vLLM blog details a new micro-agent collaboration method for existing model APIs, with potential for performance gains and implementation guidance.",
+    "post_text": "vLLM details a micro-agent collaboration method for existing model APIs. Builders can implement this technique to improve agent performance and potentially surpass frontier model benchmarks.",
+    "source_angle": "vLLM blog on micro-agent collaboration technique",
+    "source_tier": 3,
+    "engagement_score": 44.5,
+    "local_newsworthiness_score": 20,
+    "created_at": "2026-06-29T22:46:12.181354Z"
   }
 ]
