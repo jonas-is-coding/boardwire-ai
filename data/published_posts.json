@@ -1076,5 +1076,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-29-0xnyk-council-of-high-intelligence-18-ai-personas-deliberate-your-hardest-decisions-across-multiple-llm-providers-aristotle-feynman-kahneman-torvalds-more-structured-multi-round-deliberation-c54d068cfe6c.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mph6vc3rdk2e",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mph6vc3rdk2e"
+  },
+  {
+    "id": "01cb07c827df",
+    "published_at": "2026-06-29T22:12:25.098565Z",
+    "platform": "bluesky",
+    "post": "Anthropic adds web fetch and tools to Python SDK.\n\nAnthropic Python SDK v0.113.0 exposes fetch and tools APIs for agentic workflows, with 14k GitHub st\n\nSupports 20260318 API for real-time web retrieval and external function calls. MIT license. Drop-in for Claude applications.\n\n📖",
+    "source_link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.113.0",
+    "source_title": "Anthropic Python SDK v0.113.0",
+    "score": 90,
+    "reason": "New SDK version with direct support for web fetch and tools, enabling more capable agentic applications.",
+    "card_path": "generated/cards/01cb07c827df.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-29-anthropic-python-sdk-v0-113-0-01cb07c827df.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mphj2luupk23",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mphj2luupk23"
   }
 ]
