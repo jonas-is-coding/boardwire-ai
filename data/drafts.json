@@ -11086,5 +11086,33 @@
     "engagement_score": 34.5,
     "local_newsworthiness_score": 0,
     "created_at": "2026-06-29T19:42:38.512180Z"
+  },
+  {
+    "title": "LangChain v0.2.5",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-openrouter%3D%3D0.2.5",
+    "source": "LangChain Releases",
+    "score": 20,
+    "should_post": false,
+    "reason": "Minor patch for `langchain-openrouter` fixes metadata. No new capabilities or significant builder impact. Fails Ships Test.",
+    "post_text": "No post generated",
+    "source_angle": "No source angle provided",
+    "source_tier": 2,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 35,
+    "created_at": "2026-06-29T21:17:03.775692Z"
+  },
+  {
+    "title": "Ollama v0.31.0",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.31.0",
+    "source": "Ollama Releases",
+    "score": 30,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "No source angle provided",
+    "source_tier": 2,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 35,
+    "created_at": "2026-06-29T21:17:18.618960Z"
   }
 ]
