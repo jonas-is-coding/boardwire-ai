@@ -10806,5 +10806,47 @@
     "engagement_score": 83.5,
     "local_newsworthiness_score": 0,
     "created_at": "2026-06-29T02:30:48.719943Z"
+  },
+  {
+    "title": "Herdr: Agent multiplexer that lives in your terminal",
+    "link": "https://github.com/ogulcancelik/herdr",
+    "source": "HackerNews",
+    "score": 85,
+    "should_post": true,
+    "reason": "Open-source terminal tool for agent orchestration. Ships today, direct GitHub release.",
+    "post_text": "Herdr, an open-source terminal-based agent multiplexer, was released on GitHub. Builders can now manage and orchestrate multiple AI agents directly from their command line interface.",
+    "source_angle": "GitHub release of an open-source agent multiplexer",
+    "source_tier": 3,
+    "engagement_score": 65.5,
+    "local_newsworthiness_score": 30,
+    "created_at": "2026-06-29T08:50:12.884869Z"
+  },
+  {
+    "title": "Better Images of AI",
+    "link": "https://betterimagesofai.org/",
+    "source": "HackerNews",
+    "score": 2,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 65.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-29T08:50:13.861693Z"
+  },
+  {
+    "title": "AI boom risks global financial crash, warn central bankers",
+    "link": "https://www.telegraph.co.uk/business/2026/06/28/ai-boom-risks-global-financial-crash-central-bankers-warn/",
+    "source": "HackerNews",
+    "score": 3,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 202.5,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-06-29T08:50:13.861923Z"
   }
 ]

@@ -3981,5 +3981,48 @@
     "breaking": false,
     "claire_note": "Chloe, schau dir das hier an: NanoEuler auf HackerNews.\n\nDas ist ein GPT-2-Modell, komplett in C/CUDA von Grund auf neu gebaut. Für Entwickler, die wirklich tief in die Performance-Optimierung von LLMs einsteigen wollen, ist das Gold wert. Man sieht hier direkt, wie man so ein Modell ohne Framework-Overhead implementiert, und kann das für eigene, spezialisierte Hardware oder Nischen-Anwendungen adaptieren.",
     "chloe_note": "Kurzes Update: *Show HN: NanoEuler – GPT-2 scale model in pure C/CUDA from scratch* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Open-source C/CUDA implementation of GPT-2 scale model. Ships today, offers low-level builder value.Cluster context: 1 sources, engagement 42. Common terms: c/cuda, hacker, original, pure. Ich habe es mit 70 Punkten bewertet. Hier der Link: https://github.com/JustVugg/nanoeuler"
+  },
+  {
+    "id": "e96d6ef360e1",
+    "status": "approved",
+    "created_at": "2026-06-29T08:50:12.884869Z",
+    "score": 85,
+    "reason": "Open-source terminal tool for agent orchestration. Ships today, direct GitHub release.",
+    "proposed_post": "Herdr, an open-source terminal-based agent multiplexer, was released on GitHub. Builders can now manage and orchestrate multiple AI agents directly from their command line interface.",
+    "source_angle": "GitHub release of an open-source agent multiplexer",
+    "source_item": {
+      "title": "Herdr: Agent multiplexer that lives in your terminal",
+      "source": "HackerNews",
+      "link": "https://github.com/ogulcancelik/herdr",
+      "source_tier": 3,
+      "engagement_score": 65.5,
+      "local_newsworthiness_score": 30,
+      "summary": "56 points, 19 comments on Hacker News — submitted by mzehrer — original: https://github.com/ogulcancelik/herdr\n[Cluster context: 1 sources, engagement 65, common terms: lives, herdr, comments, multiplexer, original.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 65,
+        "common_terms": [
+          "lives",
+          "herdr",
+          "comments",
+          "multiplexer",
+          "original",
+          "terminal",
+          "mzehrer",
+          "points"
+        ],
+        "cluster_summary": "1 sources, engagement 65. Common terms: lives, herdr, comments, multiplexer. Lead: Herdr: Agent multiplexer that lives in your terminal",
+        "alternative_titles": [],
+        "cluster_score": 0
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, das Herdr-Tool ist interessant. Es ist ein Agent-Multiplexer, der direkt im Terminal läuft. Entwickler, die viel mit verschiedenen KI-Agenten arbeiten, könnten damit ihre Workflows deutlich straffen und alles an einem Ort managen.",
+    "chloe_note": "Kurzes Update: *Herdr: Agent multiplexer that lives in your terminal* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Open-source terminal tool for agent orchestration. Ships today, direct GitHub release.Cluster context: 1 sources, engagement 65. Common terms: lives, herdr, comments, multiplexer. Ich habe es mit 85 Punkten bewertet. Hier der Link: https://github.com/ogulcancelik/herdr"
   }
 ]
