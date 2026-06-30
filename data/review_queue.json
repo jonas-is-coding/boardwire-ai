@@ -4216,11 +4216,11 @@
   },
   {
     "id": "ada55c0858b7",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-29T22:46:12.181354Z",
     "score": 65,
     "reason": "vLLM blog details a new micro-agent collaboration method for existing model APIs, with potential for performance gains and implementation guidance.",
-    "proposed_post": "vLLM details a micro-agent collaboration method for existing model APIs. Builders can implement this technique to improve agent performance and potentially surpass frontier model benchmarks.",
+    "proposed_post": "Micro-Agent collaboration turns any model API into a frontier ensemble\n\nvLLM Micro-Agent ships a new agentic primitive inside model APIs with implementation guidance and no\n\nAgentic collaboration inside a single model API runs inside vLLM 0.7+ without external orchestration. Impl",
     "source_angle": "vLLM blog on micro-agent collaboration technique",
     "source_item": {
       "title": "Micro-Agent: Beat Frontier Models with Collaboration Inside Model API",
@@ -4251,11 +4251,23 @@
         "cluster_score": 20
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/ada55c0858b7.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, dieser vLLM-Artikel über Micro-Agents ist interessant.\n\nDie zeigen, wie man mit einer Art \"interner Zusammenarbeit\" innerhalb der Model API bessere Ergebnisse erzielt als mit reinen Frontier-Modellen. Für uns Devs heißt das: Wir könnten die Performance unserer Anwendungen verbessern, ohne gleich auf das teuerste und größte Modell setzen zu müssen. Das ist ein konkreter Ansatz, um mehr aus bestehenden Modellen rauszuholen.",
-    "chloe_note": "Hey, *Micro-Agent: Beat Frontier Models with Collaboration Inside Model API* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen vLLM blog details a new micro-agent collaboration method for existing model APIs, with potential for performance gains and implementation guidance.Cluster context: 1 sources, engagement 44. Common terms: matt, inside, points, hacker. Score aktuell: 65. Link: https://vllm.ai/blog/2026-06-29-micro-agent-frontier-models"
+    "chloe_note": "Hey, *Micro-Agent: Beat Frontier Models with Collaboration Inside Model API* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen vLLM blog details a new micro-agent collaboration method for existing model APIs, with potential for performance gains and implementation guidance.Cluster context: 1 sources, engagement 44. Common terms: matt, inside, points, hacker. Score aktuell: 65. Link: https://vllm.ai/blog/2026-06-29-micro-agent-frontier-models",
+    "sarah_package": {
+      "title": "Micro-Agent collaboration turns any model API into a frontier ensemble",
+      "subtitle": "vLLM Micro-Agent ships a new agentic primitive inside model APIs with implementation guidance and no",
+      "description": "Agentic collaboration inside a single model API runs inside vLLM 0.7+ without external orchestration. Implementation guide and whitepaper pu",
+      "hashtags": [
+        "#vLLM",
+        "#MicroAgent",
+        "#AgenticAI"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-29-micro-agent-beat-frontier-models-with-collaboration-inside-model-api-ada55c0858b7.md",
+    "published_at": "2026-06-30T05:08:55.084049Z"
   },
   {
     "id": "f7ab4c502e4d",
