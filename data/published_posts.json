@@ -1118,5 +1118,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-29-micro-agent-beat-frontier-models-with-collaboration-inside-model-api-ada55c0858b7.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpiadfrrf42p",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpiadfrrf42p"
+  },
+  {
+    "id": "94f3d6e8eb64",
+    "published_at": "2026-06-30T13:10:55.739238Z",
+    "platform": "bluesky",
+    "post": "AI gateways simplify multi-model access.\n\nOmniRoute offers a single endpoint to 160+ providers with 15-95% token compression and auto-fallback\n\nOmniRoute connects Claude Code, Codex, Cursor, Cline, and Copilot to free Claude/GPT/Gemini models, reducing costs and improving applica",
+    "source_link": "https://github.com/diegosouzapw/OmniRoute",
+    "source_title": "diegosouzapw/OmniRoute — Never stop coding. Free AI gateway: one endpoint, 160+ providers (50+ free), connect Claude Code, Codex, Cursor, Cline & Copilot to FREE Claude/GPT/Gemini. RTK+Caveman stacked",
+    "score": 95,
+    "reason": "New open-source AI gateway with token compression and auto-fallback. Directly usable for cost savings and reliability.",
+    "card_path": "generated/cards/94f3d6e8eb64.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-30-diegosouzapw-omniroute-never-stop-coding-free-ai-gateway-one-endpoint-160-providers-50-free-connect-claude-code-codex-cursor-cline-copilot-to-free-claude-gpt-gemini-rtk-caveman-stacked-94f3d6e8eb64.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpj3b737z62u",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpj3b737z62u"
   }
 ]
