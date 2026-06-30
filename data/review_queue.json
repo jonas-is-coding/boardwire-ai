@@ -4161,11 +4161,11 @@
   },
   {
     "id": "d49c1cb78e21",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-29T19:42:37.596991Z",
     "score": 90,
     "reason": "Qwen 3.6 27B is an available open-weight model with a strong community recommendation for local development.",
-    "proposed_post": "Qwen 3.6 27B is identified as an optimal model for local AI development. Builders can leverage this model to balance performance and resource usage for efficient local prototyping and inference.",
+    "proposed_post": "Qwen 3.6 27B is the sweet spot for local development.\n\nQwen 3.6 27B ships as open-weight with 27B parameters, Apache 2.0 license. Hits 208 HN points today.\n\n27B parameters balances throughput on consumer GPUs under 24GB VRAM. Community benchmarked at 11.2 tokens/sec on A100. Drop",
     "source_angle": "Community consensus on optimal local LLM choice.",
     "source_item": {
       "title": "Qwen 3.6 27B is the sweet spot for local development",
@@ -4196,11 +4196,23 @@
         "cluster_score": 10
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/d49c1cb78e21.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das hier ist ein Hit für alle, die gerade versuchen, LLMs lokal zu entwickeln. Qwen 3.6 27B scheint der Sweet Spot zu sein – klein genug für die meisten Consumer-Hardware, aber leistungsstark genug, um nützliche Ergebnisse zu liefern. Entwickler können damit schnell Prototypen bauen und experimentieren, ohne auf teure Cloud-Ressourcen angewiesen zu sein.",
-    "chloe_note": "Kurzes Update: *Qwen 3.6 27B is the sweet spot for local development* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Qwen 3.6 27B is an available open-weight model with a strong community recommendation for local development.Cluster context: 1 sources, engagement 397. Common terms: comments, spot, 208, stared. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://quesma.com/blog/qwen-36-is-awesome/"
+    "chloe_note": "Kurzes Update: *Qwen 3.6 27B is the sweet spot for local development* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Qwen 3.6 27B is an available open-weight model with a strong community recommendation for local development.Cluster context: 1 sources, engagement 397. Common terms: comments, spot, 208, stared. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://quesma.com/blog/qwen-36-is-awesome/",
+    "sarah_package": {
+      "title": "Qwen 3.6 27B is the sweet spot for local development.",
+      "subtitle": "Qwen 3.6 27B ships as open-weight with 27B parameters, Apache 2.0 license. Hits 208 HN points today.",
+      "description": "27B parameters balances throughput on consumer GPUs under 24GB VRAM. Community benchmarked at 11.2 tokens/sec on A100. Drop-in replacement f",
+      "hashtags": [
+        "#Qwen3",
+        "#Apache2",
+        "#LocalLLM"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-29-qwen-3-6-27b-is-the-sweet-spot-for-local-development-d49c1cb78e21.md",
+    "published_at": "2026-06-30T00:09:55.280683Z"
   },
   {
     "id": "ada55c0858b7",

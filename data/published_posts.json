@@ -1090,5 +1090,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-29-anthropic-python-sdk-v0-113-0-01cb07c827df.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mphj2luupk23",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mphj2luupk23"
+  },
+  {
+    "id": "d49c1cb78e21",
+    "published_at": "2026-06-30T00:09:55.280683Z",
+    "platform": "bluesky",
+    "post": "Qwen 3.6 27B is the sweet spot for local development.\n\nQwen 3.6 27B ships as open-weight with 27B parameters, Apache 2.0 license. Hits 208 HN points today.\n\n27B parameters balances throughput on consumer GPUs under 24GB VRAM. Community benchmarked at 11.2 tokens/sec on A100. Drop",
+    "source_link": "https://quesma.com/blog/qwen-36-is-awesome/",
+    "source_title": "Qwen 3.6 27B is the sweet spot for local development",
+    "score": 90,
+    "reason": "Qwen 3.6 27B is an available open-weight model with a strong community recommendation for local development.",
+    "card_path": "generated/cards/d49c1cb78e21.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-29-qwen-3-6-27b-is-the-sweet-spot-for-local-development-d49c1cb78e21.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mphpmp5vup2g",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mphpmp5vup2g"
   }
 ]
