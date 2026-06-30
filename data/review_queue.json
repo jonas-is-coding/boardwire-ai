@@ -4539,5 +4539,27 @@
     "breaking": false,
     "claire_note": "Chloe, das hier ist ein Treffer. Claude Sonnet 5 ist jetzt der Default in Claude Code, mit 1M Token Context Window und Promo-Preisen.\n\nDas ist riesig für Devs: Sie bekommen jetzt einen massiv erweiterten Kontext für ihre Code-Projekte direkt in ihrer IDE, und das zu einem deutlich besseren Preis bis Ende August. Heißt, komplexere Refactorings, größere Codebase-Analysen oder das Debuggen über mehrere Dateien hinweg wird jetzt viel praktikabler und günstiger.",
     "chloe_note": "Hey, *Claude Code v2.1.197* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New model default in Claude Code with 1M-token context and clear promotional pricing. Ships today via update.Cluster context: 1 sources, engagement 0. Common terms: 31., v2.1.197, introducing, 2.1.197. Score aktuell: 95. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.197"
+  },
+  {
+    "id": "288bff6bd3c1",
+    "status": "deferred_generation_unavailable",
+    "created_at": "2026-06-30T21:22:58.593694Z",
+    "score": 65,
+    "reason": "deferred: generation provider unavailable",
+    "proposed_post": "",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Anthropic Python SDK v0.115.0",
+      "source": "Anthropic Python SDK Releases",
+      "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.115.0",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 65
+    },
+    "deferred_at": "2026-06-30T21:22:58.593656Z",
+    "defer_count": 1,
+    "original_score": 65,
+    "original_reason": "deferred: generation provider unavailable",
+    "card_path": null
   }
 ]
