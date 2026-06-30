@@ -4412,11 +4412,11 @@
   },
   {
     "id": "346d18c415df",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-30T16:15:53.371698Z",
     "score": 90,
     "reason": "Google DeepMind released new models for immediate developer access, passing the Ships Test.",
-    "proposed_post": "Google DeepMind released Nano Banana 2 Lite and Gemini Omni Flash. Builders can now access and integrate these new models into their applications.",
+    "proposed_post": "Edge AI development gets Nano Banana 2 Lite and Gemini Omni Flash.\n\nGoogle DeepMind releases new models for low-power devices, passing the Ships Test with immediate dev\n\nBuilders can now prototype on-device ML applications without relying on heavy-duty hardware, using Nano Banana",
     "source_angle": "Google DeepMind's new model releases for developers",
     "source_item": {
       "title": "Start building with Nano Banana 2 Lite and Gemini Omni Flash",
@@ -4446,10 +4446,22 @@
         "cluster_score": 25
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/346d18c415df.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, check this out: Google DeepMind hat Nano Banana 2 Lite und Gemini Omni Flash rausgehauen. Das ist ein direktes Play für Edge-AI-Entwicklung auf Low-Power-Devices. Builder können damit jetzt schon echt krasse On-Device-ML-Anwendungen prototypen, ohne auf Heavy-Duty-Hardware angewiesen zu sein.",
-    "chloe_note": "Kurzes Update: *Start building with Nano Banana 2 Lite and Gemini Omni Flash* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Google DeepMind released new models for immediate developer access, passing the Ships Test.Cluster context: 1 sources, engagement 0. Common terms: lite, flash, start, banana. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://deepmind.google/blog/start-building-with-nano-banana-2-lite-and-gemini-omni-flash/"
+    "chloe_note": "Kurzes Update: *Start building with Nano Banana 2 Lite and Gemini Omni Flash* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Google DeepMind released new models for immediate developer access, passing the Ships Test.Cluster context: 1 sources, engagement 0. Common terms: lite, flash, start, banana. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://deepmind.google/blog/start-building-with-nano-banana-2-lite-and-gemini-omni-flash/",
+    "sarah_package": {
+      "title": "Edge AI development gets Nano Banana 2 Lite and Gemini Omni Flash.",
+      "subtitle": "Google DeepMind releases new models for low-power devices, passing the Ships Test with immediate dev",
+      "description": "Builders can now prototype on-device ML applications without relying on heavy-duty hardware, using Nano Banana 2 Lite and Gemini Omni Flash ",
+      "hashtags": [
+        "#GoogleDeepMind",
+        "#EdgeAI",
+        "#NanoBanana2Lite"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-30-start-building-with-nano-banana-2-lite-and-gemini-omni-flash-346d18c415df.md",
+    "published_at": "2026-06-30T17:08:30.645662Z"
   }
 ]

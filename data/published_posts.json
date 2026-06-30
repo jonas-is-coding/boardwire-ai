@@ -1132,5 +1132,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-30-diegosouzapw-omniroute-never-stop-coding-free-ai-gateway-one-endpoint-160-providers-50-free-connect-claude-code-codex-cursor-cline-copilot-to-free-claude-gpt-gemini-rtk-caveman-stacked-94f3d6e8eb64.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpj3b737z62u",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpj3b737z62u"
+  },
+  {
+    "id": "346d18c415df",
+    "published_at": "2026-06-30T17:08:30.645662Z",
+    "platform": "bluesky",
+    "post": "Edge AI development gets Nano Banana 2 Lite and Gemini Omni Flash.\n\nGoogle DeepMind releases new models for low-power devices, passing the Ships Test with immediate dev\n\nBuilders can now prototype on-device ML applications without relying on heavy-duty hardware, using Nano Banana",
+    "source_link": "https://deepmind.google/blog/start-building-with-nano-banana-2-lite-and-gemini-omni-flash/",
+    "source_title": "Start building with Nano Banana 2 Lite and Gemini Omni Flash",
+    "score": 90,
+    "reason": "Google DeepMind released new models for immediate developer access, passing the Ships Test.",
+    "card_path": "generated/cards/346d18c415df.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-30-start-building-with-nano-banana-2-lite-and-gemini-omni-flash-346d18c415df.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpjik2xwf223",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpjik2xwf223"
   }
 ]
