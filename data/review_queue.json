@@ -4369,11 +4369,11 @@
   },
   {
     "id": "1610499ed5c9",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-30T13:54:29.335185Z",
     "score": 90,
     "reason": "Hugging Face released a new feature integrating eval results directly on model pages, a concrete improvement for builders.",
-    "proposed_post": "Hugging Face model pages now integrate 'Every Eval Ever' results. Builders can directly compare model performance on benchmarks, streamlining model selection for deployment.",
+    "proposed_post": "Hugging Face embeds every benchmark on model pages.\n\nEvery Eval Ever results now load directly on Hugging Face model pages.\n\nEvery Eval Ever leaderboard data now renders inline on model cards. Apache 2.0 code available on GitHub.\n\n📖 Read the full article: file:///home/runner/work",
     "source_angle": "Hugging Face integrates comprehensive model evaluation results directly onto model pages.",
     "source_item": {
       "title": "Featuring Every Eval Ever Results on Hugging Face Model Pages",
@@ -4404,11 +4404,22 @@
         "cluster_score": 15
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/1610499ed5c9.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das hier ist ein No-Brainer. Hugging Face integriert jetzt Eval-Ergebnisse direkt auf den Modellseiten.\n\nDas bedeutet, Entwickler sehen sofort, wie ein Modell performt, ohne lange suchen oder selbst Benchmarks laufen lassen zu müssen. Riesige Zeitersparnis bei der Modell-Auswahl und -Validierung.",
-    "chloe_note": "*Featuring Every Eval Ever Results on Hugging Face Model Pages* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Hugging Face released a new feature integrating eval results directly on model pages, a concrete improvement for builders.Cluster context: 1 sources, engagement 0. Common terms: face, pages, hugging, eval. Bewertung: 90. Quelle: https://huggingface.co/blog/eee-community-evals"
+    "chloe_note": "*Featuring Every Eval Ever Results on Hugging Face Model Pages* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Hugging Face released a new feature integrating eval results directly on model pages, a concrete improvement for builders.Cluster context: 1 sources, engagement 0. Common terms: face, pages, hugging, eval. Bewertung: 90. Quelle: https://huggingface.co/blog/eee-community-evals",
+    "sarah_package": {
+      "title": "Hugging Face embeds every benchmark on model pages.",
+      "subtitle": "Every Eval Ever results now load directly on Hugging Face model pages.",
+      "description": "Every Eval Ever leaderboard data now renders inline on model cards. Apache 2.0 code available on GitHub.",
+      "hashtags": [
+        "#HuggingFace",
+        "#EveryEvalEver"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-30-featuring-every-eval-ever-results-on-hugging-face-model-pages-1610499ed5c9.md",
+    "published_at": "2026-06-30T20:58:45.476431Z"
   },
   {
     "id": "346d18c415df",
