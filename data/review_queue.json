@@ -4463,5 +4463,70 @@
     },
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-30-start-building-with-nano-banana-2-lite-and-gemini-omni-flash-346d18c415df.md",
     "published_at": "2026-06-30T17:08:30.645662Z"
+  },
+  {
+    "id": "2aad43fa786f",
+    "status": "deferred_generation_unavailable",
+    "created_at": "2026-06-30T19:31:16.381619Z",
+    "score": 65,
+    "reason": "deferred: generation provider unavailable",
+    "proposed_post": "",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Anthropic Python SDK v0.114.0",
+      "source": "Anthropic Python SDK Releases",
+      "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.114.0",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 65
+    },
+    "deferred_at": "2026-06-30T19:31:16.381580Z",
+    "defer_count": 1,
+    "original_score": 65,
+    "original_reason": "deferred: generation provider unavailable",
+    "card_path": null
+  },
+  {
+    "id": "3aef92562705",
+    "status": "approved",
+    "created_at": "2026-06-30T19:31:14.249263Z",
+    "score": 95,
+    "reason": "New model default in Claude Code with 1M-token context and clear promotional pricing. Ships today via update.",
+    "proposed_post": "Claude Sonnet 5 is now the default in Claude Code v2.1.197, featuring a native 1M-token context window. Update to access promotional $2/$10 per Mtok pricing through August 31 for large context applications.",
+    "source_angle": "Claude Sonnet 5 default in Claude Code with 1M-token context & promo pricing",
+    "source_item": {
+      "title": "Claude Code v2.1.197",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.197",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 35,
+      "summary": "<h2>What's changed</h2>\n<ul>\n<li>Introducing Claude Sonnet 5: now the default model in Claude Code, with a native 1M-token context window and promotional pricing of $2/$10 per Mtok through August 31. Update to version 2.1.197 for access. <a href=\"https://www.anthropic.com/news/claude-sonnet-5\" rel=\"nofollow\">https://www.anthropic.com/news/claude-sonnet-5</a></li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: 31., v2.1.197, introducing, 2.1.197, pricing.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Claude Code Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "31.",
+          "v2.1.197",
+          "introducing",
+          "2.1.197",
+          "pricing",
+          "access.",
+          "mtok",
+          "now"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: 31., v2.1.197, introducing, 2.1.197. Lead: Claude Code v2.1.197",
+        "alternative_titles": [],
+        "cluster_score": 25
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, das hier ist ein Treffer. Claude Sonnet 5 ist jetzt der Default in Claude Code, mit 1M Token Context Window und Promo-Preisen.\n\nDas ist riesig für Devs: Sie bekommen jetzt einen massiv erweiterten Kontext für ihre Code-Projekte direkt in ihrer IDE, und das zu einem deutlich besseren Preis bis Ende August. Heißt, komplexere Refactorings, größere Codebase-Analysen oder das Debuggen über mehrere Dateien hinweg wird jetzt viel praktikabler und günstiger.",
+    "chloe_note": "Hey, *Claude Code v2.1.197* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New model default in Claude Code with 1M-token context and clear promotional pricing. Ships today via update.Cluster context: 1 sources, engagement 0. Common terms: 31., v2.1.197, introducing, 2.1.197. Score aktuell: 95. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.197"
   }
 ]
