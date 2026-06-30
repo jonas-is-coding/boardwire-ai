@@ -11128,5 +11128,61 @@
     "engagement_score": 44.5,
     "local_newsworthiness_score": 20,
     "created_at": "2026-06-29T22:46:12.181354Z"
+  },
+  {
+    "title": "Claude Code v2.1.196",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.196",
+    "source": "Claude Code Releases",
+    "score": 90,
+    "should_post": true,
+    "reason": "New Claude Code CLI version introduces organization default models, a concrete feature for team management and standardization. Passes Ships Test.",
+    "post_text": "Claude Code v2.1.196 adds organization default models. Admins can now standardize model usage for teams, simplifying model selection and potentially managing costs.",
+    "source_angle": "Claude Code CLI update for team model management",
+    "source_tier": 1,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 35,
+    "created_at": "2026-06-30T02:13:59.660362Z"
+  },
+  {
+    "title": "Is It Out Yet?",
+    "link": "https://outyet.ai",
+    "source": "HackerNews",
+    "score": 2,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 49.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-30T02:14:00.548100Z"
+  },
+  {
+    "title": "South Korea to spend $1T on more memory chip production and humanoid robots",
+    "link": "https://arstechnica.com/ai/2026/06/south-korea-to-spend-1t-on-more-memory-chip-production-and-humanoid-robots/",
+    "source": "HackerNews",
+    "score": 6,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 159.5,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-06-30T02:14:00.548359Z"
+  },
+  {
+    "title": "Feds Tracked Down an Anti-ICE Dad in NYC Hotel, but How?",
+    "link": "https://gizmodo.com/federal-agents-reportedly-tracked-down-an-anti-ice-dad-in-a-new-york-hotel-its-not-clear-how-2000778714",
+    "source": "HackerNews",
+    "score": 4,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 36.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-06-30T02:14:00.548582Z"
   }
 ]

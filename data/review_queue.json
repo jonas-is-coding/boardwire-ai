@@ -4256,5 +4256,48 @@
     "breaking": false,
     "claire_note": "Chloe, dieser vLLM-Artikel über Micro-Agents ist interessant.\n\nDie zeigen, wie man mit einer Art \"interner Zusammenarbeit\" innerhalb der Model API bessere Ergebnisse erzielt als mit reinen Frontier-Modellen. Für uns Devs heißt das: Wir könnten die Performance unserer Anwendungen verbessern, ohne gleich auf das teuerste und größte Modell setzen zu müssen. Das ist ein konkreter Ansatz, um mehr aus bestehenden Modellen rauszuholen.",
     "chloe_note": "Hey, *Micro-Agent: Beat Frontier Models with Collaboration Inside Model API* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen vLLM blog details a new micro-agent collaboration method for existing model APIs, with potential for performance gains and implementation guidance.Cluster context: 1 sources, engagement 44. Common terms: matt, inside, points, hacker. Score aktuell: 65. Link: https://vllm.ai/blog/2026-06-29-micro-agent-frontier-models"
+  },
+  {
+    "id": "f7ab4c502e4d",
+    "status": "approved",
+    "created_at": "2026-06-30T02:13:59.660362Z",
+    "score": 90,
+    "reason": "New Claude Code CLI version introduces organization default models, a concrete feature for team management and standardization. Passes Ships Test.",
+    "proposed_post": "Claude Code v2.1.196 adds organization default models. Admins can now standardize model usage for teams, simplifying model selection and potentially managing costs.",
+    "source_angle": "Claude Code CLI update for team model management",
+    "source_item": {
+      "title": "Claude Code v2.1.196",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.196",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 35,
+      "summary": "<h2>What's changed</h2>\n<ul>\n<li>Added support for organization default models — admins set it in the org console; it shows as \"Org default\" (or \"Role default\") in <code>/model</code> when you haven't picked one yourself</li>\n<li>Added readable default names for sessions at start, making them easier to identify and message</li>\n<li>Added clickable file attachments in chat — Cmd/Ctrl-click reveals the file in Finder/Explorer</li>\n<li>Security: <code>claude mcp list</code>/<code>get</code> no longer spawn <code>.mcp.json</code> servers that a repo self-approved via a committed <code>.claude/settings.json</code>; untrusted workspaces show <code>⏸ Pending approval</code></li>\n<li>Fixed waking a background job permanently deleting its conversation and re-running the original prompt when the transcript probe misread a real transcript; the file is now set aside, never deleted</li>\n<li>Fixed the rate-limit warning flickering off and rate-limit telemetry being over-counted when multiple parallel requests were in flight at the moment a usage limit was hit</li>\n<li>Fixed duplicate recap lines after a background session's turn: a schema-rejected StructuredOutput attempt no longer renders alongside its retry</li>\n<li>Fixed PowerShell <code>git diff</code>/<code>git grep</code>, <code>egrep</code>/<code>fgrep</code>, and quoted search patterns containing <code>|</code> being reported as failures when they exit 1, matching Bash behavior</li>\n<li>Fixed multiple <code>claude agents</code> side panel issues: keyboard focus getting stuck when opening an agent, background jobs losing their subagent types on every open, and sessions showing incorrect status while actively running</li>\n<li>Fixed <code>claude agents --dangerously-skip-permissions</code> silently falling back to auto mode instead of showing the bypass disclaimer and applying bypass mode to spawned agents</li>\n<li>Fixed mid-turn crash recovery for Remote sessions — sessions interrupted by a server restart now auto-resume on the next worker</li>\n<li>Fixed sessions moved with <code>/cd</code> reappearing in the old directory's resume list after a non-graceful exit when the old path contained special characters</li>\n<li>Fixed <code>claude plugin validate</code> skipping local plugins whose source is \".\" and stopping after the first error class</li>\n<li>Fixed Esc Esc at an idle prompt not opening the rewind menu (regression); use Ctrl+C or Ctrl+X Ctrl+K to stop background agents</li>\n<li>Fixed MCP OAuth requesting the authorization server's full <code>scopes_supported</code> catalog when no scope is specified, causing <code>invalid_scope</code> failures on GitLab self-hosted and other enterprise IdPs</li>\n<li>Fixed <code>/context</code> showing 0 tokens for all tool groups on Bedrock</li>\n<li>Fixed <code>/deep-research</code> misreporting verifier failures as \"all claims refuted\" instead of <code>unverified</code></li>\n<li>Fixed plugin dependency version pins not being honored when the marketplace was added as a local folder path backed by a git repo</li>\n<li>Fixed <code>claude agents</code> session status: completed rows no longer flip between \"Done\" and \"Needs your input\", stalled agents are now labeled \"Needs attention\", and results that mention a PR show a clickable link</li>\n<li>Fixed voice dictation swallowing spaces and spuriously starting a recording during very fast typing when voice mode is enabled</li>\n<li>Improved background session reliability: long-running commands and workflows now survive the session's process being stopped, restarted, or updated — including on Windows, where background shells are handed off instead of being killed</li>\n<li>Improved background agents: workers killed by a daemon restart are now automatically resumed from where they left off the next time the agents view opens</li>\n<li>Improved <code>/code-review</code> workflow: merged five cleanup finders into one, cutting token usage by roughly 25%</li>\n<li>Reduced per-frame rendering work in the terminal UI by skipping no-op subtree walks during streaming</li>\n<li>The streaming idle watchdog is now on by default for all providers — it aborts and retries when a response stream produces no events for 5 minutes. Set <code>CLAUDE_ENABLE_STREAM_WATCHDOG=0</code> to disable.</li>\n<li>Remote Control is now disabled when <code>ANTHROPIC_BASE_URL</code> points at a non-Anthropic host, matching the existing behavior under <code>CLAUDE_CODE_USE_BEDROCK</code>/<code>_VERTEX</code>/<code>_FOUNDRY</code></li>\n<li>Changed opening the agents view from a foreground session to require a single <code>←</code> press instead of two, matching the behavior in background sessions</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: via, token, /code-review, enterprise, /deep-research.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Claude Code Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "via",
+          "token",
+          "/code-review",
+          "enterprise",
+          "/deep-research",
+          "/cd",
+          "disable.",
+          "approval"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: via, token, /code-review, enterprise. Lead: Claude Code v2.1.196",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Hey Chloe,\n\nCheck this out. Claude just dropped org-wide default models. Admins can now enforce a specific model for their teams, which is a massive win for consistency and cost control in larger dev shops. Builders will see this as \"Org default\" in their model picker, making it clear which model they should be using. This is big for standardizing workflows and managing API spend across a team.",
+    "chloe_note": "*Claude Code v2.1.196* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New Claude Code CLI version introduces organization default models, a concrete feature for team management and standardization. Passes Ships Test.Cluster context: 1 sources, engagement 0. Common terms: via, token, /code-review, enterprise. Bewertung: 90. Quelle: https://github.com/anthropics/claude-code/releases/tag/v2.1.196"
   }
 ]
