@@ -11954,5 +11954,33 @@
     "engagement_score": 0.0,
     "local_newsworthiness_score": 10,
     "created_at": "2026-07-01T16:15:56.715275Z"
+  },
+  {
+    "title": "Anthropic Python SDK v0.114.0",
+    "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.114.0",
+    "source": "Anthropic Python SDK Releases",
+    "score": 10,
+    "should_post": false,
+    "reason": "SDK release summary 'deferred: generation provider unavailable' indicates no functional change or a problem, not an actionable update.",
+    "post_text": "No post generated",
+    "source_angle": "No source angle provided",
+    "source_tier": 1,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 65,
+    "created_at": "2026-07-01T19:29:31.268602Z"
+  },
+  {
+    "title": "Reduce GVisor Cold Starts with GPU Snapshotting",
+    "link": "https://cerebrium.ai/blog/reducing-gpu-cold-starts-with-memory-snapshots-restoring-cuda-workloads-in-second",
+    "source": "HackerNews",
+    "score": 85,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Practical guide to optimize AI inference latency and cost.",
+    "source_tier": 3,
+    "engagement_score": 44.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-01T19:29:41.103820Z"
   }
 ]
