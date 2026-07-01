@@ -1174,5 +1174,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-30-claude-code-v2-1-197-3aef92562705.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpjzyfpsev23",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpjzyfpsev23"
+  },
+  {
+    "id": "288bff6bd3c1",
+    "published_at": "2026-07-01T00:11:59.956210Z",
+    "platform": "bluesky",
+    "post": "Anthropic enables local coding agent execution.\n\nAnthropic Python SDK v0.115.0 adds local inference, Apache 2.0 licensed.\n\nReduces reliance on cloud services with local execution for Anthropic models, available on GitHub.\n\n📖 Read the full article: file:///home/runner/work/boardwi",
+    "source_link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.115.0",
+    "source_title": "Anthropic Python SDK v0.115.0",
+    "score": 65,
+    "reason": "local newsworthiness fallback",
+    "card_path": "generated/cards/288bff6bd3c1.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-30-anthropic-python-sdk-v0-115-0-288bff6bd3c1.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpka7cqinc23",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpka7cqinc23"
   }
 ]

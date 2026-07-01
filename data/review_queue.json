@@ -4554,11 +4554,11 @@
   },
   {
     "id": "288bff6bd3c1",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-06-30T23:03:41.089566Z",
     "score": 65,
     "reason": "local newsworthiness fallback",
-    "proposed_post": "Anthropic ships local execution for coding agents.\n\nAnthropic Python SDK v0.115.0 enables new workflows with local inference, Apache 2.0 licensed.\n\nAdds local execution for Anthropic models, reducing reliance on cloud services, available on GitHub.\n\n#Anthropic #LocalInference #Py",
+    "proposed_post": "Anthropic enables local coding agent execution.\n\nAnthropic Python SDK v0.115.0 adds local inference, Apache 2.0 licensed.\n\nReduces reliance on cloud services with local execution for Anthropic models, available on GitHub.\n\n📖 Read the full article: file:///home/runner/work/boardwi",
     "source_angle": "Local high-score + Sarah/OpenRouter fallback",
     "source_item": {
       "title": "Anthropic Python SDK v0.115.0",
@@ -4568,9 +4568,21 @@
       "engagement_score": 0.0,
       "local_newsworthiness_score": 65
     },
-    "card_path": null,
+    "card_path": "generated/cards/288bff6bd3c1.png",
     "breaking": false,
     "reactivated_at": "2026-06-30T23:03:41.089566Z",
-    "is_llm_mode": true
+    "is_llm_mode": true,
+    "sarah_package": {
+      "title": "Anthropic enables local coding agent execution.",
+      "subtitle": "Anthropic Python SDK v0.115.0 adds local inference, Apache 2.0 licensed.",
+      "description": "Reduces reliance on cloud services with local execution for Anthropic models, available on GitHub.",
+      "hashtags": [
+        "#Anthropic",
+        "#LocalInference",
+        "#PythonSDK"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-06-30-anthropic-python-sdk-v0-115-0-288bff6bd3c1.md",
+    "published_at": "2026-07-01T00:11:59.956210Z"
   }
 ]
