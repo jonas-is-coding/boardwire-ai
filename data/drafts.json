@@ -11772,5 +11772,61 @@
     "engagement_score": 64.0,
     "local_newsworthiness_score": 0,
     "created_at": "2026-07-01T02:31:17.084425Z"
+  },
+  {
+    "title": "Anthropic Python SDK v0.114.0",
+    "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.114.0",
+    "source": "Anthropic Python SDK Releases",
+    "score": 20,
+    "should_post": false,
+    "reason": "Summary is a meta-comment, not release notes. No concrete changes or builder implications can be extracted.",
+    "post_text": "No post generated",
+    "source_angle": "Anthropic Python SDK update",
+    "source_tier": 1,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 65,
+    "created_at": "2026-07-01T08:02:43.846019Z"
+  },
+  {
+    "title": "Redeploying Fable 5",
+    "link": "https://www.anthropic.com/news/redeploying-fable-5",
+    "source": "HackerNews",
+    "score": 90,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Anthropic model redeployment via HN",
+    "source_tier": 3,
+    "engagement_score": 119.0,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-07-01T08:02:51.216948Z"
+  },
+  {
+    "title": "How employment changes when firms adopt generative AI",
+    "link": "https://ramp.com/data/ai-jobs-impact",
+    "source": "HackerNews",
+    "score": 2,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 57.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-01T08:02:51.217316Z"
+  },
+  {
+    "title": "America can switch off AI. Europe must switch gears before it's too late",
+    "link": "https://www.euronews.com/my-europe/2026/06/30/america-can-switch-off-the-worlds-ai-europe-must-switch-gears-before-its-too-late",
+    "source": "HackerNews",
+    "score": 2,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 42.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-01T08:02:51.217490Z"
   }
 ]
