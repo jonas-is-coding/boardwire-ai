@@ -11926,5 +11926,33 @@
     "engagement_score": 66.0,
     "local_newsworthiness_score": 0,
     "created_at": "2026-07-01T12:28:05.065619Z"
+  },
+  {
+    "title": "Anthropic Python SDK v0.114.0",
+    "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.114.0",
+    "source": "Anthropic Python SDK Releases",
+    "score": 10,
+    "should_post": false,
+    "reason": "Summary indicates 'generation provider unavailable', meaning the actual changes/features of the SDK update are unknown. Cannot assess builder impact.",
+    "post_text": "No post generated",
+    "source_angle": "No source angle provided",
+    "source_tier": 1,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 65,
+    "created_at": "2026-07-01T16:15:45.848866Z"
+  },
+  {
+    "title": "Hugging Face and Cerebras bring Gemma 4 to real-time voice AI",
+    "link": "https://huggingface.co/blog/cerebras-gemma4-voice-ai",
+    "source": "Hugging Face Blog",
+    "score": 30,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "No source angle provided",
+    "source_tier": 2,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-07-01T16:15:56.715275Z"
   }
 ]
