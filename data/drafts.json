@@ -11716,5 +11716,61 @@
     "engagement_score": 0.0,
     "local_newsworthiness_score": 15,
     "created_at": "2026-06-30T23:03:40.978946Z"
+  },
+  {
+    "title": "Anthropic Python SDK v0.114.0",
+    "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.114.0",
+    "source": "Anthropic Python SDK Releases",
+    "score": 10,
+    "should_post": false,
+    "reason": "Anthropic SDK update summary states \"generation provider unavailable\", meaning no new actionable features for builders.",
+    "post_text": "No post generated",
+    "source_angle": "No source angle provided",
+    "source_tier": 1,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 65,
+    "created_at": "2026-07-01T02:31:10.707944Z"
+  },
+  {
+    "title": "Anthropic restoring access to Claude Fable 5 and Mythos 5 from tomorrow",
+    "link": "https://twitter.com/AnthropicAI/status/2072106151890809341",
+    "source": "HackerNews",
+    "score": 85,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Anthropic re-enables access to specific Claude models.",
+    "source_tier": 3,
+    "engagement_score": 51.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-01T02:31:17.083760Z"
+  },
+  {
+    "title": "Claude Code Just Got 5x More Expensive",
+    "link": "https://www.vincentschmalbach.com/claude-code-quietly-looks-5x-more-expensive/",
+    "source": "HackerNews",
+    "score": 8,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 45.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-01T02:31:17.084262Z"
+  },
+  {
+    "title": "Claude Fable 5 export control lifted",
+    "link": "https://twitter.com/synthwavedd/status/2072103052635451559",
+    "source": "HackerNews",
+    "score": 4,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 64.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-01T02:31:17.084425Z"
   }
 ]
