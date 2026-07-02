@@ -1,6 +1,6 @@
 # Boardwire Engagement Report
 
-Generated: `2026-07-01T08:02:22.769369Z`
+Generated: `2026-07-02T06:59:56.016685Z`
 
 ## Summary
 
@@ -27,7 +27,7 @@ Generated: `2026-07-01T08:02:22.769369Z`
    > Claude Desktop needs Linux support as a first-class target. 493 upvotes on HackerNews issue 65697 demand native Linux builds for Anthropic's…
 
 3. **4 pts** — GPT-5.5 hallucinates 3x more than MIT-licensed GLM-5.2
-   likes 2 · reposts 0 · replies 2 · quotes 0 · age 254h · score 90
+   likes 2 · reposts 0 · replies 2 · quotes 0 · age 277h · score 90
    https://arrowtsx.dev/bigger-models/
    > Hallucination rate drops 3x with MIT-licensed GLM-5.2 over GPT-5.5. GLM-5.2 outperforms GPT-5.5 on factual accuracy benchmarks, MIT-licensed…
 
@@ -42,12 +42,12 @@ Generated: `2026-07-01T08:02:22.769369Z`
    > Claude Code adds governance primitive for model allowlists. Claude Code v2.1.175 enforces `enforceAvailableModels` to lock model usage in CI…
 
 6. **3 pts** — jamiepine/voicebox — The open-source AI voice studio. Clone, dictate, create.
-   likes 2 · reposts 0 · replies 1 · quotes 0 · age 257h · score 90
+   likes 2 · reposts 0 · replies 1 · quotes 0 · age 280h · score 90
    https://github.com/jamiepine/voicebox
    > Voice AI gets open-source studio infrastructure. jamiepine/voicebox offers voice cloning, dictation, and audio creation with +140 stars. Bui…
 
 7. **3 pts** — ZhuLinsen/daily_stock_analysis — LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, aut
-   likes 1 · reposts 0 · replies 0 · quotes 1 · age 235h · score 90
+   likes 1 · reposts 0 · replies 0 · quotes 1 · age 258h · score 90
    https://github.com/ZhuLinsen/daily_stock_analysis
    > Stock analysis gets LLM infrastructure. ZhuLinsen/daily_stock_analysis adds real-time news and decision dashboard with +519 stars. Open-sour…
 
@@ -72,27 +72,27 @@ Generated: `2026-07-01T08:02:22.769369Z`
    > LangChain v1.1.0 ships local execution for coding agents. Adds new generation providers under MPL 2.0 license with local model support. Lang…
 
 12. **2 pts** — mattpocock/skills — Skills for Real Engineers. Straight from my .claude directory.
-   likes 2 · reposts 0 · replies 0 · quotes 0 · age 327h · score 95
+   likes 2 · reposts 0 · replies 0 · quotes 0 · age 350h · score 95
    https://github.com/mattpocock/skills
    > Claude skills become open infrastructure. mattpocock/skills adds 1849 stars with prompt engineering techniques for real engineers. Directly …
 
 13. **2 pts** — Anthropic Python SDK v0.110.0
-   likes 1 · reposts 0 · replies 1 · quotes 0 · age 287h · score 95
+   likes 1 · reposts 0 · replies 1 · quotes 0 · age 310h · score 95
    https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.110.0
    > Anthropic Python SDK adds code execution tool for agents. v0.110.0 exposes code_execution_20260120 for direct integration into agent loops. …
 
 14. **2 pts** — Identity verification on Claude
-   likes 2 · reposts 0 · replies 0 · quotes 0 · age 228h · score 75
+   likes 2 · reposts 0 · replies 0 · quotes 0 · age 251h · score 75
    https://support.claude.com/en/articles/14328960-identity-verification-on-claude
    > Claude now requires identity verification. Impacts user onboarding, account management, and API access with 228 points on Hacker News. Anthr…
 
 15. **2 pts** — browser-use/video-use — Edit videos with coding agents
-   likes 1 · reposts 0 · replies 1 · quotes 0 · age 58h · score 90
+   likes 1 · reposts 0 · replies 1 · quotes 0 · age 81h · score 90
    https://github.com/browser-use/video-use
    > VideoUse adds programmatic video editing for coding agents. browser-use/vid enables agent-driven video edits in browser workflows with +186 …
 
 16. **2 pts** — 0xNyk/council-of-high-intelligence — 18 AI personas deliberate your hardest decisions across multiple LLM providers. Aristotle, Feynman, Kahneman, Torvalds & more — structured multi-round deliberation
-   likes 2 · reposts 0 · replies 0 · quotes 0 · age 37h · score 90
+   likes 2 · reposts 0 · replies 0 · quotes 0 · age 60h · score 90
    https://github.com/0xNyk/council-of-high-intelligence
    > Council-of-high-intelligence ships multi-agent deliberation as a primi 0xNyk/council-of-high-intelligence runs 18 AI personas across LLM pro…
 
@@ -117,52 +117,52 @@ Generated: `2026-07-01T08:02:22.769369Z`
    > Anthropic adds client-side fallbacks to Python SDK. Supports claude-mythos-5 and claude-fable-5 models with server-side fallbacks. Improves …
 
 21. **1 pts** — Ollama v0.30.9
-   likes 1 · reposts 0 · replies 0 · quotes 0 · age 332h · score 90
+   likes 1 · reposts 0 · replies 0 · quotes 0 · age 355h · score 90
    https://github.com/ollama/ollama/releases/tag/v0.30.9
    > Ollama adds Cohere2Moe support. Ollama v0.30.9 fixes single-token output bug for local coding agents, with 4 critical fixes. Cohere2Moe arch…
 
 22. **1 pts** — Claude Code v2.1.183
-   likes 1 · reposts 0 · replies 0 · quotes 0 · age 280h · score 90
+   likes 1 · reposts 0 · replies 0 · quotes 0 · age 303h · score 90
    https://github.com/anthropics/claude-code/releases/tag/v2.1.183
    > Claude Code blocks destructive git commands by default. v2.1.183 adds auto-mode safety for git reset --hard, git clean, and terraform destro…
 
 23. **1 pts** — palmier-io/palmier-pro — macOS video editor built for AI
-   likes 1 · reposts 0 · replies 0 · quotes 0 · age 277h · score 90
+   likes 1 · reposts 0 · replies 0 · quotes 0 · age 300h · score 90
    https://github.com/palmier-io/palmier-pro
    > AI video editors are becoming native on macOS. Palmier-pro gains +749 stars with AI-focused features for video production workflows. macOS v…
 
 24. **1 pts** — Show HN: Recall – fully-local project memory for Claude Code
-   likes 0 · reposts 0 · replies 1 · quotes 0 · age 217h · score 90
+   likes 0 · reposts 0 · replies 1 · quotes 0 · age 240h · score 90
    https://github.com/raiyanyahya/recall
    > Claude Code gets local project memory. Recall provides fully-local storage with 58 comments and 77 points on Hacker News. Builders can now p…
 
 25. **1 pts** — Good results fine tuning a local LLM like Qwen 3:0.6B to categorize questions
-   likes 0 · reposts 0 · replies 1 · quotes 0 · age 211h · score 85
+   likes 0 · reposts 0 · replies 1 · quotes 0 · age 234h · score 85
    https://www.teachmecoolstuff.com/viewarticle/fine-tuning-a-local-llm-to-categorize-questions
    > Local LLMs become viable for question categorization. Qwen 0.6B fine-tunes for effective classification, with 129 points and 30 comments on …
 
 26. **1 pts** — Claude Code v2.1.187
-   likes 1 · reposts 0 · replies 0 · quotes 0 · age 154h · score 90
+   likes 1 · reposts 0 · replies 0 · quotes 0 · age 177h · score 90
    https://github.com/anthropics/claude-code/releases/tag/v2.1.187
    > Claude Code enhances security with sandbox credentials. Adds sandbox.credentials setting, org-configured model restrictions, and has 90 scor…
 
 27. **1 pts** — anomalyco/opencode — The open source coding agent.
-   likes 0 · reposts 0 · replies 1 · quotes 0 · age 92h · score 90
+   likes 0 · reposts 0 · replies 1 · quotes 0 · age 115h · score 90
    https://github.com/anomalyco/opencode
    > Open-source coding agents arrive. Anomalyco/opencode gains +573 stars on GitHub, Apache 2.0 licensed. First open-source coding agent availab…
 
 28. **1 pts** — vLLM v0.24.0
-   likes 1 · reposts 0 · replies 0 · quotes 0 · age 89h · score 90
+   likes 1 · reposts 0 · replies 0 · quotes 0 · age 112h · score 90
    https://github.com/vllm-project/vllm/releases/tag/v0.24.0
    > vLLM v0.24.0 ships Mixture-of-Experts speedups for Qwen3. Native NVFP4 configs cut MoE serving latency on NVIDIA hardware, Apache 2.0. Qwen3…
 
 29. **1 pts** — Using Local Coding Agents
-   likes 1 · reposts 0 · replies 0 · quotes 0 · age 84h · score 90
+   likes 1 · reposts 0 · replies 0 · quotes 0 · age 107h · score 90
    https://magazine.sebastianraschka.com/p/using-local-coding-agents
    > Open-Weight Models Become Local Coding Primitives. Sebastian Raschka's guide enables self-hosted coding agents, bypassing Claude/Codex APIs,…
 
 30. **1 pts** — Show HN: Adrafinil – keep a lid-closed Mac awake only while agents work
-   likes 1 · reposts 0 · replies 0 · quotes 0 · age 80h · score 85
+   likes 1 · reposts 0 · replies 0 · quotes 0 · age 103h · score 85
    https://github.com/kageroumado/adrafinil
    > Local AI agent runs stay awake on Mac. Adrafinil keeps lid-closed Macs awake with +33 comments and 48 points on Hacker News. Open-source uti…
 
@@ -277,167 +277,167 @@ Generated: `2026-07-01T08:02:22.769369Z`
    > Claude Code v2.1.179 stabilizes agentic workflows in Windows and WSL2. Fixes connection drops, stuck spinners, and WSL2 mouse-wheel scrollin…
 
 53. **0 pts** — GLM-5.2 is the new leading open weights model on Artificial Analysis
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 321h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 344h · score 90
    https://artificialanalysis.ai/articles/glm-5-2-is-the-new-leading-open-weights-model-on-the-artificial-analysis-intelligence-index
    > Open-source LLMs get a new leader. GLM-5.2 tops Artificial Analysis benchmarks with open weights, 553 points on Hacker News. GLM-5.2 beats p…
 
 54. **0 pts** — Simon Willison v4.1
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 314h · score 95
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 337h · score 95
    https://simonwillison.net/2026/Jun/17/glm-52/#atom-entries
    > Z.ai releases 753B MoE model. GLM-5.2 with 1M context window under MIT license, 1.51TB open weights on HuggingFace. MIT-licensed GLM-5.2 mod…
 
 55. **0 pts** — Claude Code v2.1.181
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 309h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 332h · score 90
    https://github.com/anthropics/claude-code/releases/tag/v2.1.181
    > Claude Code adds dynamic config control. v2.1.181 introduces /config key=value syntax and macOS automation via sandbox.allowAppleEvents, Apa…
 
 56. **0 pts** — Kilo-Org/kilocode — Kilo is the all-in-one agentic engineering platform. Build, ship, and iterate faster with the most popular open source coding agent.
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 303h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 326h · score 90
    https://github.com/Kilo-Org/kilocode
    > Agentic engineering platforms are gaining traction. Kilocode turns recall into persistent state for coding-agent workflows, with +1339 stars…
 
 57. **0 pts** — Migrate from OpenClaw
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 300h · score 85
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 323h · score 85
    https://hermes-agent.nousresearch.com/docs/guides/migrate-from-openclaw
    > Hermes Agent replaces OpenClaw. NousResearch migration guide has 58 comments and 85 points on HackerNews. NousResearch released a migration …
 
 58. **0 pts** — Anthropic Python SDK v0.111.0
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 297h · score 85
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 320h · score 85
    https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.111.0
    > Anthropic models get refusal handling observability. Anthropic Python SDK v0.111.0 adds fallback middleware request tagging, with 1 source a…
 
 59. **0 pts** — Temporary Cloudflare Accounts for AI Agents
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 252h · score 85
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 275h · score 85
    https://blog.cloudflare.com/temporary-accounts/
    > Cloudflare introduces ephemeral access for AI agents. Temporary accounts simplify credential management with scoped access to Cloudflare ser…
 
 60. **0 pts** — garrytan/gstack — Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 206h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 229h · score 90
    https://github.com/garrytan/gstack
    > Gstack provides Claude Code setup with 23 tools. Garrytan/gstack gains +454 stars with opinionated tools for CEO to QA roles. Pre-configured…
 
 61. **0 pts** — LangChain v0.2.4
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 183h · score 60
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 206h · score 60
    https://github.com/langchain-ai/langchain/releases/tag/langchain-openrouter%3D%3D0.2.4
    > LangChain drops file workarounds for OpenRouter. LangChain v0.2.4 replaces file uploads with native OpenRouter integration, adds cache_contr…
 
 62. **0 pts** — Mistral OCR 4
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 179h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 202h · score 90
    https://mistral.ai/news/ocr-4/
    > Mistral releases OCR 4. Delivers +20% accuracy and 30% speed boost, 271 points on HackerNews. Enables enhanced document processing and autom…
 
 63. **0 pts** — anthropics/claude-plugins-official — Official, Anthropic-managed directory of high quality Claude Code Plugins.
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 176h · score 85
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 199h · score 85
    https://github.com/anthropics/claude-plugins-official
    > Agentic workflows get a curated plugin registry for Claude Code. anthropics/claude-plugins-official provides 66+ curated plugins today. Apac…
 
 64. **0 pts** — Introducing computer use in Gemini 3.5 Flash
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 155h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 178h · score 90
    https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash/
    > Gemini 3.5 Flash integrates computer use. Enables model interaction with external tools, 90 score from Google DeepMind Blog. Direct builder …
 
 65. **0 pts** — Claude Code v2.1.191
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 147h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 170h · score 90
    https://github.com/anthropics/claude-code/releases/tag/v2.1.191
    > Claude Code ships conversation recovery primitives. /rewind restores context after /clear without rebuilding dialog state. MIT license. v2.1…
 
 66. **0 pts** — Ollama v0.30.11
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 135h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 158h · score 90
    https://github.com/ollama/ollama/releases/tag/v0.30.11-rc0
    > Ollama simplifies local LLM deployment. Ollama v0.30.11 auto-installs Claude Code and detects opencode thinking capabilities, with 2 key PRs…
 
 67. **0 pts** — Ollama v0.30.11
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 118h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 141h · score 90
    https://github.com/ollama/ollama/releases/tag/v0.30.11-rc1
    > Ollama adds thinking detection and auto-install for Claude Code. v0.30.11 turns local LLM workflows into agentic pipelines with MCP-backed c…
 
 68. **0 pts** — Claude Code v2.1.193
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 115h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 138h · score 90
    https://github.com/anthropics/claude-code/releases/tag/v2.1.193
    > Claude Code adds OpenTelemetry logging and shell command control. Claude Code v2.1.193 ships autoMode.classifyAllShell, OpenTelemetry logs f…
 
 69. **0 pts** — LangChain v1.4.3
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 111h · score 60
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 134h · score 60
    https://github.com/langchain-ai/langchain/releases/tag/langchain-fireworks%3D%3D1.4.3
    > LangChain v1.4.3 fixes Fireworks integration. LangChain v1.4.3 updates Fireworks dependencies for vcrpy 8.2.1 and langsmith 0.8.18. Firework…
 
 70. **0 pts** — alchaincyf/zhangxuefeng-skill — 张雪峰.skill — 张雪峰的认知操作系统。高考志愿/考研/职业规划的实战思维框架。由女娲.skill生成。
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 107h · score 85
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 130h · score 85
    https://github.com/alchaincyf/zhangxuefeng-skill
    > ZhangXuefeng.skill ships a cognitive OS for agent guidance. alchaincyf/zhangxuefeng-skill packages Chinese exam/career planning as a Nuwa.sk…
 
 71. **0 pts** — Ollama v0.30.11
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 104h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 127h · score 90
    https://github.com/ollama/ollama/releases/tag/v0.30.11
    > Ollama ships thinking capability detection for code models. v0.30.11 auto-installs Claude Code and opencode, with MCP-aware capability metad…
 
 72. **0 pts** — Claude Code v2.1.195
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 99h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 122h · score 90
    https://github.com/anthropics/claude-code/releases/tag/v2.1.195
    > Claude Code disables accidental clicks in fullscreen mode. v2.1.195 adds CLAUDE_CODE_DISABLE_MOUSE_CLICKS flag and fixes hyphenated hook mat…
 
 73. **0 pts** — DeepSeek open-sources inference optimizations with 60–85% faster generation [pdf]
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 93h · score 85
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 116h · score 85
    https://github.com/deepseek-ai/DeepSpec/blob/main/DSpark_paper.pdf
    > Inference speeds up 60-85% with DSpark. DeepSeek open-sources DSpark with 85 score and 48 engagement points. Delivers 60-85% faster generati…
 
 74. **0 pts** — AMD Strix Halo RDMA Cluster Setup Guide
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 65h · score 65
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 88h · score 65
    https://github.com/kyuz0/amd-strix-halo-vllm-toolboxes/blob/main/rdma_cluster/setup_guide.md
    > RDMA clusters run on AMD Strix Halo hardware now. AMD Strix Halo RDMA Cluster Setup Guide provides step-by-step instructions with 34 HN enga…
 
 75. **0 pts** — Semgrep: GLM 5.2 beats Claude in our Cyber Benchmarks
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 56h · score 85
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 79h · score 85
    https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/
    > Open-source GLM 5.2 beats Claude in cyber tasks. Semgrep's production benchmark shows GLM 5.2 outperforming Claude, with 57 points and 20 co…
 
 76. **0 pts** — Show HN: NanoEuler – GPT-2 scale model in pure C/CUDA from scratch
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 44h · score 70
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 67h · score 70
    https://github.com/JustVugg/nanoeuler
    > Coding primitives get a framework-free GPT-2 in C/CUDA. NanoEuler ships a GPT-2 scale model in 4k lines of pure C/CUDA, Apache 2.0 on GitHub…
 
 77. **0 pts** — Herdr: Agent multiplexer that lives in your terminal
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 39h · score 85
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 62h · score 85
    https://github.com/ogulcancelik/herdr
    > Herdr ships a terminal agent multiplexer for CLI-native agent orchestr Herdr provides a local terminal multiplexer for AI agents, with +100 …
 
 78. **0 pts** — Anthropic Python SDK v0.113.0
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 34h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 57h · score 90
    https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.113.0
    > Anthropic adds web fetch and tools to Python SDK. Anthropic Python SDK v0.113.0 exposes fetch and tools APIs for agentic workflows, with 14k…
 
 79. **0 pts** — Qwen 3.6 27B is the sweet spot for local development
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 32h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 55h · score 90
    https://quesma.com/blog/qwen-36-is-awesome/
    > Qwen 3.6 27B is the sweet spot for local development. Qwen 3.6 27B ships as open-weight with 27B parameters, Apache 2.0 license. Hits 208 HN…
 
 80. **0 pts** — Micro-Agent: Beat Frontier Models with Collaboration Inside Model API
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 27h · score 65
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 50h · score 65
    https://vllm.ai/blog/2026-06-29-micro-agent-frontier-models
    > Micro-Agent collaboration turns any model API into a frontier ensemble vLLM Micro-Agent ships a new agentic primitive inside model APIs with…
 
 81. **0 pts** — diegosouzapw/OmniRoute — Never stop coding. Free AI gateway: one endpoint, 160+ providers (50+ free), connect Claude Code, Codex, Cursor, Cline & Copilot to FREE Claude/GPT/Gemini. RTK+Caveman stacked
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 19h · score 95
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 42h · score 95
    https://github.com/diegosouzapw/OmniRoute
    > AI gateways simplify multi-model access. OmniRoute offers a single endpoint to 160+ providers with 15-95% token compression and auto-fallbac…
 
 82. **0 pts** — Start building with Nano Banana 2 Lite and Gemini Omni Flash
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 15h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 38h · score 90
    https://deepmind.google/blog/start-building-with-nano-banana-2-lite-and-gemini-omni-flash/
    > Edge AI development gets Nano Banana 2 Lite and Gemini Omni Flash. Google DeepMind releases new models for low-power devices, passing the Sh…
 
 83. **0 pts** — Featuring Every Eval Ever Results on Hugging Face Model Pages
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 11h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 34h · score 90
    https://huggingface.co/blog/eee-community-evals
    > Hugging Face embeds every benchmark on model pages. Every Eval Ever results now load directly on Hugging Face model pages. Every Eval Ever l…
 
 84. **0 pts** — Claude Code v2.1.197
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 10h · score 95
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 33h · score 95
    https://github.com/anthropics/claude-code/releases/tag/v2.1.197
    > Claude Code defaults to 1M-token context model. Claude Code v2.1.197 updates with native 1M-token context window and promotional pricing. An…
 
 85. **0 pts** — Anthropic Python SDK v0.115.0
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 8h · score 65
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 31h · score 65
    https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.115.0
    > Anthropic enables local coding agent execution. Anthropic Python SDK v0.115.0 adds local inference, Apache 2.0 licensed. Reduces reliance on…
 
