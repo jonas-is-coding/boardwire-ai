@@ -4478,12 +4478,12 @@
   },
   {
     "id": "2aad43fa786f",
-    "status": "deferred_generation_unavailable",
-    "created_at": "2026-06-30T19:31:16.381619Z",
+    "status": "approved",
+    "created_at": "2026-07-02T07:00:19.516156Z",
     "score": 65,
-    "reason": "deferred: generation provider unavailable",
-    "proposed_post": "",
-    "source_angle": "Rule-based",
+    "reason": "local newsworthiness fallback",
+    "proposed_post": "Anthropic Python SDK adds tool use beta.\n\nv0.114.0 exposes beta tool_use interface for models, with +65 stars today.\n\nFirst Python SDK release to expose beta tool_use for Claude 3.5 Sonnet, Sonnet 3.7 and Haiku 3.5. Apache 2.0 license. Available on PyPI.\n\n#Anthropic #Claude35 #Py",
+    "source_angle": "Local high-score + Sarah/OpenRouter fallback",
     "source_item": {
       "title": "Anthropic Python SDK v0.114.0",
       "source": "Anthropic Python SDK Releases",
@@ -4492,11 +4492,10 @@
       "engagement_score": 0.0,
       "local_newsworthiness_score": 65
     },
-    "deferred_at": "2026-07-02T02:10:34.294534Z",
-    "defer_count": 3,
-    "original_score": 65,
-    "original_reason": "deferred: generation provider unavailable",
-    "card_path": null
+    "card_path": null,
+    "breaking": false,
+    "reactivated_at": "2026-07-02T07:00:19.516156Z",
+    "is_llm_mode": false
   },
   {
     "id": "3aef92562705",
@@ -4588,12 +4587,12 @@
   },
   {
     "id": "3b05e9cd38b1",
-    "status": "deferred_generation_unavailable",
-    "created_at": "2026-07-01T21:17:56.261360Z",
-    "score": 90,
-    "reason": "deferred: generation provider unavailable",
-    "proposed_post": "",
-    "source_angle": "Rule-based",
+    "status": "approved",
+    "created_at": "2026-07-02T07:00:19.417925Z",
+    "score": 60,
+    "reason": "local newsworthiness fallback",
+    "proposed_post": "Coding loops get local execution.\n\nClaude Code v2.1.198 enables local runs for coding-agent workflows.\n\nDirectly deploys models for coding tasks on local machines, replacing cloud dependencies.\n\n#ClaudeCode #LocalExecution #CodingAgents",
+    "source_angle": "Local high-score + Sarah/OpenRouter fallback",
     "source_item": {
       "title": "Claude Code v2.1.198",
       "source": "Claude Code Releases",
@@ -4602,10 +4601,9 @@
       "engagement_score": 0.0,
       "local_newsworthiness_score": 60
     },
-    "deferred_at": "2026-07-01T21:17:56.261314Z",
-    "defer_count": 1,
-    "original_score": 90,
-    "original_reason": "deferred: generation provider unavailable",
-    "card_path": null
+    "card_path": null,
+    "breaking": false,
+    "reactivated_at": "2026-07-02T07:00:19.417925Z",
+    "is_llm_mode": false
   }
 ]
