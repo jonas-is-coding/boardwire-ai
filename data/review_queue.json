@@ -4632,11 +4632,11 @@
   },
   {
     "id": "77c1d6948777",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-02T10:28:30.498955Z",
     "score": 75,
     "reason": "Provides actionable data on AI coding tool productivity discrepancy, informing builder strategy.",
-    "proposed_post": "New analysis shows developers felt 20% faster with AI coding assistants but were measured 19% slower. Builders: scrutinize your AI productivity metrics. Perceived gains may mask actual slowdowns.",
+    "proposed_post": "AI coding tools don’t improve velocity by default.\n\nPerceived +20% speed gain collapses to −19% in measured performance study, exposing flawed metrics.\n\nHacker News post analyzes 68-point analysis on intrepidkarthi.com with 89 comments. Reveals gap between developer perception an",
     "source_angle": "Developer productivity study with AI coding tools",
     "source_item": {
       "title": "The gauge broke: devs felt 20% faster with AI, measured 19% slower",
@@ -4667,11 +4667,23 @@
         "cluster_score": 10
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/77c1d6948777.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, der Artikel \"The gauge broke: devs felt 20% faster with AI, measured 19% slower\" ist interessant, weil er die Diskrepanz zwischen gefühlter und tatsächlicher Produktivität mit KI-Tools aufzeigt.\n\nFür Entwickler ist das super relevant: es geht darum, wie man die Leistung von KI-Assistenten wirklich misst und wie man Fallstricke vermeidet, wenn man diese Tools im Team einsetzt. Man kann daraus lernen, wie man eigene Metriken aufsetzt, die nicht nur auf subjektiven Eindrücken basieren.",
-    "chloe_note": "*The gauge broke: devs felt 20% faster with AI, measured 19% slower* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Provides actionable data on AI coding tool productivity discrepancy, informing builder strategy.Cluster context: 1 sources, engagement 112. Common terms: felt, broke, original, measured. Bewertung: 75. Quelle: https://intrepidkarthi.com/writing/the-gauge-broke/"
+    "chloe_note": "*The gauge broke: devs felt 20% faster with AI, measured 19% slower* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Provides actionable data on AI coding tool productivity discrepancy, informing builder strategy.Cluster context: 1 sources, engagement 112. Common terms: felt, broke, original, measured. Bewertung: 75. Quelle: https://intrepidkarthi.com/writing/the-gauge-broke/",
+    "sarah_package": {
+      "title": "AI coding tools don’t improve velocity by default.",
+      "subtitle": "Perceived +20% speed gain collapses to −19% in measured performance study, exposing flawed metrics.",
+      "description": "Hacker News post analyzes 68-point analysis on intrepidkarthi.com with 89 comments. Reveals gap between developer perception and actual velo",
+      "hashtags": [
+        "#HackerNews",
+        "#ProductivityMetrics",
+        "#AICoding"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-02-the-gauge-broke-devs-felt-20-faster-with-ai-measured-19-slower-77c1d6948777.md",
+    "published_at": "2026-07-02T16:53:46.589633Z"
   },
   {
     "id": "e420221e0ebd",
