@@ -12570,5 +12570,33 @@
     "engagement_score": 50.0,
     "local_newsworthiness_score": 0,
     "created_at": "2026-07-02T20:53:51.308052Z"
+  },
+  {
+    "title": "Claude-real-video － any LLM can watch a video",
+    "link": "https://github.com/HUANGCHIHHUNGLeo/claude-real-video",
+    "source": "HackerNews",
+    "score": 85,
+    "should_post": true,
+    "reason": "Open-source tool released on GitHub for adding video input capability to LLMs. Passes Ships Test.",
+    "post_text": "The `claude-real-video` project on GitHub converts video frames to text, enabling any LLM to process video input. Builders can use this open-source tool to add multimodal video understanding to existing LLM applications without native video support.",
+    "source_angle": "Open-source tool for LLM video processing",
+    "source_tier": 3,
+    "engagement_score": 54.5,
+    "local_newsworthiness_score": 30,
+    "created_at": "2026-07-02T22:57:02.801696Z"
+  },
+  {
+    "title": "The Short Leash AI Coding Method for Beating Fable",
+    "link": "https://blog.okturtles.org/2026/07/short-leash-ai-method/",
+    "source": "HackerNews",
+    "score": 2,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 65.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-02T22:57:04.275331Z"
   }
 ]
