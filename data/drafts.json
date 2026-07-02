@@ -12542,5 +12542,33 @@
     "engagement_score": 45.0,
     "local_newsworthiness_score": 0,
     "created_at": "2026-07-02T19:09:10.664984Z"
+  },
+  {
+    "title": "Claude's AskUserQuestion: \"No response after 60s – continued without an answer\"",
+    "link": "https://github.com/anthropics/claude-code/issues/73125",
+    "source": "HackerNews",
+    "score": 30,
+    "should_post": false,
+    "reason": "Fails Ships Test: Not a new release, feature, or measurable improvement. Details existing API behavior, not a new ship.",
+    "post_text": "No post generated",
+    "source_angle": "No source angle provided",
+    "source_tier": 3,
+    "engagement_score": 72.0,
+    "local_newsworthiness_score": 30,
+    "created_at": "2026-07-02T20:53:45.338352Z"
+  },
+  {
+    "title": "Weird Al Yankovic Pulled Out of AI Ad Deal: 'I Can't Be the Poster Boy for AI'",
+    "link": "https://variety.com/2026/biz/news/weird-al-yankovic-rejected-ai-commercial-money-offer-1236800794/",
+    "source": "HackerNews",
+    "score": 10,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "No source angle provided",
+    "source_tier": 3,
+    "engagement_score": 50.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-02T20:53:51.308052Z"
   }
 ]
