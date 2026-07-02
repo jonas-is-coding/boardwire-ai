@@ -4478,11 +4478,11 @@
   },
   {
     "id": "2aad43fa786f",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-02T07:00:19.516156Z",
     "score": 65,
     "reason": "local newsworthiness fallback",
-    "proposed_post": "Anthropic Python SDK adds tool use beta.\n\nv0.114.0 exposes beta tool_use interface for models, with +65 stars today.\n\nFirst Python SDK release to expose beta tool_use for Claude 3.5 Sonnet, Sonnet 3.7 and Haiku 3.5. Apache 2.0 license. Available on PyPI.\n\n#Anthropic #Claude35 #Py",
+    "proposed_post": "Anthropic Python SDK exposes tool use as a primitive.\n\nClaude models gain structured tool_use via v0.114.0 SDK, Apache 2.0. +65 stars today.\n\nFirst Python SDK release to expose tool_use for Claude 3.5 Sonnet, Sonnet 3.7 and Haiku 3.5. Available on PyPI.\n\n📖 Read the full article: ",
     "source_angle": "Local high-score + Sarah/OpenRouter fallback",
     "source_item": {
       "title": "Anthropic Python SDK v0.114.0",
@@ -4492,10 +4492,22 @@
       "engagement_score": 0.0,
       "local_newsworthiness_score": 65
     },
-    "card_path": null,
+    "card_path": "generated/cards/2aad43fa786f.png",
     "breaking": false,
     "reactivated_at": "2026-07-02T07:00:19.516156Z",
-    "is_llm_mode": false
+    "is_llm_mode": false,
+    "sarah_package": {
+      "title": "Anthropic Python SDK exposes tool use as a primitive.",
+      "subtitle": "Claude models gain structured tool_use via v0.114.0 SDK, Apache 2.0. +65 stars today.",
+      "description": "First Python SDK release to expose tool_use for Claude 3.5 Sonnet, Sonnet 3.7 and Haiku 3.5. Available on PyPI.",
+      "hashtags": [
+        "#Anthropic",
+        "#Claude35",
+        "#PythonSDK"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-02-anthropic-python-sdk-v0-114-0-2aad43fa786f.md",
+    "published_at": "2026-07-02T13:01:14.726624Z"
   },
   {
     "id": "3aef92562705",
