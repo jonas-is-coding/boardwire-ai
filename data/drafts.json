@@ -12248,5 +12248,19 @@
     "engagement_score": 52.5,
     "local_newsworthiness_score": 0,
     "created_at": "2026-07-02T07:00:19.312878Z"
+  },
+  {
+    "title": "The gauge broke: devs felt 20% faster with AI, measured 19% slower",
+    "link": "https://intrepidkarthi.com/writing/the-gauge-broke/",
+    "source": "HackerNews",
+    "score": 75,
+    "should_post": true,
+    "reason": "Provides actionable data on AI coding tool productivity discrepancy, informing builder strategy.",
+    "post_text": "New analysis shows developers felt 20% faster with AI coding assistants but were measured 19% slower. Builders: scrutinize your AI productivity metrics. Perceived gains may mask actual slowdowns.",
+    "source_angle": "Developer productivity study with AI coding tools",
+    "source_tier": 3,
+    "engagement_score": 112.5,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-07-02T10:28:30.498955Z"
   }
 ]
