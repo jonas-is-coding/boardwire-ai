@@ -4271,7 +4271,7 @@
   },
   {
     "id": "f7ab4c502e4d",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-06-30T02:13:59.660362Z",
     "score": 90,
     "reason": "New Claude Code CLI version introduces organization default models, a concrete feature for team management and standardization. Passes Ships Test.",
@@ -4310,7 +4310,8 @@
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Hey Chloe,\n\nCheck this out. Claude just dropped org-wide default models. Admins can now enforce a specific model for their teams, which is a massive win for consistency and cost control in larger dev shops. Builders will see this as \"Org default\" in their model picker, making it clear which model they should be using. This is big for standardizing workflows and managing API spend across a team.",
-    "chloe_note": "*Claude Code v2.1.196* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New Claude Code CLI version introduces organization default models, a concrete feature for team management and standardization. Passes Ships Test.Cluster context: 1 sources, engagement 0. Common terms: via, token, /code-review, enterprise. Bewertung: 90. Quelle: https://github.com/anthropics/claude-code/releases/tag/v2.1.196"
+    "chloe_note": "*Claude Code v2.1.196* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New Claude Code CLI version introduces organization default models, a concrete feature for team management and standardization. Passes Ships Test.Cluster context: 1 sources, engagement 0. Common terms: via, token, /code-review, enterprise. Bewertung: 90. Quelle: https://github.com/anthropics/claude-code/releases/tag/v2.1.196",
+    "expired_at": "2026-07-02T05:01:57.926009Z"
   },
   {
     "id": "94f3d6e8eb64",
