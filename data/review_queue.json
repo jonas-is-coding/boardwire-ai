@@ -4891,5 +4891,48 @@
     "breaking": false,
     "claire_note": "Chloe, check this out: Safari MCP Server. Das ist ein Game-Changer für jeden, der Webkit-Bugs reproduzieren oder fixen muss. Statt sich durch komplexe Build-Setups zu quälen, können Devs jetzt einfach eine lokale Instanz laufen lassen und direkt mit der Safari-Engine interagieren. Das spart Stunden, wenn nicht Tage, beim Debuggen von Rendering- oder JS-Problemen.",
     "chloe_note": "Hey, *The Safari MCP server for web developers* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New MCP server from WebKit provides a concrete platform for web AI development, shipping today.Cluster context: 1 sources, engagement 84. Common terms: points, coloneltcb, original, server. Score aktuell: 90. Link: https://webkit.org/blog/18136/introducing-the-safari-mcp-server-for-web-developers/"
+  },
+  {
+    "id": "2da6f42530f9",
+    "status": "approved",
+    "created_at": "2026-07-03T12:00:38.872436Z",
+    "score": 105,
+    "reason": "local newsworthiness fallback",
+    "proposed_post": "Codegraph indexes code knowledge for Claude Code and Codex.\n\nTurns folders into queryable graphs with +937 stars, SQL schemas and shell scripts support.\n\nGraphify skill integrates with Gemini CLI, OpenCode, and Cursor, mapping app code and database schema into one graph.\n\n#Codex ",
+    "source_angle": "Local high-score + Sarah/OpenRouter fallback",
+    "source_item": {
+      "title": "safishamsi/graphify — AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, or v",
+      "source": "GitHub Trending",
+      "link": "https://github.com/safishamsi/graphify",
+      "source_tier": 2,
+      "engagement_score": 937.0,
+      "local_newsworthiness_score": 105,
+      "summary": "Trending on GitHub today: +937 stars. AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, or videos into a queryable knowledge graph. App code + database schema + infrastructure in one graph.\n[Cluster context: 1 sources, engagement 937, common terms: sql, claude, shell, database, one.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 937,
+        "common_terms": [
+          "sql",
+          "claude",
+          "shell",
+          "database",
+          "one",
+          "skill",
+          "codex",
+          "docs"
+        ],
+        "cluster_summary": "1 sources, engagement 937. Common terms: sql, claude, shell, database. Lead: safishamsi/graphify — AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any f",
+        "alternative_titles": [],
+        "cluster_score": 55
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "breaking": true,
+    "claire_note": "Aus *GitHub Trending* ist ein starker Kandidat reingekommen: *safishamsi/graphify — AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, or v*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 105_",
+    "chloe_note": "Hey, *safishamsi/graphify — AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, or v* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen local newsworthiness fallbackCluster context: 1 sources, engagement 937. Common terms: sql, claude, shell, database. Score aktuell: 105. Link: https://github.com/safishamsi/graphify"
   }
 ]
