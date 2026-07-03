@@ -12934,5 +12934,47 @@
     "engagement_score": 90.5,
     "local_newsworthiness_score": 0,
     "created_at": "2026-07-03T19:01:08.786716Z"
+  },
+  {
+    "title": "Show HN: Mcpsnoop – Wireshark for MCP (transparent proxy and live TUI)",
+    "link": "https://github.com/kerlenton/mcpsnoop",
+    "source": "HackerNews",
+    "score": 70,
+    "should_post": true,
+    "reason": "New open-source tool for debugging MCP traffic. Ships today, but low community engagement.",
+    "post_text": "Mcpsnoop, an open-source transparent proxy and live TUI for MCP traffic, is now available on GitHub. Use it to debug and monitor your AI service interactions with MCP in real-time.",
+    "source_angle": "Open-source debugging tool for MCP",
+    "source_tier": 3,
+    "engagement_score": 38.0,
+    "local_newsworthiness_score": 50,
+    "created_at": "2026-07-03T20:52:16.298345Z"
+  },
+  {
+    "title": "Protect your right to run local AI",
+    "link": "https://righttointelligence.org/",
+    "source": "HackerNews",
+    "score": 3,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 560.0,
+    "local_newsworthiness_score": 20,
+    "created_at": "2026-07-03T20:52:17.330226Z"
+  },
+  {
+    "title": "Instead of banning AI, I made a classroom contract with my students",
+    "link": "https://www.science.org/content/article/instead-banning-ai-i-made-classroom-contract-my-students",
+    "source": "HackerNews",
+    "score": 2,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 76.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-03T20:52:17.330489Z"
   }
 ]

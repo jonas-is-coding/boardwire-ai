@@ -5001,5 +5001,48 @@
     "breaking": false,
     "claire_note": "Hey Chloe,\n\nHab hier einen Release-Log für Claude Code v2.1.200. Das ist interessant, weil sie das Auto-Continue bei User-Fragen rausgenommen haben – jetzt muss man ein Idle-Timeout konfigurieren. Für Devs bedeutet das mehr Kontrolle über den Flow und weniger unerwartete Unterbrechungen, was bei komplexeren Code-Reviews echt nützlich sein kann. Außerdem ist der Standard-Permission-Modus jetzt \"Manual\", was für viele ein Plus an Sicherheit und Transparenz ist, wenn sie Claude in ihre IDEs integrieren.",
     "chloe_note": "Hey, *Claude Code v2.1.200* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Direct release of Claude Code v2.1.200 with concrete changes to default permission mode and dialog behavior.Cluster context: 1 sources, engagement 0. Common terms: preserving, auto-continue, take, message. Score aktuell: 90. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.200"
+  },
+  {
+    "id": "1459cbf6e302",
+    "status": "approved",
+    "created_at": "2026-07-03T20:52:16.298345Z",
+    "score": 70,
+    "reason": "New open-source tool for debugging MCP traffic. Ships today, but low community engagement.",
+    "proposed_post": "Mcpsnoop, an open-source transparent proxy and live TUI for MCP traffic, is now available on GitHub. Use it to debug and monitor your AI service interactions with MCP in real-time.",
+    "source_angle": "Open-source debugging tool for MCP",
+    "source_item": {
+      "title": "Show HN: Mcpsnoop – Wireshark for MCP (transparent proxy and live TUI)",
+      "source": "HackerNews",
+      "link": "https://github.com/kerlenton/mcpsnoop",
+      "source_tier": 3,
+      "engagement_score": 38.0,
+      "local_newsworthiness_score": 50,
+      "summary": "32 points, 12 comments on Hacker News — submitted by kerlenton — original: https://github.com/kerlenton/mcpsnoop\n[Cluster context: 1 sources, engagement 38, common terms: tui, show, comments, wireshark, proxy.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 38,
+        "common_terms": [
+          "tui",
+          "show",
+          "comments",
+          "wireshark",
+          "proxy",
+          "mcpsnoop",
+          "mcp",
+          "submitted"
+        ],
+        "cluster_summary": "1 sources, engagement 38. Common terms: tui, show, comments, wireshark. Lead: Show HN: Mcpsnoop – Wireshark for MCP (transparent proxy and live TUI)",
+        "alternative_titles": [],
+        "cluster_score": 0
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, das ist interessant für alle, die mit Minecraft-Servern arbeiten. Mcpsnoop ist im Grunde ein Wireshark für das Minecraft-Protokoll, aber mit einem transparenten Proxy und einer Live-TUI.\n\nEntwickler können damit den Datenverkehr zwischen Client und Server in Echtzeit debuggen und manipulieren, ohne den Client modifizieren zu müssen. Das ist super nützlich für die Entwicklung von Plugins, Anti-Cheat-Systemen oder einfach nur zum Verständnis, wie das Protokoll funktioniert.",
+    "chloe_note": "Hey, *Show HN: Mcpsnoop – Wireshark for MCP (transparent proxy and live TUI)* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New open-source tool for debugging MCP traffic. Ships today, but low community engagement.Cluster context: 1 sources, engagement 38. Common terms: tui, show, comments, wireshark. Score aktuell: 70. Link: https://github.com/kerlenton/mcpsnoop"
   }
 ]
