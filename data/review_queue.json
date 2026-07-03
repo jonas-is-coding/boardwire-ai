@@ -5056,5 +5056,48 @@
     "breaking": false,
     "claire_note": "Chloe, das ist interessant für alle, die mit Minecraft-Servern arbeiten. Mcpsnoop ist im Grunde ein Wireshark für das Minecraft-Protokoll, aber mit einem transparenten Proxy und einer Live-TUI.\n\nEntwickler können damit den Datenverkehr zwischen Client und Server in Echtzeit debuggen und manipulieren, ohne den Client modifizieren zu müssen. Das ist super nützlich für die Entwicklung von Plugins, Anti-Cheat-Systemen oder einfach nur zum Verständnis, wie das Protokoll funktioniert.",
     "chloe_note": "Hey, *Show HN: Mcpsnoop – Wireshark for MCP (transparent proxy and live TUI)* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New open-source tool for debugging MCP traffic. Ships today, but low community engagement.Cluster context: 1 sources, engagement 38. Common terms: tui, show, comments, wireshark. Score aktuell: 70. Link: https://github.com/kerlenton/mcpsnoop"
+  },
+  {
+    "id": "972ba58355e7",
+    "status": "approved",
+    "created_at": "2026-07-03T22:55:04.600757Z",
+    "score": 65,
+    "reason": "New user-facing AI feature shipped in Kagi search. Direct control over AI features offers insight into user preferences.",
+    "proposed_post": "Kagi's latest changelog includes an 'AI toggle' for its search interface. This allows users to enable/disable AI-powered search features, providing direct user control over AI integration in information retrieval. Builders can observe user adoption for AI feature preferences.",
+    "source_angle": "Kagi's new AI toggle for user control in search.",
+    "source_item": {
+      "title": "Kagi Changelog (July 2): Heads, tails, and an AI toggle",
+      "source": "HackerNews",
+      "link": "https://kagi.com/changelog#10959",
+      "source_tier": 3,
+      "engagement_score": 48.5,
+      "local_newsworthiness_score": 0,
+      "summary": "44 points, 9 comments on Hacker News — submitted by mroche — original: https://kagi.com/changelog#10959\n[Cluster context: 1 sources, engagement 48, common terms: comments, tails, mroche, original, submitted.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 48,
+        "common_terms": [
+          "comments",
+          "tails",
+          "mroche",
+          "original",
+          "submitted",
+          "points",
+          "hacker",
+          "changelog"
+        ],
+        "cluster_summary": "1 sources, engagement 48. Common terms: comments, tails, mroche, original. Lead: Kagi Changelog (July 2): Heads, tails, and an AI toggle",
+        "alternative_titles": [],
+        "cluster_score": 0
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Hey Chloe,\n\nKagi hat einen AI-Toggle in ihren Changelog gepackt. Das ist für Builder interessant, weil es zeigt, wie User-Kontrolle über AI-Features in einem Produkt umgesetzt wird. Man kann direkt sehen, wie ein etablierter Player mit der Integration von AI umgeht und den Nutzern die Wahl lässt. Könnte gute Insights für jeden geben, der gerade selbst AI-Features entwickelt und über UX nachdenkt.",
+    "chloe_note": "*Kagi Changelog (July 2): Heads, tails, and an AI toggle* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New user-facing AI feature shipped in Kagi search. Direct control over AI features offers insight into user preferences.Cluster context: 1 sources, engagement 48. Common terms: comments, tails, mroche, original. Bewertung: 65. Quelle: https://kagi.com/changelog#10959"
   }
 ]

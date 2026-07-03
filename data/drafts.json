@@ -12976,5 +12976,19 @@
     "engagement_score": 76.0,
     "local_newsworthiness_score": 0,
     "created_at": "2026-07-03T20:52:17.330489Z"
+  },
+  {
+    "title": "Kagi Changelog (July 2): Heads, tails, and an AI toggle",
+    "link": "https://kagi.com/changelog#10959",
+    "source": "HackerNews",
+    "score": 65,
+    "should_post": true,
+    "reason": "New user-facing AI feature shipped in Kagi search. Direct control over AI features offers insight into user preferences.",
+    "post_text": "Kagi's latest changelog includes an 'AI toggle' for its search interface. This allows users to enable/disable AI-powered search features, providing direct user control over AI integration in information retrieval. Builders can observe user adoption for AI feature preferences.",
+    "source_angle": "Kagi's new AI toggle for user control in search.",
+    "source_tier": 3,
+    "engagement_score": 48.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-03T22:55:04.600757Z"
   }
 ]
