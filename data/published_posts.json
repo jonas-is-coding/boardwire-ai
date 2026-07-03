@@ -1230,5 +1230,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-02-the-gauge-broke-devs-felt-20-faster-with-ai-measured-19-slower-77c1d6948777.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpoinn35hq2e",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpoinn35hq2e"
+  },
+  {
+    "id": "126969009032",
+    "published_at": "2026-07-03T00:11:05.552751Z",
+    "platform": "bluesky",
+    "post": "Video input becomes a plugin primitive for any LLM.\n\nclaude-real-video converts video to sequential frames for LLM processing, Apache 2.0 on GitHub with\n\nFirst open-source tool to bridge native video input gap for existing LLMs. Uses FFmpeg for frame extraction and OCR for text o",
+    "source_link": "https://github.com/HUANGCHIHHUNGLeo/claude-real-video",
+    "source_title": "Claude-real-video － any LLM can watch a video",
+    "score": 85,
+    "reason": "Open-source tool released on GitHub for adding video input capability to LLMs. Passes Ships Test.",
+    "card_path": "generated/cards/126969009032.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-02-claude-real-video-any-llm-can-watch-a-video-126969009032.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mppb3lo2zc2l",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mppb3lo2zc2l"
   }
 ]

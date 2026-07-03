@@ -4730,11 +4730,11 @@
   },
   {
     "id": "126969009032",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-02T22:57:02.801696Z",
     "score": 85,
     "reason": "Open-source tool released on GitHub for adding video input capability to LLMs. Passes Ships Test.",
-    "proposed_post": "The `claude-real-video` project on GitHub converts video frames to text, enabling any LLM to process video input. Builders can use this open-source tool to add multimodal video understanding to existing LLM applications without native video support.",
+    "proposed_post": "Video input becomes a plugin primitive for any LLM.\n\nclaude-real-video converts video to sequential frames for LLM processing, Apache 2.0 on GitHub with\n\nFirst open-source tool to bridge native video input gap for existing LLMs. Uses FFmpeg for frame extraction and OCR for text o",
     "source_angle": "Open-source tool for LLM video processing",
     "source_item": {
       "title": "Claude-real-video － any LLM can watch a video",
@@ -4765,10 +4765,22 @@
         "cluster_score": 0
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/126969009032.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, schau dir das mal an: \"Claude-real-video\".\n\nDas ist ein GitHub-Repo, das zeigt, wie man jedes LLM dazu bringt, Videos zu \"sehen\". Im Grunde geht es darum, Frames zu extrahieren, sie als Bilder an das LLM zu schicken und die Antworten zu verketten.\n\nFür Entwickler ist das spannend, weil es eine konkrete Methode liefert, um Multimodalität mit bestehenden LLMs zu hacken – ohne auf ein spezialisiertes Multimodal-Modell warten zu müssen. Man kann sofort anfangen, Videoanalyse in eigene Apps zu integrieren, ob für Content-Moderation, Szenenbeschreibung oder interaktive Storytelling-Projekte. Der Ansatz ist simpel, aber mächtig.",
-    "chloe_note": "Kurzes Update: *Claude-real-video － any LLM can watch a video* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Open-source tool released on GitHub for adding video input capability to LLMs. Passes Ships Test.Cluster context: 1 sources, engagement 54. Common terms: cortexosmain, original, comments, submitted. Ich habe es mit 85 Punkten bewertet. Hier der Link: https://github.com/HUANGCHIHHUNGLeo/claude-real-video"
+    "chloe_note": "Kurzes Update: *Claude-real-video － any LLM can watch a video* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Open-source tool released on GitHub for adding video input capability to LLMs. Passes Ships Test.Cluster context: 1 sources, engagement 54. Common terms: cortexosmain, original, comments, submitted. Ich habe es mit 85 Punkten bewertet. Hier der Link: https://github.com/HUANGCHIHHUNGLeo/claude-real-video",
+    "sarah_package": {
+      "title": "Video input becomes a plugin primitive for any LLM.",
+      "subtitle": "claude-real-video converts video to sequential frames for LLM processing, Apache 2.0 on GitHub with ",
+      "description": "First open-source tool to bridge native video input gap for existing LLMs. Uses FFmpeg for frame extraction and OCR for text overlays.",
+      "hashtags": [
+        "#VideoInput",
+        "#LLMPlugin",
+        "#Apache2"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-02-claude-real-video-any-llm-can-watch-a-video-126969009032.md",
+    "published_at": "2026-07-03T00:11:05.552751Z"
   }
 ]
