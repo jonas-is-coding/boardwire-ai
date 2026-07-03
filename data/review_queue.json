@@ -4687,11 +4687,11 @@
   },
   {
     "id": "e420221e0ebd",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-02T13:29:17.936012Z",
     "score": 90,
     "reason": "GitHub repo with Claude skill for 65% token reduction. Clear, actionable cost savings for builders.",
-    "proposed_post": "JuliusBrussee/caveman, a new Claude Code skill, cuts token usage by 65% by rephrasing prompts in a 'caveman' style. Deploy this to significantly reduce Claude API costs for your applications.",
+    "proposed_post": "Claude Code skill cuts token usage 65% with caveman prompts.\n\nJuliusBrussee/caveman integrates as a Claude Code skill, license MIT, 866 stars today.\n\nFirst public skill to shrink prompts via minimalist syntax. Replaces verbose context with UX-optimized tokens for Claude Code sess",
     "source_angle": "GitHub Trending: Claude Code skill for token cost optimization",
     "source_item": {
       "title": "JuliusBrussee/caveman — 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman",
@@ -4722,11 +4722,23 @@
         "cluster_score": 35
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/e420221e0ebd.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, schau dir das mal an. JuliusBrussee/caveman ist gerade auf GitHub am Trenden. Das Tool reduziert die Token-Nutzung von Claude um 65%, indem es Prompts im \"Caveman\"-Stil formuliert.\n\nFür Builder ist das direkt relevant, weil es die Kosten für LLM-Interaktionen massiv senken kann. Weniger Tokens bedeutet schnellere Ausführung und billigere API-Calls, gerade bei intensiver Nutzung. Das ist ein cleverer Hack, um die Effizienz von Claude-Modellen zu pushen.",
-    "chloe_note": "Hey, *JuliusBrussee/caveman — 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen GitHub repo with Claude skill for 65% token reduction. Clear, actionable cost savings for builders.Cluster context: 1 sources, engagement 866. Common terms: when, many, caveman, cuts. Score aktuell: 90. Link: https://github.com/JuliusBrussee/caveman"
+    "chloe_note": "Hey, *JuliusBrussee/caveman — 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen GitHub repo with Claude skill for 65% token reduction. Clear, actionable cost savings for builders.Cluster context: 1 sources, engagement 866. Common terms: when, many, caveman, cuts. Score aktuell: 90. Link: https://github.com/JuliusBrussee/caveman",
+    "sarah_package": {
+      "title": "Claude Code skill cuts token usage 65% with caveman prompts.",
+      "subtitle": "JuliusBrussee/caveman integrates as a Claude Code skill, license MIT, 866 stars today.",
+      "description": "First public skill to shrink prompts via minimalist syntax. Replaces verbose context with UX-optimized tokens for Claude Code sessions.",
+      "hashtags": [
+        "#ClaudeCode",
+        "#JuliusBrussee",
+        "#TokenReduction"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-02-juliusbrussee-caveman-why-use-many-token-when-few-token-do-trick-claude-code-skill-that-cuts-65-of-tokens-by-talking-like-caveman-e420221e0ebd.md",
+    "published_at": "2026-07-03T04:46:20.749720Z"
   },
   {
     "id": "126969009032",

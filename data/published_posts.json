@@ -1244,5 +1244,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-02-claude-real-video-any-llm-can-watch-a-video-126969009032.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mppb3lo2zc2l",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mppb3lo2zc2l"
+  },
+  {
+    "id": "e420221e0ebd",
+    "published_at": "2026-07-03T04:46:20.749720Z",
+    "platform": "bluesky",
+    "post": "Claude Code skill cuts token usage 65% with caveman prompts.\n\nJuliusBrussee/caveman integrates as a Claude Code skill, license MIT, 866 stars today.\n\nFirst public skill to shrink prompts via minimalist syntax. Replaces verbose context with UX-optimized tokens for Claude Code sess",
+    "source_link": "https://github.com/JuliusBrussee/caveman",
+    "source_title": "JuliusBrussee/caveman — 🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman",
+    "score": 90,
+    "reason": "GitHub repo with Claude skill for 65% token reduction. Clear, actionable cost savings for builders.",
+    "card_path": "generated/cards/e420221e0ebd.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-02-juliusbrussee-caveman-why-use-many-token-when-few-token-do-trick-claude-code-skill-that-cuts-65-of-tokens-by-talking-like-caveman-e420221e0ebd.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mppqhqnh7d2l",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mppqhqnh7d2l"
   }
 ]
