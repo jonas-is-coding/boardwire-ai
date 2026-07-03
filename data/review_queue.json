@@ -4946,5 +4946,48 @@
     },
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-03-safishamsi-graphify-ai-coding-assistant-skill-claude-code-codex-opencode-cursor-gemini-cli-and-more-turn-any-folder-of-code-sql-schemas-r-scripts-shell-scripts-docs-papers-images-or-v-2da6f42530f9.md",
     "published_at": "2026-07-03T15:14:18.408011Z"
+  },
+  {
+    "id": "8bf4365aa1a2",
+    "status": "approved",
+    "created_at": "2026-07-03T17:12:57.887603Z",
+    "score": 90,
+    "reason": "Direct release of Claude Code v2.1.200 with concrete changes to default permission mode and dialog behavior.",
+    "proposed_post": "Claude Code v2.1.200 sets default permission mode to 'Manual' in CLI, VS Code, and JetBrains. Builders now get explicit approval for actions, improving security and control.",
+    "source_angle": "Claude Code v2.1.200 release: default permission mode now 'Manual'.",
+    "source_item": {
+      "title": "Claude Code v2.1.200",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.200",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 30,
+      "summary": "<h2>What's changed</h2>\n<ul>\n<li>Changed <code>AskUserQuestion</code> dialogs to no longer auto-continue by default; opt into an idle timeout via <code>/config</code></li>\n<li>Changed the \"default\" permission mode to \"Manual\" across the CLI, <code>--help</code>, VS Code, and JetBrains; <code>--permission-mode manual</code> and <code>\"defaultMode\": \"manual\"</code> are accepted alongside <code>default</code></li>\n<li>Fixed a crash at startup when <code>disabledMcpServers</code> or <code>enabledMcpServers</code> in <code>.claude.json</code> is set to a non-array value</li>\n<li>Fixed background sessions silently stopping mid-turn after sleep/wake or when reopening a stalled session</li>\n<li>Fixed background sessions re-running a turn cancelled with Esc after a stall respawn</li>\n<li>Fixed background agents never starting again after a crash left a stale <code>daemon.lock</code> whose PID the OS reused</li>\n<li>Fixed background-agent daemon handover so a reinstalled older build can no longer take over the daemon; build recency is now judged by the version's embedded build timestamp</li>\n<li>Fixed background-agent roster issues: transient corruption permanently disabling orphan cleanup, older binaries not preserving fields written by newer versions, and socket auth tokens being stripped during daemon restarts</li>\n<li>Fixed subagents cut off by a rate limit before producing any text output returning an empty result instead of failing cleanly</li>\n<li>Fixed control bytes from background-agent output reaching the terminal in the agent view</li>\n<li>Fixed <code>claude agents --plugin-dir &lt;dir&gt;</code> not showing the plugin's agents and skills in the agent view when the flag is placed after <code>agents</code></li>\n<li>Fixed project-scoped plugins not loading correctly from git worktrees of the same repository</li>\n<li>Fixed <code>/mcp</code> server list not tracking focus for screen readers and magnifiers</li>\n<li>Fixed voice dictation showing a misleading \"Voice connection failed\" message when a recording captures no audio</li>\n<li>Fixed rendering flicker under tmux 3.4+ by enabling synchronized terminal output</li>\n<li>Improved screen-reader output: decorative glyphs are now hidden, transcript symbols read as short labels, and nested tables read as <code>Header: value.</code> lines</li>\n<li>Improved the install script to explain when installation is killed by the system running out of memory</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: preserving, auto-continue, take, message, lines.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Claude Code Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "preserving",
+          "auto-continue",
+          "take",
+          "message",
+          "lines",
+          "enabledmcpservers",
+          "reaching",
+          "running"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: preserving, auto-continue, take, message. Lead: Claude Code v2.1.200",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Hey Chloe,\n\nHab hier einen Release-Log für Claude Code v2.1.200. Das ist interessant, weil sie das Auto-Continue bei User-Fragen rausgenommen haben – jetzt muss man ein Idle-Timeout konfigurieren. Für Devs bedeutet das mehr Kontrolle über den Flow und weniger unerwartete Unterbrechungen, was bei komplexeren Code-Reviews echt nützlich sein kann. Außerdem ist der Standard-Permission-Modus jetzt \"Manual\", was für viele ein Plus an Sicherheit und Transparenz ist, wenn sie Claude in ihre IDEs integrieren.",
+    "chloe_note": "Hey, *Claude Code v2.1.200* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Direct release of Claude Code v2.1.200 with concrete changes to default permission mode and dialog behavior.Cluster context: 1 sources, engagement 0. Common terms: preserving, auto-continue, take, message. Score aktuell: 90. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.200"
   }
 ]
