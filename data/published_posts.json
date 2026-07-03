@@ -1286,5 +1286,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-03-safishamsi-graphify-ai-coding-assistant-skill-claude-code-codex-opencode-cursor-gemini-cli-and-more-turn-any-folder-of-code-sql-schemas-r-scripts-shell-scripts-docs-papers-images-or-v-2da6f42530f9.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpqtklcp3o2x",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpqtklcp3o2x"
+  },
+  {
+    "id": "0f5e84e618bc",
+    "published_at": "2026-07-03T18:16:04.401959Z",
+    "platform": "bluesky",
+    "post": "Safari MCP server turns WebKit into a programmable engine.\n\nWebKit ships the Safari MCP server for direct browser engine control and local web AI workflows.\n\nMCP server exposes WebKit internals via standard tools. Apache 2.0. Available today on WebKit.org.\n\n📖 Read the full articl",
+    "source_link": "https://webkit.org/blog/18136/introducing-the-safari-mcp-server-for-web-developers/",
+    "source_title": "The Safari MCP server for web developers",
+    "score": 90,
+    "reason": "New MCP server from WebKit provides a concrete platform for web AI development, shipping today.",
+    "card_path": "generated/cards/0f5e84e618bc.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-03-the-safari-mcp-server-for-web-developers-0f5e84e618bc.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpr5potqvh2z",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpr5potqvh2z"
   }
 ]

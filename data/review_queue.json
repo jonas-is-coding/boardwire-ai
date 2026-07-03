@@ -4851,11 +4851,11 @@
   },
   {
     "id": "0f5e84e618bc",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-03T08:48:29.101994Z",
     "score": 90,
     "reason": "New MCP server from WebKit provides a concrete platform for web AI development, shipping today.",
-    "proposed_post": "WebKit launched the Safari MCP server for web developers. This provides a new compute environment for web-based ML, enabling on-device AI capabilities for web apps or new browser-integrated AI features.",
+    "proposed_post": "Safari MCP server turns WebKit into a programmable engine.\n\nWebKit ships the Safari MCP server for direct browser engine control and local web AI workflows.\n\nMCP server exposes WebKit internals via standard tools. Apache 2.0. Available today on WebKit.org.\n\n📖 Read the full articl",
     "source_angle": "WebKit introduces new server for web-based ML.",
     "source_item": {
       "title": "The Safari MCP server for web developers",
@@ -4886,11 +4886,23 @@
         "cluster_score": 0
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/0f5e84e618bc.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, check this out: Safari MCP Server. Das ist ein Game-Changer für jeden, der Webkit-Bugs reproduzieren oder fixen muss. Statt sich durch komplexe Build-Setups zu quälen, können Devs jetzt einfach eine lokale Instanz laufen lassen und direkt mit der Safari-Engine interagieren. Das spart Stunden, wenn nicht Tage, beim Debuggen von Rendering- oder JS-Problemen.",
-    "chloe_note": "Hey, *The Safari MCP server for web developers* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New MCP server from WebKit provides a concrete platform for web AI development, shipping today.Cluster context: 1 sources, engagement 84. Common terms: points, coloneltcb, original, server. Score aktuell: 90. Link: https://webkit.org/blog/18136/introducing-the-safari-mcp-server-for-web-developers/"
+    "chloe_note": "Hey, *The Safari MCP server for web developers* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New MCP server from WebKit provides a concrete platform for web AI development, shipping today.Cluster context: 1 sources, engagement 84. Common terms: points, coloneltcb, original, server. Score aktuell: 90. Link: https://webkit.org/blog/18136/introducing-the-safari-mcp-server-for-web-developers/",
+    "sarah_package": {
+      "title": "Safari MCP server turns WebKit into a programmable engine.",
+      "subtitle": "WebKit ships the Safari MCP server for direct browser engine control and local web AI workflows.",
+      "description": "MCP server exposes WebKit internals via standard tools. Apache 2.0. Available today on WebKit.org.",
+      "hashtags": [
+        "#WebKit",
+        "#Safari",
+        "#MCP"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-03-the-safari-mcp-server-for-web-developers-0f5e84e618bc.md",
+    "published_at": "2026-07-03T18:16:04.401959Z"
   },
   {
     "id": "2da6f42530f9",
