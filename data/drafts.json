@@ -12598,5 +12598,33 @@
     "engagement_score": 65.0,
     "local_newsworthiness_score": 0,
     "created_at": "2026-07-02T22:57:04.275331Z"
+  },
+  {
+    "title": "Claude Code v2.1.199",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.199",
+    "source": "Claude Code Releases",
+    "score": 90,
+    "should_post": true,
+    "reason": "Direct SDK release with concrete bug fixes and feature enhancements for agent development. Passes Ships Test.",
+    "post_text": "Claude Code v2.1.199 enables stacking up to 5 slash-skills and improves error handling for SSL, streaming, and subagents. Builders can now create more complex, resilient agents and debug network issues faster.",
+    "source_angle": "Claude Code SDK update for agent reliability and multi-skill invocation",
+    "source_tier": 1,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 30,
+    "created_at": "2026-07-03T01:54:21.689981Z"
+  },
+  {
+    "title": "Ask HN: Why are so many \"AI evangelists\" posting such insufferable content?",
+    "link": "https://news.ycombinator.com/item?id=48765450",
+    "source": "HackerNews",
+    "score": 2,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 45.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-03T01:54:22.887232Z"
   }
 ]

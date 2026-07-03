@@ -4782,5 +4782,48 @@
     },
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-02-claude-real-video-any-llm-can-watch-a-video-126969009032.md",
     "published_at": "2026-07-03T00:11:05.552751Z"
+  },
+  {
+    "id": "0f0f02aaa063",
+    "status": "approved",
+    "created_at": "2026-07-03T01:54:21.689981Z",
+    "score": 90,
+    "reason": "Direct SDK release with concrete bug fixes and feature enhancements for agent development. Passes Ships Test.",
+    "proposed_post": "Claude Code v2.1.199 enables stacking up to 5 slash-skills and improves error handling for SSL, streaming, and subagents. Builders can now create more complex, resilient agents and debug network issues faster.",
+    "source_angle": "Claude Code SDK update for agent reliability and multi-skill invocation",
+    "source_item": {
+      "title": "Claude Code v2.1.199",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.199",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 30,
+      "summary": "<h2>What's changed</h2>\n<ul>\n<li>Stacked slash-skill invocations like <code>/skill-a /skill-b do XYZ</code> now load all leading skills (up to 5), not just the first</li>\n<li>Fixed SSL certificate errors (TLS-inspecting proxies, missing <code>NODE_EXTRA_CA_CERTS</code>, expired certs) burning retries before showing actionable guidance — they now fail immediately with the fix hint</li>\n<li>Fixed streaming responses being discarded when the API emits a mid-stream overloaded/server error after partial output — the partial is now kept with an incomplete-response notice</li>\n<li>Fixed subagents cut off by a rate limit or server error silently failing instead of returning their partial work to the parent</li>\n<li>Fixed subagents reporting API errors (e.g. usage limit reached) as successful results — the error is now reported to the parent agent</li>\n<li>Fixed the background-agent daemon on Linux killing itself and every running agent every ~50 seconds after an unclean shutdown left a corrupted worker record</li>\n<li>Fixed background agents failing to cold-start over SSH on macOS with \"Could not switch to audit session\" (regression in 2.1.196)</li>\n<li>Fixed <code>claude stop</code> being silently undone when it raced a background-agent respawn — the respawn now honors the stop</li>\n<li>Fixed background job progress indicators stalling for minutes while the job ran long commands</li>\n<li>Fixed background sessions on memory-starved machines showing a generic error — they now indicate low memory and suggest freeing resources</li>\n<li>Fixed remote sessions briefly flapping between Working and Idle in the agent view when a background agent completes</li>\n<li>Fixed idle subagents vanishing from the agent panel while other subagents were still working; surplus idle agents now collapse into an expandable summary row</li>\n<li>Fixed typing <code>/model</code> or <code>/fast</code> while viewing a subagent silently opening the lead's model picker — a notice now explains the command applies to the lead</li>\n<li>Fixed <code>SessionStart</code>, <code>Setup</code>, and <code>SubagentStart</code> hooks silently hiding stderr when exiting with code 2 — the error is now shown in the transcript</li>\n<li>Fixed <code>claude --dangerously-skip-permissions daemon &lt;subcommand&gt;</code> being treated as a chat prompt instead of running the subcommand</li>\n<li>Fixed <code>SendMessage</code> silently misrouting when a re-spawned agent reuses a previous agent's name — the tool now detects the mismatch and asks the caller to retarget</li>\n<li>Fixed opening or resuming a session with no new messages needlessly growing the transcript file</li>\n<li>Fixed backgrounding a session with <code>←</code> or <code>/background</code> dropping its <code>/color</code> from the agent view row</li>\n<li>Fixed resetting a corrupted config file from the startup recovery dialog destroying it unrecoverably — it now backs up the file first</li>\n<li>Fixed Claude in Chrome repeatedly opening the reconnect page when sessions run from different builds or config directories</li>\n<li>Fixed plan mode not prompting for state-changing browser tool calls; read-only <code>browser_batch</code> calls are now correctly auto-allowed</li>\n<li>Transient server rate-limit errors (429s unrelated to your usage limit) are now retried automatically with backoff for subscribers instead of failing the turn</li>\n<li><code>CLAUDE_CODE_RETRY_WATCHDOG</code> now raises the default retry count for non-capacity transient errors to 300 and lifts the cap of 15 on <code>CLAUDE_CODE_MAX_RETRIES</code></li>\n<li><code>claude agents</code> session rows now show pull-request links as bare <code>#N</code> without the redundant \"PR\" label</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: sessions, /ul, dropping, claude, background-agent.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Claude Code Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "sessions",
+          "/ul",
+          "dropping",
+          "claude",
+          "background-agent",
+          "running",
+          "treated",
+          "recovery"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: sessions, /ul, dropping, claude. Lead: Claude Code v2.1.199",
+        "alternative_titles": [],
+        "cluster_score": 15
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Hey Chloe,\n\nDas Claude Code Update ist relevant. Die Stacked Slash-Skill Invocation mit bis zu fünf Skills auf einmal ist ein echtes Produktivitäts-Upgrade für Devs, die mit Claude arbeiten. Und die SSL-Fixes sind kritisch – das nimmt den Frust raus, wenn man sich mit Proxies oder Zertifikaten rumschlägt und Retrieval-Aufgaben scheitern. Entwickler können jetzt effizienter mit Claude interagieren und sich auf den Code konzentrieren, statt auf Konfigurationsprobleme.",
+    "chloe_note": "Kurzes Update: *Claude Code v2.1.199* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Direct SDK release with concrete bug fixes and feature enhancements for agent development. Passes Ships Test.Cluster context: 1 sources, engagement 0. Common terms: sessions, /ul, dropping, claude. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.199"
   }
 ]
