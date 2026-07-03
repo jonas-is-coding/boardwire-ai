@@ -4797,11 +4797,11 @@
   },
   {
     "id": "0f0f02aaa063",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-03T01:54:21.689981Z",
     "score": 90,
     "reason": "Direct SDK release with concrete bug fixes and feature enhancements for agent development. Passes Ships Test.",
-    "proposed_post": "Claude Code v2.1.199 enables stacking up to 5 slash-skills and improves error handling for SSL, streaming, and subagents. Builders can now create more complex, resilient agents and debug network issues faster.",
+    "proposed_post": "Claude Code ships slash-skill stacking and SSL fixes for agents.\n\nv2.1.199 loads up to five slash-skills in one command, fixes SSL proxies and retries. MIT license.\n\nDirect SDK release adds stacked skill invocations and immediate SSL error guidance. GitHub release notes link.\n\n📖 ",
     "source_angle": "Claude Code SDK update for agent reliability and multi-skill invocation",
     "source_item": {
       "title": "Claude Code v2.1.199",
@@ -4832,11 +4832,22 @@
         "cluster_score": 15
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/0f0f02aaa063.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Hey Chloe,\n\nDas Claude Code Update ist relevant. Die Stacked Slash-Skill Invocation mit bis zu fünf Skills auf einmal ist ein echtes Produktivitäts-Upgrade für Devs, die mit Claude arbeiten. Und die SSL-Fixes sind kritisch – das nimmt den Frust raus, wenn man sich mit Proxies oder Zertifikaten rumschlägt und Retrieval-Aufgaben scheitern. Entwickler können jetzt effizienter mit Claude interagieren und sich auf den Code konzentrieren, statt auf Konfigurationsprobleme.",
-    "chloe_note": "Kurzes Update: *Claude Code v2.1.199* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Direct SDK release with concrete bug fixes and feature enhancements for agent development. Passes Ships Test.Cluster context: 1 sources, engagement 0. Common terms: sessions, /ul, dropping, claude. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.199"
+    "chloe_note": "Kurzes Update: *Claude Code v2.1.199* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Direct SDK release with concrete bug fixes and feature enhancements for agent development. Passes Ships Test.Cluster context: 1 sources, engagement 0. Common terms: sessions, /ul, dropping, claude. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.199",
+    "sarah_package": {
+      "title": "Claude Code ships slash-skill stacking and SSL fixes for agents.",
+      "subtitle": "v2.1.199 loads up to five slash-skills in one command, fixes SSL proxies and retries. MIT license.",
+      "description": "Direct SDK release adds stacked skill invocations and immediate SSL error guidance. GitHub release notes link.",
+      "hashtags": [
+        "#ClaudeCode",
+        "#AgentSDK"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-03-claude-code-v2-1-199-0f0f02aaa063.md",
+    "published_at": "2026-07-03T11:36:39.143507Z"
   },
   {
     "id": "0f5e84e618bc",

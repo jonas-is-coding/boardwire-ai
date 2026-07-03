@@ -1258,5 +1258,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-02-juliusbrussee-caveman-why-use-many-token-when-few-token-do-trick-claude-code-skill-that-cuts-65-of-tokens-by-talking-like-caveman-e420221e0ebd.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mppqhqnh7d2l",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mppqhqnh7d2l"
+  },
+  {
+    "id": "0f0f02aaa063",
+    "published_at": "2026-07-03T11:36:39.143507Z",
+    "platform": "bluesky",
+    "post": "Claude Code ships slash-skill stacking and SSL fixes for agents.\n\nv2.1.199 loads up to five slash-skills in one command, fixes SSL proxies and retries. MIT license.\n\nDirect SDK release adds stacked skill invocations and immediate SSL error guidance. GitHub release notes link.\n\n📖 ",
+    "source_link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.199",
+    "source_title": "Claude Code v2.1.199",
+    "score": 90,
+    "reason": "Direct SDK release with concrete bug fixes and feature enhancements for agent development. Passes Ships Test.",
+    "card_path": "generated/cards/0f0f02aaa063.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-03-claude-code-v2-1-199-0f0f02aaa063.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpqhfghzcg2e",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpqhfghzcg2e"
   }
 ]
