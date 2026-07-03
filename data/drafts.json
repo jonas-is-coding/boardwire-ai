@@ -12640,5 +12640,61 @@
     "engagement_score": 57.0,
     "local_newsworthiness_score": 0,
     "created_at": "2026-07-03T05:44:00.622528Z"
+  },
+  {
+    "title": "The Safari MCP server for web developers",
+    "link": "https://webkit.org/blog/18136/introducing-the-safari-mcp-server-for-web-developers/",
+    "source": "HackerNews",
+    "score": 90,
+    "should_post": true,
+    "reason": "New MCP server from WebKit provides a concrete platform for web AI development, shipping today.",
+    "post_text": "WebKit launched the Safari MCP server for web developers. This provides a new compute environment for web-based ML, enabling on-device AI capabilities for web apps or new browser-integrated AI features.",
+    "source_angle": "WebKit introduces new server for web-based ML.",
+    "source_tier": 3,
+    "engagement_score": 84.5,
+    "local_newsworthiness_score": 20,
+    "created_at": "2026-07-03T08:48:29.101994Z"
+  },
+  {
+    "title": "14× faster embeddings: how we rebuilt the ONNX path in Manticore",
+    "link": "https://manticoresearch.com/blog/onnx-embeddings-speedup/",
+    "source": "HackerNews",
+    "score": 4,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 47.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-03T08:48:30.117450Z"
+  },
+  {
+    "title": "Show HN: ctx – Search the coding agent history already on your machine",
+    "link": "https://github.com/ctxrs/ctx",
+    "source": "HackerNews",
+    "score": 4,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 37.5,
+    "local_newsworthiness_score": 30,
+    "created_at": "2026-07-03T08:48:30.117663Z"
+  },
+  {
+    "title": "Ask HN: Is anyone experimenting with different ways of using LLMs for coding?",
+    "link": "https://news.ycombinator.com/item?id=48771515",
+    "source": "HackerNews",
+    "score": 4,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 56.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-03T08:48:30.117819Z"
   }
 ]
