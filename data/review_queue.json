@@ -4894,11 +4894,11 @@
   },
   {
     "id": "2da6f42530f9",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-03T12:00:38.872436Z",
     "score": 105,
     "reason": "local newsworthiness fallback",
-    "proposed_post": "Codegraph indexes code knowledge for Claude Code and Codex.\n\nTurns folders into queryable graphs with +937 stars, SQL schemas and shell scripts support.\n\nGraphify skill integrates with Gemini CLI, OpenCode, and Cursor, mapping app code and database schema into one graph.\n\n#Codex ",
+    "proposed_post": "Codegraph indexes code knowledge for Claude Code and Codex.\n\nTurns folders into queryable graphs with +937 stars, SQL schemas and shell scripts support.\n\nGraphify skill integrates with Gemini CLI, OpenCode, and Cursor, mapping app code and database schema into one graph, with sup",
     "source_angle": "Local high-score + Sarah/OpenRouter fallback",
     "source_item": {
       "title": "safishamsi/graphify — AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, or v",
@@ -4929,10 +4929,22 @@
         "cluster_score": 55
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/2da6f42530f9.png",
     "is_llm_mode": false,
     "breaking": true,
     "claire_note": "Aus *GitHub Trending* ist ein starker Kandidat reingekommen: *safishamsi/graphify — AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, or v*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 105_",
-    "chloe_note": "Hey, *safishamsi/graphify — AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, or v* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen local newsworthiness fallbackCluster context: 1 sources, engagement 937. Common terms: sql, claude, shell, database. Score aktuell: 105. Link: https://github.com/safishamsi/graphify"
+    "chloe_note": "Hey, *safishamsi/graphify — AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, or v* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen local newsworthiness fallbackCluster context: 1 sources, engagement 937. Common terms: sql, claude, shell, database. Score aktuell: 105. Link: https://github.com/safishamsi/graphify",
+    "sarah_package": {
+      "title": "Codegraph indexes code knowledge for Claude Code and Codex.",
+      "subtitle": "Turns folders into queryable graphs with +937 stars, SQL schemas and shell scripts support.",
+      "description": "Graphify skill integrates with Gemini CLI, OpenCode, and Cursor, mapping app code and database schema into one graph, with support for R scr",
+      "hashtags": [
+        "#Codex",
+        "#GeminiCLI",
+        "#Graphify"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-03-safishamsi-graphify-ai-coding-assistant-skill-claude-code-codex-opencode-cursor-gemini-cli-and-more-turn-any-folder-of-code-sql-schemas-r-scripts-shell-scripts-docs-papers-images-or-v-2da6f42530f9.md",
+    "published_at": "2026-07-03T15:14:18.408011Z"
   }
 ]

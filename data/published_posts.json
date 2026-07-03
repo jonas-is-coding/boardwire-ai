@@ -1272,5 +1272,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-03-claude-code-v2-1-199-0f0f02aaa063.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpqhfghzcg2e",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpqhfghzcg2e"
+  },
+  {
+    "id": "2da6f42530f9",
+    "published_at": "2026-07-03T15:14:18.408011Z",
+    "platform": "bluesky",
+    "post": "Codegraph indexes code knowledge for Claude Code and Codex.\n\nTurns folders into queryable graphs with +937 stars, SQL schemas and shell scripts support.\n\nGraphify skill integrates with Gemini CLI, OpenCode, and Cursor, mapping app code and database schema into one graph, with sup",
+    "source_link": "https://github.com/safishamsi/graphify",
+    "source_title": "safishamsi/graphify — AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, or v",
+    "score": 105,
+    "reason": "local newsworthiness fallback",
+    "card_path": "generated/cards/2da6f42530f9.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-03-safishamsi-graphify-ai-coding-assistant-skill-claude-code-codex-opencode-cursor-gemini-cli-and-more-turn-any-folder-of-code-sql-schemas-r-scripts-shell-scripts-docs-papers-images-or-v-2da6f42530f9.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpqtklcp3o2x",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpqtklcp3o2x"
   }
 ]
