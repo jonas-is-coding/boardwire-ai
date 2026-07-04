@@ -5071,11 +5071,11 @@
   },
   {
     "id": "972ba58355e7",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-03T22:55:04.600757Z",
     "score": 65,
     "reason": "New user-facing AI feature shipped in Kagi search. Direct control over AI features offers insight into user preferences.",
-    "proposed_post": "Kagi's latest changelog includes an 'AI toggle' for its search interface. This allows users to enable/disable AI-powered search features, providing direct user control over AI integration in information retrieval. Builders can observe user adoption for AI feature preferences.",
+    "proposed_post": "Kagi ships user-controlled AI switch in search.\n\nHeads, tails, and an AI toggle arrive in Kagi Changelog (July 2), 48 engagement on HackerNews.\n\nUsers can now toggle AI-powered search features on/off in a production-grade search engine. No install required.\n\n📖 Read the full artic",
     "source_angle": "Kagi's new AI toggle for user control in search.",
     "source_item": {
       "title": "Kagi Changelog (July 2): Heads, tails, and an AI toggle",
@@ -5106,11 +5106,22 @@
         "cluster_score": 0
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/972ba58355e7.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Hey Chloe,\n\nKagi hat einen AI-Toggle in ihren Changelog gepackt. Das ist für Builder interessant, weil es zeigt, wie User-Kontrolle über AI-Features in einem Produkt umgesetzt wird. Man kann direkt sehen, wie ein etablierter Player mit der Integration von AI umgeht und den Nutzern die Wahl lässt. Könnte gute Insights für jeden geben, der gerade selbst AI-Features entwickelt und über UX nachdenkt.",
-    "chloe_note": "*Kagi Changelog (July 2): Heads, tails, and an AI toggle* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New user-facing AI feature shipped in Kagi search. Direct control over AI features offers insight into user preferences.Cluster context: 1 sources, engagement 48. Common terms: comments, tails, mroche, original. Bewertung: 65. Quelle: https://kagi.com/changelog#10959"
+    "chloe_note": "*Kagi Changelog (July 2): Heads, tails, and an AI toggle* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New user-facing AI feature shipped in Kagi search. Direct control over AI features offers insight into user preferences.Cluster context: 1 sources, engagement 48. Common terms: comments, tails, mroche, original. Bewertung: 65. Quelle: https://kagi.com/changelog#10959",
+    "sarah_package": {
+      "title": "Kagi ships user-controlled AI switch in search.",
+      "subtitle": "Heads, tails, and an AI toggle arrive in Kagi Changelog (July 2), 48 engagement on HackerNews.",
+      "description": "Users can now toggle AI-powered search features on/off in a production-grade search engine. No install required.",
+      "hashtags": [
+        "#Kagi",
+        "#UX"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-03-kagi-changelog-july-2-heads-tails-and-an-ai-toggle-972ba58355e7.md",
+    "published_at": "2026-07-04T12:12:24.000067Z"
   },
   {
     "id": "326185531562",

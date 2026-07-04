@@ -1342,5 +1342,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-04-claude-code-v2-1-201-326185531562.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpsajgtsoj2s",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpsajgtsoj2s"
+  },
+  {
+    "id": "972ba58355e7",
+    "published_at": "2026-07-04T12:12:24.000067Z",
+    "platform": "bluesky",
+    "post": "Kagi ships user-controlled AI switch in search.\n\nHeads, tails, and an AI toggle arrive in Kagi Changelog (July 2), 48 engagement on HackerNews.\n\nUsers can now toggle AI-powered search features on/off in a production-grade search engine. No install required.\n\n📖 Read the full artic",
+    "source_link": "https://kagi.com/changelog#10959",
+    "source_title": "Kagi Changelog (July 2): Heads, tails, and an AI toggle",
+    "score": 65,
+    "reason": "New user-facing AI feature shipped in Kagi search. Direct control over AI features offers insight into user preferences.",
+    "card_path": "generated/cards/972ba58355e7.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-03-kagi-changelog-july-2-heads-tails-and-an-ai-toggle-972ba58355e7.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpszuaycho2b",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpszuaycho2b"
   }
 ]
