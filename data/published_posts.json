@@ -1314,5 +1314,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-03-claude-code-v2-1-200-8bf4365aa1a2.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mprkpviyr22j",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mprkpviyr22j"
+  },
+  {
+    "id": "1459cbf6e302",
+    "published_at": "2026-07-04T00:09:34.966993Z",
+    "platform": "bluesky",
+    "post": "MCP debugging just got wireshark-level visibility.\n\nMcpsnoop ships a transparent proxy and live TUI for MCP traffic, Apache-2.0 on GitHub.\n\nFirst open-source tool to intercept, log, and replay MCP traffic without client modification. Built by kerlenton.\n\n📖 Read the full article: ",
+    "source_link": "https://github.com/kerlenton/mcpsnoop",
+    "source_title": "Show HN: Mcpsnoop – Wireshark for MCP (transparent proxy and live TUI)",
+    "score": 70,
+    "reason": "New open-source tool for debugging MCP traffic. Ships today, but low community engagement.",
+    "card_path": "generated/cards/1459cbf6e302.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-03-show-hn-mcpsnoop-wireshark-for-mcp-transparent-proxy-and-live-tui-1459cbf6e302.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mprrhrev7q2e",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mprrhrev7q2e"
   }
 ]
