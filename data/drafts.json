@@ -13172,5 +13172,33 @@
     "engagement_score": 39.5,
     "local_newsworthiness_score": 0,
     "created_at": "2026-07-04T11:17:24.398962Z"
+  },
+  {
+    "title": "Potential session/cache leakage between workspace instances or consumer accounts",
+    "link": "https://github.com/anthropics/claude-code/issues/74066",
+    "source": "HackerNews",
+    "score": 20,
+    "should_post": false,
+    "reason": "Fails Ships Test: A bug report, not a new release, tool, or capability. No artifact to download, use, or deploy.",
+    "post_text": "No post generated",
+    "source_angle": "Claude Code potential security vulnerability reported on GitHub.",
+    "source_tier": 3,
+    "engagement_score": 49.5,
+    "local_newsworthiness_score": 30,
+    "created_at": "2026-07-04T14:58:07.676249Z"
+  },
+  {
+    "title": "2026 Unslop AI-Written Fiction Contest Results",
+    "link": "https://www.hyperstitionai.com/unslop-results",
+    "source": "HackerNews",
+    "score": 20,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "No source angle provided",
+    "source_tier": 3,
+    "engagement_score": 88.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-04T14:58:14.154233Z"
   }
 ]
