@@ -5166,5 +5166,48 @@
     },
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-04-claude-code-v2-1-201-326185531562.md",
     "published_at": "2026-07-04T04:38:57.908214Z"
+  },
+  {
+    "id": "e7928f8dc3eb",
+    "status": "approved",
+    "created_at": "2026-07-04T11:17:23.092454Z",
+    "score": 92,
+    "reason": "Open-source Rust tool for local, fast AI meeting transcription and Ollama summarization. Ships today, clear builder value.",
+    "proposed_post": "Meetily, a Rust-based open-source tool, offers 4x faster local Parakeet/Whisper transcription & Ollama summarization. Builders can deploy a privacy-first, fully local AI meeting assistant today.",
+    "source_angle": "Open-source Rust tool for local, fast AI meeting transcription & summarization.",
+    "source_item": {
+      "title": "Zackriya-Solutions/meetily — Privacy first, AI meeting assistant with 4x faster Parakeet/Whisper live transcription, speaker diarization, and Ollama summarization built on Rust. 100% local processing.",
+      "source": "GitHub Trending",
+      "link": "https://github.com/Zackriya-Solutions/meetily",
+      "source_tier": 2,
+      "engagement_score": 607.0,
+      "local_newsworthiness_score": 20,
+      "summary": "Trending on GitHub today: +607 stars. Privacy first, AI meeting assistant with 4x faster Parakeet/Whisper live transcription, speaker diarization, and Ollama summarization built on Rust. 100% local processing. no cloud required. Meetily (Meetly Ai -  https://meetily.ai ) is the #1 Self-hosted, Open-source Ai meeting note taker for macOS & Windows.\n[Cluster context: 1 sources, engagement 607, common terms: faster, taker, cloud, privacy, assistant.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 607,
+        "common_terms": [
+          "faster",
+          "taker",
+          "cloud",
+          "privacy",
+          "assistant",
+          "+607",
+          "transcription",
+          "trending"
+        ],
+        "cluster_summary": "1 sources, engagement 607. Common terms: faster, taker, cloud, privacy. Lead: Zackriya-Solutions/meetily — Privacy first, AI meeting assistant with 4x faster Parakeet/Whisper live transcription, spe",
+        "alternative_titles": [],
+        "cluster_score": 55
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": true,
+    "claire_note": "Chloe, schau dir mal 'Zackriya-Solutions/meetily' an. Das Ding ist auf GitHub am Trenden und sieht nach einem echten Game-Changer aus für alle, die AI-Meeting-Assistenten *ohne* Cloud-Zwang bauen wollen. \n\nDer Clou ist die 100% lokale Verarbeitung mit Parakeet/Whisper für Transkription und Ollama für Summaries – alles in Rust. Entwickler können hier sehen, wie man performante, privacy-fokussierte AI-Lösungen komplett on-premise umsetzt. Das ist direkt anwendbar für interne Tools oder Produkte, die sensible Daten verarbeiten.",
+    "chloe_note": "*Zackriya-Solutions/meetily — Privacy first, AI meeting assistant with 4x faster Parakeet/Whisper live transcription, speaker diarization, and Ollama summarization built on Rust. 100% local processing.* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Open-source Rust tool for local, fast AI meeting transcription and Ollama summarization. Ships today, clear builder value.Cluster context: 1 sources, engagement 607. Common terms: faster, taker, cloud, privacy. Bewertung: 92. Quelle: https://github.com/Zackriya-Solutions/meetily"
   }
 ]
