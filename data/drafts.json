@@ -13046,5 +13046,47 @@
     "engagement_score": 48.0,
     "local_newsworthiness_score": 0,
     "created_at": "2026-07-04T01:53:53.341383Z"
+  },
+  {
+    "title": "Agentic coding notes from Galapagos Island",
+    "link": "https://danluu.com/ai-coding/#appendix-agentic-loops-and-writing-this-post",
+    "source": "HackerNews",
+    "score": 20,
+    "should_post": false,
+    "reason": "Blog post/notes, not a release, API, or deployable artifact. Fails Ships Test.",
+    "post_text": "No post generated",
+    "source_angle": "Dan Luu's observations on agentic coding workflows.",
+    "source_tier": 3,
+    "engagement_score": 82.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-04T08:23:29.752095Z"
+  },
+  {
+    "title": "Dispersion loss counteracts embedding condensation in small language models",
+    "link": "https://chenliu-1996.github.io/projects/LM-Dispersion/",
+    "source": "HackerNews",
+    "score": 30,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "No source angle provided",
+    "source_tier": 3,
+    "engagement_score": 38.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-04T08:23:36.326262Z"
+  },
+  {
+    "title": "AI First: How the Federal Government Is Prioritizing AI over People and Planet",
+    "link": "https://stopgreedbuildgreen.climateandcommunity.org/posts/ai-first",
+    "source": "HackerNews",
+    "score": 2,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 43.0,
+    "local_newsworthiness_score": 20,
+    "created_at": "2026-07-04T08:23:36.326870Z"
   }
 ]
