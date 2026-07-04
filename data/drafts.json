@@ -12990,5 +12990,61 @@
     "engagement_score": 48.5,
     "local_newsworthiness_score": 0,
     "created_at": "2026-07-03T22:55:04.600757Z"
+  },
+  {
+    "title": "Claude Code v2.1.201",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.201",
+    "source": "Claude Code Releases",
+    "score": 90,
+    "should_post": true,
+    "reason": "Direct product update to Claude Sonnet 5, immediately impacting API behavior and developer experience.",
+    "post_text": "Claude Sonnet 5 sessions no longer use mid-conversation system roles for harness reminders. This change should reduce internal prompt interference, potentially improving context efficiency and conversational flow for developers building with Sonnet 5.",
+    "source_angle": "Claude Sonnet 5 API behavior update",
+    "source_tier": 1,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 35,
+    "created_at": "2026-07-04T01:53:52.281310Z"
+  },
+  {
+    "title": "Leanstral 1.5: Proof Abundance for All",
+    "link": "https://mistral.ai/news/leanstral-1-5/",
+    "source": "HackerNews",
+    "score": 2,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 91.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-04T01:53:53.340984Z"
+  },
+  {
+    "title": "GLM5.2 on AMD MI355X at 2626 tok/s/node at over 2x lower cost than Blackwell",
+    "link": "https://www.wafer.ai/blog/glm52-amd",
+    "source": "HackerNews",
+    "score": 2,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 97.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-04T01:53:53.341199Z"
+  },
+  {
+    "title": "New serious vulnerabilities spiked around release of Claude Mythos Preview",
+    "link": "https://epoch.ai/data-insights/cve-severity-spike",
+    "source": "HackerNews",
+    "score": 9,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 48.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-04T01:53:53.341383Z"
   }
 ]
