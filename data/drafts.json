@@ -13200,5 +13200,19 @@
     "engagement_score": 88.0,
     "local_newsworthiness_score": 0,
     "created_at": "2026-07-04T14:58:14.154233Z"
+  },
+  {
+    "title": "AI has torched the market for junior programmers",
+    "link": "https://seldo.com/posts/ai-has-torched-the-market-for-junior-programmers/",
+    "source": "HackerNews",
+    "score": 10,
+    "should_post": false,
+    "reason": "Fails Ships Test. This is an opinion piece about market impact, not a release of code, API, or production result. No actionable item for builders.",
+    "post_text": "No post generated",
+    "source_angle": "Opinion on AI's impact on junior developer job market.",
+    "source_tier": 3,
+    "engagement_score": 100.0,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-07-04T20:43:04.090695Z"
   }
 ]
