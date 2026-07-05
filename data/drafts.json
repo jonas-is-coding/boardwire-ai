@@ -13270,5 +13270,19 @@
     "engagement_score": 0.0,
     "local_newsworthiness_score": 0,
     "created_at": "2026-07-05T02:00:49.586840Z"
+  },
+  {
+    "title": "My AI-built PHP engine in Rust passes 17% of PHP-src tests, renders WordPress",
+    "link": "https://ekinertac.com/blog/i-dont-know-rust-my-ai-is-rewriting-php-in-it/",
+    "source": "HackerNews",
+    "score": 85,
+    "should_post": true,
+    "reason": "AI-assisted project produced a demonstrable Rust PHP engine, passing tests and rendering WordPress. Clear artifact.",
+    "post_text": "An AI-built PHP engine in Rust passes 17% of PHP-src tests, renders WordPress. This shows AI's capability in complex language porting, informing future tooling for legacy code modernization.",
+    "source_angle": "AI-assisted code generation, language runtime, legacy system modernization",
+    "source_tier": 3,
+    "engagement_score": 58.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-05T06:59:39.890020Z"
   }
 ]

@@ -5275,5 +5275,48 @@
     },
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-05-servers-v2026-7-4-8dc5acc2852c.md",
     "published_at": "2026-07-05T05:00:45.357763Z"
+  },
+  {
+    "id": "3ac1fe62d51d",
+    "status": "approved",
+    "created_at": "2026-07-05T06:59:39.890020Z",
+    "score": 85,
+    "reason": "AI-assisted project produced a demonstrable Rust PHP engine, passing tests and rendering WordPress. Clear artifact.",
+    "proposed_post": "An AI-built PHP engine in Rust passes 17% of PHP-src tests, renders WordPress. This shows AI's capability in complex language porting, informing future tooling for legacy code modernization.",
+    "source_angle": "AI-assisted code generation, language runtime, legacy system modernization",
+    "source_item": {
+      "title": "My AI-built PHP engine in Rust passes 17% of PHP-src tests, renders WordPress",
+      "source": "HackerNews",
+      "link": "https://ekinertac.com/blog/i-dont-know-rust-my-ai-is-rewriting-php-in-it/",
+      "source_tier": 3,
+      "engagement_score": 58.0,
+      "local_newsworthiness_score": 0,
+      "summary": "32 points, 52 comments on Hacker News — submitted by ekinertac — original: https://ekinertac.com/blog/i-dont-know-rust-my-ai-is-rewriting-php-in-it/\n[Cluster context: 1 sources, engagement 58, common terms: hacker, php-src, renders, tests, engine.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 58,
+        "common_terms": [
+          "hacker",
+          "php-src",
+          "renders",
+          "tests",
+          "engine",
+          "original",
+          "wordpress",
+          "php"
+        ],
+        "cluster_summary": "1 sources, engagement 58. Common terms: hacker, php-src, renders, tests. Lead: My AI-built PHP engine in Rust passes 17% of PHP-src tests, renders WordPress",
+        "alternative_titles": [],
+        "cluster_score": 0
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, dieser Artikel hier ist cool: \"My AI-built PHP engine in Rust passes 17% of PHP-src tests, renders WordPress\".\n\nEin Dev hat seine KI genutzt, um eine PHP-Engine in Rust zu bauen, ohne selbst Rust zu können. Das zeigt, wie man mit AI-Tools über die eigenen Sprachgrenzen hinaus in neue Stacks vordringen kann, und die 17% der PHP-Tests und WordPress-Rendering sind ein krasser Proof-of-Concept. Für Entwickler, die überlegen, wie sie ihre Produktivität mit KI steigern oder neue Technologien schnell evaluieren können, ist das ein super Beispiel.",
+    "chloe_note": "Hey, *My AI-built PHP engine in Rust passes 17% of PHP-src tests, renders WordPress* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen AI-assisted project produced a demonstrable Rust PHP engine, passing tests and rendering WordPress. Clear artifact.Cluster context: 1 sources, engagement 58. Common terms: hacker, php-src, renders, tests. Score aktuell: 85. Link: https://ekinertac.com/blog/i-dont-know-rust-my-ai-is-rewriting-php-in-it/"
   }
 ]
