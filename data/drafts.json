@@ -13452,5 +13452,19 @@
     "engagement_score": 86.0,
     "local_newsworthiness_score": 0,
     "created_at": "2026-07-05T20:46:11.209379Z"
+  },
+  {
+    "title": "LangChain v1.1.6",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-mistralai%3D%3D1.1.6",
+    "source": "LangChain Releases",
+    "score": 85,
+    "should_post": true,
+    "reason": "LangChain v1.1.6 ships with a concrete new feature: surfacing MistralAI citation metadata. Passes Ships Test.",
+    "post_text": "LangChain's `langchain-mistralai` v1.1.6 surfaces citation metadata from MistralAI chat responses. Builders can now access source information directly for improved attribution and fact-checking in RAG apps.",
+    "source_angle": "LangChain SDK update adds MistralAI citation metadata access.",
+    "source_tier": 2,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 35,
+    "created_at": "2026-07-05T22:52:01.376131Z"
   }
 ]
