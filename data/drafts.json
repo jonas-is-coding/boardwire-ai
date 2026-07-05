@@ -13284,5 +13284,47 @@
     "engagement_score": 58.0,
     "local_newsworthiness_score": 0,
     "created_at": "2026-07-05T06:59:39.890020Z"
+  },
+  {
+    "title": "sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25)",
+    "link": "https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/",
+    "source": "HackerNews",
+    "score": 90,
+    "should_post": true,
+    "reason": "sqlite-utils 4.0rc2 released, mostly AI-generated for $149.25, providing a clear cost benchmark for AI coding.",
+    "post_text": "sqlite-utils 4.0rc2 was mostly written by Claude Fable for $149.25. This provides a concrete cost benchmark for using LLMs in software development.",
+    "source_angle": "AI-assisted coding cost benchmark",
+    "source_tier": 3,
+    "engagement_score": 71.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-05T10:03:34.486070Z"
+  },
+  {
+    "title": "Mouse: Precision Editing Tools for AI Coding Agents",
+    "link": "https://hic-ai.com",
+    "source": "HackerNews",
+    "score": 7,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 50.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-05T10:03:35.767257Z"
+  },
+  {
+    "title": "The Log Is the Agent",
+    "link": "https://arxiv.org/abs/2605.21997",
+    "source": "HackerNews",
+    "score": 4,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 49.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-05T10:03:35.767400Z"
   }
 ]
