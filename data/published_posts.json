@@ -1356,5 +1356,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-03-kagi-changelog-july-2-heads-tails-and-an-ai-toggle-972ba58355e7.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpszuaycho2b",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpszuaycho2b"
+  },
+  {
+    "id": "8dc5acc2852c",
+    "published_at": "2026-07-05T05:00:45.357763Z",
+    "platform": "bluesky",
+    "post": "MCP Servers add persistent memory and sequential thinking primitives.\n\nServers v2026.7.4 updates sequential-thinking and memory servers for long-running agent workflows an\n\nMemory server supports recall across sessions. Sequential-thinking server enables ordered reasoning steps i",
+    "source_link": "https://github.com/modelcontextprotocol/servers/releases/tag/2026.7.4",
+    "source_title": "Servers v2026.7.4",
+    "score": 90,
+    "reason": "New version of MCP Servers released, directly actionable for builders using the protocol.",
+    "card_path": "generated/cards/8dc5acc2852c.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-05-servers-v2026-7-4-8dc5acc2852c.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpus7fomfr2q",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpus7fomfr2q"
   }
 ]
