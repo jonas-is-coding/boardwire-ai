@@ -5399,11 +5399,11 @@
   },
   {
     "id": "9a8fe472ff14",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-05T13:06:58.710252Z",
     "score": 90,
     "reason": "New open-source tool for persistent, crash-proof planning and shared state for AI coding agents. Ships today, direct builder utility.",
-    "proposed_post": "OthmanAdi/planning-with-files enables persistent, file-based planning for AI coding agents, preventing context loss and enabling multi-agent shared state. Builders can now create more robust, long-running agentic workflows with existing tools like Claude Code.",
+    "proposed_post": "AI coding agents get crash-proof planning.\n\nOthmanAdi/planning-with-files brings persistent state to 60+ agents via SKILL.md standard.\n\nCrash-proof markdown plans survive context loss and /clear, enabling multi-agent shared state on disk for Claude Code, Codex, and Cursor wor\n\n📖 ",
     "source_angle": "GitHub Trending: Open-source tool for agent persistence",
     "source_item": {
       "title": "OthmanAdi/planning-with-files — Persistent file-based planning for AI coding agents and long-running agentic tasks. Crash-proof markdown plans that survive context loss and /clear, plus a deterministi",
@@ -5434,10 +5434,22 @@
         "cluster_score": 35
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/9a8fe472ff14.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, schau dir das hier an: OthmanAdi/planning-with-files. Das ist ein Game Changer für jeden, der mit AI-Coding-Agents arbeitet. Endlich persistente, crash-sichere Pläne in Markdown, die Kontextverlust überleben. Das ist der Schlüssel für stabile, langlaufende agentische Tasks, die nicht bei jedem kleinen Fehler von vorne anfangen. Ein Entwickler kann damit deutlich zuverlässigere und komplexere Agenten bauen.",
-    "chloe_note": "*OthmanAdi/planning-with-files — Persistent file-based planning for AI coding agents and long-running agentic tasks. Crash-proof markdown plans that survive context loss and /clear, plus a deterministi* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New open-source tool for persistent, crash-proof planning and shared state for AI coding agents. Ships today, direct builder utility.Cluster context: 1 sources, engagement 61. Common terms: tasks., state, works, agentic. Bewertung: 90. Quelle: https://github.com/OthmanAdi/planning-with-files"
+    "chloe_note": "*OthmanAdi/planning-with-files — Persistent file-based planning for AI coding agents and long-running agentic tasks. Crash-proof markdown plans that survive context loss and /clear, plus a deterministi* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New open-source tool for persistent, crash-proof planning and shared state for AI coding agents. Ships today, direct builder utility.Cluster context: 1 sources, engagement 61. Common terms: tasks., state, works, agentic. Bewertung: 90. Quelle: https://github.com/OthmanAdi/planning-with-files",
+    "sarah_package": {
+      "title": "AI coding agents get crash-proof planning.",
+      "subtitle": "OthmanAdi/planning-with-files brings persistent state to 60+ agents via SKILL.md standard.",
+      "description": "Crash-proof markdown plans survive context loss and /clear, enabling multi-agent shared state on disk for Claude Code, Codex, and Cursor wor",
+      "hashtags": [
+        "#AICodingAgents",
+        "#PersistentState",
+        "#SKILLmd"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-05-othmanadi-planning-with-files-persistent-file-based-planning-for-ai-coding-agents-and-long-running-agentic-tasks-crash-proof-markdown-plans-that-survive-context-loss-and-clear-plus-a-deterministi-9a8fe472ff14.md",
+    "published_at": "2026-07-05T16:13:13.494278Z"
   }
 ]

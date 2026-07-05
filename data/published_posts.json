@@ -1412,5 +1412,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-04-zackriya-solutions-meetily-privacy-first-ai-meeting-assistant-with-4x-faster-parakeet-whisper-live-transcription-speaker-diarization-and-ollama-summarization-built-on-rust-100-local-processing-e7928f8dc3eb.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpvsy75wqy2u",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpvsy75wqy2u"
+  },
+  {
+    "id": "9a8fe472ff14",
+    "published_at": "2026-07-05T16:13:13.494278Z",
+    "platform": "bluesky",
+    "post": "AI coding agents get crash-proof planning.\n\nOthmanAdi/planning-with-files brings persistent state to 60+ agents via SKILL.md standard.\n\nCrash-proof markdown plans survive context loss and /clear, enabling multi-agent shared state on disk for Claude Code, Codex, and Cursor wor\n\n📖 ",
+    "source_link": "https://github.com/OthmanAdi/planning-with-files",
+    "source_title": "OthmanAdi/planning-with-files — Persistent file-based planning for AI coding agents and long-running agentic tasks. Crash-proof markdown plans that survive context loss and /clear, plus a deterministi",
+    "score": 90,
+    "reason": "New open-source tool for persistent, crash-proof planning and shared state for AI coding agents. Ships today, direct builder utility.",
+    "card_path": "generated/cards/9a8fe472ff14.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-05-othmanadi-planning-with-files-persistent-file-based-planning-for-ai-coding-agents-and-long-running-agentic-tasks-crash-proof-markdown-plans-that-survive-context-loss-and-clear-plus-a-deterministi-9a8fe472ff14.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpvxrradfr2y",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpvxrradfr2y"
   }
 ]
