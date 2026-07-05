@@ -1370,5 +1370,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-05-servers-v2026-7-4-8dc5acc2852c.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpus7fomfr2q",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpus7fomfr2q"
+  },
+  {
+    "id": "3ac1fe62d51d",
+    "published_at": "2026-07-05T09:44:28.711969Z",
+    "platform": "bluesky",
+    "post": "AI-built PHP engine in Rust passes 17% of php-src tests.\n\nAIRP (AI-Rewritten PHP Runtime) renders WordPress with no Rust knowledge required. MIT license.\n\nDev rebuilt PHP-src in Rust using AI, validated by 17% test pass rate and full WordPress rendering. MIT license. Source: ekin",
+    "source_link": "https://ekinertac.com/blog/i-dont-know-rust-my-ai-is-rewriting-php-in-it/",
+    "source_title": "My AI-built PHP engine in Rust passes 17% of PHP-src tests, renders WordPress",
+    "score": 85,
+    "reason": "AI-assisted project produced a demonstrable Rust PHP engine, passing tests and rendering WordPress. Clear artifact.",
+    "card_path": "generated/cards/3ac1fe62d51d.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-05-my-ai-built-php-engine-in-rust-passes-17-of-php-src-tests-renders-wordpress-3ac1fe62d51d.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpvc2piekh2b",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpvc2piekh2b"
   }
 ]

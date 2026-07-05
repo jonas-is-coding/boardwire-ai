@@ -5278,11 +5278,11 @@
   },
   {
     "id": "3ac1fe62d51d",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-05T06:59:39.890020Z",
     "score": 85,
     "reason": "AI-assisted project produced a demonstrable Rust PHP engine, passing tests and rendering WordPress. Clear artifact.",
-    "proposed_post": "An AI-built PHP engine in Rust passes 17% of PHP-src tests, renders WordPress. This shows AI's capability in complex language porting, informing future tooling for legacy code modernization.",
+    "proposed_post": "AI-built PHP engine in Rust passes 17% of php-src tests.\n\nAIRP (AI-Rewritten PHP Runtime) renders WordPress with no Rust knowledge required. MIT license.\n\nDev rebuilt PHP-src in Rust using AI, validated by 17% test pass rate and full WordPress rendering. MIT license. Source: ekin",
     "source_angle": "AI-assisted code generation, language runtime, legacy system modernization",
     "source_item": {
       "title": "My AI-built PHP engine in Rust passes 17% of PHP-src tests, renders WordPress",
@@ -5313,10 +5313,22 @@
         "cluster_score": 0
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/3ac1fe62d51d.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, dieser Artikel hier ist cool: \"My AI-built PHP engine in Rust passes 17% of PHP-src tests, renders WordPress\".\n\nEin Dev hat seine KI genutzt, um eine PHP-Engine in Rust zu bauen, ohne selbst Rust zu können. Das zeigt, wie man mit AI-Tools über die eigenen Sprachgrenzen hinaus in neue Stacks vordringen kann, und die 17% der PHP-Tests und WordPress-Rendering sind ein krasser Proof-of-Concept. Für Entwickler, die überlegen, wie sie ihre Produktivität mit KI steigern oder neue Technologien schnell evaluieren können, ist das ein super Beispiel.",
-    "chloe_note": "Hey, *My AI-built PHP engine in Rust passes 17% of PHP-src tests, renders WordPress* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen AI-assisted project produced a demonstrable Rust PHP engine, passing tests and rendering WordPress. Clear artifact.Cluster context: 1 sources, engagement 58. Common terms: hacker, php-src, renders, tests. Score aktuell: 85. Link: https://ekinertac.com/blog/i-dont-know-rust-my-ai-is-rewriting-php-in-it/"
+    "chloe_note": "Hey, *My AI-built PHP engine in Rust passes 17% of PHP-src tests, renders WordPress* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen AI-assisted project produced a demonstrable Rust PHP engine, passing tests and rendering WordPress. Clear artifact.Cluster context: 1 sources, engagement 58. Common terms: hacker, php-src, renders, tests. Score aktuell: 85. Link: https://ekinertac.com/blog/i-dont-know-rust-my-ai-is-rewriting-php-in-it/",
+    "sarah_package": {
+      "title": "AI-built PHP engine in Rust passes 17% of php-src tests.",
+      "subtitle": "AIRP (AI-Rewritten PHP Runtime) renders WordPress with no Rust knowledge required. MIT license.",
+      "description": "Dev rebuilt PHP-src in Rust using AI, validated by 17% test pass rate and full WordPress rendering. MIT license. Source: ekinertac.com.",
+      "hashtags": [
+        "#RustLang",
+        "#PHP",
+        "#AICodeGen"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-05-my-ai-built-php-engine-in-rust-passes-17-of-php-src-tests-renders-wordpress-3ac1fe62d51d.md",
+    "published_at": "2026-07-05T09:44:28.711969Z"
   }
 ]
