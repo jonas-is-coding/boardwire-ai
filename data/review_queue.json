@@ -5220,5 +5220,48 @@
     "breaking": true,
     "claire_note": "Chloe, schau dir mal 'Zackriya-Solutions/meetily' an. Das Ding ist auf GitHub am Trenden und sieht nach einem echten Game-Changer aus für alle, die AI-Meeting-Assistenten *ohne* Cloud-Zwang bauen wollen. \n\nDer Clou ist die 100% lokale Verarbeitung mit Parakeet/Whisper für Transkription und Ollama für Summaries – alles in Rust. Entwickler können hier sehen, wie man performante, privacy-fokussierte AI-Lösungen komplett on-premise umsetzt. Das ist direkt anwendbar für interne Tools oder Produkte, die sensible Daten verarbeiten.",
     "chloe_note": "*Zackriya-Solutions/meetily — Privacy first, AI meeting assistant with 4x faster Parakeet/Whisper live transcription, speaker diarization, and Ollama summarization built on Rust. 100% local processing.* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Open-source Rust tool for local, fast AI meeting transcription and Ollama summarization. Ships today, clear builder value.Cluster context: 1 sources, engagement 607. Common terms: faster, taker, cloud, privacy. Bewertung: 92. Quelle: https://github.com/Zackriya-Solutions/meetily"
+  },
+  {
+    "id": "8dc5acc2852c",
+    "status": "approved",
+    "created_at": "2026-07-05T02:00:48.719213Z",
+    "score": 90,
+    "reason": "New version of MCP Servers released, directly actionable for builders using the protocol.",
+    "proposed_post": "MCP Servers released v2026.7.4, updating core packages like `server-everything` and `server-memory`. Builders using MCP can upgrade to this version for the latest features and stability.",
+    "source_angle": "MCP Servers new version release",
+    "source_item": {
+      "title": "Servers v2026.7.4",
+      "source": "MCP Servers Releases",
+      "link": "https://github.com/modelcontextprotocol/servers/releases/tag/2026.7.4",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 35,
+      "summary": "<h1>Release : v2026.7.4</h1>\n<h2>Updated packages</h2>\n<ul>\n<li>@modelcontextprotocol/server-everything@2026.7.4</li>\n<li>@modelcontextprotocol/server-filesystem@2026.7.4</li>\n<li>@modelcontextprotocol/server-sequential-thinking@2026.7.4</li>\n<li>@modelcontextprotocol/server-memory@2026.7.4</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: /h2, /li, modelcontextprotocol/server-filesystem, modelcontextprotocol/server-sequential-thinking, 2026.7.4.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "MCP Servers Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "/h2",
+          "/li",
+          "modelcontextprotocol/server-filesystem",
+          "modelcontextprotocol/server-sequential-thinking",
+          "2026.7.4",
+          "packages",
+          "updated",
+          "/ul"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: /h2, /li, modelcontextprotocol/server-filesystem, modelcontextprotocol/server-sequential-thinking. Lead: Servers v2026.7.4",
+        "alternative_titles": [],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, dieser MCP Servers Release ist spannend. Die Updates für 'server-sequential-thinking' und 'server-memory' deuten auf Verbesserungen in der AI-Inferenz und Kontextverwaltung hin. Das ist direkt relevant für jeden, der gerade an komplexeren Agenten-Workflows oder persistenten AI-Sessions baut.",
+    "chloe_note": "*Servers v2026.7.4* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New version of MCP Servers released, directly actionable for builders using the protocol.Cluster context: 1 sources, engagement 0. Common terms: /h2, /li, modelcontextprotocol/server-filesystem, modelcontextprotocol/server-sequential-thinking. Bewertung: 90. Quelle: https://github.com/modelcontextprotocol/servers/releases/tag/2026.7.4"
   }
 ]
