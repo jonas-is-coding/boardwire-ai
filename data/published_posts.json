@@ -1384,5 +1384,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-05-my-ai-built-php-engine-in-rust-passes-17-of-php-src-tests-renders-wordpress-3ac1fe62d51d.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpvc2piekh2b",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpvc2piekh2b"
+  },
+  {
+    "id": "dc8e756fedc3",
+    "published_at": "2026-07-05T12:20:04.551117Z",
+    "platform": "bluesky",
+    "post": "Claude Fable ships sqlite-utils 4.0rc2 for $149.25.\n\nsqlite-utils 4.0rc2 released on MIT License with AI-generated code replacing 333 lines.\n\nSimon Willison documented an AI-first release workflow with cost and quality metrics. 71 engagement on Hacker News.\n\n📖 Read the full artic",
+    "source_link": "https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/",
+    "source_title": "sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25)",
+    "score": 90,
+    "reason": "sqlite-utils 4.0rc2 released, mostly AI-generated for $149.25, providing a clear cost benchmark for AI coding.",
+    "card_path": "generated/cards/dc8e756fedc3.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-05-sqlite-utils-4-0rc2-mostly-written-by-claude-fable-for-about-149-25-dc8e756fedc3.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpvkqwrp7f2y",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpvkqwrp7f2y"
   }
 ]

@@ -5333,11 +5333,11 @@
   },
   {
     "id": "dc8e756fedc3",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-05T10:03:34.486070Z",
     "score": 90,
     "reason": "sqlite-utils 4.0rc2 released, mostly AI-generated for $149.25, providing a clear cost benchmark for AI coding.",
-    "proposed_post": "sqlite-utils 4.0rc2 was mostly written by Claude Fable for $149.25. This provides a concrete cost benchmark for using LLMs in software development.",
+    "proposed_post": "Claude Fable ships sqlite-utils 4.0rc2 for $149.25.\n\nsqlite-utils 4.0rc2 released on MIT License with AI-generated code replacing 333 lines.\n\nSimon Willison documented an AI-first release workflow with cost and quality metrics. 71 engagement on Hacker News.\n\n📖 Read the full artic",
     "source_angle": "AI-assisted coding cost benchmark",
     "source_item": {
       "title": "sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25)",
@@ -5368,10 +5368,21 @@
         "cluster_score": 0
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/dc8e756fedc3.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Hey Chloe,\n\nHab hier einen Simon Willison Artikel. 'sqlite-utils 4.0rc2' ist das Thema, aber der Clou ist, dass der Großteil davon von Claude Fable geschrieben wurde – für unter 150 Dollar.\n\nDas ist ein direkter Blick darauf, wie weit wir mit KI-generiertem Code für reale, nützliche Tools sind. Entwickler können hier sehen, was an Qualität und Komplexität drin ist, wenn man KI gezielt einsetzt. Spannend für alle, die überlegen, KI in ihren eigenen Dev-Workflow zu integrieren.",
-    "chloe_note": "Kurzes Update: *sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25)* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um sqlite-utils 4.0rc2 released, mostly AI-generated for $149.25, providing a clear cost benchmark for AI coding.Cluster context: 1 sources, engagement 71. Common terms: 149.25, hacker, mostly, fable. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/"
+    "chloe_note": "Kurzes Update: *sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25)* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um sqlite-utils 4.0rc2 released, mostly AI-generated for $149.25, providing a clear cost benchmark for AI coding.Cluster context: 1 sources, engagement 71. Common terms: 149.25, hacker, mostly, fable. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/",
+    "sarah_package": {
+      "title": "Claude Fable ships sqlite-utils 4.0rc2 for $149.25.",
+      "subtitle": "sqlite-utils 4.0rc2 released on MIT License with AI-generated code replacing 333 lines.",
+      "description": "Simon Willison documented an AI-first release workflow with cost and quality metrics. 71 engagement on Hacker News.",
+      "hashtags": [
+        "#ClaudeFable",
+        "#sqliteUtils"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-05-sqlite-utils-4-0rc2-mostly-written-by-claude-fable-for-about-149-25-dc8e756fedc3.md",
+    "published_at": "2026-07-05T12:20:04.551117Z"
   }
 ]
