@@ -1398,5 +1398,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-05-sqlite-utils-4-0rc2-mostly-written-by-claude-fable-for-about-149-25-dc8e756fedc3.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpvkqwrp7f2y",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpvkqwrp7f2y"
+  },
+  {
+    "id": "e7928f8dc3eb",
+    "published_at": "2026-07-05T14:47:20.130386Z",
+    "platform": "bluesky",
+    "post": "Meetily brings local AI meeting transcription.\n\n4x faster Parakeet/Whisper transcription and Ollama summarization with 607 stars, 100% local Rust pr\n\nMeetily provides open-source, privacy-first AI meeting assistant with speaker diarization, built on Rust, available for macOS and ",
+    "source_link": "https://github.com/Zackriya-Solutions/meetily",
+    "source_title": "Zackriya-Solutions/meetily — Privacy first, AI meeting assistant with 4x faster Parakeet/Whisper live transcription, speaker diarization, and Ollama summarization built on Rust. 100% local processing.",
+    "score": 92,
+    "reason": "Open-source Rust tool for local, fast AI meeting transcription and Ollama summarization. Ships today, clear builder value.",
+    "card_path": "generated/cards/e7928f8dc3eb.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-04-zackriya-solutions-meetily-privacy-first-ai-meeting-assistant-with-4x-faster-parakeet-whisper-live-transcription-speaker-diarization-and-ollama-summarization-built-on-rust-100-local-processing-e7928f8dc3eb.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpvsy75wqy2u",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpvsy75wqy2u"
   }
 ]
