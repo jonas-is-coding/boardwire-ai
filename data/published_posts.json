@@ -1468,5 +1468,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-06-bradautomates-claude-video-give-claude-the-ability-to-watch-any-video-watch-downloads-extracts-frames-transcribes-hands-it-all-to-claude-b049af1d8c5b.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpyrjql4xi26",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpyrjql4xi26"
+  },
+  {
+    "id": "53c055d78bde",
+    "published_at": "2026-07-06T20:57:22.425415Z",
+    "platform": "bluesky",
+    "post": "AMD ships a $4k dev kit for local AI training and inference.\n\nRyzen AI Halo integrates 32GB VRAM, NPUs, and 4x AI accelerators for on-device model workloads.\n\nFirst production dev kit from AMD explicitly targeting LLM training and edge inference on-device. Available now via LTT L",
+    "source_link": "https://www.lttlabs.com/articles/2026/07/06/amd-ryzen-ai-halo",
+    "source_title": "AMD Ryzen AI Halo – $4k AI Dev Kit",
+    "score": 85,
+    "reason": "New hardware dev kit available for purchase, offering a concrete tool for local AI development.",
+    "card_path": "generated/cards/53c055d78bde.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-06-amd-ryzen-ai-halo-4k-ai-dev-kit-53c055d78bde.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpyy4tdps522",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpyy4tdps522"
   }
 ]

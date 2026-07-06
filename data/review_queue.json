@@ -5620,11 +5620,11 @@
   },
   {
     "id": "53c055d78bde",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-06T16:48:02.930183Z",
     "score": 85,
     "reason": "New hardware dev kit available for purchase, offering a concrete tool for local AI development.",
-    "proposed_post": "AMD launched the Ryzen AI Halo dev kit for $4k. Builders now have a new hardware option for local AI model development and edge inference, diversifying beyond current platforms.",
+    "proposed_post": "AMD ships a $4k dev kit for local AI training and inference.\n\nRyzen AI Halo integrates 32GB VRAM, NPUs, and 4x AI accelerators for on-device model workloads.\n\nFirst production dev kit from AMD explicitly targeting LLM training and edge inference on-device. Available now via LTT L",
     "source_angle": "New AMD hardware for local AI development",
     "source_item": {
       "title": "AMD Ryzen AI Halo – $4k AI Dev Kit",
@@ -5655,11 +5655,23 @@
         "cluster_score": 0
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/53c055d78bde.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, schau dir das an: AMD Ryzen AI Halo Dev Kit. 4k ist ein Batzen Geld, aber ein dediziertes AI-Entwickler-Kit von AMD mit Ryzen AI ist ein klares Signal, dass die anspruchsvollere AI-Entwicklung immer mehr auf die Edge rückt.\n\nFür Builder bedeutet das: Hier gibt's die Hardware, um LLMs oder komplexe Modelle direkt auf dem Gerät zu trainieren oder zu inferieren, ohne auf die Cloud angewiesen zu sein. Das ist entscheidend für Low-Latency-Anwendungen oder datenschutzsensible Use Cases.",
-    "chloe_note": "Kurzes Update: *AMD Ryzen AI Halo – $4k AI Dev Kit* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um New hardware dev kit available for purchase, offering a concrete tool for local AI development.Cluster context: 1 sources, engagement 98. Common terms: hacker, labslucas, dev, halo. Ich habe es mit 85 Punkten bewertet. Hier der Link: https://www.lttlabs.com/articles/2026/07/06/amd-ryzen-ai-halo"
+    "chloe_note": "Kurzes Update: *AMD Ryzen AI Halo – $4k AI Dev Kit* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um New hardware dev kit available for purchase, offering a concrete tool for local AI development.Cluster context: 1 sources, engagement 98. Common terms: hacker, labslucas, dev, halo. Ich habe es mit 85 Punkten bewertet. Hier der Link: https://www.lttlabs.com/articles/2026/07/06/amd-ryzen-ai-halo",
+    "sarah_package": {
+      "title": "AMD ships a $4k dev kit for local AI training and inference.",
+      "subtitle": "Ryzen AI Halo integrates 32GB VRAM, NPUs, and 4x AI accelerators for on-device model workloads.",
+      "description": "First production dev kit from AMD explicitly targeting LLM training and edge inference on-device. Available now via LTT Labs at $4,000.",
+      "hashtags": [
+        "#AMD",
+        "#RyzenAIHalo",
+        "#EdgeAI"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-06-amd-ryzen-ai-halo-4k-ai-dev-kit-53c055d78bde.md",
+    "published_at": "2026-07-06T20:57:22.425415Z"
   },
   {
     "id": "114435fd0f1d",
