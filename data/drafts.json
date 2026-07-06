@@ -13508,5 +13508,47 @@
     "engagement_score": 39.5,
     "local_newsworthiness_score": 0,
     "created_at": "2026-07-06T02:06:47.743620Z"
+  },
+  {
+    "title": "🤗 Kernels: Major Updates",
+    "link": "https://huggingface.co/blog/revamped-kernels",
+    "source": "Hugging Face Blog",
+    "score": 20,
+    "should_post": false,
+    "reason": "Summary is too vague; no concrete artifact, API, or specific feature is mentioned. Cannot determine what shipped.",
+    "post_text": "No post generated",
+    "source_angle": "No source angle provided",
+    "source_tier": 2,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-07-06T08:10:10.932761Z"
+  },
+  {
+    "title": "Does code cleanliness affect coding agents? A controlled minimal-pair study",
+    "link": "https://arxiv.org/abs/2605.20049",
+    "source": "HackerNews",
+    "score": 35,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "No source angle provided",
+    "source_tier": 3,
+    "engagement_score": 134.0,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-07-06T08:10:16.451185Z"
+  },
+  {
+    "title": "New Microsoft 365 pricing live, some products up by 42% due to AI",
+    "link": "https://www.windowslatest.com/2026/07/05/microsoft-365-just-got-a-price-hike-over-continuous-innovation-but-copilot-is-the-ai-tax-on-businesses/",
+    "source": "HackerNews",
+    "score": 2,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 55.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-06T08:10:16.451683Z"
   }
 ]
