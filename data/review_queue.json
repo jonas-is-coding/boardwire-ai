@@ -5551,5 +5551,48 @@
     "breaking": false,
     "claire_note": "Chloe, schau dir das LangChain v0.2.6 Release an. Das ist klein, aber wichtig für jeden, der OpenRouter nutzt.\n\nDer Fix für 'default_headers' ermöglicht jetzt das Einschleusen von Custom HTTP Headern. Das ist entscheidend für Authentifizierung, Rate Limiting oder A/B-Testing direkt über LangChain mit OpenRouter. Entwickler können damit ihre API-Anfragen viel flexibler steuern, ohne Workarounds bauen zu müssen.",
     "chloe_note": "Kurzes Update: *LangChain v0.2.6* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um LangChain SDK update adds specific header injection capability for OpenRouter, enabling more flexible integrations.Cluster context: 1 sources, engagement 0. Common terms: since, href, js-issue-link, chore. Ich habe es mit 85 Punkten bewertet. Hier der Link: https://github.com/langchain-ai/langchain/releases/tag/langchain-openrouter%3D%3D0.2.6"
+  },
+  {
+    "id": "b049af1d8c5b",
+    "status": "approved",
+    "created_at": "2026-07-06T13:37:56.102020Z",
+    "score": 90,
+    "reason": "New open-source tool automates video pre-processing for Claude, enabling immediate multimodal integration for builders.",
+    "proposed_post": "New open-source tool `bradautomates/claude-video` automates video download, frame extraction, and transcription, feeding content directly to Claude. Builders can now easily integrate video analysis into Claude-powered workflows.",
+    "source_angle": "GitHub trending tool automates video pre-processing for Claude.",
+    "source_item": {
+      "title": "bradautomates/claude-video — Give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude.",
+      "source": "GitHub Trending",
+      "link": "https://github.com/bradautomates/claude-video",
+      "source_tier": 2,
+      "engagement_score": 368.0,
+      "local_newsworthiness_score": 0,
+      "summary": "Trending on GitHub today: +368 stars. Give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude.\n[Cluster context: 1 sources, engagement 368, common terms: give, ability, claude., downloads, extracts.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 368,
+        "common_terms": [
+          "give",
+          "ability",
+          "claude.",
+          "downloads",
+          "extracts",
+          "any",
+          "transcribes",
+          "trending"
+        ],
+        "cluster_summary": "1 sources, engagement 368. Common terms: give, ability, claude., downloads. Lead: bradautomates/claude-video — Give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes,",
+        "alternative_titles": [],
+        "cluster_score": 25
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, check this out: 'bradautomates/claude-video'.\n\nDas ist ein direktes Tool, um Claude Video-Inhalte zugänglich zu machen – Frame-Extraktion, Transkription, alles rein in Claude. Für Devs, die LLMs mit Multimedia füttern wollen, ist das ein super Startpunkt oder eine Referenzimplementierung. Könnte die Tür für neue Automatisierungen und Analyse-Workflows öffnen, die über reinen Text hinausgehen.",
+    "chloe_note": "Kurzes Update: *bradautomates/claude-video — Give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude.* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um New open-source tool automates video pre-processing for Claude, enabling immediate multimodal integration for builders.Cluster context: 1 sources, engagement 368. Common terms: give, ability, claude., downloads. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://github.com/bradautomates/claude-video"
   }
 ]
