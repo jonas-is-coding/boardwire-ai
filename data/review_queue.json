@@ -5718,11 +5718,11 @@
   },
   {
     "id": "b2921f74d164",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-06T21:20:56.746973Z",
     "score": 70,
     "reason": "Ollama RC ships with MLX update. Direct impact for Apple Silicon users. Not a stable release, but actionable.",
-    "proposed_post": "Ollama v0.31.2-rc0 ships with an updated MLX dependency. Builders running local LLMs on Apple Silicon can test this release candidate for potential performance or stability gains.",
+    "proposed_post": "Ollama updates MLX for Apple Silicon.\n\nOllama v0.31.2-rc0 ships with MLX de7b4ed9 update.\n\nBuilders can test this release candidate for local LLM workloads on Apple Silicon, updating MLX to de7b4ed9.\n\n📖 Read the full article: file:///home/runner/work/boardwire-ai/boardwire-ai/art",
     "source_angle": "Ollama release candidate with MLX update for Apple Silicon.",
     "source_item": {
       "title": "Ollama v0.31.2-rc0",
@@ -5753,10 +5753,22 @@
         "cluster_score": 15
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/b2921f74d164.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das Ollama Release 0.31.2-rc0 ist relevant. Das Update auf MLX de7b4ed9 ist ein direktes Performance-Upgrade für Apple Silicon. Entwickler können damit ihre lokalen LLM-Workloads effizienter ausführen, ohne tief in die Hardware-Optimierung einzusteigen.",
-    "chloe_note": "*Ollama v0.31.2-rc0* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Ollama RC ships with MLX update. Direct impact for Apple Silicon users. Not a stable release, but actionable.Cluster context: 1 sources, engagement 0. Common terms: ollama, mlx, js-issue-link, href. Bewertung: 70. Quelle: https://github.com/ollama/ollama/releases/tag/v0.31.2-rc0"
+    "chloe_note": "*Ollama v0.31.2-rc0* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Ollama RC ships with MLX update. Direct impact for Apple Silicon users. Not a stable release, but actionable.Cluster context: 1 sources, engagement 0. Common terms: ollama, mlx, js-issue-link, href. Bewertung: 70. Quelle: https://github.com/ollama/ollama/releases/tag/v0.31.2-rc0",
+    "sarah_package": {
+      "title": "Ollama updates MLX for Apple Silicon.",
+      "subtitle": "Ollama v0.31.2-rc0 ships with MLX de7b4ed9 update.",
+      "description": "Builders can test this release candidate for local LLM workloads on Apple Silicon, updating MLX to de7b4ed9.",
+      "hashtags": [
+        "#Ollama",
+        "#MLX",
+        "#AppleSilicon"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-06-ollama-v0-31-2-rc0-b2921f74d164.md",
+    "published_at": "2026-07-06T22:20:41.268905Z"
   }
 ]

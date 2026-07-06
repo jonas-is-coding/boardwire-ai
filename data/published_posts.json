@@ -1482,5 +1482,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-06-amd-ryzen-ai-halo-4k-ai-dev-kit-53c055d78bde.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpyy4tdps522",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpyy4tdps522"
+  },
+  {
+    "id": "b2921f74d164",
+    "published_at": "2026-07-06T22:20:41.268905Z",
+    "platform": "bluesky",
+    "post": "Ollama updates MLX for Apple Silicon.\n\nOllama v0.31.2-rc0 ships with MLX de7b4ed9 update.\n\nBuilders can test this release candidate for local LLM workloads on Apple Silicon, updating MLX to de7b4ed9.\n\n📖 Read the full article: file:///home/runner/work/boardwire-ai/boardwire-ai/art",
+    "source_link": "https://github.com/ollama/ollama/releases/tag/v0.31.2-rc0",
+    "source_title": "Ollama v0.31.2-rc0",
+    "score": 70,
+    "reason": "Ollama RC ships with MLX update. Direct impact for Apple Silicon users. Not a stable release, but actionable.",
+    "card_path": "generated/cards/b2921f74d164.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-06-ollama-v0-31-2-rc0-b2921f74d164.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpz4rrbfd32l",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpz4rrbfd32l"
   }
 ]
