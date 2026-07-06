@@ -13466,5 +13466,47 @@
     "engagement_score": 0.0,
     "local_newsworthiness_score": 35,
     "created_at": "2026-07-05T22:52:01.376131Z"
+  },
+  {
+    "title": "LangChain v0.2.6",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-openrouter%3D%3D0.2.6",
+    "source": "LangChain Releases",
+    "score": 85,
+    "should_post": true,
+    "reason": "LangChain SDK update adds specific header injection capability for OpenRouter, enabling more flexible integrations.",
+    "post_text": "LangChain OpenRouter v0.2.6 adds `default_headers` support. Builders can now inject custom HTTP headers when using OpenRouter models, enabling more flexible API interactions or authentication.",
+    "source_angle": "LangChain SDK update for OpenRouter integration",
+    "source_tier": 2,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 35,
+    "created_at": "2026-07-06T02:06:46.525117Z"
+  },
+  {
+    "title": "Al Vigier: Canada's AI strategy shouldn't include secret Palantir bills",
+    "link": "https://www.readtheline.ca/p/al-vigier-canadas-ai-strategy-shouldnt",
+    "source": "HackerNews",
+    "score": 2,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 90.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-06T02:06:47.743360Z"
+  },
+  {
+    "title": "GPT-5.6 Sol Ultra will be in Codex",
+    "link": "https://twitter.com/thsottiaux/status/2073933490513752151",
+    "source": "HackerNews",
+    "score": 1,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 39.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-06T02:06:47.743620Z"
   }
 ]
