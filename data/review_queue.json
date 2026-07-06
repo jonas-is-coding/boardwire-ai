@@ -5715,5 +5715,48 @@
     "breaking": false,
     "claire_note": "Hey Chloe,\n\nHab da was auf HackerNews gefunden: OfficeCLI. Das ist ein Game Changer für jeden, der mit AI Agents und Office-Dateien arbeitet. Stell dir vor, du kannst deinen Agents direkt beibringen, Excel-Sheets zu lesen, Word-Dokumente zu bearbeiten oder Präsentationen zu erstellen – alles programmatisch, ohne die Office-Apps selbst zu öffnen.\n\nDas ist super relevant für Devs, die Automatisierung auf die nächste Stufe heben wollen, besonders in Bereichen wie Datenanalyse, Reporting oder Content-Generierung. Man könnte damit zum Beispiel AI-gesteuerte Dashboards bauen, die sich selbst aktualisieren, oder Agents, die Berichte basierend auf Rohdaten generieren und formatieren.\n\nDas Ding ist auf GitHub, Open Source – da können Devs direkt reinspringen und damit experimentieren. Das ist genau die Art von Tool, die wir in unserem Feed brauchen.",
     "chloe_note": "Hey, *OfficeCLI: Office suite for AI agents to read and edit Microsoft Office files* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Open-source CLI for AI agents to interact with Office files. Ships today, direct utility for enterprise automation.Cluster context: 1 sources, engagement 53. Common terms: points, submitted, comments, hacker. Score aktuell: 85. Link: https://github.com/iOfficeAI/OfficeCLI"
+  },
+  {
+    "id": "b2921f74d164",
+    "status": "approved",
+    "created_at": "2026-07-06T21:20:56.746973Z",
+    "score": 70,
+    "reason": "Ollama RC ships with MLX update. Direct impact for Apple Silicon users. Not a stable release, but actionable.",
+    "proposed_post": "Ollama v0.31.2-rc0 ships with an updated MLX dependency. Builders running local LLMs on Apple Silicon can test this release candidate for potential performance or stability gains.",
+    "source_angle": "Ollama release candidate with MLX update for Apple Silicon.",
+    "source_item": {
+      "title": "Ollama v0.31.2-rc0",
+      "source": "Ollama Releases",
+      "link": "https://github.com/ollama/ollama/releases/tag/v0.31.2-rc0",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 35,
+      "summary": "<p>mlx: update to de7b4ed9 (<a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/17056\">#17056</a>)</p>\n[Cluster context: 1 sources, engagement 0, common terms: ollama, mlx, js-issue-link, href, v0.31.2-rc0.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Ollama Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "ollama",
+          "mlx",
+          "js-issue-link",
+          "href",
+          "v0.31.2-rc0",
+          "issue-link",
+          "class",
+          "de7b4ed9"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: ollama, mlx, js-issue-link, href. Lead: Ollama v0.31.2-rc0",
+        "alternative_titles": [],
+        "cluster_score": 15
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, das Ollama Release 0.31.2-rc0 ist relevant. Das Update auf MLX de7b4ed9 ist ein direktes Performance-Upgrade für Apple Silicon. Entwickler können damit ihre lokalen LLM-Workloads effizienter ausführen, ohne tief in die Hardware-Optimierung einzusteigen.",
+    "chloe_note": "*Ollama v0.31.2-rc0* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Ollama RC ships with MLX update. Direct impact for Apple Silicon users. Not a stable release, but actionable.Cluster context: 1 sources, engagement 0. Common terms: ollama, mlx, js-issue-link, href. Bewertung: 70. Quelle: https://github.com/ollama/ollama/releases/tag/v0.31.2-rc0"
   }
 ]

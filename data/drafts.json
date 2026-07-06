@@ -13816,5 +13816,19 @@
     "engagement_score": 71.0,
     "local_newsworthiness_score": 0,
     "created_at": "2026-07-06T19:41:03.287635Z"
+  },
+  {
+    "title": "Ollama v0.31.2-rc0",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.31.2-rc0",
+    "source": "Ollama Releases",
+    "score": 70,
+    "should_post": true,
+    "reason": "Ollama RC ships with MLX update. Direct impact for Apple Silicon users. Not a stable release, but actionable.",
+    "post_text": "Ollama v0.31.2-rc0 ships with an updated MLX dependency. Builders running local LLMs on Apple Silicon can test this release candidate for potential performance or stability gains.",
+    "source_angle": "Ollama release candidate with MLX update for Apple Silicon.",
+    "source_tier": 2,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 35,
+    "created_at": "2026-07-06T21:20:56.746973Z"
   }
 ]
