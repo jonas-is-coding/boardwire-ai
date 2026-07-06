@@ -1440,5 +1440,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-05-langchain-v1-1-6-937a2faa3003.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpwsitibec2l",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpwsitibec2l"
+  },
+  {
+    "id": "4573f59c7693",
+    "published_at": "2026-07-06T16:25:00.932962Z",
+    "platform": "bluesky",
+    "post": "LangChain adds default_headers for OpenRouter integrations.\n\nv0.2.6 supports custom HTTP header injection via default_headers in LangChain OpenRouter, with +85 e\n\nInjects custom headers directly in LangChain OpenRouter calls. Enables authentication, rate limiting, or A/B-testing ",
+    "source_link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-openrouter%3D%3D0.2.6",
+    "source_title": "LangChain v0.2.6",
+    "score": 85,
+    "reason": "LangChain SDK update adds specific header injection capability for OpenRouter, enabling more flexible integrations.",
+    "card_path": "generated/cards/4573f59c7693.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-06-langchain-v0-2-6-4573f59c7693.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpyivu6afm2w",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpyivu6afm2w"
   }
 ]
