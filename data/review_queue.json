@@ -5454,11 +5454,11 @@
   },
   {
     "id": "937a2faa3003",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-05T22:52:01.376131Z",
     "score": 85,
     "reason": "LangChain v1.1.6 ships with a concrete new feature: surfacing MistralAI citation metadata. Passes Ships Test.",
-    "proposed_post": "LangChain's `langchain-mistralai` v1.1.6 surfaces citation metadata from MistralAI chat responses. Builders can now access source information directly for improved attribution and fact-checking in RAG apps.",
+    "proposed_post": "LangChain surfaces MistralAI citation metadata.\n\nLangChain v1.1.6 adds citation metadata for RAG apps, with 2 new features and Apache 2.0 license.\n\nLangChain v1.1.6 integrates MistralAI citation metadata for improved attribution and fact-checking in RAG applications, built on top",
     "source_angle": "LangChain SDK update adds MistralAI citation metadata access.",
     "source_item": {
       "title": "LangChain v1.1.6",
@@ -5491,10 +5491,22 @@
         "cluster_score": 35
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/937a2faa3003.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das LangChain 1.1.6 Release ist interessant, weil es Zitier-Metadaten von Chat-Antworten mit MistralAI sichtbar macht. Das ist ein Game-Changer für RAG-Anwendungen, da Entwickler jetzt direkt nachvollziehen können, woher Informationen kommen. Mehr Transparenz und Trust in LLM-Outputs sind damit sofort umsetzbar.",
-    "chloe_note": "Kurzes Update: *LangChain v1.1.6* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um LangChain v1.1.6 ships with a concrete new feature: surfacing MistralAI citation metadata. Passes Ships Test.Cluster context: 1 sources, engagement 0. Common terms: js-issue-link, model-profiles, refresh, chore. Ich habe es mit 85 Punkten bewertet. Hier der Link: https://github.com/langchain-ai/langchain/releases/tag/langchain-mistralai%3D%3D1.1.6"
+    "chloe_note": "Kurzes Update: *LangChain v1.1.6* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um LangChain v1.1.6 ships with a concrete new feature: surfacing MistralAI citation metadata. Passes Ships Test.Cluster context: 1 sources, engagement 0. Common terms: js-issue-link, model-profiles, refresh, chore. Ich habe es mit 85 Punkten bewertet. Hier der Link: https://github.com/langchain-ai/langchain/releases/tag/langchain-mistralai%3D%3D1.1.6",
+    "sarah_package": {
+      "title": "LangChain surfaces MistralAI citation metadata.",
+      "subtitle": "LangChain v1.1.6 adds citation metadata for RAG apps, with 2 new features and Apache 2.0 license.",
+      "description": "LangChain v1.1.6 integrates MistralAI citation metadata for improved attribution and fact-checking in RAG applications, built on top of the ",
+      "hashtags": [
+        "#LangChain",
+        "#MistralAI",
+        "#RAGApps"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-05-langchain-v1-1-6-937a2faa3003.md",
+    "published_at": "2026-07-06T00:11:24.924915Z"
   }
 ]

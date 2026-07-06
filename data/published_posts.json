@@ -1426,5 +1426,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-05-othmanadi-planning-with-files-persistent-file-based-planning-for-ai-coding-agents-and-long-running-agentic-tasks-crash-proof-markdown-plans-that-survive-context-loss-and-clear-plus-a-deterministi-9a8fe472ff14.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpvxrradfr2y",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpvxrradfr2y"
+  },
+  {
+    "id": "937a2faa3003",
+    "published_at": "2026-07-06T00:11:24.924915Z",
+    "platform": "bluesky",
+    "post": "LangChain surfaces MistralAI citation metadata.\n\nLangChain v1.1.6 adds citation metadata for RAG apps, with 2 new features and Apache 2.0 license.\n\nLangChain v1.1.6 integrates MistralAI citation metadata for improved attribution and fact-checking in RAG applications, built on top",
+    "source_link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-mistralai%3D%3D1.1.6",
+    "source_title": "LangChain v1.1.6",
+    "score": 85,
+    "reason": "LangChain v1.1.6 ships with a concrete new feature: surfacing MistralAI citation metadata. Passes Ships Test.",
+    "card_path": "generated/cards/937a2faa3003.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-05-langchain-v1-1-6-937a2faa3003.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpwsitibec2l",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpwsitibec2l"
   }
 ]
