@@ -1454,5 +1454,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-06-langchain-v0-2-6-4573f59c7693.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpyivu6afm2w",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpyivu6afm2w"
+  },
+  {
+    "id": "b049af1d8c5b",
+    "published_at": "2026-07-06T18:59:19.003158Z",
+    "platform": "bluesky",
+    "post": "Claude-video turns raw video into multimodal input for Claude.\n\nbradautomates/claude-video automates downloads, frames, and transcriptions for ±368 stars today.\n\nFirst open-source pipeline to preprocess any video URL into visual + text for direct Claude ingestion via MCP or CLI.\n",
+    "source_link": "https://github.com/bradautomates/claude-video",
+    "source_title": "bradautomates/claude-video — Give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude.",
+    "score": 90,
+    "reason": "New open-source tool automates video pre-processing for Claude, enabling immediate multimodal integration for builders.",
+    "card_path": "generated/cards/b049af1d8c5b.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-06-bradautomates-claude-video-give-claude-the-ability-to-watch-any-video-watch-downloads-extracts-frames-transcribes-hands-it-all-to-claude-b049af1d8c5b.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpyrjql4xi26",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mpyrjql4xi26"
   }
 ]
