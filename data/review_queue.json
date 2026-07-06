@@ -5660,5 +5660,48 @@
     "breaking": false,
     "claire_note": "Chloe, schau dir das an: AMD Ryzen AI Halo Dev Kit. 4k ist ein Batzen Geld, aber ein dediziertes AI-Entwickler-Kit von AMD mit Ryzen AI ist ein klares Signal, dass die anspruchsvollere AI-Entwicklung immer mehr auf die Edge rückt.\n\nFür Builder bedeutet das: Hier gibt's die Hardware, um LLMs oder komplexe Modelle direkt auf dem Gerät zu trainieren oder zu inferieren, ohne auf die Cloud angewiesen zu sein. Das ist entscheidend für Low-Latency-Anwendungen oder datenschutzsensible Use Cases.",
     "chloe_note": "Kurzes Update: *AMD Ryzen AI Halo – $4k AI Dev Kit* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um New hardware dev kit available for purchase, offering a concrete tool for local AI development.Cluster context: 1 sources, engagement 98. Common terms: hacker, labslucas, dev, halo. Ich habe es mit 85 Punkten bewertet. Hier der Link: https://www.lttlabs.com/articles/2026/07/06/amd-ryzen-ai-halo"
+  },
+  {
+    "id": "114435fd0f1d",
+    "status": "approved",
+    "created_at": "2026-07-06T19:41:01.563631Z",
+    "score": 85,
+    "reason": "Open-source CLI for AI agents to interact with Office files. Ships today, direct utility for enterprise automation.",
+    "proposed_post": "OfficeCLI, an open-source tool, launched on GitHub. It enables AI agents to programmatically read and edit Word, Excel, and PowerPoint files. Builders can now automate enterprise document workflows directly with agents.",
+    "source_angle": "New open-source CLI for AI agents to automate Office file tasks.",
+    "source_item": {
+      "title": "OfficeCLI: Office suite for AI agents to read and edit Microsoft Office files",
+      "source": "HackerNews",
+      "link": "https://github.com/iOfficeAI/OfficeCLI",
+      "source_tier": 3,
+      "engagement_score": 53.0,
+      "local_newsworthiness_score": 50,
+      "summary": "49 points, 8 comments on Hacker News — submitted by maxloh — original: https://github.com/iOfficeAI/OfficeCLI\n[Cluster context: 1 sources, engagement 53, common terms: points, submitted, comments, hacker, files.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 53,
+        "common_terms": [
+          "points",
+          "submitted",
+          "comments",
+          "hacker",
+          "files",
+          "original",
+          "maxloh",
+          "microsoft"
+        ],
+        "cluster_summary": "1 sources, engagement 53. Common terms: points, submitted, comments, hacker. Lead: OfficeCLI: Office suite for AI agents to read and edit Microsoft Office files",
+        "alternative_titles": [],
+        "cluster_score": 20
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Hey Chloe,\n\nHab da was auf HackerNews gefunden: OfficeCLI. Das ist ein Game Changer für jeden, der mit AI Agents und Office-Dateien arbeitet. Stell dir vor, du kannst deinen Agents direkt beibringen, Excel-Sheets zu lesen, Word-Dokumente zu bearbeiten oder Präsentationen zu erstellen – alles programmatisch, ohne die Office-Apps selbst zu öffnen.\n\nDas ist super relevant für Devs, die Automatisierung auf die nächste Stufe heben wollen, besonders in Bereichen wie Datenanalyse, Reporting oder Content-Generierung. Man könnte damit zum Beispiel AI-gesteuerte Dashboards bauen, die sich selbst aktualisieren, oder Agents, die Berichte basierend auf Rohdaten generieren und formatieren.\n\nDas Ding ist auf GitHub, Open Source – da können Devs direkt reinspringen und damit experimentieren. Das ist genau die Art von Tool, die wir in unserem Feed brauchen.",
+    "chloe_note": "Hey, *OfficeCLI: Office suite for AI agents to read and edit Microsoft Office files* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Open-source CLI for AI agents to interact with Office files. Ships today, direct utility for enterprise automation.Cluster context: 1 sources, engagement 53. Common terms: points, submitted, comments, hacker. Score aktuell: 85. Link: https://github.com/iOfficeAI/OfficeCLI"
   }
 ]
