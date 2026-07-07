@@ -13872,5 +13872,61 @@
     "engagement_score": 41.0,
     "local_newsworthiness_score": 0,
     "created_at": "2026-07-06T22:57:29.074370Z"
+  },
+  {
+    "title": "AI: The ROI Runway Could Be Long Outside the Tech Sector",
+    "link": "https://www.apollo.com/wealth/insights-news/insights/daily-spark/ai-the-roi-runway-could-be-long-outside-the-tech-sector",
+    "source": "HackerNews",
+    "score": 2,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 79.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-07T02:02:05.407288Z"
+  },
+  {
+    "title": "Ternlight – 7 MB embedding model that runs in browser (WASM)",
+    "link": "https://ternlight-demo.vercel.app/",
+    "source": "HackerNews",
+    "score": 5,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 80.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-07T02:02:06.522803Z"
+  },
+  {
+    "title": "Ollama v0.31.2",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.31.2-rc1",
+    "source": "Ollama Releases",
+    "score": 60,
+    "should_post": false,
+    "reason": "deferred: generation provider unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based",
+    "source_tier": 2,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 60,
+    "created_at": "2026-07-07T02:02:07.368844Z"
+  },
+  {
+    "title": "Pruning RAG context down to what the answer actually needs",
+    "link": "https://www.kapa.ai/blog/how-we-prune-rag-context",
+    "source": "HackerNews",
+    "score": 5,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 56.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-07T02:02:07.369092Z"
   }
 ]
