@@ -13998,5 +13998,47 @@
     "engagement_score": 96.0,
     "local_newsworthiness_score": 25,
     "created_at": "2026-07-07T10:45:22.573592Z"
+  },
+  {
+    "title": "Ollama v0.31.2",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.31.2-rc1",
+    "source": "Ollama Releases",
+    "score": 0,
+    "should_post": false,
+    "reason": "Item summary indicates content is unavailable. Cannot assess concrete changes or apply Ships Test.",
+    "post_text": "No post generated",
+    "source_angle": "Ollama release notes are unavailable for this version.",
+    "source_tier": 2,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 60,
+    "created_at": "2026-07-07T14:06:01.112695Z"
+  },
+  {
+    "title": "MadsLorentzen/ai-job-search — AI-powered job application framework built on Claude Code. Fork it, fill in your profile, and let Claude evaluate jobs, tailor CVs, write cover letters, and prepare you f",
+    "link": "https://github.com/MadsLorentzen/ai-job-search",
+    "source": "GitHub Trending",
+    "score": 95,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "GitHub Trending: Open-source Claude Code framework for job applications",
+    "source_tier": 2,
+    "engagement_score": 2402.0,
+    "local_newsworthiness_score": 55,
+    "created_at": "2026-07-07T14:06:06.890540Z"
+  },
+  {
+    "title": "kyutai-labs/pocket-tts — A TTS that fits in your CPU (and pocket)",
+    "link": "https://github.com/kyutai-labs/pocket-tts",
+    "source": "GitHub Trending",
+    "score": 4,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 2,
+    "engagement_score": 510.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-07T14:06:06.891038Z"
   }
 ]
