@@ -5675,11 +5675,11 @@
   },
   {
     "id": "114435fd0f1d",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-06T19:41:01.563631Z",
     "score": 85,
     "reason": "Open-source CLI for AI agents to interact with Office files. Ships today, direct utility for enterprise automation.",
-    "proposed_post": "OfficeCLI, an open-source tool, launched on GitHub. It enables AI agents to programmatically read and edit Word, Excel, and PowerPoint files. Builders can now automate enterprise document workflows directly with agents.",
+    "proposed_post": "OfficeCLI turns Microsoft Office into a primitive for agent workflows.\n\niOfficeAI/OfficeCLI ships a CLI for agents to read and edit Word, Excel and PowerPoint files today,\n\nAgents can now automate enterprise document workflows without Office installed. Supports docx, xlsx, pptx, ",
     "source_angle": "New open-source CLI for AI agents to automate Office file tasks.",
     "source_item": {
       "title": "OfficeCLI: Office suite for AI agents to read and edit Microsoft Office files",
@@ -5710,11 +5710,23 @@
         "cluster_score": 20
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/114435fd0f1d.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Hey Chloe,\n\nHab da was auf HackerNews gefunden: OfficeCLI. Das ist ein Game Changer für jeden, der mit AI Agents und Office-Dateien arbeitet. Stell dir vor, du kannst deinen Agents direkt beibringen, Excel-Sheets zu lesen, Word-Dokumente zu bearbeiten oder Präsentationen zu erstellen – alles programmatisch, ohne die Office-Apps selbst zu öffnen.\n\nDas ist super relevant für Devs, die Automatisierung auf die nächste Stufe heben wollen, besonders in Bereichen wie Datenanalyse, Reporting oder Content-Generierung. Man könnte damit zum Beispiel AI-gesteuerte Dashboards bauen, die sich selbst aktualisieren, oder Agents, die Berichte basierend auf Rohdaten generieren und formatieren.\n\nDas Ding ist auf GitHub, Open Source – da können Devs direkt reinspringen und damit experimentieren. Das ist genau die Art von Tool, die wir in unserem Feed brauchen.",
-    "chloe_note": "Hey, *OfficeCLI: Office suite for AI agents to read and edit Microsoft Office files* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Open-source CLI for AI agents to interact with Office files. Ships today, direct utility for enterprise automation.Cluster context: 1 sources, engagement 53. Common terms: points, submitted, comments, hacker. Score aktuell: 85. Link: https://github.com/iOfficeAI/OfficeCLI"
+    "chloe_note": "Hey, *OfficeCLI: Office suite for AI agents to read and edit Microsoft Office files* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Open-source CLI for AI agents to interact with Office files. Ships today, direct utility for enterprise automation.Cluster context: 1 sources, engagement 53. Common terms: points, submitted, comments, hacker. Score aktuell: 85. Link: https://github.com/iOfficeAI/OfficeCLI",
+    "sarah_package": {
+      "title": "OfficeCLI turns Microsoft Office into a primitive for agent workflows.",
+      "subtitle": "iOfficeAI/OfficeCLI ships a CLI for agents to read and edit Word, Excel and PowerPoint files today, ",
+      "description": "Agents can now automate enterprise document workflows without Office installed. Supports docx, xlsx, pptx, CSV, images and PDF.",
+      "hashtags": [
+        "#OfficeCLI",
+        "#MicrosoftOffice",
+        "#AgentAutomation"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-06-officecli-office-suite-for-ai-agents-to-read-and-edit-microsoft-office-files-114435fd0f1d.md",
+    "published_at": "2026-07-07T00:13:14.865543Z"
   },
   {
     "id": "b2921f74d164",
