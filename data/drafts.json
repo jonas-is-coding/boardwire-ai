@@ -14362,5 +14362,61 @@
     "engagement_score": 50.5,
     "local_newsworthiness_score": 50,
     "created_at": "2026-07-07T22:51:38.970297Z"
+  },
+  {
+    "title": "Ollama v0.31.2",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.31.2-rc1",
+    "source": "Ollama Releases",
+    "score": 0,
+    "should_post": false,
+    "reason": "Summary is an error message (\"deferred: generation provider unavailable\"), not a release description. No concrete artifact or change to evaluate.",
+    "post_text": "No post generated",
+    "source_angle": "No source angle provided",
+    "source_tier": 2,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 60,
+    "created_at": "2026-07-08T01:43:23.082412Z"
+  },
+  {
+    "title": "Claude Code v2.1.204",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.204",
+    "source": "Claude Code Releases",
+    "score": 85,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Claude Code stability fix for headless sessions",
+    "source_tier": 1,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 35,
+    "created_at": "2026-07-08T01:43:28.156669Z"
+  },
+  {
+    "title": "vLLM v0.25.0rc1",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.25.0rc1",
+    "source": "vLLM Releases",
+    "score": 4,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 2,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 40,
+    "created_at": "2026-07-08T01:43:28.156938Z"
+  },
+  {
+    "title": "We charge $10k a week to delete AI-generated code",
+    "link": "https://odra.dev/slopfix/",
+    "source": "HackerNews",
+    "score": 3,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 204.5,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-07-08T01:43:28.157111Z"
   }
 ]
