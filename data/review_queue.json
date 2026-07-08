@@ -5785,11 +5785,11 @@
   },
   {
     "id": "97737fc049a5",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-06T22:57:28.170844Z",
     "score": 90,
     "reason": "New Claude Code version ships with concrete observability features for workflow debugging.",
-    "proposed_post": "Claude Code v2.1.202 adds `workflow.run_id` and `workflow.name` OpenTelemetry attributes. Builders can now reconstruct and monitor workflow activity from OTel data for improved debugging and observability.",
+    "proposed_post": "Claude Code adds observability primitives for agent workflows.\n\nVersion 2.1.202 exposes `workflow.run_id` and `workflow.name` in OpenTelemetry, enabling distributed\n\nDynamic workflow size setting introduced in /config. Workflow telemetry now emits OTel attributes for run reconstr",
     "source_angle": "Claude Code update improves workflow observability.",
     "source_item": {
       "title": "Claude Code v2.1.202",
@@ -5820,11 +5820,23 @@
         "cluster_score": 45
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/97737fc049a5.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das hier ist interessant für jeden, der mit Claude dynamische Workflows baut. Mit dem neuen \"Dynamic workflow size\" Setting können Devs jetzt direkt steuern, wie groß Claude die Agenten-Counts für Workflows macht. Das ist ein Advisory Guideline, aber gibt mehr Kontrolle über die Ressourcen.",
-    "chloe_note": "Kurzes Update: *Claude Code v2.1.202* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um New Claude Code version ships with concrete observability features for workflow debugging.Cluster context: 1 sources, engagement 0. Common terms: mcp, generally, client, unicode. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.202"
+    "chloe_note": "Kurzes Update: *Claude Code v2.1.202* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um New Claude Code version ships with concrete observability features for workflow debugging.Cluster context: 1 sources, engagement 0. Common terms: mcp, generally, client, unicode. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.202",
+    "sarah_package": {
+      "title": "Claude Code adds observability primitives for agent workflows.",
+      "subtitle": "Version 2.1.202 exposes `workflow.run_id` and `workflow.name` in OpenTelemetry, enabling distributed",
+      "description": "Dynamic workflow size setting introduced in /config. Workflow telemetry now emits OTel attributes for run reconstruction and debugging.",
+      "hashtags": [
+        "#ClaudeCode",
+        "#OpenTelemetry",
+        "#AgentWorkflows"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-06-claude-code-v2-1-202-97737fc049a5.md",
+    "published_at": "2026-07-08T11:09:20.031189Z"
   },
   {
     "id": "7a76bc63377a",
