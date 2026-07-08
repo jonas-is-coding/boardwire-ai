@@ -6026,11 +6026,11 @@
   },
   {
     "id": "19b3d3b078a7",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-08T20:56:28.496446Z",
     "score": 85,
     "reason": "Direct release of Ollama v0.31.2, a critical tool for local LLM development. Passes Ships Test.",
-    "proposed_post": "Ollama v0.31.2 is released. Update your local LLM environment for the latest bug fixes and performance improvements.",
+    "proposed_post": "Ollama updates local LLM development.\n\nOllama v0.31.2 passes Ships Test with latest bug fixes and performance updates, Apache 2.0 licensed.\n\nDirect release of Ollama v0.31.2 for local large language model development, scoring 85 on release evaluation.\n\n📖 Read the full article: fi",
     "source_angle": "Ollama v0.31.2 release for local LLM development",
     "source_item": {
       "title": "Ollama v0.31.2",
@@ -6040,9 +6040,21 @@
       "engagement_score": 0.0,
       "local_newsworthiness_score": 60
     },
-    "card_path": null,
+    "card_path": "generated/cards/19b3d3b078a7.png",
     "breaking": false,
     "reactivated_at": "2026-07-08T20:56:28.496446Z",
-    "is_llm_mode": true
+    "is_llm_mode": true,
+    "sarah_package": {
+      "title": "Ollama updates local LLM development.",
+      "subtitle": "Ollama v0.31.2 passes Ships Test with latest bug fixes and performance updates, Apache 2.0 licensed.",
+      "description": "Direct release of Ollama v0.31.2 for local large language model development, scoring 85 on release evaluation.",
+      "hashtags": [
+        "#Ollama",
+        "#LocalLLM",
+        "#Apache2"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-08-ollama-v0-31-2-19b3d3b078a7.md",
+    "published_at": "2026-07-08T22:12:15.472266Z"
   }
 ]
