@@ -5861,11 +5861,11 @@
   },
   {
     "id": "f6da0b422f1c",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-08T11:42:05.793243Z",
     "score": 90,
     "reason": "Open-source tool for local agent memory, addressing a common builder pain point with zero external dependencies. Passes Ships Test.",
-    "proposed_post": "TencentCloud released TencentDB Agent Memory, an open-source tool for fully local, zero-dependency long-term memory in AI agents. Builders can now manage agent memory without external API calls, simplifying deployments and reducing costs.",
+    "proposed_post": "Agent memory is now a local primitive with zero external APIs.\n\nTencentDB-Agent-Memory ships a 4-tier pipeline for persistent agent state, Apache 2.0, +610 stars on\n\nFirst open-source tool for fully local long-term memory in agents. Apache 2.0 license. No external API calls requi",
     "source_angle": "Open-source tool for local AI agent memory",
     "source_item": {
       "title": "TencentCloud/TencentDB-Agent-Memory — TencentDB Agent Memory delivers fully local long-term memory for AI Agents via a 4-tier progressive pipeline, with zero external API dependencies.",
@@ -5896,11 +5896,23 @@
         "cluster_score": 55
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/f6da0b422f1c.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, der TencentDB Agent Memory ist interessant, weil er eine *vollständig lokale* Langzeitgedächtnis-Lösung für KI-Agenten verspricht. Das ist ein Game-Changer für Entwickler, die datenschutzsensible Anwendungen bauen oder einfach keine externen API-Abhängigkeiten wollen. Damit kann man Agenten mit echtem Langzeitgedächtnis lokal laufen lassen, ohne sich um Latenz oder Kosten für externe Dienste kümmern zu müssen.",
-    "chloe_note": "Hey, *TencentCloud/TencentDB-Agent-Memory — TencentDB Agent Memory delivers fully local long-term memory for AI Agents via a 4-tier progressive pipeline, with zero external API dependencies.* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Open-source tool for local agent memory, addressing a common builder pain point with zero external dependencies. Passes Ships Test.Cluster context: 1 sources, engagement 610. Common terms: trending, local, +610, dependencies. Score aktuell: 90. Link: https://github.com/TencentCloud/TencentDB-Agent-Memory"
+    "chloe_note": "Hey, *TencentCloud/TencentDB-Agent-Memory — TencentDB Agent Memory delivers fully local long-term memory for AI Agents via a 4-tier progressive pipeline, with zero external API dependencies.* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Open-source tool for local agent memory, addressing a common builder pain point with zero external dependencies. Passes Ships Test.Cluster context: 1 sources, engagement 610. Common terms: trending, local, +610, dependencies. Score aktuell: 90. Link: https://github.com/TencentCloud/TencentDB-Agent-Memory",
+    "sarah_package": {
+      "title": "Agent memory is now a local primitive with zero external APIs.",
+      "subtitle": "TencentDB-Agent-Memory ships a 4-tier pipeline for persistent agent state, Apache 2.0, +610 stars on",
+      "description": "First open-source tool for fully local long-term memory in agents. Apache 2.0 license. No external API calls required.",
+      "hashtags": [
+        "#TencentCloud",
+        "#AgentMemory",
+        "#LocalInference"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-08-tencentcloud-tencentdb-agent-memory-tencentdb-agent-memory-delivers-fully-local-long-term-memory-for-ai-agents-via-a-4-tier-progressive-pipeline-with-zero-external-api-dependencies-f6da0b422f1c.md",
+    "published_at": "2026-07-08T18:21:58.450278Z"
   },
   {
     "id": "52f1a4ef869d",
