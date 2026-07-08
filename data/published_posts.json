@@ -1524,5 +1524,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-06-claude-code-v2-1-202-97737fc049a5.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mq4y77ltmf26",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mq4y77ltmf26"
+  },
+  {
+    "id": "52f1a4ef869d",
+    "published_at": "2026-07-08T15:25:12.164897Z",
+    "platform": "bluesky",
+    "post": "Geosql enables LLMs for geospatial data.\n\nGeosql integrates Claude/Codex with location-based datasets via SQL, 85 score on HackerNews.\n\nOpen-source tool for geospatial data processing, 58 engagement score, available on GitHub.\n\n📖 Read the full article: file:///home/runner/work/bo",
+    "source_link": "https://github.com/dekart-xyz/geosql",
+    "source_title": "Geosql: A Claude/Codex skill for geospatial data",
+    "score": 85,
+    "reason": "Open-source tool (Geosql) for Claude/Codex geospatial data processing ships today on GitHub.",
+    "card_path": "generated/cards/52f1a4ef869d.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-08-geosql-a-claude-codex-skill-for-geospatial-data-52f1a4ef869d.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mq5gip5rw62q",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mq5gip5rw62q"
   }
 ]
