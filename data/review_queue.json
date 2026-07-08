@@ -6026,12 +6026,12 @@
   },
   {
     "id": "19b3d3b078a7",
-    "status": "deferred_generation_unavailable",
-    "created_at": "2026-07-08T17:24:21.114833Z",
-    "score": 60,
-    "reason": "deferred: generation provider unavailable",
-    "proposed_post": "",
-    "source_angle": "Rule-based",
+    "status": "approved",
+    "created_at": "2026-07-08T20:56:28.496446Z",
+    "score": 85,
+    "reason": "Direct release of Ollama v0.31.2, a critical tool for local LLM development. Passes Ships Test.",
+    "proposed_post": "Ollama v0.31.2 is released. Update your local LLM environment for the latest bug fixes and performance improvements.",
+    "source_angle": "Ollama v0.31.2 release for local LLM development",
     "source_item": {
       "title": "Ollama v0.31.2",
       "source": "Ollama Releases",
@@ -6040,10 +6040,9 @@
       "engagement_score": 0.0,
       "local_newsworthiness_score": 60
     },
-    "deferred_at": "2026-07-08T17:24:21.114803Z",
-    "defer_count": 1,
-    "original_score": 60,
-    "original_reason": "deferred: generation provider unavailable",
-    "card_path": null
+    "card_path": null,
+    "breaking": false,
+    "reactivated_at": "2026-07-08T20:56:28.496446Z",
+    "is_llm_mode": true
   }
 ]
