@@ -5828,12 +5828,12 @@
   },
   {
     "id": "7a76bc63377a",
-    "status": "deferred_generation_unavailable",
-    "created_at": "2026-07-07T02:02:07.368752Z",
+    "status": "approved",
+    "created_at": "2026-07-08T08:08:03.246113Z",
     "score": 60,
-    "reason": "deferred: generation provider unavailable",
-    "proposed_post": "",
-    "source_angle": "Rule-based",
+    "reason": "local newsworthiness fallback",
+    "proposed_post": "Ollama adds local execution.\n\nOllama v0.31.2 runs on-device with 0 external calls, Apache 2.0 license.\n\nReplaces cloud-based generation with self-contained workflows, available on GitHub.\n\n#Ollama #LocalExecution #Apache2",
+    "source_angle": "Local high-score + Sarah/OpenRouter fallback",
     "source_item": {
       "title": "Ollama v0.31.2",
       "source": "Ollama Releases",
@@ -5842,10 +5842,9 @@
       "engagement_score": 0.0,
       "local_newsworthiness_score": 60
     },
-    "deferred_at": "2026-07-07T02:02:07.368718Z",
-    "defer_count": 1,
-    "original_score": 60,
-    "original_reason": "deferred: generation provider unavailable",
-    "card_path": null
+    "card_path": null,
+    "breaking": false,
+    "reactivated_at": "2026-07-08T08:08:03.246113Z",
+    "is_llm_mode": false
   }
 ]
