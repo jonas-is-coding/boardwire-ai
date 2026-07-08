@@ -14754,5 +14754,19 @@
     "engagement_score": 66.5,
     "local_newsworthiness_score": 0,
     "created_at": "2026-07-08T17:24:21.115232Z"
+  },
+  {
+    "title": "Ollama v0.31.2",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.31.2",
+    "source": "Ollama Releases",
+    "score": 10,
+    "should_post": false,
+    "reason": "Summary indicates release is deferred/unavailable. No concrete artifact or capability to act on today.",
+    "post_text": "No post generated",
+    "source_angle": "Ollama v0.31.2 release status unclear",
+    "source_tier": 2,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 60,
+    "created_at": "2026-07-08T19:06:14.775766Z"
   }
 ]
