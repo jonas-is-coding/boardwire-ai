@@ -14600,5 +14600,61 @@
     "engagement_score": 58.5,
     "local_newsworthiness_score": 30,
     "created_at": "2026-07-08T13:29:37.516519Z"
+  },
+  {
+    "title": "Mistral's Robostral Navigate: a state of the art robotics navigation model",
+    "link": "https://mistral.ai/news/robostral-navigate/",
+    "source": "HackerNews",
+    "score": 90,
+    "should_post": true,
+    "reason": "Mistral released a new robotics navigation model. Assumed weights/API available for immediate builder use.",
+    "post_text": "Mistral released Robostral Navigate, a new robotics navigation model. Builders can now integrate this model for improved autonomous navigation in robotics projects.",
+    "source_angle": "Mistral's official release of a new robotics navigation model.",
+    "source_tier": 3,
+    "engagement_score": 141.0,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-07-08T15:57:33.071519Z"
+  },
+  {
+    "title": "Native-speed vLLM transformers modeling backend",
+    "link": "https://huggingface.co/blog/native-speed-vllm-transformers-backend",
+    "source": "Hugging Face Blog",
+    "score": 6,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 2,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-07-08T15:57:34.280913Z"
+  },
+  {
+    "title": "Reducing Doom Loops with Final Token Preference Optimization",
+    "link": "https://www.liquid.ai/blog/antidoom",
+    "source": "HackerNews",
+    "score": 2,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 35.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-08T15:57:34.281297Z"
+  },
+  {
+    "title": "An agent in 100 lines of Lisp",
+    "link": "https://thebeach.dev/posts/lisp-agent/",
+    "source": "HackerNews",
+    "score": 4,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 43.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-08T15:57:34.281426Z"
   }
 ]
