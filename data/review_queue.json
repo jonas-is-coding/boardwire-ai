@@ -5971,11 +5971,11 @@
   },
   {
     "id": "11cf6bacaa16",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-08T15:57:33.071519Z",
     "score": 90,
     "reason": "Mistral released a new robotics navigation model. Assumed weights/API available for immediate builder use.",
-    "proposed_post": "Mistral released Robostral Navigate, a new robotics navigation model. Builders can now integrate this model for improved autonomous navigation in robotics projects.",
+    "proposed_post": "Mistral lowers barrier for autonomous systems.\n\nRobostral Navigate model available with immediate API access.\n\nMistral's new robotics navigation model enables builders to focus on application logic, reducing development time for autonomous navigation\n\n📖 Read the full article: fil",
     "source_angle": "Mistral's official release of a new robotics navigation model.",
     "source_item": {
       "title": "Mistral's Robostral Navigate: a state of the art robotics navigation model",
@@ -6006,11 +6006,23 @@
         "cluster_score": 10
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/11cf6bacaa16.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, check this Mistral Robostral Navigate Ding aus. Die haben ein neues Robotics-Navigationsmodell, das echt State-of-the-Art sein soll.\n\nFür Builder ist das interessant, weil es direkt die Hürde für autonome Systeme senkt. Wenn die Navigationsmodelle von Mistral wirklich so gut sind, können Entwickler sich auf die Anwendungslogik konzentrieren, statt monatelang an der Basis-Navigation zu schrauben. Das ist ein Hebel, um schneller von Proof-of-Concept zu funktionierenden Robotern zu kommen.",
-    "chloe_note": "Kurzes Update: *Mistral's Robostral Navigate: a state of the art robotics navigation model* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Mistral released a new robotics navigation model. Assumed weights/API available for immediate builder use.Cluster context: 1 sources, engagement 141. Common terms: mistral, robostral, art, navigation. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://mistral.ai/news/robostral-navigate/"
+    "chloe_note": "Kurzes Update: *Mistral's Robostral Navigate: a state of the art robotics navigation model* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Mistral released a new robotics navigation model. Assumed weights/API available for immediate builder use.Cluster context: 1 sources, engagement 141. Common terms: mistral, robostral, art, navigation. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://mistral.ai/news/robostral-navigate/",
+    "sarah_package": {
+      "title": "Mistral lowers barrier for autonomous systems.",
+      "subtitle": "Robostral Navigate model available with immediate API access.",
+      "description": "Mistral's new robotics navigation model enables builders to focus on application logic, reducing development time for autonomous navigation ",
+      "hashtags": [
+        "#Mistral",
+        "#RobostralNavigate",
+        "#AutonomousSystems"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-08-mistral-s-robostral-navigate-a-state-of-the-art-robotics-navigation-model-11cf6bacaa16.md",
+    "published_at": "2026-07-08T20:24:25.939144Z"
   },
   {
     "id": "19b3d3b078a7",
