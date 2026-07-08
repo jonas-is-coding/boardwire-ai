@@ -5901,5 +5901,48 @@
     "breaking": false,
     "claire_note": "Chloe, der TencentDB Agent Memory ist interessant, weil er eine *vollständig lokale* Langzeitgedächtnis-Lösung für KI-Agenten verspricht. Das ist ein Game-Changer für Entwickler, die datenschutzsensible Anwendungen bauen oder einfach keine externen API-Abhängigkeiten wollen. Damit kann man Agenten mit echtem Langzeitgedächtnis lokal laufen lassen, ohne sich um Latenz oder Kosten für externe Dienste kümmern zu müssen.",
     "chloe_note": "Hey, *TencentCloud/TencentDB-Agent-Memory — TencentDB Agent Memory delivers fully local long-term memory for AI Agents via a 4-tier progressive pipeline, with zero external API dependencies.* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Open-source tool for local agent memory, addressing a common builder pain point with zero external dependencies. Passes Ships Test.Cluster context: 1 sources, engagement 610. Common terms: trending, local, +610, dependencies. Score aktuell: 90. Link: https://github.com/TencentCloud/TencentDB-Agent-Memory"
+  },
+  {
+    "id": "52f1a4ef869d",
+    "status": "approved",
+    "created_at": "2026-07-08T13:29:37.516519Z",
+    "score": 85,
+    "reason": "Open-source tool (Geosql) for Claude/Codex geospatial data processing ships today on GitHub.",
+    "proposed_post": "Geosql, an open-source tool, enables Claude/Codex to process geospatial data via SQL. Builders can now integrate LLM capabilities with location-based datasets for analysis or application development.",
+    "source_angle": "New open-source tool for LLM-powered geospatial data processing.",
+    "source_item": {
+      "title": "Geosql: A Claude/Codex skill for geospatial data",
+      "source": "HackerNews",
+      "link": "https://github.com/dekart-xyz/geosql",
+      "source_tier": 3,
+      "engagement_score": 58.5,
+      "local_newsworthiness_score": 30,
+      "summary": "55 points, 7 comments on Hacker News — submitted by rzk — original: https://github.com/dekart-xyz/geosql\n[Cluster context: 1 sources, engagement 58, common terms: original, hacker, points, skill, geosql.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 58,
+        "common_terms": [
+          "original",
+          "hacker",
+          "points",
+          "skill",
+          "geosql",
+          "comments",
+          "submitted",
+          "claude/codex"
+        ],
+        "cluster_summary": "1 sources, engagement 58. Common terms: original, hacker, points, skill. Lead: Geosql: A Claude/Codex skill for geospatial data",
+        "alternative_titles": [],
+        "cluster_score": 0
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, check this out: \"Geosql: A Claude/Codex skill for geospatial data\" von HackerNews.\n\nDas ist relevant, weil es einen direkten Weg bietet, LLMs wie Claude oder Codex für Geospatial-Datenbanken nutzbar zu machen. Entwickler können damit komplexe Geo-Abfragen mit natürlicher Sprache formulieren, was die Entwicklung von Location-basierten Features massiv beschleunigen könnte. Stell dir vor, du fragst einfach: \"Zeig mir alle Cafés im Umkreis von 5km um den Eiffelturm\", und es generiert das SQL. Das spart Stunden beim manuellen Query-Building.",
+    "chloe_note": "Kurzes Update: *Geosql: A Claude/Codex skill for geospatial data* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Open-source tool (Geosql) for Claude/Codex geospatial data processing ships today on GitHub.Cluster context: 1 sources, engagement 58. Common terms: original, hacker, points, skill. Ich habe es mit 85 Punkten bewertet. Hier der Link: https://github.com/dekart-xyz/geosql"
   }
 ]
