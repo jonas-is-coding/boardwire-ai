@@ -14558,5 +14558,33 @@
     "engagement_score": 34.5,
     "local_newsworthiness_score": 0,
     "created_at": "2026-07-08T08:08:03.131866Z"
+  },
+  {
+    "title": "TencentCloud/TencentDB-Agent-Memory — TencentDB Agent Memory delivers fully local long-term memory for AI Agents via a 4-tier progressive pipeline, with zero external API dependencies.",
+    "link": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+    "source": "GitHub Trending",
+    "score": 90,
+    "should_post": true,
+    "reason": "Open-source tool for local agent memory, addressing a common builder pain point with zero external dependencies. Passes Ships Test.",
+    "post_text": "TencentCloud released TencentDB Agent Memory, an open-source tool for fully local, zero-dependency long-term memory in AI agents. Builders can now manage agent memory without external API calls, simplifying deployments and reducing costs.",
+    "source_angle": "Open-source tool for local AI agent memory",
+    "source_tier": 2,
+    "engagement_score": 610.0,
+    "local_newsworthiness_score": 15,
+    "created_at": "2026-07-08T11:42:05.793243Z"
+  },
+  {
+    "title": "wonderwhy-er/DesktopCommanderMCP — This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
+    "link": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
+    "source": "GitHub Trending",
+    "score": 8,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 2,
+    "engagement_score": 20.0,
+    "local_newsworthiness_score": 55,
+    "created_at": "2026-07-08T11:42:06.804341Z"
   }
 ]
