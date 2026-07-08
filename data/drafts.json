@@ -14824,5 +14824,47 @@
     "engagement_score": 0.0,
     "local_newsworthiness_score": 0,
     "created_at": "2026-07-08T20:56:28.386911Z"
+  },
+  {
+    "title": "Claude Code v2.1.205",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.205",
+    "source": "Claude Code Releases",
+    "score": 90,
+    "should_post": true,
+    "reason": "Direct release of Claude Code CLI/SDK update with critical bug fixes for structured output, local environment stability, and a new security feature.",
+    "post_text": "Claude Code v2.1.205 fixes `json-schema` output issues and Windows worktree deletion bugs. It also adds an auto mode rule to block session transcript tampering. Update for more reliable structured output, stable local environments, and enhanced session security.",
+    "source_angle": "Claude Code CLI/SDK update improves reliability and security.",
+    "source_tier": 1,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 55,
+    "created_at": "2026-07-08T22:55:48.321607Z"
+  },
+  {
+    "title": "LangChain v1.3.12",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.3.12",
+    "source": "LangChain Releases",
+    "score": 11,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 2,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 40,
+    "created_at": "2026-07-08T22:55:49.735008Z"
+  },
+  {
+    "title": "Automating cross-repo documentation with GitHub Agentic Workflows",
+    "link": "https://github.blog/ai-and-ml/github-copilot/automating-cross-repo-documentation-with-github-agentic-workflows/",
+    "source": "GitHub Blog AI",
+    "score": 9,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 2,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-08T22:55:49.735237Z"
   }
 ]
