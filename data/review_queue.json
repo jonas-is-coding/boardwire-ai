@@ -6126,11 +6126,11 @@
   },
   {
     "id": "d43ad68fd2e7",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-09T01:54:17.325355Z",
     "score": 65,
     "reason": "Direct patch release for a core library, fixing a specific developer experience issue.",
-    "proposed_post": "LangChain `langchain-openai` v1.3.4 suppresses Pydantic serializer warnings for structured output. Builders using structured output with OpenAI models will see cleaner logs and improved developer experience.",
+    "proposed_post": "LangChain stabilizes OpenAI workflows.\n\nLangChain v1.3.4 fixes Pydantic serializer warnings for structured output, improving developer exper\n\nSupresses Pydantic serializer warnings on parsed fields for OpenAI models, enhancing log clarity and parsing workflows.\n\n📖 Read the full a",
     "source_angle": "LangChain `langchain-openai` patch release",
     "source_item": {
       "title": "LangChain v1.3.4",
@@ -6161,10 +6161,22 @@
         "cluster_score": 35
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/d43ad68fd2e7.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das LangChain 1.3.4 Update ist relevant, weil es einen spezifischen Pydantic-Serializer-Warning beim Parsen von Structured Output behebt. Das ist ein kleines, aber wichtiges Fix, das Entwicklern, die LangChain mit OpenAI und Pydantic für strukturierte Daten nutzen, eine Menge Frustration ersparen kann. Direkt nutzbar für alle, die saubere, warnungsfreie Logs und stabilere Parsing-Workflows wollen.",
-    "chloe_note": "Hey, *LangChain v1.3.4* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Direct patch release for a core library, fixing a specific developer experience issue.Cluster context: 1 sources, engagement 0. Common terms: since, fix, parsed, vcr. Score aktuell: 65. Link: https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.3.4"
+    "chloe_note": "Hey, *LangChain v1.3.4* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Direct patch release for a core library, fixing a specific developer experience issue.Cluster context: 1 sources, engagement 0. Common terms: since, fix, parsed, vcr. Score aktuell: 65. Link: https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.3.4",
+    "sarah_package": {
+      "title": "LangChain stabilizes OpenAI workflows.",
+      "subtitle": "LangChain v1.3.4 fixes Pydantic serializer warnings for structured output, improving developer exper",
+      "description": "Supresses Pydantic serializer warnings on parsed fields for OpenAI models, enhancing log clarity and parsing workflows.",
+      "hashtags": [
+        "#LangChain",
+        "#OpenAI",
+        "#Pydantic"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-09-langchain-v1-3-4-d43ad68fd2e7.md",
+    "published_at": "2026-07-09T16:01:36.941562Z"
   }
 ]

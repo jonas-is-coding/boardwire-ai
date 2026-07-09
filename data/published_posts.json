@@ -1608,5 +1608,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-08-claude-code-v2-1-205-c58c1cb6c3dd.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mq6twfygoi2n",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mq6twfygoi2n"
+  },
+  {
+    "id": "d43ad68fd2e7",
+    "published_at": "2026-07-09T16:01:36.941562Z",
+    "platform": "bluesky",
+    "post": "LangChain stabilizes OpenAI workflows.\n\nLangChain v1.3.4 fixes Pydantic serializer warnings for structured output, improving developer exper\n\nSupresses Pydantic serializer warnings on parsed fields for OpenAI models, enhancing log clarity and parsing workflows.\n\n📖 Read the full a",
+    "source_link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.3.4",
+    "source_title": "LangChain v1.3.4",
+    "score": 65,
+    "reason": "Direct patch release for a core library, fixing a specific developer experience issue.",
+    "card_path": "generated/cards/d43ad68fd2e7.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-09-langchain-v1-3-4-d43ad68fd2e7.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mq7yyqa4rd2s",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mq7yyqa4rd2s"
   }
 ]
