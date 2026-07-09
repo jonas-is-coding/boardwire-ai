@@ -6178,5 +6178,48 @@
     },
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-09-langchain-v1-3-4-d43ad68fd2e7.md",
     "published_at": "2026-07-09T16:01:36.941562Z"
+  },
+  {
+    "id": "6728904eaa5a",
+    "status": "approved",
+    "created_at": "2026-07-09T21:12:37.979649Z",
+    "score": 95,
+    "reason": "OpenAI's new flagship model is generally available via API, with concrete pricing and performance claims for agentic workflows.",
+    "proposed_post": "OpenAI's GPT-5.6 (Luna, Terra, Sol) is now GA via API. New pricing: $1-5/M input, $6-30/M output. OpenAI claims improved agentic performance over Claude Fable 5. Builders can test its efficiency for complex, multi-step tasks and compare cost-performance.",
+    "source_angle": "OpenAI GPT-5.6 GA, pricing, agentic performance claims",
+    "source_item": {
+      "title": "Simon Willison v5.6",
+      "source": "Simon Willison",
+      "link": "https://simonwillison.net/2026/Jul/9/gpt-5-6/#atom-entries",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 0,
+      "summary": "<p>OpenAI's latest flagship model <a href=\"https://openai.com/index/gpt-5-6/\">hit general availability this morning</a>, and comes in three sizes: Luna, Terra, and Sol (from smallest to largest).</p>\n<p>The new models are priced per 1M input/output tokens as Luna $1/$6, Terra $2.50/$15, Sol $5/$30. For comparison, the Claude Opus series are $5/$25 and the Claude Fable 5 is $10/$50, but price-per-million tokens doesn't tell us much now that the number of reasoning tokens can differ so much between models for the same task.</p>\n\n\n<p>OpenAI's biggest benchmark claim concerns long-running agentic performance, with one benchmark showing all three models outperforming Claude Fable 5:</p>\n<blockquote>\n<p>We trained GPT-5.6 to get more useful work from every token. On <a href=\"https://agents-last-exam.org/\">Agents’ Last Exam</a>, an evaluation of long-running professional workflows across 55 fields, GPT-5.6 Sol sets a new high of 53.6, eclipsing Claude Fable 5 (adaptive reasoning) by 13.1 points. Even at medium reasoning, it beats Fable 5 by 11.4 points at roughly one-quarter the estimated cost. That efficiency extends to smaller models, which are essential to making intelligence more abundant and affordable: GPT-5.6 Terra and GPT-5.6 Luna outperform Fable 5 at around one-sixteenth the cost.</p>\n</blockquote>\n<p>Amusingly, one self-reported benchmark that Fable 5 crushed the GPT-5.6 family on was SWE-Bench Pro, where Fable 5 got 80% compared to GUT-5.6 Sol getting 64.6%. This may help explain why OpenAI chose to publish <a href=\"https://openai.com/index/separating-signal-from-noise-coding-evaluations/\">this article yesterday</a> specifically calling out SWE-Bench Pro for problems they found while auditing that benchmark:</p>\n<blockquote>\n<p>In light of these results, we estimate that ~30% of SWE-bench Pro tasks are broken, and advise that model developers carefully examine results</p>\n</blockquote>\n<p>I've had some early access to GPT-5.6 Sol - it's definitely very competent, though so far it hasn't struck me as better than Fable at the kind of complex coding tasks I've been using with Anthropic's model.</p>\n<p>As usual, the <a href=\"https://developers.openai.com/api/docs/guides/latest-model?model=gpt-5.6\">model guidance for using GPT-5.6</a> has the most interesting details. There are a bunch of new API features that I need to explore (and probably add support for in <a href=\"https://llm.datasette.io/\">LLM</a>), including:</p>\n<ul>\n<li>\n<a href=\"https://developers.openai.com/api/docs/guides/tools-programmatic-tool-calling\">Programmatic Tool Calling</a> allows the models to \"compose and run JavaScript that orchestrates tool calls\" - which sounds to me like it could help bridge the gap between MCPs and full terminal sessions that can compose CLI utilities in useful ways. Also reminiscent of the <a href=\"https://platform.claude.com/docs/en/agents-and-tools/tool-use/web-search-tool#dynamic-filtering\">dynamic filtering</a> mechanism Anthropic added to their web search tool, which allows code execution against web results as part of a single model turn.</li>\n<li>\n<a href=\"https://developers.openai.com/api/docs/guides/tools-multi-agent\">Multi-agent</a> lets the model \"spin up subagents for parallel, focused work\" - the sub-agent pattern now baked into the core API.</li>\n<li>\n<a href=\"https://developers.openai.com/api/docs/guides/prompt-caching#prompt-cache-breakpoints\">Prompt cache breakpoints</a> brings the Claude model of prompt caching to OpenAI, letting you be explicit about where the cache breakpoints are rather than relying on the API to detect them automatically. Personally I much prefer automatic detection (still supported by OpenAI), but presumably there are optimization cost savings to be had here if you put the work in.</li>\n<li>You can now set <a href=\"https://developers.openai.com/api/docs/guides/images-vision#choose-an-image-detail-level\">detail: original</a> on image requests to avoid resizing the image at all before it is processed.</li>\n</ul>\n<p>Here's <a href=\"https://static.simonwillison.net/static/2026/gpt-5.6-pelicans.html\">a full page with 18 different pelicans</a> - for reasoning efforts none, low, medium, high, xhigh, and max across the three different models. It also lists their token and calculated costs - the least expensive was gpt-5.6-luna at effort none for 0.71 cents, the most expensive was gpt-5.6-sol at max reasoning level for 48.55 cents.</p>\n<p><img alt=\"A grid of nine pelicans riding bicycles, of varying quality\" src=\"https://static.simonwillison.net/static/2026/gpt-5.6-pelicans.webp\" /></p>\n<p>In further pelican news, if you jump to 17:50 in <a href=\"https://www.youtube.com/live/Wq45rvPGNHs?t=1070s\">their livestream from this morning</a> you'll see OpenAI's own demo of 3D pelicans riding a tricycle, a bicycle, a pony, and another pelican!</p>\n<p><img alt=\"Frame from a livestream showing a 3D model of a pelican riding another pelican\" src=\"https://static.simonwillison.net/static/2026/pelican-riding-a-pelican.jpg\" /></p><p><em>You are only seeing the long-form articles from my blog. Subscribe to <a href=\"https://simonwillison.net/atom/everything/\">/atom/everything/</a> to get all of my posts, or take a look at my <a href=\"https://simonwillison.net/about/#subscribe\">other subscription options</a>.</em></p>\n[Cluster context: 1 sources, engagement 0, common terms: can, terminal, api., agentic, three.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Simon Willison"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "can",
+          "terminal",
+          "api.",
+          "agentic",
+          "three",
+          "still",
+          "task.",
+          "lists"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: can, terminal, api., agentic. Lead: Simon Willison v5.6",
+        "alternative_titles": [],
+        "cluster_score": 5
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, das ist ein Kracher. OpenAI hat GPT-5.6 released – Luna, Terra, Sol.\n\nDas sind neue Modelle, die jetzt general verfügbar sind. Für Builder heißt das: direkt loslegen, die neuen Preismodelle sind auch schon da. Luna ist mit $1/$6 pro 1M Input/Output Token die günstigste Option. Damit können wir jetzt direkt neue Use Cases durchrechnen und deployen.",
+    "chloe_note": "Hey, *Simon Willison v5.6* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen OpenAI's new flagship model is generally available via API, with concrete pricing and performance claims for agentic workflows.Cluster context: 1 sources, engagement 0. Common terms: can, terminal, api., agentic. Score aktuell: 95. Link: https://simonwillison.net/2026/Jul/9/gpt-5-6/#atom-entries"
   }
 ]
