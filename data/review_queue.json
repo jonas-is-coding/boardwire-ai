@@ -5840,11 +5840,11 @@
   },
   {
     "id": "7a76bc63377a",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-08T08:08:03.246113Z",
     "score": 60,
     "reason": "local newsworthiness fallback",
-    "proposed_post": "Ollama adds local execution.\n\nOllama v0.31.2 runs on-device with 0 external calls, Apache 2.0 license.\n\nReplaces cloud-based generation with self-contained workflows, available on GitHub.\n\n#Ollama #LocalExecution #Apache2",
+    "proposed_post": "Local execution becomes default for model serving.\n\nOllama v0.31.2 runs on-device with zero external calls, Apache 2.0. GitHub release.\n\nSelf-contained model serving replaces cloud dependency. Now available on GitHub under Apache 2.0 license.\n\n📖 Read the full article: file:///hom",
     "source_angle": "Local high-score + Sarah/OpenRouter fallback",
     "source_item": {
       "title": "Ollama v0.31.2",
@@ -5854,10 +5854,22 @@
       "engagement_score": 0.0,
       "local_newsworthiness_score": 60
     },
-    "card_path": null,
+    "card_path": "generated/cards/7a76bc63377a.png",
     "breaking": false,
     "reactivated_at": "2026-07-08T08:08:03.246113Z",
-    "is_llm_mode": false
+    "is_llm_mode": false,
+    "sarah_package": {
+      "title": "Local execution becomes default for model serving.",
+      "subtitle": "Ollama v0.31.2 runs on-device with zero external calls, Apache 2.0. GitHub release.",
+      "description": "Self-contained model serving replaces cloud dependency. Now available on GitHub under Apache 2.0 license.",
+      "hashtags": [
+        "#Ollama",
+        "#LocalExecution",
+        "#Apache2"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-08-ollama-v0-31-2-7a76bc63377a.md",
+    "published_at": "2026-07-09T00:15:56.323049Z"
   },
   {
     "id": "f6da0b422f1c",
