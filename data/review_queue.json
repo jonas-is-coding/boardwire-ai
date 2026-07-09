@@ -6071,11 +6071,11 @@
   },
   {
     "id": "c58c1cb6c3dd",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-08T22:55:48.321607Z",
     "score": 90,
     "reason": "Direct release of Claude Code CLI/SDK update with critical bug fixes for structured output, local environment stability, and a new security feature.",
-    "proposed_post": "Claude Code v2.1.205 fixes `json-schema` output issues and Windows worktree deletion bugs. It also adds an auto mode rule to block session transcript tampering. Update for more reliable structured output, stable local environments, and enhanced session security.",
+    "proposed_post": "Claude Code v2.1.205 hardens session integrity for critical workflows.\n\nAuto mode blocks transcript tampering, fixes --json-schema output, and stabilizes Windows worktrees.\n\nCLI/SDK update closes session file manipulation vectors, corrects JSON schema handling, and prevents messa",
     "source_angle": "Claude Code CLI/SDK update improves reliability and security.",
     "source_item": {
       "title": "Claude Code v2.1.205",
@@ -6106,11 +6106,23 @@
         "cluster_score": 45
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/c58c1cb6c3dd.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das hier ist ein kleiner, aber wichtiger Fix von Claude.\n\n\"Auto mode rule blockiert Manipulation von Session Transcript Files\" – das ist ein direktes Sicherheitsfeature. Entwickler, die Claude in kritischen Anwendungen nutzen, wissen, dass ihre Session-Daten jetzt besser geschützt sind.\n\nAußerdem beheben sie das Problem mit '—json-schema', das bei ungültigem Schema stillschweigend unstrukturiertes Output produzierte. Das ist ein Qualitäts-of-Life-Update für jeden, der mit strukturierten Daten arbeitet und sich auf die Integrität der Ausgabe verlassen muss. Kein Kopfzerbrechen mehr, warum die Daten nicht passen.",
-    "chloe_note": "*Claude Code v2.1.205* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Direct release of Claude Code CLI/SDK update with critical bug fixes for structured output, local environment stability, and a new security feature.Cluster context: 1 sources, engagement 0. Common terms: launched, junction, jobs, membership. Bewertung: 90. Quelle: https://github.com/anthropics/claude-code/releases/tag/v2.1.205"
+    "chloe_note": "*Claude Code v2.1.205* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Direct release of Claude Code CLI/SDK update with critical bug fixes for structured output, local environment stability, and a new security feature.Cluster context: 1 sources, engagement 0. Common terms: launched, junction, jobs, membership. Bewertung: 90. Quelle: https://github.com/anthropics/claude-code/releases/tag/v2.1.205",
+    "sarah_package": {
+      "title": "Claude Code v2.1.205 hardens session integrity for critical workflows.",
+      "subtitle": "Auto mode blocks transcript tampering, fixes --json-schema output, and stabilizes Windows worktrees.",
+      "description": "CLI/SDK update closes session file manipulation vectors, corrects JSON schema handling, and prevents message loss on Windows.",
+      "hashtags": [
+        "#ClaudeCode",
+        "#CLI",
+        "#StructuredOutput"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-08-claude-code-v2-1-205-c58c1cb6c3dd.md",
+    "published_at": "2026-07-09T04:58:08.711305Z"
   },
   {
     "id": "d43ad68fd2e7",
