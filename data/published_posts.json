@@ -1678,5 +1678,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-10-vllm-v0-25-0-262a4517cea6.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqchx5oxr22j",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqchx5oxr22j"
+  },
+  {
+    "id": "bf1adf9e895a",
+    "published_at": "2026-07-10T18:25:00.473820Z",
+    "platform": "bluesky",
+    "post": "GitHub cut Copilot code review costs with Unix-style agent workflows.\n\nGitHub Blog details a production methodology that reduced review cost by reshaping agent orchestrati\n\nGitHub replaced ad-hoc tooling with shared Unix-style exploration primitives to reduce review cost by resha",
+    "source_link": "https://github.blog/ai-and-ml/github-copilot/better-tools-made-copilot-code-review-worse-heres-how-we-actually-improved-it/",
+    "source_title": "Better tools made Copilot code review worse. Here’s how we actually improved it.",
+    "score": 70,
+    "reason": "GitHub detailed a production methodology for improving AI agent workflows, offering actionable insights for builders.",
+    "card_path": "generated/cards/bf1adf9e895a.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-10-better-tools-made-copilot-code-review-worse-here-s-how-we-actually-improved-it-bf1adf9e895a.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqcri3ozzy22",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqcri3ozzy22"
   }
 ]

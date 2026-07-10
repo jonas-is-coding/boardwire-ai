@@ -6443,11 +6443,11 @@
   },
   {
     "id": "bf1adf9e895a",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-10T16:14:31.402429Z",
     "score": 70,
     "reason": "GitHub detailed a production methodology for improving AI agent workflows, offering actionable insights for builders.",
-    "proposed_post": "GitHub reduced Copilot code review costs by integrating Unix-style tools & reshaping agent workflows. Builders can apply these agent orchestration strategies to optimize their own AI systems for similar cost/performance gains.",
+    "proposed_post": "GitHub cut Copilot code review costs with Unix-style agent workflows.\n\nGitHub Blog details a production methodology that reduced review cost by reshaping agent orchestrati\n\nGitHub replaced ad-hoc tooling with shared Unix-style exploration primitives to reduce review cost by resha",
     "source_angle": "GitHub shares methodology for optimizing AI agent workflows in production.",
     "source_item": {
       "title": "Better tools made Copilot code review worse. Here’s how we actually improved it.",
@@ -6478,10 +6478,22 @@
         "cluster_score": 35
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/bf1adf9e895a.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, der GitHub-Artikel über Copilot Code Review ist interessant.\n\nSie haben festgestellt, dass bessere Tools die Code-Review-Qualität verschlechtert haben und mussten den Workflow anpassen. Das ist ein praktisches Beispiel dafür, wie man KI-Agenten und bestehende Tools sinnvoll integriert, um die \"Review Cost\" zu senken. Entwickler, die versuchen, KI in ihre eigenen Prozesse einzubauen, können hier direkt lernen, wie man Fallstricke vermeidet und echte Effizienzgewinne erzielt, statt nur neue Tools zu stapeln.",
-    "chloe_note": "Kurzes Update: *Better tools made Copilot code review worse. Here’s how we actually improved it.* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um GitHub detailed a production methodology for improving AI agent workflows, offering actionable insights for builders.Cluster context: 1 sources, engagement 0. Common terms: #8217, review, copilot, exploration. Ich habe es mit 70 Punkten bewertet. Hier der Link: https://github.blog/ai-and-ml/github-copilot/better-tools-made-copilot-code-review-worse-heres-how-we-actually-improved-it/"
+    "chloe_note": "Kurzes Update: *Better tools made Copilot code review worse. Here’s how we actually improved it.* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um GitHub detailed a production methodology for improving AI agent workflows, offering actionable insights for builders.Cluster context: 1 sources, engagement 0. Common terms: #8217, review, copilot, exploration. Ich habe es mit 70 Punkten bewertet. Hier der Link: https://github.blog/ai-and-ml/github-copilot/better-tools-made-copilot-code-review-worse-heres-how-we-actually-improved-it/",
+    "sarah_package": {
+      "title": "GitHub cut Copilot code review costs with Unix-style agent workflows.",
+      "subtitle": "GitHub Blog details a production methodology that reduced review cost by reshaping agent orchestrati",
+      "description": "GitHub replaced ad-hoc tooling with shared Unix-style exploration primitives to reduce review cost by reshaping agent workflows around pull ",
+      "hashtags": [
+        "#GitHub",
+        "#Copilot",
+        "#AgentOrchestration"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-10-better-tools-made-copilot-code-review-worse-here-s-how-we-actually-improved-it-bf1adf9e895a.md",
+    "published_at": "2026-07-10T18:25:00.473820Z"
   }
 ]
