@@ -6385,5 +6385,48 @@
     "breaking": false,
     "claire_note": "Chloe, vLLM v0.25.0 ist raus. Das ist ein wichtiger Performance-Boost für alle, die LLMs hosten. Besonders die neuen Batching-Strategien und PagedAttention v2 könnten die Latenz und den Durchsatz bei Inference-Workloads signifikant verbessern. Entwickler können damit ihre Deployment-Kosten senken und gleichzeitig eine bessere User Experience bieten.",
     "chloe_note": "Hey, *vLLM v0.25.0* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New version of critical LLM inference engine released. Direct action for builders to check changelog for updates.Cluster context: 1 sources, engagement 0. Common terms: v0.25.0, lwilkins, signed-off-by, redhat.com. Score aktuell: 90. Link: https://github.com/vllm-project/vllm/releases/tag/v0.25.0"
+  },
+  {
+    "id": "5c73010e6039",
+    "status": "approved",
+    "created_at": "2026-07-10T12:19:41.320451Z",
+    "score": 90,
+    "reason": "Open-source library of agent skills for Stitch MCP & other agents. Ships today, clear utility for builders.",
+    "proposed_post": "Google Labs released `stitch-skills`, an open-source library of agent skills. These standard-compliant skills integrate directly with Stitch MCP, Gemini CLI, and Claude Code, offering immediate utility for agent development.",
+    "source_angle": "Google Labs open-sources agent skills for Stitch MCP",
+    "source_item": {
+      "title": "google-labs-code/stitch-skills — A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as ",
+      "source": "GitHub Trending",
+      "link": "https://github.com/google-labs-code/stitch-skills",
+      "source_tier": 2,
+      "engagement_score": 101.0,
+      "local_newsworthiness_score": 35,
+      "summary": "Trending on GitHub today: +101 stars. A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.\n[Cluster context: 1 sources, engagement 101, common terms: work, skills, cli, stars., such.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 101,
+        "common_terms": [
+          "work",
+          "skills",
+          "cli",
+          "stars.",
+          "such",
+          "claude",
+          "google-labs-code/stitch-skills",
+          "gemini"
+        ],
+        "cluster_summary": "1 sources, engagement 101. Common terms: work, skills, cli, stars.. Lead: google-labs-code/stitch-skills — A library of Agent Skills designed to work with the Stitch MCP server. Each skill follo",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, schau dir das mal an. Google Labs hat 'stitch-skills' released – eine Bibliothek von Agent Skills, die mit ihrem Stitch MCP Server laufen.\n\nDas ist relevant, weil diese Skills dem offenen Agent Skills Standard folgen. Das bedeutet, dass Entwickler, die bereits mit Coding-Agenten wie Antigravity, Gemini CLI oder Claude Code arbeiten, diese neuen Fähigkeiten direkt integrieren können. Es ist ein direkt nutzbares Toolkit, um ihre eigenen Agents zu erweitern, ohne alles von Grund auf neu bauen zu müssen.",
+    "chloe_note": "*google-labs-code/stitch-skills — A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as * ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Open-source library of agent skills for Stitch MCP & other agents. Ships today, clear utility for builders.Cluster context: 1 sources, engagement 101. Common terms: work, skills, cli, stars. Bewertung: 90. Quelle: https://github.com/google-labs-code/stitch-skills"
   }
 ]
