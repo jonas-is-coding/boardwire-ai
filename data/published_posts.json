@@ -1664,5 +1664,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-10-servers-v2026-7-10-cdc508696d4b.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqc3rdrpjr2o",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqc3rdrpjr2o"
+  },
+  {
+    "id": "262a4517cea6",
+    "published_at": "2026-07-10T15:34:29.202064Z",
+    "platform": "bluesky",
+    "post": "vLLM ships PagedAttention v2 for batched inference.\n\nvLLM v0.25.0 enables +22% throughput and lower latency on A100 GPUs. Apache 2.0.\n\nNew BatchingStrategy and PagedAttention v2 reduce KV cache fragmentation. Replaces vLLM v0.24.1 for production deployments.\n\n📖 Read the full arti",
+    "source_link": "https://github.com/vllm-project/vllm/releases/tag/v0.25.0",
+    "source_title": "vLLM v0.25.0",
+    "score": 90,
+    "reason": "New version of critical LLM inference engine released. Direct action for builders to check changelog for updates.",
+    "card_path": "generated/cards/262a4517cea6.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-10-vllm-v0-25-0-262a4517cea6.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqchx5oxr22j",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqchx5oxr22j"
   }
 ]

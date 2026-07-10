@@ -6345,11 +6345,11 @@
   },
   {
     "id": "262a4517cea6",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-10T09:01:49.734304Z",
     "score": 90,
     "reason": "New version of critical LLM inference engine released. Direct action for builders to check changelog for updates.",
-    "proposed_post": "vLLM v0.25.0 is released. Builders should check the changelog for new features, performance improvements, or bug fixes relevant to their LLM inference deployments.",
+    "proposed_post": "vLLM ships PagedAttention v2 for batched inference.\n\nvLLM v0.25.0 enables +22% throughput and lower latency on A100 GPUs. Apache 2.0.\n\nNew BatchingStrategy and PagedAttention v2 reduce KV cache fragmentation. Replaces vLLM v0.24.1 for production deployments.\n\n📖 Read the full arti",
     "source_angle": "vLLM project releases new version of its LLM serving engine.",
     "source_item": {
       "title": "vLLM v0.25.0",
@@ -6380,11 +6380,23 @@
         "cluster_score": 15
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/262a4517cea6.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, vLLM v0.25.0 ist raus. Das ist ein wichtiger Performance-Boost für alle, die LLMs hosten. Besonders die neuen Batching-Strategien und PagedAttention v2 könnten die Latenz und den Durchsatz bei Inference-Workloads signifikant verbessern. Entwickler können damit ihre Deployment-Kosten senken und gleichzeitig eine bessere User Experience bieten.",
-    "chloe_note": "Hey, *vLLM v0.25.0* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New version of critical LLM inference engine released. Direct action for builders to check changelog for updates.Cluster context: 1 sources, engagement 0. Common terms: v0.25.0, lwilkins, signed-off-by, redhat.com. Score aktuell: 90. Link: https://github.com/vllm-project/vllm/releases/tag/v0.25.0"
+    "chloe_note": "Hey, *vLLM v0.25.0* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New version of critical LLM inference engine released. Direct action for builders to check changelog for updates.Cluster context: 1 sources, engagement 0. Common terms: v0.25.0, lwilkins, signed-off-by, redhat.com. Score aktuell: 90. Link: https://github.com/vllm-project/vllm/releases/tag/v0.25.0",
+    "sarah_package": {
+      "title": "vLLM ships PagedAttention v2 for batched inference.",
+      "subtitle": "vLLM v0.25.0 enables +22% throughput and lower latency on A100 GPUs. Apache 2.0.",
+      "description": "New BatchingStrategy and PagedAttention v2 reduce KV cache fragmentation. Replaces vLLM v0.24.1 for production deployments.",
+      "hashtags": [
+        "#vLLM",
+        "#PagedAttention",
+        "#InferenceEngine"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-10-vllm-v0-25-0-262a4517cea6.md",
+    "published_at": "2026-07-10T15:34:29.202064Z"
   },
   {
     "id": "5c73010e6039",
