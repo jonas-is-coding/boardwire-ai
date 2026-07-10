@@ -1622,5 +1622,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-09-langchain-v1-3-4-d43ad68fd2e7.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mq7yyqa4rd2s",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mq7yyqa4rd2s"
+  },
+  {
+    "id": "bfc324b21463",
+    "published_at": "2026-07-10T04:56:28.358446Z",
+    "platform": "bluesky",
+    "post": "Claude Code optimizes context with /doctor check.\n\nTrims CLAUDE.md files, auto-allows git push to configured remotes, with /cd path suggestions.\n\nReduces token costs by removing redundant information, improving Claude's code understanding, with updated /commit-push-pr and /cd com",
+    "source_link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.206",
+    "source_title": "Claude Code v2.1.206",
+    "score": 90,
+    "reason": "New Claude Code CLI version with concrete features for context optimization and developer workflow improvements.",
+    "card_path": "generated/cards/bfc324b21463.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-10-claude-code-v2-1-206-bfc324b21463.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqbecapgw32c",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqbecapgw32c"
   }
 ]
