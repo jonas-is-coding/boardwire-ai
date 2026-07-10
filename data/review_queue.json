@@ -6221,5 +6221,48 @@
     "breaking": false,
     "claire_note": "Chloe, das ist ein Kracher. OpenAI hat GPT-5.6 released – Luna, Terra, Sol.\n\nDas sind neue Modelle, die jetzt general verfügbar sind. Für Builder heißt das: direkt loslegen, die neuen Preismodelle sind auch schon da. Luna ist mit $1/$6 pro 1M Input/Output Token die günstigste Option. Damit können wir jetzt direkt neue Use Cases durchrechnen und deployen.",
     "chloe_note": "Hey, *Simon Willison v5.6* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen OpenAI's new flagship model is generally available via API, with concrete pricing and performance claims for agentic workflows.Cluster context: 1 sources, engagement 0. Common terms: can, terminal, api., agentic. Score aktuell: 95. Link: https://simonwillison.net/2026/Jul/9/gpt-5-6/#atom-entries"
+  },
+  {
+    "id": "bfc324b21463",
+    "status": "approved",
+    "created_at": "2026-07-10T01:52:44.656037Z",
+    "score": 90,
+    "reason": "New Claude Code CLI version with concrete features for context optimization and developer workflow improvements.",
+    "proposed_post": "Claude Code v2.1.206 adds a `/doctor` check to trim `CLAUDE.md` files, optimizing context. This can reduce token costs and improve Claude's code understanding by removing redundant information. Also, `/commit-push-pr` now auto-allows `git push` to configured remotes.",
+    "source_angle": "Claude Code CLI update for context management and dev workflow",
+    "source_item": {
+      "title": "Claude Code v2.1.206",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.206",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 35,
+      "summary": "<h2>What's changed</h2>\n<ul>\n<li>Added directory path suggestions to <code>/cd</code>, matching <code>/add-dir</code> behavior</li>\n<li>Added a <code>/doctor</code> check that proposes trimming checked-in <code>CLAUDE.md</code> files by cutting content Claude could derive from the codebase</li>\n<li><code>/commit-push-pr</code> now auto-allows <code>git push</code> to the repo's configured push remote (<code>remote.pushDefault</code>, or the sole remote when only one is configured) in addition to <code>origin</code></li>\n<li>Gateway: <code>/login</code> now supports Anthropic-operated public gateway endpoints</li>\n<li><code>EnterWorktree</code> now asks for confirmation before entering a git worktree outside the project's <code>.claude/worktrees/</code> directory</li>\n<li>Background agents now upgrade to a new version in the background right after a Claude Code update, instead of paying a slow stale-session upgrade when you attach</li>\n<li>Fixed an expired login failing every model with a misleading \"There's an issue with the selected model\" error instead of prompting to run <code>/login</code></li>\n<li>Fixed <code>claude --resume</code> and <code>--continue</code> not responding to keyboard input on startup</li>\n<li>Fixed MCP servers configured via <code>--mcp-config</code> or <code>.mcp.json</code> ignoring a per-server <code>request_timeout_ms</code>, which caused long-running MCP tool calls to time out at the 60s default in fresh sessions</li>\n<li>Fixed <code>CLAUDE_CODE_EXTRA_BODY</code> being silently ignored by <code>claude agents</code> / <code>--bg</code> background workers; the shell-exported override now follows the dispatching session</li>\n<li>Fixed OAuth MCP servers requiring manual re-authentication after a single failed token refresh</li>\n<li>Fixed <code>--permission-prompt-tool</code> pointing at an MCP server crashing with \"MCP tool not found\" on cold start before the server finishes connecting</li>\n<li>Fixed <code>/model</code> picker rows printing a price for a different model than the row named, and stopped quoting first-party list prices on providers that don't bill them</li>\n<li>Fixed server-provided model rows being misplaced in the <code>/model</code> picker when an entitlement or allowlist restriction drops the row they were positioned against</li>\n<li>Fixed desktop sessions getting stuck showing \"running\" after a slash command was sent mid-turn</li>\n<li>Fixed keyboard input being ignored in the agents view when a setup prompt appeared before a bare <code>claude --resume</code> on Windows</li>\n<li>Fixed <code>claude rm</code> leaving the removed job in the daemon roster, causing the row to reappear in <code>claude agents</code></li>\n<li>Fixed <code>/remote-control</code> showing \"Unknown command\" when logged out — it now explains how to sign in</li>\n<li>Fixed left arrow not stepping back out of a phase or agent in the workflow detail view</li>\n<li>Fixed <code>/status</code> listing the same broken-install warning twice</li>\n<li>Fixed false \"disused plugin\" tips and skewed disuse telemetry for LSP plugins</li>\n<li>Fixed <code>/doctor</code>'s update check to compare Homebrew installs against their cask's channel instead of the settings channel</li>\n<li>Fixed the fullscreen jump-to-bottom pill suggesting Ctrl+End on macOS, not showing rebound chords, and wrapping over the transcript</li>\n<li>Bedrock: fixed a multi-minute startup hang when using an <code>awsCredentialExport</code> helper on networks with restricted egress</li>\n<li>Improved <code>/code-review</code> findings quality on claude-opus-4-8 across all effort levels</li>\n<li>Improved agents view: status column now uses full terminal width instead of truncating at 64 characters</li>\n<li>Changed agents view: Ctrl+X now permanently removes a completed session, and sessions no longer render twice; deleted background jobs stay deleted</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: .mcp.json, expired, windows, sessions, cutting.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Claude Code Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          ".mcp.json",
+          "expired",
+          "windows",
+          "sessions",
+          "cutting",
+          "showing",
+          "deleted",
+          "fixed"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: .mcp.json, expired, windows, sessions. Lead: Claude Code v2.1.206",
+        "alternative_titles": [],
+        "cluster_score": -5
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, das ist ein kleines Update von Claude Code, aber mit ein paar interessanten Implikationen.\n\nDer '/cd' Pfadvorschlag ist ein kleiner Workflow-Booster – weniger Tipperei, schneller im richtigen Verzeichnis. Aber der '/doctor' Check, der vorschlägt, 'CLAUDE.md' Dateien zu trimmen, ist clever. Das hilft, Redundanz zu vermeiden und hält die Docs schlank, indem Claude selbst erkennt, was es aus dem Code ableiten kann. Das spart Entwicklern Zeit beim Schreiben und Pflegen von Doku, die der Bot eh schon \"weiß\". Könnte ein schneller Tipp für unsere Dev-Leser sein, wie sie ihre Codebase-Doku effizienter gestalten.",
+    "chloe_note": "Kurzes Update: *Claude Code v2.1.206* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um New Claude Code CLI version with concrete features for context optimization and developer workflow improvements.Cluster context: 1 sources, engagement 0. Common terms: .mcp.json, expired, windows, sessions. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.206"
   }
 ]
