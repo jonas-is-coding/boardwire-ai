@@ -1650,5 +1650,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-09-simon-willison-v5-6-6728904eaa5a.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqbq4tnfjc2o",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqbq4tnfjc2o"
+  },
+  {
+    "id": "cdc508696d4b",
+    "published_at": "2026-07-10T11:56:26.651861Z",
+    "platform": "bluesky",
+    "post": "Core MCP server primitives update to v2026.7.10.\n\nMCP Servers v2026.7.10 refreshes filesystem, time, fetch, and git servers. MIT license. Available no\n\nUpdated @modelcontextprotocol/server-filesystem, mcp-server-time, mcp-server-fetch, and mcp-server-git packages. Critical patch ",
+    "source_link": "https://github.com/modelcontextprotocol/servers/releases/tag/2026.7.10",
+    "source_title": "Servers v2026.7.10",
+    "score": 90,
+    "reason": "MCP Servers released v2026.7.10 with updated core packages. Direct, actionable update for builders using MCP.",
+    "card_path": "generated/cards/cdc508696d4b.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-10-servers-v2026-7-10-cdc508696d4b.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqc3rdrpjr2o",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqc3rdrpjr2o"
   }
 ]
