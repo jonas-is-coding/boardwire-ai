@@ -6495,5 +6495,48 @@
     },
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-10-better-tools-made-copilot-code-review-worse-here-s-how-we-actually-improved-it-bf1adf9e895a.md",
     "published_at": "2026-07-10T18:25:00.473820Z"
+  },
+  {
+    "id": "417f10c61de3",
+    "status": "approved",
+    "created_at": "2026-07-10T19:15:12.450567Z",
+    "score": 90,
+    "reason": "New SDK version with a concrete feature (prompt caching) that directly impacts cost and performance for builders.",
+    "proposed_post": "LangChain `langchain-openai` v1.3.5 now supports explicit prompt caching. Builders can use this to reduce API costs and latency for repeated prompts, improving application efficiency.",
+    "source_angle": "LangChain `langchain-openai` v1.3.5 adds explicit prompt caching.",
+    "source_item": {
+      "title": "LangChain v1.3.5",
+      "source": "LangChain Releases",
+      "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.3.5",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 35,
+      "summary": "<p>Changes since langchain-openai==1.3.4</p>\n<p>release(openai): 1.3.5 (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/38785\">#38785</a>)<br />\nfeat(openai): support explicit prompt caching (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/38762\">#38762</a>)<br />\nchore(model-profiles): refresh model profile data (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/38774\">#38774</a>)</p>\n[Cluster context: 1 sources, engagement 0, common terms: support, 1.3.5, 1.3.4, profile, caching.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "LangChain Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "support",
+          "1.3.5",
+          "1.3.4",
+          "profile",
+          "caching",
+          "model-profiles",
+          "refresh",
+          "langchain"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: support, 1.3.5, 1.3.4, profile. Lead: LangChain v1.3.5",
+        "alternative_titles": [],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, schau dir das mal an: LangChain 1.3.5 ist raus.\n\nDas Wichtigste für uns ist das explizite Prompt-Caching. Das kann die Kosten massiv senken und die Performance verbessern, gerade bei wiederholten Anfragen an die OpenAI API. Entwickler können damit ihre LLM-Anwendungen effizienter und günstiger machen.",
+    "chloe_note": "*LangChain v1.3.5* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New SDK version with a concrete feature (prompt caching) that directly impacts cost and performance for builders.Cluster context: 1 sources, engagement 0. Common terms: support, 1.3.5, 1.3.4, profile. Bewertung: 90. Quelle: https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.3.5"
   }
 ]
