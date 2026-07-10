@@ -6181,11 +6181,11 @@
   },
   {
     "id": "6728904eaa5a",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-09T21:12:37.979649Z",
     "score": 95,
     "reason": "OpenAI's new flagship model is generally available via API, with concrete pricing and performance claims for agentic workflows.",
-    "proposed_post": "OpenAI's GPT-5.6 (Luna, Terra, Sol) is now GA via API. New pricing: $1-5/M input, $6-30/M output. OpenAI claims improved agentic performance over Claude Fable 5. Builders can test its efficiency for complex, multi-step tasks and compare cost-performance.",
+    "proposed_post": "OpenAI’s GPT-5.6 models hit GA with explicit agentic pricing.\n\nLuna, Terra, Sol debut at $1–5 per 1M input and $6–30 per 1M output tokens via API.\n\nNew OpenAI flagship models priced transparently for multi-step agent workflows. Available immediately through the API with no waitli",
     "source_angle": "OpenAI GPT-5.6 GA, pricing, agentic performance claims",
     "source_item": {
       "title": "Simon Willison v5.6",
@@ -6216,11 +6216,23 @@
         "cluster_score": 5
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/6728904eaa5a.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das ist ein Kracher. OpenAI hat GPT-5.6 released – Luna, Terra, Sol.\n\nDas sind neue Modelle, die jetzt general verfügbar sind. Für Builder heißt das: direkt loslegen, die neuen Preismodelle sind auch schon da. Luna ist mit $1/$6 pro 1M Input/Output Token die günstigste Option. Damit können wir jetzt direkt neue Use Cases durchrechnen und deployen.",
-    "chloe_note": "Hey, *Simon Willison v5.6* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen OpenAI's new flagship model is generally available via API, with concrete pricing and performance claims for agentic workflows.Cluster context: 1 sources, engagement 0. Common terms: can, terminal, api., agentic. Score aktuell: 95. Link: https://simonwillison.net/2026/Jul/9/gpt-5-6/#atom-entries"
+    "chloe_note": "Hey, *Simon Willison v5.6* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen OpenAI's new flagship model is generally available via API, with concrete pricing and performance claims for agentic workflows.Cluster context: 1 sources, engagement 0. Common terms: can, terminal, api., agentic. Score aktuell: 95. Link: https://simonwillison.net/2026/Jul/9/gpt-5-6/#atom-entries",
+    "sarah_package": {
+      "title": "OpenAI’s GPT-5.6 models hit GA with explicit agentic pricing.",
+      "subtitle": "Luna, Terra, Sol debut at $1–5 per 1M input and $6–30 per 1M output tokens via API.",
+      "description": "New OpenAI flagship models priced transparently for multi-step agent workflows. Available immediately through the API with no waitlist.",
+      "hashtags": [
+        "#OpenAI",
+        "#GPT56",
+        "#AgentEval"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-09-simon-willison-v5-6-6728904eaa5a.md",
+    "published_at": "2026-07-10T08:28:08.053977Z"
   },
   {
     "id": "bfc324b21463",
