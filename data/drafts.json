@@ -15608,5 +15608,19 @@
     "engagement_score": 101.0,
     "local_newsworthiness_score": 10,
     "created_at": "2026-07-10T12:19:42.369985Z"
+  },
+  {
+    "title": "Better tools made Copilot code review worse. Here’s how we actually improved it.",
+    "link": "https://github.blog/ai-and-ml/github-copilot/better-tools-made-copilot-code-review-worse-heres-how-we-actually-improved-it/",
+    "source": "GitHub Blog AI",
+    "score": 70,
+    "should_post": true,
+    "reason": "GitHub detailed a production methodology for improving AI agent workflows, offering actionable insights for builders.",
+    "post_text": "GitHub reduced Copilot code review costs by integrating Unix-style tools & reshaping agent workflows. Builders can apply these agent orchestration strategies to optimize their own AI systems for similar cost/performance gains.",
+    "source_angle": "GitHub shares methodology for optimizing AI agent workflows in production.",
+    "source_tier": 2,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-10T16:14:31.402429Z"
   }
 ]

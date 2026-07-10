@@ -6440,5 +6440,48 @@
     "breaking": false,
     "claire_note": "Chloe, schau dir das mal an. Google Labs hat 'stitch-skills' released – eine Bibliothek von Agent Skills, die mit ihrem Stitch MCP Server laufen.\n\nDas ist relevant, weil diese Skills dem offenen Agent Skills Standard folgen. Das bedeutet, dass Entwickler, die bereits mit Coding-Agenten wie Antigravity, Gemini CLI oder Claude Code arbeiten, diese neuen Fähigkeiten direkt integrieren können. Es ist ein direkt nutzbares Toolkit, um ihre eigenen Agents zu erweitern, ohne alles von Grund auf neu bauen zu müssen.",
     "chloe_note": "*google-labs-code/stitch-skills — A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as * ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Open-source library of agent skills for Stitch MCP & other agents. Ships today, clear utility for builders.Cluster context: 1 sources, engagement 101. Common terms: work, skills, cli, stars. Bewertung: 90. Quelle: https://github.com/google-labs-code/stitch-skills"
+  },
+  {
+    "id": "bf1adf9e895a",
+    "status": "approved",
+    "created_at": "2026-07-10T16:14:31.402429Z",
+    "score": 70,
+    "reason": "GitHub detailed a production methodology for improving AI agent workflows, offering actionable insights for builders.",
+    "proposed_post": "GitHub reduced Copilot code review costs by integrating Unix-style tools & reshaping agent workflows. Builders can apply these agent orchestration strategies to optimize their own AI systems for similar cost/performance gains.",
+    "source_angle": "GitHub shares methodology for optimizing AI agent workflows in production.",
+    "source_item": {
+      "title": "Better tools made Copilot code review worse. Here’s how we actually improved it.",
+      "source": "GitHub Blog AI",
+      "link": "https://github.blog/ai-and-ml/github-copilot/better-tools-made-copilot-code-review-worse-heres-how-we-actually-improved-it/",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 0,
+      "summary": "<p>How migrating Copilot code review to shared Unix-style code exploration tools reduced review cost by reshaping agent workflows around pull request evidence.</p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/better-tools-made-copilot-code-review-worse-heres-how-we-actually-improved-it/\">Better tools made Copilot code review worse. Here&#8217;s how we actually improved it.</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>\n[Cluster context: 1 sources, engagement 0, common terms: #8217, review, copilot, exploration, unix-style.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Blog AI"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "#8217",
+          "review",
+          "copilot",
+          "exploration",
+          "unix-style",
+          "pull",
+          "shared",
+          "github"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: #8217, review, copilot, exploration. Lead: Better tools made Copilot code review worse. Here’s how we actually improved it.",
+        "alternative_titles": [],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, der GitHub-Artikel über Copilot Code Review ist interessant.\n\nSie haben festgestellt, dass bessere Tools die Code-Review-Qualität verschlechtert haben und mussten den Workflow anpassen. Das ist ein praktisches Beispiel dafür, wie man KI-Agenten und bestehende Tools sinnvoll integriert, um die \"Review Cost\" zu senken. Entwickler, die versuchen, KI in ihre eigenen Prozesse einzubauen, können hier direkt lernen, wie man Fallstricke vermeidet und echte Effizienzgewinne erzielt, statt nur neue Tools zu stapeln.",
+    "chloe_note": "Kurzes Update: *Better tools made Copilot code review worse. Here’s how we actually improved it.* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um GitHub detailed a production methodology for improving AI agent workflows, offering actionable insights for builders.Cluster context: 1 sources, engagement 0. Common terms: #8217, review, copilot, exploration. Ich habe es mit 70 Punkten bewertet. Hier der Link: https://github.blog/ai-and-ml/github-copilot/better-tools-made-copilot-code-review-worse-heres-how-we-actually-improved-it/"
   }
 ]
