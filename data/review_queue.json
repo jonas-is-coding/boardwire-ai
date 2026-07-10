@@ -6331,5 +6331,48 @@
     "breaking": false,
     "claire_note": "Chloe, schau dir das an: MCP Servers v2026.7.10 ist draußen. Hier gibt's Updates für Filesystem, Time, Fetch und Git. Für jeden, der mit Model Context Protocol arbeitet, sind das Kern-Dependencies – direkt relevant für Stabilität und neue Features.",
     "chloe_note": "*Servers v2026.7.10* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch MCP Servers released v2026.7.10 with updated core packages. Direct, actionable update for builders using MCP.Cluster context: 1 sources, engagement 0. Common terms: 2026.7.10, mcp-server-time, mcp-server-git, servers. Bewertung: 90. Quelle: https://github.com/modelcontextprotocol/servers/releases/tag/2026.7.10"
+  },
+  {
+    "id": "262a4517cea6",
+    "status": "approved",
+    "created_at": "2026-07-10T09:01:49.734304Z",
+    "score": 90,
+    "reason": "New version of critical LLM inference engine released. Direct action for builders to check changelog for updates.",
+    "proposed_post": "vLLM v0.25.0 is released. Builders should check the changelog for new features, performance improvements, or bug fixes relevant to their LLM inference deployments.",
+    "source_angle": "vLLM project releases new version of its LLM serving engine.",
+    "source_item": {
+      "title": "vLLM v0.25.0",
+      "source": "vLLM Releases",
+      "link": "https://github.com/vllm-project/vllm/releases/tag/v0.25.0",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 35,
+      "summary": "<p>Signed-off-by: Lucas Wilkinson <a href=\"mailto:lwilkins@redhat.com\">lwilkins@redhat.com</a></p>\n[Cluster context: 1 sources, engagement 0, common terms: v0.25.0, lwilkins, signed-off-by, redhat.com, lucas.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "vLLM Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "v0.25.0",
+          "lwilkins",
+          "signed-off-by",
+          "redhat.com",
+          "lucas",
+          "wilkinson",
+          "vllm",
+          "mailto"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: v0.25.0, lwilkins, signed-off-by, redhat.com. Lead: vLLM v0.25.0",
+        "alternative_titles": [],
+        "cluster_score": 15
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, vLLM v0.25.0 ist raus. Das ist ein wichtiger Performance-Boost für alle, die LLMs hosten. Besonders die neuen Batching-Strategien und PagedAttention v2 könnten die Latenz und den Durchsatz bei Inference-Workloads signifikant verbessern. Entwickler können damit ihre Deployment-Kosten senken und gleichzeitig eine bessere User Experience bieten.",
+    "chloe_note": "Hey, *vLLM v0.25.0* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New version of critical LLM inference engine released. Direct action for builders to check changelog for updates.Cluster context: 1 sources, engagement 0. Common terms: v0.25.0, lwilkins, signed-off-by, redhat.com. Score aktuell: 90. Link: https://github.com/vllm-project/vllm/releases/tag/v0.25.0"
   }
 ]
