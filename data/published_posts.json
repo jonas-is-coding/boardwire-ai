@@ -1706,5 +1706,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-10-google-labs-code-stitch-skills-a-library-of-agent-skills-designed-to-work-with-the-stitch-mcp-server-each-skill-follows-the-agent-skills-open-standard-for-compatibility-with-coding-agents-such-as-5c73010e6039.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqcyckndir2s",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqcyckndir2s"
+  },
+  {
+    "id": "417f10c61de3",
+    "published_at": "2026-07-11T00:02:42.336732Z",
+    "platform": "bluesky",
+    "post": "LangChain adds prompt caching.\n\nLangChain v1.3.5 supports explicit prompt caching, reducing API costs and latency.\n\nBuilders can use LangChain v1.3.5 to improve application efficiency by reducing repeated prompts to the OpenAI API.\n\n📖 Read the full article: file:///home/runner/wo",
+    "source_link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.3.5",
+    "source_title": "LangChain v1.3.5",
+    "score": 90,
+    "reason": "New SDK version with a concrete feature (prompt caching) that directly impacts cost and performance for builders.",
+    "card_path": "generated/cards/417f10c61de3.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-10-langchain-v1-3-5-417f10c61de3.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqdedwtukp2o",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqdedwtukp2o"
   }
 ]
