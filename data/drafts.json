@@ -15832,5 +15832,19 @@
     "engagement_score": 37.5,
     "local_newsworthiness_score": 0,
     "created_at": "2026-07-11T01:42:23.317949Z"
+  },
+  {
+    "title": "Meta pulls new AI image feature after days of backlash",
+    "link": "https://www.bbc.com/news/articles/c2dy6e8klw0o",
+    "source": "HackerNews",
+    "score": 25,
+    "should_post": false,
+    "reason": "Fails Ships Test: no new artifact to download, use, or deploy. Story is about a feature withdrawal, not a release.",
+    "post_text": "No post generated",
+    "source_angle": "Meta's AI image feature pulled due to backlash.",
+    "source_tier": 3,
+    "engagement_score": 39.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-11T04:53:53.819853Z"
   }
 ]
