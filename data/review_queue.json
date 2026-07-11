@@ -6565,11 +6565,11 @@
   },
   {
     "id": "4175f6e7411e",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-11T01:42:22.211035Z",
     "score": 90,
     "reason": "Official release of Claude Code with a significant default behavior change (Auto mode) on major platforms, plus bug fixes. Ships today.",
-    "proposed_post": "Claude Code v2.1.207 defaults Auto mode on Bedrock, Vertex AI, and Foundry. Builders using Claude Code on these platforms will experience streamlined workflows by default; check settings if custom behavior is needed.",
+    "proposed_post": "Claude Code turns Auto mode into default infrastructure on Bedrock and\n\nv2.1.207 ships with Auto mode enabled by default on major platforms, fixes terminal freeze in stream\n\nAuto mode no longer requires CLAUDE_CODE_ENABLE_AUTO_MODE opt-in on Bedrock, Vertex AI, or Foundry. Termin",
     "source_angle": "Claude Code CLI/SDK update: Auto mode default on major cloud platforms.",
     "source_item": {
       "title": "Claude Code v2.1.207",
@@ -6600,11 +6600,23 @@
         "cluster_score": 45
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/4175f6e7411e.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, dieser Claude Code Release ist relevant, weil der Auto-Modus jetzt standardmäßig auf Bedrock, Vertex AI und Foundry aktiv ist. Das vereinfacht den Workflow für Entwickler enorm, die direkt mit den Modellen arbeiten. Man muss nicht mehr extra ein Opt-in setzen, sondern kann sofort loslegen und den Modus bei Bedarf deaktivieren. Das spart Setup-Zeit und beschleunigt iterative Prozesse.",
-    "chloe_note": "*Claude Code v2.1.207* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Official release of Claude Code with a significant default behavior change (Auto mode) on major platforms, plus bug fixes. Ships today.Cluster context: 1 sources, engagement 0. Common terms: repo-resident, timestamp, streaming, triggered. Bewertung: 90. Quelle: https://github.com/anthropics/claude-code/releases/tag/v2.1.207"
+    "chloe_note": "*Claude Code v2.1.207* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Official release of Claude Code with a significant default behavior change (Auto mode) on major platforms, plus bug fixes. Ships today.Cluster context: 1 sources, engagement 0. Common terms: repo-resident, timestamp, streaming, triggered. Bewertung: 90. Quelle: https://github.com/anthropics/claude-code/releases/tag/v2.1.207",
+    "sarah_package": {
+      "title": "Claude Code turns Auto mode into default infrastructure on Bedrock and",
+      "subtitle": "v2.1.207 ships with Auto mode enabled by default on major platforms, fixes terminal freeze in stream",
+      "description": "Auto mode no longer requires CLAUDE_CODE_ENABLE_AUTO_MODE opt-in on Bedrock, Vertex AI, or Foundry. Terminal streaming lag fixed for large o",
+      "hashtags": [
+        "#ClaudeCode",
+        "#Bedrock",
+        "#VertexAI"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-11-claude-code-v2-1-207-4175f6e7411e.md",
+    "published_at": "2026-07-11T11:56:05.702959Z"
   },
   {
     "id": "013643e125c3",
