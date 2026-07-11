@@ -15902,5 +15902,19 @@
     "engagement_score": 43.0,
     "local_newsworthiness_score": 0,
     "created_at": "2026-07-11T16:42:52.658891Z"
+  },
+  {
+    "title": "AI 2040 and the Cult of Intelligence",
+    "link": "https://geohot.github.io//blog/jekyll/update/2026/07/11/ai-2040.html",
+    "source": "HackerNews",
+    "score": 10,
+    "should_post": false,
+    "reason": "Fails Ships Test. Opinion piece/blog post, no concrete release, API, or tool for builders to act on.",
+    "post_text": "No post generated",
+    "source_angle": "Geohot's blog post on AI predictions and philosophy.",
+    "source_tier": 3,
+    "engagement_score": 46.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-11T18:44:28.962456Z"
   }
 ]
