@@ -15860,5 +15860,33 @@
     "engagement_score": 73.0,
     "local_newsworthiness_score": 0,
     "created_at": "2026-07-11T10:54:40.839687Z"
+  },
+  {
+    "title": "DayuanJiang/next-ai-draw-io — A next.js web application that integrates AI capabilities with draw.io diagrams. This app allows you to create, modify, and enhance diagrams through natural language comm",
+    "link": "https://github.com/DayuanJiang/next-ai-draw-io",
+    "source": "GitHub Trending",
+    "score": 85,
+    "should_post": true,
+    "reason": "Open-source Next.js app integrating AI with draw.io for natural language diagramming. Ships today.",
+    "post_text": "DayuanJiang released `next-ai-draw-io`, an open-source Next.js app for AI-driven diagram creation/modification in draw.io. Builders can use natural language to generate diagrams or study the integration pattern for adding LLM capabilities to web apps.",
+    "source_angle": "Open-source tool for AI-assisted diagramming via natural language",
+    "source_tier": 2,
+    "engagement_score": 74.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-11T12:53:58.162502Z"
+  },
+  {
+    "title": "Companies are scrambling to curtail soaring AI costs",
+    "link": "https://www.economist.com/business/2026/06/14/companies-are-scrambling-to-curtail-soaring-ai-costs",
+    "source": "HackerNews",
+    "score": 2,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 46.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-11T12:53:59.375211Z"
   }
 ]

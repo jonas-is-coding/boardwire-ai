@@ -6660,5 +6660,48 @@
     "breaking": false,
     "claire_note": "Chloe, das ist ein interessanter Fund. Eine Schriftart, die Menschen lesen können, aber KI nicht – das ist ein direkter Angriff auf OCR und Datenscraping. Entwickler, die sensible Inhalte schützen oder Bot-Erkennung verbessern wollen, könnten hier direkt ansetzen.",
     "chloe_note": "*A font that humans can read but AI cannot* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New font released with a specific anti-AI capability. Ships today, immediately usable for builders.Cluster context: 1 sources, engagement 73. Common terms: hacker, justswim, humans, submitted. Bewertung: 85. Quelle: https://www.mixfont.com/ghost-font"
+  },
+  {
+    "id": "ebd37f5ca070",
+    "status": "approved",
+    "created_at": "2026-07-11T12:53:58.162502Z",
+    "score": 85,
+    "reason": "Open-source Next.js app integrating AI with draw.io for natural language diagramming. Ships today.",
+    "proposed_post": "DayuanJiang released `next-ai-draw-io`, an open-source Next.js app for AI-driven diagram creation/modification in draw.io. Builders can use natural language to generate diagrams or study the integration pattern for adding LLM capabilities to web apps.",
+    "source_angle": "Open-source tool for AI-assisted diagramming via natural language",
+    "source_item": {
+      "title": "DayuanJiang/next-ai-draw-io — A next.js web application that integrates AI capabilities with draw.io diagrams. This app allows you to create, modify, and enhance diagrams through natural language comm",
+      "source": "GitHub Trending",
+      "link": "https://github.com/DayuanJiang/next-ai-draw-io",
+      "source_tier": 2,
+      "engagement_score": 74.0,
+      "local_newsworthiness_score": 0,
+      "summary": "Trending on GitHub today: +74 stars. A next.js web application that integrates AI capabilities with draw.io diagrams. This app allows you to create, modify, and enhance diagrams through natural language commands and AI-assisted visualization.\n[Cluster context: 1 sources, engagement 74, common terms: natural, stars., next.js, +74, modify.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 74,
+        "common_terms": [
+          "natural",
+          "stars.",
+          "next.js",
+          "+74",
+          "modify",
+          "diagrams.",
+          "web",
+          "visualization."
+        ],
+        "cluster_summary": "1 sources, engagement 74. Common terms: natural, stars., next.js, +74. Lead: DayuanJiang/next-ai-draw-io — A next.js web application that integrates AI capabilities with draw.io diagrams. This app ",
+        "alternative_titles": [],
+        "cluster_score": 15
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, das hier ist interessant für jeden, der mit Diagrammen kämpft.\n\nMit 'next-ai-draw-io' können Devs ihre Diagramme einfach per Text prompten, statt manuell zu klicken. Das ist ein Game-Changer für schnelle Prototypen oder Dokumentation, wo man oft mit visuellem Overhead zu kämpfen hat. Statt minutenlang Kästchen zu ziehen, beschreibt man, was man will, und die KI macht den Rest. Das spart Zeit und Nerven.",
+    "chloe_note": "*DayuanJiang/next-ai-draw-io — A next.js web application that integrates AI capabilities with draw.io diagrams. This app allows you to create, modify, and enhance diagrams through natural language comm* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Open-source Next.js app integrating AI with draw.io for natural language diagramming. Ships today.Cluster context: 1 sources, engagement 74. Common terms: natural, stars., next.js, +74. Bewertung: 85. Quelle: https://github.com/DayuanJiang/next-ai-draw-io"
   }
 ]
