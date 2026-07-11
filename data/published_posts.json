@@ -1734,5 +1734,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-11-claude-code-v2-1-207-4175f6e7411e.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqem7l6hgh2o",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqem7l6hgh2o"
+  },
+  {
+    "id": "013643e125c3",
+    "published_at": "2026-07-11T14:23:53.940144Z",
+    "platform": "bluesky",
+    "post": "Ghost Font defends human text against AI extraction.\n\nGhost Font releases first human-readable, AI-resistant font. Apache 2.0. Drop-in for web or print wo\n\nFirst OCR-resistant font designed to thwart AI scraping without sacrificing human legibility. Apache 2.0 license. Compatible",
+    "source_link": "https://www.mixfont.com/ghost-font",
+    "source_title": "A font that humans can read but AI cannot",
+    "score": 85,
+    "reason": "New font released with a specific anti-AI capability. Ships today, immediately usable for builders.",
+    "card_path": "generated/cards/013643e125c3.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-11-a-font-that-humans-can-read-but-ai-cannot-013643e125c3.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqeuhtqxmt2x",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqeuhtqxmt2x"
   }
 ]

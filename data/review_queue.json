@@ -6620,11 +6620,11 @@
   },
   {
     "id": "013643e125c3",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-11T10:54:40.839687Z",
     "score": 85,
     "reason": "New font released with a specific anti-AI capability. Ships today, immediately usable for builders.",
-    "proposed_post": "Ghost Font released, claiming human-readable but AI-unreadable text. Builders can use this font to protect content from AI scraping or for novel anti-bot measures. Test its efficacy against your target models.",
+    "proposed_post": "Ghost Font defends human text against AI extraction.\n\nGhost Font releases first human-readable, AI-resistant font. Apache 2.0. Drop-in for web or print wo\n\nFirst OCR-resistant font designed to thwart AI scraping without sacrificing human legibility. Apache 2.0 license. Compatible",
     "source_angle": "New font designed to evade AI text recognition",
     "source_item": {
       "title": "A font that humans can read but AI cannot",
@@ -6655,11 +6655,23 @@
         "cluster_score": 0
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/013643e125c3.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das ist ein interessanter Fund. Eine Schriftart, die Menschen lesen können, aber KI nicht – das ist ein direkter Angriff auf OCR und Datenscraping. Entwickler, die sensible Inhalte schützen oder Bot-Erkennung verbessern wollen, könnten hier direkt ansetzen.",
-    "chloe_note": "*A font that humans can read but AI cannot* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New font released with a specific anti-AI capability. Ships today, immediately usable for builders.Cluster context: 1 sources, engagement 73. Common terms: hacker, justswim, humans, submitted. Bewertung: 85. Quelle: https://www.mixfont.com/ghost-font"
+    "chloe_note": "*A font that humans can read but AI cannot* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New font released with a specific anti-AI capability. Ships today, immediately usable for builders.Cluster context: 1 sources, engagement 73. Common terms: hacker, justswim, humans, submitted. Bewertung: 85. Quelle: https://www.mixfont.com/ghost-font",
+    "sarah_package": {
+      "title": "Ghost Font defends human text against AI extraction.",
+      "subtitle": "Ghost Font releases first human-readable, AI-resistant font. Apache 2.0. Drop-in for web or print wo",
+      "description": "First OCR-resistant font designed to thwart AI scraping without sacrificing human legibility. Apache 2.0 license. Compatible with web and pr",
+      "hashtags": [
+        "#GhostFont",
+        "#AntiOCR",
+        "#WebDefense"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-11-a-font-that-humans-can-read-but-ai-cannot-013643e125c3.md",
+    "published_at": "2026-07-11T14:23:53.940144Z"
   },
   {
     "id": "ebd37f5ca070",
