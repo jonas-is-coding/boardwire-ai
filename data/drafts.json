@@ -15888,5 +15888,19 @@
     "engagement_score": 46.5,
     "local_newsworthiness_score": 0,
     "created_at": "2026-07-11T12:53:59.375211Z"
+  },
+  {
+    "title": "Microsoft latest report shows 25% emissions raised due to AI data centers",
+    "link": "https://www.windowscentral.com/microsoft/dropping-greenwashing-credits-and-expanding-ai-datacenters-caused-microsofts-25-percent-emissions-jump",
+    "source": "HackerNews",
+    "score": 10,
+    "should_post": false,
+    "reason": "Fails Ships Test. Corporate emissions report, not a new tool, API, model, or actionable capability for builders today.",
+    "post_text": "No post generated",
+    "source_angle": "No source angle provided",
+    "source_tier": 3,
+    "engagement_score": 43.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-11T16:42:52.658891Z"
   }
 ]
