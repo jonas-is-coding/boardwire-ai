@@ -6675,11 +6675,11 @@
   },
   {
     "id": "ebd37f5ca070",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-11T12:53:58.162502Z",
     "score": 85,
     "reason": "Open-source Next.js app integrating AI with draw.io for natural language diagramming. Ships today.",
-    "proposed_post": "DayuanJiang released `next-ai-draw-io`, an open-source Next.js app for AI-driven diagram creation/modification in draw.io. Builders can use natural language to generate diagrams or study the integration pattern for adding LLM capabilities to web apps.",
+    "proposed_post": "AI-driven diagram creation lands in Next.js.\n\nNext-ai-draw-io integrates natural language with draw.io, +74 stars today.\n\nOpen-source Next.js app allows natural language diagram modification, built on draw.io.\n\n📖 Read the full article: file:///home/runner/work/boardwire-ai/boardw",
     "source_angle": "Open-source tool for AI-assisted diagramming via natural language",
     "source_item": {
       "title": "DayuanJiang/next-ai-draw-io — A next.js web application that integrates AI capabilities with draw.io diagrams. This app allows you to create, modify, and enhance diagrams through natural language comm",
@@ -6710,10 +6710,22 @@
         "cluster_score": 15
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/ebd37f5ca070.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das hier ist interessant für jeden, der mit Diagrammen kämpft.\n\nMit 'next-ai-draw-io' können Devs ihre Diagramme einfach per Text prompten, statt manuell zu klicken. Das ist ein Game-Changer für schnelle Prototypen oder Dokumentation, wo man oft mit visuellem Overhead zu kämpfen hat. Statt minutenlang Kästchen zu ziehen, beschreibt man, was man will, und die KI macht den Rest. Das spart Zeit und Nerven.",
-    "chloe_note": "*DayuanJiang/next-ai-draw-io — A next.js web application that integrates AI capabilities with draw.io diagrams. This app allows you to create, modify, and enhance diagrams through natural language comm* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Open-source Next.js app integrating AI with draw.io for natural language diagramming. Ships today.Cluster context: 1 sources, engagement 74. Common terms: natural, stars., next.js, +74. Bewertung: 85. Quelle: https://github.com/DayuanJiang/next-ai-draw-io"
+    "chloe_note": "*DayuanJiang/next-ai-draw-io — A next.js web application that integrates AI capabilities with draw.io diagrams. This app allows you to create, modify, and enhance diagrams through natural language comm* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Open-source Next.js app integrating AI with draw.io for natural language diagramming. Ships today.Cluster context: 1 sources, engagement 74. Common terms: natural, stars., next.js, +74. Bewertung: 85. Quelle: https://github.com/DayuanJiang/next-ai-draw-io",
+    "sarah_package": {
+      "title": "AI-driven diagram creation lands in Next.js.",
+      "subtitle": "Next-ai-draw-io integrates natural language with draw.io, +74 stars today.",
+      "description": "Open-source Next.js app allows natural language diagram modification, built on draw.io.",
+      "hashtags": [
+        "#NextJS",
+        "#DrawIO",
+        "#NaturalLanguage"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-11-dayuanjiang-next-ai-draw-io-a-next-js-web-application-that-integrates-ai-capabilities-with-draw-io-diagrams-this-app-allows-you-to-create-modify-and-enhance-diagrams-through-natural-language-comm-ebd37f5ca070.md",
+    "published_at": "2026-07-11T17:57:06.796670Z"
   }
 ]
