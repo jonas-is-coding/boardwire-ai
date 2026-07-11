@@ -15916,5 +15916,61 @@
     "engagement_score": 46.5,
     "local_newsworthiness_score": 0,
     "created_at": "2026-07-11T18:44:28.962456Z"
+  },
+  {
+    "title": "Who manages the agents?",
+    "link": "https://www.off-policy.com/dont-go-quietly-into-the-ai-night/",
+    "source": "HackerNews",
+    "score": 10,
+    "should_post": false,
+    "reason": "Fails Ships Test. This is a discussion/opinion piece, not a concrete release, API, or tool for builders.",
+    "post_text": "No post generated",
+    "source_angle": "Hacker News discussion on AI agent management",
+    "source_tier": 3,
+    "engagement_score": 74.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-11T20:38:23.261986Z"
+  },
+  {
+    "title": "Reverse centaurs are the answer to the AI paradox",
+    "link": "https://pluralistic.net/2025/09/11/vulgar-thatcherism/#there-is-an-alternative",
+    "source": "HackerNews",
+    "score": 10,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "HackerNews discussion on AI paradox",
+    "source_tier": 3,
+    "engagement_score": 78.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-11T20:38:27.996174Z"
+  },
+  {
+    "title": "Nvidia, CoreWeave, and Nebius: Inside the Circular Financing of the GPU Boom",
+    "link": "https://io-fund.com/ai-stocks/nvidia-coreweave-nebius-circular-financing-gpu-boom",
+    "source": "HackerNews",
+    "score": 2,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 71.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-11T20:38:27.996847Z"
+  },
+  {
+    "title": "AI Can't Recreate the Thrust Game (But It Can Help You Understand It)",
+    "link": "https://www.jamesdrandall.com/posts/thrust_ai_powered_software_archaeology/",
+    "source": "HackerNews",
+    "score": 2,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 46.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-11T20:38:27.997089Z"
   }
 ]
