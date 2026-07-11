@@ -15790,5 +15790,47 @@
     "engagement_score": 91.0,
     "local_newsworthiness_score": 0,
     "created_at": "2026-07-10T22:50:31.325294Z"
+  },
+  {
+    "title": "Claude Code v2.1.207",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.207",
+    "source": "Claude Code Releases",
+    "score": 90,
+    "should_post": true,
+    "reason": "Official release of Claude Code with a significant default behavior change (Auto mode) on major platforms, plus bug fixes. Ships today.",
+    "post_text": "Claude Code v2.1.207 defaults Auto mode on Bedrock, Vertex AI, and Foundry. Builders using Claude Code on these platforms will experience streamlined workflows by default; check settings if custom behavior is needed.",
+    "source_angle": "Claude Code CLI/SDK update: Auto mode default on major cloud platforms.",
+    "source_tier": 1,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 60,
+    "created_at": "2026-07-11T01:42:22.211035Z"
+  },
+  {
+    "title": "LangChain v1.3.13",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.3.13",
+    "source": "LangChain Releases",
+    "score": 8,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 2,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 35,
+    "created_at": "2026-07-11T01:42:23.317682Z"
+  },
+  {
+    "title": "GhostLock, a stack-UAF that has existed in ALL Linux distributions for 15 years",
+    "link": "https://nebusec.ai/research/ionstack-part-2/",
+    "source": "HackerNews",
+    "score": 3,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 37.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-11T01:42:23.317949Z"
   }
 ]

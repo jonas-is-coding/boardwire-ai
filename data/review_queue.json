@@ -6562,5 +6562,48 @@
     },
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-10-langchain-v1-3-5-417f10c61de3.md",
     "published_at": "2026-07-11T00:02:42.336732Z"
+  },
+  {
+    "id": "4175f6e7411e",
+    "status": "approved",
+    "created_at": "2026-07-11T01:42:22.211035Z",
+    "score": 90,
+    "reason": "Official release of Claude Code with a significant default behavior change (Auto mode) on major platforms, plus bug fixes. Ships today.",
+    "proposed_post": "Claude Code v2.1.207 defaults Auto mode on Bedrock, Vertex AI, and Foundry. Builders using Claude Code on these platforms will experience streamlined workflows by default; check settings if custom behavior is needed.",
+    "source_angle": "Claude Code CLI/SDK update: Auto mode default on major cloud platforms.",
+    "source_item": {
+      "title": "Claude Code v2.1.207",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.207",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 60,
+      "summary": "<h2>What's changed</h2>\n<ul>\n<li>Auto mode is now available without <code>CLAUDE_CODE_ENABLE_AUTO_MODE</code> opt-in on Bedrock, Vertex AI, and Foundry; disable via <code>disableAutoMode</code> in settings</li>\n<li>Fixed the terminal freezing and keystrokes lagging while streaming responses containing very long lists, tables, paragraphs, or code blocks</li>\n<li>Fixed remote managed settings from a non-interactive run (<code>claude -p</code>, the SDK) being permanently recorded as consented without ever showing the security consent dialog</li>\n<li>Fixed spurious prompt-injection warnings triggered by benign system-generated conversation updates</li>\n<li>Fixed the auto-updater overwriting a custom launcher script or symlink at <code>~/.local/bin/claude</code> on every release; <code>/doctor</code> now reports an externally managed launcher</li>\n<li>Fixed compound commands with <code>cd</code> prompting for permission when the only output redirect was to <code>/dev/null</code></li>\n<li>Fixed the transcript jumping above the start of the answer when a response finishes streaming</li>\n<li>Fixed <code>extensions.worktreeConfig</code> being left in the repo's <code>.git/config</code> (breaking go-git tools like <code>tea</code>) after the last <code>worktree.sparsePaths</code> worktree was removed</li>\n<li>Fixed malformed bracket patterns in rules globs, skill paths, <code>.ignore</code>, and <code>.worktreeinclude</code> breaking file reads, file suggestions, and worktree creation</li>\n<li>Fixed a crash loop in agent teams where a malformed teammate mailbox message caused repeated errors every second until the mailbox file was manually deleted</li>\n<li>Fixed background sessions auto-named by accepting a plan not showing that name on their agent-view row</li>\n<li>Fixed background sessions that entered a git worktree resuming blank after a cold reopen from the agent list</li>\n<li>Fixed Remote Control task status updates being lost when the connection recovered from a network interruption or credential refresh</li>\n<li>Fixed Remote Control sessions hosted by the desktop app not showing background agent and workflow progress on mobile and web</li>\n<li>Fixed Deep research runs labeling every Fetch-phase agent \"unknown\" — chips now show the source hostname</li>\n<li>Fixed Bedrock repeatedly requesting fresh AWS SSO credentials from IAM Identity Center on every API request</li>\n<li>Improved agent view: pasting the same text again now expands the collapsed <code>[Pasted text #N]</code> placeholder instead of adding a second one</li>\n<li>Improved agent view: blocked session peeks now lead with the question and show a worded staleness clock (<code>waiting 3m</code>) instead of the same timestamp twice</li>\n<li>Changed Bedrock, Vertex, and Claude Platform on AWS to default to Claude Opus 4.8</li>\n<li>Changed auto mode to no longer read <code>autoMode</code> from <code>.claude/settings.local.json</code> (repo-resident); use <code>~/.claude/settings.json</code> instead</li>\n<li>Fixed an indefinite hang on Windows when AWS credential resolution stalls (e.g. a stuck <code>credential_process</code>): the 60-second stall guard now fires instead of waiting forever.</li>\n<li>Plugin hooks/monitors/MCP headersHelper: <code>${user_config.*}</code> in shell-form commands is now rejected (shell-injection fix). Hooks: use exec form (<code>args</code> array) or <code>$CLAUDE_PLUGIN_OPTION_&lt;KEY&gt;</code>; monitors and headersHelper: read the value inside the script (config file or the server's <code>env</code> block).</li>\n<li>Plugin option values (<code>pluginConfigs</code>) are no longer read from project-level <code>.claude/settings.json</code>; only user, <code>--settings</code>, and managed settings are honored</li>\n<li>Fixed <code>/usage-credits</code> amount inputs silently stripping malformed values (e.g. a pasted timestamp) to digits; malformed amounts are now rejected with an error, and amounts over $1,000 require a typed confirmation</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: repo-resident, timestamp, streaming, triggered, left.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Claude Code Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "repo-resident",
+          "timestamp",
+          "streaming",
+          "triggered",
+          "left",
+          "rules",
+          "repeated",
+          "center"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: repo-resident, timestamp, streaming, triggered. Lead: Claude Code v2.1.207",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, dieser Claude Code Release ist relevant, weil der Auto-Modus jetzt standardmäßig auf Bedrock, Vertex AI und Foundry aktiv ist. Das vereinfacht den Workflow für Entwickler enorm, die direkt mit den Modellen arbeiten. Man muss nicht mehr extra ein Opt-in setzen, sondern kann sofort loslegen und den Modus bei Bedarf deaktivieren. Das spart Setup-Zeit und beschleunigt iterative Prozesse.",
+    "chloe_note": "*Claude Code v2.1.207* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Official release of Claude Code with a significant default behavior change (Auto mode) on major platforms, plus bug fixes. Ships today.Cluster context: 1 sources, engagement 0. Common terms: repo-resident, timestamp, streaming, triggered. Bewertung: 90. Quelle: https://github.com/anthropics/claude-code/releases/tag/v2.1.207"
   }
 ]
