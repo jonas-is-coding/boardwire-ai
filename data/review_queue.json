@@ -6828,11 +6828,11 @@
   },
   {
     "id": "5d00b0a0cc17",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-12T09:48:51.872363Z",
     "score": 85,
     "reason": "New open-source tool on GitHub. Ships today for debugging coding agents.",
-    "proposed_post": "Mindwalk, an open-source tool, visualizes coding agent sessions on a 3D codebase map. Builders can use it to debug agent behavior and understand code interaction.",
+    "proposed_post": "Coding agents get transparent sessions.\n\nMindwalk visualizes agent navigation on a 3D codebase map, with 85 score on HackerNews.\n\nOpen-source tool on GitHub helps builders debug agent behavior and optimize prompts, submitted by cosmtrek.\n\n📖 Read the full article: file:///home/run",
     "source_angle": "New open-source tool for visualizing and debugging AI coding agents.",
     "source_item": {
       "title": "Show HN: Mindwalk – Replay coding-agent sessions on a 3D map of your codebase",
@@ -6863,10 +6863,22 @@
         "cluster_score": 0
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/5d00b0a0cc17.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, schau dir das mal an: Mindwalk auf HN. Das ist ein Replay-Tool für Coding-Agent-Sessions, visualisiert auf einer 3D-Codebase-Map.\n\nFür Builder ist das spannend, weil es die Blackbox von KI-Coding-Assistenten öffnet. Man kann nachvollziehen, wie der Agent durch den Code navigiert, welche Dateien er ansieht und welche Änderungen er vorschlägt. Das hilft, die Prompts zu optimieren und das Verhalten des Agents besser zu steuern.",
-    "chloe_note": "Hey, *Show HN: Mindwalk – Replay coding-agent sessions on a 3D map of your codebase* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New open-source tool on GitHub. Ships today for debugging coding agents.Cluster context: 1 sources, engagement 56. Common terms: submitted, map, show, points. Score aktuell: 85. Link: https://github.com/cosmtrek/mindwalk"
+    "chloe_note": "Hey, *Show HN: Mindwalk – Replay coding-agent sessions on a 3D map of your codebase* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New open-source tool on GitHub. Ships today for debugging coding agents.Cluster context: 1 sources, engagement 56. Common terms: submitted, map, show, points. Score aktuell: 85. Link: https://github.com/cosmtrek/mindwalk",
+    "sarah_package": {
+      "title": "Coding agents get transparent sessions.",
+      "subtitle": "Mindwalk visualizes agent navigation on a 3D codebase map, with 85 score on HackerNews.",
+      "description": "Open-source tool on GitHub helps builders debug agent behavior and optimize prompts, submitted by cosmtrek.",
+      "hashtags": [
+        "#Mindwalk",
+        "#CodingAgents",
+        "#DebuggingTools"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-12-show-hn-mindwalk-replay-coding-agent-sessions-on-a-3d-map-of-your-codebase-5d00b0a0cc17.md",
+    "published_at": "2026-07-12T10:38:01.625488Z"
   }
 ]
