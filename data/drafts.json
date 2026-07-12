@@ -16280,5 +16280,33 @@
     "engagement_score": 189.5,
     "local_newsworthiness_score": 10,
     "created_at": "2026-07-12T20:35:18.605118Z"
+  },
+  {
+    "title": "Mechanistic interpretability researchers applying causality theory to LLMs",
+    "link": "https://cacm.acm.org/news/can-we-understand-how-large-language-models-reason/",
+    "source": "HackerNews",
+    "score": 7,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 95.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-12T22:37:29.117234Z"
+  },
+  {
+    "title": "The One-Step Trap (In AI Research)",
+    "link": "http://incompleteideas.net/IncIdeas/OneStepTrap.html",
+    "source": "HackerNews",
+    "score": 15,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Hacker News discussion on a theoretical 'trap' in AI research",
+    "source_tier": 3,
+    "engagement_score": 38.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-12T22:37:33.639751Z"
   }
 ]
