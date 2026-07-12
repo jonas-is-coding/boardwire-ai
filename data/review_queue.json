@@ -6947,5 +6947,48 @@
     },
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-12-shubhamsaboo-awesome-llm-apps-100-ai-agent-rag-apps-you-can-actually-run-clone-customize-ship-1ac902843fc9.md",
     "published_at": "2026-07-12T12:03:07.929686Z"
+  },
+  {
+    "id": "bc6d24863c0d",
+    "status": "approved",
+    "created_at": "2026-07-12T18:49:34.943304Z",
+    "score": 75,
+    "reason": "Concrete promotion on Claude Code weekly limits directly impacts builder usage and potential costs for a defined period.",
+    "proposed_post": "Claude Code announced a weekly limits promotion for May-July 2026. Builders using Claude Code can leverage increased usage caps during this period, potentially enabling more intensive development or reducing operational costs.",
+    "source_angle": "Claude Code usage limits promotion",
+    "source_item": {
+      "title": "Claude Code May–July 2026 weekly limits promotion",
+      "source": "HackerNews",
+      "link": "https://support.claude.com/en/articles/15910845-claude-code-may-july-2026-weekly-limits-promotion",
+      "source_tier": 3,
+      "engagement_score": 63.5,
+      "local_newsworthiness_score": 0,
+      "summary": "39 points, 49 comments on Hacker News — submitted by alvis — original: https://support.claude.com/en/articles/15910845-claude-code-may-july-2026-weekly-limits-promotion\n[Cluster context: 1 sources, engagement 63, common terms: comments, july, claude, limits, may.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 63,
+        "common_terms": [
+          "comments",
+          "july",
+          "claude",
+          "limits",
+          "may",
+          "weekly",
+          "hacker",
+          "promotion"
+        ],
+        "cluster_summary": "1 sources, engagement 63. Common terms: comments, july, claude, limits. Lead: Claude Code May–July 2026 weekly limits promotion",
+        "alternative_titles": [],
+        "cluster_score": 0
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, das hier ist interessant für jeden, der mit Claude Code arbeitet. Anthropic gibt eine Promo für höhere wöchentliche Limits von Mai bis Juli 2026 raus. Das ist relevant für alle, die größere Code-Generierungsprojekte planen und mehr Durchsatz brauchen.",
+    "chloe_note": "Hey, *Claude Code May–July 2026 weekly limits promotion* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Concrete promotion on Claude Code weekly limits directly impacts builder usage and potential costs for a defined period.Cluster context: 1 sources, engagement 63. Common terms: comments, july, claude, limits. Score aktuell: 75. Link: https://support.claude.com/en/articles/15910845-claude-code-may-july-2026-weekly-limits-promotion"
   }
 ]

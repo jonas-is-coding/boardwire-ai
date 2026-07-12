@@ -16182,5 +16182,33 @@
     "engagement_score": 117.0,
     "local_newsworthiness_score": 10,
     "created_at": "2026-07-12T16:45:02.948533Z"
+  },
+  {
+    "title": "Claude Code May–July 2026 weekly limits promotion",
+    "link": "https://support.claude.com/en/articles/15910845-claude-code-may-july-2026-weekly-limits-promotion",
+    "source": "HackerNews",
+    "score": 75,
+    "should_post": true,
+    "reason": "Concrete promotion on Claude Code weekly limits directly impacts builder usage and potential costs for a defined period.",
+    "post_text": "Claude Code announced a weekly limits promotion for May-July 2026. Builders using Claude Code can leverage increased usage caps during this period, potentially enabling more intensive development or reducing operational costs.",
+    "source_angle": "Claude Code usage limits promotion",
+    "source_tier": 3,
+    "engagement_score": 63.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-12T18:49:34.943304Z"
+  },
+  {
+    "title": "6 months to live for open models",
+    "link": "https://www.interconnects.ai/p/6-months-to-live-for-open-models",
+    "source": "Nathan Lambert (Interconnects)",
+    "score": 12,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 2,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-07-12T18:49:35.801404Z"
   }
 ]
