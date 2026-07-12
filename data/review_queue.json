@@ -6993,11 +6993,11 @@
   },
   {
     "id": "b74b468963ee",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-12T20:35:17.439952Z",
     "score": 90,
     "reason": "Concrete benchmark reveals significant token overhead in Claude Code API, directly impacting builder costs and context window efficiency.",
-    "proposed_post": "Claude Code has a 33k token overhead before processing your prompt, vs. OpenCode's 7k. This hidden usage impacts cost and effective context window for builders using Claude Code APIs. Account for this when designing prompts.",
+    "proposed_post": "Claude Code API has 33k token overhead.\n\nOverhead is 26k tokens more than OpenCode, impacting builder costs and context window efficiency.\n\nHidden usage affects cost and effective context window for builders using Claude Code APIs, with 234 points and 118 comments on Hacker News.",
     "source_angle": "Claude Code token overhead benchmark",
     "source_item": {
       "title": "Claude Code sends 33k tokens before reading the prompt; OpenCode sends 7k",
@@ -7028,10 +7028,22 @@
         "cluster_score": 10
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/b74b468963ee.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, check this out.\n\nDieser Artikel auf HackerNews zeigt, dass Claude Code 33k Tokens sendet, bevor es überhaupt den Prompt liest. OpenCode ist mit 7k auch nicht viel besser. Das ist ein riesiger Overhead, der die Kosten und Latenz für jeden in die Höhe treibt, der diese Modelle für Code-Generierung nutzt.\n\nJeder, der gerade an Code-Assistenten oder ähnlichem baut, muss das wissen, um die richtigen Modelle auszuwählen und seine Kosten zu optimieren. Direkt umsetzbar.",
-    "chloe_note": "Kurzes Update: *Claude Code sends 33k tokens before reading the prompt; OpenCode sends 7k* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Concrete benchmark reveals significant token overhead in Claude Code API, directly impacting builder costs and context window efficiency.Cluster context: 1 sources, engagement 293. Common terms: original, hacker, reading, claude. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://systima.ai/blog/claude-code-vs-opencode-token-overhead"
+    "chloe_note": "Kurzes Update: *Claude Code sends 33k tokens before reading the prompt; OpenCode sends 7k* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Concrete benchmark reveals significant token overhead in Claude Code API, directly impacting builder costs and context window efficiency.Cluster context: 1 sources, engagement 293. Common terms: original, hacker, reading, claude. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://systima.ai/blog/claude-code-vs-opencode-token-overhead",
+    "sarah_package": {
+      "title": "Claude Code API has 33k token overhead.",
+      "subtitle": "Overhead is 26k tokens more than OpenCode, impacting builder costs and context window efficiency.",
+      "description": "Hidden usage affects cost and effective context window for builders using Claude Code APIs, with 234 points and 118 comments on Hacker News.",
+      "hashtags": [
+        "#ClaudeCode",
+        "#OpenCode",
+        "#TokenOverhead"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-12-claude-code-sends-33k-tokens-before-reading-the-prompt-opencode-sends-7k-b74b468963ee.md",
+    "published_at": "2026-07-12T21:56:31.565870Z"
   }
 ]

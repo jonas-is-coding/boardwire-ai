@@ -1818,5 +1818,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-12-fixed-three-bugs-that-made-qwen3-5-122b-a-daily-driver-on-mac-studio-5fde67725b53.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqhkhq36yt2o",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqhkhq36yt2o"
+  },
+  {
+    "id": "b74b468963ee",
+    "published_at": "2026-07-12T21:56:31.565870Z",
+    "platform": "bluesky",
+    "post": "Claude Code API has 33k token overhead.\n\nOverhead is 26k tokens more than OpenCode, impacting builder costs and context window efficiency.\n\nHidden usage affects cost and effective context window for builders using Claude Code APIs, with 234 points and 118 comments on Hacker News.",
+    "source_link": "https://systima.ai/blog/claude-code-vs-opencode-token-overhead",
+    "source_title": "Claude Code sends 33k tokens before reading the prompt; OpenCode sends 7k",
+    "score": 90,
+    "reason": "Concrete benchmark reveals significant token overhead in Claude Code API, directly impacting builder costs and context window efficiency.",
+    "card_path": "generated/cards/b74b468963ee.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-12-claude-code-sends-33k-tokens-before-reading-the-prompt-opencode-sends-7k-b74b468963ee.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqi6a4j2j322",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqi6a4j2j322"
   }
 ]
