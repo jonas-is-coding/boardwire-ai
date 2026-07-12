@@ -6785,11 +6785,11 @@
   },
   {
     "id": "5fde67725b53",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-12T07:58:40.555184Z",
     "score": 90,
     "reason": "Concrete fixes enable Qwen3.5-122B to run as a daily driver on Mac Studio, a clear local inference improvement.",
-    "proposed_post": "Bugs fixed make Qwen3.5-122B a daily driver on Mac Studio. Builders can now run a 122B model locally, enabling faster iteration for on-device AI applications.",
+    "proposed_post": "Qwen3.5-122B runs as daily driver on Mac Studio.\n\nFixed three bugs enable local inference, 49 points on HackerNews.\n\n122B model runs locally, enabling faster iteration for on-device AI applications, submitted by marzukia.\n\n📖 Read the full article: file:///home/runner/work/boardwi",
     "source_angle": "Optimizing Qwen3.5-122B for Mac Studio local inference.",
     "source_item": {
       "title": "Fixed three bugs that made Qwen3.5-122B a daily driver on Mac Studio",
@@ -6820,11 +6820,23 @@
         "cluster_score": 0
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/5fde67725b53.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Hey Chloe,\n\nHab mir den Qwen3.5-122B Artikel auf HackerNews angeschaut. Der Typ hat drei Bugs gefixt, die das Modell auf dem Mac Studio echt zum Daily Driver machen.\n\nDas ist relevant, weil es direkt zeigt, wie man ein großes Sprachmodell auf Consumer-Hardware optimiert. Entwickler, die lokal experimentieren oder inferieren wollen, kriegen hier konkrete Ansätze, um Performance-Engpässe zu umgehen und ihre eigenen Modelle effizienter auf Macs laufen zu lassen.",
-    "chloe_note": "Kurzes Update: *Fixed three bugs that made Qwen3.5-122B a daily driver on Mac Studio* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Concrete fixes enable Qwen3.5-122B to run as a daily driver on Mac Studio, a clear local inference improvement.Cluster context: 1 sources, engagement 60. Common terms: made, marzukia, bugs, original. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://mrzk.io/posts/qmlx-maximising-ai-psychosis-minmaxing-mac-studio/"
+    "chloe_note": "Kurzes Update: *Fixed three bugs that made Qwen3.5-122B a daily driver on Mac Studio* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Concrete fixes enable Qwen3.5-122B to run as a daily driver on Mac Studio, a clear local inference improvement.Cluster context: 1 sources, engagement 60. Common terms: made, marzukia, bugs, original. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://mrzk.io/posts/qmlx-maximising-ai-psychosis-minmaxing-mac-studio/",
+    "sarah_package": {
+      "title": "Qwen3.5-122B runs as daily driver on Mac Studio.",
+      "subtitle": "Fixed three bugs enable local inference, 49 points on HackerNews.",
+      "description": "122B model runs locally, enabling faster iteration for on-device AI applications, submitted by marzukia.",
+      "hashtags": [
+        "#Qwen3_5",
+        "#MacStudio",
+        "#LocalInference"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-12-fixed-three-bugs-that-made-qwen3-5-122b-a-daily-driver-on-mac-studio-5fde67725b53.md",
+    "published_at": "2026-07-12T16:02:53.004275Z"
   },
   {
     "id": "5d00b0a0cc17",
