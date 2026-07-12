@@ -6730,11 +6730,11 @@
   },
   {
     "id": "5deb15752d63",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-12T01:44:16.705416Z",
     "score": 85,
     "reason": "Open-source CPU inference server released with a novel performance claim. Ships today for builders to test.",
-    "proposed_post": "Reame, an open-source CPU inference server, is released, claiming performance improves over time. Builders can test this for cost-effective, long-running CPU inference or edge deployments.",
+    "proposed_post": "CPU inference gets faster runtime.\n\nReame, an open-source server, improves performance over time with 85 score on Hacker News.\n\nReame ships today for cost-effective, long-running CPU inference or edge deployments, available on GitHub.\n\n📖 Read the full article: file:///home/runner",
     "source_angle": "Open-source CPU inference server with adaptive performance",
     "source_item": {
       "title": "Show HN: Reame – a CPU inference server that gets faster as it runs",
@@ -6765,10 +6765,22 @@
         "cluster_score": 0
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/5deb15752d63.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das hier ist interessant: \"Show HN: Reame – a CPU inference server that gets faster as it runs\".\n\nEin CPU-Inferenzserver, der mit der Zeit schneller wird? Das klingt nach einem Game Changer für lokale oder Edge-Deployments, wo GPUs entweder zu teuer oder nicht verfügbar sind. Entwickler könnten damit ihre Modelle effizienter auf günstigerer Hardware laufen lassen, ohne auf Performance verzichten zu müssen, sondern sie sogar zu verbessern. Direkt auf GitHub, da können sie reinschauen und es selbst testen.",
-    "chloe_note": "Kurzes Update: *Show HN: Reame – a CPU inference server that gets faster as it runs* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Open-source CPU inference server released with a novel performance claim. Ships today for builders to test.Cluster context: 1 sources, engagement 43. Common terms: faster, cpu, comments, runs. Ich habe es mit 85 Punkten bewertet. Hier der Link: https://github.com/swellweb/reame"
+    "chloe_note": "Kurzes Update: *Show HN: Reame – a CPU inference server that gets faster as it runs* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Open-source CPU inference server released with a novel performance claim. Ships today for builders to test.Cluster context: 1 sources, engagement 43. Common terms: faster, cpu, comments, runs. Ich habe es mit 85 Punkten bewertet. Hier der Link: https://github.com/swellweb/reame",
+    "sarah_package": {
+      "title": "CPU inference gets faster runtime.",
+      "subtitle": "Reame, an open-source server, improves performance over time with 85 score on Hacker News.",
+      "description": "Reame ships today for cost-effective, long-running CPU inference or edge deployments, available on GitHub.",
+      "hashtags": [
+        "#Reame",
+        "#CPUInference",
+        "#OpenSource"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-12-show-hn-reame-a-cpu-inference-server-that-gets-faster-as-it-runs-5deb15752d63.md",
+    "published_at": "2026-07-12T07:30:33.566360Z"
   }
 ]

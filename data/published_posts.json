@@ -1762,5 +1762,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-11-dayuanjiang-next-ai-draw-io-a-next-js-web-application-that-integrates-ai-capabilities-with-draw-io-diagrams-this-app-allows-you-to-create-modify-and-enhance-diagrams-through-natural-language-comm-ebd37f5ca070.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqfaf43eiw22",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqfaf43eiw22"
+  },
+  {
+    "id": "5deb15752d63",
+    "published_at": "2026-07-12T07:30:33.566360Z",
+    "platform": "bluesky",
+    "post": "CPU inference gets faster runtime.\n\nReame, an open-source server, improves performance over time with 85 score on Hacker News.\n\nReame ships today for cost-effective, long-running CPU inference or edge deployments, available on GitHub.\n\n📖 Read the full article: file:///home/runner",
+    "source_link": "https://github.com/swellweb/reame",
+    "source_title": "Show HN: Reame – a CPU inference server that gets faster as it runs",
+    "score": 85,
+    "reason": "Open-source CPU inference server released with a novel performance claim. Ships today for builders to test.",
+    "card_path": "generated/cards/5deb15752d63.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-12-show-hn-reame-a-cpu-inference-server-that-gets-faster-as-it-runs-5deb15752d63.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqgntohdfc2o",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqgntohdfc2o"
   }
 ]
