@@ -6727,5 +6727,48 @@
     },
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-11-dayuanjiang-next-ai-draw-io-a-next-js-web-application-that-integrates-ai-capabilities-with-draw-io-diagrams-this-app-allows-you-to-create-modify-and-enhance-diagrams-through-natural-language-comm-ebd37f5ca070.md",
     "published_at": "2026-07-11T17:57:06.796670Z"
+  },
+  {
+    "id": "5deb15752d63",
+    "status": "approved",
+    "created_at": "2026-07-12T01:44:16.705416Z",
+    "score": 85,
+    "reason": "Open-source CPU inference server released with a novel performance claim. Ships today for builders to test.",
+    "proposed_post": "Reame, an open-source CPU inference server, is released, claiming performance improves over time. Builders can test this for cost-effective, long-running CPU inference or edge deployments.",
+    "source_angle": "Open-source CPU inference server with adaptive performance",
+    "source_item": {
+      "title": "Show HN: Reame – a CPU inference server that gets faster as it runs",
+      "source": "HackerNews",
+      "link": "https://github.com/swellweb/reame",
+      "source_tier": 3,
+      "engagement_score": 43.0,
+      "local_newsworthiness_score": 30,
+      "summary": "37 points, 12 comments on Hacker News — submitted by targetbridge — original: https://github.com/swellweb/reame\n[Cluster context: 1 sources, engagement 43, common terms: faster, cpu, comments, runs, hacker.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 43,
+        "common_terms": [
+          "faster",
+          "cpu",
+          "comments",
+          "runs",
+          "hacker",
+          "inference",
+          "points",
+          "targetbridge"
+        ],
+        "cluster_summary": "1 sources, engagement 43. Common terms: faster, cpu, comments, runs. Lead: Show HN: Reame – a CPU inference server that gets faster as it runs",
+        "alternative_titles": [],
+        "cluster_score": 0
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, das hier ist interessant: \"Show HN: Reame – a CPU inference server that gets faster as it runs\".\n\nEin CPU-Inferenzserver, der mit der Zeit schneller wird? Das klingt nach einem Game Changer für lokale oder Edge-Deployments, wo GPUs entweder zu teuer oder nicht verfügbar sind. Entwickler könnten damit ihre Modelle effizienter auf günstigerer Hardware laufen lassen, ohne auf Performance verzichten zu müssen, sondern sie sogar zu verbessern. Direkt auf GitHub, da können sie reinschauen und es selbst testen.",
+    "chloe_note": "Kurzes Update: *Show HN: Reame – a CPU inference server that gets faster as it runs* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Open-source CPU inference server released with a novel performance claim. Ships today for builders to test.Cluster context: 1 sources, engagement 43. Common terms: faster, cpu, comments, runs. Ich habe es mit 85 Punkten bewertet. Hier der Link: https://github.com/swellweb/reame"
   }
 ]

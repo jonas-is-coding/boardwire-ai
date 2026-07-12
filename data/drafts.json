@@ -15972,5 +15972,61 @@
     "engagement_score": 46.5,
     "local_newsworthiness_score": 0,
     "created_at": "2026-07-11T20:38:27.997089Z"
+  },
+  {
+    "title": "Show HN: Reame – a CPU inference server that gets faster as it runs",
+    "link": "https://github.com/swellweb/reame",
+    "source": "HackerNews",
+    "score": 85,
+    "should_post": true,
+    "reason": "Open-source CPU inference server released with a novel performance claim. Ships today for builders to test.",
+    "post_text": "Reame, an open-source CPU inference server, is released, claiming performance improves over time. Builders can test this for cost-effective, long-running CPU inference or edge deployments.",
+    "source_angle": "Open-source CPU inference server with adaptive performance",
+    "source_tier": 3,
+    "engagement_score": 43.0,
+    "local_newsworthiness_score": 30,
+    "created_at": "2026-07-12T01:44:16.705416Z"
+  },
+  {
+    "title": "Mesh LLM: distributed AI computing on iroh",
+    "link": "https://www.iroh.computer/blog/mesh-llm",
+    "source": "HackerNews",
+    "score": 5,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 96.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-12T01:44:17.884741Z"
+  },
+  {
+    "title": "I used to love Claude, but the latest models are slowly ruining it",
+    "link": "https://www.androidauthority.com/claude-latest-models-pushback-bad-3683521/",
+    "source": "HackerNews",
+    "score": 3,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 70.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-12T01:44:17.884952Z"
+  },
+  {
+    "title": "Stop Telling Me to Ask an LLM",
+    "link": "https://blog.yaelwrites.com/stop-telling-me-to-ask-an-llm/",
+    "source": "HackerNews",
+    "score": 5,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 204.0,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-07-12T01:44:17.885125Z"
   }
 ]
