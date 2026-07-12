@@ -16168,5 +16168,19 @@
     "engagement_score": 73.5,
     "local_newsworthiness_score": 0,
     "created_at": "2026-07-12T12:55:08.561554Z"
+  },
+  {
+    "title": "AI Boosts Research Careers but Flattens Scientific Discovery",
+    "link": "https://spectrum.ieee.org/ai-science-research-flattens-discovery",
+    "source": "HackerNews",
+    "score": 20,
+    "should_post": false,
+    "reason": "Fails Ships Test. This is an analysis/opinion piece on AI's impact on research, not a release, tool, or actionable artifact.",
+    "post_text": "No post generated",
+    "source_angle": "No source angle provided",
+    "source_tier": 3,
+    "engagement_score": 117.0,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-07-12T16:45:02.948533Z"
   }
 ]
