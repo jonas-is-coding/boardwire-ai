@@ -6883,11 +6883,11 @@
   },
   {
     "id": "1ac902843fc9",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-12T11:04:33.790498Z",
     "score": 90,
     "reason": "GitHub repo offers 100+ runnable open-source LLM apps (Agents/RAG). Direct utility for builders to clone and adapt.",
-    "proposed_post": "Shubhamsaboo's 'awesome-llm-apps' GitHub repo now features 100+ runnable AI Agent & RAG applications. Builders can clone these open-source examples to accelerate development or find inspiration for their own LLM-powered products.",
+    "proposed_post": "LLM apps become infrastructure with 100+ open examples.\n\nAwesome-llm-apps offers 100+ runnable AI Agent & RAG apps with +549 stars today.\n\nGitHub repo provides open-source LLM applications for builders to clone, customize, and ship, accelerating development of LLM-powered produc\n",
     "source_angle": "Open-source LLM app collection for immediate builder use",
     "source_item": {
       "title": "Shubhamsaboo/awesome-llm-apps — 100+ AI Agent & RAG apps you can actually run — clone, customize, ship.",
@@ -6918,10 +6918,22 @@
         "cluster_score": 35
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/1ac902843fc9.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das ist ein Volltreffer. \"Shubhamsaboo/awesome-llm-apps\" explodiert gerade auf GitHub.\n\nHier sind über 100 laufende AI Agent- und RAG-Apps, die man klonen, anpassen und direkt shippen kann. Für jeden Entwickler, der schnell mit LLM-Apps starten will, ist das eine Goldgrube an praktischen Beispielen und Boilerplates.",
-    "chloe_note": "Hey, *Shubhamsaboo/awesome-llm-apps — 100+ AI Agent & RAG apps you can actually run — clone, customize, ship.* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen GitHub repo offers 100+ runnable open-source LLM apps (Agents/RAG). Direct utility for builders to clone and adapt.Cluster context: 1 sources, engagement 549. Common terms: ship., shubhamsaboo/awesome-llm-apps, clone, you. Score aktuell: 90. Link: https://github.com/Shubhamsaboo/awesome-llm-apps"
+    "chloe_note": "Hey, *Shubhamsaboo/awesome-llm-apps — 100+ AI Agent & RAG apps you can actually run — clone, customize, ship.* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen GitHub repo offers 100+ runnable open-source LLM apps (Agents/RAG). Direct utility for builders to clone and adapt.Cluster context: 1 sources, engagement 549. Common terms: ship., shubhamsaboo/awesome-llm-apps, clone, you. Score aktuell: 90. Link: https://github.com/Shubhamsaboo/awesome-llm-apps",
+    "sarah_package": {
+      "title": "LLM apps become infrastructure with 100+ open examples.",
+      "subtitle": "Awesome-llm-apps offers 100+ runnable AI Agent & RAG apps with +549 stars today.",
+      "description": "GitHub repo provides open-source LLM applications for builders to clone, customize, and ship, accelerating development of LLM-powered produc",
+      "hashtags": [
+        "#LLM",
+        "#RAG",
+        "#AIApps"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-12-shubhamsaboo-awesome-llm-apps-100-ai-agent-rag-apps-you-can-actually-run-clone-customize-ship-1ac902843fc9.md",
+    "published_at": "2026-07-12T12:03:07.929686Z"
   }
 ]
