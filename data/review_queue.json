@@ -7115,11 +7115,11 @@
   },
   {
     "id": "69a89162398e",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-13T16:21:33.814732Z",
     "score": 90,
     "reason": "Open-source tool launch providing disposable VMs for AI agents. Directly addresses agent security/environment needs.",
-    "proposed_post": "Clawk, an open-source tool, provides disposable Linux VMs for AI coding agents. This enables safe, isolated code execution, simplifying agent development and deployment for builders.",
+    "proposed_post": "Coding agents get disposable Linux VMs.\n\nClawk provides isolated execution with 95 points and 102 comments on Hacker News, open-source under\n\nSimplifies agent development and deployment for builders, enabling safe code execution, available on GitHub.\n\n📖 Read the full article: fil",
     "source_angle": "New open-source tool for AI agent sandboxing",
     "source_item": {
       "title": "Show HN: Clawk – Give coding agents a disposable Linux VM, not your laptop",
@@ -7150,10 +7150,22 @@
         "cluster_score": 10
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/69a89162398e.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das hier ist interessant: \"Show HN: Clawk – Give coding agents a disposable Linux VM, not your laptop\".\n\nDas ist ein Tool, mit dem man KI-Coding-Agents in einer isolierten Linux-VM laufen lassen kann. Das löst ein echtes Problem für Entwickler, die mit diesen Agents experimentieren wollen, aber keine Lust haben, ihre lokale Maschine zu riskieren oder mühsam Umgebungen einzurichten. Eine \"disposable VM\" für den Agenten ist smart und erhöht die Akzeptanz solcher Tools. Entwickler können damit sicherer und schneller neue KI-Workflows testen.",
-    "chloe_note": "Hey, *Show HN: Clawk – Give coding agents a disposable Linux VM, not your laptop* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Open-source tool launch providing disposable VMs for AI agents. Directly addresses agent security/environment needs.Cluster context: 1 sources, engagement 146. Common terms: clawk, points, give, linux. Score aktuell: 90. Link: https://github.com/clawkwork/clawk"
+    "chloe_note": "Hey, *Show HN: Clawk – Give coding agents a disposable Linux VM, not your laptop* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Open-source tool launch providing disposable VMs for AI agents. Directly addresses agent security/environment needs.Cluster context: 1 sources, engagement 146. Common terms: clawk, points, give, linux. Score aktuell: 90. Link: https://github.com/clawkwork/clawk",
+    "sarah_package": {
+      "title": "Coding agents get disposable Linux VMs.",
+      "subtitle": "Clawk provides isolated execution with 95 points and 102 comments on Hacker News, open-source under ",
+      "description": "Simplifies agent development and deployment for builders, enabling safe code execution, available on GitHub.",
+      "hashtags": [
+        "#Clawk",
+        "#LinuxVM",
+        "#AICodingAgents"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-13-show-hn-clawk-give-coding-agents-a-disposable-linux-vm-not-your-laptop-69a89162398e.md",
+    "published_at": "2026-07-13T18:46:27.660126Z"
   }
 ]

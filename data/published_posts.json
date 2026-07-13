@@ -1860,5 +1860,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-13-graphify-labs-graphify-ai-coding-assistant-skill-claude-code-codex-opencode-cursor-gemini-cli-and-more-turn-any-folder-of-code-sql-schemas-r-scripts-shell-scripts-docs-papers-images-o-c8081a50715a.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqjzv4kadm2b",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqjzv4kadm2b"
+  },
+  {
+    "id": "69a89162398e",
+    "published_at": "2026-07-13T18:46:27.660126Z",
+    "platform": "bluesky",
+    "post": "Coding agents get disposable Linux VMs.\n\nClawk provides isolated execution with 95 points and 102 comments on Hacker News, open-source under\n\nSimplifies agent development and deployment for builders, enabling safe code execution, available on GitHub.\n\n📖 Read the full article: fil",
+    "source_link": "https://github.com/clawkwork/clawk",
+    "source_title": "Show HN: Clawk – Give coding agents a disposable Linux VM, not your laptop",
+    "score": 90,
+    "reason": "Open-source tool launch providing disposable VMs for AI agents. Directly addresses agent security/environment needs.",
+    "card_path": "generated/cards/69a89162398e.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-13-show-hn-clawk-give-coding-agents-a-disposable-linux-vm-not-your-laptop-69a89162398e.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqke36xd2c2u",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqke36xd2c2u"
   }
 ]
