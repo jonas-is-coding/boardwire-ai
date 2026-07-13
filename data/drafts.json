@@ -16462,5 +16462,19 @@
     "engagement_score": 294.0,
     "local_newsworthiness_score": 30,
     "created_at": "2026-07-13T19:11:28.101782Z"
+  },
+  {
+    "title": "AI Is a Bad Tool",
+    "link": "https://bytecode.news/posts/2026/07/user-submission-ai-is-a-bad-tool",
+    "source": "HackerNews",
+    "score": 10,
+    "should_post": false,
+    "reason": "Opinion piece, not a concrete release or actionable artifact. Fails Ships Test. Low engagement for a community source.",
+    "post_text": "No post generated",
+    "source_angle": "Hacker News discussion on AI utility",
+    "source_tier": 3,
+    "engagement_score": 37.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-13T20:48:56.905281Z"
   }
 ]
