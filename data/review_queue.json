@@ -7170,11 +7170,11 @@
   },
   {
     "id": "720f6826f66d",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-13T22:44:44.388910Z",
     "score": 90,
     "reason": "Ollama v0.32.0 is a direct software release with immediate utility for local model deployment and agentic workflow exploration.",
-    "proposed_post": "Ollama v0.32.0 ships with Qwen3.5/Next model parsing/rendering and an agent UI. Builders can now more effectively run these models locally and explore new agentic workflow management.",
+    "proposed_post": "Ollama integrates Qwen3.5/Next models.\n\nAdds Qwen3.5 parser and renderer, with 1 source and 0 engagement.\n\nOllama v0.32.0 supports local deployment and agentic workflow exploration with Qwen3.5/Next models, built by jessegross and ParthSareen.\n\n📖 Read the full article: file:///ho",
     "source_angle": "Ollama release adds Qwen3.5/Next support and agent UI.",
     "source_item": {
       "title": "Ollama v0.32.0",
@@ -7205,10 +7205,22 @@
         "cluster_score": 35
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/720f6826f66d.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, Ollama v0.32.0 ist raus. Das ist relevant, weil sie jetzt den qwen3.5 Parser und Renderer unterstützen. Das bedeutet, Entwickler können Qwen3.5/Next Modelle direkt in Ollama nutzen, was die Integration für lokale LLM-Workflows deutlich vereinfacht.",
-    "chloe_note": "*Ollama v0.32.0* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Ollama v0.32.0 is a direct software release with immediate utility for local model deployment and agentic workflow exploration.Cluster context: 1 sources, engagement 0. Common terms: full, qwen3.5/next, issue-link, class. Bewertung: 90. Quelle: https://github.com/ollama/ollama/releases/tag/v0.32.0"
+    "chloe_note": "*Ollama v0.32.0* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Ollama v0.32.0 is a direct software release with immediate utility for local model deployment and agentic workflow exploration.Cluster context: 1 sources, engagement 0. Common terms: full, qwen3.5/next, issue-link, class. Bewertung: 90. Quelle: https://github.com/ollama/ollama/releases/tag/v0.32.0",
+    "sarah_package": {
+      "title": "Ollama integrates Qwen3.5/Next models.",
+      "subtitle": "Adds Qwen3.5 parser and renderer, with 1 source and 0 engagement.",
+      "description": "Ollama v0.32.0 supports local deployment and agentic workflow exploration with Qwen3.5/Next models, built by jessegross and ParthSareen.",
+      "hashtags": [
+        "#Ollama",
+        "#Qwen3_5",
+        "#LocalModelDeployment"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-13-ollama-v0-32-0-720f6826f66d.md",
+    "published_at": "2026-07-13T23:57:29.727448Z"
   }
 ]
