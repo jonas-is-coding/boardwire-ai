@@ -7060,11 +7060,11 @@
   },
   {
     "id": "c8081a50715a",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-13T12:26:07.937523Z",
     "score": 90,
     "reason": "Open-source tool launch with clear utility for AI-assisted development, high community signal.",
-    "proposed_post": "Graphify-Labs released 'graphify', an open-source tool that converts codebases, schemas, and docs into a queryable knowledge graph. Use it to give AI coding assistants like Claude Code or Cursor deep context for better code understanding and generation.",
+    "proposed_post": "Codebases become queryable graphs.\n\nGraphify turns folders into knowledge graphs for Claude Code, Codex, and Cursor, with +1028 stars.\n\nGraphify converts code, SQL schemas, scripts, and docs into a unified graph for AI-assisted development, available open-source.\n\n📖 Read the full",
     "source_angle": "Open-source tool for AI coding assistant context",
     "source_item": {
       "title": "Graphify-Labs/graphify — AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, o",
@@ -7095,10 +7095,22 @@
         "cluster_score": 55
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/c8081a50715a.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, schau dir das mal an. Graphify-Labs/graphify ist heute auf GitHub explodiert.\n\nDas Tool verwandelt Code-Ordner, Schemas, Skripte und sogar Docs in einen abfragbaren Wissensgraphen. Entwickler können damit ihre gesamte Codebase und Infrastruktur mit LLMs wie Claude Code oder Gemini CLI effizienter durchsuchen und verstehen. Das ist ein Game-Changer für große, komplexe Projekte, wo man sonst ewig nach Zusammenhängen suchen muss. Spart Zeit und erhöht die Code-Qualität.",
-    "chloe_note": "*Graphify-Labs/graphify — AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, o* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Open-source tool launch with clear utility for AI-assisted development, high community signal.Cluster context: 1 sources, engagement 1028. Common terms: assistant, database, videos, gemini. Bewertung: 90. Quelle: https://github.com/Graphify-Labs/graphify"
+    "chloe_note": "*Graphify-Labs/graphify — AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, o* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Open-source tool launch with clear utility for AI-assisted development, high community signal.Cluster context: 1 sources, engagement 1028. Common terms: assistant, database, videos, gemini. Bewertung: 90. Quelle: https://github.com/Graphify-Labs/graphify",
+    "sarah_package": {
+      "title": "Codebases become queryable graphs.",
+      "subtitle": "Graphify turns folders into knowledge graphs for Claude Code, Codex, and Cursor, with +1028 stars.",
+      "description": "Graphify converts code, SQL schemas, scripts, and docs into a unified graph for AI-assisted development, available open-source.",
+      "hashtags": [
+        "#Graphify",
+        "#ClaudeCode",
+        "#Codex"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-13-graphify-labs-graphify-ai-coding-assistant-skill-claude-code-codex-opencode-cursor-gemini-cli-and-more-turn-any-folder-of-code-sql-schemas-r-scripts-shell-scripts-docs-papers-images-o-c8081a50715a.md",
+    "published_at": "2026-07-13T15:44:07.194565Z"
   }
 ]

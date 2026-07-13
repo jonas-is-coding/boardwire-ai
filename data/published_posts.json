@@ -1846,5 +1846,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-12-claude-code-may-july-2026-weekly-limits-promotion-bc6d24863c0d.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqif4tfelq2s",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqif4tfelq2s"
+  },
+  {
+    "id": "c8081a50715a",
+    "published_at": "2026-07-13T15:44:07.194565Z",
+    "platform": "bluesky",
+    "post": "Codebases become queryable graphs.\n\nGraphify turns folders into knowledge graphs for Claude Code, Codex, and Cursor, with +1028 stars.\n\nGraphify converts code, SQL schemas, scripts, and docs into a unified graph for AI-assisted development, available open-source.\n\n📖 Read the full",
+    "source_link": "https://github.com/Graphify-Labs/graphify",
+    "source_title": "Graphify-Labs/graphify — AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, o",
+    "score": 90,
+    "reason": "Open-source tool launch with clear utility for AI-assisted development, high community signal.",
+    "card_path": "generated/cards/c8081a50715a.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-13-graphify-labs-graphify-ai-coding-assistant-skill-claude-code-codex-opencode-cursor-gemini-cli-and-more-turn-any-folder-of-code-sql-schemas-r-scripts-shell-scripts-docs-papers-images-o-c8081a50715a.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqjzv4kadm2b",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqjzv4kadm2b"
   }
 ]
