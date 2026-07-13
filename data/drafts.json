@@ -16322,5 +16322,33 @@
     "engagement_score": 0.0,
     "local_newsworthiness_score": 35,
     "created_at": "2026-07-13T01:47:13.320320Z"
+  },
+  {
+    "title": "Ask HN: Add flag for AI-generated articles",
+    "link": "https://news.ycombinator.com/item?id=48886741",
+    "source": "HackerNews",
+    "score": 3,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 387.5,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-07-13T05:26:05.940510Z"
+  },
+  {
+    "title": "Agent Harness Engineering",
+    "link": "https://addyosmani.com/blog/agent-harness-engineering/",
+    "source": "HackerNews",
+    "score": 20,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "No source angle provided",
+    "source_tier": 3,
+    "engagement_score": 33.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-13T05:26:13.239835Z"
   }
 ]
