@@ -7167,5 +7167,48 @@
     },
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-13-show-hn-clawk-give-coding-agents-a-disposable-linux-vm-not-your-laptop-69a89162398e.md",
     "published_at": "2026-07-13T18:46:27.660126Z"
+  },
+  {
+    "id": "720f6826f66d",
+    "status": "approved",
+    "created_at": "2026-07-13T22:44:44.388910Z",
+    "score": 90,
+    "reason": "Ollama v0.32.0 is a direct software release with immediate utility for local model deployment and agentic workflow exploration.",
+    "proposed_post": "Ollama v0.32.0 ships with Qwen3.5/Next model parsing/rendering and an agent UI. Builders can now more effectively run these models locally and explore new agentic workflow management.",
+    "source_angle": "Ollama release adds Qwen3.5/Next support and agent UI.",
+    "source_item": {
+      "title": "Ollama v0.32.0",
+      "source": "Ollama Releases",
+      "link": "https://github.com/ollama/ollama/releases/tag/v0.32.0",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 40,
+      "summary": "<h2>What's Changed</h2>\n<ul>\n<li>create: select the qwen3.5 parser and renderer for Qwen3.5/Next by <a class=\"user-mention notranslate\" href=\"https://github.com/jessegross\">@jessegross</a> in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/17078\">#17078</a></li>\n<li>launch: warn before old agent models by <a class=\"user-mention notranslate\" href=\"https://github.com/ParthSareen\">@ParthSareen</a> in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/17063\">#17063</a></li>\n<li>cmd: agent UI by <a class=\"user-mention notranslate\" href=\"https://github.com/ParthSareen\">@ParthSareen</a> in <a class=\"issue-link js-issue-link\" href=\"https://github.com/ollama/ollama/pull/17017\">#17017</a></li>\n</ul>\n<p><strong>Full Changelog</strong>: <a class=\"commit-link\" href=\"https://github.com/ollama/ollama/compare/v0.31.2...v0.32.0-rc0\"><tt>v0.31.2...v0.32.0-rc0</tt></a></p>\n[Cluster context: 1 sources, engagement 0, common terms: full, qwen3.5/next, issue-link, class, old.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Ollama Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "full",
+          "qwen3.5/next",
+          "issue-link",
+          "class",
+          "old",
+          "renderer",
+          "v0.32.0",
+          "qwen3.5"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: full, qwen3.5/next, issue-link, class. Lead: Ollama v0.32.0",
+        "alternative_titles": [],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, Ollama v0.32.0 ist raus. Das ist relevant, weil sie jetzt den qwen3.5 Parser und Renderer unterstützen. Das bedeutet, Entwickler können Qwen3.5/Next Modelle direkt in Ollama nutzen, was die Integration für lokale LLM-Workflows deutlich vereinfacht.",
+    "chloe_note": "*Ollama v0.32.0* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Ollama v0.32.0 is a direct software release with immediate utility for local model deployment and agentic workflow exploration.Cluster context: 1 sources, engagement 0. Common terms: full, qwen3.5/next, issue-link, class. Bewertung: 90. Quelle: https://github.com/ollama/ollama/releases/tag/v0.32.0"
   }
 ]
