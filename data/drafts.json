@@ -16350,5 +16350,19 @@
     "engagement_score": 33.0,
     "local_newsworthiness_score": 0,
     "created_at": "2026-07-13T05:26:13.239835Z"
+  },
+  {
+    "title": "Autoresearch, Claude and Constrained Optimization",
+    "link": "https://www.elliotcsmith.com/autoresearch-claude-and-constrained-optimization/",
+    "source": "HackerNews",
+    "score": 20,
+    "should_post": false,
+    "reason": "Fails Ships Test. Blog post discusses a concept, no new model, API, tool, or benchmark released. Low community engagement.",
+    "post_text": "No post generated",
+    "source_angle": "No source angle provided",
+    "source_tier": 3,
+    "engagement_score": 33.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-13T08:47:14.736811Z"
   }
 ]
