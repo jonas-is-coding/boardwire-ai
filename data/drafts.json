@@ -16420,5 +16420,33 @@
     "engagement_score": 661.5,
     "local_newsworthiness_score": 45,
     "created_at": "2026-07-13T12:26:09.228908Z"
+  },
+  {
+    "title": "Show HN: Clawk – Give coding agents a disposable Linux VM, not your laptop",
+    "link": "https://github.com/clawkwork/clawk",
+    "source": "HackerNews",
+    "score": 90,
+    "should_post": true,
+    "reason": "Open-source tool launch providing disposable VMs for AI agents. Directly addresses agent security/environment needs.",
+    "post_text": "Clawk, an open-source tool, provides disposable Linux VMs for AI coding agents. This enables safe, isolated code execution, simplifying agent development and deployment for builders.",
+    "source_angle": "New open-source tool for AI agent sandboxing",
+    "source_tier": 3,
+    "engagement_score": 146.0,
+    "local_newsworthiness_score": 40,
+    "created_at": "2026-07-13T16:21:33.814732Z"
+  },
+  {
+    "title": "Getting started with ChatGPT",
+    "link": "https://openai.com/academy/getting-started",
+    "source": "OpenAI News",
+    "score": 4,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 1,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-13T16:21:35.010071Z"
   }
 ]
