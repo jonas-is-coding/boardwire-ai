@@ -16308,5 +16308,19 @@
     "engagement_score": 38.5,
     "local_newsworthiness_score": 0,
     "created_at": "2026-07-12T22:37:33.639751Z"
+  },
+  {
+    "title": "vLLM v0.25.1",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.25.1",
+    "source": "vLLM Releases",
+    "score": 20,
+    "should_post": false,
+    "reason": "Summary provides no concrete details on new features or improvements in v0.25.1. Fails Ships Test for lack of concrete capabilities.",
+    "post_text": "No post generated",
+    "source_angle": "vLLM minor release, details missing",
+    "source_tier": 2,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 35,
+    "created_at": "2026-07-13T01:47:13.320320Z"
   }
 ]
