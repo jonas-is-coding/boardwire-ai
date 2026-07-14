@@ -7444,11 +7444,11 @@
   },
   {
     "id": "e4cf5ae17c79",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-14T19:01:41.075041Z",
     "score": 70,
     "reason": "Bonsai 27B, a 1-bit LLM, is claimed to run on a phone, enabling on-device mobile AI. Implies deployable artifact.",
-    "proposed_post": "Bonsai 27B, a 1-bit LLM, is the first 27B-class model claimed to run on a phone. This enables on-device LLM applications for mobile, reducing inference costs and improving privacy for edge AI builders.",
+    "proposed_post": "27B-class on-device LLMs arrive via 1-bit quantization.\n\nBonsai 27B runs on a smartphone with 1-bit weights, enabling local mobile AI inference without cloud\n\nFirst open-weight 27B model quantized to 1-bit, pushing edge AI beyond 7B-class limits. Weights released under Apache 2.0",
     "source_angle": "On-device LLMs, 1-bit quantization, mobile AI deployment",
     "source_item": {
       "title": "Bonsai 27B (1-bit LLM): The First 27B-Class Model to Run on a Phone",
@@ -7479,11 +7479,23 @@
         "cluster_score": 0
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/e4cf5ae17c79.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, check das hier: \"Bonsai 27B (1-bit LLM): The First 27B-Class Model to Run on a Phone\".\n\nEin 27B-Modell, das auf einem Handy läuft – das ist ein Game Changer. Entwickler können jetzt wirklich leistungsstarke lokale KI-Anwendungen bauen, ohne auf die Cloud angewiesen zu sein. Stell dir vor, was das für Edge-Computing und Privacy bedeutet.",
-    "chloe_note": "Kurzes Update: *Bonsai 27B (1-bit LLM): The First 27B-Class Model to Run on a Phone* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Bonsai 27B, a 1-bit LLM, is claimed to run on a phone, enabling on-device mobile AI. Implies deployable artifact.Cluster context: 1 sources, engagement 49. Common terms: xenova, bonsai, comments, run. Ich habe es mit 70 Punkten bewertet. Hier der Link: https://prismml.com/news/bonsai-27b"
+    "chloe_note": "Kurzes Update: *Bonsai 27B (1-bit LLM): The First 27B-Class Model to Run on a Phone* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Bonsai 27B, a 1-bit LLM, is claimed to run on a phone, enabling on-device mobile AI. Implies deployable artifact.Cluster context: 1 sources, engagement 49. Common terms: xenova, bonsai, comments, run. Ich habe es mit 70 Punkten bewertet. Hier der Link: https://prismml.com/news/bonsai-27b",
+    "sarah_package": {
+      "title": "27B-class on-device LLMs arrive via 1-bit quantization.",
+      "subtitle": "Bonsai 27B runs on a smartphone with 1-bit weights, enabling local mobile AI inference without cloud",
+      "description": "First open-weight 27B model quantized to 1-bit, pushing edge AI beyond 7B-class limits. Weights released under Apache 2.0. Deploys via Trans",
+      "hashtags": [
+        "#Bonsai27B",
+        "#1BitLLM",
+        "#ONNXRuntime"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-14-bonsai-27b-1-bit-llm-the-first-27b-class-model-to-run-on-a-phone-e4cf5ae17c79.md",
+    "published_at": "2026-07-14T22:02:19.604433Z"
   },
   {
     "id": "995996b5f443",

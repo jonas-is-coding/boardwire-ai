@@ -1944,5 +1944,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-14-differentiable-fortran-with-lfortran-and-enzyme-5ffcd6a5907e.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqmzkijpil22",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqmzkijpil22"
+  },
+  {
+    "id": "e4cf5ae17c79",
+    "published_at": "2026-07-14T22:02:19.604433Z",
+    "platform": "bluesky",
+    "post": "27B-class on-device LLMs arrive via 1-bit quantization.\n\nBonsai 27B runs on a smartphone with 1-bit weights, enabling local mobile AI inference without cloud\n\nFirst open-weight 27B model quantized to 1-bit, pushing edge AI beyond 7B-class limits. Weights released under Apache 2.0",
+    "source_link": "https://prismml.com/news/bonsai-27b",
+    "source_title": "Bonsai 27B (1-bit LLM): The First 27B-Class Model to Run on a Phone",
+    "score": 70,
+    "reason": "Bonsai 27B, a 1-bit LLM, is claimed to run on a phone, enabling on-device mobile AI. Implies deployable artifact.",
+    "card_path": "generated/cards/e4cf5ae17c79.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-14-bonsai-27b-1-bit-llm-the-first-27b-class-model-to-run-on-a-phone-e4cf5ae17c79.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqn7ieclbg22",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqn7ieclbg22"
   }
 ]
