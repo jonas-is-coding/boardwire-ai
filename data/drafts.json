@@ -16966,5 +16966,19 @@
     "engagement_score": 49.5,
     "local_newsworthiness_score": 0,
     "created_at": "2026-07-14T19:01:41.075041Z"
+  },
+  {
+    "title": "Cursor 0day: When Full Disclosure Becomes the Only Protection Left",
+    "link": "https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left",
+    "source": "HackerNews",
+    "score": 90,
+    "should_post": true,
+    "reason": "Critical 0-day vulnerability in Cursor requires immediate builder action. Passes Ships Test as an urgent security alert.",
+    "post_text": "Mindgard disclosed a 0-day vulnerability in Cursor, enabling RCE/data exfiltration. Builders using Cursor must update immediately or assess alternatives to protect their code and data.",
+    "source_angle": "Security vulnerability in AI-native code editor",
+    "source_tier": 3,
+    "engagement_score": 79.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-14T20:49:30.148303Z"
   }
 ]
