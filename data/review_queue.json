@@ -7225,11 +7225,11 @@
   },
   {
     "id": "0fed188e643d",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-14T01:23:59.249170Z",
     "score": 90,
     "reason": "New Claude Code release adds enterprise deployment features and developer UX improvements, ships today.",
-    "proposed_post": "Claude Code v2.1.208 adds `CLAUDE_CODE_PROCESS_WRAPPER` to honor corporate launchers. This allows IT to enforce security/monitoring on Claude Code's self-spawned processes, easing enterprise deployment.",
+    "proposed_post": "Claude Code adds accessibility and Vim remaps as infrastructure.\n\nv2.1.208 ships screen-reader mode, vimInsertModeRemaps, and CLAUDE_CODE_PROCESS_WRAPPER for enterpri\n\nScreen-reader mode with CLI flag or JSON setting. vimInsertModeRemaps saves keystrokes in Vim mode. CLAUDE_CODE_",
     "source_angle": "Claude Code adds corporate process wrapper for enterprise deployment.",
     "source_item": {
       "title": "Claude Code v2.1.208",
@@ -7260,11 +7260,23 @@
         "cluster_score": 15
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/0fed188e643d.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, dieser Claude Code Release ist interessant. Der neue Screen-Reader-Modus ist ein echter Game-Changer für Devs mit Seheinschränkungen – die können jetzt direkt im Terminal mit Claude arbeiten. Und die 'vimInsertModeRemaps' sind super für alle, die ihre Vim-Workflows optimieren wollen, spart definitiv Zeit.",
-    "chloe_note": "Kurzes Update: *Claude Code v2.1.208* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um New Claude Code release adds enterprise deployment features and developer UX improvements, ships today.Cluster context: 1 sources, engagement 0. Common terms: saved, auto-updates, set, pasted. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.208"
+    "chloe_note": "Kurzes Update: *Claude Code v2.1.208* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um New Claude Code release adds enterprise deployment features and developer UX improvements, ships today.Cluster context: 1 sources, engagement 0. Common terms: saved, auto-updates, set, pasted. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.208",
+    "sarah_package": {
+      "title": "Claude Code adds accessibility and Vim remaps as infrastructure.",
+      "subtitle": "v2.1.208 ships screen-reader mode, vimInsertModeRemaps, and CLAUDE_CODE_PROCESS_WRAPPER for enterpri",
+      "description": "Screen-reader mode with CLI flag or JSON setting. vimInsertModeRemaps saves keystrokes in Vim mode. CLAUDE_CODE_PROCESS_WRAPPER enforces cor",
+      "hashtags": [
+        "#ClaudeCode",
+        "#Accessibility",
+        "#Vim"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-14-claude-code-v2-1-208-0fed188e643d.md",
+    "published_at": "2026-07-14T10:51:27.890471Z"
   },
   {
     "id": "c02dbb44fb87",

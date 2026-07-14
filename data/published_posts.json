@@ -1888,5 +1888,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-13-ollama-v0-32-0-720f6826f66d.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqkvhdtrje2x",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqkvhdtrje2x"
+  },
+  {
+    "id": "0fed188e643d",
+    "published_at": "2026-07-14T10:51:27.890471Z",
+    "platform": "bluesky",
+    "post": "Claude Code adds accessibility and Vim remaps as infrastructure.\n\nv2.1.208 ships screen-reader mode, vimInsertModeRemaps, and CLAUDE_CODE_PROCESS_WRAPPER for enterpri\n\nScreen-reader mode with CLI flag or JSON setting. vimInsertModeRemaps saves keystrokes in Vim mode. CLAUDE_CODE_",
+    "source_link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.208",
+    "source_title": "Claude Code v2.1.208",
+    "score": 90,
+    "reason": "New Claude Code release adds enterprise deployment features and developer UX improvements, ships today.",
+    "card_path": "generated/cards/0fed188e643d.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-14-claude-code-v2-1-208-0fed188e643d.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqlzytmb4s22",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqlzytmb4s22"
   }
 ]
