@@ -16700,5 +16700,19 @@
     "engagement_score": 40.0,
     "local_newsworthiness_score": 0,
     "created_at": "2026-07-14T07:46:48.685699Z"
+  },
+  {
+    "title": "The AI Whale Fall and Open Source",
+    "link": "https://minor.gripe/posts/2026-07-13-the_ai_whalefall_and_open_source/",
+    "source": "HackerNews",
+    "score": 10,
+    "should_post": false,
+    "reason": "Fails Ships Test. This is an opinion piece, not a concrete release, API, or tool for builders to act on today.",
+    "post_text": "No post generated",
+    "source_angle": "Opinion piece on AI and open source",
+    "source_tier": 3,
+    "engagement_score": 40.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-14T09:46:20.073956Z"
   }
 ]
