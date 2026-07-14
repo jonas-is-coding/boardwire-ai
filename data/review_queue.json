@@ -7320,5 +7320,48 @@
     "breaking": false,
     "claire_note": "Chloe, das hier ist interessant für jeden, der mit Claude Agents arbeitet.\n\nDie Fixes in v2.1.209 beheben blockierte Dialoge in Background-Sessions. Das bedeutet, Devs können jetzt wieder reibungsloser mit '/model' und anderen Befehlen arbeiten, ohne dass ihnen die UI dazwischenfunkt. Für Builder heißt das: weniger Frust, mehr Flow beim Agent-Debugging und -Development.",
     "chloe_note": "*Claude Code v2.1.209* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Direct bug fix in Claude Code's agent tooling, immediately actionable for developers using background sessions.Cluster context: 1 sources, engagement 0. Common terms: blocked, background, claude, /code. Bewertung: 90. Quelle: https://github.com/anthropics/claude-code/releases/tag/v2.1.209"
+  },
+  {
+    "id": "014d8eaf53fd",
+    "status": "approved",
+    "created_at": "2026-07-14T15:16:18.244883Z",
+    "score": 85,
+    "reason": "GitHub repo provides code for an RL agent that trains models, with a specific cost reduction claim. Ships today.",
+    "proposed_post": "Open-sourced RL agent trains models with RL, claiming a $1.3k cost reduction. Builders can evaluate this meta-learning approach for potential training cost optimization.",
+    "source_angle": "Open-source RL agent for meta-learning model training",
+    "source_item": {
+      "title": "Show HN: I RL-trained an agent that trains models with RL (for –$1.3k)",
+      "source": "HackerNews",
+      "link": "https://github.com/Danau5tin/ai-trains-ai",
+      "source_tier": 3,
+      "engagement_score": 51.0,
+      "local_newsworthiness_score": 30,
+      "summary": "42 points, 18 comments on Hacker News — submitted by Danau5tin — original: https://github.com/Danau5tin/ai-trains-ai\n[Cluster context: 1 sources, engagement 51, common terms: rl-trained, hacker, show, danau5tin, comments.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 51,
+        "common_terms": [
+          "rl-trained",
+          "hacker",
+          "show",
+          "danau5tin",
+          "comments",
+          "original",
+          "submitted",
+          "trains"
+        ],
+        "cluster_summary": "1 sources, engagement 51. Common terms: rl-trained, hacker, show, danau5tin. Lead: Show HN: I RL-trained an agent that trains models with RL (for –$1.3k)",
+        "alternative_titles": [],
+        "cluster_score": 0
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, check this out.\n\nJemand hat hier einen RL-Agenten gebaut, der wiederum andere Modelle mit RL trainiert – und das für nur 1.300 Dollar. Das ist ein super konkretes Beispiel, wie man Meta-Lernen auf die Straße bringt, ohne gleich ein Riesenbudget zu verballern. Entwickler, die mit AutoML experimentieren oder ihre Trainings-Workflows automatisieren wollen, finden hier eine direkte Inspiration und einen Open-Source-Ansatz, den sie sofort auseinandernehmen können.",
+    "chloe_note": "Kurzes Update: *Show HN: I RL-trained an agent that trains models with RL (for –$1.3k)* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um GitHub repo provides code for an RL agent that trains models, with a specific cost reduction claim. Ships today.Cluster context: 1 sources, engagement 51. Common terms: rl-trained, hacker, show, danau5tin. Ich habe es mit 85 Punkten bewertet. Hier der Link: https://github.com/Danau5tin/ai-trains-ai"
   }
 ]
