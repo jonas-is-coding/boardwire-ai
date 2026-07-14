@@ -16588,5 +16588,33 @@
     "engagement_score": 140.0,
     "local_newsworthiness_score": 40,
     "created_at": "2026-07-14T01:24:00.127718Z"
+  },
+  {
+    "title": "What will be left for us to work on?",
+    "link": "https://www.normaltech.ai/p/what-will-be-left-for-us-to-work",
+    "source": "HackerNews",
+    "score": 3,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 101.0,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-07-14T04:40:42.616199Z"
+  },
+  {
+    "title": "A Study of Microsoft's Early 2026 Rollout of Claude Code and GitHub Copilot CLI",
+    "link": "https://arxiv.org/abs/2607.01418",
+    "source": "HackerNews",
+    "score": 20,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "arXiv study on product rollout, not the product itself.",
+    "source_tier": 3,
+    "engagement_score": 56.0,
+    "local_newsworthiness_score": 20,
+    "created_at": "2026-07-14T04:40:50.840339Z"
   }
 ]
