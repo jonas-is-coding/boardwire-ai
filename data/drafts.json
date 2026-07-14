@@ -16784,5 +16784,61 @@
     "engagement_score": 66.0,
     "local_newsworthiness_score": 0,
     "created_at": "2026-07-14T11:17:56.187548Z"
+  },
+  {
+    "title": "Codex starts encrypting sub-agent prompts",
+    "link": "https://github.com/openai/codex/issues/28058",
+    "source": "HackerNews",
+    "score": 30,
+    "should_post": false,
+    "reason": "GitHub issue, not an official release or shippable artifact. No concrete action for builders today.",
+    "post_text": "No post generated",
+    "source_angle": "Hacker News discussion on a GitHub issue regarding Codex sub-agent prompt encryption.",
+    "source_tier": 3,
+    "engagement_score": 207.5,
+    "local_newsworthiness_score": 40,
+    "created_at": "2026-07-14T13:06:23.388088Z"
+  },
+  {
+    "title": "How to stop Claude from saying load-bearing",
+    "link": "https://jola.dev/posts/how-to-stop-claude-from-saying-load-bearing",
+    "source": "HackerNews",
+    "score": 70,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Practical prompt engineering for Claude",
+    "source_tier": 3,
+    "engagement_score": 77.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-14T13:06:31.430046Z"
+  },
+  {
+    "title": "Codex scraped the ICM website and discovered 2026 Fields Medal winner list",
+    "link": "https://phemex.com/news/article/2026-fields-medal-winners-list-leaked-includes-two-peking-university-alumni-92948",
+    "source": "HackerNews",
+    "score": 2,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 72.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-14T13:06:31.430435Z"
+  },
+  {
+    "title": "The Future Worth Building Is Human – Thinking Machines Lab",
+    "link": "https://thinkingmachines.ai/blog/the-future-worth-building-is-human/",
+    "source": "HackerNews",
+    "score": 2,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 66.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-14T13:06:31.430644Z"
   }
 ]
