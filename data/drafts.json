@@ -16952,5 +16952,19 @@
     "engagement_score": 0.0,
     "local_newsworthiness_score": 0,
     "created_at": "2026-07-14T17:03:01.792848Z"
+  },
+  {
+    "title": "Bonsai 27B (1-bit LLM): The First 27B-Class Model to Run on a Phone",
+    "link": "https://prismml.com/news/bonsai-27b",
+    "source": "HackerNews",
+    "score": 70,
+    "should_post": true,
+    "reason": "Bonsai 27B, a 1-bit LLM, is claimed to run on a phone, enabling on-device mobile AI. Implies deployable artifact.",
+    "post_text": "Bonsai 27B, a 1-bit LLM, is the first 27B-class model claimed to run on a phone. This enables on-device LLM applications for mobile, reducing inference costs and improving privacy for edge AI builders.",
+    "source_angle": "On-device LLMs, 1-bit quantization, mobile AI deployment",
+    "source_tier": 3,
+    "engagement_score": 49.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-14T19:01:41.075041Z"
   }
 ]

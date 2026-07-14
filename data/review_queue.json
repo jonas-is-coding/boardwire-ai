@@ -7429,5 +7429,48 @@
     "breaking": false,
     "claire_note": "Chloe, schau dir das mal an: \"Differentiable Fortran with LFortran and Enzyme\". Fortran mit Auto-Diff ist ein Game Changer für HPC-Workloads, die bisher auf handcodierte Gradienten angewiesen waren. Das könnte Entwicklern, die mit älteren, performance-kritischen Modellen arbeiten, einen massiven Produktivitätsschub geben. Stell dir vor, du kannst dein altes, optimiertes Fortran-Codebase für ML-Aufgaben nutzen, ohne alles neu schreiben zu müssen. Das ist sofort verwertbar.",
     "chloe_note": "Kurzes Update: *Differentiable Fortran with LFortran and Enzyme* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Open-source LFortran integration with Enzyme ships, enabling AD for Fortran. Niche but concrete builder value.Cluster context: 1 sources, engagement 38. Common terms: points, dionhaefner, submitted, original. Ich habe es mit 65 Punkten bewertet. Hier der Link: https://docs.pasteurlabs.ai/projects/tesseract-core/latest/blog/2026-07-09-enzyme-lfortran-autodiff.html"
+  },
+  {
+    "id": "e4cf5ae17c79",
+    "status": "approved",
+    "created_at": "2026-07-14T19:01:41.075041Z",
+    "score": 70,
+    "reason": "Bonsai 27B, a 1-bit LLM, is claimed to run on a phone, enabling on-device mobile AI. Implies deployable artifact.",
+    "proposed_post": "Bonsai 27B, a 1-bit LLM, is the first 27B-class model claimed to run on a phone. This enables on-device LLM applications for mobile, reducing inference costs and improving privacy for edge AI builders.",
+    "source_angle": "On-device LLMs, 1-bit quantization, mobile AI deployment",
+    "source_item": {
+      "title": "Bonsai 27B (1-bit LLM): The First 27B-Class Model to Run on a Phone",
+      "source": "HackerNews",
+      "link": "https://prismml.com/news/bonsai-27b",
+      "source_tier": 3,
+      "engagement_score": 49.5,
+      "local_newsworthiness_score": 0,
+      "summary": "45 points, 9 comments on Hacker News — submitted by xenova — original: https://prismml.com/news/bonsai-27b\n[Cluster context: 1 sources, engagement 49, common terms: xenova, bonsai, comments, run, points.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 49,
+        "common_terms": [
+          "xenova",
+          "bonsai",
+          "comments",
+          "run",
+          "points",
+          "submitted",
+          "27b",
+          "original"
+        ],
+        "cluster_summary": "1 sources, engagement 49. Common terms: xenova, bonsai, comments, run. Lead: Bonsai 27B (1-bit LLM): The First 27B-Class Model to Run on a Phone",
+        "alternative_titles": [],
+        "cluster_score": 0
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, check das hier: \"Bonsai 27B (1-bit LLM): The First 27B-Class Model to Run on a Phone\".\n\nEin 27B-Modell, das auf einem Handy läuft – das ist ein Game Changer. Entwickler können jetzt wirklich leistungsstarke lokale KI-Anwendungen bauen, ohne auf die Cloud angewiesen zu sein. Stell dir vor, was das für Edge-Computing und Privacy bedeutet.",
+    "chloe_note": "Kurzes Update: *Bonsai 27B (1-bit LLM): The First 27B-Class Model to Run on a Phone* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Bonsai 27B, a 1-bit LLM, is claimed to run on a phone, enabling on-device mobile AI. Implies deployable artifact.Cluster context: 1 sources, engagement 49. Common terms: xenova, bonsai, comments, run. Ich habe es mit 70 Punkten bewertet. Hier der Link: https://prismml.com/news/bonsai-27b"
   }
 ]
