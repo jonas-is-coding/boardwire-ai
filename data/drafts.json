@@ -16896,5 +16896,61 @@
     "engagement_score": 46.0,
     "local_newsworthiness_score": 0,
     "created_at": "2026-07-14T15:16:19.391462Z"
+  },
+  {
+    "title": "Differentiable Fortran with LFortran and Enzyme",
+    "link": "https://docs.pasteurlabs.ai/projects/tesseract-core/latest/blog/2026-07-09-enzyme-lfortran-autodiff.html",
+    "source": "HackerNews",
+    "score": 65,
+    "should_post": true,
+    "reason": "Open-source LFortran integration with Enzyme ships, enabling AD for Fortran. Niche but concrete builder value.",
+    "post_text": "LFortran now integrates Enzyme for automatic differentiation, enabling direct gradient computation for Fortran code. Builders can leverage existing HPC Fortran routines in ML pipelines.",
+    "source_angle": "Differentiable Fortran for scientific ML",
+    "source_tier": 3,
+    "engagement_score": 38.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-14T17:03:00.638991Z"
+  },
+  {
+    "title": "Are we offloading too much of our thinking to AI?",
+    "link": "https://www.artfish.ai/p/offloading-thinking-to-ai",
+    "source": "HackerNews",
+    "score": 3,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 212.5,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-07-14T17:03:01.792519Z"
+  },
+  {
+    "title": "Proof of care in the age of AI",
+    "link": "https://jacobfilipp.com/care/",
+    "source": "HackerNews",
+    "score": 3,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 188.0,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-07-14T17:03:01.792704Z"
+  },
+  {
+    "title": "How to manage AI investments in the agentic era",
+    "link": "https://openai.com/index/managing-ai-investments-in-agentic-era",
+    "source": "OpenAI News",
+    "score": 7,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 1,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-14T17:03:01.792848Z"
   }
 ]

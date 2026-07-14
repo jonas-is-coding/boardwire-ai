@@ -7374,5 +7374,48 @@
     "breaking": false,
     "claire_note": "Chloe, check this out.\n\nJemand hat hier einen RL-Agenten gebaut, der wiederum andere Modelle mit RL trainiert – und das für nur 1.300 Dollar. Das ist ein super konkretes Beispiel, wie man Meta-Lernen auf die Straße bringt, ohne gleich ein Riesenbudget zu verballern. Entwickler, die mit AutoML experimentieren oder ihre Trainings-Workflows automatisieren wollen, finden hier eine direkte Inspiration und einen Open-Source-Ansatz, den sie sofort auseinandernehmen können.",
     "chloe_note": "Kurzes Update: *Show HN: I RL-trained an agent that trains models with RL (for –$1.3k)* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um GitHub repo provides code for an RL agent that trains models, with a specific cost reduction claim. Ships today.Cluster context: 1 sources, engagement 51. Common terms: rl-trained, hacker, show, danau5tin. Ich habe es mit 85 Punkten bewertet. Hier der Link: https://github.com/Danau5tin/ai-trains-ai"
+  },
+  {
+    "id": "5ffcd6a5907e",
+    "status": "approved",
+    "created_at": "2026-07-14T17:03:00.638991Z",
+    "score": 65,
+    "reason": "Open-source LFortran integration with Enzyme ships, enabling AD for Fortran. Niche but concrete builder value.",
+    "proposed_post": "LFortran now integrates Enzyme for automatic differentiation, enabling direct gradient computation for Fortran code. Builders can leverage existing HPC Fortran routines in ML pipelines.",
+    "source_angle": "Differentiable Fortran for scientific ML",
+    "source_item": {
+      "title": "Differentiable Fortran with LFortran and Enzyme",
+      "source": "HackerNews",
+      "link": "https://docs.pasteurlabs.ai/projects/tesseract-core/latest/blog/2026-07-09-enzyme-lfortran-autodiff.html",
+      "source_tier": 3,
+      "engagement_score": 38.0,
+      "local_newsworthiness_score": 0,
+      "summary": "32 points, 12 comments on Hacker News — submitted by dionhaefner — original: https://docs.pasteurlabs.ai/projects/tesseract-core/latest/blog/2026-07-09-enzyme-lfortran-autodiff.html\n[Cluster context: 1 sources, engagement 38, common terms: points, dionhaefner, submitted, original, lfortran.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 38,
+        "common_terms": [
+          "points",
+          "dionhaefner",
+          "submitted",
+          "original",
+          "lfortran",
+          "hacker",
+          "fortran",
+          "enzyme"
+        ],
+        "cluster_summary": "1 sources, engagement 38. Common terms: points, dionhaefner, submitted, original. Lead: Differentiable Fortran with LFortran and Enzyme",
+        "alternative_titles": [],
+        "cluster_score": 0
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, schau dir das mal an: \"Differentiable Fortran with LFortran and Enzyme\". Fortran mit Auto-Diff ist ein Game Changer für HPC-Workloads, die bisher auf handcodierte Gradienten angewiesen waren. Das könnte Entwicklern, die mit älteren, performance-kritischen Modellen arbeiten, einen massiven Produktivitätsschub geben. Stell dir vor, du kannst dein altes, optimiertes Fortran-Codebase für ML-Aufgaben nutzen, ohne alles neu schreiben zu müssen. Das ist sofort verwertbar.",
+    "chloe_note": "Kurzes Update: *Differentiable Fortran with LFortran and Enzyme* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Open-source LFortran integration with Enzyme ships, enabling AD for Fortran. Niche but concrete builder value.Cluster context: 1 sources, engagement 38. Common terms: points, dionhaefner, submitted, original. Ich habe es mit 65 Punkten bewertet. Hier der Link: https://docs.pasteurlabs.ai/projects/tesseract-core/latest/blog/2026-07-09-enzyme-lfortran-autodiff.html"
   }
 ]
