@@ -1986,5 +1986,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-15-claude-code-v2-1-210-ca3d1242b853.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqo6kfg7br2m",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqo6kfg7br2m"
+  },
+  {
+    "id": "008055f6c9ca",
+    "published_at": "2026-07-15T12:19:18.857315Z",
+    "platform": "bluesky",
+    "post": "Claude memory leakage via prompt injection exposes prior conversations\n\nDemonstrates reproducible attack vector in production LLM memory systems with 104 points and 35 comm\n\nAttacker-controlled prompts leak prior conversation history from Anthropic Claude, revealing systemic weak",
+    "source_link": "https://www.ayush.digital/blog/the-memory-heist",
+    "source_title": "I tricked Claude into leaking your deepest, darkest secrets",
+    "score": 90,
+    "reason": "Reproducible prompt injection exploit demonstrates Claude memory leakage, requiring immediate builder action.",
+    "card_path": "generated/cards/008055f6c9ca.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-15-i-tricked-claude-into-leaking-your-deepest-darkest-secrets-008055f6c9ca.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqopesnjtm2x",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqopesnjtm2x"
   }
 ]
