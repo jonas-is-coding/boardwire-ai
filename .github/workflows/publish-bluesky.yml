@@ -1,14 +1,19 @@
 name: Boardwire Publish Bluesky
 
 on:
-  # Every 2 hours (odd hours UTC), ~1h after each collect-llm run, so approved
-  # items — especially breaking news — go out fast instead of waiting for a
-  # 3x/day slot. Base per-run cap is 1 (BOARDWIRE_MAX_PUBLISH_PER_RUN); the
-  # collection side bounds routine output to BOARDWIRE_MAX_POSTS_PER_DAY, while
-  # breaking items may exceed that (and trigger an extra publish per run).
-  # The publish loop prefers breaking, then newest approved; stale ones (>48h) expire.
+  # Post into the Bluesky engagement windows instead of spraying every 2h into
+  # dead air. The Discover feed rewards early engagement velocity; best windows
+  # are Tue-Thu 9-11 AM and 1-3 PM US Eastern plus a Sunday-evening spike.
+  # GitHub cron is UTC and can fire up to ~15-30 min late (acceptable).
+  # NOTE: these times assume US Eastern DAYLIGHT time (EDT, UTC-4). In US
+  # winter (EST, UTC-5) shift each cron +1h to stay inside the windows.
   schedule:
-    - cron: "0 1-23/2 * * *"
+    # Weekdays 13:30 UTC = 9:30 AM US Eastern (EDT) — strongest morning window (Tue–Thu peak)
+    - cron: "30 13 * * 1-5"
+    # Weekdays 17:30 UTC = 1:30 PM US Eastern — midday window
+    - cron: "30 17 * * 1-5"
+    # Sunday 22:00 UTC = 6 PM US Eastern — Sunday-evening spike
+    - cron: "0 22 * * 0"
   workflow_dispatch:
 
 permissions:

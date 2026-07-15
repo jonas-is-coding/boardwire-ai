@@ -1,0 +1,13 @@
+{
+  "keywords": [
+    "Claude Code",
+    "MCP",
+    "local LLM",
+    "open weights",
+    "Ollama",
+    "AI agents"
+  ],
+  "max_posts": 8,
+  "posts_per_keyword": 5,
+  "min_engagement": 5
+}

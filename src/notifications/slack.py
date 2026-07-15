@@ -180,6 +180,13 @@ def sarah_packaged(title: str, subtitle: str, description: str, hashtags: list[s
     _post("sarah", text)
 
 
+def reply_digest(text: str) -> None:
+    """Deliver the human-in-the-loop reply digest. Suggestions only — the
+    pipeline never posts replies to Bluesky; a human posts manually."""
+    _post("sarah", text)
+    _post_debug(text)
+
+
 def sarah_failed_batch(failures: list[dict]) -> None:
     """Send a single consolidated notification for items where Sarah LLM
     failed to produce a valid publish package. Items stay in the queue

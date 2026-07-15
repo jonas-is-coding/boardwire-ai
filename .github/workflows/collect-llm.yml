@@ -1,13 +1,18 @@
 name: Boardwire Collect with LLM
 
 on:
-  # Every 2 hours (even hours UTC) so the channel stays current and a
-  # fast-developing story is picked up within ~2h instead of waiting for one
-  # of 3 daily slots. The daily *publish* budget still caps routine output;
-  # only breaking-news items (high score + corroboration) may exceed it.
-  # Publish workflow runs on the odd hours, ~1h after each collect.
+  # Collect ~1.5h before each publish slot (publish-bluesky.yml) so freshly
+  # approved items are ready when the engagement window opens. Under 1,000
+  # followers 1-2 quality posts/day outperform high volume, so the daily cap
+  # is 2; only breaking-news items (score >= 92 + corroboration) may exceed it.
+  # NOTE: times assume US Eastern DAYLIGHT time (EDT); shift +1h in US winter.
   schedule:
-    - cron: "0 */2 * * *"
+    # Weekdays 12:00 UTC — precedes the 13:30 UTC morning publish slot
+    - cron: "0 12 * * 1-5"
+    # Weekdays 16:00 UTC — precedes the 17:30 UTC midday publish slot
+    - cron: "0 16 * * 1-5"
+    # Sunday 20:30 UTC — precedes the 22:00 UTC Sunday-evening publish slot
+    - cron: "30 20 * * 0"
   workflow_dispatch:
     inputs:
       limit:
@@ -21,7 +26,7 @@ on:
       max_posts_per_day:
         description: "Maximum approved posts allowed per day (collection-side cap)"
         required: false
-        default: "10"
+        default: "2"
       llm_provider:
         description: "LLM provider to use"
         required: false
@@ -45,7 +50,7 @@ jobs:
     env:
       BOARDWIRE_LLM_PROVIDER: ${{ inputs.llm_provider || 'gemini' }}
       BOARDWIRE_MAX_LLM_ITEMS: ${{ inputs.max_llm_items || '4' }}
-      BOARDWIRE_MAX_POSTS_PER_DAY: ${{ inputs.max_posts_per_day || '10' }}
+      BOARDWIRE_MAX_POSTS_PER_DAY: ${{ inputs.max_posts_per_day || '2' }}
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
       GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
@@ -91,7 +96,7 @@ jobs:
           MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
           BW_LIMIT: ${{ inputs.limit || '8' }}
           BW_MAX_LLM_ITEMS: ${{ inputs.max_llm_items || '4' }}
-          BW_MAX_POSTS_PER_DAY: ${{ inputs.max_posts_per_day || '10' }}
+          BW_MAX_POSTS_PER_DAY: ${{ inputs.max_posts_per_day || '2' }}
           BW_LLM_PROVIDER: ${{ inputs.llm_provider || 'gemini' }}
         run: |
           python -m src.main \

@@ -151,15 +151,123 @@ It contains pending items only (newest first) and approve/reject commands.
 When daily cap blocks strong candidates, Boardwire stores them as `deferred_due_to_cap`.
 Deferred items are prioritized before fresh RSS items on the next run.
 
+## Posting schedule: engagement windows
+
+Under 1,000 followers, 1-2 quality posts/day outperform high volume on Bluesky
+(impressions get spread too thin), and the Discover feed rewards early
+engagement velocity — most engagement happens in the first 1-2 hours. Boardwire
+therefore posts into the proven engagement windows instead of spraying every
+2 hours into dead air:
+
+| Slot | UTC (cron) | US Eastern (EDT) | CET (summer) |
+|---|---|---|---|
+| Weekday morning (Mon-Fri) | 13:30 | 9:30 AM | 15:30 |
+| Weekday midday (Mon-Fri) | 17:30 | 1:30 PM | 19:30 |
+| Sunday evening spike | 22:00 | 6:00 PM | 00:00 (Mon) |
+
+Collection (`collect-llm.yml`) runs ~1.5h before each publish slot
+(`publish-bluesky.yml`): weekdays 12:00 & 16:00 UTC, Sunday 20:30 UTC.
+
+Notes:
+- GitHub cron is UTC and can fire up to ~15-30 min late — acceptable, the
+  windows are 2 hours wide.
+- The crons assume US Eastern **daylight** time (EDT, UTC-4). In US winter
+  (EST, UTC-5) shift each cron +1h; there is a reminder comment in both
+  workflow files.
+- `BOARDWIRE_MAX_POSTS_PER_DAY` defaults to `2` in the workflow; per publish
+  run at most one post goes out (`BOARDWIRE_MAX_PUBLISH_PER_RUN=1`).
+
+## Post format
+
+The Bluesky post is composed budget-aware (300 graphemes; budgeted
+conservatively in UTF-8 bytes, see `src/composer.py`) — never hard-truncated:
+
+```
+<hook line (Sarah title)>
+
+<supporting fact line (Sarah subtitle)>
+
+<optional closing question — ~40% of posts (A/B variant)>
+
+<hashtag line: 2-3 tags>
+
+🔗 <source link (facet, appended by the publisher)>
+```
+
+- The link suffix and the hashtag line are reserved **first**; the fact line is
+  shortened at a word boundary (clean sentence or ellipsis) when space is
+  tight. Priority: link > hashtags > hook > question > fact.
+- The Sarah `description` field stays on the image card only — it no longer
+  enters the post text.
+- The closing question is LLM-drafted per item, validated in code (max ~60
+  chars, must end with `?`, no engagement bait) and applied to a deterministic
+  ~40% of items (hash of the source link). Published posts record
+  `format_variant`, `hashtags_used`, `published_hour_utc` and
+  `published_weekday` in `data/published_posts.json` for the A/B analysis in
+  the engagement report and the virality model.
+
+## Hashtags: config-driven, custom-feed targeted
+
+Bluesky discovery runs through custom feeds that match posts by
+hashtag/keyword. Tags are selected deterministically in Python from
+`config/hashtags.json` — always exactly 1 broad tag + 1-2 specific tags matched
+from the item's title/summary/source (`src/hashtags.py`). LLM-suggested tags
+are only candidates: anything not in the config is dropped, so invented tags
+never reach Bluesky.
+
+## Threads for top stories
+
+Items with score ≥ 92 (the breaking threshold) publish as a 2-3 post
+reply-chained thread instead of one crammed post — threads generate ~3x more
+replies:
+
+1. Hook + image card + hashtags
+2. Strongest concrete facts (newsroom dossier `key_facts` when available, else
+   subtitle + description)
+3. Source link + optional question
+
+Reply refs (`root`/`parent` with `uri`+`cid`) are chained in
+`src/publisher/bluesky_publisher.py::publish_thread`. If post N fails the rest
+is aborted and the partial state is recorded (`thread_uris`,
+`thread_partial`) so nothing is double-posted. The dry-run publisher simulates
+threads too.
+
+## Hard quality gates
+
+Enforced in code (`src/quality/gates.py`), not just asked for in the prompt:
+
+- **Version-only block:** titles like `ollama v0.30.11` are rejected unless the
+  summary/dossier names a concrete capability (configurable
+  `capability_keywords` in `config/quality.json`: plugin, MCP, sandbox, local,
+  weights, API, CLI, benchmark, … or a numeric %/x-factor claim).
+- **Release dedupe:** the same (project, version) tuple is never published
+  twice within 14 days (ledger: `data/published_releases.json`).
+- **Internal-metadata leak:** posts matching `\d+ score|rank` or containing
+  internal field names (`source_tier`, `engagement_score`, …) are rejected; the
+  Sarah prompt additionally forbids mentioning internal scores.
+- Every gate rejection is logged with its reason to
+  `data/gate_rejections.json` and rendered in `reports/review_queue.md`.
+
+## Reply digest (human-in-the-loop, no auto-posting)
+
+```bash
+python -m src.main --reply-digest
+```
+
+Queries the public Bluesky search API (`app.bsky.feed.searchPosts`, no auth)
+for recent high-engagement posts matching the niche keywords in
+`config/reply_digest.json`, drafts one substantive reply suggestion per post
+via the existing LLM chain, and sends the digest to the Slack webhook.
+
+**This tool never posts replies itself** — it only suggests; a human reads the
+digest and posts manually. Replies are the strongest visibility signal on
+Bluesky, which is exactly why they must stay human.
+
 ## Staying current & breaking-news burst
 
-Boardwire collects every 2 hours (`collect-llm.yml`) and publishes every 2 hours
-(`publish-bluesky.yml`, offset by ~1h), so a fast-developing story is picked up
-and posted within hours instead of waiting for one of a few daily slots.
-
-Routine output is still bounded by `BOARDWIRE_MAX_POSTS_PER_DAY` (default 3) to
-keep the feed from turning into release-notes spam. But a **breaking** item is
-allowed to exceed that cap:
+Routine output is bounded by `BOARDWIRE_MAX_POSTS_PER_DAY` (workflow default 2)
+to keep the feed from turning into release-notes spam. But a **breaking** item
+is allowed to exceed that cap:
 
 - **What counts as breaking:** score ≥ `BOARDWIRE_BREAKING_SCORE_THRESHOLD`
   **and** (unless `BOARDWIRE_BREAKING_REQUIRE_CORROBORATION=false`) the story is
@@ -251,7 +359,22 @@ For real Bluesky publishing:
 
 ## Publish behavior
 
-- `--publish-approved` now sends a short caption + hashtags.
+- `--publish-approved` composes hook + fact + optional question + hashtags,
+  with the source link appended by the publisher (see "Post format").
+- Items with score ≥ 92 go out as a 2-3 post thread (see "Threads for top stories").
 - If `card_path` exists on the review item, the card image is attached on publish.
-- `dry_run` stays the safe default publisher.
+- `dry_run` stays the safe default publisher; real publishing always requires
+  `BOARDWIRE_REAL_PUBLISH_ENABLED=true` **and** `--confirm-real-publish`.
 - Supported publishers: `dry_run`, `bluesky`.
+
+## Engagement report
+
+```bash
+python -m src.main --engagement-report
+```
+
+`reports/engagement_report.md` answers the strategy questions: engagement by
+published hour (UTC) and weekday, by `format_variant` (question vs plain vs
+thread), by hashtag combination, and version-release posts vs others (should
+trend to n=0 after the version-only gate). Sections with fewer than 5 posts
+print `insufficient data (n<5)` instead of misleading averages.

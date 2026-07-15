@@ -78,6 +78,80 @@ def test_generate_writes_markdown(tmp_path) -> None:
     assert "## Patterns" in text
 
 
+def _post_with_meta(post_id: str, hour: int, weekday: str, variant: str, tags: list[str], title: str = "") -> dict:
+    post = _post(post_id, f"text for {post_id} about a model release", "https://example.com/" + post_id)
+    post["source_title"] = title or f"title-{post_id}"
+    post["published_hour_utc"] = hour
+    post["published_weekday"] = weekday
+    post["format_variant"] = variant
+    post["hashtags_used"] = tags
+    return post
+
+
+def test_strategy_sections_present_with_small_n_guard(tmp_path) -> None:
+    import json
+
+    published = [
+        _post_with_meta(f"p{i}", hour=13, weekday="Tuesday", variant="question", tags=["#AI", "#MCP"])
+        for i in range(5)
+    ]
+    published.append(_post_with_meta("solo", hour=22, weekday="Sunday", variant="thread", tags=["#AI"]))
+    store = {p["id"]: _record(p["id"], 10) for p in published}
+
+    published_path = tmp_path / "published.json"
+    engagement_path = tmp_path / "engagement.json"
+    report_path = tmp_path / "report.md"
+    published_path.write_text(json.dumps(published))
+    engagement_path.write_text(json.dumps(store))
+
+    generate_engagement_report(published_path, engagement_path, report_path)
+    text = report_path.read_text()
+
+    assert "## Engagement by published hour (UTC)" in text
+    assert "## Engagement by weekday" in text
+    assert "## Engagement by format variant" in text
+    assert "## Engagement by hashtag combination" in text
+    assert "## Version-release posts vs others" in text
+    # n=5 group gets a real average; n=1 groups print the guard.
+    assert "13:00 UTC: avg **10.0** (n=5)" in text
+    assert "22:00 UTC: insufficient data (n<5" in text
+    assert "thread: insufficient data (n<5" in text
+    assert "question: avg **10.0** (n=5)" in text
+
+
+def test_version_release_group_detected(tmp_path) -> None:
+    import json
+
+    published = [
+        _post_with_meta("v1", hour=9, weekday="Monday", variant="plain", tags=["#AI"], title="ollama v0.30.11"),
+        _post_with_meta("n1", hour=9, weekday="Monday", variant="plain", tags=["#AI"], title="Real headline about agents"),
+    ]
+    store = {p["id"]: _record(p["id"], 3) for p in published}
+    published_path = tmp_path / "published.json"
+    engagement_path = tmp_path / "engagement.json"
+    report_path = tmp_path / "report.md"
+    published_path.write_text(json.dumps(published))
+    engagement_path.write_text(json.dumps(store))
+
+    generate_engagement_report(published_path, engagement_path, report_path)
+    text = report_path.read_text()
+    assert "Version releases: insufficient data" in text
+    assert "Others: insufficient data" in text
+
+
+def test_hour_weekday_fallback_from_published_at(tmp_path) -> None:
+    # Old posts without the explicit fields fall back to published_at.
+    from src.reports.engagement_report import build_report_summary
+
+    post = _post("old", "legacy post", "https://example.com/old")
+    post["published_at"] = "2026-05-03T22:15:00Z"  # a Sunday
+    summary = build_report_summary([post], {"old": _record("old", 7)})
+    perf = summary.ranked[0]
+    assert perf.published_hour_utc == 22
+    assert perf.published_weekday == "Sunday"
+    assert perf.format_variant == "plain"
+
+
 def test_generate_handles_missing_files(tmp_path) -> None:
     report_path = tmp_path / "report.md"
     summary = generate_engagement_report(

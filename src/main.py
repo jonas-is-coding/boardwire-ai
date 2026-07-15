@@ -20,6 +20,7 @@ from src.collector.hn_collector import fetch_hackernews
 from src.collector.github_trending_collector import fetch_github_trending
 from src.cards.card_data import from_review_item
 from src.cards.renderer import render_card_png
+from src.composer import compose_post_body, select_format_variant, shorten_at_word_boundary, validate_question
 from src.config import (
     ARTICLES_DIR,
     CARDS_DIR,
@@ -28,9 +29,11 @@ from src.config import (
     DRAFTS_PATH,
     ENGAGEMENT_PATH,
     ENGAGEMENT_REPORT_PATH,
+    GATE_REJECTIONS_PATH,
     MAX_ITEMS_PER_RUN,
     PERSONAS_PATH,
     PUBLISHED_POSTS_PATH,
+    PUBLISHED_RELEASES_PATH,
     VIRALITY_MODEL_PATH,
     QUALITY_PATH,
     REVIEW_QUEUE_PATH,
@@ -39,16 +42,21 @@ from src.config import (
     SEEN_ITEMS_PATH,
     SOURCES_PATH,
 )
+from src.hashtags import select_hashtags
 from src.llm.client import LLMConfig, load_llm_config
 from src.llm.gemini_budget import configure_gemini_budget, remaining_gemini_budget
 from src.models import DraftPost, FeedItem, Source
 from src.publisher.base import PublishResult
-from src.publisher.bluesky_publisher import BlueskyPublisher
+from src.publisher.bluesky_publisher import BlueskyPublisher, ThreadPost, ThreadPublishResult
 from src.publisher.dry_run_publisher import DryRunPublisher
 from src.publisher.instagram_publisher import InstagramPublisher
 from src.publisher.mastodon_publisher import MastodonPublisher
 from src.publisher.threads_publisher import ThreadsPublisher
-from src.quality.gates import QualityConfig, check_quality
+from src.quality.gates import (
+    QualityConfig,
+    check_quality,
+    find_recent_release,
+)
 from src.reports.article_export import export_review_articles, write_article_for_item
 from src.reports.review_report import generate_review_queue_report
 from src.storage.json_store import JsonStore
@@ -159,14 +167,19 @@ _EDUCATIONAL_TERMS = (
 def _compose_sarah_post(
     package: dict[str, str | list[str]],
     source_link: str | None = None,
-    article_url: str | None = None,
+    question: str | None = None,
 ) -> str:
+    """Compose the Bluesky body: hook → fact → optional question → hashtags.
+
+    Budget-aware (see src/composer.py): the link suffix (appended later by the
+    publisher) and the hashtag line are reserved first, so neither is ever
+    truncated away. The `description` field stays on the image card only and
+    no longer enters the post text.
+    """
     title = str(package.get("title", "")).strip()
     subtitle = str(package.get("subtitle", "")).strip()
-    description = str(package.get("description", "")).strip()
     raw_tags = package.get("hashtags", [])
-    tags = [str(t).strip() for t in raw_tags] if isinstance(raw_tags, list) else []
-    tags_line = " ".join(t for t in tags if t)[:60]
+    tags = [str(t).strip() for t in raw_tags if str(t).strip()] if isinstance(raw_tags, list) else []
 
     title_norm = title.lower().rstrip(".!?")
     subtitle_norm = subtitle.lower().rstrip(".!?")
@@ -177,23 +190,32 @@ def _compose_sarah_post(
     ):
         subtitle = ""
 
-    parts = [title]
-    if subtitle:
-        parts.append("")
-        parts.append(subtitle)
-    if description:
-        parts.append("")
-        parts.append(description)
-    if article_url:
-        parts.append("")
-        parts.append(f"📖 Read the full article: {article_url.strip()}")
-    if source_link:
-        parts.append(f"Quelle: {source_link.strip()}")
-    if tags_line:
-        parts.append("")
-        parts.append(tags_line)
-    post = "\n".join(parts).strip()
-    return post[:280]
+    return compose_post_body(
+        hook=title,
+        fact=subtitle,
+        hashtags=tags,
+        source_link=source_link,
+        question=question or "",
+    )
+
+
+def _finalize_package_hashtags(
+    package: dict[str, str | list[str]],
+    title: str,
+    summary: str,
+    source: str,
+) -> dict[str, str | list[str]]:
+    """Replace LLM-suggested hashtags with the deterministic config-driven
+    selection (LLM tags survive only as validated candidates)."""
+    raw = package.get("hashtags", [])
+    candidates = [str(t) for t in raw] if isinstance(raw, list) else []
+    package["hashtags"] = select_hashtags(
+        title=title,
+        summary=summary,
+        source=source,
+        llm_candidates=candidates,
+    )
+    return package
 
 
 def _env_flag(name: str, default: bool = True) -> bool:
@@ -464,7 +486,10 @@ def _try_sarah_openrouter_fallback(
         allow_gemini_fallback=False,
     )
     if package:
-        return evaluation, _compose_sarah_post(package), "Local high-score + Sarah/OpenRouter fallback"
+        package = _finalize_package_hashtags(package, title=item.title, summary=item.summary, source=item.source)
+        # Reserve the link budget now: the publisher appends the source link later.
+        post_text = _compose_sarah_post(package, source_link=item.link)
+        return evaluation, post_text, "Local high-score + Sarah/OpenRouter fallback"
 
     logger.warning("Rejecting fallback candidate: no non-generic generation available")
     rejected_eval = type(evaluation)(
@@ -960,6 +985,7 @@ def _build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--create-test-review-item", action="store_true", help="Development-only: create one pending review item from fixtures.")
     parser.add_argument("--export-web-articles", action="store_true", help="Export review items as Markdown web articles to generated/articles.")
     parser.add_argument("--newsroom-research", action="store_true", help="Run the newsroom deep-research pipeline (desk -> reporter) and write dossiers to data/dossiers.")
+    parser.add_argument("--reply-digest", action="store_true", help="Send a Slack digest of niche Bluesky posts with SUGGESTED replies (human posts manually; never auto-posts).")
     return parser
 
 
@@ -1029,6 +1055,8 @@ def _build_deferred_generation_item(
 
 
 def _load_quality_config() -> QualityConfig:
+    from src.quality.gates import DEFAULT_CAPABILITY_KEYWORDS
+
     raw = JsonStore.load(QUALITY_PATH, default={})
     return QualityConfig(
         max_post_length=int(raw.get("max_post_length", 280)),
@@ -1039,7 +1067,27 @@ def _load_quality_config() -> QualityConfig:
         fixture_duplicate_lookback_hours=int(raw.get("fixture_duplicate_lookback_hours", 1)),
         banned_phrases=list(raw.get("banned_phrases", [])),
         generic_phrases=list(raw.get("generic_phrases", [])),
+        capability_keywords=list(raw.get("capability_keywords", list(DEFAULT_CAPABILITY_KEYWORDS))),
     )
+
+
+def _log_gate_rejection(stage: str, title: str, link: str, reasons: list[str]) -> None:
+    """Append a gate rejection (with reason) so the review queue report can
+    show why items were blocked."""
+    entries = JsonStore.load(GATE_REJECTIONS_PATH, default=[])
+    if not isinstance(entries, list):
+        entries = []
+    entries.append(
+        {
+            "rejected_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
+            "stage": stage,
+            "title": title,
+            "link": link,
+            "reasons": list(reasons),
+        }
+    )
+    # Keep the log bounded; the report only shows recent rejections.
+    JsonStore.save(GATE_REJECTIONS_PATH, entries[-200:])
 
 
 def _is_within_lookback(
@@ -1460,6 +1508,81 @@ def _build_image_alt_text(item: dict) -> str:
     return "Boardwire news card"
 
 
+def _release_identity_for_source_item(source_item: dict) -> tuple[str, str] | None:
+    """Return the (project, version) tuple for a release-like item, else None."""
+    feed_item = FeedItem(
+        source=str(source_item.get("source", "")),
+        title=str(source_item.get("title", "")),
+        link=str(source_item.get("link", "")),
+        summary=str(source_item.get("summary", "")),
+        published_at=datetime.now(timezone.utc),
+    )
+    if not _is_release_like_item(feed_item):
+        return None
+    project = _release_project_label(feed_item).strip()
+    version = _extract_release_version_text(feed_item).strip()
+    if not project or not version:
+        return None
+    return project, version
+
+
+def _dossier_facts_for_link(link: str) -> list[str]:
+    """Look up newsroom dossier key facts for a source link (if researched)."""
+    if not link:
+        return []
+    try:
+        for path in sorted(DOSSIERS_DIR.glob("*.json")):
+            data = JsonStore.load(path, default={})
+            if not isinstance(data, dict):
+                continue
+            urls = data.get("source_urls", [])
+            if isinstance(urls, list) and link in urls:
+                facts = [str(f).strip() for f in data.get("key_facts", []) if str(f).strip()]
+                if facts:
+                    return facts
+    except OSError:
+        return []
+    return []
+
+
+def _build_thread_posts(
+    package: dict[str, str | list[str]],
+    source_link: str | None,
+    card_path: str | None,
+    image_alt: str,
+    question: str | None,
+) -> list[ThreadPost]:
+    """Build the 2-3 posts of a top-story thread.
+
+    Post 1: hook + image card + hashtags. Post 2: strongest concrete facts
+    (dossier key facts when the newsroom researched the story, else
+    subtitle + description). Post 3 (when there is a link): source link +
+    optional question.
+    """
+    title = str(package.get("title", "")).strip()
+    subtitle = str(package.get("subtitle", "")).strip()
+    description = str(package.get("description", "")).strip()
+    raw_tags = package.get("hashtags", [])
+    tags = [str(t).strip() for t in raw_tags if str(t).strip()] if isinstance(raw_tags, list) else []
+
+    post_one = compose_post_body(hook=title, fact="", hashtags=tags, source_link=None)
+
+    dossier_facts = _dossier_facts_for_link(source_link or "")
+    if dossier_facts:
+        facts_text = " ".join(dossier_facts[:3])
+    else:
+        facts_text = " ".join(p for p in (subtitle, description) if p)
+    post_two = shorten_at_word_boundary(facts_text, 300)
+
+    posts = [ThreadPost(post=post_one, image_path=card_path, image_alt=image_alt)]
+    if post_two:
+        posts.append(ThreadPost(post=post_two))
+    if source_link:
+        # The publisher appends the link itself; an empty body is fine here.
+        posts.append(ThreadPost(post=question or "", source_link=source_link))
+    return posts
+
+
 def _publish_approved(args, logger) -> int:
     from src.notifications import persona_voice as voice
 
@@ -1474,6 +1597,10 @@ def _publish_approved(args, logger) -> int:
 
     existing_ids = {item.get("id") for item in published}
     existing_links = {item.get("source_link") for item in published}
+
+    published_releases = JsonStore.load(PUBLISHED_RELEASES_PATH, default=[])
+    if not isinstance(published_releases, list):
+        published_releases = []
 
     logger.info("Publishing approved posts in %s mode", selected_platform)
     published_count = 0
@@ -1594,8 +1721,41 @@ def _publish_approved(args, logger) -> int:
             )
             continue
 
+        sarah_package = _finalize_package_hashtags(
+            sarah_package,
+            title=str(source_item.get("title", "")),
+            summary=source_summary,
+            source=str(source_item.get("source", "")),
+        )
         item["sarah_package"] = sarah_package
-        post_text = _compose_sarah_post(sarah_package, source_link=source_link)
+
+        # Release dedupe: never publish the same (project, version) twice
+        # within the dedupe window (ollama v0.30.11 once went out 3 times).
+        release_identity = _release_identity_for_source_item(source_item)
+        if release_identity:
+            previous_release = find_recent_release(published_releases, *release_identity)
+            if previous_release:
+                reason = (
+                    f"Release dedupe: {release_identity[0]} {release_identity[1]} "
+                    f"already published at {previous_release.get('published_at')}"
+                )
+                logger.warning("Quality reject: %s (%s)", rid, reason)
+                _log_gate_rejection("publish", str(source_item.get("title", "")), source_link or "", [reason])
+                item["status"] = "rejected"
+                item["rejected_at"] = now
+                quality_rejected_count += 1
+                continue
+
+        # Format A/B variant: ~40% of posts close with a genuine question,
+        # selected deterministically from the item identity (reproducible).
+        variant_key = str(source_link or rid or "")
+        format_variant = select_format_variant(variant_key)
+        question = validate_question(str(sarah_package.get("question", "")))
+        if format_variant == "question" and not question:
+            format_variant = "plain"
+        active_question = question if format_variant == "question" else None
+
+        post_text = _compose_sarah_post(sarah_package, source_link=source_link, question=active_question)
         item["proposed_post"] = post_text
         notify.sarah_packaged(
             title=str(sarah_package.get("title", "")),
@@ -1642,6 +1802,8 @@ def _publish_approved(args, logger) -> int:
             history_posts=history,
             context="publish",
             context_text=f"{source_item.get('title', '')} {item.get('reason', '')}",
+            item_title=str(source_item.get("title", "")),
+            item_summary=source_summary,
         )
         local_score_val = int(source_item.get("local_newsworthiness_score") or 0)
         eval_score_val = int(item.get("score") or 0)
@@ -1656,6 +1818,7 @@ def _publish_approved(args, logger) -> int:
             )
         if not quality.passed:
             logger.warning("Quality reject: %s (%s)", rid, "; ".join(quality.reasons))
+            _log_gate_rejection("publish", str(source_item.get("title", "")), source_link or "", quality.reasons)
             quality_rejected_count += 1
             continue
         logger.info("Quality pass: %s", rid)
@@ -1666,20 +1829,49 @@ def _publish_approved(args, logger) -> int:
 
         article_path = write_article_for_item(item, ARTICLES_DIR)
         item["article_path"] = str(article_path)
-        article_ref = article_path.resolve().as_uri()
-        post_text = _compose_sarah_post(
-            sarah_package,
-            source_link=source_link,
-            article_url=article_ref,
-        )
-        item["proposed_post"] = post_text
 
-        result: PublishResult = publisher.publish(
-            post=post_text,
-            source_link=source_link,
-            image_path=abs_card_path,
-            image_alt=_build_image_alt_text(item),
+        # Top stories (breaking-threshold score) go out as a 2-3 post thread
+        # when the publisher supports reply chaining; threads earn ~3x more
+        # replies than single posts.
+        use_thread = (
+            int(item.get("score") or 0) >= int(_breaking_config()["threshold"])
+            and hasattr(publisher, "publish_thread")
         )
+        thread_uris: list[str] = []
+        thread_partial = False
+        if use_thread:
+            thread_posts = _build_thread_posts(
+                sarah_package,
+                source_link=source_link,
+                card_path=abs_card_path,
+                image_alt=_build_image_alt_text(item),
+                question=question,
+            )
+            thread_result: ThreadPublishResult = publisher.publish_thread(thread_posts)
+            thread_uris = thread_result.uris
+            if thread_result.success:
+                format_variant = "thread"
+                result = thread_result.results[0]
+            elif thread_result.results:
+                # Partial thread: the first N posts exist on Bluesky. Record
+                # them as published so the item is never posted again.
+                format_variant = "thread"
+                thread_partial = True
+                result = thread_result.results[0]
+                logger.warning("Thread partially published for %s: %s", rid, thread_result.error)
+            else:
+                result = PublishResult(
+                    success=False,
+                    platform=getattr(publisher, "platform", selected_platform),
+                    error=thread_result.error,
+                )
+        else:
+            result = publisher.publish(
+                post=post_text,
+                source_link=source_link,
+                image_path=abs_card_path,
+                image_alt=_build_image_alt_text(item),
+            )
         if not result.success:
             logger.warning("Publish failed for %s: %s", rid, result.error or "unknown error")
             notify.jim_failed(
@@ -1689,6 +1881,7 @@ def _publish_approved(args, logger) -> int:
             )
             continue
 
+        published_dt = datetime.now(timezone.utc)
         post = {
             "id": rid,
             "published_at": now,
@@ -1702,7 +1895,27 @@ def _publish_approved(args, logger) -> int:
             "article_path": str(article_path),
             "external_id": result.external_id,
             "url": result.url,
+            # Format A/B fields feeding the virality model and the
+            # engagement report (see src/feedback/, src/reports/).
+            "format_variant": format_variant,
+            "hashtags_used": [str(t) for t in sarah_package.get("hashtags", []) if str(t).strip()],
+            "published_hour_utc": published_dt.hour,
+            "published_weekday": published_dt.strftime("%A"),
         }
+        if thread_uris:
+            post["thread_uris"] = thread_uris
+            post["thread_partial"] = thread_partial
+
+        if release_identity:
+            published_releases.append(
+                {
+                    "project": release_identity[0],
+                    "version": release_identity[1],
+                    "published_at": now,
+                    "link": source_link,
+                }
+            )
+            JsonStore.save(PUBLISHED_RELEASES_PATH, published_releases)
 
         published.append(post)
         existing_ids.add(rid)
@@ -1858,6 +2071,15 @@ def _engagement_report(logger) -> int:
     return 0
 
 
+def _reply_digest(logger) -> int:
+    """Human-in-the-loop reply digest: suggests replies to niche posts via
+    Slack. This command NEVER posts to Bluesky — a human posts manually."""
+    from src.feedback.reply_digest import run_reply_digest
+
+    run_reply_digest(logger)
+    return 0
+
+
 def _self_check_writer(logger) -> int:
     fixtures = _load_fixture_items()
     quality_config = _load_quality_config()
@@ -1978,6 +2200,8 @@ def run(argv: list[str] | None = None) -> int:
         return _train_virality_model(logger)
     if args.engagement_report:
         return _engagement_report(logger)
+    if args.reply_digest:
+        return _reply_digest(logger)
 
     sources = _load_sources()
     personas = load_personas(JsonStore.load(PERSONAS_PATH, default=[]))
@@ -2517,6 +2741,8 @@ def run(argv: list[str] | None = None) -> int:
                 context="review",
                 context_text=f"{source_title} {item.get('reason', '')}",
                 allow_duplicate=is_breaking,
+                item_title=source_title,
+                item_summary=str(item.get("source_item", {}).get("summary", "")),
             )
             local_score_val = int(item.get("source_item", {}).get("local_newsworthiness_score") or 0)
             fallback_mode = (not is_llm_mode) or (llm_config.provider == "gemini" and remaining_gemini_budget() <= 0)
@@ -2626,6 +2852,7 @@ def run(argv: list[str] | None = None) -> int:
             else:
                 quality_reject += 1
                 logger.warning("Quality reject: %s", "; ".join(quality.reasons))
+                _log_gate_rejection("review", source_title, source_link, quality.reasons)
                 _pending_claire.pop(source_link, None)
                 notify.michael_rejected(
                     title=source_title,
