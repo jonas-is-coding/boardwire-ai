@@ -1972,5 +1972,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-14-cursor-0day-when-full-disclosure-becomes-the-only-protection-left-995996b5f443.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqntxboofl2b",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqntxboofl2b"
+  },
+  {
+    "id": "ca3d1242b853",
+    "published_at": "2026-07-15T07:18:10.530539Z",
+    "platform": "bluesky",
+    "post": "Subagent isolation is now secure in Claude Code.\n\nClaude Code v2.1.210 fixes critical subagent isolation bug, adds permission warnings, with 90 score.\n\nAnthropic releases Claude Code v2.1.210 with live elapsed-time counter for tool calls and warnings for insecure permission rules",
+    "source_link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.210",
+    "source_title": "Claude Code v2.1.210",
+    "score": 90,
+    "reason": "Direct release of Claude Code v2.1.210 with critical subagent isolation fix and permission rule clarifications. Actionable for builders.",
+    "card_path": "generated/cards/ca3d1242b853.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-15-claude-code-v2-1-210-ca3d1242b853.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqo6kfg7br2m",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqo6kfg7br2m"
   }
 ]

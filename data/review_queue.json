@@ -7554,11 +7554,11 @@
   },
   {
     "id": "ca3d1242b853",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-15T01:20:43.610838Z",
     "score": 90,
     "reason": "Direct release of Claude Code v2.1.210 with critical subagent isolation fix and permission rule clarifications. Actionable for builders.",
-    "proposed_post": "Claude Code v2.1.210 fixes a critical bug where `isolation: 'worktree'` subagents could mutate the main repo. It also adds warnings for `Write`/`NotebookEdit`/`Glob` permission rules. Builders should update to secure subagent operations and review permission configurations.",
+    "proposed_post": "Subagent isolation is now secure in Claude Code.\n\nClaude Code v2.1.210 fixes critical subagent isolation bug, adds permission warnings, with 90 score.\n\nAnthropic releases Claude Code v2.1.210 with live elapsed-time counter for tool calls and warnings for insecure permission rules",
     "source_angle": "Claude Code v2.1.210 release: subagent isolation & permission fixes",
     "source_item": {
       "title": "Claude Code v2.1.210",
@@ -7589,10 +7589,22 @@
         "cluster_score": 15
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/ca3d1242b853.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, check this out. Claude Code v2.1.210 hat ein paar kleine, aber nützliche Updates.\n\nDas live elapsed-time counter für Tool Calls ist super, damit man bei langen Prozessen nicht mehr rätseln muss, ob noch alles läuft. Und die Warnung bei <code>Write(path)</code>, <code>NotebookEdit(path)</code>, und <code>Glob(path)</code> Berechtigungen ist ein klares Signal für mehr Sicherheit und Transparenz beim Dateizugriff. Das ist direkt relevant für jeden, der mit Claude Code ernsthaft entwickeln will.",
-    "chloe_note": "*Claude Code v2.1.210* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Direct release of Claude Code v2.1.210 with critical subagent isolation fix and permission rule clarifications. Actionable for builders.Cluster context: 1 sources, engagement 0. Common terms: mouse, silently, recalibrated, symlinks. Bewertung: 90. Quelle: https://github.com/anthropics/claude-code/releases/tag/v2.1.210"
+    "chloe_note": "*Claude Code v2.1.210* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Direct release of Claude Code v2.1.210 with critical subagent isolation fix and permission rule clarifications. Actionable for builders.Cluster context: 1 sources, engagement 0. Common terms: mouse, silently, recalibrated, symlinks. Bewertung: 90. Quelle: https://github.com/anthropics/claude-code/releases/tag/v2.1.210",
+    "sarah_package": {
+      "title": "Subagent isolation is now secure in Claude Code.",
+      "subtitle": "Claude Code v2.1.210 fixes critical subagent isolation bug, adds permission warnings, with 90 score.",
+      "description": "Anthropic releases Claude Code v2.1.210 with live elapsed-time counter for tool calls and warnings for insecure permission rules, securing s",
+      "hashtags": [
+        "#Anthropic",
+        "#ClaudeCode",
+        "#SubagentIsolation"
+      ]
+    },
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-15-claude-code-v2-1-210-ca3d1242b853.md",
+    "published_at": "2026-07-15T07:18:10.530539Z"
   }
 ]
