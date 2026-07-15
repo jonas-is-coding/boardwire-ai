@@ -1958,5 +1958,19 @@
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-14-bonsai-27b-1-bit-llm-the-first-27b-class-model-to-run-on-a-phone-e4cf5ae17c79.md",
     "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqn7ieclbg22",
     "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqn7ieclbg22"
+  },
+  {
+    "id": "995996b5f443",
+    "published_at": "2026-07-15T04:08:32.782802Z",
+    "platform": "bluesky",
+    "post": "Cursor 0day exposes dev repos to remote execution.\n\nMindgard disclosed RCE/data exfiltration flaw; 71 HN points. Update or isolate Cursor builds now.\n\nRemote code execution via malicious cursor:// URLs enables data theft. Windows and macOS systems affected. No official patch yet;",
+    "source_link": "https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left",
+    "source_title": "Cursor 0day: When Full Disclosure Becomes the Only Protection Left",
+    "score": 90,
+    "reason": "Critical 0-day vulnerability in Cursor requires immediate builder action. Passes Ships Test as an urgent security alert.",
+    "card_path": "generated/cards/995996b5f443.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-14-cursor-0day-when-full-disclosure-becomes-the-only-protection-left-995996b5f443.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqntxboofl2b",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqntxboofl2b"
   }
 ]
