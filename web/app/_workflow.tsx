@@ -52,14 +52,14 @@ const steps: Step[] = [
   {
     id: "rank",
     icons: [{ Icon: SiGoogle, color: "#4285f4" }],
-    label: "Rank",
-    desc: "Story score + LLM pass",
+    label: "Rank & gate",
+    desc: "Story score · LLM · hard gates",
   },
   {
     id: "publish",
     icons: [{ Icon: SiBluesky, color: "#0285ff" }],
     label: "Publish",
-    desc: "Bluesky",
+    desc: "Timed windows · threads · tags",
   },
 ];
 
