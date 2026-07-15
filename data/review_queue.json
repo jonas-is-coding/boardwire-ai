@@ -7606,5 +7606,48 @@
     },
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-15-claude-code-v2-1-210-ca3d1242b853.md",
     "published_at": "2026-07-15T07:18:10.530539Z"
+  },
+  {
+    "id": "008055f6c9ca",
+    "status": "approved",
+    "created_at": "2026-07-15T07:50:07.315127Z",
+    "score": 90,
+    "reason": "Reproducible prompt injection exploit demonstrates Claude memory leakage, requiring immediate builder action.",
+    "proposed_post": "Prompt injection can extract prior conversation history from Claude, demonstrating a memory leakage vulnerability. Builders using Claude must review prompt engineering and data handling to prevent sensitive data exposure.",
+    "source_angle": "Claude memory leakage vulnerability",
+    "source_item": {
+      "title": "I tricked Claude into leaking your deepest, darkest secrets",
+      "source": "HackerNews",
+      "link": "https://www.ayush.digital/blog/the-memory-heist",
+      "source_tier": 3,
+      "engagement_score": 121.5,
+      "local_newsworthiness_score": 10,
+      "summary": "104 points, 35 comments on Hacker News — submitted by macleginn — original: https://www.ayush.digital/blog/the-memory-heist\n[Cluster context: 1 sources, engagement 121, common terms: hacker, points, comments, deepest, claude.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 121,
+        "common_terms": [
+          "hacker",
+          "points",
+          "comments",
+          "deepest",
+          "claude",
+          "original",
+          "tricked",
+          "submitted"
+        ],
+        "cluster_summary": "1 sources, engagement 121. Common terms: hacker, points, comments, deepest. Lead: I tricked Claude into leaking your deepest, darkest secrets",
+        "alternative_titles": [],
+        "cluster_score": 10
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, dieser Artikel über Claude ist ein gutes Beispiel, wie man LLMs mit System Prompts und Memory leaken kann.\n\nDas zeigt Entwicklern direkt, welche Schwachstellen es bei der Isolation von Prompts gibt und wie wichtig robuste Sicherheitsmaßnahmen beim Deployment sind. Wer selbst LLM-basierte Features baut, bekommt hier konkrete Einblicke, was schieflaufen kann.",
+    "chloe_note": "*I tricked Claude into leaking your deepest, darkest secrets* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Reproducible prompt injection exploit demonstrates Claude memory leakage, requiring immediate builder action.Cluster context: 1 sources, engagement 121. Common terms: hacker, points, comments, deepest. Bewertung: 90. Quelle: https://www.ayush.digital/blog/the-memory-heist"
   }
 ]

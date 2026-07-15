@@ -17050,5 +17050,19 @@
     "engagement_score": 91.5,
     "local_newsworthiness_score": 0,
     "created_at": "2026-07-15T04:40:59.626944Z"
+  },
+  {
+    "title": "I tricked Claude into leaking your deepest, darkest secrets",
+    "link": "https://www.ayush.digital/blog/the-memory-heist",
+    "source": "HackerNews",
+    "score": 90,
+    "should_post": true,
+    "reason": "Reproducible prompt injection exploit demonstrates Claude memory leakage, requiring immediate builder action.",
+    "post_text": "Prompt injection can extract prior conversation history from Claude, demonstrating a memory leakage vulnerability. Builders using Claude must review prompt engineering and data handling to prevent sensitive data exposure.",
+    "source_angle": "Claude memory leakage vulnerability",
+    "source_tier": 3,
+    "engagement_score": 121.5,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-07-15T07:50:07.315127Z"
   }
 ]
