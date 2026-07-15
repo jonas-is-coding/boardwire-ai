@@ -17064,5 +17064,19 @@
     "engagement_score": 121.5,
     "local_newsworthiness_score": 10,
     "created_at": "2026-07-15T07:50:07.315127Z"
+  },
+  {
+    "title": "openinterpreter/openinterpreter — A coding agent for low-cost models",
+    "link": "https://github.com/openinterpreter/openinterpreter",
+    "source": "GitHub Trending",
+    "score": 90,
+    "should_post": true,
+    "reason": "Open-source tool launch for a coding agent, directly addresses builder cost concerns with low-cost models.",
+    "post_text": "Open-source coding agent `openinterpreter/openinterpreter` released. It enables local or low-cost model execution, offering a path to reduce API costs for agentic development.",
+    "source_angle": "Open-source coding agent for cost-effective AI development",
+    "source_tier": 2,
+    "engagement_score": 607.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-15T11:21:05.341520Z"
   }
 ]
