@@ -9,23 +9,24 @@ const stats = [
   { value: "3", label: "reputation tiers" },
   { value: "local", label: "embeddings" },
   { value: "2", label: "LLM passes" },
-  { value: "3/day", label: "publish cap" },
+  { value: "2/day", label: "publish cap" },
 ];
 
 const trustBadges = [
   "dry-run default",
   "daily cap",
-  "dedupe",
-  "quality gates",
+  "release dedupe",
+  "hard quality gates",
   "review queue",
   "source tiers",
+  "engagement windows",
 ];
 
 const runMetrics = [
   { label: "Last run", value: "~15 min ago" },
   { label: "New candidates", value: "40-70" },
   { label: "Story clusters", value: "12-20" },
-  { label: "Published today", value: "0-3" },
+  { label: "Published today", value: "0-2" },
 ];
 
 const sourceRows = [
@@ -137,9 +138,9 @@ export default function Home() {
               Signals over noise<span className={styles.period}>.</span>
             </h1>
             <p className={styles.heroSub}>
-              20 active sources in, clustered stories out, up to 3 shipped posts
-              per day. Boardwire runs as an autonomous AI newsroom with strict
-              quality constraints.
+              20 active sources in, clustered stories out, up to 2 quality posts
+              per day — timed into Bluesky&apos;s engagement windows. Boardwire
+              runs as an autonomous AI newsroom with strict quality constraints.
             </p>
             <div className={styles.heroCta}>
               <a href="#pipeline" className={styles.btnPrimary}>
@@ -322,11 +323,12 @@ export default function Home() {
           <div className={styles.outroCard}>
             <p className={styles.sectionLabel}>FOLLOW THE FEED</p>
             <h2 className={styles.outroTitle}>
-              Up to three concrete updates a day.
+              One or two concrete updates a day.
             </h2>
             <p className={styles.outroSub}>
-              Boardwire publishes to Bluesky. No newsletter, no roundups,
-              no week-in-review — just the signal, when it lands.
+              Boardwire publishes to Bluesky in the hours the network is
+              actually awake — top stories as short threads. No newsletter,
+              no roundups, no week-in-review — just the signal, when it lands.
             </p>
             <div className={styles.heroCta}>
               <a
