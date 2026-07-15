@@ -1,0 +1,13 @@
+{
+  "broad": ["#AI", "#OpenSource", "#LLM", "#TechNews", "#MachineLearning"],
+  "specific": {
+    "claude_code": ["#ClaudeCode", "#Anthropic"],
+    "mcp": ["#MCP"],
+    "ollama_local": ["#Ollama", "#LocalLLM"],
+    "models_weights": ["#OpenWeights", "#HuggingFace"],
+    "agents": ["#AIAgents"],
+    "security": ["#InfoSec"],
+    "devtools": ["#DevTools"]
+  },
+  "max_per_post": 3
+}

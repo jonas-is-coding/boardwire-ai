@@ -84,7 +84,7 @@ _SYSTEM_PROMPTS = {
         "Editorial laws:\n"
         "- Start with a concrete thesis/angle about the builder trend, then name the artifact.\n"
         "- Active voice. Present or past tense. Named actors.\n"
-        "- No emojis. No exclamation marks. No question marks.\n"
+        "- No emojis. No exclamation marks. No question marks (the dedicated 'question' field is the only exception).\n"
         "- No second-person tutorial voice ('you can', 'apply this', 'try X').\n"
         "- Specificity is virality: concrete numbers, model names, benchmarks, license names.\n\n"
         "SUBJECT RULES (critical — most common failure mode):\n"
@@ -100,7 +100,11 @@ _SYSTEM_PROMPTS = {
         "- title and subtitle MUST contribute different information. Do not paraphrase the title in the subtitle.\n"
         "- If title says 'X ships persistent memory for coding agents', subtitle adds the DIFFERENTIATOR (benchmark numbers, license, what it replaces, where it runs) — not a restatement.\n\n"
         "You package one approved AI news item into a Bluesky/X post + editorial card.\n"
-        "Output STRICT JSON only with keys: title, subtitle, description, hashtags.\n\n"
+        "Output STRICT JSON only with keys: title, subtitle, description, hashtags, question.\n\n"
+        "INTERNAL METADATA (hard rule):\n"
+        "- NEVER mention internal pipeline metadata in any field: scores, ranks, "
+        "source_tier, engagement_score, or phrases like 'with 90 score'. "
+        "These are internal signals, not news facts.\n\n"
         "Style target:\n"
         "- The package must make a clear claim about why builders should take the signal seriously.\n"
         "- Do not merely summarize 'X ships Y' or 'X is trending'. Explain the builder implication.\n"
@@ -133,7 +137,15 @@ _SYSTEM_PROMPTS = {
         "  GOOD: 'First open-weight 70B trained on 15T tokens. Apache 2.0. Beats Llama 3.1 70B on MMLU and HumanEval. Available on HuggingFace.'\n"
         "  BAD:  'Drop these into any workload to optimize your models.' (tutorial)\n"
         "  BAD:  'Why it matters: this changes inference economics.' (don't prefix)\n"
-        "- hashtags: 2-3 items, each starts with #. PascalCase. Use named vendors, model names, or specific technical terms (e.g. #Anthropic, #Mistral7B, #vLLM, #MCP, #AgentEval). AVOID invented compound tags like #AICodingAgents or #PersistentMemory.\n\n"
+        "- hashtags: 2-3 items, each starts with #. Suggest ONLY tags from this fixed list "
+        "(they map to real Bluesky custom feeds; anything else is dropped in code): "
+        "#AI, #OpenSource, #LLM, #TechNews, #MachineLearning, #ClaudeCode, #Anthropic, #MCP, "
+        "#Ollama, #LocalLLM, #OpenWeights, #HuggingFace, #AIAgents, #InfoSec, #DevTools.\n"
+        "- question: ONE short, genuine closing question tailored to the item, max 60 chars, "
+        "ending with '?'. It must invite a concrete builder answer "
+        "(e.g. 'Anyone running this in prod?', 'Does this replace Ollama for you?'). "
+        "NEVER generic engagement bait like 'What do you think?'. "
+        "If no genuine question fits, use an empty string.\n\n"
         "FORBIDDEN openers and phrases (kill credibility instantly):\n"
         "  'Understand how', 'Apply X to', 'Discover', 'Explore', 'Learn how', 'In this article',\n"
         "  'claims improved performance', 'ships version', 'released with enhancements',\n"
@@ -678,7 +690,45 @@ def sarah_build_publish_package(
         "subtitle": subtitle_val,
         "description": description_val,
         "hashtags": hashtags,
+        # Optional closing question; validated downstream (must end with "?",
+        # max ~60 chars, no engagement bait) before it reaches a post.
+        "question": str(data.get("question", "")).strip()[:80],
     }
+
+
+_REPLY_SUGGESTION_SYSTEM = (
+    "You are a Boardwire editor drafting a SUGGESTED reply to someone else's Bluesky post. "
+    "A human will review and manually post it — you never post anything yourself.\n"
+    "Rules:\n"
+    "- One substantive reply, max 250 characters, plain text.\n"
+    "- Add genuine value: a concrete fact, experience, comparison, or sharp question.\n"
+    "- No hashtags, no links, no emojis, no self-promotion, no 'great post!'.\n"
+    "- Sound like a builder talking to a builder, not a brand.\n"
+    "Output STRICT JSON only: {\"reply\": \"<the suggested reply>\"}."
+)
+
+
+def draft_reply_suggestion(author: str, post_text: str, keyword: str) -> str | None:
+    """Draft ONE suggested reply to an external Bluesky post (Task: reply digest).
+
+    This is suggestion-only output for a human-in-the-loop Slack digest; the
+    pipeline never posts replies automatically.
+    """
+    user = (
+        f"Post by @{author} (matched niche keyword '{keyword}'):\n"
+        f"\"{post_text[:500]}\"\n\n"
+        "Draft the suggested reply now. Output the JSON object only."
+    )
+    raw = sarah_generation.generate_with_provider_chain(
+        _REPLY_SUGGESTION_SYSTEM,
+        user,
+        max_output_tokens=160,
+    )
+    if not raw:
+        return None
+    data = _parse_json_loose(raw)
+    text = str(data.get("reply", "")).strip() if data else raw.strip().strip('"').strip()
+    return text[:300] if len(text) >= 15 else None
 
 
 def tiffany_write_article(

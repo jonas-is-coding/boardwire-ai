@@ -3,7 +3,10 @@ from __future__ import annotations
 from datetime import datetime, timezone
 from pathlib import Path
 
+from src.config import GATE_REJECTIONS_PATH
 from src.storage.json_store import JsonStore
+
+_MAX_REJECTIONS_SHOWN = 25
 
 
 def _parse_dt(value: str | None) -> datetime:
@@ -62,6 +65,21 @@ def generate_review_queue_report(review_queue_path: Path, report_path: Path) -> 
             lines.append("Reject:")
             lines.append(f"`python -m src.main --reject-review {item_id}`")
             lines.append("")
+
+    rejections = JsonStore.load(GATE_REJECTIONS_PATH, default=[])
+    if isinstance(rejections, list) and rejections:
+        recent = sorted(rejections, key=lambda r: _parse_dt(r.get("rejected_at")), reverse=True)
+        recent = recent[:_MAX_REJECTIONS_SHOWN]
+        lines.append(f"## Gate rejections (last {len(recent)})")
+        lines.append("")
+        for entry in recent:
+            title = str(entry.get("title", "Untitled"))
+            stage = str(entry.get("stage", ""))
+            rejected_at = str(entry.get("rejected_at", ""))
+            reasons = entry.get("reasons", [])
+            reason_text = "; ".join(str(r) for r in reasons) if isinstance(reasons, list) else str(reasons)
+            lines.append(f"- `{rejected_at}` [{stage}] **{title}** — {reason_text}")
+        lines.append("")
 
     report_path.parent.mkdir(parents=True, exist_ok=True)
     report_path.write_text("\n".join(lines), encoding="utf-8")

@@ -1,13 +1,23 @@
 from __future__ import annotations
 
+from collections import defaultdict
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
 from statistics import mean, median
 from urllib.parse import urlparse
 
+from dateutil import parser as date_parser
+
 from src.feedback.engagement_store import latest_snapshot, virality_label
+from src.quality.gates import is_version_dominant_title
 from src.storage.json_store import JsonStore
+
+# Below this group size an average is more likely noise than signal, so the
+# strategy sections print "insufficient data" instead.
+_MIN_GROUP_N = 5
+
+_WEEKDAY_ORDER = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
 
 # Same release signals the model uses, so the hand report and the model read
 # the data the same way.
@@ -39,6 +49,11 @@ class PostPerformance:
     post_excerpt: str
     has_release_kw: bool
     is_github: bool
+    published_hour_utc: int | None = None
+    published_weekday: str | None = None
+    format_variant: str = "plain"
+    hashtags_used: list[str] = field(default_factory=list)
+    is_version_release: bool = False
 
 
 @dataclass(slots=True)
@@ -63,6 +78,26 @@ def _is_github(link: str) -> bool:
         return False
 
 
+def _published_hour_weekday(post: dict) -> tuple[int | None, str | None]:
+    """Read the explicit publish-time fields, falling back to published_at for
+    posts recorded before the fields existed."""
+    hour = post.get("published_hour_utc")
+    weekday = post.get("published_weekday")
+    if isinstance(hour, int) and isinstance(weekday, str) and weekday:
+        return hour, weekday
+    raw = post.get("published_at")
+    if raw:
+        try:
+            dt = date_parser.parse(str(raw))
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=timezone.utc)
+            dt = dt.astimezone(timezone.utc)
+            return dt.hour, dt.strftime("%A")
+        except (ValueError, OverflowError):
+            pass
+    return None, None
+
+
 def _build_performance(post: dict, record: dict) -> PostPerformance:
     snapshot = latest_snapshot(record) or {}
     text = post.get("post") or ""
@@ -71,6 +106,9 @@ def _build_performance(post: dict, record: dict) -> PostPerformance:
         score = int(post.get("score") or 0)
     except (TypeError, ValueError):
         score = 0
+    hour, weekday = _published_hour_weekday(post)
+    raw_tags = post.get("hashtags_used", [])
+    hashtags = [str(t) for t in raw_tags if str(t).strip()] if isinstance(raw_tags, list) else []
     return PostPerformance(
         id=str(post.get("id", "")),
         title=str(post.get("source_title") or _excerpt(text, 80) or "Untitled"),
@@ -85,6 +123,11 @@ def _build_performance(post: dict, record: dict) -> PostPerformance:
         post_excerpt=_excerpt(text),
         has_release_kw=any(k in text.lower() for k in _RELEASE_KEYWORDS),
         is_github=_is_github(link),
+        published_hour_utc=hour,
+        published_weekday=weekday,
+        format_variant=str(post.get("format_variant") or "plain"),
+        hashtags_used=hashtags,
+        is_version_release=is_version_dominant_title(str(post.get("source_title") or "")),
     )
 
 
@@ -117,6 +160,103 @@ def _group_avg(performances: list[PostPerformance], predicate) -> tuple[float, i
     if not group:
         return 0.0, 0
     return float(mean(group)), len(group)
+
+
+def _grouped_lines(
+    performances: list[PostPerformance],
+    key_fn,
+    label_fn=str,
+    sort_key=None,
+) -> list[str]:
+    """Render one line per group, guarding small groups against misleading
+    averages ("insufficient data (n<5)")."""
+    groups: dict = defaultdict(list)
+    for perf in performances:
+        key = key_fn(perf)
+        if key is None:
+            continue
+        groups[key].append(perf.peak_engagement)
+
+    if not groups:
+        return ["- insufficient data (n<5)"]
+
+    lines: list[str] = []
+    keys = sorted(groups.keys(), key=sort_key) if sort_key else sorted(groups.keys())
+    for key in keys:
+        peaks = groups[key]
+        if len(peaks) < _MIN_GROUP_N:
+            lines.append(f"- {label_fn(key)}: insufficient data (n<{_MIN_GROUP_N}, have {len(peaks)})")
+        else:
+            lines.append(f"- {label_fn(key)}: avg **{mean(peaks):.1f}** (n={len(peaks)})")
+    return lines
+
+
+def _weekday_sort_key(weekday: str) -> int:
+    try:
+        return _WEEKDAY_ORDER.index(weekday)
+    except ValueError:
+        return len(_WEEKDAY_ORDER)
+
+
+def _strategy_sections(performances: list[PostPerformance]) -> list[str]:
+    """Sections that answer the strategy questions: when to post, which format
+    wins, which hashtag combos work, and whether releases stay dead weight."""
+    lines: list[str] = []
+
+    lines.append("## Engagement by published hour (UTC)")
+    lines.append("")
+    lines.extend(
+        _grouped_lines(
+            performances,
+            key_fn=lambda p: p.published_hour_utc,
+            label_fn=lambda h: f"{h:02d}:00 UTC",
+        )
+    )
+    lines.append("")
+
+    lines.append("## Engagement by weekday")
+    lines.append("")
+    lines.extend(
+        _grouped_lines(
+            performances,
+            key_fn=lambda p: p.published_weekday,
+            sort_key=_weekday_sort_key,
+        )
+    )
+    lines.append("")
+
+    lines.append("## Engagement by format variant")
+    lines.append("")
+    lines.extend(_grouped_lines(performances, key_fn=lambda p: p.format_variant or "plain"))
+    lines.append("")
+
+    lines.append("## Engagement by hashtag combination")
+    lines.append("")
+    lines.extend(
+        _grouped_lines(
+            performances,
+            key_fn=lambda p: " ".join(sorted(p.hashtags_used)) if p.hashtags_used else None,
+        )
+    )
+    lines.append("")
+
+    lines.append("## Version-release posts vs others")
+    lines.append("")
+    version_posts = [p for p in performances if p.is_version_release]
+    other_posts = [p for p in performances if not p.is_version_release]
+    for label, group in (("Version releases", version_posts), ("Others", other_posts)):
+        if len(group) == 0:
+            lines.append(f"- {label}: n=0")
+        elif len(group) < _MIN_GROUP_N:
+            lines.append(f"- {label}: insufficient data (n<{_MIN_GROUP_N}, have {len(group)})")
+        else:
+            peaks = [p.peak_engagement for p in group]
+            lines.append(f"- {label}: avg **{mean(peaks):.1f}** (n={len(peaks)})")
+    lines.append(
+        "  (Version-only releases are now blocked by the quality gate; this group should trend to n=0.)"
+    )
+    lines.append("")
+    return lines
 
 
 def _render_markdown(summary: ReportSummary) -> str:
@@ -161,6 +301,7 @@ def _render_markdown(summary: ReportSummary) -> str:
         f"vs other sources avg **{other_avg:.1f}** (n={other_n})"
     )
     lines.append("")
+    lines.extend(_strategy_sections(summary.ranked))
     lines.append("## Ranked posts")
     lines.append("")
     for idx, perf in enumerate(summary.ranked, start=1):

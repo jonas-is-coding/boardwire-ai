@@ -11,6 +11,9 @@ class PublishResult:
     external_id: str | None = None
     url: str | None = None
     error: str | None = None
+    # AT Protocol content hash of the created record; needed alongside the uri
+    # to build reply refs when chaining thread posts.
+    cid: str | None = None
 
 
 class Publisher(Protocol):
