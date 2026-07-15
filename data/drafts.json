@@ -16980,5 +16980,61 @@
     "engagement_score": 79.0,
     "local_newsworthiness_score": 0,
     "created_at": "2026-07-14T20:49:30.148303Z"
+  },
+  {
+    "title": "Claude Code v2.1.210",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.210",
+    "source": "Claude Code Releases",
+    "score": 90,
+    "should_post": true,
+    "reason": "Direct release of Claude Code v2.1.210 with critical subagent isolation fix and permission rule clarifications. Actionable for builders.",
+    "post_text": "Claude Code v2.1.210 fixes a critical bug where `isolation: 'worktree'` subagents could mutate the main repo. It also adds warnings for `Write`/`NotebookEdit`/`Glob` permission rules. Builders should update to secure subagent operations and review permission configurations.",
+    "source_angle": "Claude Code v2.1.210 release: subagent isolation & permission fixes",
+    "source_tier": 1,
+    "engagement_score": 0.0,
+    "local_newsworthiness_score": 30,
+    "created_at": "2026-07-15T01:20:43.610838Z"
+  },
+  {
+    "title": "Launch HN: Agnost AI (YC S26) – Extract user feedback from agent conversations",
+    "link": "https://agnost.ai",
+    "source": "HackerNews",
+    "score": 5,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 58.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-15T01:20:44.827789Z"
+  },
+  {
+    "title": "Financing the AI boom: from cash flows to debt [pdf]",
+    "link": "https://www.bis.org/publ/bisbull120.pdf",
+    "source": "HackerNews",
+    "score": 2,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 93.0,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-15T01:20:44.828041Z"
+  },
+  {
+    "title": "Guardian Angels: LLM Personalization for Productivity and Security",
+    "link": "https://gwern.net/guardian-angel",
+    "source": "HackerNews",
+    "score": 4,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 58.5,
+    "local_newsworthiness_score": 0,
+    "created_at": "2026-07-15T01:20:44.828242Z"
   }
 ]
