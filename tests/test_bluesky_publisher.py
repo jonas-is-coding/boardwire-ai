@@ -7,6 +7,7 @@ from src.publisher.bluesky_publisher import (
     BlueskyPublisher,
     ThreadPost,
     _compose_text_with_link,
+    _rkey_from_at_uri,
     build_reply_ref,
 )
 from src.publisher.base import PublishResult
@@ -32,6 +33,8 @@ def _patch_requests(monkeypatch, calls: list, fail_create_at: int | None = None)
             return _Resp(200, {"accessJwt": "jwt", "did": "did:plc:test"})
         if url.endswith("uploadBlob"):
             return _Resp(200, {"blob": {"$type": "blob", "ref": {"$link": "cid-blob"}}})
+        if url.endswith("deleteRecord"):
+            return _Resp(200, {})
         if url.endswith("createRecord"):
             create_count["n"] += 1
             if fail_create_at is not None and create_count["n"] == fail_create_at:
@@ -164,3 +167,25 @@ def test_dry_run_publisher_simulates_threads() -> None:
     assert len(result.results) == 3
     assert all(r.cid for r in result.results)
     assert len(set(result.uris)) == 3
+
+
+def test_rkey_from_at_uri() -> None:
+    assert _rkey_from_at_uri("at://did:plc:test/app.bsky.feed.post/3abc") == "3abc"
+    assert _rkey_from_at_uri("not-a-uri") is None
+
+
+def test_delete_post_sends_delete_record(monkeypatch) -> None:
+    calls: list = []
+    _patch_requests(monkeypatch, calls)
+    pub = BlueskyPublisher(handle="h", app_password="p")
+
+    result = pub.delete_post("at://did:plc:test/app.bsky.feed.post/3abc")
+
+    assert result.success is True
+    delete_calls = [c for c in calls if c["url"].endswith("deleteRecord")]
+    assert len(delete_calls) == 1
+    assert delete_calls[0]["kwargs"]["json"] == {
+        "repo": "did:plc:test",
+        "collection": "app.bsky.feed.post",
+        "rkey": "3abc",
+    }

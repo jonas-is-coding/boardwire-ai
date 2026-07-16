@@ -11,6 +11,14 @@ from src.composer import LINK_PREFIX, byte_len, shorten_at_word_boundary
 from src.publisher.base import PublishResult
 
 
+def _rkey_from_at_uri(uri: str) -> str | None:
+    parts = uri.strip().split("/")
+    if len(parts) < 5 or parts[-2] != "app.bsky.feed.post":
+        return None
+    rkey = parts[-1].strip()
+    return rkey or None
+
+
 def _compose_text_with_link(post: str, source_link: str | None) -> tuple[str, list[dict]]:
     """Return (text, facets) with the source URL appended and a link facet covering it.
 
@@ -237,6 +245,48 @@ class BlueskyPublisher:
                 ],
             }
         return record
+
+    def delete_post(self, uri: str) -> PublishResult:
+        """Delete one Bluesky post by its AT URI."""
+        rkey = _rkey_from_at_uri(uri)
+        if not rkey:
+            return PublishResult(
+                success=False,
+                platform=self.platform,
+                error=f"Invalid Bluesky post URI: {uri}",
+            )
+
+        try:
+            session = self._create_session()
+            if isinstance(session, PublishResult):
+                return session
+            access_jwt, did = session
+
+            delete_resp = self._post_with_retry(
+                "https://bsky.social/xrpc/com.atproto.repo.deleteRecord",
+                headers={"Authorization": f"Bearer {access_jwt}"},
+                json={
+                    "repo": did,
+                    "collection": "app.bsky.feed.post",
+                    "rkey": rkey,
+                },
+                timeout=30,
+            )
+            if delete_resp.status_code >= 400:
+                return PublishResult(
+                    success=False,
+                    platform=self.platform,
+                    external_id=uri,
+                    error=f"Bluesky delete failed: {delete_resp.status_code}",
+                )
+            return PublishResult(success=True, platform=self.platform, external_id=uri, url=uri)
+        except requests.RequestException as exc:
+            return PublishResult(
+                success=False,
+                platform=self.platform,
+                external_id=uri,
+                error=f"Bluesky request error: {exc}",
+            )
 
     def publish(
         self,
