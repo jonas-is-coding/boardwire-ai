@@ -1,0 +1,90 @@
+name: Boardwire Delete Bluesky Posts
+
+on:
+  workflow_dispatch:
+    inputs:
+      older_than_hours:
+        description: "Delete posts older than this many hours"
+        required: true
+        default: "1"
+      limit:
+        description: "Maximum number of published post records to delete (blank = all matches)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: boardwire-delete-bluesky-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  delete_bluesky_posts:
+    runs-on: ubuntu-latest
+    environment: production
+    env:
+      BOARDWIRE_REAL_PUBLISH_ENABLED: true
+      BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+      BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Delete matching Bluesky posts
+        env:
+          BW_DELETE_OLDER_THAN_HOURS: ${{ inputs.older_than_hours || '1' }}
+          BW_DELETE_LIMIT: ${{ inputs.limit }}
+        run: |
+          args=(
+            --delete-published
+            --publisher bluesky
+            --delete-older-than-hours "$BW_DELETE_OLDER_THAN_HOURS"
+            --confirm-real-delete
+          )
+
+          if [ -n "$BW_DELETE_LIMIT" ]; then
+            args+=(--delete-limit "$BW_DELETE_LIMIT")
+          fi
+
+          python -m src.main "${args[@]}"
+
+      - name: Commit deletion state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data/published_posts.json
+
+          if git diff --cached --quiet; then
+            echo "No deletion state changes to commit"
+          else
+            git commit -m "chore: mark deleted bluesky posts"
+
+            for attempt in 1 2 3; do
+              if git push; then
+                exit 0
+              fi
+
+              echo "Push failed on attempt ${attempt}; rebasing onto latest ${GITHUB_REF_NAME} before retrying"
+              git fetch origin "${GITHUB_REF_NAME}"
+              git rebase "origin/${GITHUB_REF_NAME}"
+            done
+
+            echo "Push failed after 3 attempts" >&2
+            exit 1
+          fi
