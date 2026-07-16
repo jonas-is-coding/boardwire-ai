@@ -7715,5 +7715,48 @@
     },
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-15-openinterpreter-openinterpreter-a-coding-agent-for-low-cost-models-09e74c994f4e.md",
     "published_at": "2026-07-15T18:40:38.418935Z"
+  },
+  {
+    "id": "7680b9f9f7c7",
+    "status": "approved",
+    "created_at": "2026-07-16T06:09:09.303893Z",
+    "score": 90,
+    "reason": "New Claude Code version with direct utility for debugging agent behavior and critical bug fixes. Passes Ships Test.",
+    "proposed_post": "Claude Code v2.1.211 adds `--forward-subagent-text` flag, exposing subagent thinking in stream-json. Builders can now debug agentic workflows with more transparency. Critical fixes for permission previews and session stability also shipped.",
+    "source_angle": "Claude Code CLI/SDK update for agent debugging and stability",
+    "source_item": {
+      "title": "Claude Code v2.1.211",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.211",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 65,
+      "summary": "<h2>What's changed</h2>\n<ul>\n<li>Added <code>--forward-subagent-text</code> flag and <code>CLAUDE_CODE_FORWARD_SUBAGENT_TEXT</code> environment variable to include subagent text and thinking in stream-json output</li>\n<li>Fixed permission previews relayed to chat channels not neutralizing bidirectional-override, zero-width, and look-alike quote characters, so tool inputs cannot visually alter the approval message</li>\n<li>Fixed auto mode overriding a PreToolUse hook's <code>ask</code> decision for unsandboxed Bash — a hook <code>ask</code> now floors the decision at a prompt</li>\n<li>Fixed parallel Claude Code sessions all logging out simultaneously after wake-from-sleep when many sessions share one credential store</li>\n<li>Fixed plugin MCP servers not reconnecting after an idle web session woke, leaving MCP calls failing until the next message</li>\n<li>Fixed Claude Code on Vertex and Bedrock attempting the default Opus model at startup and printing a spurious fallback notice when a model is explicitly configured</li>\n<li>Fixed subagents spawned with an explicit model override reverting to the parent's model when resumed or sent a follow-up message</li>\n<li>Fixed nested <code>.claude/rules/*.md</code> files loading even when setting sources exclude project settings</li>\n<li>Fixed file upload validation: filenames ending in a DOS device suffix (<code>.prn</code>) or trailing dot are now accepted, and files with multiple hard links are refused</li>\n<li>Fixed file uploads to Claude in Chrome from remote and CLI sessions</li>\n<li>Fixed edits that leave the input as \"?\" being silently swallowed and toggling the shortcuts panel</li>\n<li>Fixed a startup hang when the Claude in Chrome extension is enabled but Chrome is not running</li>\n<li>Fixed a 300ms delay revealing async content (Settings tabs, Stats, diff views, and other loading states)</li>\n<li>Fixed reopening a just-stopped background session from the agents view starting a blank conversation under the same session id</li>\n<li>Fixed <code>/loop</code> hiding the session from <code>/resume</code> after a single use</li>\n<li>Fixed screen reader users losing the audible terminal bell after <code>/terminal-setup</code> or onboarding terminal setup</li>\n<li>Fixed background jobs on LLM gateway auth (<code>ANTHROPIC_AUTH_TOKEN</code> + <code>ANTHROPIC_BASE_URL</code>) coming back \"Not logged in\" after the daemon respawns them</li>\n<li>Fixed <code>claude agents</code> jobs becoming permanently undeletable when git no longer recognizes their worktree — the row now shows why the delete was refused instead of silently reappearing</li>\n<li>Fixed <code>/clear</code> not resetting the session cost counter — the statusline's cost now starts at $0 after <code>/clear</code></li>\n<li>Fixed Claude in Chrome setup pages failing to open in the browser on Windows</li>\n<li>Fixed headless print-mode sessions on Windows crashing or silently exiting when stdin is unreadable</li>\n<li>Fixed background session titles in the agents view showing the naming model's refusal text when the prompt contains a link</li>\n<li>Fixed background agents killed by the user auto-respawning, and revived agents re-running stale prompts from old sessions</li>\n<li>Fixed routines with no schedule reporting a next run time in the year 1</li>\n<li>Hardened synced skill/plugin directory naming on Windows and kept CCR web fetch/search proxies working after <code>/clear</code></li>\n<li>Improved terminal layout and rendering performance</li>\n<li>Improved background agent result reporting — Claude now reports the status of still-running agents and waits for the real completion instead of fabricating results</li>\n<li>Improved the memory index over-limit warning to measure only loaded content, excluding frontmatter and HTML comments</li>\n<li>Updated integer environment variables (timeouts, token budgets, retry counts) to accept scientific notation and digit-separator spellings like <code>1e6</code> and <code>64_000</code></li>\n<li>Updated documentation links to the current docs sites</li>\n<li>Changed \"always allow\" permission rules to save at the repository root, so approvals granted in a git worktree persist across sessions and worktrees</li>\n<li>Changed <code>/usage-credits</code> to ask for confirmation before sending a request to organization admins</li>\n<li>Changed Vim mode <code>s</code> and <code>S</code> (substitute char/line) to work in NORMAL mode, matching vim behavior</li>\n<li>[VSCode] Updated the Remote Control banner to describe what it does</li>\n<li>Claude in Chrome: hardened file-upload path validation</li>\n<li>Claude in Chrome: <code>save_to_disk</code> on screenshot actions now writes the image to disk and returns the path; previously it did nothing</li>\n<li>Fixed a prompt-caching regression on Bedrock, Vertex, Mantle, and Foundry that billed the trailing system context block as fresh input tokens on every request.</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: approval, becoming, trailing, audible, conversation.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Claude Code Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "approval",
+          "becoming",
+          "trailing",
+          "audible",
+          "conversation",
+          "cost",
+          "still-running",
+          "variables"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: approval, becoming, trailing, audible. Lead: Claude Code v2.1.211",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, das hier ist interessant für jeden, der Claude Code in seine CI/CD-Pipeline integriert.\n\nMit dem neuen '--forward-subagent-text' Flag können Entwickler jetzt die Subagent-Texte und das Denken in den Stream-JSON-Output bekommen. Das bedeutet, man kann viel tiefer debuggen und verstehen, wie Claude zu Entscheidungen kommt, statt nur das Endergebnis zu sehen. Für uns Builder ist das ein Game-Changer, weil wir so die Blackbox besser durchleuchten können, um die AI-Generierung zu optimieren oder falls mal was schief läuft. Damit können wir schneller reagieren und die Integration robuster machen.",
+    "chloe_note": "Hey, *Claude Code v2.1.211* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New Claude Code version with direct utility for debugging agent behavior and critical bug fixes. Passes Ships Test.Cluster context: 1 sources, engagement 0. Common terms: approval, becoming, trailing, audible. Score aktuell: 90. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.211"
   }
 ]
