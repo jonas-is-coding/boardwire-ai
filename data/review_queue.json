@@ -7842,5 +7842,49 @@
     "card_variant": "editorial_stat",
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-16-inkling-open-weights-975b-parameter-llm-e82d668aae1e.md",
     "published_at": "2026-07-16T06:43:04.648609Z"
+  },
+  {
+    "id": "262867de3097",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-07-16T17:04:23.262409Z",
+    "score": 85,
+    "reason": "New NVIDIA embedding model ranks #1 on RTEB. Likely available on HF, offering direct performance gains for RAG/agents.",
+    "proposed_post": "NVIDIA Nemotron 3 Embed ranks #1 on RTEB. This new embedding model offers improved performance for agentic retrieval, directly impacting RAG accuracy and agent system efficiency for builders.",
+    "source_angle": "NVIDIA's new embedding model leads RTEB, enhancing agentic retrieval.",
+    "source_item": {
+      "title": "NVIDIA Nemotron 3 Embed Ranks #1 Overall on RTEB, Advancing Agentic Retrieval",
+      "source": "Hugging Face Blog",
+      "link": "https://huggingface.co/blog/nvidia/nemotron-3-embed-wins-rteb",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 10,
+      "summary": "NVIDIA Nemotron 3 Embed Ranks #1 Overall on RTEB, Advancing Agentic Retrieval\n[Cluster context: 1 sources, engagement 0, common terms: overall, rteb, embed, agentic, retrieval.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Hugging Face Blog"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "overall",
+          "rteb",
+          "embed",
+          "agentic",
+          "retrieval",
+          "nemotron",
+          "nvidia",
+          "advancing"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: overall, rteb, embed, agentic. Lead: NVIDIA Nemotron 3 Embed Ranks #1 Overall on RTEB, Advancing Agentic Retrieval",
+        "alternative_titles": [],
+        "cluster_score": 15
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-07-16T17:04:24.244383Z",
+    "defer_count": 1,
+    "original_score": 85,
+    "original_reason": "New NVIDIA embedding model ranks #1 on RTEB. Likely available on HF, offering direct performance gains for RAG/agents."
   }
 ]
