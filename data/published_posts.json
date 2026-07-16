@@ -2045,5 +2045,28 @@
     "published_weekday": "Thursday",
     "composer_version": "2",
     "card_variant": "github_og"
+  },
+  {
+    "id": "e82d668aae1e",
+    "published_at": "2026-07-16T06:43:04.648609Z",
+    "platform": "bluesky",
+    "post": "Open-weight 975B LLM ships as a new foundation model.\n\nInkling releases 975B open-weight LLM for deployment and fine-tuning, Apache 2.0 licensed.\n\n#OpenSource #OpenWeights",
+    "source_link": "https://thinkingmachines.ai/inkling/",
+    "source_title": "Inkling – Open-Weights 975B Parameter LLM",
+    "score": 90,
+    "reason": "Open weights for a 975B LLM are released, providing a new foundation model for builders to deploy or fine-tune.",
+    "card_path": "generated/cards/e82d668aae1e.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-16-inkling-open-weights-975b-parameter-llm-e82d668aae1e.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqqn2i7l632e",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqqn2i7l632e",
+    "format_variant": "plain",
+    "hashtags_used": [
+      "#OpenSource",
+      "#OpenWeights"
+    ],
+    "published_hour_utc": 6,
+    "published_weekday": "Thursday",
+    "composer_version": "2",
+    "card_variant": "editorial_stat"
   }
 ]
