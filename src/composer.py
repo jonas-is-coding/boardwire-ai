@@ -30,6 +30,14 @@ from __future__ import annotations
 import hashlib
 import re
 
+# Bumped whenever the Bluesky text layout changes in a way that makes older
+# stored `post` text incompatible. Persisted on every queue item and published
+# post so we can prove a post was composed by the current composer and never
+# republish stale (pre-refactor 3-block) text. History:
+#   "1" — legacy title/subtitle/description 3-block, hard-truncated at 280 (bug)
+#   "2" — budget-aware hook/fact/question/hashtags, link reserved (current)
+COMPOSER_VERSION = "2"
+
 # Conservative Bluesky budget: 300 graphemes; we bound by 300 UTF-8 bytes.
 BLUESKY_MAX_BYTES = 300
 LINK_PREFIX = "\n\n🔗 "

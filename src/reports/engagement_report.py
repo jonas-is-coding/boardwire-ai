@@ -54,6 +54,7 @@ class PostPerformance:
     format_variant: str = "plain"
     hashtags_used: list[str] = field(default_factory=list)
     is_version_release: bool = False
+    card_variant: str | None = None
 
 
 @dataclass(slots=True)
@@ -128,6 +129,7 @@ def _build_performance(post: dict, record: dict) -> PostPerformance:
         format_variant=str(post.get("format_variant") or "plain"),
         hashtags_used=hashtags,
         is_version_release=is_version_dominant_title(str(post.get("source_title") or "")),
+        card_variant=(str(post.get("card_variant")) if post.get("card_variant") else None),
     )
 
 
@@ -228,6 +230,11 @@ def _strategy_sections(performances: list[PostPerformance]) -> list[str]:
     lines.append("## Engagement by format variant")
     lines.append("")
     lines.extend(_grouped_lines(performances, key_fn=lambda p: p.format_variant or "plain"))
+    lines.append("")
+
+    lines.append("## Engagement by card variant")
+    lines.append("")
+    lines.extend(_grouped_lines(performances, key_fn=lambda p: p.card_variant))
     lines.append("")
 
     lines.append("## Engagement by hashtag combination")

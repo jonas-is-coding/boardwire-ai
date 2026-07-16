@@ -139,6 +139,70 @@ def test_high_score_item_published_as_thread(pipeline) -> None:
     assert post["thread_partial"] is False
 
 
+def test_publish_persists_composer_version_and_card_variant(pipeline) -> None:
+    from src.composer import COMPOSER_VERSION
+
+    link = _find_variant_link("plain")
+    JsonStore.save(pipeline["review_path"], [_queue_item(link, score=70)])
+    assert pipeline["run"]() == 0
+
+    published = json.loads(pipeline["published_path"].read_text())
+    post = published[0]
+    assert post["composer_version"] == COMPOSER_VERSION
+    # Non-GitHub source → editorial card variant.
+    assert post["card_variant"].startswith("editorial")
+
+
+def test_validation_failure_regenerates_then_publishes(pipeline, monkeypatch) -> None:
+    from src.notifications import persona_voice as voice
+
+    link = _find_variant_link("plain")
+    JsonStore.save(pipeline["review_path"], [_queue_item(link, score=70)])
+
+    calls = {"n": 0}
+
+    def flaky_package(*a, **k):
+        calls["n"] += 1
+        if calls["n"] == 1:
+            # First attempt leaks HN engagement metadata → rejected.
+            bad = _package()
+            bad["subtitle"] = "Recall stores data with 58 comments and 77 points on HN."
+            return bad
+        return _package()  # regenerated: clean
+
+    monkeypatch.setattr(voice, "sarah_build_publish_package", flaky_package)
+
+    assert pipeline["run"]() == 0
+    published = json.loads(pipeline["published_path"].read_text())
+    assert len(published) == 1
+    assert calls["n"] == 2  # regenerated exactly once
+    assert "58 comments and 77 points" not in published[0]["post"]
+
+
+def test_validation_failure_twice_skips(pipeline, monkeypatch) -> None:
+    from src.notifications import persona_voice as voice
+
+    link = _find_variant_link("plain")
+    JsonStore.save(pipeline["review_path"], [_queue_item(link, score=70)])
+
+    calls = {"n": 0}
+
+    def always_bad(*a, **k):
+        calls["n"] += 1
+        bad = _package()
+        bad["subtitle"] = "Recall stores data with 58 comments and 77 points on HN."
+        return bad
+
+    monkeypatch.setattr(voice, "sarah_build_publish_package", always_bad)
+
+    assert pipeline["run"]() == 0
+    published = json.loads(pipeline["published_path"].read_text())
+    assert published == []  # never published
+    assert calls["n"] == 2  # tried, regenerated once, then gave up
+    rejections = json.loads(pipeline["rejections_path"].read_text())
+    assert any("engagement metadata" in "; ".join(r.get("reasons", [])).lower() for r in rejections)
+
+
 def test_release_dedupe_blocks_second_publish(pipeline) -> None:
     item_one = _queue_item(
         "https://github.com/ollama/ollama/releases/tag/v0.30.11",

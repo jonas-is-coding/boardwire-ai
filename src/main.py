@@ -20,7 +20,13 @@ from src.collector.hn_collector import fetch_hackernews
 from src.collector.github_trending_collector import fetch_github_trending
 from src.cards.card_data import from_review_item
 from src.cards.renderer import render_card_png
-from src.composer import compose_post_body, select_format_variant, shorten_at_word_boundary, validate_question
+from src.composer import (
+    COMPOSER_VERSION,
+    compose_post_body,
+    select_format_variant,
+    shorten_at_word_boundary,
+    validate_question,
+)
 from src.config import (
     ARTICLES_DIR,
     CARDS_DIR,
@@ -56,6 +62,7 @@ from src.quality.gates import (
     QualityConfig,
     check_quality,
     find_recent_release,
+    validate_composed_post,
 )
 from src.reports.article_export import export_review_articles, write_article_for_item
 from src.reports.review_report import generate_review_queue_report
@@ -1198,8 +1205,52 @@ def _generate_card_for_item(item: dict, logger) -> str | None:
     output_path = CARDS_DIR / f"{review_id}.png"
     render_card_png(card_data, output_path)
     rel = f"generated/cards/{review_id}.png"
-    logger.info("Saved card: %s", rel)
+    # Record which editorial layout was rendered so the publish path can log
+    # the card_variant and build layout-aware ALT text.
+    item["card_layout"] = card_data.layout
+    item["card_variant"] = f"editorial_{card_data.layout}"
+    logger.info("Saved card (%s): %s", card_data.layout, rel)
     return rel
+
+
+def _select_card_variant(item: dict) -> str:
+    """Deterministic 50/50 A/B (by item id) between the editorial card and the
+    GitHub OG preview — but only GitHub-sourced items are eligible for OG."""
+    source_link = str(item.get("source_item", {}).get("link", ""))
+    owner_repo = _github_owner_repo(source_link)
+    if not owner_repo:
+        return "editorial"
+    digest = hashlib.sha1(str(item.get("id", "")).encode("utf-8")).hexdigest()
+    return "github_og" if int(digest, 16) % 2 == 0 else "editorial"
+
+
+def _generate_card_with_variant(item: dict, logger) -> tuple[str | None, str]:
+    """Generate the card, honoring the editorial/github_og A/B split.
+
+    Returns (relative_card_path, card_variant). Falls back to the editorial
+    card on any GitHub OG failure. card_variant is one of
+    "editorial_stat" | "editorial_claim" | "editorial_quote" | "github_og".
+    """
+    review_id = str(item.get("id", "")).strip()
+    chosen = _select_card_variant(item)
+    if chosen == "github_og" and review_id:
+        from src.cards.github_og import fetch_github_og_image
+
+        owner_repo = _github_owner_repo(str(item.get("source_item", {}).get("link", "")))
+        if owner_repo:
+            out = CARDS_DIR / f"{review_id}.png"
+            fetched = fetch_github_og_image(owner_repo[0], owner_repo[1], out, logger=logger)
+            if fetched:
+                rel = f"generated/cards/{review_id}.png"
+                item["card_layout"] = "github_og"
+                item["card_variant"] = "github_og"
+                item["_github_og_owner_repo"] = list(owner_repo)
+                logger.info("Saved GitHub OG card: %s", rel)
+                return rel, "github_og"
+        logger.info("GitHub OG unavailable; falling back to editorial card: %s", review_id)
+
+    rel = _generate_card_for_item(item, logger)
+    return rel, str(item.get("card_variant") or "editorial_claim")
 
 
 def _generate_card_for_id(review_id: str, logger) -> int:
@@ -1496,6 +1547,21 @@ def _resolve_card_image_path(item: dict, logger) -> str | None:
 
 
 def _build_image_alt_text(item: dict) -> str:
+    """ALT text describing the actual card content (stat/claim/context), or the
+    GitHub repo preview for the github_og variant."""
+    from src.cards.card_data import build_card_alt_text, build_github_og_alt, from_review_item
+
+    if str(item.get("card_variant") or "") == "github_og":
+        owner_repo = item.get("_github_og_owner_repo")
+        if isinstance(owner_repo, (list, tuple)) and len(owner_repo) == 2:
+            summary = str(item.get("source_item", {}).get("summary", ""))
+            return build_github_og_alt(str(owner_repo[0]), str(owner_repo[1]), summary)
+
+    try:
+        return build_card_alt_text(from_review_item(item))
+    except Exception:
+        pass
+
     source_item = item.get("source_item", {})
     title = " ".join(str(source_item.get("title", "")).split()).strip()
     source = " ".join(str(source_item.get("source", "")).split()).strip()
@@ -1506,6 +1572,95 @@ def _build_image_alt_text(item: dict) -> str:
     if source:
         return f"Boardwire card from {source}"
     return "Boardwire news card"
+
+
+def _valid_sarah_package(package: object) -> bool:
+    """True when a stored Sarah package carries the fields the composer needs."""
+    if not isinstance(package, dict):
+        return False
+    title = str(package.get("title", "")).strip()
+    subtitle = str(package.get("subtitle", "")).strip()
+    raw_tags = package.get("hashtags", [])
+    tags = [t for t in raw_tags if str(t).strip()] if isinstance(raw_tags, list) else []
+    return bool(title and subtitle and len(tags) >= 2)
+
+
+def _compose_from_package(
+    package: dict[str, str | list[str]],
+    source_link: str | None,
+    variant_key: str,
+) -> tuple[str, str | None, str]:
+    """Single source of truth for turning package fields into Bluesky text.
+
+    Returns (post_text, active_question, format_variant). The link budget is
+    reserved but appended later by the publisher. Deterministic given the
+    package and variant_key, so migration and publish compose identically.
+    """
+    format_variant = select_format_variant(variant_key)
+    question = validate_question(str(package.get("question", "")))
+    if format_variant == "question" and not question:
+        format_variant = "plain"
+    active_question = question if format_variant == "question" else None
+    post_text = _compose_sarah_post(package, source_link=source_link, question=active_question)
+    return post_text, active_question, format_variant
+
+
+# Markers left by the pre-refactor composer (`_compose_sarah_post` v1) in text
+# it produced. Their presence in a stored post is proof of old-format text.
+_OLD_FORMAT_MARKERS = ("📖 Read the full article", "Quelle:")
+
+
+def _is_old_format_text(text: str) -> bool:
+    return any(marker in (text or "") for marker in _OLD_FORMAT_MARKERS)
+
+
+def migrate_review_queue_composition(queue: list[dict], logger) -> tuple[int, int]:
+    """Bring pending/approved items to the current composer, or expire them.
+
+    Guarantee (Task 1.3): no item composed under the old format may ever
+    publish again. Publish itself already composes from a *fresh* package with
+    the current composer and stamps composer_version, so the stored draft text
+    is never published verbatim. This migration additionally cleans the stored
+    queue state so nothing old-format lingers:
+
+      - An item carrying a valid stored Sarah package is recomposed from those
+        package fields and stamped with the current composer_version.
+      - An item whose stored text is detectably old-format (v1 markers) and has
+        no package to recompose from is expired — it can neither be trusted nor
+        rebuilt from what's on disk.
+      - Anything else (a fresh Editor draft mid-flight) is left untouched;
+        publish will regenerate its package and stamp the version.
+
+    Returns (recomposed, expired).
+    """
+    recomposed = 0
+    expired = 0
+    now_iso = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+    for item in queue:
+        if item.get("status") not in {"pending_review", "approved"}:
+            continue
+        if str(item.get("composer_version") or "") == COMPOSER_VERSION:
+            continue
+
+        package = item.get("sarah_package")
+        source_link = str(item.get("source_item", {}).get("link", "")).strip() or None
+        if _valid_sarah_package(package):
+            variant_key = source_link or str(item.get("id") or "")
+            post_text, _question, _variant = _compose_from_package(package, source_link, variant_key)
+            item["proposed_post"] = post_text
+            item["composer_version"] = COMPOSER_VERSION
+            item["recomposed_at"] = now_iso
+            recomposed += 1
+            logger.info("Migrated review item to composer v%s: %s", COMPOSER_VERSION, item.get("id"))
+        elif _is_old_format_text(str(item.get("proposed_post", ""))):
+            item["status"] = "expired_deferred"
+            item["expired_at"] = now_iso
+            item["migration_note"] = "expired: old-format composed text, no package to recompose"
+            expired += 1
+            logger.info("Expired old-format review item (no package to recompose): %s", item.get("id"))
+    if recomposed or expired:
+        logger.info("Queue composition migration: recomposed=%d expired=%d", recomposed, expired)
+    return recomposed, expired
 
 
 def _release_identity_for_source_item(source_item: dict) -> tuple[str, str] | None:
@@ -1591,6 +1746,14 @@ def _publish_approved(args, logger) -> int:
     quality_config = _load_quality_config()
     now = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
     now_dt = datetime.now(timezone.utc)
+
+    # Task 1: no stale-format item may ever publish. Recompose queue items to
+    # the current composer from their package fields, or expire ones that
+    # cannot be recomposed, before any publish decision.
+    migrated, migration_expired = migrate_review_queue_composition(queue, logger)
+    if migrated or migration_expired:
+        JsonStore.save(REVIEW_QUEUE_PATH, queue)
+
     publisher, selected_platform = _resolve_publisher(args, logger)
     if publisher is None:
         return 1
@@ -1693,44 +1856,9 @@ def _publish_approved(args, logger) -> int:
 
         source_summary = str(source_item.get("summary", "")).strip()
         cluster_context = source_item.get("cluster_context", {}) if isinstance(source_item.get("cluster_context"), dict) else {}
-        base_post_text = str(item.get("proposed_post") or "").strip() or _build_publish_caption(item)
-        sarah_package = voice.sarah_build_publish_package(
-            title=str(source_item.get("title", "Untitled")),
-            source=str(source_item.get("source", "Unknown Source")),
-            reason=str(item.get("reason", "")),
-            score=int(item.get("score") or 0),
-            claire_note=str(item.get("claire_note", "")),
-            chloe_note=str(item.get("chloe_note", "")),
-            post_text=base_post_text,
-            summary=source_summary,
-            cluster_source_count=int(cluster_context.get("source_count") or 1),
-            cluster_sources=[str(x) for x in cluster_context.get("sources", [])] if isinstance(cluster_context.get("sources"), list) else [],
-            cluster_total_engagement=int(cluster_context.get("total_engagement_score") or 0),
-            cluster_common_terms=[str(x) for x in cluster_context.get("common_terms", [])] if isinstance(cluster_context.get("common_terms"), list) else [],
-            alternative_titles=[str(x) for x in cluster_context.get("alternative_titles", [])] if isinstance(cluster_context.get("alternative_titles"), list) else [],
-        )
-        if not sarah_package:
-            logger.warning("Sarah LLM unavailable or rejected — skipping publish (will retry next run): %s", rid)
-            sarah_failures.append(
-                {
-                    "rid": rid,
-                    "title": source_item.get("title", "Untitled"),
-                    "source": source_item.get("source", "Unknown Source"),
-                    "link": source_link or "",
-                }
-            )
-            continue
-
-        sarah_package = _finalize_package_hashtags(
-            sarah_package,
-            title=str(source_item.get("title", "")),
-            summary=source_summary,
-            source=str(source_item.get("source", "")),
-        )
-        item["sarah_package"] = sarah_package
-
-        # Release dedupe: never publish the same (project, version) twice
-        # within the dedupe window (ollama v0.30.11 once went out 3 times).
+        # Release dedupe first (cheap, no LLM): never publish the same
+        # (project, version) twice within the window (ollama v0.30.11 once
+        # went out 3 times). Doing this before packaging saves LLM calls.
         release_identity = _release_identity_for_source_item(source_item)
         if release_identity:
             previous_release = find_recent_release(published_releases, *release_identity)
@@ -1746,16 +1874,95 @@ def _publish_approved(args, logger) -> int:
                 quality_rejected_count += 1
                 continue
 
-        # Format A/B variant: ~40% of posts close with a genuine question,
-        # selected deterministically from the item identity (reproducible).
+        base_post_text = str(item.get("proposed_post") or "").strip() or _build_publish_caption(item)
         variant_key = str(source_link or rid or "")
-        format_variant = select_format_variant(variant_key)
-        question = validate_question(str(sarah_package.get("question", "")))
-        if format_variant == "question" and not question:
-            format_variant = "plain"
-        active_question = question if format_variant == "question" else None
 
-        post_text = _compose_sarah_post(sarah_package, source_link=source_link, question=active_question)
+        def _package_once() -> dict | None:
+            pkg = voice.sarah_build_publish_package(
+                title=str(source_item.get("title", "Untitled")),
+                source=str(source_item.get("source", "Unknown Source")),
+                reason=str(item.get("reason", "")),
+                score=int(item.get("score") or 0),
+                claire_note=str(item.get("claire_note", "")),
+                chloe_note=str(item.get("chloe_note", "")),
+                post_text=base_post_text,
+                summary=source_summary,
+                cluster_source_count=int(cluster_context.get("source_count") or 1),
+                cluster_sources=[str(x) for x in cluster_context.get("sources", [])] if isinstance(cluster_context.get("sources"), list) else [],
+                cluster_total_engagement=int(cluster_context.get("total_engagement_score") or 0),
+                cluster_common_terms=[str(x) for x in cluster_context.get("common_terms", [])] if isinstance(cluster_context.get("common_terms"), list) else [],
+                alternative_titles=[str(x) for x in cluster_context.get("alternative_titles", [])] if isinstance(cluster_context.get("alternative_titles"), list) else [],
+            )
+            if not pkg:
+                return None
+            return _finalize_package_hashtags(
+                pkg,
+                title=str(source_item.get("title", "")),
+                summary=source_summary,
+                source=str(source_item.get("source", "")),
+            )
+
+        # Compose ONLY from package fields (single source of truth), then
+        # validate the composed text. On validation failure regenerate the
+        # package once; if it still fails, skip the item (never publish it).
+        sarah_package = None
+        post_text = ""
+        active_question = None
+        format_variant = "plain"
+        validation_reasons: list[str] = []
+        sarah_llm_failed = False
+        for attempt in range(2):
+            candidate_pkg = _package_once()
+            if not candidate_pkg:
+                sarah_llm_failed = True
+                break
+            cand_text, cand_q, cand_variant = _compose_from_package(
+                candidate_pkg, source_link, variant_key
+            )
+            reasons = validate_composed_post(
+                cand_text,
+                fact_line=str(candidate_pkg.get("subtitle", "")),
+                source_title=str(source_item.get("title", "")),
+                source_summary=source_summary,
+                has_link=bool(source_link),
+            )
+            sarah_package = candidate_pkg
+            post_text, active_question, format_variant = cand_text, cand_q, cand_variant
+            validation_reasons = reasons
+            if not reasons:
+                break
+            logger.warning(
+                "Composed-text validation failed (attempt %d/2) for %s: %s",
+                attempt + 1,
+                rid,
+                "; ".join(reasons),
+            )
+
+        if sarah_package is None or sarah_llm_failed:
+            logger.warning("Sarah LLM unavailable or rejected — skipping publish (will retry next run): %s", rid)
+            sarah_failures.append(
+                {
+                    "rid": rid,
+                    "title": source_item.get("title", "Untitled"),
+                    "source": source_item.get("source", "Unknown Source"),
+                    "link": source_link or "",
+                }
+            )
+            continue
+
+        if validation_reasons:
+            logger.warning(
+                "Composed-text validation failed after regenerate — skipping: %s (%s)",
+                rid,
+                "; ".join(validation_reasons),
+            )
+            _log_gate_rejection("publish", str(source_item.get("title", "")), source_link or "", validation_reasons)
+            quality_rejected_count += 1
+            continue
+
+        item["sarah_package"] = sarah_package
+        item["composer_version"] = COMPOSER_VERSION
+        question = active_question
         item["proposed_post"] = post_text
         notify.sarah_packaged(
             title=str(sarah_package.get("title", "")),
@@ -1763,13 +1970,14 @@ def _publish_approved(args, logger) -> int:
             description=str(sarah_package.get("description", "")),
             hashtags=[str(x) for x in sarah_package.get("hashtags", [])] if isinstance(sarah_package.get("hashtags"), list) else [],
         )
+        card_variant = "editorial_claim"
         try:
-            regenerated = _generate_card_for_item(item, logger)
+            regenerated, card_variant = _generate_card_with_variant(item, logger)
             if regenerated:
                 item["card_path"] = regenerated
-                logger.info("Card regenerated with Sarah package: %s", regenerated)
+                logger.info("Card generated (%s): %s", card_variant, regenerated)
         except Exception as exc:
-            logger.warning("Card regeneration after Sarah failed for %s: %s", rid, exc)
+            logger.warning("Card generation after Sarah failed for %s: %s", rid, exc)
         card_path = item.get("card_path")
         if selected_platform in IMAGE_REQUIRED_PLATFORMS:
             logger.info("Image required for %s: %s", selected_platform, rid)
@@ -1777,15 +1985,16 @@ def _publish_approved(args, logger) -> int:
         if selected_platform in IMAGE_REQUIRED_PLATFORMS and not abs_card_path:
             logger.info("Card missing, regenerating: %s", rid)
             try:
-                regenerated = _generate_card_for_item(item, logger)
+                regenerated, card_variant = _generate_card_with_variant(item, logger)
             except Exception as exc:  # pragma: no cover - defensive publish safety
                 logger.warning("Card regeneration failed for %s: %s", rid, exc)
                 regenerated = None
             if regenerated:
                 item["card_path"] = regenerated
                 card_path = regenerated
-                logger.info("Card generated: %s", regenerated)
+                logger.info("Card generated (%s): %s", card_variant, regenerated)
                 abs_card_path = _resolve_card_image_path(item, logger)
+        item["card_variant"] = card_variant
         logger.info("Publish quality check for: %s", rid)
         logger.info("Ignoring draft/review duplicates during publish context")
         history = _published_history_only(
@@ -1901,6 +2110,10 @@ def _publish_approved(args, logger) -> int:
             "hashtags_used": [str(t) for t in sarah_package.get("hashtags", []) if str(t).strip()],
             "published_hour_utc": published_dt.hour,
             "published_weekday": published_dt.strftime("%A"),
+            # Proof this post was composed by the current composer (never
+            # stale pre-refactor text), and which card A/B variant shipped.
+            "composer_version": COMPOSER_VERSION,
+            "card_variant": card_variant,
         }
         if thread_uris:
             post["thread_uris"] = thread_uris

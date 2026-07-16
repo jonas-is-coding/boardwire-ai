@@ -4,16 +4,47 @@ Boardwire AI is a CLI-first MVP for an autonomous AI news channel with safe defa
 
 ## Branded image cards
 
-Boardwire can generate square editorial image cards for review/publish flows.
+Boardwire generates square editorial image cards for review/publish flows. The
+card must **add** information — never repeat the post hook.
 
 Output path:
 - `generated/cards/<review_id>.png`
 
-Card style:
-- 1200x1200
-- black/white
-- minimal editorial layout
-- no external assets
+Brand system (all templates):
+- 1200x1200, background `#0a0a0a`, white type, accent `#FFD21E`
+- monospace source kicker with an accent dot (top)
+- `BOARDWIRE` wordmark bottom-left (accent, letter-spaced) + date bottom-right
+- optional light `visual_theme`
+- no external assets; ALT text is always generated from the card content
+
+### Card fields (Sarah package)
+
+The packaging LLM emits three card-specific fields, validated in Python
+(`src/cards/card_data.py`) — never truncated on the card:
+
+| Field | Budget | Rule |
+|---|---|---|
+| `card_stat` | ≤ 8 chars | The one hero number/token (`70B`, `+607★`, `104 pts`, `1-bit`, `RCE`). Empty if the story has no number. |
+| `card_claim` | ≤ 8 words | The sharp takeaway. Rejected if it shares > 60% of its tokens with the post title (falls back to a distinct source line). |
+| `card_context` | ≤ 90 chars | One complete sentence or `·`-separated fragments. Over-budget context is rejected and replaced by a complete leading fragment — never a mid-sentence cut. |
+
+### Layout templates
+
+Selected deterministically by content type (`src/cards/html_template.py`):
+
+- **stat** (default when `card_stat` is present): huge hero stat → claim → context.
+- **claim** (no stat): claim as display type, capped at 2–3 lines.
+- **quote** (HN discussion / opinion sources): oversized accent quotation mark → claim in editorial italic → attribution.
+
+### Card A/B variant
+
+For GitHub-sourced items, a deterministic 50/50 split (by hash of item id)
+chooses between the editorial card and the repo's GitHub Open Graph preview
+(`opengraph.githubassets.com`, verified to return an image before use; falls
+back to the editorial card on any failure). The chosen `card_variant`
+(`editorial_stat` | `editorial_claim` | `editorial_quote` | `github_og`) is
+persisted in `data/published_posts.json` and reported under
+"Engagement by card variant" in `--engagement-report`.
 
 ### Setup (one-time)
 
@@ -205,6 +236,34 @@ conservatively in UTF-8 bytes, see `src/composer.py`) — never hard-truncated:
   `format_variant`, `hashtags_used`, `published_hour_utc` and
   `published_weekday` in `data/published_posts.json` for the A/B analysis in
   the engagement report and the virality model.
+
+### Composed at publish time (single source of truth)
+
+The Bluesky text is **always composed at publish time from the package fields**
+(title/subtitle/hashtags/question) — the stored `proposed_post` is an Editor
+draft, never published verbatim. Each queue item and published post carries a
+`composer_version` (`src/composer.py::COMPOSER_VERSION`) proving it was built by
+the current composer; no pre-refactor 3-block text can publish again.
+
+On each publish run, `migrate_review_queue_composition` brings the queue to the
+current composer: items with a stored Sarah package are recomposed and stamped;
+items whose stored text is detectably old-format with no package to rebuild from
+are expired; fresh Editor drafts are left for publish to regenerate.
+
+### Composed-text validation (reject → regenerate once → skip)
+
+After composing, the text is validated (`src/quality/gates.py`) and, on failure,
+the package is regenerated **once**; if it still fails the item is skipped
+(never published) and the reason is logged to `data/gate_rejections.json`:
+
+- **Aggregator-metadata dumps** — `with N points and M comments` and truncated
+  `...35 comm` fragments are blocked. Intentional star counts (`+607 stars`) are
+  allowed.
+- **Mid-word truncation** — the composed text must end with sentence
+  punctuation, `?`, a complete hashtag, or the link.
+- **Fact-line groundedness** — the fact line must carry a concrete
+  source-traceable token (number, version, license, or artifact name), and the
+  `turns X into Y` template is banned unless both nouns appear in the source.
 
 ## Hashtags: config-driven, custom-feed targeted
 

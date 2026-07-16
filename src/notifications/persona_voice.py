@@ -100,11 +100,24 @@ _SYSTEM_PROMPTS = {
         "- title and subtitle MUST contribute different information. Do not paraphrase the title in the subtitle.\n"
         "- If title says 'X ships persistent memory for coding agents', subtitle adds the DIFFERENTIATOR (benchmark numbers, license, what it replaces, where it runs) — not a restatement.\n\n"
         "You package one approved AI news item into a Bluesky/X post + editorial card.\n"
-        "Output STRICT JSON only with keys: title, subtitle, description, hashtags, question.\n\n"
+        "Output STRICT JSON only with keys: title, subtitle, description, hashtags, question, "
+        "card_stat, card_claim, card_context.\n\n"
         "INTERNAL METADATA (hard rule):\n"
         "- NEVER mention internal pipeline metadata in any field: scores, ranks, "
         "source_tier, engagement_score, or phrases like 'with 90 score'. "
         "These are internal signals, not news facts.\n\n"
+        "AGGREGATOR METADATA (hard rule):\n"
+        "- NEVER dump raw Hacker News / aggregator engagement into copy: no "
+        "'with 104 points and 35 comments', 'X points on Hacker News', or similar. "
+        "Those are not facts about the artifact. GitHub star counts as a signal of "
+        "traction ('+607 stars') are fine when relevant.\n\n"
+        "GROUNDEDNESS (hard rule):\n"
+        "- The fact line (subtitle) must be verifiable against the source summary. "
+        "If you cannot state a concrete verifiable fact, output the strongest literal "
+        "fact from the source instead of inventing an abstraction. "
+        "Do not use the 'turns X into Y' template unless both X and Y literally appear "
+        "in the source — a live post falsely claimed 'Openinterpreter turns recall into "
+        "executable code', which the source never said.\n\n"
         "Style target:\n"
         "- The package must make a clear claim about why builders should take the signal seriously.\n"
         "- Do not merely summarize 'X ships Y' or 'X is trending'. Explain the builder implication.\n"
@@ -146,6 +159,17 @@ _SYSTEM_PROMPTS = {
         "(e.g. 'Anyone running this in prod?', 'Does this replace Ollama for you?'). "
         "NEVER generic engagement bait like 'What do you think?'. "
         "If no genuine question fits, use an empty string.\n\n"
+        "CARD FIELDS (these render on the image card, which must ADD information — "
+        "never just repeat the post title):\n"
+        "- card_stat: the ONE hero number or token that captures the story, max 8 chars. "
+        "Examples: '+607★', '104 pts', '1-bit', '3x', 'RCE', '70B', '40%', 'v2.1'. "
+        "Use an empty string ONLY if the story genuinely has no number/token.\n"
+        "- card_claim: max 8 words, sentence case, the sharp takeaway. It MUST differ from "
+        "the post title — do not restate it. "
+        "GOOD (title 'Mistral open-sources 70B model.'): 'Open weights now beat Llama 3.1.'\n"
+        "- card_context: max 90 chars, ONE complete sentence OR '·'-separated fragments. "
+        "Never end mid-sentence. "
+        "GOOD: 'Apache 2.0 · runs open-weight models · beats Llama 3.1 on MMLU'.\n\n"
         "FORBIDDEN openers and phrases (kill credibility instantly):\n"
         "  'Understand how', 'Apply X to', 'Discover', 'Explore', 'Learn how', 'In this article',\n"
         "  'claims improved performance', 'ships version', 'released with enhancements',\n"
@@ -685,6 +709,14 @@ def sarah_build_publish_package(
     if not (title_val and subtitle_val and description_val and 2 <= len(hashtags) <= 3):
         return None
 
+    # Card fields (Task 3). card_stat is a short hero token; card_claim/context
+    # feed the redesigned card. These are validated/normalized downstream in
+    # src/cards/card_data.py (token-overlap + budget); we only bound length here
+    # so a runaway LLM can't blow up the payload.
+    card_stat = str(data.get("card_stat", "")).strip()[:12]
+    card_claim = str(data.get("card_claim", "")).strip()[:80]
+    card_context = str(data.get("card_context", "")).strip()[:120]
+
     return {
         "title": title_val,
         "subtitle": subtitle_val,
@@ -693,6 +725,9 @@ def sarah_build_publish_package(
         # Optional closing question; validated downstream (must end with "?",
         # max ~60 chars, no engagement bait) before it reaches a post.
         "question": str(data.get("question", "")).strip()[:80],
+        "card_stat": card_stat,
+        "card_claim": card_claim,
+        "card_context": card_context,
     }
 
 
