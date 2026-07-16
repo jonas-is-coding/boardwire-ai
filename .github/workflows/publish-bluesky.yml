@@ -79,5 +79,17 @@ jobs:
             echo "No publish state changes to commit"
           else
             git commit -m "chore: update bluesky published posts"
-            git push
+
+            for attempt in 1 2 3; do
+              if git push; then
+                exit 0
+              fi
+
+              echo "Push failed on attempt ${attempt}; rebasing onto latest ${GITHUB_REF_NAME} before retrying"
+              git fetch origin "${GITHUB_REF_NAME}"
+              git rebase "origin/${GITHUB_REF_NAME}"
+            done
+
+            echo "Push failed after 3 attempts" >&2
+            exit 1
           fi
