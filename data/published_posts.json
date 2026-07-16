@@ -2021,5 +2021,29 @@
     ],
     "published_hour_utc": 18,
     "published_weekday": "Wednesday"
+  },
+  {
+    "id": "7680b9f9f7c7",
+    "published_at": "2026-07-16T06:12:13.566412Z",
+    "platform": "bluesky",
+    "post": "Claude Code debugs agent thinking.\n\nAdds --forward-subagent-text flag for stream-json transparency, + critical fixes.\n\n#LLM #ClaudeCode #Anthropic",
+    "source_link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.211",
+    "source_title": "Claude Code v2.1.211",
+    "score": 90,
+    "reason": "New Claude Code version with direct utility for debugging agent behavior and critical bug fixes. Passes Ships Test.",
+    "card_path": "generated/cards/7680b9f9f7c7.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-16-claude-code-v2-1-211-7680b9f9f7c7.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqqld7ykuu24",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqqld7ykuu24",
+    "format_variant": "plain",
+    "hashtags_used": [
+      "#LLM",
+      "#ClaudeCode",
+      "#Anthropic"
+    ],
+    "published_hour_utc": 6,
+    "published_weekday": "Thursday",
+    "composer_version": "2",
+    "card_variant": "github_og"
   }
 ]
