@@ -1213,42 +1213,13 @@ def _generate_card_for_item(item: dict, logger) -> str | None:
     return rel
 
 
-def _select_card_variant(item: dict) -> str:
-    """Deterministic 50/50 A/B (by item id) between the editorial card and the
-    GitHub OG preview — but only GitHub-sourced items are eligible for OG."""
-    source_link = str(item.get("source_item", {}).get("link", ""))
-    owner_repo = _github_owner_repo(source_link)
-    if not owner_repo:
-        return "editorial"
-    digest = hashlib.sha1(str(item.get("id", "")).encode("utf-8")).hexdigest()
-    return "github_og" if int(digest, 16) % 2 == 0 else "editorial"
-
-
 def _generate_card_with_variant(item: dict, logger) -> tuple[str | None, str]:
-    """Generate the card, honoring the editorial/github_og A/B split.
+    """Generate the on-brand dark editorial card for this item.
 
-    Returns (relative_card_path, card_variant). Falls back to the editorial
-    card on any GitHub OG failure. card_variant is one of
-    "editorial_stat" | "editorial_claim" | "editorial_quote" | "github_og".
+    Returns (relative_card_path, card_variant). The layout is chosen by content
+    type (stat / claim / quote / repo / release / security), so card_variant is
+    one of "editorial_<layout>".
     """
-    review_id = str(item.get("id", "")).strip()
-    chosen = _select_card_variant(item)
-    if chosen == "github_og" and review_id:
-        from src.cards.github_og import fetch_github_og_image
-
-        owner_repo = _github_owner_repo(str(item.get("source_item", {}).get("link", "")))
-        if owner_repo:
-            out = CARDS_DIR / f"{review_id}.png"
-            fetched = fetch_github_og_image(owner_repo[0], owner_repo[1], out, logger=logger)
-            if fetched:
-                rel = f"generated/cards/{review_id}.png"
-                item["card_layout"] = "github_og"
-                item["card_variant"] = "github_og"
-                item["_github_og_owner_repo"] = list(owner_repo)
-                logger.info("Saved GitHub OG card: %s", rel)
-                return rel, "github_og"
-        logger.info("GitHub OG unavailable; falling back to editorial card: %s", review_id)
-
     rel = _generate_card_for_item(item, logger)
     return rel, str(item.get("card_variant") or "editorial_claim")
 
@@ -1547,15 +1518,8 @@ def _resolve_card_image_path(item: dict, logger) -> str | None:
 
 
 def _build_image_alt_text(item: dict) -> str:
-    """ALT text describing the actual card content (stat/claim/context), or the
-    GitHub repo preview for the github_og variant."""
-    from src.cards.card_data import build_card_alt_text, build_github_og_alt, from_review_item
-
-    if str(item.get("card_variant") or "") == "github_og":
-        owner_repo = item.get("_github_og_owner_repo")
-        if isinstance(owner_repo, (list, tuple)) and len(owner_repo) == 2:
-            summary = str(item.get("source_item", {}).get("summary", ""))
-            return build_github_og_alt(str(owner_repo[0]), str(owner_repo[1]), summary)
+    """ALT text describing the actual card content (layout, stat, claim, context)."""
+    from src.cards.card_data import build_card_alt_text, from_review_item
 
     try:
         return build_card_alt_text(from_review_item(item))

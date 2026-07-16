@@ -6,10 +6,14 @@ import re
 
 from dateutil import parser as date_parser
 
-# Card layout templates (Task 3). Selected deterministically by content type.
-LAYOUT_STAT = "stat"
-LAYOUT_CLAIM = "claim"
-LAYOUT_QUOTE = "quote"
+# Card layout templates. Selected deterministically by content type. All are
+# on-brand dark editorial designs (no external/GitHub OG images).
+LAYOUT_STAT = "stat"          # a hero number is the story (70B, 40%, 3x)
+LAYOUT_CLAIM = "claim"        # a sharp takeaway, no number
+LAYOUT_QUOTE = "quote"        # HN discussion / opinion pieces
+LAYOUT_REPO = "repo"          # GitHub project: owner/repo + stars
+LAYOUT_RELEASE = "release"    # a version release: version tag is the hero
+LAYOUT_SECURITY = "security"  # vulnerability / security alert
 
 # card_claim must ADD information, not restate the post title. Reject a claim
 # that shares more than this fraction of its tokens with the title.
@@ -17,6 +21,37 @@ _CLAIM_TITLE_OVERLAP_MAX = 0.60
 _CARD_CLAIM_MAX_WORDS = 8
 _CARD_CONTEXT_MAX_CHARS = 90
 _STAT_MAX_CHARS = 8
+
+_SECURITY_KEYWORDS = (
+    "vulnerability",
+    "vuln",
+    "cve",
+    "0day",
+    "0-day",
+    "zero-day",
+    "zero day",
+    "exploit",
+    "rce",
+    "remote code execution",
+    "malware",
+    "backdoor",
+    "data exfiltration",
+    "prompt injection",
+    "security flaw",
+    "security fix",
+    "security advisory",
+    "supply chain",
+)
+_RELEASE_KEYWORDS = ("release", "released", "releases", "ships", "launches", "update", "version")
+_VERSION_RE = re.compile(r"\bv?\d+\.\d+(?:\.\d+)?(?:-?rc\d+)?\b", re.IGNORECASE)
+# Word-boundary matchers so short tokens like "rce"/"cve" don't match inside
+# words ("pe-rce-ived", "open-sou-rce-s"). Built once at import.
+_SECURITY_RE = re.compile(
+    r"\b(?:" + "|".join(re.escape(k) for k in _SECURITY_KEYWORDS) + r")\b", re.IGNORECASE
+)
+_RELEASE_RE = re.compile(
+    r"\b(?:" + "|".join(re.escape(k) for k in _RELEASE_KEYWORDS) + r")\b", re.IGNORECASE
+)
 
 
 @dataclass(slots=True)
@@ -32,6 +67,10 @@ class CardData:
     stat_unit: str = ""
     card_claim: str = ""
     card_context: str = ""
+    # Populated for the repo / release layouts.
+    repo_owner: str = ""
+    repo_name: str = ""
+    version_tag: str = ""
     # Legacy fallbacks kept so older callers / tests still render something.
     card_headline: str = ""
     card_summary: str = ""
@@ -169,8 +208,68 @@ def _clean_post_text(post: str) -> str:
     return text
 
 
-def _select_layout(card_stat: str, source: str, link: str, summary: str) -> str:
-    """Deterministic layout selection by content type."""
+def extract_owner_repo(link: str) -> tuple[str, str] | None:
+    """Return (owner, repo) for a github.com link, else None."""
+    lowered = (link or "").lower()
+    if "github.com/" not in lowered:
+        return None
+    try:
+        path = link.split("github.com/", 1)[1]
+    except IndexError:
+        return None
+    parts = [p for p in path.split("/") if p]
+    if len(parts) < 2:
+        return None
+    owner, repo = parts[0], parts[1]
+    # Strip a trailing .git and ignore non-repo owner pages.
+    repo = re.sub(r"\.git$", "", repo)
+    if owner in {"orgs", "sponsors", "topics", "collections", "features"}:
+        return None
+    return owner, repo
+
+
+def extract_version(title: str, summary: str, link: str) -> str:
+    """Extract a version tag (e.g. v2.1.210) from the item, else ''."""
+    for text in (title, link, summary):
+        m = _VERSION_RE.search(text or "")
+        if m:
+            tag = m.group(0)
+            return tag if tag.lower().startswith("v") else f"v{tag}"
+    return ""
+
+
+def _is_security(title: str, summary: str, source: str) -> bool:
+    return _SECURITY_RE.search(f"{title} {summary} {source}") is not None
+
+
+def _is_release_like(title: str, summary: str, source: str, link: str) -> bool:
+    if "/releases/" in (link or "").lower():
+        return True
+    return _RELEASE_RE.search(f"{title} {source}") is not None
+
+
+def _select_layout(
+    card_stat: str,
+    source: str,
+    link: str,
+    summary: str,
+    title: str,
+    owner_repo: tuple[str, str] | None,
+    version_tag: str,
+) -> str:
+    """Deterministic layout selection by content type.
+
+    Priority: security > release > repo > stat > quote > claim. Security wins
+    outright (distinct alert treatment); GitHub items get the repo/release
+    treatment rather than a bare stat; non-GitHub items fall through to
+    stat/quote/claim.
+    """
+    if _is_security(title, summary, source):
+        return LAYOUT_SECURITY
+    if version_tag and _is_release_like(title, summary, source, link):
+        return LAYOUT_RELEASE
+    if owner_repo:
+        return LAYOUT_REPO
     if card_stat.strip():
         return LAYOUT_STAT
     s = f"{source} {link}".lower()
@@ -238,7 +337,11 @@ def from_review_item(item: dict) -> CardData:
         source_context = re.sub(r"(?i)^why it matters:\s*", "", source_context).strip()
         card_context = _first_fitting_fragment(source_context, _CARD_CONTEXT_MAX_CHARS)
 
-    layout = _select_layout(card_stat, source, link, src_summary)
+    owner_repo = extract_owner_repo(link)
+    version_tag = extract_version(title, src_summary, link)
+    layout = _select_layout(card_stat, source, link, src_summary, title, owner_repo, version_tag)
+
+    repo_owner, repo_name = owner_repo if owner_repo else ("", "")
 
     return CardData(
         review_id=str(item.get("id", "unknown")),
@@ -252,16 +355,23 @@ def from_review_item(item: dict) -> CardData:
         stat_unit=stat_unit,
         card_claim=card_claim,
         card_context=card_context,
+        repo_owner=repo_owner,
+        repo_name=repo_name,
+        version_tag=version_tag,
         card_headline=_shorten_words(post_title, 10),
         card_summary=card_context,
     )
 
 
 def build_card_alt_text(card: CardData) -> str:
-    """ALT text describing the card's actual content: stat, claim, context."""
+    """ALT text describing the card's actual content per layout."""
     parts: list[str] = [f"Boardwire {card.layout} card"]
     if card.source_label:
         parts.append(f"source {card.source_label}")
+    if card.layout == LAYOUT_REPO and card.repo_owner:
+        parts.append(f"repository {card.repo_owner}/{card.repo_name}")
+    if card.layout == LAYOUT_RELEASE and card.version_tag:
+        parts.append(f"release {card.version_tag}")
     if card.card_stat:
         stat = card.card_stat + (f" {card.stat_unit}" if card.stat_unit else "")
         parts.append(f"headline stat {stat}")
@@ -270,11 +380,3 @@ def build_card_alt_text(card: CardData) -> str:
     if card.card_context:
         parts.append(f"context: {card.card_context}")
     return ". ".join(parts)[:1000]
-
-
-def build_github_og_alt(owner: str, repo: str, description: str = "") -> str:
-    """ALT text for the GitHub-preview card variant."""
-    base = f"GitHub repository preview card for {owner}/{repo}"
-    if description.strip():
-        base += f": {description.strip()}"
-    return base[:1000]

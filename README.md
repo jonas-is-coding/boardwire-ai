@@ -30,21 +30,25 @@ The packaging LLM emits three card-specific fields, validated in Python
 
 ### Layout templates
 
-Selected deterministically by content type (`src/cards/html_template.py`):
+Every card is an on-brand **dark editorial** design — no external/GitHub OG
+images. The layout is chosen deterministically by content type
+(`src/cards/html_template.py`), priority **security > release > repo > stat >
+quote > claim**:
 
-- **stat** (default when `card_stat` is present): huge hero stat → claim → context.
-- **claim** (no stat): claim as display type, capped at 2–3 lines.
-- **quote** (HN discussion / opinion sources): oversized accent quotation mark → claim in editorial italic → attribution.
+| Layout | When | Hero element |
+|---|---|---|
+| **security** | vulnerability / CVE / 0day / RCE keywords | accent alert glyph + `SECURITY` + the stat (`RCE`, `CVE`) |
+| **release** | a version tag on a release-like item | the version pill (`v2.1.210`) + project name |
+| **repo** | a GitHub-sourced project | `owner/` + big repo name (accent) + `★ stars` |
+| **stat** | a hero number is the story (non-GitHub) | huge stat → claim → context |
+| **quote** | HN discussion / opinion source | oversized accent quotation mark + editorial italic |
+| **claim** | everything else | claim as display type, 2–3 lines |
 
-### Card A/B variant
-
-For GitHub-sourced items, a deterministic 50/50 split (by hash of item id)
-chooses between the editorial card and the repo's GitHub Open Graph preview
-(`opengraph.githubassets.com`, verified to return an image before use; falls
-back to the editorial card on any failure). The chosen `card_variant`
-(`editorial_stat` | `editorial_claim` | `editorial_quote` | `github_og`) is
-persisted in `data/published_posts.json` and reported under
-"Engagement by card variant" in `--engagement-report`.
+The specialized layouts (security/release/repo) are the on-brand replacement
+for what would otherwise be a plain stat or a white GitHub preview. The chosen
+`card_variant` (`editorial_<layout>`) is persisted in
+`data/published_posts.json` and reported under "Engagement by card variant" in
+`--engagement-report`.
 
 ### Setup (one-time)
 
