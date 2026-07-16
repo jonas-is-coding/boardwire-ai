@@ -267,6 +267,149 @@ def check_metadata_leak(post: str) -> str | None:
     return None
 
 
+# Raw aggregator engagement counts must not leak into copy. A live post read
+# "...with 104 points and 35 comm" (HN metadata, hard-truncated mid-word).
+# Intentional GitHub star counts like "+607 stars" ARE allowed — only the
+# "with N points / M comments / K upvotes" HN phrasing is blocked.
+_ENGAGEMENT_LEAK_RE = re.compile(
+    r"\bwith\s+\+?\d[\d,]*\s+(?:points?|comments?|upvotes?)\b"
+    r"|\band\s+\+?\d[\d,]*\s+(?:points?|comments?|upvotes?|comm)\b"
+    r"|\b\+?\d[\d,]*\s+(?:points?|upvotes?)\s+on\s+(?:hacker\s*news|hn)\b",
+    re.IGNORECASE,
+)
+# A trailing truncated "...comm" / "...upvot" fragment (word cut mid-way).
+_ENGAGEMENT_TRUNC_RE = re.compile(
+    r"\band\s+\+?\d[\d,]*\s+(?:comm|comme|commen|upvot|upvote|point)\b(?![a-z])",
+    re.IGNORECASE,
+)
+_MIDWORD_BAN_RE = re.compile(r"\bturns\s+(\w+)\s+into\s+(\w+)", re.IGNORECASE)
+# A concrete, source-traceable token: a number, a version, a license name, or
+# a capitalized artifact/repo name.
+_LICENSE_TOKENS = ("apache", "mit", "bsd", "gpl", "mpl", "agpl", "cc-by", "cc0")
+
+
+def check_engagement_metadata_leak(post: str) -> str | None:
+    """Reject raw aggregator engagement dumps (HN points/comments) in copy.
+
+    Allows intentional star counts ("+607 stars") — only the HN
+    "with N points and M comments" phrasing and its truncated fragments fail.
+    """
+    text = post or ""
+    match = _ENGAGEMENT_LEAK_RE.search(text)
+    if match:
+        return f"Aggregator engagement metadata leaked into post: '{match.group(0).strip()}'"
+    trunc = _ENGAGEMENT_TRUNC_RE.search(text)
+    if trunc:
+        return f"Truncated engagement-metadata fragment in post: '{trunc.group(0).strip()}'"
+    return None
+
+
+def check_midword_truncation(post: str, has_link: bool = True) -> str | None:
+    """The composed text must end cleanly.
+
+    A well-formed post ends with sentence punctuation, a question mark, a
+    complete hashtag, or (when a link is appended by the publisher) the link.
+    Any final line ending in an incomplete word fails. Evidence: live posts
+    ended "35 comm", "Anthrop", "No patch".
+    """
+    text = (post or "").rstrip()
+    if not text:
+        return "Composed post is empty"
+    if has_link:
+        # The publisher appends the link; the body legitimately ends with the
+        # hashtag line, so validate the last non-empty body line.
+        pass
+    last_line = text.splitlines()[-1].strip()
+    if not last_line:
+        return "Composed post ends with a blank line"
+    # A hashtag line is a valid clean ending.
+    if re.fullmatch(r"(?:#\w[\w-]*\s*)+", last_line):
+        return None
+    # A URL ending is valid.
+    if re.search(r"https?://\S+$", last_line):
+        return None
+    # Otherwise the last line must end with sentence/question punctuation.
+    if last_line[-1] in ".!?":
+        return None
+    # An ellipsis on a complete word is acceptable (deliberate shortening).
+    if last_line.endswith("…") or last_line.endswith("..."):
+        return None
+    last_word = re.split(r"[\s]", last_line)[-1]
+    return f"Composed post ends mid-word / unpunctuated: '...{last_word}'"
+
+
+def _source_tokens(source_title: str, source_summary: str) -> set[str]:
+    joined = f"{source_title} {source_summary}".lower()
+    return set(re.findall(r"[a-z0-9][a-z0-9.+-]{1,}", joined))
+
+
+def check_ungrounded_fact(
+    fact_line: str,
+    source_title: str,
+    source_summary: str,
+) -> str | None:
+    """The fact line must be verifiable against the source.
+
+    It must carry at least one concrete token traceable to the source (a
+    number, version, license, or the artifact/repo name), and must not use the
+    invented "turns X into Y" template unless both nouns literally appear in
+    the source. Evidence: a live post claimed "Openinterpreter turns recall
+    into executable code" — semantically false, no source support.
+    """
+    fact = " ".join((fact_line or "").split())
+    if not fact:
+        return None  # no fact line is handled elsewhere; nothing to ground
+    fact_lower = fact.lower()
+    source_tokens = _source_tokens(source_title, source_summary)
+    source_lower = f"{source_title} {source_summary}".lower()
+
+    # Ban the "turns X into Y" abstraction unless both nouns are in the source.
+    m = _MIDWORD_BAN_RE.search(fact)
+    if m:
+        noun_a, noun_b = m.group(1).lower(), m.group(2).lower()
+        if noun_a not in source_lower or noun_b not in source_lower:
+            return (
+                "Ungrounded 'turns X into Y' template not supported by source: "
+                f"'{m.group(0)}'"
+            )
+
+    # Groundedness: a number, version, license, or a source-traceable token.
+    if re.search(r"\d", fact):
+        return None
+    if any(lic in fact_lower for lic in _LICENSE_TOKENS):
+        return None
+    fact_tokens = set(re.findall(r"[a-z0-9][a-z0-9.+-]{2,}", fact_lower))
+    # Tokens that appear in the source AND are content-bearing (len>=4) count.
+    grounded = {t for t in fact_tokens & source_tokens if len(t) >= 4}
+    if grounded:
+        return None
+    return "Fact line has no concrete source-traceable token (number, version, license, or artifact name)"
+
+
+def validate_composed_post(
+    post_text: str,
+    fact_line: str,
+    source_title: str,
+    source_summary: str,
+    has_link: bool = True,
+) -> list[str]:
+    """Run all composed-text validators; return the list of failure reasons.
+
+    Used by the publish loop with reject → regenerate once → skip semantics.
+    """
+    reasons: list[str] = []
+    for check in (
+        lambda: check_metadata_leak(post_text),
+        lambda: check_engagement_metadata_leak(post_text),
+        lambda: check_midword_truncation(post_text, has_link=has_link),
+        lambda: check_ungrounded_fact(fact_line, source_title, source_summary),
+    ):
+        reason = check()
+        if reason:
+            reasons.append(reason)
+    return reasons
+
+
 def _parse_release_dt(value: str | None) -> datetime | None:
     if not value:
         return None
@@ -354,6 +497,10 @@ def check_quality(
     leak_reason = check_metadata_leak(post)
     if leak_reason:
         reasons.append(leak_reason)
+
+    engagement_leak_reason = check_engagement_metadata_leak(post)
+    if engagement_leak_reason:
+        reasons.append(engagement_leak_reason)
 
     if item_title is not None:
         version_reason = check_version_only_release(

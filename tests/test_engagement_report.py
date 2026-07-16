@@ -78,14 +78,49 @@ def test_generate_writes_markdown(tmp_path) -> None:
     assert "## Patterns" in text
 
 
-def _post_with_meta(post_id: str, hour: int, weekday: str, variant: str, tags: list[str], title: str = "") -> dict:
+def _post_with_meta(
+    post_id: str,
+    hour: int,
+    weekday: str,
+    variant: str,
+    tags: list[str],
+    title: str = "",
+    card_variant: str = "",
+) -> dict:
     post = _post(post_id, f"text for {post_id} about a model release", "https://example.com/" + post_id)
     post["source_title"] = title or f"title-{post_id}"
     post["published_hour_utc"] = hour
     post["published_weekday"] = weekday
     post["format_variant"] = variant
     post["hashtags_used"] = tags
+    if card_variant:
+        post["card_variant"] = card_variant
     return post
+
+
+def test_card_variant_section_present(tmp_path) -> None:
+    import json
+
+    published = [
+        _post_with_meta(f"e{i}", hour=13, weekday="Tuesday", variant="plain", tags=["#AI"], card_variant="editorial_stat")
+        for i in range(5)
+    ]
+    published.append(
+        _post_with_meta("og1", hour=13, weekday="Tuesday", variant="plain", tags=["#AI"], card_variant="github_og")
+    )
+    store = {p["id"]: _record(p["id"], 12) for p in published}
+
+    published_path = tmp_path / "published.json"
+    engagement_path = tmp_path / "engagement.json"
+    report_path = tmp_path / "report.md"
+    published_path.write_text(json.dumps(published))
+    engagement_path.write_text(json.dumps(store))
+
+    generate_engagement_report(published_path, engagement_path, report_path)
+    text = report_path.read_text()
+    assert "## Engagement by card variant" in text
+    assert "editorial_stat: avg **12.0** (n=5)" in text
+    assert "github_og: insufficient data (n<5" in text
 
 
 def test_strategy_sections_present_with_small_n_guard(tmp_path) -> None:
