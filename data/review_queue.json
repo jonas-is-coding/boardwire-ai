@@ -7781,5 +7781,48 @@
     ],
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-16-claude-code-v2-1-211-7680b9f9f7c7.md",
     "published_at": "2026-07-16T06:12:13.566412Z"
+  },
+  {
+    "id": "e82d668aae1e",
+    "status": "approved",
+    "created_at": "2026-07-16T06:33:44.954871Z",
+    "score": 90,
+    "reason": "Open weights for a 975B LLM are released, providing a new foundation model for builders to deploy or fine-tune.",
+    "proposed_post": "Inkling, a 975B parameter LLM, has released open weights. This provides a new large-scale foundation for fine-tuning or deployment for builders seeking alternatives to closed models.",
+    "source_angle": "Open-weights 975B LLM release",
+    "source_item": {
+      "title": "Inkling – Open-Weights 975B Parameter LLM",
+      "source": "HackerNews",
+      "link": "https://thinkingmachines.ai/inkling/",
+      "source_tier": 3,
+      "engagement_score": 123.0,
+      "local_newsworthiness_score": 30,
+      "summary": "121 points, 4 comments on Hacker News — submitted by htrp — original: https://thinkingmachines.ai/inkling/\n[Cluster context: 1 sources, engagement 123, common terms: points, 975b, comments, hacker, htrp.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 123,
+        "common_terms": [
+          "points",
+          "975b",
+          "comments",
+          "hacker",
+          "htrp",
+          "121",
+          "submitted",
+          "open-weights"
+        ],
+        "cluster_summary": "1 sources, engagement 123. Common terms: points, 975b, comments, hacker. Lead: Inkling – Open-Weights 975B Parameter LLM",
+        "alternative_titles": [],
+        "cluster_score": 30
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, das Inkling-Modell hat mein Interesse geweckt. Ein Open-Weights 975B LLM ist eine Ansage.\n\nEntwickler können hier direkt loslegen und ein wirklich großes Modell für Custom-Anwendungen nutzen, ohne die üblichen Hürden proprietärer APIs. Das ist ein Game Changer für alle, die tiefer in die Architektur eintauchen oder spezifische Fine-Tunings vornehmen wollen.",
+    "chloe_note": "*Inkling – Open-Weights 975B Parameter LLM* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Open weights for a 975B LLM are released, providing a new foundation model for builders to deploy or fine-tune.Cluster context: 1 sources, engagement 123. Common terms: points, 975b, comments, hacker. Bewertung: 90. Quelle: https://thinkingmachines.ai/inkling/"
   }
 ]

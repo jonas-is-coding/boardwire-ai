@@ -17414,5 +17414,47 @@
     "engagement_score": 82.0,
     "local_newsworthiness_score": 0,
     "created_at": "2026-07-16T06:31:23.307494Z"
+  },
+  {
+    "title": "Inkling – Open-Weights 975B Parameter LLM",
+    "link": "https://thinkingmachines.ai/inkling/",
+    "source": "HackerNews",
+    "score": 90,
+    "should_post": true,
+    "reason": "Open weights for a 975B LLM are released, providing a new foundation model for builders to deploy or fine-tune.",
+    "post_text": "Inkling, a 975B parameter LLM, has released open weights. This provides a new large-scale foundation for fine-tuning or deployment for builders seeking alternatives to closed models.",
+    "source_angle": "Open-weights 975B LLM release",
+    "source_tier": 3,
+    "engagement_score": 123.0,
+    "local_newsworthiness_score": 30,
+    "created_at": "2026-07-16T06:33:44.954871Z"
+  },
+  {
+    "title": "When A.I. is a member of the family",
+    "link": "https://www.newyorker.com/magazine/2026/07/20/when-ai-is-a-member-of-the-family",
+    "source": "HackerNews",
+    "score": 3,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 127.0,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-07-16T06:33:46.029850Z"
+  },
+  {
+    "title": "Why I Left Google DeepMind",
+    "link": "https://turntrout.com/why-i-left-google-deepmind",
+    "source": "HackerNews",
+    "score": 2,
+    "should_post": false,
+    "reason": "fallback generation unavailable",
+    "post_text": "",
+    "source_angle": "Rule-based fallback",
+    "source_tier": 3,
+    "engagement_score": 389.0,
+    "local_newsworthiness_score": 10,
+    "created_at": "2026-07-16T06:33:46.030106Z"
   }
 ]
