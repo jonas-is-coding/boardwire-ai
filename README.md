@@ -431,7 +431,7 @@ For real Bluesky publishing:
   python -m src.main --delete-published --publisher bluesky --delete-older-than-hours 1 --confirm-real-delete
   ```
 
-  Add `--delete-limit N` to cap the number of stored post records deleted in one run. Thread replies are deleted in reverse order, and real deletion requires `BOARDWIRE_REAL_PUBLISH_ENABLED=true`, `BLUESKY_HANDLE`, and `BLUESKY_APP_PASSWORD`.
+  Add `--delete-limit N` to cap the number of stored post records deleted in one run. Thread replies are deleted in reverse order, and real deletion requires `BOARDWIRE_REAL_PUBLISH_ENABLED=true`, `BLUESKY_HANDLE`, and `BLUESKY_APP_PASSWORD`. The same cleanup is also available as the manual GitHub Actions workflow **Boardwire Delete Bluesky Posts**.
 
 ## Engagement report
 
