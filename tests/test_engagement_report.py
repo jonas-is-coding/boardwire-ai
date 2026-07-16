@@ -106,7 +106,7 @@ def test_card_variant_section_present(tmp_path) -> None:
         for i in range(5)
     ]
     published.append(
-        _post_with_meta("og1", hour=13, weekday="Tuesday", variant="plain", tags=["#AI"], card_variant="github_og")
+        _post_with_meta("repo1", hour=13, weekday="Tuesday", variant="plain", tags=["#AI"], card_variant="editorial_repo")
     )
     store = {p["id"]: _record(p["id"], 12) for p in published}
 
@@ -120,7 +120,7 @@ def test_card_variant_section_present(tmp_path) -> None:
     text = report_path.read_text()
     assert "## Engagement by card variant" in text
     assert "editorial_stat: avg **12.0** (n=5)" in text
-    assert "github_og: insufficient data (n<5" in text
+    assert "editorial_repo: insufficient data (n<5" in text
 
 
 def test_strategy_sections_present_with_small_n_guard(tmp_path) -> None:

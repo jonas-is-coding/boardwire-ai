@@ -2,7 +2,15 @@ from __future__ import annotations
 
 from html import escape
 
-from src.cards.card_data import CardData, LAYOUT_CLAIM, LAYOUT_QUOTE, LAYOUT_STAT
+from src.cards.card_data import (
+    CardData,
+    LAYOUT_CLAIM,
+    LAYOUT_QUOTE,
+    LAYOUT_RELEASE,
+    LAYOUT_REPO,
+    LAYOUT_SECURITY,
+    LAYOUT_STAT,
+)
 
 
 DEFAULT_ACCENT = "#FFD21E"
@@ -311,6 +319,228 @@ def _render_quote_body(card: CardData) -> str:
     """
 
 
+def _repo_layout_css() -> str:
+    return """
+    .repo-owner-line {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 44px;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      color: var(--subtle);
+    }
+    .repo-name-line {
+      margin-top: 4px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-weight: 700;
+      line-height: 0.98;
+      letter-spacing: -0.02em;
+      color: var(--accent);
+      word-break: break-word;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .repo-stars {
+      margin-top: 28px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 34px;
+      letter-spacing: 0.02em;
+      color: var(--fg);
+    }
+    .repo-stars .star { color: var(--accent); }
+    .claim {
+      margin-top: 40px;
+      font-weight: 600;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      color: var(--fg);
+      max-width: 92%;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .context {
+      margin-top: 30px;
+      font-size: 33px;
+      line-height: 1.35;
+      color: var(--subtle);
+      max-width: 90%;
+    }
+    """
+
+
+def _release_layout_css() -> str:
+    return """
+    .release-label {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 26px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--subtle);
+      margin-bottom: 20px;
+    }
+    .release-version {
+      display: inline-block;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-weight: 700;
+      line-height: 1.0;
+      letter-spacing: -0.02em;
+      color: var(--accent);
+      border: 4px solid var(--accent);
+      border-radius: 20px;
+      padding: 14px 34px;
+    }
+    .release-project {
+      margin-top: 30px;
+      font-size: 40px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--fg);
+    }
+    .claim {
+      margin-top: 34px;
+      font-size: 52px;
+      font-weight: 600;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      color: var(--fg);
+      max-width: 92%;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .context {
+      margin-top: 28px;
+      font-size: 32px;
+      line-height: 1.35;
+      color: var(--subtle);
+      max-width: 90%;
+    }
+    """
+
+
+def _security_layout_css() -> str:
+    return """
+    .alert-bar {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    .alert-glyph {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 88px;
+      height: 88px;
+      border-radius: 20px;
+      background: var(--accent);
+      color: #0a0a0a;
+      font-size: 60px;
+      font-weight: 800;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .alert-label {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 30px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .sec-stat {
+      font-weight: 700;
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      color: var(--fg);
+    }
+    .claim {
+      margin-top: 40px;
+      font-size: 56px;
+      font-weight: 600;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      color: var(--fg);
+      max-width: 94%;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .context {
+      margin-top: 30px;
+      font-size: 33px;
+      line-height: 1.35;
+      color: var(--subtle);
+      max-width: 90%;
+    }
+    """
+
+
+def _render_repo_body(card: CardData) -> str:
+    owner = escape(card.repo_owner)
+    name = escape(card.repo_name)
+    claim = escape(card.card_claim)
+    context = escape(card.card_context)
+    # Stacked GitHub-style: "owner/" small on its own line, repo name big below.
+    name_len = len(card.repo_name)
+    name_px = 128 if name_len <= 11 else (100 if name_len <= 16 else (76 if name_len <= 22 else 56))
+    stars_html = ""
+    if card.card_stat:
+        stat = escape(card.card_stat) + (f" {escape(card.stat_unit)}" if card.stat_unit else "")
+        stars_html = f'<div class="repo-stars"><span class="star">★</span> {stat}</div>'
+    return f"""
+    <div class="body">
+      <div class="repo-owner-line">{owner}/</div>
+      <div class="repo-name-line" style="font-size:{name_px}px">{name}</div>
+      {stars_html}
+      <div class="claim">{claim}</div>
+      <div class="context">{context}</div>
+    </div>
+    """
+
+
+def _render_release_body(card: CardData) -> str:
+    version = escape(card.version_tag)
+    project = escape(card.repo_name or card.source_label)
+    claim = escape(card.card_claim)
+    context = escape(card.card_context)
+    version_px = 120 if len(card.version_tag) <= 10 else 92
+    return f"""
+    <div class="body">
+      <div class="release-label">Release</div>
+      <div class="release-version" style="font-size:{version_px}px">{version}</div>
+      <div class="release-project">{project}</div>
+      <div class="claim">{claim}</div>
+      <div class="context">{context}</div>
+    </div>
+    """
+
+
+def _render_security_body(card: CardData) -> str:
+    claim = escape(card.card_claim)
+    context = escape(card.card_context)
+    stat_html = ""
+    if card.card_stat:
+        stat = escape(card.card_stat) + (f" {escape(card.stat_unit)}" if card.stat_unit else "")
+        stat_px = _stat_font_size(card.card_stat)
+        stat_html = f'<div class="sec-stat" style="font-size:{stat_px}px">{stat}</div>'
+    return f"""
+    <div class="body">
+      <div class="alert-bar">
+        <span class="alert-glyph">!</span>
+        <span class="alert-label">Security</span>
+      </div>
+      {stat_html}
+      <div class="claim">{claim}</div>
+      <div class="context">{context}</div>
+    </div>
+    """
+
+
 def render_card_html(card: CardData) -> str:
     layout = getattr(card, "layout", None) or LAYOUT_CLAIM
     source = getattr(card, "source_label", None) or getattr(card, "source", None) or ""
@@ -322,16 +552,19 @@ def render_card_html(card: CardData) -> str:
     is_light = visual_theme.lower() == "light"
     tokens = _theme_tokens(is_light)
 
-    if layout == LAYOUT_STAT:
-        layout_css = _stat_layout_css()
-        body_html = _render_stat_body(card)
-    elif layout == LAYOUT_QUOTE:
-        layout_css = _quote_layout_css()
-        body_html = _render_quote_body(card)
-    else:
+    renderers = {
+        LAYOUT_STAT: (_stat_layout_css, _render_stat_body),
+        LAYOUT_QUOTE: (_quote_layout_css, _render_quote_body),
+        LAYOUT_REPO: (_repo_layout_css, _render_repo_body),
+        LAYOUT_RELEASE: (_release_layout_css, _render_release_body),
+        LAYOUT_SECURITY: (_security_layout_css, _render_security_body),
+        LAYOUT_CLAIM: (_claim_layout_css, _render_claim_body),
+    }
+    if layout not in renderers:
         layout = LAYOUT_CLAIM
-        layout_css = _claim_layout_css()
-        body_html = _render_claim_body(card)
+    css_fn, body_fn = renderers[layout]
+    layout_css = css_fn()
+    body_html = body_fn(card)
 
     source_html = escape(source)
     wordmark_html = escape(wordmark)
