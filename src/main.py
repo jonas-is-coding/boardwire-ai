@@ -975,6 +975,28 @@ def _build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--reject-review", type=str, default=None, help="Reject one review queue item by ID.")
     parser.add_argument("--publish-approved", action="store_true", help="Publish approved review items in dry-run mode.")
     parser.add_argument("--list-published", action="store_true", help="List published dry-run posts.")
+    parser.add_argument(
+        "--delete-published",
+        action="store_true",
+        help="Delete published Bluesky posts from data/published_posts.json matching the age/limit filters.",
+    )
+    parser.add_argument(
+        "--delete-older-than-hours",
+        type=float,
+        default=None,
+        help="Only delete posts older than this many hours (for example: 1).",
+    )
+    parser.add_argument(
+        "--delete-limit",
+        type=int,
+        default=None,
+        help="Maximum number of published post records to delete; omit to delete all matches.",
+    )
+    parser.add_argument(
+        "--confirm-real-delete",
+        action="store_true",
+        help="Required confirmation flag for deleting posts from Bluesky.",
+    )
     parser.add_argument("--collect-engagement", action="store_true", help="Fetch Bluesky engagement for published posts and append snapshots to data/engagement.json.")
     parser.add_argument("--train-virality-model", action="store_true", help="Train the local virality model from collected engagement data (no-op until enough mature samples exist).")
     parser.add_argument("--engagement-report", action="store_true", help="Rank published posts by collected engagement and write reports/engagement_report.md.")
@@ -2180,6 +2202,122 @@ def _list_published(logger) -> int:
     return 0
 
 
+def _published_post_age_hours(item: dict, now: datetime) -> float | None:
+    published_at = item.get("published_at")
+    if not published_at:
+        return None
+    try:
+        published = date_parser.parse(str(published_at))
+    except (ValueError, TypeError):
+        return None
+    if published.tzinfo is None:
+        published = published.replace(tzinfo=timezone.utc)
+    delta = now - published.astimezone(timezone.utc)
+    return delta.total_seconds() / 3600.0
+
+
+def _uris_for_published_item(item: dict) -> list[str]:
+    uris: list[str] = []
+    thread_uris = item.get("thread_uris")
+    if isinstance(thread_uris, list):
+        uris.extend(str(uri) for uri in thread_uris if str(uri).strip())
+    external_id = str(item.get("external_id") or "").strip()
+    if external_id and external_id not in uris:
+        uris.append(external_id)
+    return uris
+
+
+def _select_published_for_delete(
+    published: list[dict],
+    *,
+    older_than_hours: float,
+    limit: int | None,
+    now: datetime,
+) -> list[dict]:
+    eligible = []
+    for item in published:
+        age_hours = _published_post_age_hours(item, now)
+        if (
+            item.get("platform") == "bluesky"
+            and not item.get("deleted_at")
+            and age_hours is not None
+            and age_hours > older_than_hours
+            and _uris_for_published_item(item)
+        ):
+            eligible.append(item)
+    eligible.sort(key=lambda item: _parse_dt(str(item.get("published_at") or "")))
+    if limit is not None:
+        return eligible[:limit]
+    return eligible
+
+
+def _delete_published(args, logger) -> int:
+    if args.delete_older_than_hours is None or args.delete_older_than_hours < 0:
+        logger.error("--delete-published requires --delete-older-than-hours >= 0")
+        return 1
+    if args.delete_limit is not None and args.delete_limit < 1:
+        logger.error("--delete-limit must be at least 1 when provided")
+        return 1
+    if args.publisher and args.publisher != "bluesky":
+        logger.error("--delete-published currently supports only --publisher bluesky")
+        return 1
+    if os.getenv("BOARDWIRE_REAL_PUBLISH_ENABLED", "false").strip().lower() != "true":
+        logger.error("Refusing Bluesky delete: BOARDWIRE_REAL_PUBLISH_ENABLED must be true")
+        return 1
+    if not args.confirm_real_delete:
+        logger.error("Refusing Bluesky delete: missing --confirm-real-delete")
+        return 1
+
+    handle = os.getenv("BLUESKY_HANDLE", "").strip()
+    app_password = os.getenv("BLUESKY_APP_PASSWORD", "").strip()
+    if not handle or not app_password:
+        logger.error("Refusing Bluesky delete: BLUESKY_HANDLE and BLUESKY_APP_PASSWORD are required")
+        return 1
+
+    published = JsonStore.load(PUBLISHED_POSTS_PATH, default=[])
+    if not isinstance(published, list):
+        logger.error("published_posts.json malformed; refusing delete")
+        return 1
+
+    selected = _select_published_for_delete(
+        published,
+        older_than_hours=float(args.delete_older_than_hours),
+        limit=args.delete_limit,
+        now=datetime.now(timezone.utc),
+    )
+    if not selected:
+        logger.info("No Bluesky published posts matched the delete filters")
+        return 0
+
+    publisher = BlueskyPublisher(handle=handle, app_password=app_password)
+    deleted_records = 0
+    deleted_uris = 0
+    deleted_at = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+    for item in selected:
+        uris = _uris_for_published_item(item)
+        ok = True
+        for uri in reversed(uris):
+            result = publisher.delete_post(uri)
+            if not result.success:
+                ok = False
+                logger.error(
+                    "Delete failed for %s (%s): %s",
+                    item.get("id"),
+                    uri,
+                    result.error or "unknown error",
+                )
+                break
+            deleted_uris += 1
+        if ok:
+            item["deleted_at"] = deleted_at
+            item["delete_reason"] = f"manual cleanup: older than {args.delete_older_than_hours:g} hours"
+            deleted_records += 1
+            logger.info("Deleted published post record %s (%d uri(s))", item.get("id"), len(uris))
+
+    JsonStore.save(PUBLISHED_POSTS_PATH, published)
+    logger.info("Delete complete: records=%d uris=%d", deleted_records, deleted_uris)
+    return 0 if deleted_records == len(selected) else 1
+
 def _collect_engagement(logger) -> int:
     from src.feedback.collect import collect_engagement
 
@@ -2407,6 +2545,8 @@ def run(argv: list[str] | None = None) -> int:
         return _publish_approved(args, logger)
     if args.list_published:
         return _list_published(logger)
+    if args.delete_published:
+        return _delete_published(args, logger)
     if args.collect_engagement:
         return _collect_engagement(logger)
     if args.train_virality_model:

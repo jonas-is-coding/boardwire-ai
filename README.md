@@ -425,6 +425,13 @@ For real Bluesky publishing:
 - `dry_run` stays the safe default publisher; real publishing always requires
   `BOARDWIRE_REAL_PUBLISH_ENABLED=true` **and** `--confirm-real-publish`.
 - Supported publishers: `dry_run`, `bluesky`.
+- To remove published Bluesky posts from the live account and mark them as deleted in `data/published_posts.json`, run for example:
+
+  ```bash
+  python -m src.main --delete-published --publisher bluesky --delete-older-than-hours 1 --confirm-real-delete
+  ```
+
+  Add `--delete-limit N` to cap the number of stored post records deleted in one run. Thread replies are deleted in reverse order, and real deletion requires `BOARDWIRE_REAL_PUBLISH_ENABLED=true`, `BLUESKY_HANDLE`, and `BLUESKY_APP_PASSWORD`.
 
 ## Engagement report
 
