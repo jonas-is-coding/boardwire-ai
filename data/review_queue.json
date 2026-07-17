@@ -7845,12 +7845,12 @@
   },
   {
     "id": "262867de3097",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-07-16T17:04:23.262409Z",
-    "score": 85,
-    "reason": "New NVIDIA embedding model ranks #1 on RTEB. Likely available on HF, offering direct performance gains for RAG/agents.",
-    "proposed_post": "NVIDIA Nemotron 3 Embed ranks #1 on RTEB. This new embedding model offers improved performance for agentic retrieval, directly impacting RAG accuracy and agent system efficiency for builders.",
-    "source_angle": "NVIDIA's new embedding model leads RTEB, enhancing agentic retrieval.",
+    "status": "approved",
+    "created_at": "2026-07-17T13:24:41.144808Z",
+    "score": 90,
+    "reason": "New embedding model with top benchmark performance is available on Hugging Face for immediate builder integration.",
+    "proposed_post": "NVIDIA Nemotron 3 Embed model ranks #1 on RTEB, now available on Hugging Face. Builders can integrate this new embedding model to improve RAG and agentic retrieval system performance today.",
+    "source_angle": "NVIDIA's new top-ranked embedding model for RAG/agents",
     "source_item": {
       "title": "NVIDIA Nemotron 3 Embed Ranks #1 Overall on RTEB, Advancing Agentic Retrieval",
       "source": "Hugging Face Blog",
@@ -7882,9 +7882,50 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-07-16T17:04:24.244383Z",
-    "defer_count": 1,
-    "original_score": 85,
-    "original_reason": "New NVIDIA embedding model ranks #1 on RTEB. Likely available on HF, offering direct performance gains for RAG/agents."
+    "breaking": false,
+    "reactivated_at": "2026-07-17T13:24:41.144808Z"
+  },
+  {
+    "id": "0d22824c6184",
+    "status": "approved",
+    "created_at": "2026-07-17T13:24:41.003242Z",
+    "score": 65,
+    "reason": "local newsworthiness fallback",
+    "proposed_post": "Anthropic SDK adds dreaming support.\n\nMCP Tunnels and dreaming API now available in v0.117.0.\n\n#OpenSource #ClaudeCode #Anthropic",
+    "source_angle": "Local high-score + Sarah/OpenRouter fallback",
+    "source_item": {
+      "title": "Anthropic Python SDK v0.117.0",
+      "source": "Anthropic Python SDK Releases",
+      "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.117.0",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 65,
+      "summary": "<h2>0.117.0 (2026-07-16)</h2>\n<p>Full Changelog: <a href=\"https://github.com/anthropics/anthropic-sdk-python/compare/v0.116.0...v0.117.0\">v0.116.0...v0.117.0</a></p>\n<h3>Features</h3>\n<ul>\n<li><strong>api:</strong> add support for dreaming (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/642eee707b0fe3c35c21917f60b06846b2a3b291\">642eee7</a>)</li>\n<li><strong>api:</strong> add support for MCP Tunnels (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/d716df6edb1df7de25f1b5e14dcab33b9aafc2ff\">d716df6</a>)</li>\n</ul>\n<h3>Bug Fixes</h3>\n<ul>\n<li><strong>credentials:</strong> keep credential material out of traceback frame locals via SecretStr (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/aa93a4dbf383f7fdab1404c136e86d4679d644c1\">aa93a4d</a>)</li>\n</ul>\n<h3>Chores</h3>\n<ul>\n<li><strong>docs:</strong> small updates to field descriptions (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/75d8dcc0ac8cb381fa327a61a9ac84022b3a1677\">75d8dcc</a>)</li>\n<li><strong>docs:</strong> update model example (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/a57e30ac1bafb54387bf631be2081bfdb3782911\">a57e30a</a>)</li>\n<li><strong>docs:</strong> updates to descriptions and examples (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/e1535b6919441448dddf00e2636cb8c60a721a43\">e1535b6</a>)</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: 2026-07-16, fixes, secretstr, via, material.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Anthropic Python SDK Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "2026-07-16",
+          "fixes",
+          "secretstr",
+          "via",
+          "material",
+          "sdk",
+          "tunnels",
+          "traceback"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: 2026-07-16, fixes, secretstr, via. Lead: Anthropic Python SDK v0.117.0",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "breaking": false,
+    "claire_note": "Aus *Anthropic Python SDK Releases* ist ein starker Kandidat reingekommen: *Anthropic Python SDK v0.117.0*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 65_",
+    "chloe_note": "*Anthropic Python SDK v0.117.0* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: 2026-07-16, fixes, secretstr, via. Bewertung: 65. Quelle: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.117.0"
   }
 ]
