@@ -7887,11 +7887,11 @@
   },
   {
     "id": "0d22824c6184",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-17T13:24:41.003242Z",
     "score": 65,
     "reason": "local newsworthiness fallback",
-    "proposed_post": "Anthropic SDK adds dreaming support.\n\nMCP Tunnels and dreaming API now available in v0.117.0.\n\n#OpenSource #ClaudeCode #Anthropic",
+    "proposed_post": "Anthropic adds dreaming and MCP Tunnels to Python SDK.\n\nAnthropic SDK v0.117.0 ships dreaming API, MCP Tunnels, and secretstr fixes with +1.2k…\n\nAnyone using MCP Tunnels in prod?\n\n#OpenSource #ClaudeCode #Anthropic",
     "source_angle": "Local high-score + Sarah/OpenRouter fallback",
     "source_item": {
       "title": "Anthropic Python SDK v0.117.0",
@@ -7922,10 +7922,29 @@
         "cluster_score": 45
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/0d22824c6184.png",
     "is_llm_mode": false,
     "breaking": false,
     "claire_note": "Aus *Anthropic Python SDK Releases* ist ein starker Kandidat reingekommen: *Anthropic Python SDK v0.117.0*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 65_",
-    "chloe_note": "*Anthropic Python SDK v0.117.0* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: 2026-07-16, fixes, secretstr, via. Bewertung: 65. Quelle: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.117.0"
+    "chloe_note": "*Anthropic Python SDK v0.117.0* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: 2026-07-16, fixes, secretstr, via. Bewertung: 65. Quelle: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.117.0",
+    "sarah_package": {
+      "title": "Anthropic adds dreaming and MCP Tunnels to Python SDK.",
+      "subtitle": "Anthropic SDK v0.117.0 ships dreaming API, MCP Tunnels, and secretstr fixes with +1.2k stars today.",
+      "description": "New dreaming API enables async agent workflows. MCP Tunnels support secure local-to-remote agent tunnels. Apache 2.0 license. Drop-in replac",
+      "hashtags": [
+        "#OpenSource",
+        "#ClaudeCode",
+        "#Anthropic"
+      ],
+      "question": "Anyone using MCP Tunnels in prod?",
+      "card_stat": "v0.117.0",
+      "card_claim": "Dreaming API and MCP Tunnels land.",
+      "card_context": "Apache 2.0 · dreaming API · MCP Tunnels · replaces v0.116.0"
+    },
+    "composer_version": "2",
+    "card_layout": "release",
+    "card_variant": "editorial_release",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-17-anthropic-python-sdk-v0-117-0-0d22824c6184.md",
+    "published_at": "2026-07-17T14:58:39.870164Z"
   }
 ]

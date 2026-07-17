@@ -2358,5 +2358,29 @@
     "published_weekday": "Thursday",
     "composer_version": "2",
     "card_variant": "editorial_stat"
+  },
+  {
+    "id": "0d22824c6184",
+    "published_at": "2026-07-17T14:58:39.870164Z",
+    "platform": "bluesky",
+    "post": "Anthropic adds dreaming and MCP Tunnels to Python SDK.\n\nAnthropic SDK v0.117.0 ships dreaming API, MCP Tunnels, and secretstr fixes with +1.2k…\n\nAnyone using MCP Tunnels in prod?\n\n#OpenSource #ClaudeCode #Anthropic",
+    "source_link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.117.0",
+    "source_title": "Anthropic Python SDK v0.117.0",
+    "score": 65,
+    "reason": "local newsworthiness fallback",
+    "card_path": "generated/cards/0d22824c6184.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-17-anthropic-python-sdk-v0-117-0-0d22824c6184.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqtz7klqo22g",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mqtz7klqo22g",
+    "format_variant": "question",
+    "hashtags_used": [
+      "#OpenSource",
+      "#ClaudeCode",
+      "#Anthropic"
+    ],
+    "published_hour_utc": 14,
+    "published_weekday": "Friday",
+    "composer_version": "2",
+    "card_variant": "editorial_release"
   }
 ]
