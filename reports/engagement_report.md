@@ -1,18 +1,18 @@
 # Boardwire Engagement Report
 
-Generated: `2026-07-17T06:08:46.321531Z`
+Generated: `2026-07-18T05:56:51.301575Z`
 
 ## Summary
 
-- Measured posts: **142** of 146 published
+- Measured posts: **143** of 147 published
 - Median peak engagement: **0.0**
 - Average peak engagement: **0.6**
 - Top: **5** — Graphify-Labs/graphify — AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, o
 
 ## Patterns
 
-- Release-keyword posts: avg **0.7** (n=89) vs others avg **0.5** (n=53)
-- GitHub sources: avg **0.7** (n=107) vs other sources avg **0.3** (n=35)
+- Release-keyword posts: avg **0.7** (n=90) vs others avg **0.5** (n=53)
+- GitHub sources: avg **0.7** (n=108) vs other sources avg **0.3** (n=35)
 
 ## Engagement by published hour (UTC)
 
@@ -27,7 +27,7 @@ Generated: `2026-07-17T06:08:46.321531Z`
 - 11:00 UTC: avg **0.2** (n=8)
 - 12:00 UTC: avg **0.9** (n=7)
 - 13:00 UTC: avg **1.3** (n=6)
-- 14:00 UTC: avg **0.5** (n=6)
+- 14:00 UTC: avg **0.4** (n=7)
 - 15:00 UTC: avg **1.2** (n=9)
 - 16:00 UTC: avg **0.4** (n=12)
 - 17:00 UTC: avg **0.0** (n=7)
@@ -44,25 +44,28 @@ Generated: `2026-07-17T06:08:46.321531Z`
 - Tuesday: avg **0.4** (n=19)
 - Wednesday: avg **0.6** (n=18)
 - Thursday: avg **0.2** (n=17)
-- Friday: avg **0.5** (n=24)
+- Friday: avg **0.5** (n=25)
 - Saturday: avg **1.0** (n=22)
 - Sunday: avg **0.8** (n=20)
 
 ## Engagement by format variant
 
 - plain: avg **0.6** (n=142)
+- question: insufficient data (n<5, have 1)
 
 ## Engagement by card variant
 
+- editorial_release: insufficient data (n<5, have 1)
 - editorial_stat: insufficient data (n<5, have 1)
 
 ## Engagement by hashtag combination
 
+- #Anthropic #ClaudeCode #OpenSource: insufficient data (n<5, have 1)
 - #OpenSource #OpenWeights: insufficient data (n<5, have 1)
 
 ## Version-release posts vs others
 
-- Version releases: avg **0.4** (n=64)
+- Version releases: avg **0.4** (n=65)
 - Others: avg **0.8** (n=78)
   (Version-only releases are now blocked by the quality gate; this group should trend to n=0.)
 
@@ -309,7 +312,7 @@ Generated: `2026-07-17T06:08:46.321531Z`
    > 27B-class on-device LLMs arrive via 1-bit quantization. Bonsai 27B runs on a smartphone with 1-bit weights, enabling local mobile AI inferen…
 
 49. **1 pts** — Inkling – Open-Weights 975B Parameter LLM
-   likes 1 · reposts 0 · replies 0 · quotes 0 · age 23h · score 90
+   likes 1 · reposts 0 · replies 0 · quotes 0 · age 47h · score 90
    https://thinkingmachines.ai/inkling/
    > Open-weight 975B LLM ships as a new foundation model. Inkling releases 975B open-weight LLM for deployment and fine-tuning, Apache 2.0 licen…
 
@@ -777,4 +780,9 @@ Generated: `2026-07-17T06:08:46.321531Z`
    likes 0 · reposts 0 · replies 0 · quotes 0 · age 2h · score 90
    https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left
    > Cursor 0day exposes dev repos to remote execution. Mindgard disclosed RCE/data exfiltration flaw; 71 HN points. Update or isolate Cursor bui…
+
+143. **0 pts** — Anthropic Python SDK v0.117.0
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 15h · score 65
+   https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.117.0
+   > Anthropic adds dreaming and MCP Tunnels to Python SDK. Anthropic SDK v0.117.0 ships dreaming API, MCP Tunnels, and secretstr fixes with +1.2…
 
