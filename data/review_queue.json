@@ -7946,5 +7946,27 @@
     "card_variant": "editorial_release",
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-17-anthropic-python-sdk-v0-117-0-0d22824c6184.md",
     "published_at": "2026-07-17T14:58:39.870164Z"
+  },
+  {
+    "id": "eb4b83a8f1b1",
+    "status": "deferred_generation_unavailable",
+    "created_at": "2026-07-19T21:12:24.866305Z",
+    "score": 105,
+    "reason": "deferred: generation provider unavailable",
+    "proposed_post": "",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "KnockOutEZ/wigolo — The go-to web for your AI coding agent — local-first search, fetch, crawl & research over MCP. No API keys, no cloud, $0/query. Public beta.",
+      "source": "GitHub Trending",
+      "link": "https://github.com/KnockOutEZ/wigolo",
+      "source_tier": 2,
+      "engagement_score": 605.0,
+      "local_newsworthiness_score": 105
+    },
+    "deferred_at": "2026-07-19T21:12:24.866272Z",
+    "defer_count": 1,
+    "original_score": 105,
+    "original_reason": "deferred: generation provider unavailable",
+    "card_path": null
   }
 ]
