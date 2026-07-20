@@ -2382,5 +2382,29 @@
     "published_weekday": "Friday",
     "composer_version": "2",
     "card_variant": "editorial_release"
+  },
+  {
+    "id": "8f3dbf080b1c",
+    "published_at": "2026-07-20T15:30:31.255631Z",
+    "platform": "bluesky",
+    "post": "Claude Code v2.1.214 tightens local permission checks.\n\nFixes allow-rule bypass in dir/** patterns and PowerShell 5.1 bypass. +146★ today.\n\n#LLM #ClaudeCode #Anthropic",
+    "source_link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.214",
+    "source_title": "Claude Code v2.1.214",
+    "score": 65,
+    "reason": "local newsworthiness fallback",
+    "card_path": "generated/cards/8f3dbf080b1c.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-20-claude-code-v2-1-214-8f3dbf080b1c.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mr3mfcoycm2e",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mr3mfcoycm2e",
+    "format_variant": "plain",
+    "hashtags_used": [
+      "#LLM",
+      "#ClaudeCode",
+      "#Anthropic"
+    ],
+    "published_hour_utc": 15,
+    "published_weekday": "Monday",
+    "composer_version": "2",
+    "card_variant": "editorial_release"
   }
 ]

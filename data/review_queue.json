@@ -7971,11 +7971,11 @@
   },
   {
     "id": "8f3dbf080b1c",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-20T14:02:49.582579Z",
     "score": 65,
     "reason": "local newsworthiness fallback",
-    "proposed_post": "Claude Code fixes permission checks.\n\nResolves auto-approval issue in dir/** allow rules, + Windows PowerShell 5.1 bypass fix.\n\n#LLM #ClaudeCode #Anthropic",
+    "proposed_post": "Claude Code v2.1.214 tightens local permission checks.\n\nFixes allow-rule bypass in dir/** patterns and PowerShell 5.1 bypass. +146★ today.\n\n#LLM #ClaudeCode #Anthropic",
     "source_angle": "Local high-score + Sarah/OpenRouter fallback",
     "source_item": {
       "title": "Claude Code v2.1.214",
@@ -8006,10 +8006,29 @@
         "cluster_score": 15
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/8f3dbf080b1c.png",
     "is_llm_mode": false,
     "breaking": false,
     "claire_note": "Aus *Claude Code Releases* ist ein starker Kandidat reingekommen: *Claude Code v2.1.214*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 65_",
-    "chloe_note": "Kurzes Update: *Claude Code v2.1.214* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: displaced, timestamp, writing, v2.1.214. Ich habe es mit 65 Punkten bewertet. Hier der Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.214"
+    "chloe_note": "Kurzes Update: *Claude Code v2.1.214* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: displaced, timestamp, writing, v2.1.214. Ich habe es mit 65 Punkten bewertet. Hier der Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.214",
+    "sarah_package": {
+      "title": "Claude Code v2.1.214 tightens local permission checks.",
+      "subtitle": "Fixes allow-rule bypass in dir/** patterns and PowerShell 5.1 bypass. +146★ today.",
+      "description": "Patch closes path-traversal hole in dir/** rules and fixes PowerShell 5.1 session checks. No new features.",
+      "hashtags": [
+        "#LLM",
+        "#ClaudeCode",
+        "#Anthropic"
+      ],
+      "question": "Running this in prod?",
+      "card_stat": "+146★",
+      "card_claim": "Local security fixes land in v2.1.214",
+      "card_context": "Patch closes dir/** path traversal · fixes PowerShell 5.1 session checks"
+    },
+    "composer_version": "2",
+    "card_layout": "release",
+    "card_variant": "editorial_release",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-20-claude-code-v2-1-214-8f3dbf080b1c.md",
+    "published_at": "2026-07-20T15:30:31.255631Z"
   }
 ]
