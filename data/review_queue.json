@@ -7950,12 +7950,12 @@
   },
   {
     "id": "eb4b83a8f1b1",
-    "status": "deferred_generation_unavailable",
-    "created_at": "2026-07-19T21:12:24.866305Z",
-    "score": 105,
-    "reason": "deferred: generation provider unavailable",
-    "proposed_post": "",
-    "source_angle": "Rule-based",
+    "status": "approved",
+    "created_at": "2026-07-20T14:02:49.721929Z",
+    "score": 90,
+    "reason": "New open-source tool for local, free AI agent web research. Passes Ships Test with clear cost/privacy benefits.",
+    "proposed_post": "KnockOutEZ/wigolo is a new local-first web research tool for AI agents, offering $0/query and no cloud dependency. Builders can integrate this to give agents free, private web access for research, reducing operational costs.",
+    "source_angle": "Open-source tool for local AI agent web research",
     "source_item": {
       "title": "KnockOutEZ/wigolo — The go-to web for your AI coding agent — local-first search, fetch, crawl & research over MCP. No API keys, no cloud, $0/query. Public beta.",
       "source": "GitHub Trending",
@@ -7964,10 +7964,52 @@
       "engagement_score": 605.0,
       "local_newsworthiness_score": 105
     },
-    "deferred_at": "2026-07-19T21:12:24.866272Z",
-    "defer_count": 1,
-    "original_score": 105,
-    "original_reason": "deferred: generation provider unavailable",
-    "card_path": null
+    "card_path": null,
+    "breaking": false,
+    "reactivated_at": "2026-07-20T14:02:49.721929Z",
+    "is_llm_mode": true
+  },
+  {
+    "id": "8f3dbf080b1c",
+    "status": "approved",
+    "created_at": "2026-07-20T14:02:49.582579Z",
+    "score": 65,
+    "reason": "local newsworthiness fallback",
+    "proposed_post": "Claude Code fixes permission checks.\n\nResolves auto-approval issue in dir/** allow rules, + Windows PowerShell 5.1 bypass fix.\n\n#LLM #ClaudeCode #Anthropic",
+    "source_angle": "Local high-score + Sarah/OpenRouter fallback",
+    "source_item": {
+      "title": "Claude Code v2.1.214",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.214",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 65,
+      "summary": "<h2>What's changed</h2>\n<ul>\n<li>Fixed single-segment <code>dir/**</code> allow rules like <code>Edit(src/**)</code> auto-approving writes to nested <code>dir/</code> directories anywhere in the tree instead of only <code>&lt;cwd&gt;/dir</code></li>\n<li>Fixed a permission-check bypass affecting commands run in Windows PowerShell 5.1 sessions</li>\n<li>Fixed Bash permission checks to fail closed on file-descriptor redirect forms that bash parses differently than the permission analyzer</li>\n<li>Fixed Bash permission checks misjudging very long commands — commands over 10,000 characters now always prompt instead of running automatically</li>\n<li>Fixed Bash permission checks treating zsh variable subscripts and modifiers in <code>[[ ]]</code> comparisons as inert text — these commands now prompt for approval</li>\n<li>Fixed Bash permission checks to no longer auto-approve certain <code>help</code> and <code>man</code> commands that could run unsafe options, command substitutions, or backslash paths</li>\n<li>Fixed permission prompts on remote sessions that could proceed before the local confirmation dialog</li>\n<li>Added the EndConversation tool: Claude can end sessions with highly abusive users or jailbreak attempts, as on claude.ai since 2025 — see <a href=\"https://www.anthropic.com/research/end-subset-conversations\" rel=\"nofollow\">https://www.anthropic.com/research/end-subset-conversations</a></li>\n<li>Added a periodic progress heartbeat for long-running tool calls that previously went silent</li>\n<li>Added an ISO <code>modified</code> timestamp to memory file frontmatter</li>\n<li>Added <code>message.uuid</code>, <code>client_request_id</code>, and <code>tool_source</code> attributes to OpenTelemetry log events for message-level correlation and tool provenance</li>\n<li>Added <code>CLAUDE_CODE_OTEL_CONTENT_MAX_LENGTH</code> to configure the 60 KB truncation limit on OpenTelemetry content attributes</li>\n<li>Added reasoning effort to the <code>subagentStatusLine</code> payload, so custom agent rows can render model and effort</li>\n<li>Added permission prompts for <code>docker</code> commands (including the Podman <code>docker</code> shim) carrying daemon-redirect flags (<code>--url</code>, <code>--connection</code>, <code>--identity</code>, and Podman's remote mode) that previously ran without one</li>\n<li>Fixed a crash when a GrowthBook feature evaluates to null, and a bug where a malformed flag payload could wipe the cached feature flags</li>\n<li>Fixed Bash tool killing the Claude session when a <code>pkill -f</code> pattern accidentally matched the CLI's own process (Linux)</li>\n<li>Fixed unbounded memory growth when <code>--settings</code> points at a device file or multi-GB file; oversized (&gt;2 MiB) settings files now fail at startup with a clear error</li>\n<li>Fixed streaming turns failing with \"Socket is closed\" behind corporate proxies on Windows</li>\n<li>Fixed stream-json output truncation at exit for slow-reading SDK/pipeline consumers; the exit drain now scales with queued bytes instead of a flat 2s cap</li>\n<li>Fixed scheduled tasks refusing their own configured prompt as untrusted input — the fired prompt is now delivered as the session's assigned task</li>\n<li>Fixed PowerShell tool commands hanging until timeout when a child process waited on standard input (Windows)</li>\n<li>Fixed Python scripts under the PowerShell tool crashing with UnicodeDecodeError when reading non-UTF-8 data from standard input (Windows)</li>\n<li>Fixed Python scripts run via the PowerShell tool crashing with UnicodeEncodeError on non-ASCII output, and PowerShell 7 error messages containing raw ANSI escape sequences (Windows)</li>\n<li>Fixed the PowerShell tool reporting <code>where.exe</code>, <code>fc.exe</code>, and <code>diff.exe</code> as errors when they return a valid negative answer (Windows)</li>\n<li>Fixed <code>&gt;</code> and <code>&gt;&gt;</code> under the PowerShell tool on Windows PowerShell 5.1 writing UTF-16LE files that other tools couldn't read as UTF-8</li>\n<li>Fixed a displaced background daemon deleting its successor's control socket on shutdown, which made the next client kill the healthy replacement daemon</li>\n<li>Fixed background sessions parked with <code>←</code> or <code>/background</code> and left idle keeping the background daemon and a worker process alive indefinitely</li>\n<li>Fixed completed background sessions being impossible to remove via <code>claude rm</code> or the agent view once the background service had gone idle</li>\n<li>Fixed background sessions dispatched from a non-git folder being impossible to delete from the agents view</li>\n<li>Fixed reopening a stopped background session failing to restore its saved conversation when an unreadable folder exists in the session store</li>\n<li>Fixed the Remote Control \"session ready\" push notification firing for sessions where Remote Control was not explicitly enabled</li>\n<li>Fixed <code>/install-github-app</code> and the <code>/mcp</code> settings menu being blocked in agent-view sessions — they're now refused only in background sessions with no terminal attached</li>\n<li>Fixed plugins enabled via the <code>--settings</code> CLI flag not loading (regression since v2.1.181)</li>\n<li>Fixed feature flags going stale in long-running sessions after the OAuth token rotates</li>\n<li>Fixed <code>/ultrareview</code> refusing to run in repos with no merge base — it now offers to review all tracked files</li>\n<li>Fixed <code>claude update</code> and <code>claude doctor</code> hanging silently, and the <code>/status</code> System diagnostics section going blank, when a shell-config path is a directory</li>\n<li>Fixed memory frontmatter values being silently truncated at an inline <code>#</code> when memory files are saved</li>\n<li>Fixed session cost and token telemetry double-counting on streams that emit multiple cumulative <code>message_delta</code> frames</li>\n<li>Fixed a spurious \"check your network\" warning that appeared while the advisor was thinking</li>\n<li>Fixed hooks with exit code 2 not blocking as documented when the hook's stdout JSON fails schema validation</li>\n<li>Fixed OTel log events emitted outside the turn's async context missing the interaction span's trace context</li>\n<li>Fixed MCP transient errors during prompts/resources refresh clearing the server's slash commands and resources</li>\n<li>Improved the <code>claude rc</code> workspace-trust error in the home directory to say trust there is never saved and to suggest running from a project directory</li>\n<li>Changed single-segment <code>dir/**</code> hook <code>if:</code> conditions to match only <code>&lt;cwd&gt;/dir</code>; write <code>**/dir/**</code> for any-depth matching. <code>deny</code>/<code>ask</code> permission rules keep their any-depth match.</li>\n<li>Changed <code>file</code> commands using <code>-m</code>/<code>--magic-file</code> or <code>-f</code>/<code>--files-from</code> to require permission instead of being auto-allowed as read-only</li>\n<li>Changed keep-alive connection pooling to disable after a stale-connection error, so retries open a fresh socket</li>\n<li>Changed SessionStart hooks to report source <code>\"fork\"</code> when a session begins as a fork instead of <code>\"resume\"</code></li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: displaced, timestamp, writing, v2.1.214, notification.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Claude Code Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "displaced",
+          "timestamp",
+          "writing",
+          "v2.1.214",
+          "notification",
+          "analyzer",
+          "command",
+          "drain"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: displaced, timestamp, writing, v2.1.214. Lead: Claude Code v2.1.214",
+        "alternative_titles": [],
+        "cluster_score": 15
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "breaking": false,
+    "claire_note": "Aus *Claude Code Releases* ist ein starker Kandidat reingekommen: *Claude Code v2.1.214*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 65_",
+    "chloe_note": "Kurzes Update: *Claude Code v2.1.214* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: displaced, timestamp, writing, v2.1.214. Ich habe es mit 65 Punkten bewertet. Hier der Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.214"
   }
 ]
