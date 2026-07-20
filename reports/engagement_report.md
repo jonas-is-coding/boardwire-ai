@@ -1,6 +1,6 @@
 # Boardwire Engagement Report
 
-Generated: `2026-07-19T06:22:45.626405Z`
+Generated: `2026-07-20T06:38:03.029805Z`
 
 ## Summary
 
@@ -312,7 +312,7 @@ Generated: `2026-07-19T06:22:45.626405Z`
    > 27B-class on-device LLMs arrive via 1-bit quantization. Bonsai 27B runs on a smartphone with 1-bit weights, enabling local mobile AI inferen…
 
 49. **1 pts** — Inkling – Open-Weights 975B Parameter LLM
-   likes 1 · reposts 0 · replies 0 · quotes 0 · age 72h · score 90
+   likes 1 · reposts 0 · replies 0 · quotes 0 · age 96h · score 90
    https://thinkingmachines.ai/inkling/
    > Open-weight 975B LLM ships as a new foundation model. Inkling releases 975B open-weight LLM for deployment and fine-tuning, Apache 2.0 licen…
 
@@ -782,7 +782,7 @@ Generated: `2026-07-19T06:22:45.626405Z`
    > Cursor 0day exposes dev repos to remote execution. Mindgard disclosed RCE/data exfiltration flaw; 71 HN points. Update or isolate Cursor bui…
 
 143. **0 pts** — Anthropic Python SDK v0.117.0
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 39h · score 65
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 64h · score 65
    https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.117.0
    > Anthropic adds dreaming and MCP Tunnels to Python SDK. Anthropic SDK v0.117.0 ships dreaming API, MCP Tunnels, and secretstr fixes with +1.2…
 
