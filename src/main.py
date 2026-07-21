@@ -1655,7 +1655,7 @@ def _release_identity_for_source_item(source_item: dict) -> tuple[str, str] | No
         source=str(source_item.get("source", "")),
         title=str(source_item.get("title", "")),
         link=str(source_item.get("link", "")),
-        summary=str(source_item.get("summary", "")),
+        summary=str(source_item.get("summary") or ""),
         published_at=datetime.now(timezone.utc),
     )
     if not _is_release_like_item(feed_item):
@@ -1726,6 +1726,7 @@ def _build_thread_posts(
 
 def _publish_approved(args, logger) -> int:
     from src.notifications import persona_voice as voice
+    from src.llm import sarah_generation
 
     queue = JsonStore.load(REVIEW_QUEUE_PATH, default=[])
     published = JsonStore.load(PUBLISHED_POSTS_PATH, default=[])
@@ -1840,7 +1841,11 @@ def _publish_approved(args, logger) -> int:
             item["status"] = "published_dry_run"
             continue
 
-        source_summary = str(source_item.get("summary", "")).strip()
+        # .get(key, default) only applies the default when the key is absent —
+        # an explicit `"summary": null` in stored JSON (seen on GitHub Trending
+        # items with no summary) returns None, and str(None) == "None", which
+        # would leak the literal word "None" into the LLM prompt and the card.
+        source_summary = str(source_item.get("summary") or "").strip()
         cluster_context = source_item.get("cluster_context", {}) if isinstance(source_item.get("cluster_context"), dict) else {}
         # Release dedupe first (cheap, no LLM): never publish the same
         # (project, version) twice within the window (ollama v0.30.11 once
@@ -1864,6 +1869,16 @@ def _publish_approved(args, logger) -> int:
         variant_key = str(source_link or rid or "")
 
         def _package_once() -> dict | None:
+            # sarah_generation caps each of groq/cerebras/mistral to ONE call
+            # per process and never resets within _publish_approved (only the
+            # collect path resets it via reset_openrouter_state()). Without
+            # resetting here, the first item's attempt permanently exhausts
+            # the chain for every later item AND for this item's own
+            # regenerate-once retry, turning a single transient/truncated
+            # response into a hard, unrecoverable failure for the rest of the
+            # run. Reset before every attempt so each one gets a fair,
+            # independent shot at all three providers.
+            sarah_generation.reset_state()
             pkg = voice.sarah_build_publish_package(
                 title=str(source_item.get("title", "Untitled")),
                 source=str(source_item.get("source", "Unknown Source")),
@@ -3059,7 +3074,7 @@ def run(argv: list[str] | None = None) -> int:
                 context_text=f"{source_title} {item.get('reason', '')}",
                 allow_duplicate=is_breaking,
                 item_title=source_title,
-                item_summary=str(item.get("source_item", {}).get("summary", "")),
+                item_summary=str(item.get("source_item", {}).get("summary") or ""),
             )
             local_score_val = int(item.get("source_item", {}).get("local_newsworthiness_score") or 0)
             fallback_mode = (not is_llm_mode) or (llm_config.provider == "gemini" and remaining_gemini_budget() <= 0)

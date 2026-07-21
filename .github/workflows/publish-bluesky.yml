@@ -73,7 +73,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add data/published_posts.json data/review_queue.json reports/review_queue.md articles/
+          git add data/published_posts.json data/review_queue.json reports/review_queue.md articles/ data/published_releases.json data/gate_rejections.json
 
           if git diff --cached --quiet; then
             echo "No publish state changes to commit"

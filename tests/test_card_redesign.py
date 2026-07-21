@@ -48,6 +48,17 @@ def _pkg(**overrides) -> dict:
 
 # --- token-overlap rejection (card_claim must differ from post title) -------
 
+def test_null_summary_does_not_leak_literal_none() -> None:
+    # GitHub Trending items with no summary store explicit JSON null; a naive
+    # .get("summary", "") returns None (key present, not absent), and
+    # str(None) == "None" would print the literal word on the card.
+    item = _item(_pkg(), source="GitHub Trending", link="https://github.com/x/y", summary="")
+    item["source_item"]["summary"] = None
+    card = from_review_item(item)
+    assert "None" not in card.card_context
+    assert "None" not in card.card_claim
+
+
 def test_claim_restating_title_rejected() -> None:
     assert valid_card_claim("Mistral open-sources a 70B model", "Mistral open-sources a 70B model.") is False
 
