@@ -12,6 +12,13 @@ from src.llm.gemini_budget import try_consume_gemini_budget
 from src.llm import sarah_generation
 
 _GEMINI_MODEL = "gemini-2.5-flash"
+# The Sarah publish-package JSON now carries 8 fields (title, subtitle,
+# description, hashtags, question, card_stat, card_claim, card_context).
+# Historically this was 420 for a 4-field schema; that budget was never
+# raised when the card fields were added, so responses were silently
+# truncated mid-JSON — unparseable, and packaging failed with no diagnostic
+# trace. Give real headroom for 8 fields plus JSON structural overhead.
+_SARAH_MAX_OUTPUT_TOKENS = 700
 _LOGGER = logging.getLogger("boardwire.persona_voice")
 _OPENROUTER_CALLS_USED = 0
 _OPENROUTER_EXHAUSTED = False
@@ -657,7 +664,7 @@ def sarah_build_publish_package(
             _SYSTEM_PROMPTS["sarah"],
             user,
             model=sarah_model,
-            max_output_tokens=420,
+            max_output_tokens=_SARAH_MAX_OUTPUT_TOKENS,
         )
         if sarah_emergency and (not raw) and (not sarah_emergency.lower().endswith(":free")) and sarah_emergency != sarah_model:
             _LOGGER.info("OpenRouter Sarah primary failed, trying non-free emergency model=%s", sarah_emergency)
@@ -665,7 +672,7 @@ def sarah_build_publish_package(
                 _SYSTEM_PROMPTS["sarah"],
                 user,
                 model=sarah_emergency,
-                max_output_tokens=420,
+                max_output_tokens=_SARAH_MAX_OUTPUT_TOKENS,
             )
         if not raw and allow_gemini_fallback:
             _LOGGER.info("OpenRouter Sarah failed, trying Gemini flash fallback")
@@ -674,7 +681,7 @@ def sarah_build_publish_package(
                 user,
                 model_override="gemini-2.5-flash",
                 fallback_model=None,
-                max_output_tokens=420,
+                max_output_tokens=_SARAH_MAX_OUTPUT_TOKENS,
                 enable_thinking=False,
                 stage="sarah_gemini_fallback",
             )
@@ -682,12 +689,26 @@ def sarah_build_publish_package(
         raw = sarah_generation.generate_with_provider_chain(
             _SYSTEM_PROMPTS["sarah"],
             user,
-            max_output_tokens=420,
+            max_output_tokens=_SARAH_MAX_OUTPUT_TOKENS,
         )
     if not raw:
+        # Every provider in the chain was skipped/failed/exhausted (see their
+        # own warnings) — nothing to package with.
+        _LOGGER.warning("Sarah package rejected: no raw content from any provider (title=%r)", title[:80])
         return None
     data = _parse_json_loose(raw)
     if not data:
+        # The provider DID respond, but the content wasn't valid JSON — most
+        # commonly a response truncated by max_output_tokens before the
+        # closing brace. Log a preview so this is diagnosable in production
+        # (data/gate_rejections.json is the only other trace, and it isn't
+        # committed by the workflows).
+        _LOGGER.warning(
+            "Sarah package rejected: unparseable JSON (title=%r, raw_len=%d, raw_preview=%r)",
+            title[:80],
+            len(raw),
+            raw[:200],
+        )
         return None
 
     title_val = str(data.get("title", "")).strip()[:70]
@@ -707,6 +728,15 @@ def sarah_build_publish_package(
         hashtags.append(t)
     hashtags = hashtags[:3]
     if not (title_val and subtitle_val and description_val and 2 <= len(hashtags) <= 3):
+        _LOGGER.warning(
+            "Sarah package rejected: required fields missing/invalid (title=%r, "
+            "has_title=%s, has_subtitle=%s, has_description=%s, hashtags_count=%d)",
+            title[:80],
+            bool(title_val),
+            bool(subtitle_val),
+            bool(description_val),
+            len(hashtags),
+        )
         return None
 
     # Card fields (Task 3). card_stat is a short hero token; card_claim/context

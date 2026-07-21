@@ -203,6 +203,83 @@ def test_validation_failure_twice_skips(pipeline, monkeypatch) -> None:
     assert any("engagement metadata" in "; ".join(r.get("reasons", [])).lower() for r in rejections)
 
 
+def test_null_summary_does_not_leak_literal_none(pipeline) -> None:
+    # A GitHub Trending item with no summary stores explicit JSON null, not a
+    # missing key. dict.get(key, default) only applies the default when the
+    # key is ABSENT, so `.get("summary", "")` returns None here, and str(None)
+    # == "None" would leak the literal word into the prompt/card.
+    link = _find_variant_link("plain")
+    item = _queue_item(link, score=70)
+    item["source_item"]["summary"] = None
+    JsonStore.save(pipeline["review_path"], [item])
+
+    assert pipeline["run"]() == 0
+
+    published = json.loads(pipeline["published_path"].read_text())
+    assert len(published) == 1
+    assert "None" not in published[0]["post"]
+
+
+def test_publish_resets_sarah_provider_state_per_attempt(tmp_path, monkeypatch) -> None:
+    """A provider marked 'used'/'exhausted' before this item's packaging must
+    not block it: _package_once resets sarah_generation state on every
+    attempt, so pre-existing state (e.g. from a previous item in the same
+    run) can't poison this one. Without the reset in main.py, this item would
+    fail every attempt as soon as any provider had been touched once."""
+    from src.llm import sarah_generation
+
+    review_path = tmp_path / "review_queue.json"
+    published_path = tmp_path / "published_posts.json"
+    articles_dir = tmp_path / "articles"
+
+    monkeypatch.setattr(main, "REVIEW_QUEUE_PATH", review_path)
+    monkeypatch.setattr(main, "PUBLISHED_POSTS_PATH", published_path)
+    monkeypatch.setattr(main, "PUBLISHED_RELEASES_PATH", tmp_path / "published_releases.json")
+    monkeypatch.setattr(main, "GATE_REJECTIONS_PATH", tmp_path / "gate_rejections.json")
+    monkeypatch.setattr(main, "REVIEW_REPORT_PATH", tmp_path / "review_queue.md")
+    monkeypatch.setattr(main, "ARTICLES_DIR", articles_dir)
+    monkeypatch.setattr(main, "_generate_card_for_item", lambda item, logger: None)
+    for fn in ("sarah_packaged", "jim_published", "jim_failed", "sarah_failed_batch"):
+        monkeypatch.setattr(main.notify, fn, lambda *a, **k: None)
+    monkeypatch.delenv("BOARDWIRE_PUBLISHER", raising=False)
+    monkeypatch.delenv("BOARDWIRE_SARAH_PROVIDER", raising=False)
+    monkeypatch.setenv("GROQ_API_KEY", "fake-key-for-test")
+
+    # Simulate state left over from an earlier item/attempt in this same
+    # process: groq already "used" once and cerebras/mistral exhausted.
+    sarah_generation._STATE["used"]["groq"] = 1
+    sarah_generation._STATE["exhausted"]["cerebras"] = True
+    sarah_generation._STATE["exhausted"]["mistral"] = True
+
+    valid_json = (
+        '{"title": "Agent memory becomes infrastructure.", '
+        '"subtitle": "Agentmemory ships a 4-tier pipeline with MCP support.", '
+        '"description": "Runs fully local.", "hashtags": ["#AI", "#MCP"], '
+        '"question": ""}'
+    )
+
+    def fake_post(url, **kwargs):
+        class _Resp:
+            status_code = 200
+
+            def json(self):
+                return {"choices": [{"message": {"content": valid_json}}]}
+
+        return _Resp()
+
+    monkeypatch.setattr(sarah_generation.requests, "post", fake_post)
+
+    link = _find_variant_link("plain")
+    JsonStore.save(review_path, [_queue_item(link, score=70)])
+
+    args = main._build_parser().parse_args(["--publish-approved"])
+    assert main._publish_approved(args, main.get_logger()) == 0
+
+    published = json.loads(published_path.read_text())
+    assert len(published) == 1  # succeeded despite the pre-poisoned state
+    assert published[0]["hashtags_used"]
+
+
 def test_release_dedupe_blocks_second_publish(pipeline) -> None:
     item_one = _queue_item(
         "https://github.com/ollama/ollama/releases/tag/v0.30.11",

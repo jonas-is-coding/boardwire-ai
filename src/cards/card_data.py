@@ -299,7 +299,7 @@ def from_review_item(item: dict) -> CardData:
     src = item.get("source_item", {})
     title = str(src.get("title", "Untitled"))
     post = str(item.get("proposed_post", ""))
-    src_summary = str(src.get("summary", ""))
+    src_summary = str(src.get("summary") or "")
     source = str(src.get("source", "Unknown Source"))
     link = str(src.get("link", ""))
     created_at = str(item.get("created_at", ""))

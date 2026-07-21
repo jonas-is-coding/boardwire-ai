@@ -149,7 +149,7 @@ def export_review_articles(review_queue_path: Path, output_dir: Path) -> int:
             score=int(item.get("score") or 0),
             reason=str(item.get("reason", "")),
             proposed_post=str(item.get("proposed_post", "")),
-            summary=str(source_item.get("summary", "")),
+            summary=str(source_item.get("summary") or ""),
             created_at=str(item.get("created_at", "")),
             )
             llm_calls += 1
