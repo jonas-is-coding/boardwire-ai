@@ -15984,6 +15984,15 @@
         "reply_count": 0,
         "quote_count": 0,
         "total_engagement": 1
+      },
+      {
+        "observed_at": "2026-07-22T06:21:11.960534Z",
+        "age_hours": 143.64,
+        "like_count": 1,
+        "repost_count": 0,
+        "reply_count": 0,
+        "quote_count": 0,
+        "total_engagement": 1
       }
     ]
   },
@@ -16027,6 +16036,15 @@
         "reply_count": 0,
         "quote_count": 0,
         "total_engagement": 0
+      },
+      {
+        "observed_at": "2026-07-22T06:21:11.960534Z",
+        "age_hours": 111.38,
+        "like_count": 0,
+        "repost_count": 0,
+        "reply_count": 0,
+        "quote_count": 0,
+        "total_engagement": 0
       }
     ]
   },
@@ -16038,6 +16056,15 @@
       {
         "observed_at": "2026-07-21T06:21:40.610855Z",
         "age_hours": 14.85,
+        "like_count": 0,
+        "repost_count": 0,
+        "reply_count": 0,
+        "quote_count": 0,
+        "total_engagement": 0
+      },
+      {
+        "observed_at": "2026-07-22T06:21:11.960534Z",
+        "age_hours": 38.84,
         "like_count": 0,
         "repost_count": 0,
         "reply_count": 0,

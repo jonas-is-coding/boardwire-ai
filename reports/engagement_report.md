@@ -1,6 +1,6 @@
 # Boardwire Engagement Report
 
-Generated: `2026-07-21T06:21:51.548193Z`
+Generated: `2026-07-22T06:21:22.999936Z`
 
 ## Summary
 
@@ -313,7 +313,7 @@ Generated: `2026-07-21T06:21:51.548193Z`
    > 27B-class on-device LLMs arrive via 1-bit quantization. Bonsai 27B runs on a smartphone with 1-bit weights, enabling local mobile AI inferen…
 
 49. **1 pts** — Inkling – Open-Weights 975B Parameter LLM
-   likes 1 · reposts 0 · replies 0 · quotes 0 · age 120h · score 90
+   likes 1 · reposts 0 · replies 0 · quotes 0 · age 144h · score 90
    https://thinkingmachines.ai/inkling/
    > Open-weight 975B LLM ships as a new foundation model. Inkling releases 975B open-weight LLM for deployment and fine-tuning, Apache 2.0 licen…
 
@@ -783,12 +783,12 @@ Generated: `2026-07-21T06:21:51.548193Z`
    > Cursor 0day exposes dev repos to remote execution. Mindgard disclosed RCE/data exfiltration flaw; 71 HN points. Update or isolate Cursor bui…
 
 143. **0 pts** — Anthropic Python SDK v0.117.0
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 87h · score 65
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 111h · score 65
    https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.117.0
    > Anthropic adds dreaming and MCP Tunnels to Python SDK. Anthropic SDK v0.117.0 ships dreaming API, MCP Tunnels, and secretstr fixes with +1.2…
 
 144. **0 pts** — Claude Code v2.1.214
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 15h · score 65
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 39h · score 65
    https://github.com/anthropics/claude-code/releases/tag/v2.1.214
    > Claude Code v2.1.214 tightens local permission checks. Fixes allow-rule bypass in dir/** patterns and PowerShell 5.1 bypass. +146★ today. #L…
 
