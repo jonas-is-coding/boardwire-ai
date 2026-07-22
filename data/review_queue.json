@@ -8033,11 +8033,11 @@
   },
   {
     "id": "0f6a2ba97e53",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-22T08:22:56.526651Z",
     "score": 90,
     "reason": "New model/tool released for on-device AI by trusted source, clear utility for edge deployment.",
-    "proposed_post": "Hugging Face & NVIDIA released Cosmos 3 Edge, a new model/tool for on-device AI. Builders can now deploy AI directly on edge devices, enabling local inference for production applications.",
+    "proposed_post": "Hugging Face releases Cosmos 3 Edge.\n\nDeploy AI on edge devices for local inference, Apache 2.0.\n\nAnyone running Cosmos 3 Edge in prod?\n\n#AI #OpenWeights #HuggingFace",
     "source_angle": "Hugging Face & NVIDIA launch on-device AI model/tool for edge deployment.",
     "source_item": {
       "title": "Introducing Cosmos 3 Edge",
@@ -8063,9 +8063,28 @@
         "cluster_score": 15
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/0f6a2ba97e53.png",
     "is_llm_mode": true,
     "breaking": false,
-    "reactivated_at": "2026-07-22T08:22:56.526651Z"
+    "reactivated_at": "2026-07-22T08:22:56.526651Z",
+    "sarah_package": {
+      "title": "Hugging Face releases Cosmos 3 Edge.",
+      "subtitle": "Deploy AI on edge devices for local inference, Apache 2.0.",
+      "description": "Built with NVIDIA, for production applications on edge devices.",
+      "hashtags": [
+        "#AI",
+        "#OpenWeights",
+        "#HuggingFace"
+      ],
+      "question": "Anyone running Cosmos 3 Edge in prod?",
+      "card_stat": "3x",
+      "card_claim": "Local inference now possible",
+      "card_context": "Apache 2.0 · NVIDIA collaboration · production-ready"
+    },
+    "composer_version": "2",
+    "card_layout": "stat",
+    "card_variant": "editorial_stat",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-22-introducing-cosmos-3-edge-0f6a2ba97e53.md",
+    "published_at": "2026-07-22T08:24:13.556254Z"
   }
 ]

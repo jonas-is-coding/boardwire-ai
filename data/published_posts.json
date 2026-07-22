@@ -2406,5 +2406,29 @@
     "published_weekday": "Monday",
     "composer_version": "2",
     "card_variant": "editorial_release"
+  },
+  {
+    "id": "0f6a2ba97e53",
+    "published_at": "2026-07-22T08:24:13.556254Z",
+    "platform": "bluesky",
+    "post": "Hugging Face releases Cosmos 3 Edge.\n\nDeploy AI on edge devices for local inference, Apache 2.0.\n\nAnyone running Cosmos 3 Edge in prod?\n\n#AI #OpenWeights #HuggingFace",
+    "source_link": "https://huggingface.co/blog/nvidia/cosmos3edge",
+    "source_title": "Introducing Cosmos 3 Edge",
+    "score": 90,
+    "reason": "New model/tool released for on-device AI by trusted source, clear utility for edge deployment.",
+    "card_path": "generated/cards/0f6a2ba97e53.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-22-introducing-cosmos-3-edge-0f6a2ba97e53.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mr7vituwhv2d",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mr7vituwhv2d",
+    "format_variant": "question",
+    "hashtags_used": [
+      "#AI",
+      "#OpenWeights",
+      "#HuggingFace"
+    ],
+    "published_hour_utc": 8,
+    "published_weekday": "Wednesday",
+    "composer_version": "2",
+    "card_variant": "editorial_stat"
   }
 ]
