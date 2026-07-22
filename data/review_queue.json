@@ -7950,7 +7950,7 @@
   },
   {
     "id": "eb4b83a8f1b1",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-07-20T14:02:49.721929Z",
     "score": 90,
     "reason": "New open-source tool for local, free AI agent web research. Passes Ships Test with clear cost/privacy benefits.",
@@ -7967,7 +7967,8 @@
     "card_path": null,
     "breaking": false,
     "reactivated_at": "2026-07-20T14:02:49.721929Z",
-    "is_llm_mode": true
+    "is_llm_mode": true,
+    "expired_at": "2026-07-22T15:21:00.415717Z"
   },
   {
     "id": "8f3dbf080b1c",
@@ -8089,11 +8090,11 @@
   },
   {
     "id": "1102d02292da",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-22T13:49:00.361236Z",
     "score": 90,
     "reason": "Google released new Gemini Flash models, implying immediate API access and new cost/performance options for builders.",
-    "proposed_post": "Google released Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber models. Evaluate these new API-accessible models for improved cost/speed trade-offs or specialized capabilities in your applications.",
+    "proposed_post": "Google releases Gemini Flash models.\n\nGemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber offer new cost/performance options, +726 point\n\n#LLM #AI",
     "source_angle": "New Gemini Flash models for efficiency and specialized tasks",
     "source_item": {
       "title": "Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber",
@@ -8124,10 +8125,28 @@
         "cluster_score": 20
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/1102d02292da.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, check this out: Gemini 3.6 Flash, 3.5 Flash-Lite, und 3.5 Flash Cyber. Das ist ein Google-Blogpost über die neuen Gemini-Modelle.\n\nDer Hacker News Score von 90 und 544 Kommentare zeigen, dass das Thema gerade heiß diskutiert wird. Für Developer sind die \"Flash\"-Modelle interessant, weil sie wahrscheinlich auf Geschwindigkeit und Effizienz optimiert sind. Das bedeutet, man könnte damit schnellere oder kostengünstigere AI-Features in Apps bauen, besonders wenn man viele Anfragen verarbeitet. Die \"Lite\" und \"Cyber\" Varianten deuten auf spezifische Anwendungsfälle hin, die Entwickler für spezialisierte Aufgaben nutzen könnten, ohne die volle Power der größeren Modelle zu brauchen. Wichtig ist hier, wie diese Modelle das Kosten-Nutzen-Verhältnis für Echtzeitanwendungen verändern.",
-    "chloe_note": "Kurzes Update: *Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Google released new Gemini Flash models, implying immediate API access and new cost/performance options for builders.Cluster context: 1 sources, engagement 998. Common terms: submitted, 726, points, hacker. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/"
+    "chloe_note": "Kurzes Update: *Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Google released new Gemini Flash models, implying immediate API access and new cost/performance options for builders.Cluster context: 1 sources, engagement 998. Common terms: submitted, 726, points, hacker. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/",
+    "sarah_package": {
+      "title": "Google releases Gemini Flash models.",
+      "subtitle": "Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber offer new cost/performance options, +726 point",
+      "description": "New Gemini Flash models provide immediate API access, optimized for speed and efficiency, with 544 comments on Hacker News.",
+      "hashtags": [
+        "#LLM",
+        "#AI"
+      ],
+      "question": "Anyone integrating Gemini Flash models into production?",
+      "card_stat": "+726",
+      "card_claim": "New Flash models boost speed",
+      "card_context": "API-accessible models for improved cost/speed trade-offs, optimized for efficiency."
+    },
+    "composer_version": "2",
+    "card_layout": "stat",
+    "card_variant": "editorial_stat",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-22-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber-1102d02292da.md",
+    "published_at": "2026-07-22T15:21:00.415717Z"
   }
 ]

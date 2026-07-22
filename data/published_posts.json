@@ -2430,5 +2430,28 @@
     "published_weekday": "Wednesday",
     "composer_version": "2",
     "card_variant": "editorial_stat"
+  },
+  {
+    "id": "1102d02292da",
+    "published_at": "2026-07-22T15:21:00.415717Z",
+    "platform": "bluesky",
+    "post": "Google releases Gemini Flash models.\n\nGemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber offer new cost/performance options, +726 point\n\n#LLM #AI",
+    "source_link": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/",
+    "source_title": "Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber",
+    "score": 90,
+    "reason": "Google released new Gemini Flash models, implying immediate API access and new cost/performance options for builders.",
+    "card_path": "generated/cards/1102d02292da.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-22-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber-1102d02292da.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mrams27xui2g",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mrams27xui2g",
+    "format_variant": "plain",
+    "hashtags_used": [
+      "#LLM",
+      "#AI"
+    ],
+    "published_hour_utc": 15,
+    "published_weekday": "Wednesday",
+    "composer_version": "2",
+    "card_variant": "editorial_stat"
   }
 ]
