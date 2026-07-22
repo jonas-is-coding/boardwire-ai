@@ -8086,5 +8086,48 @@
     "card_variant": "editorial_stat",
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-22-introducing-cosmos-3-edge-0f6a2ba97e53.md",
     "published_at": "2026-07-22T08:24:13.556254Z"
+  },
+  {
+    "id": "1102d02292da",
+    "status": "approved",
+    "created_at": "2026-07-22T13:49:00.361236Z",
+    "score": 90,
+    "reason": "Google released new Gemini Flash models, implying immediate API access and new cost/performance options for builders.",
+    "proposed_post": "Google released Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber models. Evaluate these new API-accessible models for improved cost/speed trade-offs or specialized capabilities in your applications.",
+    "source_angle": "New Gemini Flash models for efficiency and specialized tasks",
+    "source_item": {
+      "title": "Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber",
+      "source": "HackerNews",
+      "link": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/",
+      "source_tier": 3,
+      "engagement_score": 998.0,
+      "local_newsworthiness_score": 45,
+      "summary": "726 points, 544 comments on Hacker News — submitted by logickkk1 — original: https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/\n[Cluster context: 1 sources, engagement 998, common terms: submitted, 726, points, hacker, 3.5.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 998,
+        "common_terms": [
+          "submitted",
+          "726",
+          "points",
+          "hacker",
+          "3.5",
+          "cyber",
+          "logickkk1",
+          "flash-lite"
+        ],
+        "cluster_summary": "1 sources, engagement 998. Common terms: submitted, 726, points, hacker. Lead: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber",
+        "alternative_titles": [],
+        "cluster_score": 20
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, check this out: Gemini 3.6 Flash, 3.5 Flash-Lite, und 3.5 Flash Cyber. Das ist ein Google-Blogpost über die neuen Gemini-Modelle.\n\nDer Hacker News Score von 90 und 544 Kommentare zeigen, dass das Thema gerade heiß diskutiert wird. Für Developer sind die \"Flash\"-Modelle interessant, weil sie wahrscheinlich auf Geschwindigkeit und Effizienz optimiert sind. Das bedeutet, man könnte damit schnellere oder kostengünstigere AI-Features in Apps bauen, besonders wenn man viele Anfragen verarbeitet. Die \"Lite\" und \"Cyber\" Varianten deuten auf spezifische Anwendungsfälle hin, die Entwickler für spezialisierte Aufgaben nutzen könnten, ohne die volle Power der größeren Modelle zu brauchen. Wichtig ist hier, wie diese Modelle das Kosten-Nutzen-Verhältnis für Echtzeitanwendungen verändern.",
+    "chloe_note": "Kurzes Update: *Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Google released new Gemini Flash models, implying immediate API access and new cost/performance options for builders.Cluster context: 1 sources, engagement 998. Common terms: submitted, 726, points, hacker. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/"
   }
 ]
