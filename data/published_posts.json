@@ -2453,5 +2453,29 @@
     "published_weekday": "Wednesday",
     "composer_version": "2",
     "card_variant": "editorial_stat"
+  },
+  {
+    "id": "b3947bf21d04",
+    "published_at": "2026-07-23T15:33:07.303204Z",
+    "platform": "bluesky",
+    "post": "LangChain adds local execution.\n\nLangChain v1.3.0 with local execution support, + reasoning effort parameter.\n\n#OpenSource #InfoSec #LocalLLM",
+    "source_link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-xai%3D%3D1.3.0",
+    "source_title": "LangChain v1.3.0",
+    "score": 60,
+    "reason": "local newsworthiness fallback",
+    "card_path": "generated/cards/b3947bf21d04.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-23-langchain-v1-3-0-b3947bf21d04.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mrd5wnwn4z2e",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mrd5wnwn4z2e",
+    "format_variant": "plain",
+    "hashtags_used": [
+      "#OpenSource",
+      "#InfoSec",
+      "#LocalLLM"
+    ],
+    "published_hour_utc": 15,
+    "published_weekday": "Thursday",
+    "composer_version": "2",
+    "card_variant": "editorial_security"
   }
 ]

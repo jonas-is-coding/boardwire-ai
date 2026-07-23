@@ -8193,11 +8193,11 @@
   },
   {
     "id": "b3947bf21d04",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-23T13:53:33.947852Z",
     "score": 60,
     "reason": "local newsworthiness fallback",
-    "proposed_post": "LangChain updates infrastructure.\n\nLangChain v1.3.0 with local execution support.\n\n#TechNews #LocalLLM",
+    "proposed_post": "LangChain adds local execution.\n\nLangChain v1.3.0 with local execution support, + reasoning effort parameter.\n\n#OpenSource #InfoSec #LocalLLM",
     "source_angle": "Local high-score + Sarah/OpenRouter fallback",
     "source_item": {
       "title": "LangChain v1.3.0",
@@ -8231,9 +8231,28 @@
         "cluster_score": 35
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/b3947bf21d04.png",
     "is_llm_mode": false,
     "breaking": false,
-    "reactivated_at": "2026-07-23T13:53:33.947852Z"
+    "reactivated_at": "2026-07-23T13:53:33.947852Z",
+    "sarah_package": {
+      "title": "LangChain adds local execution.",
+      "subtitle": "LangChain v1.3.0 with local execution support, + reasoning effort parameter.",
+      "description": "LangChain v1.3.0 introduces local execution and standardizes reasoning effort as a chat model parameter, addressing Dependabot vulnerabiliti",
+      "hashtags": [
+        "#OpenSource",
+        "#InfoSec",
+        "#LocalLLM"
+      ],
+      "question": "Anyone running LangChain v1.3.0 in prod?",
+      "card_stat": "v1.3.0",
+      "card_claim": "Local execution for LangChain models",
+      "card_context": "Adds reasoning effort parameter and patches vulnerabilities."
+    },
+    "composer_version": "2",
+    "card_layout": "security",
+    "card_variant": "editorial_security",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-23-langchain-v1-3-0-b3947bf21d04.md",
+    "published_at": "2026-07-23T15:33:07.303204Z"
   }
 ]
