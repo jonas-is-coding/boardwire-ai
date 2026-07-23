@@ -2477,5 +2477,29 @@
     "published_weekday": "Thursday",
     "composer_version": "2",
     "card_variant": "editorial_security"
+  },
+  {
+    "id": "184ed865c8ec",
+    "published_at": "2026-07-23T18:48:01.563065Z",
+    "platform": "bluesky",
+    "post": "Anthropic enhances Claude integrations.\n\nAdds streaming and session events to Python SDK v0.118.0.\n\n#OpenSource #ClaudeCode #Anthropic",
+    "source_link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.118.0",
+    "source_title": "Anthropic Python SDK v0.118.0",
+    "score": 90,
+    "reason": "New SDK version with concrete API features (streaming, session events) for Claude integrations. Directly actionable for developers.",
+    "card_path": "generated/cards/184ed865c8ec.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-23-anthropic-python-sdk-v0-118-0-184ed865c8ec.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mrdit63nln2c",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mrdit63nln2c",
+    "format_variant": "plain",
+    "hashtags_used": [
+      "#OpenSource",
+      "#ClaudeCode",
+      "#Anthropic"
+    ],
+    "published_hour_utc": 18,
+    "published_weekday": "Thursday",
+    "composer_version": "2",
+    "card_variant": "editorial_release"
   }
 ]
