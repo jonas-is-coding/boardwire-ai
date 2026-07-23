@@ -8151,12 +8151,12 @@
   },
   {
     "id": "184ed865c8ec",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-07-22T17:08:17.347537Z",
+    "status": "approved",
+    "created_at": "2026-07-23T13:53:33.849717Z",
     "score": 90,
-    "reason": "New SDK version with concrete API features (streaming, session events) for Claude integrations. Passes Ships Test.",
-    "proposed_post": "Anthropic Python SDK v0.118.0 adds threads delta streaming and initial session events. Builders can now implement more responsive real-time Claude interactions and better manage agent sessions. Watch for future agentic capabilities.",
-    "source_angle": "Anthropic SDK update for real-time and agent features",
+    "reason": "New SDK version with concrete API features (streaming, session events) for Claude integrations. Directly actionable for developers.",
+    "proposed_post": "Anthropic Python SDK v0.118.0 adds streaming and session events. Builders can now create more responsive and stateful Claude integrations, improving UX and complex workflow management.",
+    "source_angle": "Anthropic Python SDK update for Claude integrations",
     "source_item": {
       "title": "Anthropic Python SDK v0.118.0",
       "source": "Anthropic Python SDK Releases",
@@ -8188,18 +8188,16 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-07-22T17:08:19.348423Z",
-    "defer_count": 1,
-    "original_score": 90,
-    "original_reason": "New SDK version with concrete API features (streaming, session events) for Claude integrations. Passes Ships Test."
+    "breaking": false,
+    "reactivated_at": "2026-07-23T13:53:33.849717Z"
   },
   {
     "id": "b3947bf21d04",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-07-22T17:08:19.269912Z",
+    "status": "approved",
+    "created_at": "2026-07-23T13:53:33.947852Z",
     "score": 60,
     "reason": "local newsworthiness fallback",
-    "proposed_post": "LangChain adds reasoning effort parameter.\n\nRelease 1.3.0 includes dependency vulnerability patches.\n\n#OpenSource #InfoSec",
+    "proposed_post": "LangChain updates infrastructure.\n\nLangChain v1.3.0 with local execution support.\n\n#TechNews #LocalLLM",
     "source_angle": "Local high-score + Sarah/OpenRouter fallback",
     "source_item": {
       "title": "LangChain v1.3.0",
@@ -8235,9 +8233,7 @@
     },
     "card_path": null,
     "is_llm_mode": false,
-    "deferred_at": "2026-07-22T17:08:19.405842Z",
-    "defer_count": 1,
-    "original_score": 60,
-    "original_reason": "local newsworthiness fallback"
+    "breaking": false,
+    "reactivated_at": "2026-07-23T13:53:33.947852Z"
   }
 ]
