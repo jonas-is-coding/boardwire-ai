@@ -1,18 +1,18 @@
 # Boardwire Engagement Report
 
-Generated: `2026-07-23T06:23:41.701100Z`
+Generated: `2026-07-24T06:18:25.652469Z`
 
 ## Summary
 
-- Measured posts: **146** of 150 published
+- Measured posts: **148** of 152 published
 - Median peak engagement: **0.0**
 - Average peak engagement: **0.6**
 - Top: **5** — Graphify-Labs/graphify — AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, o
 
 ## Patterns
 
-- Release-keyword posts: avg **0.6** (n=92) vs others avg **0.5** (n=54)
-- GitHub sources: avg **0.7** (n=109) vs other sources avg **0.3** (n=37)
+- Release-keyword posts: avg **0.6** (n=93) vs others avg **0.5** (n=55)
+- GitHub sources: avg **0.7** (n=111) vs other sources avg **0.3** (n=37)
 
 ## Engagement by published hour (UTC)
 
@@ -28,10 +28,10 @@ Generated: `2026-07-23T06:23:41.701100Z`
 - 12:00 UTC: avg **0.9** (n=7)
 - 13:00 UTC: avg **1.3** (n=6)
 - 14:00 UTC: avg **0.4** (n=7)
-- 15:00 UTC: avg **1.0** (n=11)
+- 15:00 UTC: avg **0.9** (n=12)
 - 16:00 UTC: avg **0.4** (n=12)
 - 17:00 UTC: avg **0.0** (n=7)
-- 18:00 UTC: avg **1.2** (n=8)
+- 18:00 UTC: avg **1.1** (n=9)
 - 19:00 UTC: avg **0.8** (n=6)
 - 20:00 UTC: avg **1.1** (n=16)
 - 21:00 UTC: insufficient data (n<5, have 3)
@@ -43,19 +43,20 @@ Generated: `2026-07-23T06:23:41.701100Z`
 - Monday: avg **0.7** (n=23)
 - Tuesday: avg **0.4** (n=19)
 - Wednesday: avg **0.5** (n=20)
-- Thursday: avg **0.2** (n=17)
+- Thursday: avg **0.2** (n=19)
 - Friday: avg **0.5** (n=25)
 - Saturday: avg **1.0** (n=22)
 - Sunday: avg **0.8** (n=20)
 
 ## Engagement by format variant
 
-- plain: avg **0.6** (n=144)
+- plain: avg **0.6** (n=146)
 - question: insufficient data (n<5, have 2)
 
 ## Engagement by card variant
 
-- editorial_release: insufficient data (n<5, have 2)
+- editorial_release: insufficient data (n<5, have 3)
+- editorial_security: insufficient data (n<5, have 1)
 - editorial_stat: insufficient data (n<5, have 3)
 
 ## Engagement by hashtag combination
@@ -63,12 +64,13 @@ Generated: `2026-07-23T06:23:41.701100Z`
 - #AI #HuggingFace #OpenWeights: insufficient data (n<5, have 1)
 - #AI #LLM: insufficient data (n<5, have 1)
 - #Anthropic #ClaudeCode #LLM: insufficient data (n<5, have 1)
-- #Anthropic #ClaudeCode #OpenSource: insufficient data (n<5, have 1)
+- #Anthropic #ClaudeCode #OpenSource: insufficient data (n<5, have 2)
+- #InfoSec #LocalLLM #OpenSource: insufficient data (n<5, have 1)
 - #OpenSource #OpenWeights: insufficient data (n<5, have 1)
 
 ## Version-release posts vs others
 
-- Version releases: avg **0.3** (n=66)
+- Version releases: avg **0.3** (n=68)
 - Others: avg **0.8** (n=80)
   (Version-only releases are now blocked by the quality gate; this group should trend to n=0.)
 
@@ -315,7 +317,7 @@ Generated: `2026-07-23T06:23:41.701100Z`
    > 27B-class on-device LLMs arrive via 1-bit quantization. Bonsai 27B runs on a smartphone with 1-bit weights, enabling local mobile AI inferen…
 
 49. **1 pts** — Inkling – Open-Weights 975B Parameter LLM
-   likes 1 · reposts 0 · replies 0 · quotes 0 · age 168h · score 90
+   likes 1 · reposts 0 · replies 0 · quotes 0 · age 192h · score 90
    https://thinkingmachines.ai/inkling/
    > Open-weight 975B LLM ships as a new foundation model. Inkling releases 975B open-weight LLM for deployment and fine-tuning, Apache 2.0 licen…
 
@@ -785,22 +787,32 @@ Generated: `2026-07-23T06:23:41.701100Z`
    > Cursor 0day exposes dev repos to remote execution. Mindgard disclosed RCE/data exfiltration flaw; 71 HN points. Update or isolate Cursor bui…
 
 143. **0 pts** — Anthropic Python SDK v0.117.0
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 135h · score 65
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 159h · score 65
    https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.117.0
    > Anthropic adds dreaming and MCP Tunnels to Python SDK. Anthropic SDK v0.117.0 ships dreaming API, MCP Tunnels, and secretstr fixes with +1.2…
 
 144. **0 pts** — Claude Code v2.1.214
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 63h · score 65
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 87h · score 65
    https://github.com/anthropics/claude-code/releases/tag/v2.1.214
    > Claude Code v2.1.214 tightens local permission checks. Fixes allow-rule bypass in dir/** patterns and PowerShell 5.1 bypass. +146★ today. #L…
 
 145. **0 pts** — Introducing Cosmos 3 Edge
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 22h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 46h · score 90
    https://huggingface.co/blog/nvidia/cosmos3edge
    > Hugging Face releases Cosmos 3 Edge. Deploy AI on edge devices for local inference, Apache 2.0. Anyone running Cosmos 3 Edge in prod? #AI #O…
 
 146. **0 pts** — Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 15h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 39h · score 90
    https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/
    > Google releases Gemini Flash models. Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber offer new cost/performance options, +726 point #L…
+
+147. **0 pts** — LangChain v1.3.0
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 15h · score 60
+   https://github.com/langchain-ai/langchain/releases/tag/langchain-xai%3D%3D1.3.0
+   > LangChain adds local execution. LangChain v1.3.0 with local execution support, + reasoning effort parameter. #OpenSource #InfoSec #LocalLLM
+
+148. **0 pts** — Anthropic Python SDK v0.118.0
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 12h · score 90
+   https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.118.0
+   > Anthropic enhances Claude integrations. Adds streaming and session events to Python SDK v0.118.0. #OpenSource #ClaudeCode #Anthropic
 
