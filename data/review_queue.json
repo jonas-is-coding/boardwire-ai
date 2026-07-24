@@ -8276,7 +8276,7 @@
   },
   {
     "id": "90e0712094bf",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-07-23T17:09:58.690879Z",
     "score": 92,
     "reason": "Direct release from Anthropic, fixing critical bugs and improving workflow for Claude Code users. Ships today.",
@@ -8316,6 +8316,50 @@
     "deferred_at": "2026-07-23T17:09:59.887788Z",
     "defer_count": 1,
     "original_score": 92,
-    "original_reason": "Direct release from Anthropic, fixing critical bugs and improving workflow for Claude Code users. Ships today."
+    "original_reason": "Direct release from Anthropic, fixing critical bugs and improving workflow for Claude Code users. Ships today.",
+    "rejected_at": "2026-07-24T13:41:14.581629Z"
+  },
+  {
+    "id": "0f588ad13b9b",
+    "status": "approved",
+    "created_at": "2026-07-24T13:41:14.482194Z",
+    "score": 65,
+    "reason": "local newsworthiness fallback",
+    "proposed_post": "Anthropic adds model context window exceeded stop reason.\n\nAnthropic Python SDK v0.119.0 with binary file handling.\n\n#OpenSource #ClaudeCode #Anthropic",
+    "source_angle": "Local high-score + Sarah/OpenRouter fallback",
+    "source_item": {
+      "title": "Anthropic Python SDK v0.119.0",
+      "source": "Anthropic Python SDK Releases",
+      "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.119.0",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 65,
+      "summary": "<h2>0.119.0 (2026-07-23)</h2>\n<p>Full Changelog: <a href=\"https://github.com/anthropics/anthropic-sdk-python/compare/v0.118.0...v0.119.0\">v0.118.0...v0.119.0</a></p>\n<h3>Features</h3>\n<ul>\n<li><strong>api:</strong> add new stop reason 'model_context_window_exceeded' (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/d983cdecdea27fb8ae36fd293930b978c9bebf4f\">d983cde</a>)</li>\n</ul>\n<h3>Bug Fixes</h3>\n<ul>\n<li><strong>tools:</strong> handle binary files in agent toolset read/edit (<a href=\"https://github.com/anthropics/anthropic-sdk-python/issues/283\">#283</a>) (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/417b76b9adcb69ee9effa2e9af1536dd08e6764e\">417b76b</a>)</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: handle, toolset, v0.119.0, bug, reason.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Anthropic Python SDK Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "handle",
+          "toolset",
+          "v0.119.0",
+          "bug",
+          "reason",
+          "/h2",
+          "href",
+          "tools"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: handle, toolset, v0.119.0, bug. Lead: Anthropic Python SDK v0.119.0",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "breaking": false,
+    "claire_note": "Aus *Anthropic Python SDK Releases* ist ein starker Kandidat reingekommen: *Anthropic Python SDK v0.119.0*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 65_",
+    "chloe_note": "Kurzes Update: *Anthropic Python SDK v0.119.0* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: handle, toolset, v0.119.0, bug. Ich habe es mit 65 Punkten bewertet. Hier der Link: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.119.0"
   }
 ]

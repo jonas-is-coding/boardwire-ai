@@ -1,0 +1,11 @@
+[
+  {
+    "rejected_at": "2026-07-24T13:41:14.581379Z",
+    "stage": "review",
+    "title": "Claude Code v2.1.218",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.218",
+    "reasons": [
+      "Version-only release without concrete capability: 'Claude Code v2.1.218'"
+    ]
+  }
+]
