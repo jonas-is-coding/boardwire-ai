@@ -4,5 +4,11 @@
     "version": "v0.119.0",
     "published_at": "2026-07-24T15:14:10.902583Z",
     "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.119.0"
+  },
+  {
+    "project": "Claude Code",
+    "version": "v2.1.219",
+    "published_at": "2026-07-24T19:01:50.960659Z",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219"
   }
 ]

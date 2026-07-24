@@ -8405,11 +8405,11 @@
   },
   {
     "id": "cfd36b6437e0",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-24T17:21:23.442663Z",
     "score": 92,
     "reason": "New Claude Opus 5 model with 1M context and pricing released via Claude Code v2.1.219, plus new sandbox security and directory hooks.",
-    "proposed_post": "Claude Code v2.1.219 ships Claude Opus 5 as the new default Opus model, offering 1M context at $10/$50 per Mtok. Builders can now process significantly larger inputs and leverage a faster mode for complex code generation and analysis tasks, impacting cost and performance.",
+    "proposed_post": "Claude Opus 5 model boosts context to 1M.\n\nClaude Code v2.1.219 adds 1M context at $10/$50 per Mtok, plus sandbox security.\n\n#LLM #ClaudeCode #Anthropic",
     "source_angle": "Claude Code v2.1.219 release with Opus 5, 1M context, and new dev features.",
     "source_item": {
       "title": "Claude Code v2.1.219",
@@ -8440,10 +8440,29 @@
         "cluster_score": 45
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/cfd36b6437e0.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, check this out. Claude just dropped Opus 5.\n\nThis is a big deal for devs: 1M context at $10/$50 per Mtok. That's a serious upgrade for anyone building with large contexts and needing to manage costs. Also, the 'sandbox.network.strictAllowlist' setting is clutch for tighter security on sandboxed commands. More control, less prompt fatigue.",
-    "chloe_note": "*Claude Code v2.1.219* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New Claude Opus 5 model with 1M context and pricing released via Claude Code v2.1.219, plus new sandbox security and directory hooks.Cluster context: 1 sources, engagement 0. Common terms: working, now, mid-session, fable. Bewertung: 92. Quelle: https://github.com/anthropics/claude-code/releases/tag/v2.1.219"
+    "chloe_note": "*Claude Code v2.1.219* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New Claude Opus 5 model with 1M context and pricing released via Claude Code v2.1.219, plus new sandbox security and directory hooks.Cluster context: 1 sources, engagement 0. Common terms: working, now, mid-session, fable. Bewertung: 92. Quelle: https://github.com/anthropics/claude-code/releases/tag/v2.1.219",
+    "sarah_package": {
+      "title": "Claude Opus 5 model boosts context to 1M.",
+      "subtitle": "Claude Code v2.1.219 adds 1M context at $10/$50 per Mtok, plus sandbox security.",
+      "description": "New Claude Opus 5 model offers faster mode for complex code generation and analysis tasks, with added 'sandbox.network.strictAllowlist' sett",
+      "hashtags": [
+        "#LLM",
+        "#ClaudeCode",
+        "#Anthropic"
+      ],
+      "question": "Anyone using Claude Opus 5 in production?",
+      "card_stat": "1M",
+      "card_claim": "Faster mode for complex tasks",
+      "card_context": "Added sandbox.security.strictAllowlist setting and DirectoryAdded hook for tighter control"
+    },
+    "composer_version": "2",
+    "card_layout": "release",
+    "card_variant": "editorial_release",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-24-claude-code-v2-1-219-cfd36b6437e0.md",
+    "published_at": "2026-07-24T19:01:50.960659Z"
   }
 ]

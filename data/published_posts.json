@@ -2525,5 +2525,35 @@
     "published_weekday": "Friday",
     "composer_version": "2",
     "card_variant": "editorial_release"
+  },
+  {
+    "id": "cfd36b6437e0",
+    "published_at": "2026-07-24T19:01:50.960659Z",
+    "platform": "bluesky",
+    "post": "Claude Opus 5 model boosts context to 1M.\n\nClaude Code v2.1.219 adds 1M context at $10/$50 per Mtok, plus sandbox security.\n\n#LLM #ClaudeCode #Anthropic",
+    "source_link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219",
+    "source_title": "Claude Code v2.1.219",
+    "score": 92,
+    "reason": "New Claude Opus 5 model with 1M context and pricing released via Claude Code v2.1.219, plus new sandbox security and directory hooks.",
+    "card_path": "generated/cards/cfd36b6437e0.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-24-claude-code-v2-1-219-cfd36b6437e0.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mrg22se2n62d",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mrg22se2n62d",
+    "format_variant": "thread",
+    "hashtags_used": [
+      "#LLM",
+      "#ClaudeCode",
+      "#Anthropic"
+    ],
+    "published_hour_utc": 19,
+    "published_weekday": "Friday",
+    "composer_version": "2",
+    "card_variant": "editorial_release",
+    "thread_uris": [
+      "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mrg22se2n62d",
+      "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mrg22u2dl524",
+      "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mrg22u6n752l"
+    ],
+    "thread_partial": false
   }
 ]
