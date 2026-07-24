@@ -8321,11 +8321,11 @@
   },
   {
     "id": "0f588ad13b9b",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-24T13:41:14.482194Z",
     "score": 65,
     "reason": "local newsworthiness fallback",
-    "proposed_post": "Anthropic adds model context window exceeded stop reason.\n\nAnthropic Python SDK v0.119.0 with binary file handling.\n\n#OpenSource #ClaudeCode #Anthropic",
+    "proposed_post": "Anthropic adds model context window exceeded stop reason.\n\nAnthropic Python SDK v0.119.0 with binary file handling, +0 stars today.\n\n#OpenSource #ClaudeCode #Anthropic",
     "source_angle": "Local high-score + Sarah/OpenRouter fallback",
     "source_item": {
       "title": "Anthropic Python SDK v0.119.0",
@@ -8356,10 +8356,29 @@
         "cluster_score": 45
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/0f588ad13b9b.png",
     "is_llm_mode": false,
     "breaking": false,
     "claire_note": "Aus *Anthropic Python SDK Releases* ist ein starker Kandidat reingekommen: *Anthropic Python SDK v0.119.0*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 65_",
-    "chloe_note": "Kurzes Update: *Anthropic Python SDK v0.119.0* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: handle, toolset, v0.119.0, bug. Ich habe es mit 65 Punkten bewertet. Hier der Link: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.119.0"
+    "chloe_note": "Kurzes Update: *Anthropic Python SDK v0.119.0* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: handle, toolset, v0.119.0, bug. Ich habe es mit 65 Punkten bewertet. Hier der Link: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.119.0",
+    "sarah_package": {
+      "title": "Anthropic adds model context window exceeded stop reason.",
+      "subtitle": "Anthropic Python SDK v0.119.0 with binary file handling, +0 stars today.",
+      "description": "New stop reason 'model_context_window_exceeded' and binary file handling for agent toolset, released under Apache 2.0, available on GitHub.",
+      "hashtags": [
+        "#OpenSource",
+        "#ClaudeCode",
+        "#Anthropic"
+      ],
+      "question": "Anyone using this stop reason in production?",
+      "card_stat": "v0.119.0",
+      "card_claim": "Model context window exceeded is now a stop reason",
+      "card_context": "Apache 2.0 · binary file handling for agent toolset · available on GitHub"
+    },
+    "composer_version": "2",
+    "card_layout": "release",
+    "card_variant": "editorial_release",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-24-anthropic-python-sdk-v0-119-0-0f588ad13b9b.md",
+    "published_at": "2026-07-24T15:14:10.902583Z"
   }
 ]
