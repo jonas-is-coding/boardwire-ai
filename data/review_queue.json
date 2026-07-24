@@ -8380,5 +8380,70 @@
     "card_variant": "editorial_release",
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-24-anthropic-python-sdk-v0-119-0-0f588ad13b9b.md",
     "published_at": "2026-07-24T15:14:10.902583Z"
+  },
+  {
+    "id": "e4a08bd3b023",
+    "status": "deferred_generation_unavailable",
+    "created_at": "2026-07-24T17:21:25.304162Z",
+    "score": 60,
+    "reason": "deferred: generation provider unavailable",
+    "proposed_post": "",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Show HN: OneCLI – OSS credential gateway that keeps secrets out of AI agents",
+      "source": "HackerNews",
+      "link": "https://github.com/onecli/onecli",
+      "source_tier": 3,
+      "engagement_score": 118.0,
+      "local_newsworthiness_score": 60
+    },
+    "deferred_at": "2026-07-24T17:21:25.304100Z",
+    "defer_count": 1,
+    "original_score": 60,
+    "original_reason": "deferred: generation provider unavailable",
+    "card_path": null
+  },
+  {
+    "id": "cfd36b6437e0",
+    "status": "approved",
+    "created_at": "2026-07-24T17:21:23.442663Z",
+    "score": 92,
+    "reason": "New Claude Opus 5 model with 1M context and pricing released via Claude Code v2.1.219, plus new sandbox security and directory hooks.",
+    "proposed_post": "Claude Code v2.1.219 ships Claude Opus 5 as the new default Opus model, offering 1M context at $10/$50 per Mtok. Builders can now process significantly larger inputs and leverage a faster mode for complex code generation and analysis tasks, impacting cost and performance.",
+    "source_angle": "Claude Code v2.1.219 release with Opus 5, 1M context, and new dev features.",
+    "source_item": {
+      "title": "Claude Code v2.1.219",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 0,
+      "summary": "<h2>What's changed</h2>\n<ul>\n<li>Added Claude Opus 5 (<code>claude-opus-5</code>), now the default Opus model — 1M context, fast mode at $10/$50 per Mtok</li>\n<li>Added <code>sandbox.network.strictAllowlist</code> setting to deny non-allowlisted hosts for sandboxed commands without prompting</li>\n<li>Added <code>DirectoryAdded</code> hook that fires after <code>/add-dir</code> or the SDK <code>register_repo_root</code> control request registers a new working directory mid-session</li>\n<li>Added <code>mcp_server_errors</code> to the headless stream-json init event, listing <code>--mcp-config</code> entries skipped by config validation; terminal runs print a startup warning</li>\n<li>Added the <code>workflowSizeGuideline</code> settings key so the advisory Dynamic workflow size guideline can be set from any settings file; the <code>/config</code> row is hidden while one does</li>\n<li>Added nested subagent forwarding in stream-json: subagents spawned at depth-2+ now appear when <code>--forward-subagent-text</code> is set, keyed by their spawning Agent <code>tool_use</code> id</li>\n<li>Fixed <code>claude -p</code> text output dropping the answer already produced when a turn dies on a mid-stream API error</li>\n<li>Added HTTP status and error text to <code>claude mcp list</code> and <code>/mcp</code> when a server fails to connect, and a warning for MCP config values with hidden leading or trailing whitespace</li>\n<li>Fixed a permission you approved while a self-hosted runner was restarting being dropped when the session resumed, so the approved action now runs</li>\n<li>Fixed the Fable model row showing \"Requires usage credits\" for plans that include it, when a stale cache had baked the label in</li>\n<li>Fixed a SIGTERM arriving while a self-hosted runner was starting up leaving a stale active row until the lease expired; it now deregisters cleanly</li>\n<li>Added structured failure categories to self-hosted runner spawn and session failures, so hook errors, runner crashes and config errors can be told apart</li>\n<li>Fixed the <code>/model</code> picker showing the merged Opus row as plain \"Opus\" instead of \"Opus (1M context)\"</li>\n<li>Fixed copy-on-select inside GNU screen printing base64 into the terminal instead of copying the selection</li>\n<li>Fixed Remote Control clients keeping a stale fast-mode status after a model switch, reconnect, or failed org check</li>\n<li>Fixed <code>CLAUDE_CODE_GIT_BASH_PATH</code> on Windows exiting or being used as bash when the path isn't a bash/sh binary; it's now ignored with a warning</li>\n<li>Fixed Vim mode: pressing ← on an empty prompt now returns to the agent view from NORMAL mode, not just INSERT</li>\n<li>Fixed screen-reader mode rewriting the entire input line on every keystroke instead of echoing only the typed character</li>\n<li>Improved the \"Remote Control is only available via api.anthropic.com\" error to name the specific setting that caused it</li>\n<li>Improved <code>claude --teleport</code> to show which repo your current checkout points at when it doesn't match the session's repo</li>\n<li>Changed dynamic workflows to default to a medium size guideline (aim for fewer than 15 agents); pick another size or unrestricted with Dynamic workflow size in <code>/config</code></li>\n<li>Changed managed MCP allowlist/denylist <code>${VAR}</code> entries to resolve from the startup environment and managed-settings env instead of settings-file env</li>\n<li>Changed the <code>/model</code> picker to highlight only the newest model's name, so the highlight marks the new release rather than an arbitrary subset of the list</li>\n<li>Added the current default workflow size to the running-workflow status line, with a pointer to <code>/config</code> for changing it</li>\n<li>Removed Opus 4.7 from fast mode; <code>/fast</code> now applies to Opus 5 and Opus 4.8</li>\n<li>Updated the claude-api skill to default to Claude Opus 5, with a migration path from Opus 4.8</li>\n<li>Subagents can now spawn nested subagents up to depth 3 by default (was 1); set CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH=1 to disable nesting</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: working, now, mid-session, fable, until.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Claude Code Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "working",
+          "now",
+          "mid-session",
+          "fable",
+          "until",
+          "bash",
+          "key",
+          "workflow"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: working, now, mid-session, fable. Lead: Claude Code v2.1.219",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, check this out. Claude just dropped Opus 5.\n\nThis is a big deal for devs: 1M context at $10/$50 per Mtok. That's a serious upgrade for anyone building with large contexts and needing to manage costs. Also, the 'sandbox.network.strictAllowlist' setting is clutch for tighter security on sandboxed commands. More control, less prompt fatigue.",
+    "chloe_note": "*Claude Code v2.1.219* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New Claude Opus 5 model with 1M context and pricing released via Claude Code v2.1.219, plus new sandbox security and directory hooks.Cluster context: 1 sources, engagement 0. Common terms: working, now, mid-session, fable. Bewertung: 92. Quelle: https://github.com/anthropics/claude-code/releases/tag/v2.1.219"
   }
 ]
