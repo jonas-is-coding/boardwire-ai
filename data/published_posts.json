@@ -2555,5 +2555,28 @@
       "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mrg22u6n752l"
     ],
     "thread_partial": false
+  },
+  {
+    "id": "e4a08bd3b023",
+    "published_at": "2026-07-27T15:59:58.399821Z",
+    "platform": "bluesky",
+    "post": "AI agents get secrets management.\n\nOneCLI gateway keeps credentials out of memory, +32 stars on GitHub.\n\nAnyone using OneCLI in prod?\n\n#AI #AIAgents",
+    "source_link": "https://github.com/onecli/onecli",
+    "source_title": "Show HN: OneCLI – OSS credential gateway that keeps secrets out of AI agents",
+    "score": 90,
+    "reason": "Open-source tool launch for AI agent secret management. Directly usable and addresses a critical builder need.",
+    "card_path": "generated/cards/e4a08bd3b023.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-26-show-hn-onecli-oss-credential-gateway-that-keeps-secrets-out-of-ai-agents-e4a08bd3b023.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mrnbcg6osh2u",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mrnbcg6osh2u",
+    "format_variant": "question",
+    "hashtags_used": [
+      "#AI",
+      "#AIAgents"
+    ],
+    "published_hour_utc": 16,
+    "published_weekday": "Monday",
+    "composer_version": "2",
+    "card_variant": "editorial_repo"
   }
 ]

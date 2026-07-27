@@ -8383,11 +8383,11 @@
   },
   {
     "id": "e4a08bd3b023",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-26T21:24:28.041498Z",
     "score": 90,
     "reason": "Open-source tool launch for AI agent secret management. Directly usable and addresses a critical builder need.",
-    "proposed_post": "OneCLI, an open-source credential gateway, launched on GitHub. It allows AI agents to access APIs and services without directly exposing secrets in prompts or memory, improving security for production deployments.",
+    "proposed_post": "AI agents get secrets management.\n\nOneCLI gateway keeps credentials out of memory, +32 stars on GitHub.\n\nAnyone using OneCLI in prod?\n\n#AI #AIAgents",
     "source_angle": "Open-source tool for AI agent secret management",
     "source_item": {
       "title": "Show HN: OneCLI – OSS credential gateway that keeps secrets out of AI agents",
@@ -8397,10 +8397,28 @@
       "engagement_score": 118.0,
       "local_newsworthiness_score": 60
     },
-    "card_path": null,
+    "card_path": "generated/cards/e4a08bd3b023.png",
     "breaking": false,
     "reactivated_at": "2026-07-26T21:24:28.041498Z",
-    "is_llm_mode": true
+    "is_llm_mode": true,
+    "sarah_package": {
+      "title": "AI agents get secrets management.",
+      "subtitle": "OneCLI gateway keeps credentials out of memory, +32 stars on GitHub.",
+      "description": "Open-source OneCLI allows AI agents to access APIs without exposing secrets, improving production security.",
+      "hashtags": [
+        "#AI",
+        "#AIAgents"
+      ],
+      "question": "Anyone using OneCLI in prod?",
+      "card_stat": "+32",
+      "card_claim": "Secrets out of agent memory",
+      "card_context": "OSS credential gateway for AI agents, improves production security"
+    },
+    "composer_version": "2",
+    "card_layout": "repo",
+    "card_variant": "editorial_repo",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-26-show-hn-onecli-oss-credential-gateway-that-keeps-secrets-out-of-ai-agents-e4a08bd3b023.md",
+    "published_at": "2026-07-27T15:59:58.399821Z"
   },
   {
     "id": "cfd36b6437e0",
