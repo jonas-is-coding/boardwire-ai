@@ -1,6 +1,6 @@
 # Boardwire Engagement Report
 
-Generated: `2026-07-26T06:28:56.357534Z`
+Generated: `2026-07-27T06:54:54.170969Z`
 
 ## Summary
 
@@ -318,12 +318,12 @@ Generated: `2026-07-26T06:28:56.357534Z`
    > 27B-class on-device LLMs arrive via 1-bit quantization. Bonsai 27B runs on a smartphone with 1-bit weights, enabling local mobile AI inferen…
 
 49. **1 pts** — Inkling – Open-Weights 975B Parameter LLM
-   likes 1 · reposts 0 · replies 0 · quotes 0 · age 240h · score 90
+   likes 1 · reposts 0 · replies 0 · quotes 0 · age 264h · score 90
    https://thinkingmachines.ai/inkling/
    > Open-weight 975B LLM ships as a new foundation model. Inkling releases 975B open-weight LLM for deployment and fine-tuning, Apache 2.0 licen…
 
 50. **1 pts** — Claude Code v2.1.219
-   likes 0 · reposts 0 · replies 1 · quotes 0 · age 35h · score 92
+   likes 0 · reposts 0 · replies 1 · quotes 0 · age 60h · score 92
    https://github.com/anthropics/claude-code/releases/tag/v2.1.219
    > Claude Opus 5 model boosts context to 1M. Claude Code v2.1.219 adds 1M context at $10/$50 per Mtok, plus sandbox security. #LLM #ClaudeCode …
 
@@ -793,37 +793,37 @@ Generated: `2026-07-26T06:28:56.357534Z`
    > Cursor 0day exposes dev repos to remote execution. Mindgard disclosed RCE/data exfiltration flaw; 71 HN points. Update or isolate Cursor bui…
 
 144. **0 pts** — Anthropic Python SDK v0.117.0
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 208h · score 65
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 232h · score 65
    https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.117.0
    > Anthropic adds dreaming and MCP Tunnels to Python SDK. Anthropic SDK v0.117.0 ships dreaming API, MCP Tunnels, and secretstr fixes with +1.2…
 
 145. **0 pts** — Claude Code v2.1.214
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 135h · score 65
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 159h · score 65
    https://github.com/anthropics/claude-code/releases/tag/v2.1.214
    > Claude Code v2.1.214 tightens local permission checks. Fixes allow-rule bypass in dir/** patterns and PowerShell 5.1 bypass. +146★ today. #L…
 
 146. **0 pts** — Introducing Cosmos 3 Edge
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 94h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 119h · score 90
    https://huggingface.co/blog/nvidia/cosmos3edge
    > Hugging Face releases Cosmos 3 Edge. Deploy AI on edge devices for local inference, Apache 2.0. Anyone running Cosmos 3 Edge in prod? #AI #O…
 
 147. **0 pts** — Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 87h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 112h · score 90
    https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/
    > Google releases Gemini Flash models. Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber offer new cost/performance options, +726 point #L…
 
 148. **0 pts** — LangChain v1.3.0
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 63h · score 60
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 87h · score 60
    https://github.com/langchain-ai/langchain/releases/tag/langchain-xai%3D%3D1.3.0
    > LangChain adds local execution. LangChain v1.3.0 with local execution support, + reasoning effort parameter. #OpenSource #InfoSec #LocalLLM
 
 149. **0 pts** — Anthropic Python SDK v0.118.0
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 60h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 84h · score 90
    https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.118.0
    > Anthropic enhances Claude integrations. Adds streaming and session events to Python SDK v0.118.0. #OpenSource #ClaudeCode #Anthropic
 
 150. **0 pts** — Anthropic Python SDK v0.119.0
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 39h · score 65
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 64h · score 65
    https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.119.0
    > Anthropic adds model context window exceeded stop reason. Anthropic Python SDK v0.119.0 with binary file handling, +0 stars today. #OpenSour…
 
