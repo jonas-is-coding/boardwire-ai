@@ -2608,5 +2608,28 @@
       "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mrpqvslgwn2o"
     ],
     "thread_partial": false
+  },
+  {
+    "id": "b8b4faa53cae",
+    "published_at": "2026-07-28T18:54:58.712718Z",
+    "platform": "bluesky",
+    "post": "Opus 5 performance benchmarked on SlopCodeBench.\n\nDetailed report shows Opus 5 coding…\n\nAnyone using Opus 5 for production code generation?\n\n#MachineLearning #AI",
+    "source_link": "https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/benchmarking-opus-5-on-slop-code-bench.md",
+    "source_title": "Benchmarking Opus 5 on SlopCodeBench",
+    "score": 85,
+    "reason": "Detailed benchmark of Opus 5 on a coding task provides actionable performance data for builders.",
+    "card_path": "generated/cards/b8b4faa53cae.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-28-benchmarking-opus-5-on-slopcodebench-b8b4faa53cae.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mrq3k6ukgs2n",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mrq3k6ukgs2n",
+    "format_variant": "question",
+    "hashtags_used": [
+      "#MachineLearning",
+      "#AI"
+    ],
+    "published_hour_utc": 18,
+    "published_weekday": "Tuesday",
+    "composer_version": "2",
+    "card_variant": "editorial_repo"
   }
 ]

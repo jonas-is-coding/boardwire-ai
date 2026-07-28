@@ -8484,11 +8484,11 @@
   },
   {
     "id": "b8b4faa53cae",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-28T17:19:58.698488Z",
     "score": 85,
     "reason": "Detailed benchmark of Opus 5 on a coding task provides actionable performance data for builders.",
-    "proposed_post": "GitHub report benchmarks Opus 5 on SlopCodeBench, detailing its performance for coding agents. Review the methodology and results to inform model selection or optimize context engineering for production code generation.",
+    "proposed_post": "Opus 5 performance benchmarked on SlopCodeBench.\n\nDetailed report shows Opus 5 coding…\n\nAnyone using Opus 5 for production code generation?\n\n#MachineLearning #AI",
     "source_angle": "Opus 5 coding agent benchmark details",
     "source_item": {
       "title": "Benchmarking Opus 5 on SlopCodeBench",
@@ -8498,10 +8498,28 @@
       "engagement_score": 388.5,
       "local_newsworthiness_score": 60
     },
-    "card_path": null,
+    "card_path": "generated/cards/b8b4faa53cae.png",
     "breaking": false,
     "reactivated_at": "2026-07-28T17:19:58.698488Z",
-    "is_llm_mode": true
+    "is_llm_mode": true,
+    "sarah_package": {
+      "title": "Opus 5 performance benchmarked on SlopCodeBench.",
+      "subtitle": "Detailed report shows Opus 5 coding task results, informing model selection.",
+      "description": "GitHub report outlines methodology and results for production code generation optimization.",
+      "hashtags": [
+        "#MachineLearning",
+        "#AI"
+      ],
+      "question": "Anyone using Opus 5 for production code generation?",
+      "card_stat": "85",
+      "card_claim": "Opus 5 performance data available",
+      "card_context": "SlopCodeBench benchmarks inform model selection and context engineering."
+    },
+    "composer_version": "2",
+    "card_layout": "repo",
+    "card_variant": "editorial_repo",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-28-benchmarking-opus-5-on-slopcodebench-b8b4faa53cae.md",
+    "published_at": "2026-07-28T18:54:58.712718Z"
   },
   {
     "id": "42c78f3a1c41",
