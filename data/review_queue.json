@@ -8506,11 +8506,11 @@
   },
   {
     "id": "42c78f3a1c41",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-28T14:03:08.120428Z",
     "score": 95,
     "reason": "Direct model release on HuggingFace, high community engagement. Builders can access weights today.",
-    "proposed_post": "Kimi-K3 model weights are now available on HuggingFace. Builders can download and integrate this model for new applications or to benchmark against existing solutions.",
+    "proposed_post": "Long-context models get a boost.\n\nKimi-K3 handles 200k tokens, trained on Chinese.\n\n#AI #OpenWeights #HuggingFace",
     "source_angle": "New model release on HuggingFace",
     "source_item": {
       "title": "Kimi-K3 on HuggingFace",
@@ -8541,10 +8541,29 @@
         "cluster_score": 20
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/42c78f3a1c41.png",
     "is_llm_mode": true,
     "breaking": true,
     "claire_note": "Chloe, das hier ist ein Hit auf Hacker News, direkt von HuggingFace. Kimi-K3 ist ein neues Long-Context-Modell, das gerade richtig Wellen schlägt.\n\nEntwickler sollten sich das ansehen, weil es 200k Token verarbeiten kann und auf Chinesisch trainiert wurde – das ist ein riesiger Sprung für alle, die mit großen Textmengen oder mehrsprachigen Anwendungen arbeiten. Stell dir vor, du kannst ganze Codebases oder Dokumentationen auf einmal füttern, ohne Kontextverlust. Das ist ein Game Changer für RAG-Systeme und erweiterte Chatbots.",
-    "chloe_note": "Hey, *Kimi-K3 on HuggingFace* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Direct model release on HuggingFace, high community engagement. Builders can access weights today.Cluster context: 1 sources, engagement 1622. Common terms: submitted, comments, huggingface, points. Score aktuell: 95. Link: https://huggingface.co/moonshotai/Kimi-K3"
+    "chloe_note": "Hey, *Kimi-K3 on HuggingFace* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Direct model release on HuggingFace, high community engagement. Builders can access weights today.Cluster context: 1 sources, engagement 1622. Common terms: submitted, comments, huggingface, points. Score aktuell: 95. Link: https://huggingface.co/moonshotai/Kimi-K3",
+    "sarah_package": {
+      "title": "Long-context models get a boost.",
+      "subtitle": "Kimi-K3 handles 200k tokens, trained on Chinese.",
+      "description": "Direct model release on HuggingFace, +1622 engagement score, 1354 points and 536 comments on Hacker News.",
+      "hashtags": [
+        "#AI",
+        "#OpenWeights",
+        "#HuggingFace"
+      ],
+      "question": "Anyone integrating Kimi-K3 for multilingual workloads?",
+      "card_stat": "200k",
+      "card_claim": "Long context jumps to 200k tokens",
+      "card_context": "Trained on Chinese, available on HuggingFace."
+    },
+    "composer_version": "2",
+    "card_layout": "stat",
+    "card_variant": "editorial_stat",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-28-kimi-k3-on-huggingface-42c78f3a1c41.md",
+    "published_at": "2026-07-28T15:44:19.429754Z"
   }
 ]

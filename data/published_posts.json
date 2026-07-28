@@ -2578,5 +2578,35 @@
     "published_weekday": "Monday",
     "composer_version": "2",
     "card_variant": "editorial_repo"
+  },
+  {
+    "id": "42c78f3a1c41",
+    "published_at": "2026-07-28T15:44:19.429754Z",
+    "platform": "bluesky",
+    "post": "Long-context models get a boost.\n\nKimi-K3 handles 200k tokens, trained on Chinese.\n\n#AI #OpenWeights #HuggingFace",
+    "source_link": "https://huggingface.co/moonshotai/Kimi-K3",
+    "source_title": "Kimi-K3 on HuggingFace",
+    "score": 95,
+    "reason": "Direct model release on HuggingFace, high community engagement. Builders can access weights today.",
+    "card_path": "generated/cards/42c78f3a1c41.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-28-kimi-k3-on-huggingface-42c78f3a1c41.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mrpqvj2uii2d",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mrpqvj2uii2d",
+    "format_variant": "thread",
+    "hashtags_used": [
+      "#AI",
+      "#OpenWeights",
+      "#HuggingFace"
+    ],
+    "published_hour_utc": 15,
+    "published_weekday": "Tuesday",
+    "composer_version": "2",
+    "card_variant": "editorial_stat",
+    "thread_uris": [
+      "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mrpqvj2uii2d",
+      "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mrpqvmyv6b2n",
+      "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mrpqvslgwn2o"
+    ],
+    "thread_partial": false
   }
 ]
