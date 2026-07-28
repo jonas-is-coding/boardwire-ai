@@ -8481,5 +8481,70 @@
     "card_variant": "editorial_release",
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-24-claude-code-v2-1-219-cfd36b6437e0.md",
     "published_at": "2026-07-24T19:01:50.960659Z"
+  },
+  {
+    "id": "b8b4faa53cae",
+    "status": "deferred_generation_unavailable",
+    "created_at": "2026-07-28T14:03:10.601646Z",
+    "score": 60,
+    "reason": "deferred: generation provider unavailable",
+    "proposed_post": "",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Benchmarking Opus 5 on SlopCodeBench",
+      "source": "HackerNews",
+      "link": "https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/benchmarking-opus-5-on-slop-code-bench.md",
+      "source_tier": 3,
+      "engagement_score": 388.5,
+      "local_newsworthiness_score": 60
+    },
+    "deferred_at": "2026-07-28T14:03:10.601612Z",
+    "defer_count": 1,
+    "original_score": 60,
+    "original_reason": "deferred: generation provider unavailable",
+    "card_path": null
+  },
+  {
+    "id": "42c78f3a1c41",
+    "status": "approved",
+    "created_at": "2026-07-28T14:03:08.120428Z",
+    "score": 95,
+    "reason": "Direct model release on HuggingFace, high community engagement. Builders can access weights today.",
+    "proposed_post": "Kimi-K3 model weights are now available on HuggingFace. Builders can download and integrate this model for new applications or to benchmark against existing solutions.",
+    "source_angle": "New model release on HuggingFace",
+    "source_item": {
+      "title": "Kimi-K3 on HuggingFace",
+      "source": "HackerNews",
+      "link": "https://huggingface.co/moonshotai/Kimi-K3",
+      "source_tier": 3,
+      "engagement_score": 1622.0,
+      "local_newsworthiness_score": 45,
+      "summary": "1354 points, 536 comments on Hacker News — submitted by nateb2022 — original: https://huggingface.co/moonshotai/Kimi-K3\n[Cluster context: 1 sources, engagement 1622, common terms: submitted, comments, huggingface, points, hacker.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 1622,
+        "common_terms": [
+          "submitted",
+          "comments",
+          "huggingface",
+          "points",
+          "hacker",
+          "536",
+          "1354",
+          "nateb2022"
+        ],
+        "cluster_summary": "1 sources, engagement 1622. Common terms: submitted, comments, huggingface, points. Lead: Kimi-K3 on HuggingFace",
+        "alternative_titles": [],
+        "cluster_score": 20
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": true,
+    "claire_note": "Chloe, das hier ist ein Hit auf Hacker News, direkt von HuggingFace. Kimi-K3 ist ein neues Long-Context-Modell, das gerade richtig Wellen schlägt.\n\nEntwickler sollten sich das ansehen, weil es 200k Token verarbeiten kann und auf Chinesisch trainiert wurde – das ist ein riesiger Sprung für alle, die mit großen Textmengen oder mehrsprachigen Anwendungen arbeiten. Stell dir vor, du kannst ganze Codebases oder Dokumentationen auf einmal füttern, ohne Kontextverlust. Das ist ein Game Changer für RAG-Systeme und erweiterte Chatbots.",
+    "chloe_note": "Hey, *Kimi-K3 on HuggingFace* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Direct model release on HuggingFace, high community engagement. Builders can access weights today.Cluster context: 1 sources, engagement 1622. Common terms: submitted, comments, huggingface, points. Score aktuell: 95. Link: https://huggingface.co/moonshotai/Kimi-K3"
   }
 ]
