@@ -8585,11 +8585,11 @@
   },
   {
     "id": "85fb9b2f4cd0",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-28T17:19:58.559261Z",
     "score": 65,
     "reason": "local newsworthiness fallback",
-    "proposed_post": "Anthropic SDK fixes MCP pinning.\n\nv0.120.1 release with mcp extra pinned to <2.\n\n#OpenSource #ClaudeCode #Anthropic",
+    "proposed_post": "Anthropic SDK fixes MCP pinning.\n\nv0.120.1 release with mcp extra pinned to <2.\n\nAnyone using this to stabilize MCP versions?\n\n#OpenSource #ClaudeCode #Anthropic",
     "source_angle": "Local high-score + Sarah/OpenRouter fallback",
     "source_item": {
       "title": "Anthropic Python SDK v0.120.1",
@@ -8620,11 +8620,30 @@
         "cluster_score": 45
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/85fb9b2f4cd0.png",
     "is_llm_mode": false,
     "breaking": false,
     "claire_note": "Aus *Anthropic Python SDK Releases* ist ein starker Kandidat reingekommen: *Anthropic Python SDK v0.120.1*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 65_",
-    "chloe_note": "Kurzes Update: *Anthropic Python SDK v0.120.1* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: v0.120.1, 2026-07-28, mcp, strong. Ich habe es mit 65 Punkten bewertet. Hier der Link: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.120.1"
+    "chloe_note": "Kurzes Update: *Anthropic Python SDK v0.120.1* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: v0.120.1, 2026-07-28, mcp, strong. Ich habe es mit 65 Punkten bewertet. Hier der Link: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.120.1",
+    "sarah_package": {
+      "title": "Anthropic SDK fixes MCP pinning.",
+      "subtitle": "v0.120.1 release with mcp extra pinned to <2.",
+      "description": "MCP pinning fixed in v0.120.1, addressing issue #1783.",
+      "hashtags": [
+        "#OpenSource",
+        "#ClaudeCode",
+        "#Anthropic"
+      ],
+      "question": "Anyone using this to stabilize MCP versions?",
+      "card_stat": "v0.120.1",
+      "card_claim": "MCP pinning now stable",
+      "card_context": "Fixes issue #1783 · MCP extra pinned to <2"
+    },
+    "composer_version": "2",
+    "card_layout": "release",
+    "card_variant": "editorial_release",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-28-anthropic-python-sdk-v0-120-1-85fb9b2f4cd0.md",
+    "published_at": "2026-07-29T18:33:23.490217Z"
   },
   {
     "id": "66a176f6be59",
