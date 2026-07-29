@@ -8730,5 +8730,27 @@
     "card_variant": "editorial_release",
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-29-anthropic-python-sdk-v0-120-2-625f382a8d89.md",
     "published_at": "2026-07-29T15:35:18.090946Z"
+  },
+  {
+    "id": "e17a3ce595ce",
+    "status": "deferred_generation_unavailable",
+    "created_at": "2026-07-29T17:05:03.575592Z",
+    "score": 60,
+    "reason": "deferred: generation provider unavailable",
+    "proposed_post": "",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Ollama v0.32.4-rc0",
+      "source": "Ollama Releases",
+      "link": "https://github.com/ollama/ollama/releases/tag/v0.32.4-rc0",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 60
+    },
+    "deferred_at": "2026-07-29T17:05:03.575551Z",
+    "defer_count": 1,
+    "original_score": 60,
+    "original_reason": "deferred: generation provider unavailable",
+    "card_path": null
   }
 ]
