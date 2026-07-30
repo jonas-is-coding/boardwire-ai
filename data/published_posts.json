@@ -2679,5 +2679,28 @@
     "published_weekday": "Wednesday",
     "composer_version": "2",
     "card_variant": "editorial_release"
+  },
+  {
+    "id": "66a176f6be59",
+    "published_at": "2026-07-30T18:57:22.913590Z",
+    "platform": "bluesky",
+    "post": "OpenAI releases Codex Security repo.\n\nGitHub repo provides LLM code security guidelines, +197 comments on HN.\n\n#OpenSource #InfoSec",
+    "source_link": "https://github.com/openai/codex-security",
+    "source_title": "Codex Security",
+    "score": 90,
+    "reason": "GitHub repo released, providing actionable resources for LLM code security. High HN engagement confirms builder interest.",
+    "card_path": "generated/cards/66a176f6be59.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-29-codex-security-66a176f6be59.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mrv4mfoizt2j",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mrv4mfoizt2j",
+    "format_variant": "plain",
+    "hashtags_used": [
+      "#OpenSource",
+      "#InfoSec"
+    ],
+    "published_hour_utc": 18,
+    "published_weekday": "Thursday",
+    "composer_version": "2",
+    "card_variant": "editorial_repo"
   }
 ]

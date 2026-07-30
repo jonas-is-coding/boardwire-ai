@@ -8647,11 +8647,11 @@
   },
   {
     "id": "66a176f6be59",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-29T14:06:48.048710Z",
     "score": 90,
     "reason": "GitHub repo released, providing actionable resources for LLM code security. High HN engagement confirms builder interest.",
-    "proposed_post": "OpenAI launched the \"Codex Security\" GitHub repo. Use it to analyze and mitigate security risks in LLM-generated code, improving application robustness.",
+    "proposed_post": "OpenAI releases Codex Security repo.\n\nGitHub repo provides LLM code security guidelines, +197 comments on HN.\n\n#OpenSource #InfoSec",
     "source_angle": "OpenAI's official GitHub release on LLM code security.",
     "source_item": {
       "title": "Codex Security",
@@ -8682,11 +8682,29 @@
         "cluster_score": 20
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/66a176f6be59.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das ist ein Re-Post vom OpenAI Codex Security Repo. Die Diskussion auf HN mit fast 200 Kommentaren zeigt, dass hier wirklich ein Nerv getroffen wird. Für Devs, die mit AI-generiertem Code arbeiten, ist das ein direkter Blick auf die potenziellen Sicherheitsrisiken und wie man damit umgeht. Das ist kein theoretisches Gerede, sondern konkrete Guidelines von OpenAI selbst – extrem nützlich für jeden, der sicherstellen will, dass seine AI-Tools nicht zum Einfallstor werden.",
-    "chloe_note": "*Codex Security* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch GitHub repo released, providing actionable resources for LLM code security. High HN engagement confirms builder interest.Cluster context: 1 sources, engagement 645. Common terms: points, original, security, 547. Bewertung: 90. Quelle: https://github.com/openai/codex-security"
+    "chloe_note": "*Codex Security* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch GitHub repo released, providing actionable resources for LLM code security. High HN engagement confirms builder interest.Cluster context: 1 sources, engagement 645. Common terms: points, original, security, 547. Bewertung: 90. Quelle: https://github.com/openai/codex-security",
+    "sarah_package": {
+      "title": "OpenAI releases Codex Security repo.",
+      "subtitle": "GitHub repo provides LLM code security guidelines, +197 comments on HN.",
+      "description": "OpenAI's Codex Security repo offers actionable resources for analyzing and mitigating security risks in LLM-generated code, improving applic",
+      "hashtags": [
+        "#OpenSource",
+        "#InfoSec"
+      ],
+      "question": "Anyone integrating Codex Security checks into their CI/CD pipelines?",
+      "card_stat": "+197",
+      "card_claim": "Codex security guidelines now open-source",
+      "card_context": "GitHub repo · mitigates LLM code security risks · improves application robustness"
+    },
+    "composer_version": "2",
+    "card_layout": "repo",
+    "card_variant": "editorial_repo",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-29-codex-security-66a176f6be59.md",
+    "published_at": "2026-07-30T18:57:22.913590Z"
   },
   {
     "id": "625f382a8d89",
