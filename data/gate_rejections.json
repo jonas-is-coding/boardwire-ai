@@ -7,5 +7,14 @@
     "reasons": [
       "Version-only release without concrete capability: 'Claude Code v2.1.218'"
     ]
+  },
+  {
+    "rejected_at": "2026-07-30T17:16:09.047725Z",
+    "stage": "review",
+    "title": "Ollama v0.32.4-rc0",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.32.4-rc0",
+    "reasons": [
+      "Version-only release without concrete capability: 'Ollama v0.32.4-rc0'"
+    ]
   }
 ]
