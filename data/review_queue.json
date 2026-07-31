@@ -8790,5 +8790,91 @@
     "original_reason": "deferred: generation provider unavailable",
     "card_path": null,
     "rejected_at": "2026-07-30T17:16:09.047923Z"
+  },
+  {
+    "id": "83b36f15cb7b",
+    "status": "approved",
+    "created_at": "2026-07-31T14:02:05.141523Z",
+    "score": 90,
+    "reason": "GPT-5.6 API released by OpenAI with concrete price/performance improvements. Direct impact for builders.",
+    "proposed_post": "OpenAI's GPT-5.6 is now available via API, delivering improved price-performance. Evaluate for immediate cost savings or to unlock new application capabilities.",
+    "source_angle": "OpenAI's new GPT-5.6 API for price/performance",
+    "source_item": {
+      "title": "Advancing the price-performance frontier with GPT‑5.6",
+      "source": "HackerNews",
+      "link": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/",
+      "source_tier": 3,
+      "engagement_score": 780.0,
+      "local_newsworthiness_score": 45,
+      "summary": "587 points, 386 comments on Hacker News — submitted by tedsanders — original: https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/\n[Cluster context: 1 sources, engagement 780, common terms: advancing, 587, comments, original, 386.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 780,
+        "common_terms": [
+          "advancing",
+          "587",
+          "comments",
+          "original",
+          "386",
+          "points",
+          "tedsanders",
+          "gpt"
+        ],
+        "cluster_summary": "1 sources, engagement 780. Common terms: advancing, 587, comments, original. Lead: Advancing the price-performance frontier with GPT‑5.6",
+        "alternative_titles": [],
+        "cluster_score": 20
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, dieser GPT-5.6-Artikel auf HN hat ordentlich Engagement. Das ist nicht nur Hype, sondern konkrete Diskussionen über Preis-Performance.\n\nEntwickler, die mit den aktuellen Kosten und Latenzen kämpfen, finden hier möglicherweise einen Weg, ihre Apps effizienter zu gestalten oder ganz neue Use Cases zu ermöglichen, die bisher zu teuer waren. Es geht darum, ob wir bald komplexere Modelle zu einem Bruchteil des Preises einsetzen können.",
+    "chloe_note": "*Advancing the price-performance frontier with GPT‑5.6* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch GPT-5.6 API released by OpenAI with concrete price/performance improvements. Direct impact for builders.Cluster context: 1 sources, engagement 780. Common terms: advancing, 587, comments, original. Bewertung: 90. Quelle: https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/"
+  },
+  {
+    "id": "4ccae17573c1",
+    "status": "approved",
+    "created_at": "2026-07-31T14:02:07.263365Z",
+    "score": 105,
+    "reason": "local newsworthiness fallback",
+    "proposed_post": "Security research gets AI-powered routing.\n\nReverse-skill pack gains +612 stars with on-demand toolchain bootstrapping.\n\n#LLM #ClaudeCode #Anthropic",
+    "source_angle": "Local high-score + Sarah/OpenRouter fallback",
+    "source_item": {
+      "title": "zhaoxuya520/reverse-skill — Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge ",
+      "source": "GitHub Trending",
+      "link": "https://github.com/zhaoxuya520/reverse-skill",
+      "source_tier": 2,
+      "engagement_score": 612.0,
+      "local_newsworthiness_score": 105,
+      "summary": "Trending on GitHub today: +612 stars. Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向/渗透/安全技能路由包 - AI 自动路由 + 按需自举工具链 + 自动进化经验库 | 支持 Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端\n[Cluster context: 1 sources, engagement 612, common terms: cursor, ai-powered, cline, clients, claude.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 612,
+        "common_terms": [
+          "cursor",
+          "ai-powered",
+          "cline",
+          "clients",
+          "claude",
+          "router",
+          "engineering",
+          "skill"
+        ],
+        "cluster_summary": "1 sources, engagement 612. Common terms: cursor, ai-powered, cline, clients. Lead: zhaoxuya520/reverse-skill — Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack A",
+        "alternative_titles": [],
+        "cluster_score": 55
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "breaking": true,
+    "claire_note": "Aus *GitHub Trending* ist ein starker Kandidat reingekommen: *zhaoxuya520/reverse-skill — Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge *.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 105_",
+    "chloe_note": "*zhaoxuya520/reverse-skill — Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge * ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch local newsworthiness fallbackCluster context: 1 sources, engagement 612. Common terms: cursor, ai-powered, cline, clients. Bewertung: 105. Quelle: https://github.com/zhaoxuya520/reverse-skill"
   }
 ]
