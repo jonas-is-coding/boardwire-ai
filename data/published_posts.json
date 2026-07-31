@@ -2702,5 +2702,35 @@
     "published_weekday": "Thursday",
     "composer_version": "2",
     "card_variant": "editorial_repo"
+  },
+  {
+    "id": "4ccae17573c1",
+    "published_at": "2026-07-31T15:38:24.375428Z",
+    "platform": "bluesky",
+    "post": "Security research gets AI-powered routing.\n\nReverse-skill pack gains +612 stars with on-demand toolchain bootstrapping.\n\n#LLM #ClaudeCode #Anthropic",
+    "source_link": "https://github.com/zhaoxuya520/reverse-skill",
+    "source_title": "zhaoxuya520/reverse-skill — Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge ",
+    "score": 105,
+    "reason": "local newsworthiness fallback",
+    "card_path": "generated/cards/4ccae17573c1.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-31-zhaoxuya520-reverse-skill-reverse-engineering-authorized-penetration-testing-security-research-skill-router-pack-ai-powered-routing-on-demand-toolchain-bootstrapping-self-evolving-knowledge-4ccae17573c1.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mrxbxh6m262d",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mrxbxh6m262d",
+    "format_variant": "thread",
+    "hashtags_used": [
+      "#LLM",
+      "#ClaudeCode",
+      "#Anthropic"
+    ],
+    "published_hour_utc": 15,
+    "published_weekday": "Friday",
+    "composer_version": "2",
+    "card_variant": "editorial_repo",
+    "thread_uris": [
+      "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mrxbxh6m262d",
+      "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mrxbxhp6uw2c",
+      "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mrxbxhvqu72k"
+    ],
+    "thread_partial": false
   }
 ]

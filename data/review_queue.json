@@ -8836,7 +8836,7 @@
   },
   {
     "id": "4ccae17573c1",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-07-31T14:02:07.263365Z",
     "score": 105,
     "reason": "local newsworthiness fallback",
@@ -8871,10 +8871,29 @@
         "cluster_score": 55
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/4ccae17573c1.png",
     "is_llm_mode": false,
     "breaking": true,
     "claire_note": "Aus *GitHub Trending* ist ein starker Kandidat reingekommen: *zhaoxuya520/reverse-skill — Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge *.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 105_",
-    "chloe_note": "*zhaoxuya520/reverse-skill — Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge * ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch local newsworthiness fallbackCluster context: 1 sources, engagement 612. Common terms: cursor, ai-powered, cline, clients. Bewertung: 105. Quelle: https://github.com/zhaoxuya520/reverse-skill"
+    "chloe_note": "*zhaoxuya520/reverse-skill — Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge * ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch local newsworthiness fallbackCluster context: 1 sources, engagement 612. Common terms: cursor, ai-powered, cline, clients. Bewertung: 105. Quelle: https://github.com/zhaoxuya520/reverse-skill",
+    "sarah_package": {
+      "title": "Security research gets AI-powered routing.",
+      "subtitle": "Reverse-skill pack gains +612 stars with on-demand toolchain bootstrapping.",
+      "description": "Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients with self-evolving knowledge base.",
+      "hashtags": [
+        "#LLM",
+        "#ClaudeCode",
+        "#Anthropic"
+      ],
+      "question": "Anyone integrating this with Claude Code?",
+      "card_stat": "+612",
+      "card_claim": "AI routing boosts security research",
+      "card_context": "On-demand toolchain bootstrapping for Cursor, Cline, and Kiro."
+    },
+    "composer_version": "2",
+    "card_layout": "repo",
+    "card_variant": "editorial_repo",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-07-31-zhaoxuya520-reverse-skill-reverse-engineering-authorized-penetration-testing-security-research-skill-router-pack-ai-powered-routing-on-demand-toolchain-bootstrapping-self-evolving-knowledge-4ccae17573c1.md",
+    "published_at": "2026-07-31T15:38:24.375428Z"
   }
 ]
