@@ -8793,7 +8793,7 @@
   },
   {
     "id": "83b36f15cb7b",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-07-31T14:02:05.141523Z",
     "score": 90,
     "reason": "GPT-5.6 API released by OpenAI with concrete price/performance improvements. Direct impact for builders.",
@@ -8832,7 +8832,8 @@
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, dieser GPT-5.6-Artikel auf HN hat ordentlich Engagement. Das ist nicht nur Hype, sondern konkrete Diskussionen über Preis-Performance.\n\nEntwickler, die mit den aktuellen Kosten und Latenzen kämpfen, finden hier möglicherweise einen Weg, ihre Apps effizienter zu gestalten oder ganz neue Use Cases zu ermöglichen, die bisher zu teuer waren. Es geht darum, ob wir bald komplexere Modelle zu einem Bruchteil des Preises einsetzen können.",
-    "chloe_note": "*Advancing the price-performance frontier with GPT‑5.6* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch GPT-5.6 API released by OpenAI with concrete price/performance improvements. Direct impact for builders.Cluster context: 1 sources, engagement 780. Common terms: advancing, 587, comments, original. Bewertung: 90. Quelle: https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/"
+    "chloe_note": "*Advancing the price-performance frontier with GPT‑5.6* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch GPT-5.6 API released by OpenAI with concrete price/performance improvements. Direct impact for builders.Cluster context: 1 sources, engagement 780. Common terms: advancing, 587, comments, original. Bewertung: 90. Quelle: https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/",
+    "expired_at": "2026-08-02T22:59:06.449229Z"
   },
   {
     "id": "4ccae17573c1",
