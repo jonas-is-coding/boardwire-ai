@@ -8899,11 +8899,11 @@
   },
   {
     "id": "01ed8f1cc56e",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-08-03T14:35:02.945955Z",
     "score": 90,
     "reason": "Open-source local inference engine for specific models on common hardware. Clear utility for builders.",
-    "proposed_post": "antirez/ds4 ships as a local inference engine for DeepSeek 4 Flash/PRO on Metal, CUDA, and ROCm. Builders can deploy these models on-device, reducing API costs and improving latency.",
+    "proposed_post": "DeepSeek 4 models run locally on Metal, CUDA and ROCm.\n\nantirez/ds4 inference engine with +385 stars today.\n\n#LLM #Ollama #LocalLLM",
     "source_angle": "Local inference, DeepSeek 4, hardware acceleration",
     "source_item": {
       "title": "antirez/ds4 — DeepSeek 4 Flash and PRO local inference engine for Metal, CUDA and ROCm",
@@ -8934,10 +8934,29 @@
         "cluster_score": 25
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/01ed8f1cc56e.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das hier ist ein Treffer. 'antirez/ds4' ist heute auf GitHub trending, ein lokales Inference-Engine für DeepSeek 4 Flash und PRO.\n\nFür uns Builder bedeutet das: Wir können DeepSeek 4 Modelle jetzt einfacher lokal auf Metal, CUDA und ROCm laufen lassen. Das ist ein Game-Changer für alle, die sensible Daten verarbeiten oder einfach nur mehr Kontrolle und Geschwindigkeit bei der Inferenz wollen, ohne auf Cloud-APIs angewiesen zu sein. Weniger Latenz, mehr Privatsphäre – direkt auf der eigenen Hardware.",
-    "chloe_note": "*antirez/ds4 — DeepSeek 4 Flash and PRO local inference engine for Metal, CUDA and ROCm* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Open-source local inference engine for specific models on common hardware. Clear utility for builders.Cluster context: 1 sources, engagement 385. Common terms: rocm, antirez/ds4, engine, cuda. Bewertung: 90. Quelle: https://github.com/antirez/ds4"
+    "chloe_note": "*antirez/ds4 — DeepSeek 4 Flash and PRO local inference engine for Metal, CUDA and ROCm* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Open-source local inference engine for specific models on common hardware. Clear utility for builders.Cluster context: 1 sources, engagement 385. Common terms: rocm, antirez/ds4, engine, cuda. Bewertung: 90. Quelle: https://github.com/antirez/ds4",
+    "sarah_package": {
+      "title": "DeepSeek 4 models run locally on Metal, CUDA and ROCm.",
+      "subtitle": "antirez/ds4 inference engine with +385 stars today.",
+      "description": "Open-source local inference engine for DeepSeek 4 Flash and PRO models on common hardware.",
+      "hashtags": [
+        "#LLM",
+        "#Ollama",
+        "#LocalLLM"
+      ],
+      "question": "Anyone running DeepSeek 4 models on-device now?",
+      "card_stat": "+385",
+      "card_claim": "Local inference for DeepSeek 4",
+      "card_context": "Runs on Metal, CUDA, and ROCm hardware."
+    },
+    "composer_version": "2",
+    "card_layout": "repo",
+    "card_variant": "editorial_repo",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-03-antirez-ds4-deepseek-4-flash-and-pro-local-inference-engine-for-metal-cuda-and-rocm-01ed8f1cc56e.md",
+    "published_at": "2026-08-03T16:04:09.623527Z"
   }
 ]

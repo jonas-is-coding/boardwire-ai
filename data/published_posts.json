@@ -2732,5 +2732,29 @@
       "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mrxbxhvqu72k"
     ],
     "thread_partial": false
+  },
+  {
+    "id": "01ed8f1cc56e",
+    "published_at": "2026-08-03T16:04:09.623527Z",
+    "platform": "bluesky",
+    "post": "DeepSeek 4 models run locally on Metal, CUDA and ROCm.\n\nantirez/ds4 inference engine with +385 stars today.\n\n#LLM #Ollama #LocalLLM",
+    "source_link": "https://github.com/antirez/ds4",
+    "source_title": "antirez/ds4 — DeepSeek 4 Flash and PRO local inference engine for Metal, CUDA and ROCm",
+    "score": 90,
+    "reason": "Open-source local inference engine for specific models on common hardware. Clear utility for builders.",
+    "card_path": "generated/cards/01ed8f1cc56e.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-03-antirez-ds4-deepseek-4-flash-and-pro-local-inference-engine-for-metal-cuda-and-rocm-01ed8f1cc56e.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3ms6usbad3m2l",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3ms6usbad3m2l",
+    "format_variant": "plain",
+    "hashtags_used": [
+      "#LLM",
+      "#Ollama",
+      "#LocalLLM"
+    ],
+    "published_hour_utc": 16,
+    "published_weekday": "Monday",
+    "composer_version": "2",
+    "card_variant": "editorial_repo"
   }
 ]
