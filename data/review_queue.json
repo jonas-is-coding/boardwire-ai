@@ -8958,5 +8958,48 @@
     "card_variant": "editorial_repo",
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-03-antirez-ds4-deepseek-4-flash-and-pro-local-inference-engine-for-metal-cuda-and-rocm-01ed8f1cc56e.md",
     "published_at": "2026-08-03T16:04:09.623527Z"
+  },
+  {
+    "id": "76b470c17cc5",
+    "status": "approved",
+    "created_at": "2026-08-04T14:06:52.435581Z",
+    "score": 90,
+    "reason": "New Claude Code version ships with enhanced sandbox security (`mode: \"mask\"`) and a `prompt-audit` subcommand, directly usable by builders.",
+    "proposed_post": "Claude Code v2.1.221 adds `mode: \"mask\"` for sandbox credential files on Linux/WSL and a `prompt-audit` subcommand. Builders can now secure sensitive data in sandboxed environments and gain new insights into prompt behavior.",
+    "source_angle": "Official Claude Code release with new security and dev tooling features.",
+    "source_item": {
+      "title": "Claude Code v2.1.221",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.221",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 30,
+      "summary": "<h2>What's changed</h2>\n<ul>\n<li>[VSCode] Added Focus view: a chat-menu toggle that hides tool activity behind an expandable per-turn summary with a live running-tool indicator, toggled with <code>Ctrl+Alt+F</code> or the \"Claude Code: Toggle Focus view\" command</li>\n<li>Added <code>mode: \"mask\"</code> for sandbox credential files on Linux and WSL — sandboxed commands read a sentinel copy (the whole file, or just the spans captured by an <code>extract</code> regex) while the sandbox proxy substitutes the real value on egress; on macOS file masking falls back to <code>deny</code></li>\n<li>Added warnings to <code>claude plugin validate</code> when a marketplace or plugin name would be rejected by Claude Desktop's managed marketplace sync</li>\n<li>Added a <code>prompt-audit</code> subcommand to the <code>claude-api</code> skill for auditing prompts and tool descriptions for patterns written for older models</li>\n<li>Fixed a Bash tool permission-check bypass where zsh could execute hidden commands in <code>[[ ]]</code> regex conditionals; affected commands now prompt for permission</li>\n<li>Fixed PowerShell permission checks mishandling paths containing quote characters on Windows; such paths now prompt for approval</li>\n<li>Fixed the thinking toggle having no effect for the rest of a session that started with thinking off; disabling an MCP server mid-connect no longer silently reverts</li>\n<li>Fixed MCP servers from <code>--mcp-config</code> not being connected before the first turn in print mode (<code>-p</code>), which made the model emit tool calls as literal text</li>\n<li>Fixed @-mentioned files being silently dropped when pressing Esc to retract a prompt and resubmitting it</li>\n<li>Fixed a crash when preparing API requests for SDK MCP tools named after built-in object properties such as <code>constructor</code></li>\n<li>Fixed WebSearch failing with a 400 error at effort <code>xhigh</code>/<code>max</code> when thinking is disabled</li>\n<li>Fixed sandboxed large uploads failing with TLS errors through the sandbox proxy</li>\n<li>Fixed Team and Enterprise spend-limit message incorrectly blaming the org's monthly limit instead of your individual spend limit</li>\n<li>Fixed Bedrock authentication with AWS SSO named profiles failing in desktop-managed sessions on Windows machines that set a stray <code>HOME</code> environment variable</li>\n<li>Fixed <code>CLAUDE_CODE_RESUME_INTERRUPTED_TURN=0</code> not disabling interrupted-turn auto-resume; falsy values are now honored</li>\n<li>Fixed a rare wake-from-sleep race where two Claude Code processes could both refresh the same MCP connector or WIF OAuth token at once, forcing re-authentication</li>\n<li>Fixed renaming a session from Claude Code Desktop or claude.ai not updating the CLI's session name; session names from every rename surface are now sanitized</li>\n<li>Fixed plugin- and org-delivered skills named after terminal-only built-ins (e.g. <code>/help</code>, <code>/feedback</code>) being un-invocable in non-interactive sessions</li>\n<li>Fixed the \"Plugins changed\" notification lingering after plugins were reloaded instead of clearing</li>\n<li>Fixed Vim mode: the yank register now survives dialogs, history search, and the transcript view instead of being silently emptied</li>\n<li>Fixed Vim mode: undoing back to an empty prompt now arms the \"press ← again\" confirm before returning to the agent view</li>\n<li>Improved tool search on Google Vertex AI: re-enabled for Claude 4.5-generation and newer models</li>\n<li>Improved auto mode: permission checks for parallel tool calls are now cache-efficient, and switching modes while a check is pending reliably prompts instead of applying the stale result</li>\n<li>Reduced prompt-cache costs for auto-mode permission checks by reusing the cached conversation prefix across decisions</li>\n<li>Improved Stats panel to count cache tokens in its token totals, with a breakdown by input, output, cache read, and cache write</li>\n<li>Improved <code>/ultrareview</code> error messages when a repo shares no history with its base: a checkout with no branches is now refused up front with advice to create one, and refusal hints no longer suggest <code>git fetch --unshallow</code> on clones that are already complete</li>\n<li>Improved Windows startup: process creation times are now read via a native kernel32 call instead of spawning PowerShell, so endpoint security tools that gate <code>powershell.exe</code> no longer prompt</li>\n<li>Changed background sessions to commit and push to preserve work, open a draft PR only when the task calls for one, follow your CLAUDE.md git instructions, and always end by reporting where the work lives</li>\n<li>Changed <code>/plugin install</code> to refresh a stale marketplace catalog and retry before reporting a plugin not found</li>\n<li>Changed plugins installed from <code>/plugin</code> to activate immediately when safe, instead of always requiring <code>/reload-plugins</code></li>\n<li>Changed plugins to accept <code>\".\"</code> as a <code>skills</code> path, and the root-level <code>SKILL.md</code> validation error now suggests using the plugin root</li>\n<li>Changed <code>/status</code> to show the session kind: <code>interactive</code>, or a background job that is <code>attached</code> or <code>unattended</code></li>\n<li>Changed emoji autocomplete to accept common alternate shortcodes like <code>:thumbsup:</code>, <code>:thumbsdown:</code>, and <code>:love:</code></li>\n<li>Changed sessions forked with <code>/fork</code> to create a new worktree of their own instead of working in the original session's checkout</li>\n<li>Changed Claude in Chrome to close the browser tabs it opens once it no longer needs them</li>\n<li>Changed fast mode to report on the stream when usage credits run out mid-session, instead of failing silently</li>\n<li>Changed Monitor: a watch that exits without producing any output now says so instead of reporting \"stream ended\"</li>\n<li>Changed the Gateway <code>model</code> field validation: non-string values are rejected with a 400 instead of being forwarded</li>\n<li>Removed the repeated \"Permission mode changed while the auto-mode classifier call was queued\" notice from approval prompts</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: installed, both, made, effect, across.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Claude Code Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "installed",
+          "both",
+          "made",
+          "effect",
+          "across",
+          "rename",
+          "empty",
+          "whole"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: installed, both, made, effect. Lead: Claude Code v2.1.221",
+        "alternative_titles": [],
+        "cluster_score": 15
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, dieser Claude Code Release ist interessant. Der neue Focus View im VSCode-Plugin versteckt Tool-Aktivität und zeigt nur eine Zusammenfassung. Das ist super für Entwickler, die sich auf den Code konzentrieren wollen, ohne von Log-Output abgelenkt zu werden. Außerdem gibt es einen neuen 'mode: \"mask\"' für die API – das könnte neue Möglichkeiten für gezieltere Code-Änderungen oder Refactorings eröffnen, wo man nur bestimmte Bereiche des Codes bearbeiten will.",
+    "chloe_note": "Hey, *Claude Code v2.1.221* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New Claude Code version ships with enhanced sandbox security (`mode: \"mask\"`) and a `prompt-audit` subcommand, directly usable by builders.Cluster context: 1 sources, engagement 0. Common terms: installed, both, made, effect. Score aktuell: 90. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.221"
   }
 ]
