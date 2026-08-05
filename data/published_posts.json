@@ -2780,5 +2780,28 @@
     "published_weekday": "Tuesday",
     "composer_version": "2",
     "card_variant": "editorial_release"
+  },
+  {
+    "id": "f6ca7ca7a7df",
+    "published_at": "2026-08-05T15:40:50.155286Z",
+    "platform": "bluesky",
+    "post": "Cloudflare gives agents a computer.\n\nSandboxed execution environment with +796 stars today.\n\n#AI #AIAgents",
+    "source_link": "https://github.com/cloudflare/computer",
+    "source_title": "cloudflare/computer — Give your agent a computer 👾",
+    "score": 90,
+    "reason": "Open-source tool from Cloudflare for agent environments, highly trending on GitHub. Passes Ships Test.",
+    "card_path": "generated/cards/f6ca7ca7a7df.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-05-cloudflare-computer-give-your-agent-a-computer-f6ca7ca7a7df.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3msdugh4nar2l",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3msdugh4nar2l",
+    "format_variant": "plain",
+    "hashtags_used": [
+      "#AI",
+      "#AIAgents"
+    ],
+    "published_hour_utc": 15,
+    "published_weekday": "Wednesday",
+    "composer_version": "2",
+    "card_variant": "editorial_repo"
   }
 ]
