@@ -9020,5 +9020,47 @@
     "card_variant": "editorial_release",
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-04-claude-code-v2-1-221-76b470c17cc5.md",
     "published_at": "2026-08-04T15:57:12.687910Z"
+  },
+  {
+    "id": "f6ca7ca7a7df",
+    "status": "approved",
+    "created_at": "2026-08-05T14:04:48.394750Z",
+    "score": 90,
+    "reason": "Open-source tool from Cloudflare for agent environments, highly trending on GitHub. Passes Ships Test.",
+    "proposed_post": "Cloudflare released `cloudflare/computer`, an open-source tool to give AI agents a sandboxed execution environment. Builders can use this to expand agent capabilities for complex tasks requiring external tools or internet access, improving reliability.",
+    "source_angle": "Cloudflare's open-source tool for agent sandboxing",
+    "source_item": {
+      "title": "cloudflare/computer — Give your agent a computer 👾",
+      "source": "GitHub Trending",
+      "link": "https://github.com/cloudflare/computer",
+      "source_tier": 2,
+      "engagement_score": 796.0,
+      "local_newsworthiness_score": 0,
+      "summary": "Trending on GitHub today: +796 stars. Give your agent a computer 👾\n[Cluster context: 1 sources, engagement 796, common terms: github, +796, trending, give, cloudflare/computer.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 796,
+        "common_terms": [
+          "github",
+          "+796",
+          "trending",
+          "give",
+          "cloudflare/computer",
+          "computer",
+          "stars."
+        ],
+        "cluster_summary": "1 sources, engagement 796. Common terms: github, +796, trending, give. Lead: cloudflare/computer — Give your agent a computer 👾",
+        "alternative_titles": [],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, schau dir das an: cloudflare/computer. Das ist heute auf GitHub hochgeschossen.\n\nIm Grunde ist es eine VM für deine Agents – die können damit im Web surfen, Code ausführen und Shell-Befehle nutzen. Wenn du also an komplexeren Agenten-Workflows bastelst, die mehr als nur API-Calls brauchen, ist das hier ein Game Changer. Gibt deinen Agents echte Handlungsfreiheit.",
+    "chloe_note": "*cloudflare/computer — Give your agent a computer 👾* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Open-source tool from Cloudflare for agent environments, highly trending on GitHub. Passes Ships Test.Cluster context: 1 sources, engagement 796. Common terms: github, +796, trending, give. Bewertung: 90. Quelle: https://github.com/cloudflare/computer"
   }
 ]
