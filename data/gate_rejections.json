@@ -25,5 +25,14 @@
     "reasons": [
       "Aggregator engagement metadata leaked into post: '587 points on Hacker News'"
     ]
+  },
+  {
+    "rejected_at": "2026-08-06T14:03:53.921187Z",
+    "stage": "review",
+    "title": "Ollama v0.32.6",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.32.6",
+    "reasons": [
+      "Version-only release without concrete capability: 'Ollama v0.32.6'"
+    ]
   }
 ]
