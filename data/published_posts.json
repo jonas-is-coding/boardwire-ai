@@ -2803,5 +2803,29 @@
     "published_weekday": "Wednesday",
     "composer_version": "2",
     "card_variant": "editorial_repo"
+  },
+  {
+    "id": "6710b8d0f537",
+    "published_at": "2026-08-07T14:34:02.142343Z",
+    "platform": "bluesky",
+    "post": "Claude Code adds self-hosted runners.\n\nClaude Code v2.1.224 introduces self-hosted environments with SHA-256 pinning.\n\nAnyone running Claude Code on-prem now?\n\n#LLM #ClaudeCode #Anthropic",
+    "source_link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.224",
+    "source_title": "Claude Code v2.1.224",
+    "score": 90,
+    "reason": "Direct release of new Claude Code features: self-hosted runners for data control & secure plugin deployment. Clear builder impact.",
+    "card_path": "generated/cards/6710b8d0f537.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-07-claude-code-v2-1-224-6710b8d0f537.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3msirmtcvqc2h",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3msirmtcvqc2h",
+    "format_variant": "question",
+    "hashtags_used": [
+      "#LLM",
+      "#ClaudeCode",
+      "#Anthropic"
+    ],
+    "published_hour_utc": 14,
+    "published_weekday": "Friday",
+    "composer_version": "2",
+    "card_variant": "editorial_release"
   }
 ]
