@@ -9147,11 +9147,11 @@
   },
   {
     "id": "fa43763b3a6f",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-08-07T16:42:41.446494Z",
     "score": 90,
     "reason": "Direct fix for a common error in a widely used library. Immediately actionable for builders using OpenAI models.",
-    "proposed_post": "LangChain-OpenAI v1.4.2 fixes `ContextWindowExceededError`. Builders can now expect more stable applications when processing long contexts with OpenAI models, reducing error handling overhead.",
+    "proposed_post": "LangChain fixes context errors.\n\nLangChain v1.4.2 handles ContextWindowExceededError, +0 stars.\n\nAnyone running this with OpenAI models?\n\n#OpenSource #MCP",
     "source_angle": "LangChain-OpenAI v1.4.2 release with critical error handling fix.",
     "source_item": {
       "title": "LangChain v1.4.2",
@@ -9182,10 +9182,28 @@
         "cluster_score": 35
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/fa43763b3a6f.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das ist ein wichtiger Release. LangChain 1.4.2 fixed einen kritischen Fehler mit <code>ContextWindowExceededError</code>. Das bedeutet, Entwickler können jetzt robuster mit größeren Kontexten arbeiten, ohne dass ihre Anwendungen crashen. Direkt relevant für jeden, der LangChain mit OpenAI-Modellen nutzt und Stabilität bei längeren Prompts braucht.",
-    "chloe_note": "*LangChain v1.4.2* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Direct fix for a common error in a widely used library. Immediately actionable for builders using OpenAI models.Cluster context: 1 sources, engagement 0. Common terms: group, handle, chore, mcp. Bewertung: 90. Quelle: https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.4.2"
+    "chloe_note": "*LangChain v1.4.2* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Direct fix for a common error in a widely used library. Immediately actionable for builders using OpenAI models.Cluster context: 1 sources, engagement 0. Common terms: group, handle, chore, mcp. Bewertung: 90. Quelle: https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.4.2",
+    "sarah_package": {
+      "title": "LangChain fixes context errors.",
+      "subtitle": "LangChain v1.4.2 handles ContextWindowExceededError, +0 stars.",
+      "description": "Direct fix for a common error in LangChain-OpenAI, immediately actionable for OpenAI model users needing stability with longer prompts.",
+      "hashtags": [
+        "#OpenSource",
+        "#MCP"
+      ],
+      "question": "Anyone running this with OpenAI models?",
+      "card_stat": "v1.4.2",
+      "card_claim": "Stable long contexts now",
+      "card_context": "Fixes ContextWindowExceededError · reduces error handling overhead"
+    },
+    "composer_version": "2",
+    "card_layout": "release",
+    "card_variant": "editorial_release",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-07-langchain-v1-4-2-fa43763b3a6f.md",
+    "published_at": "2026-08-07T18:25:13.362364Z"
   }
 ]

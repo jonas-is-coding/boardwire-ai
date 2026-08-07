@@ -2827,5 +2827,28 @@
     "published_weekday": "Friday",
     "composer_version": "2",
     "card_variant": "editorial_release"
+  },
+  {
+    "id": "fa43763b3a6f",
+    "published_at": "2026-08-07T18:25:13.362364Z",
+    "platform": "bluesky",
+    "post": "LangChain fixes context errors.\n\nLangChain v1.4.2 handles ContextWindowExceededError, +0 stars.\n\nAnyone running this with OpenAI models?\n\n#OpenSource #MCP",
+    "source_link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.4.2",
+    "source_title": "LangChain v1.4.2",
+    "score": 90,
+    "reason": "Direct fix for a common error in a widely used library. Immediately actionable for builders using OpenAI models.",
+    "card_path": "generated/cards/fa43763b3a6f.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-07-langchain-v1-4-2-fa43763b3a6f.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3msj6k72vms26",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3msj6k72vms26",
+    "format_variant": "question",
+    "hashtags_used": [
+      "#OpenSource",
+      "#MCP"
+    ],
+    "published_hour_utc": 18,
+    "published_weekday": "Friday",
+    "composer_version": "2",
+    "card_variant": "editorial_release"
   }
 ]
