@@ -34,5 +34,14 @@
     "reasons": [
       "Version-only release without concrete capability: 'Ollama v0.32.6'"
     ]
+  },
+  {
+    "rejected_at": "2026-08-07T12:59:04.179302Z",
+    "stage": "review",
+    "title": "Show HN: The Channels SDK – Bring Any Agent to Any Channel (Slack, MS Teams)",
+    "link": "https://github.com/CopilotKit/channels-sdk",
+    "reasons": [
+      "Aggregator engagement metadata leaked into post: 'with 107 points'"
+    ]
   }
 ]

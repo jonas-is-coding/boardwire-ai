@@ -4,8 +4,9 @@
 
 No pending review items.
 
-## Gate rejections (last 4)
+## Gate rejections (last 5)
 
+- `2026-08-07T12:59:04.179302Z` [review] **Show HN: The Channels SDK – Bring Any Agent to Any Channel (Slack, MS Teams)** — Aggregator engagement metadata leaked into post: 'with 107 points'
 - `2026-08-06T14:03:53.921187Z` [review] **Ollama v0.32.6** — Version-only release without concrete capability: 'Ollama v0.32.6'
 - `2026-07-31T18:55:55.621952Z` [publish] **Advancing the price-performance frontier with GPT‑5.6** — Aggregator engagement metadata leaked into post: '587 points on Hacker News'
 - `2026-07-30T17:16:09.047725Z` [review] **Ollama v0.32.4-rc0** — Version-only release without concrete capability: 'Ollama v0.32.4-rc0'

@@ -9080,5 +9080,50 @@
     "card_variant": "editorial_repo",
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-05-cloudflare-computer-give-your-agent-a-computer-f6ca7ca7a7df.md",
     "published_at": "2026-08-05T15:40:50.155286Z"
+  },
+  {
+    "id": "6710b8d0f537",
+    "status": "approved",
+    "created_at": "2026-08-07T12:59:01.005794Z",
+    "score": 90,
+    "reason": "Direct release of new Claude Code features: self-hosted runners for data control & secure plugin deployment. Clear builder impact.",
+    "proposed_post": "Claude Code v2.1.224 introduces `self-hosted-runner` for private infrastructure and `archive` plugin source for secure zip deployments. Teams can now run Claude Code sessions on their own machines for data control, and deploy custom tools with SHA-256 pinning.",
+    "source_angle": "Claude Code now supports self-hosting and secure plugin deployment.",
+    "source_item": {
+      "title": "Claude Code v2.1.224",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.224",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 65,
+      "summary": "<h2>What's changed</h2>\n<ul>\n<li>Added self-hosted environments: <code>claude self-hosted-runner</code> turns your own machines or containers into a place Claude Code web, mobile, and desktop sessions can run, on Team and Enterprise plans</li>\n<li>Added <code>archive</code> plugin source: install plugins from a zip over HTTPS without git or npm, with optional SHA-256 pinning</li>\n<li>Added a cancel-and-confirm step when removing an unavailable paste changes a command's text</li>\n<li>Added <code>ANTHROPIC_BEDROCK_REGION_PREFIX</code> env var for Bedrock to prefer a specific cross-region inference profile over the <code>AWS_REGION</code>-derived one</li>\n<li>Added <code>crossSessionInbound</code> and <code>dialogExpiry</code> settings: cross-session messages sent to a session running with bypassed permissions are held for your approval, and messages to other sessions auto-deliver</li>\n<li>Added sandbox credential-masking options: <code>extract</code> and <code>onExtractNoMatch</code> for structured env values, <code>decode: \"jwt\"</code> with <code>maskClaims</code> for JWT-aware masking, and <code>awsPairs</code>/<code>sigv4</code> for AWS SigV4 re-signing; these need <code>network.tlsTerminate</code> and are honored only from user, managed, or <code>--settings</code> settings</li>\n<li>Added cross-session <code>SendMessage</code>: Claude Code sessions can now message each other, on any of your machines, with <code>ListAgents</code> to discover them (macOS and Linux)</li>\n<li>Fixed long (&gt;200 char) project paths resolving to another project's session directory under a shared sanitized prefix; session list, rename, fork, delete and <code>/resume</code> no longer cross projects</li>\n<li>Fixed <code>SendMessage</code> reporting \"Message sent\" when the write to a teammate's inbox had actually failed; failed deliveries are now reported as errors</li>\n<li>Fixed sandbox filesystem deny entries written with a trailing slash (e.g. <code>denyRead: \"~/.aws/\"</code>) being silently bypassable on Linux and macOS</li>\n<li>Fixed sandbox violation details never appearing in Bash tool results; Claude now sees which file or network access was denied and why</li>\n<li>Fixed MCP tools that connect mid-turn being deferred for tool search without their names announced to the model</li>\n<li>Fixed plugin install records being silently corrupted when the same plugin is installed in multiple projects</li>\n<li>Fixed recalled or restored paste content occasionally attaching wrong data or silently losing text when the paste had aged out or placeholder numbers collided</li>\n<li>Fixed copy-on-select on Wayland sometimes not reaching the clipboard; the two selection writes no longer race</li>\n<li>Fixed the feedback survey's transcript share silently failing on long sessions; a failed share now shows an error instead of a success message</li>\n<li>Fixed Remote Control auto-start intermittently failing with \"Remote credentials fetch failed\" on a cold start with a stale login token</li>\n<li>Fixed Remote Control and SDK clients showing a blank \"(no content)\" message after <code>/clear</code> and other output-less commands</li>\n<li>Fixed a Remote Control session recreated after its server session expired uploading prior local conversation history into the new session</li>\n<li>Improved fullscreen mode to keep the full pre-compaction history in scrollback across repeated compactions, instead of only the most recent interval</li>\n<li>Improved Remote Control: attached web and mobile clients now see compaction progress and the post-compaction boundary instead of a silent pause; <code>/clear</code> resets now propagate to attached clients</li>\n<li>Improved Remote Control: connection failures now show a persistent failure indicator with details and a reconnect shortcut, instead of only an 8-second toast</li>\n<li>Removed the 200-subagent-per-session spawn cap; long-running sessions no longer refuse new agents (concurrency and depth limits still apply)</li>\n<li>Changed managed settings: the approval prompt no longer re-appears after re-login or org switching when the organization's settings are unchanged</li>\n<li>Changed the feedback-survey transcript share: with your consent it now also uploads the last request's model settings — the system prompt (which includes your <code>CLAUDE.md</code> instructions), tool definitions, and model parameters. Secrets are redacted as before, and these fields are dropped first if the share is too large</li>\n<li>Changed the Bash tool description to always note that command output is displayed to the model, not reliably to the user</li>\n<li>Changed recalled paste placeholder numbers to renumber when accepted into the input</li>\n<li>Changed Remote Control to archive the stale server session instead of leaving a dead one listed when a fresh session is minted after compaction or <code>/resume</code></li>\n<li>[VSCode] Fixed the extension showing Remote Control as connected after the connection failed</li>\n<li>Fixed a session resume silently reconnecting Remote Control after the user turned it off (<code>--resume</code>, SDK hosts, and the VS Code extension)</li>\n<li>[VSCode] Fixed sessions not honoring <code>remoteControlAtStartup</code> when explicitly enabled</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: keep, what, not, when, env.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Claude Code Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "keep",
+          "what",
+          "not",
+          "when",
+          "env",
+          "run",
+          "approval",
+          "output"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: keep, what, not, when. Lead: Claude Code v2.1.224",
+        "alternative_titles": [
+          "Claude Code v2.1.223"
+        ],
+        "cluster_score": 15
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, das ist ein solides Update von Claude Code.\n\nDer 'self-hosted-runner' ist ein Game-Changer. Entwickler können ihre Sessions jetzt in ihrer eigenen Infrastruktur laufen lassen, was für Teams mit strengen Sicherheits- oder Compliance-Anforderungen essenziell ist. Heißt: sensitive Daten bleiben intern, ohne dass man auf die Produktivität von Claude Code verzichten muss.\n\nAuch das neue 'archive' Plugin ist cool. Das vereinfacht das Management von Plugins, besonders in größeren Projekten.",
+    "chloe_note": "Kurzes Update: *Claude Code v2.1.224* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Direct release of new Claude Code features: self-hosted runners for data control & secure plugin deployment. Clear builder impact.Cluster context: 1 sources, engagement 0. Common terms: keep, what, not, when. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.224"
   }
 ]
