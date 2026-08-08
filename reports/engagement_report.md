@@ -1,18 +1,18 @@
 # Boardwire Engagement Report
 
-Generated: `2026-08-07T05:27:25.418908Z`
+Generated: `2026-08-08T04:45:47.385116Z`
 
 ## Summary
 
-- Measured posts: **160** of 164 published
+- Measured posts: **162** of 166 published
 - Median peak engagement: **0.0**
 - Average peak engagement: **0.6**
 - Top: **5** — Graphify-Labs/graphify — AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, o
 
 ## Patterns
 
-- Release-keyword posts: avg **0.6** (n=98) vs others avg **0.6** (n=62)
-- GitHub sources: avg **0.7** (n=122) vs other sources avg **0.3** (n=38)
+- Release-keyword posts: avg **0.6** (n=98) vs others avg **0.6** (n=64)
+- GitHub sources: avg **0.7** (n=124) vs other sources avg **0.3** (n=38)
 
 ## Engagement by published hour (UTC)
 
@@ -27,11 +27,11 @@ Generated: `2026-08-07T05:27:25.418908Z`
 - 11:00 UTC: avg **0.2** (n=8)
 - 12:00 UTC: avg **0.9** (n=7)
 - 13:00 UTC: avg **1.3** (n=6)
-- 14:00 UTC: avg **0.4** (n=7)
+- 14:00 UTC: avg **0.4** (n=8)
 - 15:00 UTC: avg **0.7** (n=18)
 - 16:00 UTC: avg **0.5** (n=14)
 - 17:00 UTC: avg **0.0** (n=7)
-- 18:00 UTC: avg **1.2** (n=12)
+- 18:00 UTC: avg **1.2** (n=13)
 - 19:00 UTC: avg **0.9** (n=7)
 - 20:00 UTC: avg **1.1** (n=16)
 - 21:00 UTC: insufficient data (n<5, have 3)
@@ -44,19 +44,19 @@ Generated: `2026-08-07T05:27:25.418908Z`
 - Tuesday: avg **0.5** (n=22)
 - Wednesday: avg **0.4** (n=23)
 - Thursday: avg **0.3** (n=20)
-- Friday: avg **0.5** (n=28)
+- Friday: avg **0.5** (n=30)
 - Saturday: avg **1.0** (n=22)
 - Sunday: avg **0.8** (n=20)
 
 ## Engagement by format variant
 
 - plain: avg **0.6** (n=151)
-- question: avg **0.7** (n=6)
+- question: avg **0.5** (n=8)
 - thread: insufficient data (n<5, have 3)
 
 ## Engagement by card variant
 
-- editorial_release: avg **0.1** (n=8)
+- editorial_release: avg **0.1** (n=10)
 - editorial_repo: avg **1.3** (n=6)
 - editorial_security: insufficient data (n<5, have 1)
 - editorial_stat: insufficient data (n<5, have 4)
@@ -67,16 +67,17 @@ Generated: `2026-08-07T05:27:25.418908Z`
 - #AI #HuggingFace #OpenWeights: insufficient data (n<5, have 2)
 - #AI #LLM: insufficient data (n<5, have 1)
 - #AI #MachineLearning: insufficient data (n<5, have 1)
-- #Anthropic #ClaudeCode #LLM: insufficient data (n<5, have 4)
+- #Anthropic #ClaudeCode #LLM: avg **0.4** (n=5)
 - #Anthropic #ClaudeCode #OpenSource: avg **0.0** (n=5)
 - #InfoSec #LocalLLM #OpenSource: insufficient data (n<5, have 1)
 - #InfoSec #OpenSource: insufficient data (n<5, have 1)
 - #LLM #LocalLLM #Ollama: insufficient data (n<5, have 1)
+- #MCP #OpenSource: insufficient data (n<5, have 1)
 - #OpenSource #OpenWeights: insufficient data (n<5, have 1)
 
 ## Version-release posts vs others
 
-- Version releases: avg **0.3** (n=73)
+- Version releases: avg **0.3** (n=75)
 - Others: avg **0.9** (n=87)
   (Version-only releases are now blocked by the quality gate; this group should trend to n=0.)
 
@@ -138,7 +139,7 @@ Generated: `2026-08-07T05:27:25.418908Z`
    > Meta-learning agents now train models with RL for $1.3k. ai-trains-ai RL agent ships open code with cost-aware policy, running on standard G…
 
 12. **3 pts** — Benchmarking Opus 5 on SlopCodeBench
-   likes 1 · reposts 1 · replies 0 · quotes 0 · age 227h · score 85
+   likes 1 · reposts 1 · replies 0 · quotes 0 · age 250h · score 85
    https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/benchmarking-opus-5-on-slop-code-bench.md
    > Opus 5 performance benchmarked on SlopCodeBench. Detailed report shows Opus 5 coding… Anyone using Opus 5 for production code generation? #M…
 
@@ -198,7 +199,7 @@ Generated: `2026-08-07T05:27:25.418908Z`
    > vLLM ships PagedAttention v2 for batched inference. vLLM v0.25.0 enables +22% throughput and lower latency on A100 GPUs. Apache 2.0. New Bat…
 
 24. **2 pts** — Codex Security
-   likes 2 · reposts 0 · replies 0 · quotes 0 · age 178h · score 90
+   likes 2 · reposts 0 · replies 0 · quotes 0 · age 202h · score 90
    https://github.com/openai/codex-security
    > OpenAI releases Codex Security repo. GitHub repo provides LLM code security guidelines, +197 comments on HN. #OpenSource #InfoSec
 
@@ -338,27 +339,27 @@ Generated: `2026-08-07T05:27:25.418908Z`
    > Open-weight 975B LLM ships as a new foundation model. Inkling releases 975B open-weight LLM for deployment and fine-tuning, Apache 2.0 licen…
 
 52. **1 pts** — Claude Code v2.1.219
-   likes 0 · reposts 0 · replies 1 · quotes 0 · age 322h · score 92
+   likes 0 · reposts 0 · replies 1 · quotes 0 · age 346h · score 92
    https://github.com/anthropics/claude-code/releases/tag/v2.1.219
    > Claude Opus 5 model boosts context to 1M. Claude Code v2.1.219 adds 1M context at $10/$50 per Mtok, plus sandbox security. #LLM #ClaudeCode …
 
 53. **1 pts** — Show HN: OneCLI – OSS credential gateway that keeps secrets out of AI agents
-   likes 1 · reposts 0 · replies 0 · quotes 0 · age 253h · score 90
+   likes 1 · reposts 0 · replies 0 · quotes 0 · age 277h · score 90
    https://github.com/onecli/onecli
    > AI agents get secrets management. OneCLI gateway keeps credentials out of memory, +32 stars on GitHub. Anyone using OneCLI in prod? #AI #AIA…
 
 54. **1 pts** — Kimi-K3 on HuggingFace
-   likes 0 · reposts 0 · replies 1 · quotes 0 · age 230h · score 95
+   likes 0 · reposts 0 · replies 1 · quotes 0 · age 253h · score 95
    https://huggingface.co/moonshotai/Kimi-K3
    > Long-context models get a boost. Kimi-K3 handles 200k tokens, trained on Chinese. #AI #OpenWeights #HuggingFace
 
 55. **1 pts** — zhaoxuya520/reverse-skill — Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge 
-   likes 0 · reposts 0 · replies 1 · quotes 0 · age 158h · score 105
+   likes 0 · reposts 0 · replies 1 · quotes 0 · age 181h · score 105
    https://github.com/zhaoxuya520/reverse-skill
    > Security research gets AI-powered routing. Reverse-skill pack gains +612 stars with on-demand toolchain bootstrapping. #LLM #ClaudeCode #Ant…
 
 56. **1 pts** — antirez/ds4 — DeepSeek 4 Flash and PRO local inference engine for Metal, CUDA and ROCm
-   likes 1 · reposts 0 · replies 0 · quotes 0 · age 85h · score 90
+   likes 1 · reposts 0 · replies 0 · quotes 0 · age 109h · score 90
    https://github.com/antirez/ds4
    > DeepSeek 4 models run locally on Metal, CUDA and ROCm. antirez/ds4 inference engine with +385 stars today. #LLM #Ollama #LocalLLM
 
@@ -858,27 +859,37 @@ Generated: `2026-08-07T05:27:25.418908Z`
    > Anthropic enhances Claude integrations. Adds streaming and session events to Python SDK v0.118.0. #OpenSource #ClaudeCode #Anthropic
 
 156. **0 pts** — Anthropic Python SDK v0.119.0
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 326h · score 65
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 350h · score 65
    https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.119.0
    > Anthropic adds model context window exceeded stop reason. Anthropic Python SDK v0.119.0 with binary file handling, +0 stars today. #OpenSour…
 
 157. **0 pts** — Anthropic Python SDK v0.120.2
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 206h · score 65
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 229h · score 65
    https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.120.2
    > Anthropic updates MCP support. Adds v2 compatibility alongside v1 in v0.120.2. Anyone using MCP v2 with Anthropic SDK? #OpenSource #ClaudeCo…
 
 158. **0 pts** — Anthropic Python SDK v0.120.1
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 203h · score 65
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 226h · score 65
    https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.120.1
    > Anthropic SDK fixes MCP pinning. v0.120.1 release with mcp extra pinned to <2. Anyone using this to stabilize MCP versions? #OpenSource #Cla…
 
 159. **0 pts** — Claude Code v2.1.221
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 62h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 85h · score 90
    https://github.com/anthropics/claude-code/releases/tag/v2.1.221
    > Claude Code secures sandbox credentials. Adds mode: mask for Linux/WSL and prompt-audit subcommand. #LLM #ClaudeCode #Anthropic
 
 160. **0 pts** — cloudflare/computer — Give your agent a computer 👾
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 38h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 61h · score 90
    https://github.com/cloudflare/computer
    > Cloudflare gives agents a computer. Sandboxed execution environment with +796 stars today. #AI #AIAgents
+
+161. **0 pts** — Claude Code v2.1.224
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 14h · score 90
+   https://github.com/anthropics/claude-code/releases/tag/v2.1.224
+   > Claude Code adds self-hosted runners. Claude Code v2.1.224 introduces self-hosted environments with SHA-256 pinning. Anyone running Claude C…
+
+162. **0 pts** — LangChain v1.4.2
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 10h · score 90
+   https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.4.2
+   > LangChain fixes context errors. LangChain v1.4.2 handles ContextWindowExceededError, +0 stars. Anyone running this with OpenAI models? #Open…
 
