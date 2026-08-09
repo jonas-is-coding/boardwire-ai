@@ -9208,11 +9208,11 @@
   },
   {
     "id": "072dcae83b99",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-08-09T20:59:54.518532Z",
     "score": 90,
     "reason": "New SDK version with concrete features for tool use, cost control, and developer workflow directly from Anthropic.",
-    "proposed_post": "Anthropic Python SDK v0.121.0 ships with `mid-conversation-tool-changes` beta, session budgets, and GitHub skills auto-loading. Builders can now implement more dynamic tool use, control costs, and and streamline skill integration for Claude apps.",
+    "proposed_post": "Anthropic updates SDK with mid-conversation tool changes.\n\nAnthropic Python SDK v0.121.0 adds session budgets and GitHub skills…\n\nAnyone integrating v0.121.0 into production?\n\n#OpenSource #ClaudeCode #Anthropic",
     "source_angle": "Anthropic SDK update for Claude tool use and dev workflow",
     "source_item": {
       "title": "Anthropic Python SDK v0.121.0",
@@ -9243,10 +9243,29 @@
         "cluster_score": 45
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/072dcae83b99.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das Anthropic SDK Release ist relevant. Die 'mid-conversation-tool-changes' Beta ist ein Game Changer für alle, die komplexe Agenten bauen. Damit können Entwickler Tools dynamisch während eines Gesprächs anpassen, was die Flexibilität und Intelligenz ihrer AI-Anwendungen massiv erhöht.",
-    "chloe_note": "Hey, *Anthropic Python SDK v0.121.0* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New SDK version with concrete features for tool use, cost control, and developer workflow directly from Anthropic.Cluster context: 1 sources, engagement 0. Common terms: updates, ensure, inference, href. Score aktuell: 90. Link: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.121.0"
+    "chloe_note": "Hey, *Anthropic Python SDK v0.121.0* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New SDK version with concrete features for tool use, cost control, and developer workflow directly from Anthropic.Cluster context: 1 sources, engagement 0. Common terms: updates, ensure, inference, href. Score aktuell: 90. Link: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.121.0",
+    "sarah_package": {
+      "title": "Anthropic updates SDK with mid-conversation tool changes.",
+      "subtitle": "Anthropic Python SDK v0.121.0 adds session budgets and GitHub skills auto-loading.",
+      "description": "New features enhance dynamic tool use, cost control, and streamline skill integration for Claude apps.",
+      "hashtags": [
+        "#OpenSource",
+        "#ClaudeCode",
+        "#Anthropic"
+      ],
+      "question": "Anyone integrating v0.121.0 into production?",
+      "card_stat": "v0.121.0",
+      "card_claim": "Dynamic tool changes in conversation",
+      "card_context": "Adds session budgets and GitHub skills auto-loading for Claude apps."
+    },
+    "composer_version": "2",
+    "card_layout": "release",
+    "card_variant": "editorial_release",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-09-anthropic-python-sdk-v0-121-0-072dcae83b99.md",
+    "published_at": "2026-08-09T22:35:04.727226Z"
   }
 ]

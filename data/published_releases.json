@@ -40,5 +40,11 @@
     "version": "v1.4.2",
     "published_at": "2026-08-07T18:25:13.362364Z",
     "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.4.2"
+  },
+  {
+    "project": "Anthropic Python SDK",
+    "version": "v0.121.0",
+    "published_at": "2026-08-09T22:35:04.727226Z",
+    "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.121.0"
   }
 ]
