@@ -9205,5 +9205,48 @@
     "card_variant": "editorial_release",
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-07-langchain-v1-4-2-fa43763b3a6f.md",
     "published_at": "2026-08-07T18:25:13.362364Z"
+  },
+  {
+    "id": "072dcae83b99",
+    "status": "approved",
+    "created_at": "2026-08-09T20:59:54.518532Z",
+    "score": 90,
+    "reason": "New SDK version with concrete features for tool use, cost control, and developer workflow directly from Anthropic.",
+    "proposed_post": "Anthropic Python SDK v0.121.0 ships with `mid-conversation-tool-changes` beta, session budgets, and GitHub skills auto-loading. Builders can now implement more dynamic tool use, control costs, and and streamline skill integration for Claude apps.",
+    "source_angle": "Anthropic SDK update for Claude tool use and dev workflow",
+    "source_item": {
+      "title": "Anthropic Python SDK v0.121.0",
+      "source": "Anthropic Python SDK Releases",
+      "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.121.0",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 30,
+      "summary": "<h2>0.121.0 (2026-08-07)</h2>\n<p>Full Changelog: <a href=\"https://github.com/anthropics/anthropic-sdk-python/compare/v0.120.2...v0.121.0\">v0.120.2...v0.121.0</a></p>\n<h3>Features</h3>\n<ul>\n<li><strong>api:</strong> add <code>mid-conversation-tool-changes-2026-07-01</code> beta (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/c7d1531d9d63a35430333039f8c975bba4ef0411\">c7d1531</a>)</li>\n<li><strong>api:</strong> add support for session budgets, advisor tool, pinned inference location and skills auto-loading from GitHub (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/193bae02806219047d484d7efcb9b91776a6c45c\">193bae0</a>)</li>\n</ul>\n<h3>Chores</h3>\n<ul>\n<li><strong>api:</strong> remove retired Claude Opus 4.1 models (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/5352a33ade5b62ad782b522f1791b7eeeeff83be\">5352a33</a>)</li>\n<li><strong>docs:</strong> small updates to descriptions (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/b8d41762e264fe6721847f77daa337eab4905162\">b8d4176</a>)</li>\n<li><strong>docs:</strong> updates to a few documentation strings (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/3a5dd6971e0f43023533db3ed35f94ceb6c0ebde\">3a5dd69</a>)</li>\n<li>ensure all dependencies have major version constraints (<a href=\"https://github.com/anthropics/anthropic-sdk-python/issues/274\">#274</a>) (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/d52999b4f66002ffe8263756c59ab0e276c74264\">d52999b</a>)</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: updates, ensure, inference, href, auto-loading.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Anthropic Python SDK Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "updates",
+          "ensure",
+          "inference",
+          "href",
+          "auto-loading",
+          "/h2",
+          "session",
+          "claude"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: updates, ensure, inference, href. Lead: Anthropic Python SDK v0.121.0",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, das Anthropic SDK Release ist relevant. Die 'mid-conversation-tool-changes' Beta ist ein Game Changer für alle, die komplexe Agenten bauen. Damit können Entwickler Tools dynamisch während eines Gesprächs anpassen, was die Flexibilität und Intelligenz ihrer AI-Anwendungen massiv erhöht.",
+    "chloe_note": "Hey, *Anthropic Python SDK v0.121.0* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New SDK version with concrete features for tool use, cost control, and developer workflow directly from Anthropic.Cluster context: 1 sources, engagement 0. Common terms: updates, ensure, inference, href. Score aktuell: 90. Link: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.121.0"
   }
 ]
