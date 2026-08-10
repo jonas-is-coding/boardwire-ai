@@ -9375,11 +9375,11 @@
   },
   {
     "id": "18e5f4e45a0a",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-08-10T16:43:34.646690Z",
     "score": 90,
     "reason": "Meta released open-source, local, agentic, multimodal model. Ships today with weights/code for immediate builder use.",
-    "proposed_post": "Meta released Muse Glimmer, an open-source, local, agentic, multimodal model. Builders can now deploy powerful multimodal agents on-device or in private environments, reducing API costs and data egress risks.",
+    "proposed_post": "Muse Glimmer ships as local, agentic, multimodal model.\n\nMeta releases open-source model with on-device deployment.\n\n#OpenSource #OpenWeights #HuggingFace",
     "source_angle": "Meta's new open-source, local, agentic, multimodal model release.",
     "source_item": {
       "title": "Meta is back with Muse Glimmer: local, agentic, multimodal, and open source",
@@ -9409,10 +9409,29 @@
         "cluster_score": 15
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/18e5f4e45a0a.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das hier ist ein Treffer. \"Muse Glimmer\" von Meta ist lokal, agentisch, multimodal und Open Source.\n\nDas ist ein Game Changer für Entwickler, die KI-Modelle direkt auf ihren Geräten laufen lassen wollen, ohne Cloud-Abhängigkeit. Agentische Fähigkeiten bedeuten, dass das Modell Aufgaben selbstständig ausführen kann, was neue Anwendungsfälle für lokale KI eröffnet. Multimodalität ist super, weil es bedeutet, dass das Modell mit verschiedenen Datentypen (Text, Bild, Audio) umgehen kann – perfekt für Edge-AI-Anwendungen. Die Open-Source-Natur bedeutet, dass Entwickler es anpassen und erweitern können, was die Innovationsgeschwindigkeit erhöht.\n\nJeder, der an Offline-KI, Edge-Computing oder generell an leistungsstarken, anpassbaren lokalen Modellen arbeitet, wird das sofort in die Finger bekommen wollen.",
-    "chloe_note": "Kurzes Update: *Meta is back with Muse Glimmer: local, agentic, multimodal, and open source* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Meta released open-source, local, agentic, multimodal model. Ships today with weights/code for immediate builder use.Cluster context: 1 sources, engagement 0. Common terms: local, glimmer, multimodal, muse. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://huggingface.co/blog/muse-glimmer"
+    "chloe_note": "Kurzes Update: *Meta is back with Muse Glimmer: local, agentic, multimodal, and open source* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Meta released open-source, local, agentic, multimodal model. Ships today with weights/code for immediate builder use.Cluster context: 1 sources, engagement 0. Common terms: local, glimmer, multimodal, muse. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://huggingface.co/blog/muse-glimmer",
+    "sarah_package": {
+      "title": "Muse Glimmer ships as local, agentic, multimodal model.",
+      "subtitle": "Meta releases open-source model with on-device deployment.",
+      "description": "Muse Glimmer reduces API costs and data egress risks with private environment deployment.",
+      "hashtags": [
+        "#OpenSource",
+        "#OpenWeights",
+        "#HuggingFace"
+      ],
+      "question": "Anyone deploying Muse Glimmer on-device?",
+      "card_stat": "+1 dev",
+      "card_claim": "Local multimodal agents now possible",
+      "card_context": "Meta release · on-device deployment · reduces API costs"
+    },
+    "composer_version": "2",
+    "card_layout": "stat",
+    "card_variant": "editorial_stat",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-10-meta-is-back-with-muse-glimmer-local-agentic-multimodal-and-open-source-18e5f4e45a0a.md",
+    "published_at": "2026-08-10T18:26:05.900719Z"
   }
 ]

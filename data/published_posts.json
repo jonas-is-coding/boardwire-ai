@@ -2904,5 +2904,29 @@
       "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3msqdavunsh2j"
     ],
     "thread_partial": false
+  },
+  {
+    "id": "18e5f4e45a0a",
+    "published_at": "2026-08-10T18:26:05.900719Z",
+    "platform": "bluesky",
+    "post": "Muse Glimmer ships as local, agentic, multimodal model.\n\nMeta releases open-source model with on-device deployment.\n\n#OpenSource #OpenWeights #HuggingFace",
+    "source_link": "https://huggingface.co/blog/muse-glimmer",
+    "source_title": "Meta is back with Muse Glimmer: local, agentic, multimodal, and open source",
+    "score": 90,
+    "reason": "Meta released open-source, local, agentic, multimodal model. Ships today with weights/code for immediate builder use.",
+    "card_path": "generated/cards/18e5f4e45a0a.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-10-meta-is-back-with-muse-glimmer-local-agentic-multimodal-and-open-source-18e5f4e45a0a.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3msqpyk2i2j2j",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3msqpyk2i2j2j",
+    "format_variant": "plain",
+    "hashtags_used": [
+      "#OpenSource",
+      "#OpenWeights",
+      "#HuggingFace"
+    ],
+    "published_hour_utc": 18,
+    "published_weekday": "Monday",
+    "composer_version": "2",
+    "card_variant": "editorial_stat"
   }
 ]
