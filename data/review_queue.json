@@ -9267,5 +9267,91 @@
     "card_variant": "editorial_release",
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-09-anthropic-python-sdk-v0-121-0-072dcae83b99.md",
     "published_at": "2026-08-09T22:35:04.727226Z"
+  },
+  {
+    "id": "2aaff33420dd",
+    "status": "approved",
+    "created_at": "2026-08-10T13:03:18.829207Z",
+    "score": 95,
+    "reason": "Meta released open weights for a 30B local coding model. Passes Ships Test: new model weights released.",
+    "proposed_post": "Meta released Muse Glimmer, a 30B open-weights local coding model. This enables builders to run a powerful coding assistant on-device, enhancing privacy and potentially reducing API inference costs.",
+    "source_angle": "Meta AI blog release of open-weights local coding model",
+    "source_item": {
+      "title": "Meta Muse Glimmer – open weights 30B local coding model",
+      "source": "HackerNews",
+      "link": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model",
+      "source_tier": 3,
+      "engagement_score": 342.5,
+      "local_newsworthiness_score": 30,
+      "summary": "287 points, 111 comments on Hacker News — submitted by riordan — original: https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model\n[Cluster context: 1 sources, engagement 342, common terms: local, weights, meta, 287, original.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 342,
+        "common_terms": [
+          "local",
+          "weights",
+          "meta",
+          "287",
+          "original",
+          "coding",
+          "glimmer",
+          "111"
+        ],
+        "cluster_summary": "1 sources, engagement 342. Common terms: local, weights, meta, 287. Lead: Meta Muse Glimmer – open weights 30B local coding model",
+        "alternative_titles": [],
+        "cluster_score": 30
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": true,
+    "claire_note": "Chloe, der Meta Muse Glimmer Artikel ist ein Volltreffer. Ein 30B Open-Weights-Modell für lokales Coding – das ist genau das, was viele Devs suchen, um Agenten lokal zu entwickeln, ohne Cloud-Abhängigkeit. Stell dir vor, du kannst komplexe Coding-Aufgaben direkt auf deiner Hardware erledigen, mit der Flexibilität von Open-Source. Das ist ein Game Changer für Prototyping und datenschutzsensible Projekte.",
+    "chloe_note": "*Meta Muse Glimmer – open weights 30B local coding model* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Meta released open weights for a 30B local coding model. Passes Ships Test: new model weights released.Cluster context: 1 sources, engagement 342. Common terms: local, weights, meta, 287. Bewertung: 95. Quelle: https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model"
+  },
+  {
+    "id": "21fdc04ea90a",
+    "status": "approved",
+    "created_at": "2026-08-10T13:03:21.150310Z",
+    "score": 65,
+    "reason": "local newsworthiness fallback",
+    "proposed_post": "Meta ships Muse Glimmer on Ollama.\n\n30B multimodal model for agent workloads, Apple Silicon support.\n\n#LLM #ClaudeCode #Anthropic",
+    "source_angle": "Local high-score + Sarah/OpenRouter fallback",
+    "source_item": {
+      "title": "Ollama v0.32.7",
+      "source": "Ollama Releases",
+      "link": "https://github.com/ollama/ollama/releases/tag/v0.32.7",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 65,
+      "summary": "<h2>Muse Glimmer</h2>\n<blockquote>\n<p>Note: Muse Glimmer is currently available via initial support via Ollama's MLX engine on Apple Silicon. Additional support and optimizations for Apple Silicon, NVIDIA, AMD, and other platforms will be available in the coming days.</p>\n</blockquote>\n<p><strong>Muse Glimmer</strong>, Meta's newest open model and the first released by Meta Superintelligence Labs, is now available on Ollama. It's a 30B multimodal model purpose-built for agent workloads that run locally.</p>\n<p>With Ollama, you can now use Muse Glimmer to power coding agent applications such as Claude Code, Codex, Pi and more, as well as long-running personal assistants such as OpenClaw and Hermes.</p>\n<p>Ollama's MLX engine provides state-of-the-art performance on Apple Silicon for this model, with support for DFlash and image input as of Ollama 0.32.7.</p>\n<p>To download and run Muse Glimmer locally:</p>\n<div class=\"highlight highlight-source-shell notranslate position-relative overflow-auto\"><pre>ollama run muse-glimmer:30b-mlx</pre></div>\n<p>To run Muse Glimmer on Apple Silicon with Claude Code, <a href=\"https://ollama.com/download\" rel=\"nofollow\">download Ollama</a> and run:</p>\n<div class=\"highlight highlight-source-shell notranslate position-relative overflow-auto\"><pre>ollama launch claude --model muse-glimmer:30b-mlx</pre></div>\n<p>For a lighter-weight coding agent, try <a href=\"https://pi.dev\" rel=\"nofollow\">Pi</a>:</p>\n<div class=\"highlight highlight-source-shell notranslate position-relative overflow-auto\"><pre>ollama launch pi --model muse-glimmer:30b-mlx</pre></div>\n<p>For personal assistant frameworks such as OpenClaw and Hermes, use:</p>\n<div class=\"highlight highlight-source-shell notranslate position-relative overflow-auto\"><pre>ollama launch openclaw --model muse-glimmer:30b-mlx</pre></div>\n<div class=\"highlight highlight-source-shell notranslate position-relative overflow-auto\"><pre>ollama launch hermes --model muse-glimmer:30b-mlx</pre></div>\n[Cluster context: 1 sources, engagement 0, common terms: muse-glimmer, ollama., power, input, muse.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Ollama Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "muse-glimmer",
+          "ollama.",
+          "power",
+          "input",
+          "muse",
+          "nofollow",
+          "run",
+          "hermes."
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: muse-glimmer, ollama., power, input. Lead: Ollama v0.32.7",
+        "alternative_titles": [],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "breaking": false,
+    "claire_note": "Aus *Ollama Releases* ist ein starker Kandidat reingekommen: *Ollama v0.32.7*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 65_",
+    "chloe_note": "Kurzes Update: *Ollama v0.32.7* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: muse-glimmer, ollama., power, input. Ich habe es mit 65 Punkten bewertet. Hier der Link: https://github.com/ollama/ollama/releases/tag/v0.32.7"
   }
 ]
