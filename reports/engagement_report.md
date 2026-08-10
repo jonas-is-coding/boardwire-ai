@@ -1,18 +1,18 @@
 # Boardwire Engagement Report
 
-Generated: `2026-08-09T04:54:59.336445Z`
+Generated: `2026-08-10T05:16:13.475063Z`
 
 ## Summary
 
-- Measured posts: **162** of 166 published
+- Measured posts: **163** of 167 published
 - Median peak engagement: **0.0**
 - Average peak engagement: **0.6**
 - Top: **5** — Graphify-Labs/graphify — AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, o
 
 ## Patterns
 
-- Release-keyword posts: avg **0.6** (n=98) vs others avg **0.6** (n=64)
-- GitHub sources: avg **0.7** (n=124) vs other sources avg **0.3** (n=38)
+- Release-keyword posts: avg **0.6** (n=99) vs others avg **0.6** (n=64)
+- GitHub sources: avg **0.7** (n=125) vs other sources avg **0.3** (n=38)
 
 ## Engagement by published hour (UTC)
 
@@ -31,11 +31,11 @@ Generated: `2026-08-09T04:54:59.336445Z`
 - 15:00 UTC: avg **0.7** (n=18)
 - 16:00 UTC: avg **0.5** (n=14)
 - 17:00 UTC: avg **0.0** (n=7)
-- 18:00 UTC: avg **1.2** (n=13)
+- 18:00 UTC: avg **1.4** (n=13)
 - 19:00 UTC: avg **0.9** (n=7)
 - 20:00 UTC: avg **1.1** (n=16)
 - 21:00 UTC: insufficient data (n<5, have 3)
-- 22:00 UTC: avg **0.4** (n=10)
+- 22:00 UTC: avg **0.4** (n=11)
 - 23:00 UTC: insufficient data (n<5, have 3)
 
 ## Engagement by weekday
@@ -44,19 +44,19 @@ Generated: `2026-08-09T04:54:59.336445Z`
 - Tuesday: avg **0.5** (n=22)
 - Wednesday: avg **0.4** (n=23)
 - Thursday: avg **0.3** (n=20)
-- Friday: avg **0.5** (n=30)
+- Friday: avg **0.6** (n=30)
 - Saturday: avg **1.0** (n=22)
-- Sunday: avg **0.8** (n=20)
+- Sunday: avg **0.8** (n=21)
 
 ## Engagement by format variant
 
 - plain: avg **0.6** (n=151)
-- question: avg **0.6** (n=8)
+- question: avg **0.8** (n=9)
 - thread: insufficient data (n<5, have 3)
 
 ## Engagement by card variant
 
-- editorial_release: avg **0.2** (n=10)
+- editorial_release: avg **0.4** (n=11)
 - editorial_repo: avg **1.3** (n=6)
 - editorial_security: insufficient data (n<5, have 1)
 - editorial_stat: insufficient data (n<5, have 4)
@@ -68,7 +68,7 @@ Generated: `2026-08-09T04:54:59.336445Z`
 - #AI #LLM: insufficient data (n<5, have 1)
 - #AI #MachineLearning: insufficient data (n<5, have 1)
 - #Anthropic #ClaudeCode #LLM: avg **0.4** (n=5)
-- #Anthropic #ClaudeCode #OpenSource: avg **0.0** (n=5)
+- #Anthropic #ClaudeCode #OpenSource: avg **0.0** (n=6)
 - #InfoSec #LocalLLM #OpenSource: insufficient data (n<5, have 1)
 - #InfoSec #OpenSource: insufficient data (n<5, have 1)
 - #LLM #LocalLLM #Ollama: insufficient data (n<5, have 1)
@@ -77,7 +77,7 @@ Generated: `2026-08-09T04:54:59.336445Z`
 
 ## Version-release posts vs others
 
-- Version releases: avg **0.3** (n=75)
+- Version releases: avg **0.4** (n=76)
 - Others: avg **0.9** (n=87)
   (Version-only releases are now blocked by the quality gate; this group should trend to n=0.)
 
@@ -139,234 +139,234 @@ Generated: `2026-08-09T04:54:59.336445Z`
    > Meta-learning agents now train models with RL for $1.3k. ai-trains-ai RL agent ships open code with cost-aware policy, running on standard G…
 
 12. **3 pts** — Benchmarking Opus 5 on SlopCodeBench
-   likes 1 · reposts 1 · replies 0 · quotes 0 · age 274h · score 85
+   likes 1 · reposts 1 · replies 0 · quotes 0 · age 298h · score 85
    https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/benchmarking-opus-5-on-slop-code-bench.md
    > Opus 5 performance benchmarked on SlopCodeBench. Detailed report shows Opus 5 coding… Anyone using Opus 5 for production code generation? #M…
 
-13. **2 pts** — chopratejas/headroom — Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 60-95% fewer tokens, same answers. Library, proxy, MCP server.
+13. **3 pts** — LangChain v1.4.2
+   likes 1 · reposts 0 · replies 2 · quotes 0 · age 59h · score 90
+   https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.4.2
+   > LangChain fixes context errors. LangChain v1.4.2 handles ContextWindowExceededError, +0 stars. Anyone running this with OpenAI models? #Open…
+
+14. **2 pts** — chopratejas/headroom — Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 60-95% fewer tokens, same answers. Library, proxy, MCP server.
    likes 2 · reposts 0 · replies 0 · quotes 0 · age 348h · score 95
    https://github.com/chopratejas/headroom
    > Headroom compresses LLM context before inference. chopratejas/headroom library, proxy, and MCP server cuts tool outputs, logs, and RAG chunk…
 
-14. **2 pts** — NousResearch/hermes-agent — The agent that grows with you
+15. **2 pts** — NousResearch/hermes-agent — The agent that grows with you
    likes 1 · reposts 0 · replies 1 · quotes 0 · age 349h · score 90
    https://github.com/NousResearch/hermes-agent
    > Agent memory is becoming infrastructure. Hermes-agent turns recall into persistent state for coding-agent workflows, with +1736 stars today.…
 
-15. **2 pts** — Show HN: Lowfat – pluggable CLI filter that saved 91.8% of my LLM tokens
+16. **2 pts** — Show HN: Lowfat – pluggable CLI filter that saved 91.8% of my LLM tokens
    likes 2 · reposts 0 · replies 0 · quotes 0 · age 355h · score 90
    https://github.com/zdk/lowfat
    > LLM token usage drops with pluggable CLI filters. Lowfat reduces LLM input tokens by up to 91.8%, Apache 2.0 licensed. Lowfat is a new open-…
 
-16. **2 pts** — LangChain v1.1.0
+17. **2 pts** — LangChain v1.1.0
    likes 0 · reposts 0 · replies 0 · quotes 0 · age 349h · score 60
    https://github.com/langchain-ai/langchain/releases/tag/langchain-deepseek%3D%3D1.1.0
    > LangChain v1.1.0 ships local execution for coding agents. Adds new generation providers under MPL 2.0 license with local model support. Lang…
 
-17. **2 pts** — mattpocock/skills — Skills for Real Engineers. Straight from my .claude directory.
+18. **2 pts** — mattpocock/skills — Skills for Real Engineers. Straight from my .claude directory.
    likes 2 · reposts 0 · replies 0 · quotes 0 · age 350h · score 95
    https://github.com/mattpocock/skills
    > Claude skills become open infrastructure. mattpocock/skills adds 1849 stars with prompt engineering techniques for real engineers. Directly …
 
-18. **2 pts** — Anthropic Python SDK v0.110.0
+19. **2 pts** — Anthropic Python SDK v0.110.0
    likes 1 · reposts 0 · replies 1 · quotes 0 · age 358h · score 95
    https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.110.0
    > Anthropic Python SDK adds code execution tool for agents. v0.110.0 exposes code_execution_20260120 for direct integration into agent loops. …
 
-19. **2 pts** — Identity verification on Claude
+20. **2 pts** — Identity verification on Claude
    likes 2 · reposts 0 · replies 0 · quotes 0 · age 348h · score 75
    https://support.claude.com/en/articles/14328960-identity-verification-on-claude
    > Claude now requires identity verification. Impacts user onboarding, account management, and API access with 228 points on Hacker News. Anthr…
 
-20. **2 pts** — browser-use/video-use — Edit videos with coding agents
+21. **2 pts** — browser-use/video-use — Edit videos with coding agents
    likes 1 · reposts 0 · replies 1 · quotes 0 · age 345h · score 90
    https://github.com/browser-use/video-use
    > VideoUse adds programmatic video editing for coding agents. browser-use/vid enables agent-driven video edits in browser workflows with +186 …
 
-21. **2 pts** — 0xNyk/council-of-high-intelligence — 18 AI personas deliberate your hardest decisions across multiple LLM providers. Aristotle, Feynman, Kahneman, Torvalds & more — structured multi-round deliberation
+22. **2 pts** — 0xNyk/council-of-high-intelligence — 18 AI personas deliberate your hardest decisions across multiple LLM providers. Aristotle, Feynman, Kahneman, Torvalds & more — structured multi-round deliberation
    likes 2 · reposts 0 · replies 0 · quotes 0 · age 347h · score 90
    https://github.com/0xNyk/council-of-high-intelligence
    > Council-of-high-intelligence ships multi-agent deliberation as a primi 0xNyk/council-of-high-intelligence runs 18 AI personas across LLM pro…
 
-22. **2 pts** — Zackriya-Solutions/meetily — Privacy first, AI meeting assistant with 4x faster Parakeet/Whisper live transcription, speaker diarization, and Ollama summarization built on Rust. 100% local processing.
+23. **2 pts** — Zackriya-Solutions/meetily — Privacy first, AI meeting assistant with 4x faster Parakeet/Whisper live transcription, speaker diarization, and Ollama summarization built on Rust. 100% local processing.
    likes 2 · reposts 0 · replies 0 · quotes 0 · age 231h · score 92
    https://github.com/Zackriya-Solutions/meetily
    > Meetily brings local AI meeting transcription. 4x faster Parakeet/Whisper transcription and Ollama summarization with 607 stars, 100% local …
 
-23. **2 pts** — vLLM v0.25.0
+24. **2 pts** — vLLM v0.25.0
    likes 2 · reposts 0 · replies 0 · quotes 0 · age 111h · score 90
    https://github.com/vllm-project/vllm/releases/tag/v0.25.0
    > vLLM ships PagedAttention v2 for batched inference. vLLM v0.25.0 enables +22% throughput and lower latency on A100 GPUs. Apache 2.0. New Bat…
 
-24. **2 pts** — Codex Security
-   likes 2 · reposts 0 · replies 0 · quotes 0 · age 226h · score 90
+25. **2 pts** — Codex Security
+   likes 2 · reposts 0 · replies 0 · quotes 0 · age 250h · score 90
    https://github.com/openai/codex-security
    > OpenAI releases Codex Security repo. GitHub repo provides LLM code security guidelines, +197 comments on HN. #OpenSource #InfoSec
 
-25. **1 pts** — Lum1104/Understand-Anything — Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex
+26. **1 pts** — Lum1104/Understand-Anything — Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex
    likes 1 · reposts 0 · replies 0 · quotes 0 · age 358h · score 105
    https://github.com/Lum1104/Understand-Anything
    > Understand Anything turns code into interactive knowledge graphs. Lum1104/Understand-Anything adds queryable graphs to any codebase with +37…
 
-26. **1 pts** — Anthropic Python SDK v0.103.0
+27. **1 pts** — Anthropic Python SDK v0.103.0
    likes 1 · reposts 0 · replies 0 · quotes 0 · age 335h · score 65
    https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.103.0
    > Anthropic adds local sandbox helpers for CMA workflows. Anthropic Python SDK v0.103.0 exposes CMA sandbox helpers for local execution. MIT l…
 
-27. **1 pts** — luongnv89/claude-howto — A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that bring immediate value.
+28. **1 pts** — luongnv89/claude-howto — A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that bring immediate value.
    likes 1 · reposts 0 · replies 0 · quotes 0 · age 352h · score 85
    https://github.com/luongnv89/claude-howto
    > Claude-howto delivers copy-paste templates for Claude Code workflows. luongnv89/claude-howto visual guide accelerates agent development with…
 
-28. **1 pts** — Anthropic Python SDK v0.108.0
+29. **1 pts** — Anthropic Python SDK v0.108.0
    likes 1 · reposts 0 · replies 0 · quotes 0 · age 357h · score 90
    https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.108.0
    > Anthropic adds client-side fallbacks to Python SDK. Supports claude-mythos-5 and claude-fable-5 models with server-side fallbacks. Improves …
 
-29. **1 pts** — Ollama v0.30.9
+30. **1 pts** — Ollama v0.30.9
    likes 1 · reposts 0 · replies 0 · quotes 0 · age 355h · score 90
    https://github.com/ollama/ollama/releases/tag/v0.30.9
    > Ollama adds Cohere2Moe support. Ollama v0.30.9 fixes single-token output bug for local coding agents, with 4 critical fixes. Cohere2Moe arch…
 
-30. **1 pts** — Claude Code v2.1.183
+31. **1 pts** — Claude Code v2.1.183
    likes 1 · reposts 0 · replies 0 · quotes 0 · age 350h · score 90
    https://github.com/anthropics/claude-code/releases/tag/v2.1.183
    > Claude Code blocks destructive git commands by default. v2.1.183 adds auto-mode safety for git reset --hard, git clean, and terraform destro…
 
-31. **1 pts** — palmier-io/palmier-pro — macOS video editor built for AI
+32. **1 pts** — palmier-io/palmier-pro — macOS video editor built for AI
    likes 1 · reposts 0 · replies 0 · quotes 0 · age 348h · score 90
    https://github.com/palmier-io/palmier-pro
    > AI video editors are becoming native on macOS. Palmier-pro gains +749 stars with AI-focused features for video production workflows. macOS v…
 
-32. **1 pts** — Show HN: Recall – fully-local project memory for Claude Code
+33. **1 pts** — Show HN: Recall – fully-local project memory for Claude Code
    likes 0 · reposts 0 · replies 1 · quotes 0 · age 338h · score 90
    https://github.com/raiyanyahya/recall
    > Claude Code gets local project memory. Recall provides fully-local storage with 58 comments and 77 points on Hacker News. Builders can now p…
 
-33. **1 pts** — Good results fine tuning a local LLM like Qwen 3:0.6B to categorize questions
+34. **1 pts** — Good results fine tuning a local LLM like Qwen 3:0.6B to categorize questions
    likes 0 · reposts 0 · replies 1 · quotes 0 · age 355h · score 85
    https://www.teachmecoolstuff.com/viewarticle/fine-tuning-a-local-llm-to-categorize-questions
    > Local LLMs become viable for question categorization. Qwen 0.6B fine-tunes for effective classification, with 129 points and 30 comments on …
 
-34. **1 pts** — Claude Code v2.1.187
+35. **1 pts** — Claude Code v2.1.187
    likes 1 · reposts 0 · replies 0 · quotes 0 · age 345h · score 90
    https://github.com/anthropics/claude-code/releases/tag/v2.1.187
    > Claude Code enhances security with sandbox credentials. Adds sandbox.credentials setting, org-configured model restrictions, and has 90 scor…
 
-35. **1 pts** — anomalyco/opencode — The open source coding agent.
+36. **1 pts** — anomalyco/opencode — The open source coding agent.
    likes 0 · reposts 0 · replies 1 · quotes 0 · age 354h · score 90
    https://github.com/anomalyco/opencode
    > Open-source coding agents arrive. Anomalyco/opencode gains +573 stars on GitHub, Apache 2.0 licensed. First open-source coding agent availab…
 
-36. **1 pts** — vLLM v0.24.0
+37. **1 pts** — vLLM v0.24.0
    likes 1 · reposts 0 · replies 0 · quotes 0 · age 352h · score 90
    https://github.com/vllm-project/vllm/releases/tag/v0.24.0
    > vLLM v0.24.0 ships Mixture-of-Experts speedups for Qwen3. Native NVFP4 configs cut MoE serving latency on NVIDIA hardware, Apache 2.0. Qwen3…
 
-37. **1 pts** — Using Local Coding Agents
+38. **1 pts** — Using Local Coding Agents
    likes 1 · reposts 0 · replies 0 · quotes 0 · age 346h · score 90
    https://magazine.sebastianraschka.com/p/using-local-coding-agents
    > Open-Weight Models Become Local Coding Primitives. Sebastian Raschka's guide enables self-hosted coding agents, bypassing Claude/Codex APIs,…
 
-38. **1 pts** — Show HN: Adrafinil – keep a lid-closed Mac awake only while agents work
+39. **1 pts** — Show HN: Adrafinil – keep a lid-closed Mac awake only while agents work
    likes 1 · reposts 0 · replies 0 · quotes 0 · age 342h · score 85
    https://github.com/kageroumado/adrafinil
    > Local AI agent runs stay awake on Mac. Adrafinil keeps lid-closed Macs awake with +33 comments and 48 points on Hacker News. Open-source uti…
 
-39. **1 pts** — Claude-real-video － any LLM can watch a video
+40. **1 pts** — Claude-real-video － any LLM can watch a video
    likes 1 · reposts 0 · replies 0 · quotes 0 · age 294h · score 85
    https://github.com/HUANGCHIHHUNGLeo/claude-real-video
    > Video input becomes a plugin primitive for any LLM. claude-real-video converts video to sequential frames for LLM processing, Apache 2.0 on …
 
-40. **1 pts** — Claude Code v2.1.199
+41. **1 pts** — Claude Code v2.1.199
    likes 0 · reposts 0 · replies 1 · quotes 0 · age 282h · score 90
    https://github.com/anthropics/claude-code/releases/tag/v2.1.199
    > Claude Code ships slash-skill stacking and SSL fixes for agents. v2.1.199 loads up to five slash-skills in one command, fixes SSL proxies an…
 
-41. **1 pts** — Show HN: Mcpsnoop – Wireshark for MCP (transparent proxy and live TUI)
+42. **1 pts** — Show HN: Mcpsnoop – Wireshark for MCP (transparent proxy and live TUI)
    likes 1 · reposts 0 · replies 0 · quotes 0 · age 270h · score 70
    https://github.com/kerlenton/mcpsnoop
    > MCP debugging just got wireshark-level visibility. Mcpsnoop ships a transparent proxy and live TUI for MCP traffic, Apache-2.0 on GitHub. Fi…
 
-42. **1 pts** — OthmanAdi/planning-with-files — Persistent file-based planning for AI coding agents and long-running agentic tasks. Crash-proof markdown plans that survive context loss and /clear, plus a deterministi
+43. **1 pts** — OthmanAdi/planning-with-files — Persistent file-based planning for AI coding agents and long-running agentic tasks. Crash-proof markdown plans that survive context loss and /clear, plus a deterministi
    likes 1 · reposts 0 · replies 0 · quotes 0 · age 230h · score 90
    https://github.com/OthmanAdi/planning-with-files
    > AI coding agents get crash-proof planning. OthmanAdi/planning-with-files brings persistent state to 60+ agents via SKILL.md standard. Crash-…
 
-43. **1 pts** — LangChain v1.1.6
+44. **1 pts** — LangChain v1.1.6
    likes 0 · reposts 0 · replies 1 · quotes 0 · age 222h · score 85
    https://github.com/langchain-ai/langchain/releases/tag/langchain-mistralai%3D%3D1.1.6
    > LangChain surfaces MistralAI citation metadata. LangChain v1.1.6 adds citation metadata for RAG apps, with 2 new features and Apache 2.0 lic…
 
-44. **1 pts** — LangChain v0.2.6
+45. **1 pts** — LangChain v0.2.6
    likes 0 · reposts 0 · replies 1 · quotes 0 · age 206h · score 85
    https://github.com/langchain-ai/langchain/releases/tag/langchain-openrouter%3D%3D0.2.6
    > LangChain adds default_headers for OpenRouter integrations. v0.2.6 supports custom HTTP header injection via default_headers in LangChain Op…
 
-45. **1 pts** — AMD Ryzen AI Halo – $4k AI Dev Kit
+46. **1 pts** — AMD Ryzen AI Halo – $4k AI Dev Kit
    likes 1 · reposts 0 · replies 0 · quotes 0 · age 201h · score 85
    https://www.lttlabs.com/articles/2026/07/06/amd-ryzen-ai-halo
    > AMD ships a $4k dev kit for local AI training and inference. Ryzen AI Halo integrates 32GB VRAM, NPUs, and 4x AI accelerators for on-device …
 
-46. **1 pts** — OfficeCLI: Office suite for AI agents to read and edit Microsoft Office files
+47. **1 pts** — OfficeCLI: Office suite for AI agents to read and edit Microsoft Office files
    likes 1 · reposts 0 · replies 0 · quotes 0 · age 198h · score 85
    https://github.com/iOfficeAI/OfficeCLI
    > OfficeCLI turns Microsoft Office into a primitive for agent workflows. iOfficeAI/OfficeCLI ships a CLI for agents to read and edit Word, Exc…
 
-47. **1 pts** — google-labs-code/stitch-skills — A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as 
+48. **1 pts** — google-labs-code/stitch-skills — A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as 
    likes 1 · reposts 0 · replies 0 · quotes 0 · age 106h · score 90
    https://github.com/google-labs-code/stitch-skills
    > Coding agents gain reusable skills through an open standard. google-labs-code/stitch-skills ships 20+ skills for Stitch MCP, Apache 2.0. Ski…
 
-48. **1 pts** — Claude Code v2.1.208
+49. **1 pts** — Claude Code v2.1.208
    likes 1 · reposts 0 · replies 0 · quotes 0 · age 19h · score 90
    https://github.com/anthropics/claude-code/releases/tag/v2.1.208
    > Claude Code adds accessibility and Vim remaps as infrastructure. v2.1.208 ships screen-reader mode, vimInsertModeRemaps, and CLAUDE_CODE_PRO…
 
-49. **1 pts** — Differentiable Fortran with LFortran and Enzyme
+50. **1 pts** — Differentiable Fortran with LFortran and Enzyme
    likes 1 · reposts 0 · replies 0 · quotes 0 · age 10h · score 65
    https://docs.pasteurlabs.ai/projects/tesseract-core/latest/blog/2026-07-09-enzyme-lfortran-autodiff.html
    > LFortran adds Enzyme AD to Fortran codebases. First integration to auto-differentiate existing HPC Fortran routines without manual gradients…
 
-50. **1 pts** — Bonsai 27B (1-bit LLM): The First 27B-Class Model to Run on a Phone
+51. **1 pts** — Bonsai 27B (1-bit LLM): The First 27B-Class Model to Run on a Phone
    likes 1 · reposts 0 · replies 0 · quotes 0 · age 8h · score 70
    https://prismml.com/news/bonsai-27b
    > 27B-class on-device LLMs arrive via 1-bit quantization. Bonsai 27B runs on a smartphone with 1-bit weights, enabling local mobile AI inferen…
 
-51. **1 pts** — Inkling – Open-Weights 975B Parameter LLM
+52. **1 pts** — Inkling – Open-Weights 975B Parameter LLM
    likes 1 · reposts 0 · replies 0 · quotes 0 · age 360h · score 90
    https://thinkingmachines.ai/inkling/
    > Open-weight 975B LLM ships as a new foundation model. Inkling releases 975B open-weight LLM for deployment and fine-tuning, Apache 2.0 licen…
 
-52. **1 pts** — Claude Code v2.1.219
+53. **1 pts** — Claude Code v2.1.219
    likes 0 · reposts 0 · replies 1 · quotes 0 · age 346h · score 92
    https://github.com/anthropics/claude-code/releases/tag/v2.1.219
    > Claude Opus 5 model boosts context to 1M. Claude Code v2.1.219 adds 1M context at $10/$50 per Mtok, plus sandbox security. #LLM #ClaudeCode …
 
-53. **1 pts** — Show HN: OneCLI – OSS credential gateway that keeps secrets out of AI agents
-   likes 1 · reposts 0 · replies 0 · quotes 0 · age 301h · score 90
+54. **1 pts** — Show HN: OneCLI – OSS credential gateway that keeps secrets out of AI agents
+   likes 1 · reposts 0 · replies 0 · quotes 0 · age 325h · score 90
    https://github.com/onecli/onecli
    > AI agents get secrets management. OneCLI gateway keeps credentials out of memory, +32 stars on GitHub. Anyone using OneCLI in prod? #AI #AIA…
 
-54. **1 pts** — Kimi-K3 on HuggingFace
-   likes 0 · reposts 0 · replies 1 · quotes 0 · age 277h · score 95
+55. **1 pts** — Kimi-K3 on HuggingFace
+   likes 0 · reposts 0 · replies 1 · quotes 0 · age 302h · score 95
    https://huggingface.co/moonshotai/Kimi-K3
    > Long-context models get a boost. Kimi-K3 handles 200k tokens, trained on Chinese. #AI #OpenWeights #HuggingFace
 
-55. **1 pts** — zhaoxuya520/reverse-skill — Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge 
-   likes 0 · reposts 0 · replies 1 · quotes 0 · age 205h · score 105
+56. **1 pts** — zhaoxuya520/reverse-skill — Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge 
+   likes 0 · reposts 0 · replies 1 · quotes 0 · age 230h · score 105
    https://github.com/zhaoxuya520/reverse-skill
    > Security research gets AI-powered routing. Reverse-skill pack gains +612 stars with on-demand toolchain bootstrapping. #LLM #ClaudeCode #Ant…
 
-56. **1 pts** — antirez/ds4 — DeepSeek 4 Flash and PRO local inference engine for Metal, CUDA and ROCm
-   likes 1 · reposts 0 · replies 0 · quotes 0 · age 133h · score 90
+57. **1 pts** — antirez/ds4 — DeepSeek 4 Flash and PRO local inference engine for Metal, CUDA and ROCm
+   likes 1 · reposts 0 · replies 0 · quotes 0 · age 157h · score 90
    https://github.com/antirez/ds4
    > DeepSeek 4 models run locally on Metal, CUDA and ROCm. antirez/ds4 inference engine with +385 stars today. #LLM #Ollama #LocalLLM
-
-57. **1 pts** — LangChain v1.4.2
-   likes 0 · reposts 0 · replies 1 · quotes 0 · age 34h · score 90
-   https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.4.2
-   > LangChain fixes context errors. LangChain v1.4.2 handles ContextWindowExceededError, +0 stars. Anyone running this with OpenAI models? #Open…
 
 58. **0 pts** — Claude Opus 4.8
    likes 0 · reposts 0 · replies 0 · quotes 0 · age 352h · score 95
@@ -869,27 +869,32 @@ Generated: `2026-08-09T04:54:59.336445Z`
    > Anthropic adds model context window exceeded stop reason. Anthropic Python SDK v0.119.0 with binary file handling, +0 stars today. #OpenSour…
 
 158. **0 pts** — Anthropic Python SDK v0.120.2
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 253h · score 65
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 278h · score 65
    https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.120.2
    > Anthropic updates MCP support. Adds v2 compatibility alongside v1 in v0.120.2. Anyone using MCP v2 with Anthropic SDK? #OpenSource #ClaudeCo…
 
 159. **0 pts** — Anthropic Python SDK v0.120.1
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 250h · score 65
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 275h · score 65
    https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.120.1
    > Anthropic SDK fixes MCP pinning. v0.120.1 release with mcp extra pinned to <2. Anyone using this to stabilize MCP versions? #OpenSource #Cla…
 
 160. **0 pts** — Claude Code v2.1.221
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 109h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 133h · score 90
    https://github.com/anthropics/claude-code/releases/tag/v2.1.221
    > Claude Code secures sandbox credentials. Adds mode: mask for Linux/WSL and prompt-audit subcommand. #LLM #ClaudeCode #Anthropic
 
 161. **0 pts** — cloudflare/computer — Give your agent a computer 👾
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 85h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 110h · score 90
    https://github.com/cloudflare/computer
    > Cloudflare gives agents a computer. Sandboxed execution environment with +796 stars today. #AI #AIAgents
 
 162. **0 pts** — Claude Code v2.1.224
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 38h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 63h · score 90
    https://github.com/anthropics/claude-code/releases/tag/v2.1.224
    > Claude Code adds self-hosted runners. Claude Code v2.1.224 introduces self-hosted environments with SHA-256 pinning. Anyone running Claude C…
+
+163. **0 pts** — Anthropic Python SDK v0.121.0
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 7h · score 90
+   https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.121.0
+   > Anthropic updates SDK with mid-conversation tool changes. Anthropic Python SDK v0.121.0 adds session budgets and GitHub skills… Anyone integ…
 
