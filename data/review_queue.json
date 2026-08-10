@@ -9372,5 +9372,47 @@
     "breaking": false,
     "claire_note": "Aus *Ollama Releases* ist ein starker Kandidat reingekommen: *Ollama v0.32.7*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 65_",
     "chloe_note": "Kurzes Update: *Ollama v0.32.7* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: muse-glimmer, ollama., power, input. Ich habe es mit 65 Punkten bewertet. Hier der Link: https://github.com/ollama/ollama/releases/tag/v0.32.7"
+  },
+  {
+    "id": "18e5f4e45a0a",
+    "status": "approved",
+    "created_at": "2026-08-10T16:43:34.646690Z",
+    "score": 90,
+    "reason": "Meta released open-source, local, agentic, multimodal model. Ships today with weights/code for immediate builder use.",
+    "proposed_post": "Meta released Muse Glimmer, an open-source, local, agentic, multimodal model. Builders can now deploy powerful multimodal agents on-device or in private environments, reducing API costs and data egress risks.",
+    "source_angle": "Meta's new open-source, local, agentic, multimodal model release.",
+    "source_item": {
+      "title": "Meta is back with Muse Glimmer: local, agentic, multimodal, and open source",
+      "source": "Hugging Face Blog",
+      "link": "https://huggingface.co/blog/muse-glimmer",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 10,
+      "summary": "Meta is back with Muse Glimmer: local, agentic, multimodal, and open source\n[Cluster context: 1 sources, engagement 0, common terms: local, glimmer, multimodal, muse, agentic.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Hugging Face Blog"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "local",
+          "glimmer",
+          "multimodal",
+          "muse",
+          "agentic",
+          "back",
+          "meta"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: local, glimmer, multimodal, muse. Lead: Meta is back with Muse Glimmer: local, agentic, multimodal, and open source",
+        "alternative_titles": [],
+        "cluster_score": 15
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, das hier ist ein Treffer. \"Muse Glimmer\" von Meta ist lokal, agentisch, multimodal und Open Source.\n\nDas ist ein Game Changer für Entwickler, die KI-Modelle direkt auf ihren Geräten laufen lassen wollen, ohne Cloud-Abhängigkeit. Agentische Fähigkeiten bedeuten, dass das Modell Aufgaben selbstständig ausführen kann, was neue Anwendungsfälle für lokale KI eröffnet. Multimodalität ist super, weil es bedeutet, dass das Modell mit verschiedenen Datentypen (Text, Bild, Audio) umgehen kann – perfekt für Edge-AI-Anwendungen. Die Open-Source-Natur bedeutet, dass Entwickler es anpassen und erweitern können, was die Innovationsgeschwindigkeit erhöht.\n\nJeder, der an Offline-KI, Edge-Computing oder generell an leistungsstarken, anpassbaren lokalen Modellen arbeitet, wird das sofort in die Finger bekommen wollen.",
+    "chloe_note": "Kurzes Update: *Meta is back with Muse Glimmer: local, agentic, multimodal, and open source* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Meta released open-source, local, agentic, multimodal model. Ships today with weights/code for immediate builder use.Cluster context: 1 sources, engagement 0. Common terms: local, glimmer, multimodal, muse. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://huggingface.co/blog/muse-glimmer"
   }
 ]
