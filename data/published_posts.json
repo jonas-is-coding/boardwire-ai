@@ -2874,5 +2874,35 @@
     "published_weekday": "Sunday",
     "composer_version": "2",
     "card_variant": "editorial_release"
+  },
+  {
+    "id": "2aaff33420dd",
+    "published_at": "2026-08-10T14:38:05.841405Z",
+    "platform": "bluesky",
+    "post": "Meta releases 30B local coding model.\n\nMuse Glimmer passes Ships Test with open weights, +287 points.\n\nAnyone integrating Muse Glimmer into existing dev workflows?\n\n#OpenSource #OpenWeights #HuggingFace",
+    "source_link": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model",
+    "source_title": "Meta Muse Glimmer – open weights 30B local coding model",
+    "score": 95,
+    "reason": "Meta released open weights for a 30B local coding model. Passes Ships Test: new model weights released.",
+    "card_path": "generated/cards/2aaff33420dd.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-10-meta-muse-glimmer-open-weights-30b-local-coding-model-2aaff33420dd.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3msqdaumwfo2l",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3msqdaumwfo2l",
+    "format_variant": "thread",
+    "hashtags_used": [
+      "#OpenSource",
+      "#OpenWeights",
+      "#HuggingFace"
+    ],
+    "published_hour_utc": 14,
+    "published_weekday": "Monday",
+    "composer_version": "2",
+    "card_variant": "editorial_stat",
+    "thread_uris": [
+      "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3msqdaumwfo2l",
+      "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3msqdavif7r2h",
+      "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3msqdavunsh2j"
+    ],
+    "thread_partial": false
   }
 ]

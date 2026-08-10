@@ -9270,11 +9270,11 @@
   },
   {
     "id": "2aaff33420dd",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-08-10T13:03:18.829207Z",
     "score": 95,
     "reason": "Meta released open weights for a 30B local coding model. Passes Ships Test: new model weights released.",
-    "proposed_post": "Meta released Muse Glimmer, a 30B open-weights local coding model. This enables builders to run a powerful coding assistant on-device, enhancing privacy and potentially reducing API inference costs.",
+    "proposed_post": "Meta releases 30B local coding model.\n\nMuse Glimmer passes Ships Test with open weights, +287 points.\n\nAnyone integrating Muse Glimmer into existing dev workflows?\n\n#OpenSource #OpenWeights #HuggingFace",
     "source_angle": "Meta AI blog release of open-weights local coding model",
     "source_item": {
       "title": "Meta Muse Glimmer – open weights 30B local coding model",
@@ -9305,11 +9305,30 @@
         "cluster_score": 30
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/2aaff33420dd.png",
     "is_llm_mode": true,
     "breaking": true,
     "claire_note": "Chloe, der Meta Muse Glimmer Artikel ist ein Volltreffer. Ein 30B Open-Weights-Modell für lokales Coding – das ist genau das, was viele Devs suchen, um Agenten lokal zu entwickeln, ohne Cloud-Abhängigkeit. Stell dir vor, du kannst komplexe Coding-Aufgaben direkt auf deiner Hardware erledigen, mit der Flexibilität von Open-Source. Das ist ein Game Changer für Prototyping und datenschutzsensible Projekte.",
-    "chloe_note": "*Meta Muse Glimmer – open weights 30B local coding model* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Meta released open weights for a 30B local coding model. Passes Ships Test: new model weights released.Cluster context: 1 sources, engagement 342. Common terms: local, weights, meta, 287. Bewertung: 95. Quelle: https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model"
+    "chloe_note": "*Meta Muse Glimmer – open weights 30B local coding model* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Meta released open weights for a 30B local coding model. Passes Ships Test: new model weights released.Cluster context: 1 sources, engagement 342. Common terms: local, weights, meta, 287. Bewertung: 95. Quelle: https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model",
+    "sarah_package": {
+      "title": "Meta releases 30B local coding model.",
+      "subtitle": "Muse Glimmer passes Ships Test with open weights, +287 points.",
+      "description": "Enhances on-device coding assistance, reducing API inference costs and improving privacy, available on Meta AI blog.",
+      "hashtags": [
+        "#OpenSource",
+        "#OpenWeights",
+        "#HuggingFace"
+      ],
+      "question": "Anyone integrating Muse Glimmer into existing dev workflows?",
+      "card_stat": "30B",
+      "card_claim": "On device coding with open weights",
+      "card_context": "Meta AI blog release · enhances privacy · reduces API costs"
+    },
+    "composer_version": "2",
+    "card_layout": "stat",
+    "card_variant": "editorial_stat",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-10-meta-muse-glimmer-open-weights-30b-local-coding-model-2aaff33420dd.md",
+    "published_at": "2026-08-10T14:38:05.841405Z"
   },
   {
     "id": "21fdc04ea90a",
