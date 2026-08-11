@@ -2952,5 +2952,29 @@
     "published_weekday": "Tuesday",
     "composer_version": "2",
     "card_variant": "editorial_release"
+  },
+  {
+    "id": "1b3fe662647a",
+    "published_at": "2026-08-11T18:27:37.207717Z",
+    "platform": "bluesky",
+    "post": "Ollama enables local agent workflows.\n\nAdds NVIDIA Nemotron 3.5 Lightning, a 30B MoE model with 3B active params.\n\n#OpenSource #Ollama #LocalLLM",
+    "source_link": "https://github.com/ollama/ollama/releases/tag/v0.32.9",
+    "source_title": "Ollama v0.32.9",
+    "score": 90,
+    "reason": "Ollama v0.32.9 adds support for NVIDIA Nemotron 3.5 Lightning, an open MoE model for agents, immediately usable via `ollama run`.",
+    "card_path": "generated/cards/1b3fe662647a.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-11-ollama-v0-32-9-1b3fe662647a.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mstak6eoxv2p",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mstak6eoxv2p",
+    "format_variant": "plain",
+    "hashtags_used": [
+      "#OpenSource",
+      "#Ollama",
+      "#LocalLLM"
+    ],
+    "published_hour_utc": 18,
+    "published_weekday": "Tuesday",
+    "composer_version": "2",
+    "card_variant": "editorial_release"
   }
 ]

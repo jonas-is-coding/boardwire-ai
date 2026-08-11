@@ -9498,11 +9498,11 @@
   },
   {
     "id": "1b3fe662647a",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-08-11T16:47:59.471694Z",
     "score": 90,
     "reason": "Ollama v0.32.9 adds support for NVIDIA Nemotron 3.5 Lightning, an open MoE model for agents, immediately usable via `ollama run`.",
-    "proposed_post": "Ollama v0.32.9 adds support for NVIDIA Nemotron 3.5 Lightning, an open 30B MoE model (3B active params) for agents. Builders can run it locally via `ollama run nemotron-3.5-lightning` for agentic workflows.",
+    "proposed_post": "Ollama enables local agent workflows.\n\nAdds NVIDIA Nemotron 3.5 Lightning, a 30B MoE model with 3B active params.\n\n#OpenSource #Ollama #LocalLLM",
     "source_angle": "Ollama adds NVIDIA Nemotron 3.5 Lightning for local agent development.",
     "source_item": {
       "title": "Ollama v0.32.9",
@@ -9536,10 +9536,29 @@
         "cluster_score": 35
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/1b3fe662647a.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, check this out: Ollama just dropped v0.32.9 with NVIDIA Nemotron 3.5 Lightning.\n\nThis is a 30B MoE model, but it's only using 3B active parameters – that's a huge deal for local inference on agent workflows. Devs can now run a powerful model for always-on agents directly on their machines without needing massive GPU power, opening up a ton of possibilities for local AI applications.",
-    "chloe_note": "*Ollama v0.32.9* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Ollama v0.32.9 adds support for NVIDIA Nemotron 3.5 Lightning, an open MoE model for agents, immediately usable via `ollama run`.Cluster context: 1 sources, engagement 0. Common terms: class, ollama, href, /li. Bewertung: 90. Quelle: https://github.com/ollama/ollama/releases/tag/v0.32.9"
+    "chloe_note": "*Ollama v0.32.9* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Ollama v0.32.9 adds support for NVIDIA Nemotron 3.5 Lightning, an open MoE model for agents, immediately usable via `ollama run`.Cluster context: 1 sources, engagement 0. Common terms: class, ollama, href, /li. Bewertung: 90. Quelle: https://github.com/ollama/ollama/releases/tag/v0.32.9",
+    "sarah_package": {
+      "title": "Ollama enables local agent workflows.",
+      "subtitle": "Adds NVIDIA Nemotron 3.5 Lightning, a 30B MoE model with 3B active params.",
+      "description": "Run powerful models for always-on agents directly on local machines via `ollama run`.",
+      "hashtags": [
+        "#OpenSource",
+        "#Ollama",
+        "#LocalLLM"
+      ],
+      "question": "Anyone running Nemotron 3.5 Lightning in prod?",
+      "card_stat": "3B",
+      "card_claim": "Local inference for agents now possible",
+      "card_context": "30B MoE model · 3B active params · runs via `ollama run`"
+    },
+    "composer_version": "2",
+    "card_layout": "release",
+    "card_variant": "editorial_release",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-11-ollama-v0-32-9-1b3fe662647a.md",
+    "published_at": "2026-08-11T18:27:37.207717Z"
   }
 ]
