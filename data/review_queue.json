@@ -9433,5 +9433,48 @@
     "card_variant": "editorial_stat",
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-10-meta-is-back-with-muse-glimmer-local-agentic-multimodal-and-open-source-18e5f4e45a0a.md",
     "published_at": "2026-08-10T18:26:05.900719Z"
+  },
+  {
+    "id": "4ae0d828749c",
+    "status": "approved",
+    "created_at": "2026-08-11T13:00:00.584908Z",
+    "score": 90,
+    "reason": "OpenAI released a specialized model, GPT-5.6-Cyber, available via Daybreak Red for authorized security testing. Passes Ships Test.",
+    "proposed_post": "OpenAI launched GPT-5.6-Cyber, a model for cybersecurity tasks, available via Daybreak Red. Authorized users can leverage it for vulnerability research and security testing. Builders in security can now integrate a specialized OpenAI model for exploit validation or tool developm…",
+    "source_angle": "OpenAI's new cybersecurity-specific model, GPT-5.6-Cyber, is now available.",
+    "source_item": {
+      "title": "Expanding Daybreak as the Cyber Defense Window Narrows",
+      "source": "OpenAI News",
+      "link": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 15,
+      "summary": "Meet GPT-5.6-Cyber, OpenAI’s cybersecurity-specific model available through Daybreak Red for authorized vulnerability research, exploit validation, and security testing.\n[Cluster context: 1 sources, engagement 0, common terms: exploit, testing., meet, gpt-5.6-cyber, available.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "OpenAI News"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "exploit",
+          "testing.",
+          "meet",
+          "gpt-5.6-cyber",
+          "available",
+          "window",
+          "through",
+          "vulnerability"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: exploit, testing., meet, gpt-5.6-cyber. Lead: Expanding Daybreak as the Cyber Defense Window Narrows",
+        "alternative_titles": [],
+        "cluster_score": 25
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, das hier ist ein Treffer für unsere Builder. OpenAI hat GPT-5.6-Cyber rausgebracht, speziell für Cybersecurity. Entwickler können damit jetzt direkt über Daybreak Red ihre Schwachstellen erforschen, Exploits validieren und Sicherheitstests automatisieren. Das spart massiv Zeit bei der Absicherung von Systemen.",
+    "chloe_note": "*Expanding Daybreak as the Cyber Defense Window Narrows* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch OpenAI released a specialized model, GPT-5.6-Cyber, available via Daybreak Red for authorized security testing. Passes Ships Test.Cluster context: 1 sources, engagement 0. Common terms: exploit, testing., meet, gpt-5.6-cyber. Bewertung: 90. Quelle: https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows"
   }
 ]
