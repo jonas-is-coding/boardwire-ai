@@ -2928,5 +2928,29 @@
     "published_weekday": "Monday",
     "composer_version": "2",
     "card_variant": "editorial_stat"
+  },
+  {
+    "id": "21fdc04ea90a",
+    "published_at": "2026-08-11T14:37:36.060752Z",
+    "platform": "bluesky",
+    "post": "Ollama integrates 30B Muse Glimmer model.\n\n30B multimodal model for agent workloads, Apple Silicon support.\n\nAnyone running Muse Glimmer on Apple Silicon?\n\n#LLM #ClaudeCode #Anthropic",
+    "source_link": "https://github.com/ollama/ollama/releases/tag/v0.32.7",
+    "source_title": "Ollama v0.32.7",
+    "score": 65,
+    "reason": "local newsworthiness fallback",
+    "card_path": "generated/cards/21fdc04ea90a.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-10-ollama-v0-32-7-21fdc04ea90a.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3msstouxrz62k",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3msstouxrz62k",
+    "format_variant": "question",
+    "hashtags_used": [
+      "#LLM",
+      "#ClaudeCode",
+      "#Anthropic"
+    ],
+    "published_hour_utc": 14,
+    "published_weekday": "Tuesday",
+    "composer_version": "2",
+    "card_variant": "editorial_release"
   }
 ]

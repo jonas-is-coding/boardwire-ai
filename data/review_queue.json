@@ -9332,11 +9332,11 @@
   },
   {
     "id": "21fdc04ea90a",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-08-10T13:03:21.150310Z",
     "score": 65,
     "reason": "local newsworthiness fallback",
-    "proposed_post": "Meta ships Muse Glimmer on Ollama.\n\n30B multimodal model for agent workloads, Apple Silicon support.\n\n#LLM #ClaudeCode #Anthropic",
+    "proposed_post": "Ollama integrates 30B Muse Glimmer model.\n\n30B multimodal model for agent workloads, Apple Silicon support.\n\nAnyone running Muse Glimmer on Apple Silicon?\n\n#LLM #ClaudeCode #Anthropic",
     "source_angle": "Local high-score + Sarah/OpenRouter fallback",
     "source_item": {
       "title": "Ollama v0.32.7",
@@ -9367,11 +9367,30 @@
         "cluster_score": 35
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/21fdc04ea90a.png",
     "is_llm_mode": false,
     "breaking": false,
     "claire_note": "Aus *Ollama Releases* ist ein starker Kandidat reingekommen: *Ollama v0.32.7*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 65_",
-    "chloe_note": "Kurzes Update: *Ollama v0.32.7* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: muse-glimmer, ollama., power, input. Ich habe es mit 65 Punkten bewertet. Hier der Link: https://github.com/ollama/ollama/releases/tag/v0.32.7"
+    "chloe_note": "Kurzes Update: *Ollama v0.32.7* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: muse-glimmer, ollama., power, input. Ich habe es mit 65 Punkten bewertet. Hier der Link: https://github.com/ollama/ollama/releases/tag/v0.32.7",
+    "sarah_package": {
+      "title": "Ollama integrates 30B Muse Glimmer model.",
+      "subtitle": "30B multimodal model for agent workloads, Apple Silicon support.",
+      "description": "Muse Glimmer is Meta's newest open model, purpose-built for agent workloads, available via Ollama's MLX engine.",
+      "hashtags": [
+        "#LLM",
+        "#ClaudeCode",
+        "#Anthropic"
+      ],
+      "question": "Anyone running Muse Glimmer on Apple Silicon?",
+      "card_stat": "30B",
+      "card_claim": "Multimodal models for agents now on Ollama",
+      "card_context": "Apple Silicon support via MLX engine, more platforms coming"
+    },
+    "composer_version": "2",
+    "card_layout": "release",
+    "card_variant": "editorial_release",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-10-ollama-v0-32-7-21fdc04ea90a.md",
+    "published_at": "2026-08-11T14:37:36.060752Z"
   },
   {
     "id": "18e5f4e45a0a",
