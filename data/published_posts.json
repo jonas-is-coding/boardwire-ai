@@ -2976,5 +2976,28 @@
     "published_weekday": "Tuesday",
     "composer_version": "2",
     "card_variant": "editorial_release"
+  },
+  {
+    "id": "4ae0d828749c",
+    "published_at": "2026-08-12T14:37:35.797564Z",
+    "platform": "bluesky",
+    "post": "OpenAI releases GPT-5.6-Cyber for security testing.\n\nAvailable via Daybreak Red for authorized vulnerability research and exploit validation.\n\n#LLM #InfoSec",
+    "source_link": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows",
+    "source_title": "Expanding Daybreak as the Cyber Defense Window Narrows",
+    "score": 90,
+    "reason": "OpenAI released a specialized model, GPT-5.6-Cyber, available via Daybreak Red for authorized security testing. Passes Ships Test.",
+    "card_path": "generated/cards/4ae0d828749c.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-11-expanding-daybreak-as-the-cyber-defense-window-narrows-4ae0d828749c.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3msve5rspau2h",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3msve5rspau2h",
+    "format_variant": "plain",
+    "hashtags_used": [
+      "#LLM",
+      "#InfoSec"
+    ],
+    "published_hour_utc": 14,
+    "published_weekday": "Wednesday",
+    "composer_version": "2",
+    "card_variant": "editorial_security"
   }
 ]
