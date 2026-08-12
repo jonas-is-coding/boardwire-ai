@@ -9578,5 +9578,93 @@
     "card_variant": "editorial_release",
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-11-ollama-v0-32-9-1b3fe662647a.md",
     "published_at": "2026-08-11T18:27:37.207717Z"
+  },
+  {
+    "id": "6dae45780a88",
+    "status": "approved",
+    "created_at": "2026-08-12T16:47:15.265153Z",
+    "score": 90,
+    "reason": "Daybreak models are now available via AWS Bedrock, offering direct API access for builders to integrate AI cybersecurity capabilities.",
+    "proposed_post": "OpenAI's Daybreak cybersecurity models are now available via Amazon Bedrock. Builders can integrate advanced AI security capabilities into AWS enterprise workflows today, leveraging Bedrock's API for new security product development.",
+    "source_angle": "OpenAI's Daybreak models on AWS Bedrock for enterprise cybersecurity.",
+    "source_item": {
+      "title": "Daybreak models are now available on AWS",
+      "source": "OpenAI News",
+      "link": "https://openai.com/index/daybreak-models-are-now-available-on-aws",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 10,
+      "summary": "OpenAI and AWS are making Daybreak cybersecurity capabilities available through Amazon Bedrock to support enterprise security workflows.\n[Cluster context: 1 sources, engagement 0, common terms: now, bedrock, amazon, through, available.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "OpenAI News"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "now",
+          "bedrock",
+          "amazon",
+          "through",
+          "available",
+          "cybersecurity",
+          "capabilities",
+          "support"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: now, bedrock, amazon, through. Lead: Daybreak models are now available on AWS",
+        "alternative_titles": [],
+        "cluster_score": 25
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Hey Chloe,\n\nDaybreak auf AWS ist ein Game-Changer. Entwickler können jetzt die fortschrittlichen KI-Sicherheitsmodelle direkt in ihre Bedrock-Anwendungen integrieren. Das bedeutet, KI-gestützte Bedrohungsanalyse und -abwehr wird für viele Teams zugänglicher, ohne eine komplett neue Infrastruktur aufsetzen zu müssen.",
+    "chloe_note": "Hey, *Daybreak models are now available on AWS* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Daybreak models are now available via AWS Bedrock, offering direct API access for builders to integrate AI cybersecurity capabilities.Cluster context: 1 sources, engagement 0. Common terms: now, bedrock, amazon, through. Score aktuell: 90. Link: https://openai.com/index/daybreak-models-are-now-available-on-aws"
+  },
+  {
+    "id": "05c0630e94fc",
+    "status": "approved",
+    "created_at": "2026-08-12T16:47:17.646609Z",
+    "score": 65,
+    "reason": "local newsworthiness fallback",
+    "proposed_post": "Muse Glimmer powers coding agents.\n\nRuns on Apple Silicon with DFlash and image input support.\n\n#OpenSource #ClaudeCode #Anthropic",
+    "source_angle": "Local high-score + Sarah/OpenRouter fallback",
+    "source_item": {
+      "title": "Ollama v0.32.8",
+      "source": "Ollama Releases",
+      "link": "https://github.com/ollama/ollama/releases/tag/v0.32.8",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 65,
+      "summary": "<h2>Muse Glimmer</h2>\n<p>Muse Glimmer is now available on all platforms. Muse Glimmer can power coding agent applications such as Claude Code, Codex, Pi and more, as well as long-running personal assistants such as OpenClaw and Hermes.</p>\n<p>Ollama's MLX engine provides state-of-the-art performance on Apple Silicon for this model, with support for DFlash and image input as of Ollama 0.32.7.</p>\n<p>To download and run Muse Glimmer locally:</p>\n<div class=\"highlight highlight-source-shell notranslate position-relative overflow-auto\"><pre>ollama run muse-glimmer</pre></div>\n<p>To run Muse Glimmer with Claude Code, <a href=\"https://ollama.com/download\" rel=\"nofollow\">download Ollama</a> and run:</p>\n<div class=\"highlight highlight-source-shell notranslate position-relative overflow-auto\"><pre>ollama launch claude --model muse-glimmer</pre></div>\n<p>For a lighter-weight coding agent, try <a href=\"https://pi.dev\" rel=\"nofollow\">Pi</a>:</p>\n<div class=\"highlight highlight-source-shell notranslate position-relative overflow-auto\"><pre>ollama launch pi --model muse-glimmer</pre></div>\n<p>For personal assistant frameworks such as OpenClaw and Hermes, use:</p>\n<div class=\"highlight highlight-source-shell notranslate position-relative overflow-auto\"><pre>ollama launch openclaw --model muse-glimmer</pre></div>\n<div class=\"highlight highlight-source-shell notranslate position-relative overflow-auto\"><pre>ollama launch hermes --model muse-glimmer</pre></div>\n<h2>What's Changed</h2>\n<ul>\n<li>Add Muse Glimmer support for NVIDIA, AMD, and additional platforms</li>\n</ul>\n<p><strong>Full Changelog</strong>: <a class=\"commit-link\" href=\"https://github.com/ollama/ollama/compare/v0.32.7...v0.32.8\"><tt>v0.32.7...v0.32.8</tt></a></p>\n[Cluster context: 1 sources, engagement 0, common terms: ollama, href, class, silicon, download.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Ollama Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "ollama",
+          "href",
+          "class",
+          "silicon",
+          "download",
+          "overflow-auto",
+          "/div",
+          "what"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: ollama, href, class, silicon. Lead: Ollama v0.32.8",
+        "alternative_titles": [
+          "Ollama v0.32.8-rc0"
+        ],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "breaking": false,
+    "claire_note": "Aus *Ollama Releases* ist ein starker Kandidat reingekommen: *Ollama v0.32.8*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 65_",
+    "chloe_note": "Kurzes Update: *Ollama v0.32.8* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: ollama, href, class, silicon. Ich habe es mit 65 Punkten bewertet. Hier der Link: https://github.com/ollama/ollama/releases/tag/v0.32.8"
   }
 ]
