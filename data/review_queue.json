@@ -9581,11 +9581,11 @@
   },
   {
     "id": "6dae45780a88",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-08-12T16:47:15.265153Z",
     "score": 90,
     "reason": "Daybreak models are now available via AWS Bedrock, offering direct API access for builders to integrate AI cybersecurity capabilities.",
-    "proposed_post": "OpenAI's Daybreak cybersecurity models are now available via Amazon Bedrock. Builders can integrate advanced AI security capabilities into AWS enterprise workflows today, leveraging Bedrock's API for new security product development.",
+    "proposed_post": "Daybreak models hit AWS Bedrock.\n\nDirect API access for AI cybersecurity integration.\n\n#LLM #InfoSec #AIAgents",
     "source_angle": "OpenAI's Daybreak models on AWS Bedrock for enterprise cybersecurity.",
     "source_item": {
       "title": "Daybreak models are now available on AWS",
@@ -9616,11 +9616,30 @@
         "cluster_score": 25
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/6dae45780a88.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Hey Chloe,\n\nDaybreak auf AWS ist ein Game-Changer. Entwickler können jetzt die fortschrittlichen KI-Sicherheitsmodelle direkt in ihre Bedrock-Anwendungen integrieren. Das bedeutet, KI-gestützte Bedrohungsanalyse und -abwehr wird für viele Teams zugänglicher, ohne eine komplett neue Infrastruktur aufsetzen zu müssen.",
-    "chloe_note": "Hey, *Daybreak models are now available on AWS* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Daybreak models are now available via AWS Bedrock, offering direct API access for builders to integrate AI cybersecurity capabilities.Cluster context: 1 sources, engagement 0. Common terms: now, bedrock, amazon, through. Score aktuell: 90. Link: https://openai.com/index/daybreak-models-are-now-available-on-aws"
+    "chloe_note": "Hey, *Daybreak models are now available on AWS* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Daybreak models are now available via AWS Bedrock, offering direct API access for builders to integrate AI cybersecurity capabilities.Cluster context: 1 sources, engagement 0. Common terms: now, bedrock, amazon, through. Score aktuell: 90. Link: https://openai.com/index/daybreak-models-are-now-available-on-aws",
+    "sarah_package": {
+      "title": "Daybreak models hit AWS Bedrock.",
+      "subtitle": "Direct API access for AI cybersecurity integration.",
+      "description": "OpenAI's Daybreak cybersecurity models now available via AWS Bedrock for enterprise workflow integration, leveraging Bedrock's API.",
+      "hashtags": [
+        "#LLM",
+        "#InfoSec",
+        "#AIAgents"
+      ],
+      "question": "Anyone integrating Daybreak with Bedrock?",
+      "card_stat": "AWS",
+      "card_claim": "AI cybersecurity as a service",
+      "card_context": "Direct API access for builders via Bedrock"
+    },
+    "composer_version": "2",
+    "card_layout": "stat",
+    "card_variant": "editorial_stat",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-12-daybreak-models-are-now-available-on-aws-6dae45780a88.md",
+    "published_at": "2026-08-12T18:28:55.255237Z"
   },
   {
     "id": "05c0630e94fc",

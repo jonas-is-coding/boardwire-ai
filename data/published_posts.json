@@ -2999,5 +2999,29 @@
     "published_weekday": "Wednesday",
     "composer_version": "2",
     "card_variant": "editorial_security"
+  },
+  {
+    "id": "6dae45780a88",
+    "published_at": "2026-08-12T18:28:55.255237Z",
+    "platform": "bluesky",
+    "post": "Daybreak models hit AWS Bedrock.\n\nDirect API access for AI cybersecurity integration.\n\n#LLM #InfoSec #AIAgents",
+    "source_link": "https://openai.com/index/daybreak-models-are-now-available-on-aws",
+    "source_title": "Daybreak models are now available on AWS",
+    "score": 90,
+    "reason": "Daybreak models are now available via AWS Bedrock, offering direct API access for builders to integrate AI cybersecurity capabilities.",
+    "card_path": "generated/cards/6dae45780a88.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-12-daybreak-models-are-now-available-on-aws-6dae45780a88.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3msvr3hquld22",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3msvr3hquld22",
+    "format_variant": "plain",
+    "hashtags_used": [
+      "#LLM",
+      "#InfoSec",
+      "#AIAgents"
+    ],
+    "published_hour_utc": 18,
+    "published_weekday": "Wednesday",
+    "composer_version": "2",
+    "card_variant": "editorial_stat"
   }
 ]
