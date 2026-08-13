@@ -3023,5 +3023,28 @@
     "published_weekday": "Wednesday",
     "composer_version": "2",
     "card_variant": "editorial_stat"
+  },
+  {
+    "id": "34447098c6b1",
+    "published_at": "2026-08-13T14:38:42.625590Z",
+    "platform": "bluesky",
+    "post": "Local UI simplifies LLM training.\n\nUnsloth indexes Qwen3.8, Gemma 4, DeepSeek-V4, +592 stars.\n\n#LLM #AI",
+    "source_link": "https://github.com/unslothai/unsloth",
+    "source_title": "unslothai/unsloth — Local UI to run and train LLMs and diffusion models, including Qwen3.8, Kimi K3, MiniMax-H3, Gemma 4, DeepSeek-V4, FLUX and more.",
+    "score": 90,
+    "reason": "Open-source local UI for running and training LLMs/diffusion models. Ships today, high builder utility.",
+    "card_path": "generated/cards/34447098c6b1.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-13-unslothai-unsloth-local-ui-to-run-and-train-llms-and-diffusion-models-including-qwen3-8-kimi-k3-minimax-h3-gemma-4-deepseek-v4-flux-and-more-34447098c6b1.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3msxuopkf4e26",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3msxuopkf4e26",
+    "format_variant": "plain",
+    "hashtags_used": [
+      "#LLM",
+      "#AI"
+    ],
+    "published_hour_utc": 14,
+    "published_weekday": "Thursday",
+    "composer_version": "2",
+    "card_variant": "editorial_repo"
   }
 ]

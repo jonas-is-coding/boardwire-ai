@@ -9710,11 +9710,11 @@
   },
   {
     "id": "34447098c6b1",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-08-13T13:05:45.584307Z",
     "score": 90,
     "reason": "Open-source local UI for running and training LLMs/diffusion models. Ships today, high builder utility.",
-    "proposed_post": "unslothai/unsloth launched a local UI for running and training LLMs (Qwen3.8, Gemma 4, DeepSeek-V4) and diffusion models. This simplifies local experimentation and fine-tuning for builders.",
+    "proposed_post": "Local UI simplifies LLM training.\n\nUnsloth indexes Qwen3.8, Gemma 4, DeepSeek-V4, +592 stars.\n\n#LLM #AI",
     "source_angle": "GitHub Trending: Local UI for LLM/diffusion model training/inference.",
     "source_item": {
       "title": "unslothai/unsloth — Local UI to run and train LLMs and diffusion models, including Qwen3.8, Kimi K3, MiniMax-H3, Gemma 4, DeepSeek-V4, FLUX and more.",
@@ -9745,10 +9745,28 @@
         "cluster_score": 35
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/34447098c6b1.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Hey Chloe, check das hier mal an. unslothai/unsloth trendet stark auf GitHub. Das ist eine lokale UI, um LLMs und Diffusionsmodelle wie Qwen, Gemma und DeepSeek zu trainieren und auszuführen. Für Developer, die schnell mit verschiedenen Modellen experimentieren wollen, ohne sich durch CLI-Befehle zu wühlen, ist das ein Game Changer. Spart Zeit und senkt die Einstiegshürde.",
-    "chloe_note": "Kurzes Update: *unslothai/unsloth — Local UI to run and train LLMs and diffusion models, including Qwen3.8, Kimi K3, MiniMax-H3, Gemma 4, DeepSeek-V4, FLUX and more.* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Open-source local UI for running and training LLMs/diffusion models. Ships today, high builder utility.Cluster context: 1 sources, engagement 592. Common terms: unslothai/unsloth, gemma, trending, local. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://github.com/unslothai/unsloth"
+    "chloe_note": "Kurzes Update: *unslothai/unsloth — Local UI to run and train LLMs and diffusion models, including Qwen3.8, Kimi K3, MiniMax-H3, Gemma 4, DeepSeek-V4, FLUX and more.* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Open-source local UI for running and training LLMs/diffusion models. Ships today, high builder utility.Cluster context: 1 sources, engagement 592. Common terms: unslothai/unsloth, gemma, trending, local. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://github.com/unslothai/unsloth",
+    "sarah_package": {
+      "title": "Local UI simplifies LLM training.",
+      "subtitle": "Unsloth indexes Qwen3.8, Gemma 4, DeepSeek-V4, +592 stars.",
+      "description": "Open-source UI for running and training LLMs and diffusion models, including Kimi K3 and MiniMax-H3.",
+      "hashtags": [
+        "#LLM",
+        "#AI"
+      ],
+      "question": "Anyone using Unsloth for local model fine-tuning?",
+      "card_stat": "+592",
+      "card_claim": "Streamlines local model experimentation",
+      "card_context": "Supports Qwen3.8, Gemma 4, DeepSeek-V4, and more."
+    },
+    "composer_version": "2",
+    "card_layout": "repo",
+    "card_variant": "editorial_repo",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-13-unslothai-unsloth-local-ui-to-run-and-train-llms-and-diffusion-models-including-qwen3-8-kimi-k3-minimax-h3-gemma-4-deepseek-v4-flux-and-more-34447098c6b1.md",
+    "published_at": "2026-08-13T14:38:42.625590Z"
   }
 ]
