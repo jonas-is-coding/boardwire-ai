@@ -9768,5 +9768,50 @@
     "card_variant": "editorial_repo",
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-13-unslothai-unsloth-local-ui-to-run-and-train-llms-and-diffusion-models-including-qwen3-8-kimi-k3-minimax-h3-gemma-4-deepseek-v4-flux-and-more-34447098c6b1.md",
     "published_at": "2026-08-13T14:38:42.625590Z"
+  },
+  {
+    "id": "a8ebf902d5a6",
+    "status": "approved",
+    "created_at": "2026-08-13T16:45:48.107479Z",
+    "score": 60,
+    "reason": "local newsworthiness fallback",
+    "proposed_post": "Ollama optimizes kernel launches.\n\nCompile multiply and cast into one kernel, reducing intermediates.\n\n#LLM #Ollama #LocalLLM",
+    "source_angle": "Local high-score + Sarah/OpenRouter fallback",
+    "source_item": {
+      "title": "Ollama v0.32.10-rc0",
+      "source": "Ollama Releases",
+      "link": "https://github.com/ollama/ollama/releases/tag/v0.32.10-rc0",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 60,
+      "summary": "<p>ModelOpt checkpoints apply a float32 global scale to every projection<br />\noutput on top of the per-group quantization scales. Running the<br />\nmultiply and the cast back to the activation dtype as separate eager<br />\nops costs an extra kernel launch and a materialized intermediate per<br />\nprojection.</p>\n<p>Compile the multiply and cast into one kernel. On an M5 Max (medians<br />\nof order-swapped A/B runs against main; greedy outputs byte-identical):</p>\n<div class=\"snippet-clipboard-content notranslate position-relative overflow-auto\"><pre class=\"notranslate\"><code>qwen3.6:27b        prefill  703 -&gt; 769 t/s  +7.9%\nmuse-glimmer:30b   prefill  790 -&gt; 843 t/s  +6.7%\n</code></pre></div>\n<p>Speculative decode is unchanged within noise on both models. Only<br />\ncheckpoints with a global scale are affected; single-scale nvfp4,<br />\nmxfp8, and affine checkpoints take the unchanged path.</p>\n[Cluster context: 1 sources, engagement 0, common terms: class, ollama, position-relative, output, take.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Ollama Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "class",
+          "ollama",
+          "position-relative",
+          "output",
+          "take",
+          "scales.",
+          "multiply",
+          "kernel"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: class, ollama, position-relative, output. Lead: Ollama v0.32.10-rc0",
+        "alternative_titles": [
+          "Ollama v0.32.8-rc0"
+        ],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "breaking": false,
+    "claire_note": "Aus *Ollama Releases* ist ein starker Kandidat reingekommen: *Ollama v0.32.10-rc0*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 60_",
+    "chloe_note": "*Ollama v0.32.10-rc0* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: class, ollama, position-relative, output. Bewertung: 60. Quelle: https://github.com/ollama/ollama/releases/tag/v0.32.10-rc0"
   }
 ]
