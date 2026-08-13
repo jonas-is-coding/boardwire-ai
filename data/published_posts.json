@@ -3046,5 +3046,29 @@
     "published_weekday": "Thursday",
     "composer_version": "2",
     "card_variant": "editorial_repo"
+  },
+  {
+    "id": "a8ebf902d5a6",
+    "published_at": "2026-08-13T18:29:39.574612Z",
+    "platform": "bluesky",
+    "post": "Ollama optimizes kernel launches.\n\nCompiles multiply and cast into one kernel, reducing intermediates on M5 Max.\n\nAnyone running Ollama v0.32.10-rc0 in prod?\n\n#LLM #Ollama #LocalLLM",
+    "source_link": "https://github.com/ollama/ollama/releases/tag/v0.32.10-rc0",
+    "source_title": "Ollama v0.32.10-rc0",
+    "score": 60,
+    "reason": "local newsworthiness fallback",
+    "card_path": "generated/cards/a8ebf902d5a6.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-13-ollama-v0-32-10-rc0-a8ebf902d5a6.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3msyblo7vis2f",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3msyblo7vis2f",
+    "format_variant": "question",
+    "hashtags_used": [
+      "#LLM",
+      "#Ollama",
+      "#LocalLLM"
+    ],
+    "published_hour_utc": 18,
+    "published_weekday": "Thursday",
+    "composer_version": "2",
+    "card_variant": "editorial_release"
   }
 ]

@@ -9771,11 +9771,11 @@
   },
   {
     "id": "a8ebf902d5a6",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-08-13T16:45:48.107479Z",
     "score": 60,
     "reason": "local newsworthiness fallback",
-    "proposed_post": "Ollama optimizes kernel launches.\n\nCompile multiply and cast into one kernel, reducing intermediates.\n\n#LLM #Ollama #LocalLLM",
+    "proposed_post": "Ollama optimizes kernel launches.\n\nCompiles multiply and cast into one kernel, reducing intermediates on M5 Max.\n\nAnyone running Ollama v0.32.10-rc0 in prod?\n\n#LLM #Ollama #LocalLLM",
     "source_angle": "Local high-score + Sarah/OpenRouter fallback",
     "source_item": {
       "title": "Ollama v0.32.10-rc0",
@@ -9808,10 +9808,29 @@
         "cluster_score": 35
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/a8ebf902d5a6.png",
     "is_llm_mode": false,
     "breaking": false,
     "claire_note": "Aus *Ollama Releases* ist ein starker Kandidat reingekommen: *Ollama v0.32.10-rc0*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 60_",
-    "chloe_note": "*Ollama v0.32.10-rc0* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: class, ollama, position-relative, output. Bewertung: 60. Quelle: https://github.com/ollama/ollama/releases/tag/v0.32.10-rc0"
+    "chloe_note": "*Ollama v0.32.10-rc0* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: class, ollama, position-relative, output. Bewertung: 60. Quelle: https://github.com/ollama/ollama/releases/tag/v0.32.10-rc0",
+    "sarah_package": {
+      "title": "Ollama optimizes kernel launches.",
+      "subtitle": "Compiles multiply and cast into one kernel, reducing intermediates on M5 Max.",
+      "description": "ModelOpt checkpoints apply a float32 global scale, with per-group quantization scales, now compiled into a single kernel.",
+      "hashtags": [
+        "#LLM",
+        "#Ollama",
+        "#LocalLLM"
+      ],
+      "question": "Anyone running Ollama v0.32.10-rc0 in prod?",
+      "card_stat": "+1 kernel",
+      "card_claim": "Single kernel launch reduces intermediates",
+      "card_context": "M5 Max tested, greedy outputs byte-identical, Apache 2.0 licensed"
+    },
+    "composer_version": "2",
+    "card_layout": "release",
+    "card_variant": "editorial_release",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-13-ollama-v0-32-10-rc0-a8ebf902d5a6.md",
+    "published_at": "2026-08-13T18:29:39.574612Z"
   }
 ]
