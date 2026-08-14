@@ -64,5 +64,11 @@
     "version": "v0.32.10-rc0",
     "published_at": "2026-08-13T18:29:39.574612Z",
     "link": "https://github.com/ollama/ollama/releases/tag/v0.32.10-rc0"
+  },
+  {
+    "project": "Ollama",
+    "version": "v0.32.8",
+    "published_at": "2026-08-14T14:32:11.878845Z",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.32.8"
   }
 ]

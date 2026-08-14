@@ -3070,5 +3070,29 @@
     "published_weekday": "Thursday",
     "composer_version": "2",
     "card_variant": "editorial_release"
+  },
+  {
+    "id": "05c0630e94fc",
+    "published_at": "2026-08-14T14:32:11.878845Z",
+    "platform": "bluesky",
+    "post": "Ollama releases v0.32.8.\n\nRuns on Apple Silicon with DFlash and image input support.\n\n#OpenSource #ClaudeCode #Anthropic",
+    "source_link": "https://github.com/ollama/ollama/releases/tag/v0.32.8",
+    "source_title": "Ollama v0.32.8",
+    "score": 65,
+    "reason": "local newsworthiness fallback",
+    "card_path": "generated/cards/05c0630e94fc.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-12-ollama-v0-32-8-05c0630e94fc.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mt2erxivsu2a",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mt2erxivsu2a",
+    "format_variant": "plain",
+    "hashtags_used": [
+      "#OpenSource",
+      "#ClaudeCode",
+      "#Anthropic"
+    ],
+    "published_hour_utc": 14,
+    "published_weekday": "Friday",
+    "composer_version": "2",
+    "card_variant": "editorial_release"
   }
 ]
