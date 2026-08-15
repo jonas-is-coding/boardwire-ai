@@ -1,18 +1,18 @@
 # Boardwire Engagement Report
 
-Generated: `2026-08-14T05:24:41.176461Z`
+Generated: `2026-08-15T04:19:51.440630Z`
 
 ## Summary
 
-- Measured posts: **171** of 175 published
+- Measured posts: **172** of 176 published
 - Median peak engagement: **0.0**
 - Average peak engagement: **0.6**
 - Top: **5** — Graphify-Labs/graphify — AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, o
 
 ## Patterns
 
-- Release-keyword posts: avg **0.6** (n=104) vs others avg **0.7** (n=67)
-- GitHub sources: avg **0.7** (n=129) vs other sources avg **0.3** (n=42)
+- Release-keyword posts: avg **0.6** (n=105) vs others avg **0.7** (n=67)
+- GitHub sources: avg **0.7** (n=130) vs other sources avg **0.3** (n=42)
 
 ## Engagement by published hour (UTC)
 
@@ -27,7 +27,7 @@ Generated: `2026-08-14T05:24:41.176461Z`
 - 11:00 UTC: avg **0.2** (n=8)
 - 12:00 UTC: avg **0.9** (n=7)
 - 13:00 UTC: avg **1.3** (n=6)
-- 14:00 UTC: avg **0.4** (n=12)
+- 14:00 UTC: avg **0.4** (n=13)
 - 15:00 UTC: avg **0.7** (n=18)
 - 16:00 UTC: avg **0.5** (n=14)
 - 17:00 UTC: avg **0.0** (n=7)
@@ -44,19 +44,19 @@ Generated: `2026-08-14T05:24:41.176461Z`
 - Tuesday: avg **0.7** (n=24)
 - Wednesday: avg **0.4** (n=25)
 - Thursday: avg **0.3** (n=22)
-- Friday: avg **0.6** (n=30)
+- Friday: avg **0.6** (n=31)
 - Saturday: avg **1.0** (n=22)
 - Sunday: avg **0.8** (n=21)
 
 ## Engagement by format variant
 
-- plain: avg **0.6** (n=156)
+- plain: avg **0.6** (n=157)
 - question: avg **0.7** (n=11)
 - thread: insufficient data (n<5, have 4)
 
 ## Engagement by card variant
 
-- editorial_release: avg **0.6** (n=14)
+- editorial_release: avg **0.6** (n=15)
 - editorial_repo: avg **1.1** (n=7)
 - editorial_security: insufficient data (n<5, have 2)
 - editorial_stat: avg **0.4** (n=7)
@@ -69,7 +69,7 @@ Generated: `2026-08-14T05:24:41.176461Z`
 - #AI #MachineLearning: insufficient data (n<5, have 1)
 - #AIAgents #InfoSec #LLM: insufficient data (n<5, have 1)
 - #Anthropic #ClaudeCode #LLM: avg **0.5** (n=6)
-- #Anthropic #ClaudeCode #OpenSource: avg **0.0** (n=6)
+- #Anthropic #ClaudeCode #OpenSource: avg **0.0** (n=7)
 - #HuggingFace #OpenSource #OpenWeights: insufficient data (n<5, have 2)
 - #InfoSec #LLM: insufficient data (n<5, have 1)
 - #InfoSec #LocalLLM #OpenSource: insufficient data (n<5, have 1)
@@ -81,7 +81,7 @@ Generated: `2026-08-14T05:24:41.176461Z`
 
 ## Version-release posts vs others
 
-- Version releases: avg **0.4** (n=79)
+- Version releases: avg **0.4** (n=80)
 - Others: avg **0.8** (n=92)
   (Version-only releases are now blocked by the quality gate; this group should trend to n=0.)
 
@@ -113,7 +113,7 @@ Generated: `2026-08-14T05:24:41.176461Z`
    > LLM apps become infrastructure with 100+ open examples. Awesome-llm-apps offers 100+ runnable AI Agent & RAG apps with +549 stars today. Git…
 
 6. **4 pts** — Ollama v0.32.9
-   likes 2 · reposts 1 · replies 0 · quotes 0 · age 59h · score 90
+   likes 2 · reposts 1 · replies 0 · quotes 0 · age 82h · score 90
    https://github.com/ollama/ollama/releases/tag/v0.32.9
    > Ollama enables local agent workflows. Adds NVIDIA Nemotron 3.5 Lightning, a 30B MoE model with 3B active params. #OpenSource #Ollama #LocalL…
 
@@ -153,7 +153,7 @@ Generated: `2026-08-14T05:24:41.176461Z`
    > Opus 5 performance benchmarked on SlopCodeBench. Detailed report shows Opus 5 coding… Anyone using Opus 5 for production code generation? #M…
 
 14. **3 pts** — LangChain v1.4.2
-   likes 1 · reposts 0 · replies 2 · quotes 0 · age 155h · score 90
+   likes 1 · reposts 0 · replies 2 · quotes 0 · age 178h · score 90
    https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.4.2
    > LangChain fixes context errors. LangChain v1.4.2 handles ContextWindowExceededError, +0 stars. Anyone running this with OpenAI models? #Open…
 
@@ -368,22 +368,22 @@ Generated: `2026-08-14T05:24:41.176461Z`
    > Long-context models get a boost. Kimi-K3 handles 200k tokens, trained on Chinese. #AI #OpenWeights #HuggingFace
 
 57. **1 pts** — zhaoxuya520/reverse-skill — Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge 
-   likes 0 · reposts 0 · replies 1 · quotes 0 · age 326h · score 105
+   likes 0 · reposts 0 · replies 1 · quotes 0 · age 349h · score 105
    https://github.com/zhaoxuya520/reverse-skill
    > Security research gets AI-powered routing. Reverse-skill pack gains +612 stars with on-demand toolchain bootstrapping. #LLM #ClaudeCode #Ant…
 
 58. **1 pts** — antirez/ds4 — DeepSeek 4 Flash and PRO local inference engine for Metal, CUDA and ROCm
-   likes 1 · reposts 0 · replies 0 · quotes 0 · age 253h · score 90
+   likes 1 · reposts 0 · replies 0 · quotes 0 · age 276h · score 90
    https://github.com/antirez/ds4
    > DeepSeek 4 models run locally on Metal, CUDA and ROCm. antirez/ds4 inference engine with +385 stars today. #LLM #Ollama #LocalLLM
 
 59. **1 pts** — Meta Muse Glimmer – open weights 30B local coding model
-   likes 0 · reposts 0 · replies 1 · quotes 0 · age 87h · score 95
+   likes 0 · reposts 0 · replies 1 · quotes 0 · age 110h · score 95
    https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model
    > Meta releases 30B local coding model. Muse Glimmer passes Ships Test with open weights, +287 points. Anyone integrating Muse Glimmer into ex…
 
 60. **1 pts** — Ollama v0.32.7
-   likes 1 · reposts 0 · replies 0 · quotes 0 · age 63h · score 65
+   likes 1 · reposts 0 · replies 0 · quotes 0 · age 86h · score 65
    https://github.com/ollama/ollama/releases/tag/v0.32.7
    > Ollama integrates 30B Muse Glimmer model. 30B multimodal model for agent workloads, Apple Silicon support. Anyone running Muse Glimmer on Ap…
 
@@ -898,47 +898,52 @@ Generated: `2026-08-14T05:24:41.176461Z`
    > Anthropic SDK fixes MCP pinning. v0.120.1 release with mcp extra pinned to <2. Anyone using this to stabilize MCP versions? #OpenSource #Cla…
 
 163. **0 pts** — Claude Code v2.1.221
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 229h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 252h · score 90
    https://github.com/anthropics/claude-code/releases/tag/v2.1.221
    > Claude Code secures sandbox credentials. Adds mode: mask for Linux/WSL and prompt-audit subcommand. #LLM #ClaudeCode #Anthropic
 
 164. **0 pts** — cloudflare/computer — Give your agent a computer 👾
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 206h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 229h · score 90
    https://github.com/cloudflare/computer
    > Cloudflare gives agents a computer. Sandboxed execution environment with +796 stars today. #AI #AIAgents
 
 165. **0 pts** — Claude Code v2.1.224
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 159h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 182h · score 90
    https://github.com/anthropics/claude-code/releases/tag/v2.1.224
    > Claude Code adds self-hosted runners. Claude Code v2.1.224 introduces self-hosted environments with SHA-256 pinning. Anyone running Claude C…
 
 166. **0 pts** — Anthropic Python SDK v0.121.0
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 103h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 126h · score 90
    https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.121.0
    > Anthropic updates SDK with mid-conversation tool changes. Anthropic Python SDK v0.121.0 adds session budgets and GitHub skills… Anyone integ…
 
 167. **0 pts** — Meta is back with Muse Glimmer: local, agentic, multimodal, and open source
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 83h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 106h · score 90
    https://huggingface.co/blog/muse-glimmer
    > Muse Glimmer ships as local, agentic, multimodal model. Meta releases open-source model with on-device deployment. #OpenSource #OpenWeights …
 
 168. **0 pts** — Expanding Daybreak as the Cyber Defense Window Narrows
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 39h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 62h · score 90
    https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows
    > OpenAI releases GPT-5.6-Cyber for security testing. Available via Daybreak Red for authorized vulnerability research and exploit validation.…
 
 169. **0 pts** — Daybreak models are now available on AWS
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 35h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 58h · score 90
    https://openai.com/index/daybreak-models-are-now-available-on-aws
    > Daybreak models hit AWS Bedrock. Direct API access for AI cybersecurity integration. #LLM #InfoSec #AIAgents
 
 170. **0 pts** — unslothai/unsloth — Local UI to run and train LLMs and diffusion models, including Qwen3.8, Kimi K3, MiniMax-H3, Gemma 4, DeepSeek-V4, FLUX and more.
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 15h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 38h · score 90
    https://github.com/unslothai/unsloth
    > Local UI simplifies LLM training. Unsloth indexes Qwen3.8, Gemma 4, DeepSeek-V4, +592 stars. #LLM #AI
 
 171. **0 pts** — Ollama v0.32.10-rc0
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 11h · score 60
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 34h · score 60
    https://github.com/ollama/ollama/releases/tag/v0.32.10-rc0
    > Ollama optimizes kernel launches. Compiles multiply and cast into one kernel, reducing intermediates on M5 Max. Anyone running Ollama v0.32.…
+
+172. **0 pts** — Ollama v0.32.8
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 14h · score 65
+   https://github.com/ollama/ollama/releases/tag/v0.32.8
+   > Ollama releases v0.32.8. Runs on Apple Silicon with DFlash and image input support. #OpenSource #ClaudeCode #Anthropic
 
