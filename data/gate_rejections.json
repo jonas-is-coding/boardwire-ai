@@ -43,5 +43,14 @@
     "reasons": [
       "Aggregator engagement metadata leaked into post: 'with 107 points'"
     ]
+  },
+  {
+    "rejected_at": "2026-08-17T16:17:09.977369Z",
+    "stage": "review",
+    "title": "Ollama v0.32.12",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.32.12",
+    "reasons": [
+      "Version-only release without concrete capability: 'Ollama v0.32.12'"
+    ]
   }
 ]
