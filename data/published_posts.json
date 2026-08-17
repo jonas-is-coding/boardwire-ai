@@ -3094,5 +3094,35 @@
     "published_weekday": "Friday",
     "composer_version": "2",
     "card_variant": "editorial_release"
+  },
+  {
+    "id": "5308d0be2811",
+    "published_at": "2026-08-17T14:02:41.997806Z",
+    "platform": "bluesky",
+    "post": "Claude Code turns subagents into core primitives.\n\nv2.1.232 enables forked subagents with full prompt cache and background execution by default.\n\nDoes your workflow rely on subagent forking now?\n\n#OpenSource #ClaudeCode #Anthropic",
+    "source_link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.232",
+    "source_title": "Claude Code v2.1.232",
+    "score": 95,
+    "reason": "local newsworthiness fallback",
+    "card_path": "generated/cards/5308d0be2811.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-17-claude-code-v2-1-232-5308d0be2811.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mtbujz3fbq2v",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mtbujz3fbq2v",
+    "format_variant": "thread",
+    "hashtags_used": [
+      "#OpenSource",
+      "#ClaudeCode",
+      "#Anthropic"
+    ],
+    "published_hour_utc": 14,
+    "published_weekday": "Monday",
+    "composer_version": "2",
+    "card_variant": "editorial_release",
+    "thread_uris": [
+      "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mtbujz3fbq2v",
+      "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mtbujzs7ob26",
+      "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mtbuk246kt2w"
+    ],
+    "thread_partial": false
   }
 ]

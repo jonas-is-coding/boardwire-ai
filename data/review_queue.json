@@ -9854,11 +9854,11 @@
   },
   {
     "id": "5308d0be2811",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-08-17T12:39:51.095944Z",
     "score": 95,
     "reason": "local newsworthiness fallback",
-    "proposed_post": "Claude Code turns subagents into first-class primitives.\n\nv2.1.232 enables forked subagents with full prompt cache and background execution by default.\n\n#OpenSource #ClaudeCode #Anthropic",
+    "proposed_post": "Claude Code turns subagents into core primitives.\n\nv2.1.232 enables forked subagents with full prompt cache and background execution by default.\n\nDoes your workflow rely on subagent forking now?\n\n#OpenSource #ClaudeCode #Anthropic",
     "source_angle": "Local high-score + Sarah/OpenRouter fallback",
     "source_item": {
       "title": "Claude Code v2.1.232",
@@ -9894,10 +9894,29 @@
         "cluster_score": 15
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/5308d0be2811.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Aus *Claude Code Releases* ist ein starker Kandidat reingekommen: *Claude Code v2.1.232*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 95_",
-    "chloe_note": "*Claude Code v2.1.232* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: /li, /h2, what, changed. Bewertung: 95. Quelle: https://github.com/anthropics/claude-code/releases/tag/v2.1.232"
+    "chloe_note": "*Claude Code v2.1.232* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: /li, /h2, what, changed. Bewertung: 95. Quelle: https://github.com/anthropics/claude-code/releases/tag/v2.1.232",
+    "sarah_package": {
+      "title": "Claude Code turns subagents into core primitives.",
+      "subtitle": "v2.1.232 enables forked subagents with full prompt cache and background execution by default.",
+      "description": "Forked subagents now inherit conversation state. Background execution is default for spawned agents. Available in latest CLI update.",
+      "hashtags": [
+        "#OpenSource",
+        "#ClaudeCode",
+        "#Anthropic"
+      ],
+      "question": "Does your workflow rely on subagent forking now?",
+      "card_stat": "v2.1.232",
+      "card_claim": "Forked agents inherit state by default",
+      "card_context": "Prompt cache and background execution enabled on spawn"
+    },
+    "composer_version": "2",
+    "card_layout": "release",
+    "card_variant": "editorial_release",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-17-claude-code-v2-1-232-5308d0be2811.md",
+    "published_at": "2026-08-17T14:02:41.997806Z"
   }
 ]
