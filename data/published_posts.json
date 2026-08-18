@@ -3124,5 +3124,29 @@
       "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mtbuk246kt2w"
     ],
     "thread_partial": false
+  },
+  {
+    "id": "b60cd68a161b",
+    "published_at": "2026-08-18T17:56:27.398366Z",
+    "platform": "bluesky",
+    "post": "Ollama embeds agent harnesses and coding CLI.\n\nMuse Code and DeepSeek Harness land in ollama v0.32.11, +3 new integrations today.\n\n#OpenSource #Ollama #LocalLLM",
+    "source_link": "https://github.com/ollama/ollama/releases/tag/v0.32.11",
+    "source_title": "Ollama v0.32.11",
+    "score": 60,
+    "reason": "local newsworthiness fallback",
+    "card_path": "generated/cards/b60cd68a161b.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-18-ollama-v0-32-11-b60cd68a161b.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mtes2vdelj2w",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mtes2vdelj2w",
+    "format_variant": "plain",
+    "hashtags_used": [
+      "#OpenSource",
+      "#Ollama",
+      "#LocalLLM"
+    ],
+    "published_hour_utc": 17,
+    "published_weekday": "Tuesday",
+    "composer_version": "2",
+    "card_variant": "editorial_release"
   }
 ]

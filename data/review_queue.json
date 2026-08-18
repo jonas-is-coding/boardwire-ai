@@ -9943,11 +9943,11 @@
   },
   {
     "id": "b60cd68a161b",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-08-18T16:20:36.451637Z",
     "score": 60,
     "reason": "local newsworthiness fallback",
-    "proposed_post": "Ollama embeds agent harnesses and coding CLI.\n\nMuse Code and DeepSeek Harness land in ollama launch, +3 new integrations today.\n\n#OpenSource #Ollama #LocalLLM",
+    "proposed_post": "Ollama embeds agent harnesses and coding CLI.\n\nMuse Code and DeepSeek Harness land in ollama v0.32.11, +3 new integrations today.\n\n#OpenSource #Ollama #LocalLLM",
     "source_angle": "Local high-score + Sarah/OpenRouter fallback",
     "source_item": {
       "title": "Ollama v0.32.11",
@@ -9980,10 +9980,29 @@
         "cluster_score": 35
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/b60cd68a161b.png",
     "is_llm_mode": false,
     "breaking": false,
     "claire_note": "Aus *Ollama Releases* ist ein starker Kandidat reingekommen: *Ollama v0.32.11*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 60_",
-    "chloe_note": "*Ollama v0.32.11* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: /li, changed, what, /h2. Bewertung: 60. Quelle: https://github.com/ollama/ollama/releases/tag/v0.32.11"
+    "chloe_note": "*Ollama v0.32.11* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: /li, changed, what, /h2. Bewertung: 60. Quelle: https://github.com/ollama/ollama/releases/tag/v0.32.11",
+    "sarah_package": {
+      "title": "Ollama embeds agent harnesses and coding CLI.",
+      "subtitle": "Muse Code and DeepSeek Harness land in ollama v0.32.11, +3 new integrations today.",
+      "description": "Muse Code and DeepSeek Harness now run locally via ollama launch. OpenAI-compatible Responses API adds web search.",
+      "hashtags": [
+        "#OpenSource",
+        "#Ollama",
+        "#LocalLLM"
+      ],
+      "question": "Anyone running Muse or DeepSeek harness through Ollama yet?",
+      "card_stat": "v0.32.11",
+      "card_claim": "Muse Code and DeepSeek harness run locally now.",
+      "card_context": "Muse Code CLI · DeepSeek Harness · OpenAI-compatible web search in Responses API"
+    },
+    "composer_version": "2",
+    "card_layout": "release",
+    "card_variant": "editorial_release",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-18-ollama-v0-32-11-b60cd68a161b.md",
+    "published_at": "2026-08-18T17:56:27.398366Z"
   }
 ]

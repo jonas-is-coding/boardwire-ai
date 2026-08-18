@@ -76,5 +76,11 @@
     "version": "v2.1.232",
     "published_at": "2026-08-17T14:02:41.997806Z",
     "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.232"
+  },
+  {
+    "project": "Ollama",
+    "version": "v0.32.11",
+    "published_at": "2026-08-18T17:56:27.398366Z",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.32.11"
   }
 ]
