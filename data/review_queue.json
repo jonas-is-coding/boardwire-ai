@@ -9918,5 +9918,72 @@
     "card_variant": "editorial_release",
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-17-claude-code-v2-1-232-5308d0be2811.md",
     "published_at": "2026-08-17T14:02:41.997806Z"
+  },
+  {
+    "id": "839208beeb5f",
+    "status": "deferred_generation_unavailable",
+    "created_at": "2026-08-18T16:20:36.452340Z",
+    "score": 60,
+    "reason": "deferred: generation provider unavailable",
+    "proposed_post": "",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "Servers v2026.8.18",
+      "source": "MCP Servers Releases",
+      "link": "https://github.com/modelcontextprotocol/servers/releases/tag/2026.8.18",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 60
+    },
+    "deferred_at": "2026-08-18T16:20:36.452314Z",
+    "defer_count": 1,
+    "original_score": 60,
+    "original_reason": "deferred: generation provider unavailable",
+    "card_path": null
+  },
+  {
+    "id": "b60cd68a161b",
+    "status": "approved",
+    "created_at": "2026-08-18T16:20:36.451637Z",
+    "score": 60,
+    "reason": "local newsworthiness fallback",
+    "proposed_post": "Ollama embeds agent harnesses and coding CLI.\n\nMuse Code and DeepSeek Harness land in ollama launch, +3 new integrations today.\n\n#OpenSource #Ollama #LocalLLM",
+    "source_angle": "Local high-score + Sarah/OpenRouter fallback",
+    "source_item": {
+      "title": "Ollama v0.32.11",
+      "source": "Ollama Releases",
+      "link": "https://github.com/ollama/ollama/releases/tag/v0.32.11",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 60,
+      "summary": "<h2>What's Changed</h2>\n<ul>\n<li><code>ollama launch dsh</code> now supports DeepSeek Harness, <a href=\"https://deepseek.com/harness/en/\" rel=\"nofollow\">DeepSeek's open-source agent harness</a></li>\n<li><code>ollama launch muse</code> now supports <a href=\"https://developer.meta.com/ai/products/muse-code/\" rel=\"nofollow\">Muse Code</a>, Meta's agentic coding CLI</li>\n<li>The OpenAI-compatible Responses API now supports web search</li>\n<li>Muse Glimmer template updates</li>\n</ul>\n<p><strong>Full Changelog</strong>: <a class=\"commit-link\" href=\"https://github.com/ollama/ollama/compare/v0.32.10...v0.32.11\"><tt>v0.32.10...v0.32.11</tt></a></p>\n[Cluster context: 1 sources, engagement 0, common terms: /li, changed, what, /h2, href.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Ollama Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "/li",
+          "changed",
+          "what",
+          "/h2",
+          "href",
+          "commit-link",
+          "class",
+          "/strong"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: /li, changed, what, /h2. Lead: Ollama v0.32.11",
+        "alternative_titles": [
+          "Ollama v0.32.10"
+        ],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "breaking": false,
+    "claire_note": "Aus *Ollama Releases* ist ein starker Kandidat reingekommen: *Ollama v0.32.11*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 60_",
+    "chloe_note": "*Ollama v0.32.11* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: /li, changed, what, /h2. Bewertung: 60. Quelle: https://github.com/ollama/ollama/releases/tag/v0.32.11"
   }
 ]
