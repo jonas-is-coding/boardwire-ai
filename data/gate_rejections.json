@@ -52,5 +52,15 @@
     "reasons": [
       "Version-only release without concrete capability: 'Ollama v0.32.12'"
     ]
+  },
+  {
+    "rejected_at": "2026-08-19T12:42:28.768718Z",
+    "stage": "review",
+    "title": "Servers v2026.8.18",
+    "link": "https://github.com/modelcontextprotocol/servers/releases/tag/2026.8.18",
+    "reasons": [
+      "Version-only release without concrete capability: 'Servers v2026.8.18'",
+      "Score below threshold (60 < 62)"
+    ]
   }
 ]

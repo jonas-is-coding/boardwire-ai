@@ -4,8 +4,9 @@
 
 No pending review items.
 
-## Gate rejections (last 6)
+## Gate rejections (last 7)
 
+- `2026-08-19T12:42:28.768718Z` [review] **Servers v2026.8.18** — Version-only release without concrete capability: 'Servers v2026.8.18'; Score below threshold (60 < 62)
 - `2026-08-17T16:17:09.977369Z` [review] **Ollama v0.32.12** — Version-only release without concrete capability: 'Ollama v0.32.12'
 - `2026-08-07T12:59:04.179302Z` [review] **Show HN: The Channels SDK – Bring Any Agent to Any Channel (Slack, MS Teams)** — Aggregator engagement metadata leaked into post: 'with 107 points'
 - `2026-08-06T14:03:53.921187Z` [review] **Ollama v0.32.6** — Version-only release without concrete capability: 'Ollama v0.32.6'
