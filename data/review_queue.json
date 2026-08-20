@@ -10008,11 +10008,11 @@
   },
   {
     "id": "83049c921537",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-08-20T12:44:20.746790Z",
     "score": 90,
     "reason": "local newsworthiness fallback",
-    "proposed_post": "Anthropic Python SDK adds managed agents web search.\n\nv0.125.0 now supports self-hosted sandbox memory for agents. Apache 2.0 license.\n\n#OpenSource #ClaudeCode #Anthropic",
+    "proposed_post": "Anthropic Python SDK makes memory a managed primitive for agents.\n\nv0.125.0 adds self-hosted sandbox memory, +607 stars today, Apache 2.0.\n\n#OpenSource #ClaudeCode #Anthropic",
     "source_angle": "Local high-score + Sarah/OpenRouter fallback",
     "source_item": {
       "title": "Anthropic Python SDK v0.125.0",
@@ -10045,10 +10045,29 @@
         "cluster_score": 45
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/83049c921537.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Aus *Anthropic Python SDK Releases* ist ein starker Kandidat reingekommen: *Anthropic Python SDK v0.125.0*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 90_",
-    "chloe_note": "*Anthropic Python SDK v0.125.0* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: /ul, sdk, features, /h2. Bewertung: 90. Quelle: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.125.0"
+    "chloe_note": "*Anthropic Python SDK v0.125.0* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: /ul, sdk, features, /h2. Bewertung: 90. Quelle: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.125.0",
+    "sarah_package": {
+      "title": "Anthropic Python SDK makes memory a managed primitive for agents.",
+      "subtitle": "v0.125.0 adds self-hosted sandbox memory, +607 stars today, Apache 2.0.",
+      "description": "Managed sandbox memory for agents in CLI and MCP workflows. First SDK to expose persistent agent state as a primitive.",
+      "hashtags": [
+        "#OpenSource",
+        "#ClaudeCode",
+        "#Anthropic"
+      ],
+      "question": "Anyone using this for long-running agent tasks?",
+      "card_stat": "v0.125",
+      "card_claim": "Sandbox memory now managed in SDK",
+      "card_context": "Apache 2.0 · self-hosted · MCP and CLI support"
+    },
+    "composer_version": "2",
+    "card_layout": "release",
+    "card_variant": "editorial_release",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-20-anthropic-python-sdk-v0-125-0-83049c921537.md",
+    "published_at": "2026-08-20T14:09:06.942341Z"
   }
 ]

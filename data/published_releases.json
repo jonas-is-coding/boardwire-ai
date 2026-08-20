@@ -82,5 +82,11 @@
     "version": "v0.32.11",
     "published_at": "2026-08-18T17:56:27.398366Z",
     "link": "https://github.com/ollama/ollama/releases/tag/v0.32.11"
+  },
+  {
+    "project": "Anthropic Python SDK",
+    "version": "v0.125.0",
+    "published_at": "2026-08-20T14:09:06.942341Z",
+    "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.125.0"
   }
 ]
