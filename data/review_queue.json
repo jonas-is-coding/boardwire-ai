@@ -10005,5 +10005,50 @@
     "card_variant": "editorial_release",
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-18-ollama-v0-32-11-b60cd68a161b.md",
     "published_at": "2026-08-18T17:56:27.398366Z"
+  },
+  {
+    "id": "83049c921537",
+    "status": "approved",
+    "created_at": "2026-08-20T12:44:20.746790Z",
+    "score": 90,
+    "reason": "local newsworthiness fallback",
+    "proposed_post": "Anthropic Python SDK adds managed agents web search.\n\nv0.125.0 now supports self-hosted sandbox memory for agents. Apache 2.0 license.\n\n#OpenSource #ClaudeCode #Anthropic",
+    "source_angle": "Local high-score + Sarah/OpenRouter fallback",
+    "source_item": {
+      "title": "Anthropic Python SDK v0.125.0",
+      "source": "Anthropic Python SDK Releases",
+      "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.125.0",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 65,
+      "summary": "<h2>0.125.0 (2026-08-19)</h2>\n<p>Full Changelog: <a href=\"https://github.com/anthropics/anthropic-sdk-python/compare/v0.124.0...v0.125.0\">v0.124.0...v0.125.0</a></p>\n<h3>Features</h3>\n<ul>\n<li><strong>api:</strong> managed agents web search config and self hosted sandbox memory (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/b75afd6ffa210ff2e98bc5e90d6f1f3367038f0b\">b75afd6</a>)</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: /ul, sdk, features, /h2, href.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Anthropic Python SDK Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "/ul",
+          "sdk",
+          "features",
+          "/h2",
+          "href",
+          "strong",
+          "changelog",
+          "/h3"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: /ul, sdk, features, /h2. Lead: Anthropic Python SDK v0.125.0",
+        "alternative_titles": [
+          "Anthropic Python SDK v0.124.0"
+        ],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Aus *Anthropic Python SDK Releases* ist ein starker Kandidat reingekommen: *Anthropic Python SDK v0.125.0*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 90_",
+    "chloe_note": "*Anthropic Python SDK v0.125.0* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: /ul, sdk, features, /h2. Bewertung: 90. Quelle: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.125.0"
   }
 ]
