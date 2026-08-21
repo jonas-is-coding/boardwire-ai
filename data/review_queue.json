@@ -9707,7 +9707,7 @@
   },
   {
     "id": "45ff29ecde21",
-    "status": "deferred_generation_unavailable",
+    "status": "rejected",
     "created_at": "2026-08-13T13:05:47.602588Z",
     "score": 65,
     "reason": "deferred: generation provider unavailable",
@@ -9725,7 +9725,8 @@
     "defer_count": 1,
     "original_score": 65,
     "original_reason": "deferred: generation provider unavailable",
-    "card_path": null
+    "card_path": null,
+    "rejected_at": "2026-08-21T12:42:13.801316Z"
   },
   {
     "id": "34447098c6b1",

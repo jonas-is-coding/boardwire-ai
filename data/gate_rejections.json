@@ -62,5 +62,14 @@
       "Version-only release without concrete capability: 'Servers v2026.8.18'",
       "Score below threshold (60 < 62)"
     ]
+  },
+  {
+    "rejected_at": "2026-08-21T12:42:13.800993Z",
+    "stage": "review",
+    "title": "Claude Code v2.1.231",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.231",
+    "reasons": [
+      "Version-only release without concrete capability: 'Claude Code v2.1.231'"
+    ]
   }
 ]
