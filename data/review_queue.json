@@ -10070,5 +10070,91 @@
     "card_variant": "editorial_release",
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-20-anthropic-python-sdk-v0-125-0-83049c921537.md",
     "published_at": "2026-08-20T14:09:06.942341Z"
+  },
+  {
+    "id": "c0fd411a5fde",
+    "status": "approved",
+    "created_at": "2026-08-21T16:21:03.318286Z",
+    "score": 85,
+    "reason": "Anthropic Python SDK v1.0.0 released with breaking changes (httpx2) and bug fixes. Direct impact for developers using Anthropic API.",
+    "proposed_post": "Anthropic released Python SDK v1.0.0, upgrading to httpx2 and fixing `output_format` warnings. Builders should update, noting minor breaking changes for a more stable API client.",
+    "source_angle": "Anthropic's official Python SDK reaches v1.0.0, signaling stability and requiring updates.",
+    "source_item": {
+      "title": "Anthropic Python SDK v1.0.0",
+      "source": "Anthropic Python SDK Releases",
+      "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.0.0",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 65,
+      "summary": "<h2>1.0.0 (2026-08-20)</h2>\n<p>Full Changelog: <a href=\"https://github.com/anthropics/anthropic-sdk-python/compare/v0.125.0...v1.0.0\">v0.125.0...v1.0.0</a></p>\n<h3>⚠ BREAKING CHANGES</h3>\n<ul>\n<li><strong>client:</strong> upgrade to httpx2 and some minor breaking changes. See MIGRATION.md for details</li>\n</ul>\n<h3>Features</h3>\n<ul>\n<li><strong>client:</strong> upgrade to httpx2 and some minor breaking changes. See MIGRATION.md for details (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/33e296749dda59c3b9af85d9bee37ae241b92a28\">33e2967</a>)</li>\n</ul>\n<h3>Bug Fixes</h3>\n<ul>\n<li><strong>beta:</strong> stop warning about <code>output_format=</code> on the parse/stream/tool_runner helpers (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/59bf26106d3d66cef54b926aeae4268846bf13f2\">59bf261</a>)</li>\n</ul>\n<h3>Chores</h3>\n<ul>\n<li><strong>streaming:</strong> restore the original event imports in lib/streaming/_types.py (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/87e9e0157c08ad4b9bb4c44081171285499b1aa3\">87e9e01</a>)</li>\n</ul>\n<h3>Documentation</h3>\n<ul>\n<li><strong>examples:</strong> use adaptive thinking in thinking examples (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/b5870afda154cc12ab15fad5ca6f53a280e09ee3\">b5870af</a>)</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: details, httpx2, runner, restore, parse/stream/tool.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Anthropic Python SDK Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "details",
+          "httpx2",
+          "runner",
+          "restore",
+          "parse/stream/tool",
+          "streaming",
+          "changes.",
+          "imports"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: details, httpx2, runner, restore. Lead: Anthropic Python SDK v1.0.0",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, das Anthropic Python SDK ist auf v1.0.0.\n\nDas ist ein Major Release mit Breaking Changes, die man nicht ignorieren kann. Wer aktuell mit Anthropic APIs arbeitet, muss hier ran und seinen Code anpassen. Für alle, die noch nicht dabei sind, ist das ein guter Zeitpunkt, um mit einer stabilen API zu starten.",
+    "chloe_note": "Hey, *Anthropic Python SDK v1.0.0* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Anthropic Python SDK v1.0.0 released with breaking changes (httpx2) and bug fixes. Direct impact for developers using Anthropic API.Cluster context: 1 sources, engagement 0. Common terms: details, httpx2, runner, restore. Score aktuell: 85. Link: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.0.0"
+  },
+  {
+    "id": "c2ecfaadad4b",
+    "status": "approved",
+    "created_at": "2026-08-21T16:21:06.011208Z",
+    "score": 90,
+    "reason": "local newsworthiness fallback",
+    "proposed_post": "Claude Code adds readline-style keybindings and plugin headers.\n\nClaude Code v2.1.238 ships readline-style Ctrl+W in prompt and plugin marketplace HTTP headers.\n\n#LLM #ClaudeCode #Anthropic",
+    "source_angle": "Local high-score + Sarah/OpenRouter fallback",
+    "source_item": {
+      "title": "Claude Code v2.1.238",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.238",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 90,
+      "summary": "<h2>What's changed</h2>\n<ul>\n<li>Added a <code>keybindingFlavor</code> setting: set it to <code>\"readline\"</code> to make Ctrl+W in the prompt delete back to the previous whitespace, as in Bash; the default (<code>\"classic\"</code>) is unchanged</li>\n<li>Plugin marketplaces: <code>headersHelper</code> on a url marketplace or a catalog entry runs a command that mints HTTP headers (e.g. a short-lived token) for catalog and same-origin archive fetches</li>\n<li>A catalog entry's <code>headersHelper</code> runs only when you install or update that plugin, after its command is shown; <code>claude plugin install/update</code> ask <code>[y/N]</code> (or pass <code>-y</code>)</li>\n<li>Added <code>claude self-hosted-runner --defer-shutdown-max-min &lt;minutes&gt;</code>: on SIGTERM, keep serving attached sessions, park what is left after that many minutes, then exit</li>\n<li>Added <code>claude self-hosted-runner --proxy-authorization-command</code> / <code>--proxy-authorization-file</code> for egress proxies that require a freshly issued <code>Proxy-Authorization</code> header on every connection</li>\n<li>Fixed unbounded memory growth in long interactive sessions: subagent tool results are now released once they leave the recent display window</li>\n<li>Fixed custom, project, and plugin output styles drifting back to the default voice mid-session</li>\n<li>Fixed <code>CLAUDE_CODE_ENABLE_PROMPT_SUGGESTION=true</code> not keeping prompt suggestions on when your account is near, but not over, its usage limit</li>\n<li>Fixed worktree-isolation Bash refusals telling you to remove a redirect when the command had none</li>\n<li>Fixed self-hosted runners occasionally being removed by the server after a single slow or lost poll request, handing their healthy session to another runner</li>\n<li>Fixed MCP elicitation dialogs showing nothing for URLs longer than 4,096 characters, and permission prompts dropping the \"don't ask again\" option when the project path didn't fit the terminal width</li>\n<li>Fixed leftover <code>/tmp/claude-*-cwd</code> files when a Bash command is killed, times out, or is interrupted</li>\n<li>Fixed held Backspace being ignored on terminals that send Ctrl+H for Backspace when keystrokes arrive in large bursts (slow SSH/mosh links)</li>\n<li>Fixed text-wrapping in permission prompt diffs: lines containing wide multi-code-point characters (such as emoji) or tabs are no longer clipped</li>\n<li>Fixed killing a suspended (Ctrl+Z) session sometimes leaving the terminal in bracketed-paste mode with the cursor hidden</li>\n<li>Fixed stdio MCP servers receiving a <code>server/discover</code> request before <code>initialize</code>, forcing lazy servers to start their backend on every session open</li>\n<li>Fixed a proxy's refusal of a connection being reported as a generic network error instead of naming the proxy</li>\n<li>Fixed the <code>/model</code> and <code>/effort</code> cache-miss warning appearing when the prompt cache had already expired</li>\n<li>Fixed per-task Stop from the Remote Control tasks panel doing nothing on CLI-hosted sessions</li>\n<li>Fixed remote sessions exiting when a client delivered a user message without a valid role</li>\n<li>Fixed Remote Control sessions started by <code>claude remote-control</code> inheriting session-scoped environment variables from the launching shell</li>\n<li>Fixed a Remote Control session whose process crashed staying unavailable until <code>claude remote-control</code> was restarted; it can now be reused when you next message it</li>\n<li>Fixed Remote Control messages sent from the web or Desktop while Claude is mid-turn disappearing from the transcript after the turn finishes</li>\n<li>Fixed Remote Control model picks made on a phone or web not updating the model shown in the terminal</li>\n<li>Fixed Remote Control disconnecting with \"login expired\" when a brief network hiccup delays renewing your sign-in; it now retries and stays connected</li>\n<li>Fixed Remote Control reporting a failed reconnect on sign-out; signing out now ends the session with a clear message</li>\n<li>Fixed <code>ListAgents</code>/<code>SendMessage</code> reporting \"Remote Control is not connected\" in sessions run by <code>claude remote-control</code> (server mode) or Desktop/IDE hosts; they now list and reach Remote Control peers</li>\n<li>Fixed <code>ListAgents</code> and <code>SendMessage</code> exposing the idle worker that the agent view pre-warms for your next background session; it now appears only once a task claims it</li>\n<li>Cross-session messaging: sending to a session on this machine that refuses inbound messages (e.g. <code>crossSessionInbound: \"refuse\"</code>) now reports \"refused\" to the sender instead of a silent success</li>\n<li>Cross-session messaging: a session whose inbox drops your messages (rate limit or full queue) now tells your session, instead of the messages vanishing silently</li>\n<li>Improved startup: bare <code>claude</code> starts sooner on macOS</li>\n<li>Improved Bash tool permission checking for zsh-specific syntax in shell conditionals</li>\n<li>Improved Remote Control connection resilience: brief HTTP 403 refusals from a network edge, VPN, or proxy are now tolerated for up to 3 minutes, with the refusing party named when a block persists</li>\n<li>Improved startup responsiveness: the automatic update check now runs about 10 seconds after launch instead of competing with startup for CPU</li>\n<li>Updated the bundled <code>claude-api</code> skill for the Managed Agents Aug 19 release: web search/fetch domain settings and memory stores on self-hosted sandboxes</li>\n<li>Changed Ctrl+L and Cmd+K in fullscreen to always just repaint — the double-press <code>/clear</code> shortcut was removed, and 1-row nvim terminals no longer trigger automatic <code>/clear</code> loops</li>\n<li>Changed <code>claude mcp list</code> and <code>claude mcp get</code> to show disabled servers as <code>⊘ Disabled</code> instead of connecting to them for a health check</li>\n<li>MCP <code>headersHelper</code> in a project <code>.mcp.json</code>, and inline MCP servers in project or <code>--add-dir</code> agent files, now require that folder's trust dialog to have been accepted (also under <code>claude -p</code>)</li>\n<li>MCP <code>headersHelper</code> from a project <code>.mcp.json</code>, plugin, or agent file runs without inherited credential env vars; user, managed and claude.ai-scope helpers now run from the Claude config dir</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: issued, role, keybindingflavor, connecting, persists.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Claude Code Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "issued",
+          "role",
+          "keybindingflavor",
+          "connecting",
+          "persists",
+          "nothing",
+          "fit",
+          "out"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: issued, role, keybindingflavor, connecting. Lead: Claude Code v2.1.238",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": false,
+    "breaking": false,
+    "claire_note": "Aus *Claude Code Releases* ist ein starker Kandidat reingekommen: *Claude Code v2.1.238*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 90_",
+    "chloe_note": "*Claude Code v2.1.238* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: issued, role, keybindingflavor, connecting. Bewertung: 90. Quelle: https://github.com/anthropics/claude-code/releases/tag/v2.1.238"
   }
 ]
