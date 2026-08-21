@@ -3172,5 +3172,29 @@
     "published_weekday": "Thursday",
     "composer_version": "2",
     "card_variant": "editorial_release"
+  },
+  {
+    "id": "c2ecfaadad4b",
+    "published_at": "2026-08-21T17:58:34.974916Z",
+    "platform": "bluesky",
+    "post": "Claude Code ships readline-style keybindings in v2.1.238.\n\nv2.1.238 adds Ctrl+W in prompt and plugin marketplace HTTP headers.\n\nAnyone using readline keybindings in Claude Code yet?\n\n#LLM #ClaudeCode #Anthropic",
+    "source_link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.238",
+    "source_title": "Claude Code v2.1.238",
+    "score": 90,
+    "reason": "local newsworthiness fallback",
+    "card_path": "generated/cards/c2ecfaadad4b.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-21-claude-code-v2-1-238-c2ecfaadad4b.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mtmdlizwpt22",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mtmdlizwpt22",
+    "format_variant": "question",
+    "hashtags_used": [
+      "#LLM",
+      "#ClaudeCode",
+      "#Anthropic"
+    ],
+    "published_hour_utc": 17,
+    "published_weekday": "Friday",
+    "composer_version": "2",
+    "card_variant": "editorial_release"
   }
 ]
