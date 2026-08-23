@@ -3196,5 +3196,29 @@
     "published_weekday": "Friday",
     "composer_version": "2",
     "card_variant": "editorial_release"
+  },
+  {
+    "id": "56df6ba33505",
+    "published_at": "2026-08-23T22:25:49.967456Z",
+    "platform": "bluesky",
+    "post": "Terminal coding agents are moving from plugins to core primitives.\n\nCodex CLI ships a lightweight coding agent that runs natively in terminals, with +2729 stars today.\n\n#AI #AIAgents #DevTools",
+    "source_link": "https://github.com/openai/codex",
+    "source_title": "openai/codex — Lightweight coding agent that runs in your terminal",
+    "score": 90,
+    "reason": "Official OpenAI repo trending with a new, accessible terminal agent for coding. Ships today.",
+    "card_path": "generated/cards/56df6ba33505.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-23-openai-codex-lightweight-coding-agent-that-runs-in-your-terminal-56df6ba33505.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mtrth7nztt22",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mtrth7nztt22",
+    "format_variant": "plain",
+    "hashtags_used": [
+      "#AI",
+      "#AIAgents",
+      "#DevTools"
+    ],
+    "published_hour_utc": 22,
+    "published_weekday": "Sunday",
+    "composer_version": "2",
+    "card_variant": "editorial_repo"
   }
 ]

@@ -10073,7 +10073,7 @@
   },
   {
     "id": "c0fd411a5fde",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-08-21T16:21:03.318286Z",
     "score": 85,
     "reason": "Anthropic Python SDK v1.0.0 released with breaking changes (httpx2) and bug fixes. Direct impact for developers using Anthropic API.",
@@ -10112,7 +10112,8 @@
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das Anthropic Python SDK ist auf v1.0.0.\n\nDas ist ein Major Release mit Breaking Changes, die man nicht ignorieren kann. Wer aktuell mit Anthropic APIs arbeitet, muss hier ran und seinen Code anpassen. Für alle, die noch nicht dabei sind, ist das ein guter Zeitpunkt, um mit einer stabilen API zu starten.",
-    "chloe_note": "Hey, *Anthropic Python SDK v1.0.0* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Anthropic Python SDK v1.0.0 released with breaking changes (httpx2) and bug fixes. Direct impact for developers using Anthropic API.Cluster context: 1 sources, engagement 0. Common terms: details, httpx2, runner, restore. Score aktuell: 85. Link: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.0.0"
+    "chloe_note": "Hey, *Anthropic Python SDK v1.0.0* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Anthropic Python SDK v1.0.0 released with breaking changes (httpx2) and bug fixes. Direct impact for developers using Anthropic API.Cluster context: 1 sources, engagement 0. Common terms: details, httpx2, runner, restore. Score aktuell: 85. Link: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.0.0",
+    "expired_at": "2026-08-23T22:25:49.967456Z"
   },
   {
     "id": "c2ecfaadad4b",
@@ -10178,11 +10179,11 @@
   },
   {
     "id": "56df6ba33505",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-08-23T20:45:41.792091Z",
     "score": 90,
     "reason": "Official OpenAI repo trending with a new, accessible terminal agent for coding. Ships today.",
-    "proposed_post": "OpenAI's `codex` GitHub repo is trending as a lightweight terminal coding agent. This provides direct AI coding assistance within CLI workflows, enabling faster local development and script generation.",
+    "proposed_post": "Terminal coding agents are moving from plugins to core primitives.\n\nCodex CLI ships a lightweight coding agent that runs natively in terminals, with +2729 stars today.\n\n#AI #AIAgents #DevTools",
     "source_angle": "OpenAI's new terminal coding agent",
     "source_item": {
       "title": "openai/codex — Lightweight coding agent that runs in your terminal",
@@ -10213,10 +10214,29 @@
         "cluster_score": 35
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/56df6ba33505.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das hier ist ein Blick wert: 'openai/codex' auf GitHub.\n\nEin leichtgewichtiger Coding Agent, der direkt im Terminal läuft. Das ist interessant für Devs, die ihre Workflow-Effizienz steigern wollen, ohne IDE wechseln zu müssen. Praktisch für schnelle Code-Snippets oder Boilerplate-Generierung direkt dort, wo man arbeitet.",
-    "chloe_note": "*openai/codex — Lightweight coding agent that runs in your terminal* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Official OpenAI repo trending with a new, accessible terminal agent for coding. Ships today.Cluster context: 1 sources, engagement 2729. Common terms: terminal, stars., +2729, lightweight. Bewertung: 90. Quelle: https://github.com/openai/codex"
+    "chloe_note": "*openai/codex — Lightweight coding agent that runs in your terminal* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Official OpenAI repo trending with a new, accessible terminal agent for coding. Ships today.Cluster context: 1 sources, engagement 2729. Common terms: terminal, stars., +2729, lightweight. Bewertung: 90. Quelle: https://github.com/openai/codex",
+    "sarah_package": {
+      "title": "Terminal coding agents are moving from plugins to core primitives.",
+      "subtitle": "Codex CLI ships a lightweight coding agent that runs natively in terminals, with +2729 stars today.",
+      "description": "MIT-licensed agent executes locally in CLI. Replaces plugin hopping for quick snippets, boilerplate, and refactors. No IDE jump required.",
+      "hashtags": [
+        "#AI",
+        "#AIAgents",
+        "#DevTools"
+      ],
+      "question": "Anyone running this in daily shell workflows yet?",
+      "card_stat": "+2729★",
+      "card_claim": "Native CLI agent replaces IDE hopping",
+      "card_context": "MIT license · runs locally · replaces plugin workflows · OpenAI repo"
+    },
+    "composer_version": "2",
+    "card_layout": "repo",
+    "card_variant": "editorial_repo",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-23-openai-codex-lightweight-coding-agent-that-runs-in-your-terminal-56df6ba33505.md",
+    "published_at": "2026-08-23T22:25:49.967456Z"
   }
 ]
