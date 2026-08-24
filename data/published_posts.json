@@ -3220,5 +3220,29 @@
     "published_weekday": "Sunday",
     "composer_version": "2",
     "card_variant": "editorial_repo"
+  },
+  {
+    "id": "781e2f83a98e",
+    "published_at": "2026-08-24T14:12:02.367944Z",
+    "platform": "bluesky",
+    "post": "OpenHuman turns personal AI into a local-first life memory engine.\n\nOpenHuman integrates recall, agent orchestration and deep research in one stack, with +515 stars tod\n\n#AI #AIAgents #DevTools",
+    "source_link": "https://github.com/tinyhumansai/openhuman",
+    "source_title": "tinyhumansai/openhuman — Your Personal AI super intelligence. A brain that builds a local-first memory of your life, a fantastic orchestrator of agent fleets and workflows, and a deep researcher.",
+    "score": 70,
+    "reason": "New open-source project for local-first personal AI with agent orchestration. High community interest.",
+    "card_path": "generated/cards/781e2f83a98e.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-24-tinyhumansai-openhuman-your-personal-ai-super-intelligence-a-brain-that-builds-a-local-first-memory-of-your-life-a-fantastic-orchestrator-of-agent-fleets-and-workflows-and-a-deep-researcher-781e2f83a98e.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mttid62you25",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mttid62you25",
+    "format_variant": "plain",
+    "hashtags_used": [
+      "#AI",
+      "#AIAgents",
+      "#DevTools"
+    ],
+    "published_hour_utc": 14,
+    "published_weekday": "Monday",
+    "composer_version": "2",
+    "card_variant": "editorial_repo"
   }
 ]

@@ -10241,11 +10241,11 @@
   },
   {
     "id": "781e2f83a98e",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-08-24T12:44:50.155502Z",
     "score": 70,
     "reason": "New open-source project for local-first personal AI with agent orchestration. High community interest.",
-    "proposed_post": "tinyhumansai/openhuman is a new open-source project for local-first personal AI. It provides a framework for integrating memory and orchestrating agent fleets. Builders can explore its architecture for personal AI systems.",
+    "proposed_post": "OpenHuman turns personal AI into a local-first life memory engine.\n\nOpenHuman integrates recall, agent orchestration and deep research in one stack, with +515 stars tod\n\n#AI #AIAgents #DevTools",
     "source_angle": "GitHub Trending: Open-source local-first personal AI framework",
     "source_item": {
       "title": "tinyhumansai/openhuman — Your Personal AI super intelligence. A brain that builds a local-first memory of your life, a fantastic orchestrator of agent fleets and workflows, and a deep researcher.",
@@ -10276,10 +10276,29 @@
         "cluster_score": 35
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/781e2f83a98e.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das ist ein Kracher von GitHub Trending. 'tinyhumansai/openhuman' verspricht eine lokale KI, die dein Leben \"erinnert\", Agenten orchestriert und forscht. Für Entwickler bedeutet das: Ein Open-Source-Ansatz, um personalisierte, datenschutzfreundliche KI-Assistenten zu bauen, die *wirklich* über Kontext verfügen. Das könnte ein Game-Changer für lokale AI-Anwendungen sein.",
-    "chloe_note": "Kurzes Update: *tinyhumansai/openhuman — Your Personal AI super intelligence. A brain that builds a local-first memory of your life, a fantastic orchestrator of agent fleets and workflows, and a deep researcher.* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um New open-source project for local-first personal AI with agent orchestration. High community interest.Cluster context: 1 sources, engagement 515. Common terms: local-first, github, brain, researcher. Ich habe es mit 70 Punkten bewertet. Hier der Link: https://github.com/tinyhumansai/openhuman"
+    "chloe_note": "Kurzes Update: *tinyhumansai/openhuman — Your Personal AI super intelligence. A brain that builds a local-first memory of your life, a fantastic orchestrator of agent fleets and workflows, and a deep researcher.* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um New open-source project for local-first personal AI with agent orchestration. High community interest.Cluster context: 1 sources, engagement 515. Common terms: local-first, github, brain, researcher. Ich habe es mit 70 Punkten bewertet. Hier der Link: https://github.com/tinyhumansai/openhuman",
+    "sarah_package": {
+      "title": "OpenHuman turns personal AI into a local-first life memory engine.",
+      "subtitle": "OpenHuman integrates recall, agent orchestration and deep research in one stack, with +515 stars tod",
+      "description": "Builders get a local-first framework to wire persistent memory, agent fleets and research loops into a single personal AI system.",
+      "hashtags": [
+        "#AI",
+        "#AIAgents",
+        "#DevTools"
+      ],
+      "question": "Anyone running this as a local assistant stack?",
+      "card_stat": "+515★",
+      "card_claim": "Local-first life memory meets agent control.",
+      "card_context": "Local-first memory · orchestrates agent fleets · runs offline"
+    },
+    "composer_version": "2",
+    "card_layout": "repo",
+    "card_variant": "editorial_repo",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-24-tinyhumansai-openhuman-your-personal-ai-super-intelligence-a-brain-that-builds-a-local-first-memory-of-your-life-a-fantastic-orchestrator-of-agent-fleets-and-workflows-and-a-deep-researcher-781e2f83a98e.md",
+    "published_at": "2026-08-24T14:12:02.367944Z"
   }
 ]
