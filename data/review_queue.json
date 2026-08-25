@@ -10361,5 +10361,48 @@
     "card_variant": "editorial_stat",
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-25-advancing-price-performance-for-developers-with-gpt-5-6-in-kiro-c4002dd13ba0.md",
     "published_at": "2026-08-25T14:21:19.461940Z"
+  },
+  {
+    "id": "ec895f1eceb9",
+    "status": "approved",
+    "created_at": "2026-08-25T16:25:22.056675Z",
+    "score": 85,
+    "reason": "New M-series chips released with enhanced AI compute, enabling faster local inference on Apple hardware.",
+    "proposed_post": "Apple released M6 and M5 Ultra chips, boosting on-device AI compute. Developers can leverage this for faster local inference and larger models on new Apple hardware.",
+    "source_angle": "Apple's M6/M5 Ultra chips for on-device AI",
+    "source_item": {
+      "title": "Apple introduces M6 and M5 Ultra for a big leap in performance and AI compute",
+      "source": "HackerNews",
+      "link": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/",
+      "source_tier": 3,
+      "engagement_score": 640.0,
+      "local_newsworthiness_score": 20,
+      "summary": "454 points, 372 comments on Hacker News — submitted by interpol_p — original: https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/\n[Cluster context: 1 sources, engagement 640, common terms: compute, 372, original, 454, leap.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 640,
+        "common_terms": [
+          "compute",
+          "372",
+          "original",
+          "454",
+          "leap",
+          "ultra",
+          "apple",
+          "introduces"
+        ],
+        "cluster_summary": "1 sources, engagement 640. Common terms: compute, 372, original, 454. Lead: Apple introduces M6 and M5 Ultra for a big leap in performance and AI compute",
+        "alternative_titles": [],
+        "cluster_score": 20
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, dieser Apple M6/M5 Ultra Artikel hat ordentlich Wellen geschlagen auf HN. Das ist mehr als nur ein Chip-Update; die Performance- und AI-Compute-Sprünge sind massiv. Entwickler, die lokal an großen Modellen arbeiten oder High-Performance-Anwendungen bauen, bekommen hier einen echten Schub. Das könnte die lokalen Dev-Workflows für AI-Modelle signifikant beschleunigen.",
+    "chloe_note": "Hey, *Apple introduces M6 and M5 Ultra for a big leap in performance and AI compute* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New M-series chips released with enhanced AI compute, enabling faster local inference on Apple hardware.Cluster context: 1 sources, engagement 640. Common terms: compute, 372, original, 454. Score aktuell: 85. Link: https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/"
   }
 ]
