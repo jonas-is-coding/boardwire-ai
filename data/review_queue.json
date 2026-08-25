@@ -10364,11 +10364,11 @@
   },
   {
     "id": "ec895f1eceb9",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-08-25T16:25:22.056675Z",
     "score": 85,
     "reason": "New M-series chips released with enhanced AI compute, enabling faster local inference on Apple hardware.",
-    "proposed_post": "Apple released M6 and M5 Ultra chips, boosting on-device AI compute. Developers can leverage this for faster local inference and larger models on new Apple hardware.",
+    "proposed_post": "Apple’s M6 Ultra delivers 2x faster on-device AI inference.\n\nApple released M6 and M5 Ultra chips with up to 2x faster local inference on Apple silicon.\n\n#AI #LocalLLM",
     "source_angle": "Apple's M6/M5 Ultra chips for on-device AI",
     "source_item": {
       "title": "Apple introduces M6 and M5 Ultra for a big leap in performance and AI compute",
@@ -10399,10 +10399,28 @@
         "cluster_score": 20
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/ec895f1eceb9.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, dieser Apple M6/M5 Ultra Artikel hat ordentlich Wellen geschlagen auf HN. Das ist mehr als nur ein Chip-Update; die Performance- und AI-Compute-Sprünge sind massiv. Entwickler, die lokal an großen Modellen arbeiten oder High-Performance-Anwendungen bauen, bekommen hier einen echten Schub. Das könnte die lokalen Dev-Workflows für AI-Modelle signifikant beschleunigen.",
-    "chloe_note": "Hey, *Apple introduces M6 and M5 Ultra for a big leap in performance and AI compute* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New M-series chips released with enhanced AI compute, enabling faster local inference on Apple hardware.Cluster context: 1 sources, engagement 640. Common terms: compute, 372, original, 454. Score aktuell: 85. Link: https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/"
+    "chloe_note": "Hey, *Apple introduces M6 and M5 Ultra for a big leap in performance and AI compute* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New M-series chips released with enhanced AI compute, enabling faster local inference on Apple hardware.Cluster context: 1 sources, engagement 640. Common terms: compute, 372, original, 454. Score aktuell: 85. Link: https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/",
+    "sarah_package": {
+      "title": "Apple’s M6 Ultra delivers 2x faster on-device AI inference.",
+      "subtitle": "Apple released M6 and M5 Ultra chips with up to 2x faster local inference on Apple silicon.",
+      "description": "Apple Newsroom confirms the chips target local LLMs and AI workloads. Available on new Mac Studio and Mac Pro configurations.",
+      "hashtags": [
+        "#AI",
+        "#LocalLLM"
+      ],
+      "question": "Anyone deploying local models on M6 already?",
+      "card_stat": "2x",
+      "card_claim": "2x faster local AI inference.",
+      "card_context": "Apple M6 Ultra · up to 2x faster local inference · targets local LLMs on Mac Studio and Mac Pro"
+    },
+    "composer_version": "2",
+    "card_layout": "stat",
+    "card_variant": "editorial_stat",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-25-apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute-ec895f1eceb9.md",
+    "published_at": "2026-08-25T17:59:29.258860Z"
   }
 ]

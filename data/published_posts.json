@@ -3267,5 +3267,28 @@
     "published_weekday": "Tuesday",
     "composer_version": "2",
     "card_variant": "editorial_stat"
+  },
+  {
+    "id": "ec895f1eceb9",
+    "published_at": "2026-08-25T17:59:29.258860Z",
+    "platform": "bluesky",
+    "post": "Apple’s M6 Ultra delivers 2x faster on-device AI inference.\n\nApple released M6 and M5 Ultra chips with up to 2x faster local inference on Apple silicon.\n\n#AI #LocalLLM",
+    "source_link": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/",
+    "source_title": "Apple introduces M6 and M5 Ultra for a big leap in performance and AI compute",
+    "score": 85,
+    "reason": "New M-series chips released with enhanced AI compute, enabling faster local inference on Apple hardware.",
+    "card_path": "generated/cards/ec895f1eceb9.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-25-apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute-ec895f1eceb9.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mtwfirnb2t2s",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mtwfirnb2t2s",
+    "format_variant": "plain",
+    "hashtags_used": [
+      "#AI",
+      "#LocalLLM"
+    ],
+    "published_hour_utc": 17,
+    "published_weekday": "Tuesday",
+    "composer_version": "2",
+    "card_variant": "editorial_stat"
   }
 ]
