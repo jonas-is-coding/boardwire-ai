@@ -3244,5 +3244,28 @@
     "published_weekday": "Monday",
     "composer_version": "2",
     "card_variant": "editorial_repo"
+  },
+  {
+    "id": "c4002dd13ba0",
+    "published_at": "2026-08-25T14:21:19.461940Z",
+    "platform": "bluesky",
+    "post": "GPT‑5.6 lowers dev costs in Kiro.\n\nOpenAI releases GPT‑5.6 in Kiro with 48% cheaper prompts for code workflows, Apache 2.0 MCP server.\n\n#LLM #AI",
+    "source_link": "https://openai.com/index/gpt-5-6-in-kiro",
+    "source_title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
+    "score": 90,
+    "reason": "GPT-5.6 available in Kiro with improved price-performance for dev tasks. Direct release from OpenAI.",
+    "card_path": "generated/cards/c4002dd13ba0.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-25-advancing-price-performance-for-developers-with-gpt-5-6-in-kiro-c4002dd13ba0.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mtvzcohi2p2t",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mtvzcohi2p2t",
+    "format_variant": "plain",
+    "hashtags_used": [
+      "#LLM",
+      "#AI"
+    ],
+    "published_hour_utc": 14,
+    "published_weekday": "Tuesday",
+    "composer_version": "2",
+    "card_variant": "editorial_stat"
   }
 ]
