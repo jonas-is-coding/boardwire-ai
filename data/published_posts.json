@@ -3290,5 +3290,29 @@
     "published_weekday": "Tuesday",
     "composer_version": "2",
     "card_variant": "editorial_stat"
+  },
+  {
+    "id": "362598058408",
+    "published_at": "2026-08-26T14:12:30.791252Z",
+    "platform": "bluesky",
+    "post": "Archify turns code into verifiable diagrams automatically.\n\ntt-a1i/archify ships an agent skill for architecture, workflow, sequence and lifecycle diagrams with\n\nAnyone using this for API or system docs?\n\n#AI #AIAgents #DevTools",
+    "source_link": "https://github.com/tt-a1i/archify",
+    "source_title": "tt-a1i/archify — Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.",
+    "score": 90,
+    "reason": "Open-source tool for AI-assisted, verifiable diagram generation ships today. High community signal.",
+    "card_path": "generated/cards/362598058408.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-26-tt-a1i-archify-agent-skill-for-beautiful-verifiable-architecture-workflow-sequence-data-flow-and-lifecycle-diagrams-self-contained-html-with-motion-and-crisp-export-362598058408.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mtyjbsuqo325",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mtyjbsuqo325",
+    "format_variant": "question",
+    "hashtags_used": [
+      "#AI",
+      "#AIAgents",
+      "#DevTools"
+    ],
+    "published_hour_utc": 14,
+    "published_weekday": "Wednesday",
+    "composer_version": "2",
+    "card_variant": "editorial_repo"
   }
 ]
