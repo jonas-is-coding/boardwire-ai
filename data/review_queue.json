@@ -10422,5 +10422,48 @@
     "card_variant": "editorial_stat",
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-25-apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute-ec895f1eceb9.md",
     "published_at": "2026-08-25T17:59:29.258860Z"
+  },
+  {
+    "id": "362598058408",
+    "status": "approved",
+    "created_at": "2026-08-26T12:48:00.045630Z",
+    "score": 90,
+    "reason": "Open-source tool for AI-assisted, verifiable diagram generation ships today. High community signal.",
+    "proposed_post": "tt-a1i/archify is a new open-source agent skill for verifiable architecture, workflow, and data-flow diagrams. Builders can use it today to automate diagram generation, ensuring accuracy and exporting self-contained HTML.",
+    "source_angle": "Open-source AI agent skill for verifiable diagrams",
+    "source_item": {
+      "title": "tt-a1i/archify — Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.",
+      "source": "GitHub Trending",
+      "link": "https://github.com/tt-a1i/archify",
+      "source_tier": 2,
+      "engagement_score": 1002.0,
+      "local_newsworthiness_score": 0,
+      "summary": "Trending on GitHub today: +1002 stars. Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.\n[Cluster context: 1 sources, engagement 1002, common terms: crisp, verifiable, lifecycle, github, export..]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 1002,
+        "common_terms": [
+          "crisp",
+          "verifiable",
+          "lifecycle",
+          "github",
+          "export.",
+          "sequence",
+          "beautiful",
+          "html"
+        ],
+        "cluster_summary": "1 sources, engagement 1002. Common terms: crisp, verifiable, lifecycle, github. Lead: tt-a1i/archify — Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagra",
+        "alternative_titles": [],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, dieser 'tt-a1i/archify' Trend ist interessant. Entwickler können damit schnell saubere, interaktive Diagramme direkt aus Code oder Beschreibungen generieren. Das ist ein Game-Changer für Doku und Kommunikation, weil es die Verifizierung von Architekturen vereinfacht und man nicht mehr manuell nachziehen muss.",
+    "chloe_note": "*tt-a1i/archify — Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Open-source tool for AI-assisted, verifiable diagram generation ships today. High community signal.Cluster context: 1 sources, engagement 1002. Common terms: crisp, verifiable, lifecycle, github. Bewertung: 90. Quelle: https://github.com/tt-a1i/archify"
   }
 ]
