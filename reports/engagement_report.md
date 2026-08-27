@@ -1,18 +1,18 @@
 # Boardwire Engagement Report
 
-Generated: `2026-08-26T04:30:07.409527Z`
+Generated: `2026-08-27T14:52:06.938729Z`
 
 ## Summary
 
-- Measured posts: **180** of 184 published
+- Measured posts: **181** of 185 published
 - Median peak engagement: **0.0**
 - Average peak engagement: **0.6**
 - Top: **5** — Graphify-Labs/graphify — AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, o
 
 ## Patterns
 
-- Release-keyword posts: avg **0.6** (n=110) vs others avg **0.7** (n=70)
-- GitHub sources: avg **0.7** (n=136) vs other sources avg **0.4** (n=44)
+- Release-keyword posts: avg **0.6** (n=111) vs others avg **0.7** (n=70)
+- GitHub sources: avg **0.7** (n=137) vs other sources avg **0.4** (n=44)
 
 ## Engagement by published hour (UTC)
 
@@ -27,7 +27,7 @@ Generated: `2026-08-26T04:30:07.409527Z`
 - 11:00 UTC: avg **0.2** (n=8)
 - 12:00 UTC: avg **0.9** (n=7)
 - 13:00 UTC: avg **1.3** (n=6)
-- 14:00 UTC: avg **0.5** (n=17)
+- 14:00 UTC: avg **0.5** (n=18)
 - 15:00 UTC: avg **0.7** (n=18)
 - 16:00 UTC: avg **0.5** (n=14)
 - 17:00 UTC: avg **0.1** (n=10)
@@ -42,7 +42,7 @@ Generated: `2026-08-26T04:30:07.409527Z`
 
 - Monday: avg **0.8** (n=29)
 - Tuesday: avg **0.6** (n=27)
-- Wednesday: avg **0.4** (n=25)
+- Wednesday: avg **0.4** (n=26)
 - Thursday: avg **0.3** (n=23)
 - Friday: avg **0.6** (n=32)
 - Saturday: avg **1.0** (n=22)
@@ -51,20 +51,20 @@ Generated: `2026-08-26T04:30:07.409527Z`
 ## Engagement by format variant
 
 - plain: avg **0.6** (n=163)
-- question: avg **0.7** (n=12)
+- question: avg **0.6** (n=13)
 - thread: avg **1.6** (n=5)
 
 ## Engagement by card variant
 
 - editorial_release: avg **0.7** (n=19)
-- editorial_repo: avg **1.1** (n=9)
+- editorial_repo: avg **1.0** (n=10)
 - editorial_security: insufficient data (n<5, have 2)
 - editorial_stat: avg **0.6** (n=9)
 
 ## Engagement by hashtag combination
 
 - #AI #AIAgents: insufficient data (n<5, have 2)
-- #AI #AIAgents #DevTools: insufficient data (n<5, have 2)
+- #AI #AIAgents #DevTools: insufficient data (n<5, have 3)
 - #AI #HuggingFace #OpenWeights: insufficient data (n<5, have 2)
 - #AI #LLM: insufficient data (n<5, have 3)
 - #AI #LocalLLM: insufficient data (n<5, have 1)
@@ -84,7 +84,7 @@ Generated: `2026-08-26T04:30:07.409527Z`
 ## Version-release posts vs others
 
 - Version releases: avg **0.4** (n=84)
-- Others: avg **0.8** (n=96)
+- Others: avg **0.8** (n=97)
   (Version-only releases are now blocked by the quality gate; this group should trend to n=0.)
 
 ## Ranked posts
@@ -120,7 +120,7 @@ Generated: `2026-08-26T04:30:07.409527Z`
    > Ollama enables local agent workflows. Adds NVIDIA Nemotron 3.5 Lightning, a 30B MoE model with 3B active params. #OpenSource #Ollama #LocalL…
 
 7. **4 pts** — Claude Code v2.1.232
-   likes 1 · reposts 1 · replies 1 · quotes 0 · age 206h · score 95
+   likes 1 · reposts 1 · replies 1 · quotes 0 · age 241h · score 95
    https://github.com/anthropics/claude-code/releases/tag/v2.1.232
    > Claude Code turns subagents into core primitives. v2.1.232 enables forked subagents with full prompt cache and background execution by defau…
 
@@ -225,7 +225,7 @@ Generated: `2026-08-26T04:30:07.409527Z`
    > OpenAI releases Codex Security repo. GitHub repo provides LLM code security guidelines, +197 comments on HN. #OpenSource #InfoSec
 
 28. **2 pts** — openai/codex — Lightweight coding agent that runs in your terminal
-   likes 2 · reposts 0 · replies 0 · quotes 0 · age 54h · score 90
+   likes 2 · reposts 0 · replies 0 · quotes 0 · age 88h · score 90
    https://github.com/openai/codex
    > Terminal coding agents are moving from plugins to core primitives. Codex CLI ships a lightweight coding agent that runs natively in terminal…
 
@@ -400,12 +400,12 @@ Generated: `2026-08-26T04:30:07.409527Z`
    > Ollama integrates 30B Muse Glimmer model. 30B multimodal model for agent workloads, Apple Silicon support. Anyone running Muse Glimmer on Ap…
 
 63. **1 pts** — Daybreak models are now available on AWS
-   likes 1 · reposts 0 · replies 0 · quotes 0 · age 322h · score 90
+   likes 1 · reposts 0 · replies 0 · quotes 0 · age 356h · score 90
    https://openai.com/index/daybreak-models-are-now-available-on-aws
    > Daybreak models hit AWS Bedrock. Direct API access for AI cybersecurity integration. #LLM #InfoSec #AIAgents
 
 64. **1 pts** — Apple introduces M6 and M5 Ultra for a big leap in performance and AI compute
-   likes 1 · reposts 0 · replies 0 · quotes 0 · age 10h · score 85
+   likes 1 · reposts 0 · replies 0 · quotes 0 · age 45h · score 85
    https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/
    > Apple’s M6 Ultra delivers 2x faster on-device AI inference. Apple released M6 and M5 Ultra chips with up to 2x faster local inference on App…
 
@@ -950,42 +950,47 @@ Generated: `2026-08-26T04:30:07.409527Z`
    > OpenAI releases GPT-5.6-Cyber for security testing. Available via Daybreak Red for authorized vulnerability research and exploit validation.…
 
 173. **0 pts** — unslothai/unsloth — Local UI to run and train LLMs and diffusion models, including Qwen3.8, Kimi K3, MiniMax-H3, Gemma 4, DeepSeek-V4, FLUX and more.
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 302h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 336h · score 90
    https://github.com/unslothai/unsloth
    > Local UI simplifies LLM training. Unsloth indexes Qwen3.8, Gemma 4, DeepSeek-V4, +592 stars. #LLM #AI
 
 174. **0 pts** — Ollama v0.32.10-rc0
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 298h · score 60
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 332h · score 60
    https://github.com/ollama/ollama/releases/tag/v0.32.10-rc0
    > Ollama optimizes kernel launches. Compiles multiply and cast into one kernel, reducing intermediates on M5 Max. Anyone running Ollama v0.32.…
 
 175. **0 pts** — Ollama v0.32.8
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 278h · score 65
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 312h · score 65
    https://github.com/ollama/ollama/releases/tag/v0.32.8
    > Ollama releases v0.32.8. Runs on Apple Silicon with DFlash and image input support. #OpenSource #ClaudeCode #Anthropic
 
 176. **0 pts** — Ollama v0.32.11
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 179h · score 60
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 213h · score 60
    https://github.com/ollama/ollama/releases/tag/v0.32.11
    > Ollama embeds agent harnesses and coding CLI. Muse Code and DeepSeek Harness land in ollama v0.32.11, +3 new integrations today. #OpenSource…
 
 177. **0 pts** — Anthropic Python SDK v0.125.0
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 134h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 169h · score 90
    https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.125.0
    > Anthropic Python SDK makes memory a managed primitive for agents. v0.125.0 adds self-hosted sandbox memory, +607 stars today, Apache 2.0. #O…
 
 178. **0 pts** — Claude Code v2.1.238
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 107h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 141h · score 90
    https://github.com/anthropics/claude-code/releases/tag/v2.1.238
    > Claude Code ships readline-style keybindings in v2.1.238. v2.1.238 adds Ctrl+W in prompt and plugin marketplace HTTP headers. Anyone using r…
 
 179. **0 pts** — tinyhumansai/openhuman — Your Personal AI super intelligence. A brain that builds a local-first memory of your life, a fantastic orchestrator of agent fleets and workflows, and a deep researcher.
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 38h · score 70
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 73h · score 70
    https://github.com/tinyhumansai/openhuman
    > OpenHuman turns personal AI into a local-first life memory engine. OpenHuman integrates recall, agent orchestration and deep research in one…
 
 180. **0 pts** — Advancing price-performance for developers with GPT‑5.6 in Kiro
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 14h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 48h · score 90
    https://openai.com/index/gpt-5-6-in-kiro
    > GPT‑5.6 lowers dev costs in Kiro. OpenAI releases GPT‑5.6 in Kiro with 48% cheaper prompts for code workflows, Apache 2.0 MCP server. #LLM #…
+
+181. **0 pts** — tt-a1i/archify — Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 25h · score 90
+   https://github.com/tt-a1i/archify
+   > Archify turns code into verifiable diagrams automatically. tt-a1i/archify ships an agent skill for architecture, workflow, sequence and life…
 
