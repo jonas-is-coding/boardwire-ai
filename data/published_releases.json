@@ -94,5 +94,11 @@
     "version": "v2.1.238",
     "published_at": "2026-08-21T17:58:34.974916Z",
     "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.238"
+  },
+  {
+    "project": "Anthropic Python SDK",
+    "version": "v1.2.0",
+    "published_at": "2026-08-27T23:02:07.720743Z",
+    "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.2.0"
   }
 ]

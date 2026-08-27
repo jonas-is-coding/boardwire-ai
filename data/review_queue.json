@@ -10487,11 +10487,11 @@
   },
   {
     "id": "387312e2e75d",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-08-27T21:46:40.442680Z",
     "score": 90,
     "reason": "Direct SDK release from Anthropic (Tier 1) with concrete API consistency improvements and a critical fix for AWS Bedrock file uploads.",
-    "proposed_post": "Anthropic Python SDK v1.2.0 released. Beta files/skills namespaces now use GA shapes; binary file uploads on AWS Bedrock are fixed. This improves API consistency and enables reliable Bedrock integrations for file-based operations.",
+    "proposed_post": "Anthropic Python SDK hardens file uploads for AWS Bedrock.\n\nAnthropic SDK v1.2.0 fixes binary uploads on AWS Bedrock and stabilizes beta namespaces.\n\n#OpenSource #ClaudeCode #Anthropic",
     "source_angle": "Anthropic Python SDK v1.2.0: GA shapes for beta files/skills, Bedrock file fix.",
     "source_item": {
       "title": "Anthropic Python SDK v1.2.0",
@@ -10524,10 +10524,29 @@
         "cluster_score": 45
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/387312e2e75d.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das Anthropic Python SDK v1.2.0 ist ein Blick wert. Die neuen Files/Skills Namespaces in GA-Form sind super für Entwickler, die jetzt stabiler mit den Anthropic APIs arbeiten können. Das bedeutet weniger Breaking Changes und mehr Fokus auf tatsächliche Implementierung, was für jeden Builder, der mit Claude arbeitet, ein echter Gewinn ist.",
-    "chloe_note": "Kurzes Update: *Anthropic Python SDK v1.2.0* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Direct SDK release from Anthropic (Tier 1) with concrete API consistency improvements and a critical fix for AWS Bedrock file uploads.Cluster context: 1 sources, engagement 0. Common terms: tools, tool, fixes, full. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.2.0"
+    "chloe_note": "Kurzes Update: *Anthropic Python SDK v1.2.0* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Direct SDK release from Anthropic (Tier 1) with concrete API consistency improvements and a critical fix for AWS Bedrock file uploads.Cluster context: 1 sources, engagement 0. Common terms: tools, tool, fixes, full. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.2.0",
+    "sarah_package": {
+      "title": "Anthropic Python SDK hardens file uploads for AWS Bedrock.",
+      "subtitle": "Anthropic SDK v1.2.0 fixes binary uploads on AWS Bedrock and stabilizes beta namespaces.",
+      "description": "GA-shaped files/skills namespaces in v1.2.0 cut breaking changes. AWS Bedrock binary uploads now work reliably.",
+      "hashtags": [
+        "#OpenSource",
+        "#ClaudeCode",
+        "#Anthropic"
+      ],
+      "question": "Anyone running file-based operations through Bedrock yet?",
+      "card_stat": "v1.2.0",
+      "card_claim": "Stable file uploads for AWS Bedrock",
+      "card_context": "GA-shaped namespaces · fixes AWS Bedrock binary uploads · reduces breaking changes"
+    },
+    "composer_version": "2",
+    "card_layout": "release",
+    "card_variant": "editorial_release",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-27-anthropic-python-sdk-v1-2-0-387312e2e75d.md",
+    "published_at": "2026-08-27T23:02:07.720743Z"
   }
 ]
