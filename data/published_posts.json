@@ -3338,5 +3338,29 @@
     "published_weekday": "Thursday",
     "composer_version": "2",
     "card_variant": "editorial_release"
+  },
+  {
+    "id": "2a47a9ff2d12",
+    "published_at": "2026-08-28T01:37:33.900974Z",
+    "platform": "bluesky",
+    "post": "Claude Code adds --restricted mode for sandboxed agents.\n\nAnthropic/claude-code v2.1.248 ships --restricted and cacheTtl for secure agent execution.\n\n#LLM #ClaudeCode #Anthropic",
+    "source_link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.248",
+    "source_title": "Claude Code v2.1.248",
+    "score": 60,
+    "reason": "local newsworthiness fallback",
+    "card_path": "generated/cards/2a47a9ff2d12.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-28-claude-code-v2-1-248-2a47a9ff2d12.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mu47zq7lwu2e",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mu47zq7lwu2e",
+    "format_variant": "plain",
+    "hashtags_used": [
+      "#LLM",
+      "#ClaudeCode",
+      "#Anthropic"
+    ],
+    "published_hour_utc": 1,
+    "published_weekday": "Friday",
+    "composer_version": "2",
+    "card_variant": "editorial_release"
   }
 ]
