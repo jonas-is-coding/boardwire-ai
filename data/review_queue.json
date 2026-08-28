@@ -10656,11 +10656,11 @@
   },
   {
     "id": "8c33623d7109",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-08-28T21:43:58.986178Z",
     "score": 95,
     "reason": "GLM-5.3 model weights are open-weight on HuggingFace, passing the Ships Test. High community signal.",
-    "proposed_post": "GLM-5.3 model weights are now open-weight on HuggingFace. Builders can download, fine-tune, and deploy this model for local or custom applications today.",
+    "proposed_post": "Z-AI ships GLM-5.3 as open-weight model.\n\nOpen weights on HuggingFace with dual context windows: 128K default, 1M optional. +574 HN engagement\n\n#OpenSource #OpenWeights #HuggingFace",
     "source_angle": "New open-weight model for local deployment and fine-tuning",
     "source_item": {
       "title": "GLM-5.3 is now open-weight",
@@ -10691,10 +10691,29 @@
         "cluster_score": 20
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/8c33623d7109.png",
     "is_llm_mode": true,
     "breaking": true,
     "claire_note": "Chloe, schau dir das mal an: GLM-5.3 ist jetzt open-weight.\n\nDas ist relevant, weil ein weiteres starkes Modell für Experimente und Integrationen verfügbar wird. Entwickler können jetzt direkt mit einer neuen Architektur arbeiten, die womöglich spezifische Anwendungsfälle besser abdeckt als bisherige Open-Source-Modelle. Könnte für Teams interessant sein, die nach Alternativen zu Llama & Co. suchen oder spezielle Performance-Anforderungen haben.",
-    "chloe_note": "Kurzes Update: *GLM-5.3 is now open-weight* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um GLM-5.3 model weights are open-weight on HuggingFace, passing the Ships Test. High community signal.Cluster context: 1 sources, engagement 574. Common terms: glm-5.3, 177, hacker, original. Ich habe es mit 95 Punkten bewertet. Hier der Link: https://huggingface.co/zai-org/GLM-5.3"
+    "chloe_note": "Kurzes Update: *GLM-5.3 is now open-weight* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um GLM-5.3 model weights are open-weight on HuggingFace, passing the Ships Test. High community signal.Cluster context: 1 sources, engagement 574. Common terms: glm-5.3, 177, hacker, original. Ich habe es mit 95 Punkten bewertet. Hier der Link: https://huggingface.co/zai-org/GLM-5.3",
+    "sarah_package": {
+      "title": "Z-AI ships GLM-5.3 as open-weight model.",
+      "subtitle": "Open weights on HuggingFace with dual context windows: 128K default, 1M optional. +574 HN engagement",
+      "description": "First open-weight GLM model with 128K default context and optional 1M token window. Apache 2.0 license. Available on HuggingFace.",
+      "hashtags": [
+        "#OpenSource",
+        "#OpenWeights",
+        "#HuggingFace"
+      ],
+      "question": "Anyone evaluating long-context alternatives?",
+      "card_stat": "128K",
+      "card_claim": "First open-weight GLM model ships.",
+      "card_context": "Apache 2.0 · HuggingFace · dual context windows · 128K default, 1M optional"
+    },
+    "composer_version": "2",
+    "card_layout": "stat",
+    "card_variant": "editorial_stat",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-28-glm-5-3-is-now-open-weight-8c33623d7109.md",
+    "published_at": "2026-08-28T23:10:13.128860Z"
   }
 ]

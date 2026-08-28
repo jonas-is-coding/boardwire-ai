@@ -3362,5 +3362,35 @@
     "published_weekday": "Friday",
     "composer_version": "2",
     "card_variant": "editorial_release"
+  },
+  {
+    "id": "8c33623d7109",
+    "published_at": "2026-08-28T23:10:13.128860Z",
+    "platform": "bluesky",
+    "post": "Z-AI ships GLM-5.3 as open-weight model.\n\nOpen weights on HuggingFace with dual context windows: 128K default, 1M optional. +574 HN engagement\n\n#OpenSource #OpenWeights #HuggingFace",
+    "source_link": "https://huggingface.co/zai-org/GLM-5.3",
+    "source_title": "GLM-5.3 is now open-weight",
+    "score": 95,
+    "reason": "GLM-5.3 model weights are open-weight on HuggingFace, passing the Ships Test. High community signal.",
+    "card_path": "generated/cards/8c33623d7109.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-28-glm-5-3-is-now-open-weight-8c33623d7109.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mu6ib6uhkl2v",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mu6ib6uhkl2v",
+    "format_variant": "thread",
+    "hashtags_used": [
+      "#OpenSource",
+      "#OpenWeights",
+      "#HuggingFace"
+    ],
+    "published_hour_utc": 23,
+    "published_weekday": "Friday",
+    "composer_version": "2",
+    "card_variant": "editorial_stat",
+    "thread_uris": [
+      "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mu6ib6uhkl2v",
+      "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mu6ib7ozvi2c",
+      "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mu6ib7yi7c26"
+    ],
+    "thread_partial": false
   }
 ]
