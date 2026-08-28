@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "trained_at": "2026-08-27T14:52:05.507399Z",
+  "trained_at": "2026-08-28T15:47:03.474659Z",
   "n_samples": 175,
   "feature_dim": 389,
   "embed_model": "BAAI/bge-small-en-v1.5",
