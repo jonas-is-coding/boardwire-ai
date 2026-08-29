@@ -10715,5 +10715,48 @@
     "card_variant": "editorial_stat",
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-28-glm-5-3-is-now-open-weight-8c33623d7109.md",
     "published_at": "2026-08-28T23:10:13.128860Z"
+  },
+  {
+    "id": "180f447e3246",
+    "status": "approved",
+    "created_at": "2026-08-29T00:15:42.135884Z",
+    "score": 90,
+    "reason": "GitHub repo with runnable Colab notebooks for RAG/agents/evals. Direct utility for builders, passes Ships Test.",
+    "proposed_post": "AI Engineer Notebooks offers framework-free Colab examples for RAG, agents, and evals. Builders can use these to quickly prototype or understand core AI patterns without framework lock-in, leveraging free compute.",
+    "source_angle": "GitHub release of framework-free RAG/agents/evals Colab notebooks.",
+    "source_item": {
+      "title": "AI Engineer Notebooks – free, framework-free RAG/agents/evals on Colab",
+      "source": "HackerNews",
+      "link": "https://github.com/calmrocks/ai-engineer-notebooks",
+      "source_tier": 3,
+      "engagement_score": 118.0,
+      "local_newsworthiness_score": 40,
+      "summary": "111 points, 14 comments on Hacker News — submitted by calmrocks — original: https://github.com/calmrocks/ai-engineer-notebooks\n[Cluster context: 1 sources, engagement 118, common terms: submitted, points, calmrocks, free, original.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 118,
+        "common_terms": [
+          "submitted",
+          "points",
+          "calmrocks",
+          "free",
+          "original",
+          "engineer",
+          "hacker",
+          "framework-free"
+        ],
+        "cluster_summary": "1 sources, engagement 118. Common terms: submitted, points, calmrocks, free. Lead: AI Engineer Notebooks – free, framework-free RAG/agents/evals on Colab",
+        "alternative_titles": [],
+        "cluster_score": 10
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, das hier ist ein Treffer. \"AI Engineer Notebooks\" auf Colab, komplett framework-frei für RAG, Agents und Evals.\n\nDas ist genau das, wonach unsere Leute suchen: Rohcode, keine Abstraktionen, direkt zum Experimentieren. Ein Entwickler kann damit sofort eigene RAG-Setups bauen, ohne sich durch Framework-Specs zu wühlen, und die Evals sind ein Bonus für die Qualitätssicherung. Direkt umsetzbar.",
+    "chloe_note": "*AI Engineer Notebooks – free, framework-free RAG/agents/evals on Colab* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch GitHub repo with runnable Colab notebooks for RAG/agents/evals. Direct utility for builders, passes Ships Test.Cluster context: 1 sources, engagement 118. Common terms: submitted, points, calmrocks, free. Bewertung: 90. Quelle: https://github.com/calmrocks/ai-engineer-notebooks"
   }
 ]
