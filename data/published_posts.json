@@ -3392,5 +3392,29 @@
       "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mu6ib7yi7c26"
     ],
     "thread_partial": false
+  },
+  {
+    "id": "180f447e3246",
+    "published_at": "2026-08-29T01:07:32.845913Z",
+    "platform": "bluesky",
+    "post": "AI Engineer Notebooks ship framework-free RAG on Colab.\n\ncalmrocks/ai-engineer-notebooks delivers 12 runnable Colabs for RAG, agents, and evals, +118 points\n\n#OpenSource #AIAgents #DevTools",
+    "source_link": "https://github.com/calmrocks/ai-engineer-notebooks",
+    "source_title": "AI Engineer Notebooks – free, framework-free RAG/agents/evals on Colab",
+    "score": 90,
+    "reason": "GitHub repo with runnable Colab notebooks for RAG/agents/evals. Direct utility for builders, passes Ships Test.",
+    "card_path": "generated/cards/180f447e3246.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-29-ai-engineer-notebooks-free-framework-free-rag-agents-evals-on-colab-180f447e3246.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mu6ot27nq222",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mu6ot27nq222",
+    "format_variant": "plain",
+    "hashtags_used": [
+      "#OpenSource",
+      "#AIAgents",
+      "#DevTools"
+    ],
+    "published_hour_utc": 1,
+    "published_weekday": "Saturday",
+    "composer_version": "2",
+    "card_variant": "editorial_repo"
   }
 ]
