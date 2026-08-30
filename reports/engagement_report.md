@@ -1,6 +1,6 @@
 # Boardwire Engagement Report
 
-Generated: `2026-08-29T10:34:45.154845Z`
+Generated: `2026-08-30T09:34:23.881061Z`
 
 ## Summary
 
@@ -122,7 +122,7 @@ Generated: `2026-08-29T10:34:45.154845Z`
    > Ollama enables local agent workflows. Adds NVIDIA Nemotron 3.5 Lightning, a 30B MoE model with 3B active params. #OpenSource #Ollama #LocalL…
 
 7. **4 pts** — Claude Code v2.1.232
-   likes 1 · reposts 1 · replies 1 · quotes 0 · age 285h · score 95
+   likes 1 · reposts 1 · replies 1 · quotes 0 · age 308h · score 95
    https://github.com/anthropics/claude-code/releases/tag/v2.1.232
    > Claude Code turns subagents into core primitives. v2.1.232 enables forked subagents with full prompt cache and background execution by defau…
 
@@ -227,12 +227,12 @@ Generated: `2026-08-29T10:34:45.154845Z`
    > OpenAI releases Codex Security repo. GitHub repo provides LLM code security guidelines, +197 comments on HN. #OpenSource #InfoSec
 
 28. **2 pts** — openai/codex — Lightweight coding agent that runs in your terminal
-   likes 2 · reposts 0 · replies 0 · quotes 0 · age 132h · score 90
+   likes 2 · reposts 0 · replies 0 · quotes 0 · age 155h · score 90
    https://github.com/openai/codex
    > Terminal coding agents are moving from plugins to core primitives. Codex CLI ships a lightweight coding agent that runs natively in terminal…
 
 29. **2 pts** — GLM-5.3 is now open-weight
-   likes 1 · reposts 0 · replies 1 · quotes 0 · age 11h · score 95
+   likes 1 · reposts 0 · replies 1 · quotes 0 · age 34h · score 95
    https://huggingface.co/zai-org/GLM-5.3
    > Z-AI ships GLM-5.3 as open-weight model. Open weights on HuggingFace with dual context windows: 128K default, 1M optional. +574 HN engagemen…
 
@@ -412,7 +412,7 @@ Generated: `2026-08-29T10:34:45.154845Z`
    > Daybreak models hit AWS Bedrock. Direct API access for AI cybersecurity integration. #LLM #InfoSec #AIAgents
 
 65. **1 pts** — Apple introduces M6 and M5 Ultra for a big leap in performance and AI compute
-   likes 1 · reposts 0 · replies 0 · quotes 0 · age 89h · score 85
+   likes 1 · reposts 0 · replies 0 · quotes 0 · age 112h · score 85
    https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/
    > Apple’s M6 Ultra delivers 2x faster on-device AI inference. Apple released M6 and M5 Ultra chips with up to 2x faster local inference on App…
 
@@ -972,47 +972,47 @@ Generated: `2026-08-29T10:34:45.154845Z`
    > Ollama releases v0.32.8. Runs on Apple Silicon with DFlash and image input support. #OpenSource #ClaudeCode #Anthropic
 
 177. **0 pts** — Ollama v0.32.11
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 257h · score 60
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 280h · score 60
    https://github.com/ollama/ollama/releases/tag/v0.32.11
    > Ollama embeds agent harnesses and coding CLI. Muse Code and DeepSeek Harness land in ollama v0.32.11, +3 new integrations today. #OpenSource…
 
 178. **0 pts** — Anthropic Python SDK v0.125.0
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 212h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 235h · score 90
    https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.125.0
    > Anthropic Python SDK makes memory a managed primitive for agents. v0.125.0 adds self-hosted sandbox memory, +607 stars today, Apache 2.0. #O…
 
 179. **0 pts** — Claude Code v2.1.238
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 185h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 208h · score 90
    https://github.com/anthropics/claude-code/releases/tag/v2.1.238
    > Claude Code ships readline-style keybindings in v2.1.238. v2.1.238 adds Ctrl+W in prompt and plugin marketplace HTTP headers. Anyone using r…
 
 180. **0 pts** — tinyhumansai/openhuman — Your Personal AI super intelligence. A brain that builds a local-first memory of your life, a fantastic orchestrator of agent fleets and workflows, and a deep researcher.
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 116h · score 70
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 139h · score 70
    https://github.com/tinyhumansai/openhuman
    > OpenHuman turns personal AI into a local-first life memory engine. OpenHuman integrates recall, agent orchestration and deep research in one…
 
 181. **0 pts** — Advancing price-performance for developers with GPT‑5.6 in Kiro
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 92h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 115h · score 90
    https://openai.com/index/gpt-5-6-in-kiro
    > GPT‑5.6 lowers dev costs in Kiro. OpenAI releases GPT‑5.6 in Kiro with 48% cheaper prompts for code workflows, Apache 2.0 MCP server. #LLM #…
 
 182. **0 pts** — tt-a1i/archify — Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 68h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 91h · score 90
    https://github.com/tt-a1i/archify
    > Archify turns code into verifiable diagrams automatically. tt-a1i/archify ships an agent skill for architecture, workflow, sequence and life…
 
 183. **0 pts** — Anthropic Python SDK v1.2.0
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 36h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 59h · score 90
    https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.2.0
    > Anthropic Python SDK hardens file uploads for AWS Bedrock. Anthropic SDK v1.2.0 fixes binary uploads on AWS Bedrock and stabilizes beta name…
 
 184. **0 pts** — Claude Code v2.1.248
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 33h · score 60
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 56h · score 60
    https://github.com/anthropics/claude-code/releases/tag/v2.1.248
    > Claude Code adds --restricted mode for sandboxed agents. Anthropic/claude-code v2.1.248 ships --restricted and cacheTtl for secure agent exe…
 
 185. **0 pts** — AI Engineer Notebooks – free, framework-free RAG/agents/evals on Colab
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 9h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 32h · score 90
    https://github.com/calmrocks/ai-engineer-notebooks
    > AI Engineer Notebooks ship framework-free RAG on Colab. calmrocks/ai-engineer-notebooks delivers 12 runnable Colabs for RAG, agents, and eva…
 
