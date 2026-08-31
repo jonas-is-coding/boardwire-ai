@@ -10997,5 +10997,52 @@
     "card_variant": "editorial_security",
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-31-langchain-1-4-0a1-e0f7b5604fc9.md",
     "published_at": "2026-08-31T19:34:51.966265Z"
+  },
+  {
+    "id": "76864bbf56b7",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-08-31T21:13:47.315220Z",
+    "score": 90,
+    "reason": "Direct release of Claude Code with critical bug fixes for developer workflow, passing the Ships Test.",
+    "proposed_post": "Claude Code v2.1.252 fixes Bash command failures on Mac, Remote Control stalling, and large error output issues. Update to improve stability and prevent workflow interruptions in your Claude-powered dev environment.",
+    "source_angle": "Claude Code bug fixes improve dev workflow",
+    "source_item": {
+      "title": "Claude Code v2.1.252",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.252",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 35,
+      "summary": "<h2>What's changed</h2>\n<ul>\n<li>Fixed Bash commands failing with \"task output swap refused (tasks dir moved or linked)\" on some Macs</li>\n<li>Fixed \"always allow\" not saving in a project that has no .claude/settings.local.json yet</li>\n<li>Fixed Remote Control sessions hosted by Claude Desktop or VS Code stalling for minutes after a tool finished when the connection to claude.ai was degraded</li>\n<li>Fixed background task notifications with very large failure output (for example git errors on a full disk) making the conversation exceed the API request size limit</li>\n</ul>\n[Cluster context: 2 sources, engagement 321, common terms: claude, failure, full, stalling, /li.]",
+      "cluster_context": {
+        "source_count": 2,
+        "sources": [
+          "Claude Code Releases",
+          "HackerNews"
+        ],
+        "total_engagement_score": 321,
+        "common_terms": [
+          "claude",
+          "failure",
+          "full",
+          "stalling",
+          "/li",
+          "size",
+          ".claude/settings.local.json",
+          "minutes"
+        ],
+        "cluster_summary": "2 sources, engagement 321. Common terms: claude, failure, full, stalling. Lead: Claude Code v2.1.252",
+        "alternative_titles": [
+          "Claude Session URL appended to commit messages and PR descriptions by default"
+        ],
+        "cluster_score": 75
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-08-31T21:13:48.524180Z",
+    "defer_count": 1,
+    "original_score": 90,
+    "original_reason": "Direct release of Claude Code with critical bug fixes for developer workflow, passing the Ships Test."
   }
 ]
