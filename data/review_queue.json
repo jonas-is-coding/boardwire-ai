@@ -10551,7 +10551,7 @@
   },
   {
     "id": "69d7b8d2daef",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-08-28T00:41:21.013315Z",
     "score": 90,
     "reason": "Anthropic SDK v1.1.0 ships with new API features: beta 'updates' thinking display mode and Organization API endpoints. Directly usable.",
@@ -10590,7 +10590,8 @@
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das ist ein wichtiger Release. Die neue 'updates' thinking display mode in der Anthropic Python SDK v1.1.0 ist ein Game Changer für alle, die an Echtzeit-Interaktionen mit Claude bauen. Entwickler können damit die Denkprozesse des Modells live visualisieren und so ihre Prompts deutlich schneller debuggen und optimieren. Das beschleunigt die Entwicklung von komplexen Agenten massiv.",
-    "chloe_note": "Hey, *Anthropic Python SDK v1.1.0* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Anthropic SDK v1.1.0 ships with new API features: beta 'updates' thinking display mode and Organization API endpoints. Directly usable.Cluster context: 1 sources, engagement 0. Common terms: chores, pause, updates, closes. Score aktuell: 90. Link: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.1.0"
+    "chloe_note": "Hey, *Anthropic Python SDK v1.1.0* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Anthropic SDK v1.1.0 ships with new API features: beta 'updates' thinking display mode and Organization API endpoints. Directly usable.Cluster context: 1 sources, engagement 0. Common terms: chores, pause, updates, closes. Score aktuell: 90. Link: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.1.0",
+    "expired_at": "2026-08-31T00:17:39.850752Z"
   },
   {
     "id": "2a47a9ff2d12",
@@ -10823,11 +10824,11 @@
   },
   {
     "id": "da7602bfe272",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-08-30T22:51:51.877260Z",
     "score": 85,
     "reason": "local newsworthiness fallback",
-    "proposed_post": "LangChain ships MCP adapter.\n\nlangchain.mcp turns any MCP server into LangChain tools with FastMCP client features.\n\n#LLM #ClaudeCode #Anthropic",
+    "proposed_post": "LangChain ships MCP adapter for coding agents.\n\nlangchain.mcp turns MCP servers into LangChain tools with FastMCP client features, +607 stars.\n\n#LLM #ClaudeCode #Anthropic",
     "source_angle": "Local high-score + Sarah/OpenRouter fallback",
     "source_item": {
       "title": "langchain==1.4.0a2",
@@ -10863,10 +10864,29 @@
         "cluster_score": 5
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/da7602bfe272.png",
     "is_llm_mode": false,
     "breaking": false,
     "claire_note": "Aus *LangChain Releases* ist ein starker Kandidat reingekommen: *langchain==1.4.0a2*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 85_",
-    "chloe_note": "Kurzes Update: *langchain==1.4.0a2* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: class, href, langchain, since. Ich habe es mit 85 Punkten bewertet. Hier der Link: https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.4.0a2"
+    "chloe_note": "Kurzes Update: *langchain==1.4.0a2* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: class, href, langchain, since. Ich habe es mit 85 Punkten bewertet. Hier der Link: https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.4.0a2",
+    "sarah_package": {
+      "title": "LangChain ships MCP adapter for coding agents.",
+      "subtitle": "langchain.mcp turns MCP servers into LangChain tools with FastMCP client features, +607 stars.",
+      "description": "Alpha preview integrates FastMCP client for connection handling without reimplementation. Available via pip install langchain.",
+      "hashtags": [
+        "#LLM",
+        "#ClaudeCode",
+        "#Anthropic"
+      ],
+      "question": "Anyone running MCP agents with this yet?",
+      "card_stat": "+607★",
+      "card_claim": "MCP servers become LangChain tools",
+      "card_context": "FastMCP client features · alpha preview · pip install langchain"
+    },
+    "composer_version": "2",
+    "card_layout": "release",
+    "card_variant": "editorial_release",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-30-langchain-1-4-0a2-da7602bfe272.md",
+    "published_at": "2026-08-31T00:17:39.850752Z"
   }
 ]

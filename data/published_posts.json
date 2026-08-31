@@ -3416,5 +3416,29 @@
     "published_weekday": "Saturday",
     "composer_version": "2",
     "card_variant": "editorial_repo"
+  },
+  {
+    "id": "da7602bfe272",
+    "published_at": "2026-08-31T00:17:39.850752Z",
+    "platform": "bluesky",
+    "post": "LangChain ships MCP adapter for coding agents.\n\nlangchain.mcp turns MCP servers into LangChain tools with FastMCP client features, +607 stars.\n\n#LLM #ClaudeCode #Anthropic",
+    "source_link": "https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.4.0a2",
+    "source_title": "langchain==1.4.0a2",
+    "score": 85,
+    "reason": "local newsworthiness fallback",
+    "card_path": "generated/cards/da7602bfe272.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-30-langchain-1-4-0a2-da7602bfe272.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mudmxngskm2o",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mudmxngskm2o",
+    "format_variant": "plain",
+    "hashtags_used": [
+      "#LLM",
+      "#ClaudeCode",
+      "#Anthropic"
+    ],
+    "published_hour_utc": 0,
+    "published_weekday": "Monday",
+    "composer_version": "2",
+    "card_variant": "editorial_release"
   }
 ]

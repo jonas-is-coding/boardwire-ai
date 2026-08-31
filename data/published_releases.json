@@ -106,5 +106,11 @@
     "version": "v2.1.248",
     "published_at": "2026-08-28T01:37:33.900974Z",
     "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.248"
+  },
+  {
+    "project": "LangChain",
+    "version": "v1.4.0",
+    "published_at": "2026-08-31T00:17:39.850752Z",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.4.0a2"
   }
 ]
