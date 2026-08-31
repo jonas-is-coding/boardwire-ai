@@ -10891,11 +10891,11 @@
   },
   {
     "id": "24ac09f7877a",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-08-31T18:47:05.368946Z",
     "score": 90,
     "reason": "GitHub project provides code to train a 64M LLM in 2 hours. Clear, actionable tool for builders.",
-    "proposed_post": "The `minimind` project on GitHub enables training a 64M-parameter LLM from scratch in 2 hours. Use it for rapid iteration on small models or to learn LLM training pipelines.",
+    "proposed_post": "Minimind ships a 64M LLM trained in 2 hours.\n\nTrains a 64M-parameter model from scratch in 2h on a single GPU, +472 stars today.\n\n#LLM #DevTools",
     "source_angle": "Open-source tool for fast, small LLM training",
     "source_item": {
       "title": "jingyaogong/minimind — 🧠 Train a 64M-parameter LLM from scratch in just 2h!",
@@ -10926,11 +10926,29 @@
         "cluster_score": 25
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/24ac09f7877a.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das hier ist ein Hit auf GitHub. Ein 64M-Parameter LLM in zwei Stunden trainieren – das ist ein krasser Speedup für jeden, der eigene Modelle bootstrappen will. Entwickler können damit schnell Prototypen bauen oder Ideen validieren, ohne wochenlang auf Trainingsergebnisse zu warten.",
-    "chloe_note": "Hey, *jingyaogong/minimind — 🧠 Train a 64M-parameter LLM from scratch in just 2h!* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen GitHub project provides code to train a 64M LLM in 2 hours. Clear, actionable tool for builders.Cluster context: 1 sources, engagement 472. Common terms: 64m-parameter, train, stars., +472. Score aktuell: 90. Link: https://github.com/jingyaogong/minimind"
+    "chloe_note": "Hey, *jingyaogong/minimind — 🧠 Train a 64M-parameter LLM from scratch in just 2h!* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen GitHub project provides code to train a 64M LLM in 2 hours. Clear, actionable tool for builders.Cluster context: 1 sources, engagement 472. Common terms: 64m-parameter, train, stars., +472. Score aktuell: 90. Link: https://github.com/jingyaogong/minimind",
+    "sarah_package": {
+      "title": "Minimind ships a 64M LLM trained in 2 hours.",
+      "subtitle": "Trains a 64M-parameter model from scratch in 2h on a single GPU, +472 stars today.",
+      "description": "Turns hardware into a rapid prototyping rig for LLM training. Apache 2.0. CLI and Colab notebook included.",
+      "hashtags": [
+        "#LLM",
+        "#DevTools"
+      ],
+      "question": "Anyone running this for idea validation?",
+      "card_stat": "+472★",
+      "card_claim": "Train a 64M LLM in 2h on one GPU.",
+      "card_context": "Apache 2.0 · single GPU · CLI and Colab notebook included"
+    },
+    "composer_version": "2",
+    "card_layout": "repo",
+    "card_variant": "editorial_repo",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-31-jingyaogong-minimind-train-a-64m-parameter-llm-from-scratch-in-just-2h-24ac09f7877a.md",
+    "published_at": "2026-08-31T22:01:13.685451Z"
   },
   {
     "id": "e0f7b5604fc9",

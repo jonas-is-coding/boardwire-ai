@@ -3464,5 +3464,28 @@
     "published_weekday": "Monday",
     "composer_version": "2",
     "card_variant": "editorial_security"
+  },
+  {
+    "id": "24ac09f7877a",
+    "published_at": "2026-08-31T22:01:13.685451Z",
+    "platform": "bluesky",
+    "post": "Minimind ships a 64M LLM trained in 2 hours.\n\nTrains a 64M-parameter model from scratch in 2h on a single GPU, +472 stars today.\n\n#LLM #DevTools",
+    "source_link": "https://github.com/jingyaogong/minimind",
+    "source_title": "jingyaogong/minimind — 🧠 Train a 64M-parameter LLM from scratch in just 2h!",
+    "score": 90,
+    "reason": "GitHub project provides code to train a 64M LLM in 2 hours. Clear, actionable tool for builders.",
+    "card_path": "generated/cards/24ac09f7877a.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-31-jingyaogong-minimind-train-a-64m-parameter-llm-from-scratch-in-just-2h-24ac09f7877a.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mufvslfykr2a",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mufvslfykr2a",
+    "format_variant": "plain",
+    "hashtags_used": [
+      "#LLM",
+      "#DevTools"
+    ],
+    "published_hour_utc": 22,
+    "published_weekday": "Monday",
+    "composer_version": "2",
+    "card_variant": "editorial_repo"
   }
 ]
