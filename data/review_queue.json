@@ -10934,11 +10934,11 @@
   },
   {
     "id": "e0f7b5604fc9",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-08-31T18:47:08.316540Z",
     "score": 60,
     "reason": "local newsworthiness fallback",
-    "proposed_post": "LangChain integrates MCP tooling at runtime.\n\nlangchain==1.4.0a1 tests MCP tools through FastMCP utilities.\n\n#OpenSource #ClaudeCode #Anthropic",
+    "proposed_post": "LangChain adds MCP runtime testing.\n\nlangchain==1.4.0a1 integrates MCP tools via FastMCP utilities, +10k stars.\n\nRunning MCP tools in LangChain production?\n\n#OpenSource #ClaudeCode #Anthropic",
     "source_angle": "Local high-score + Sarah/OpenRouter fallback",
     "source_item": {
       "title": "langchain==1.4.0a1",
@@ -10973,10 +10973,29 @@
         "cluster_score": 5
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/e0f7b5604fc9.png",
     "is_llm_mode": false,
     "breaking": false,
     "claire_note": "Aus *LangChain Releases* ist ein starker Kandidat reingekommen: *langchain==1.4.0a1*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 60_",
-    "chloe_note": "Hey, *langchain==1.4.0a1* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: class, href, issue-link, js-issue-link. Score aktuell: 60. Link: https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.4.0a1"
+    "chloe_note": "Hey, *langchain==1.4.0a1* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: class, href, issue-link, js-issue-link. Score aktuell: 60. Link: https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.4.0a1",
+    "sarah_package": {
+      "title": "LangChain adds MCP runtime testing.",
+      "subtitle": "langchain==1.4.0a1 integrates MCP tools via FastMCP utilities, +10k stars.",
+      "description": "FastMCP-based tests validate MCP tools at runtime. Fixes content-type handling for MCP conversions in langchain/mcp.",
+      "hashtags": [
+        "#OpenSource",
+        "#ClaudeCode",
+        "#Anthropic"
+      ],
+      "question": "Running MCP tools in LangChain production?",
+      "card_stat": "+10k★",
+      "card_claim": "MCP tools validated at runtime",
+      "card_context": "FastMCP utilities · fixes MCP content-type handling · Apache 2.0"
+    },
+    "composer_version": "2",
+    "card_layout": "security",
+    "card_variant": "editorial_security",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-31-langchain-1-4-0a1-e0f7b5604fc9.md",
+    "published_at": "2026-08-31T19:34:51.966265Z"
   }
 ]
