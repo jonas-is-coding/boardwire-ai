@@ -3487,5 +3487,29 @@
     "published_weekday": "Monday",
     "composer_version": "2",
     "card_variant": "editorial_repo"
+  },
+  {
+    "id": "1d874a0b9ceb",
+    "published_at": "2026-09-01T17:23:48.302192Z",
+    "platform": "bluesky",
+    "post": "OpenMAIC turns one click into a multi-agent classroom.\n\nTHU-MAIC/OpenMAIC ships a runnable multi-agent classroom for testing workflows, with +1625 stars tod\n\nAnyone running multi-agent sims with this?\n\n#AI #AIAgents #DevTools",
+    "source_link": "https://github.com/THU-MAIC/OpenMAIC",
+    "source_title": "THU-MAIC/OpenMAIC — Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
+    "score": 90,
+    "reason": "Open-source tool launch on GitHub with high engagement. Provides a runnable environment for multi-agent system development.",
+    "card_path": "generated/cards/1d874a0b9ceb.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-08-30-thu-maic-openmaic-open-multi-agent-interactive-classroom-get-an-immersive-multi-agent-learning-experience-in-just-one-click-1d874a0b9ceb.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3muhwrglmey2t",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3muhwrglmey2t",
+    "format_variant": "question",
+    "hashtags_used": [
+      "#AI",
+      "#AIAgents",
+      "#DevTools"
+    ],
+    "published_hour_utc": 17,
+    "published_weekday": "Tuesday",
+    "composer_version": "2",
+    "card_variant": "editorial_repo"
   }
 ]
