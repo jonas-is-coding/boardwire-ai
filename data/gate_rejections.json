@@ -89,5 +89,14 @@
     "reasons": [
       "Version-only release without concrete capability: 'Claude Code v2.1.252'"
     ]
+  },
+  {
+    "rejected_at": "2026-09-01T20:07:42.705515Z",
+    "stage": "publish",
+    "title": "langchain==1.4.0a3",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.4.0a3",
+    "reasons": [
+      "Release dedupe: LangChain v1.4.0 already published at 2026-08-31T00:17:39.850752Z"
+    ]
   }
 ]

@@ -3511,5 +3511,35 @@
     "published_weekday": "Tuesday",
     "composer_version": "2",
     "card_variant": "editorial_repo"
+  },
+  {
+    "id": "eed9d6836feb",
+    "published_at": "2026-09-01T20:07:42.703927Z",
+    "platform": "bluesky",
+    "post": "Claude Fable 5.1 ships as the new default for Claude Code.\n\n$10/$50 per Mtok; 1M context; $0.25/Mtok cache reads.\n\n#LLM #ClaudeCode #Anthropic",
+    "source_link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.257",
+    "source_title": "Claude Code v2.1.257",
+    "score": 95,
+    "reason": "New Claude Fable 5.1 model with 1M context and pricing ships in Claude Code v2.1.257, plus security and control features.",
+    "card_path": "generated/cards/eed9d6836feb.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-09-01-claude-code-v2-1-257-eed9d6836feb.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mui7wkabh322",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mui7wkabh322",
+    "format_variant": "thread",
+    "hashtags_used": [
+      "#LLM",
+      "#ClaudeCode",
+      "#Anthropic"
+    ],
+    "published_hour_utc": 20,
+    "published_weekday": "Tuesday",
+    "composer_version": "2",
+    "card_variant": "editorial_release",
+    "thread_uris": [
+      "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mui7wkabh322",
+      "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mui7wl3jg627",
+      "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mui7wlfes72z"
+    ],
+    "thread_partial": false
   }
 ]

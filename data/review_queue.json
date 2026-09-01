@@ -11085,11 +11085,11 @@
   },
   {
     "id": "eed9d6836feb",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-09-01T19:00:32.671546Z",
     "score": 95,
     "reason": "New Claude Fable 5.1 model with 1M context and pricing ships in Claude Code v2.1.257, plus security and control features.",
-    "proposed_post": "Claude Code v2.1.257 ships Claude Fable 5.1, a new default 1M context model at $10/$50 per Mtok. Builders can now leverage larger context windows in Claude Code with transparent pricing.",
+    "proposed_post": "Claude Fable 5.1 ships as the new default for Claude Code.\n\n$10/$50 per Mtok; 1M context; $0.25/Mtok cache reads.\n\n#LLM #ClaudeCode #Anthropic",
     "source_angle": "Claude Code v2.1.257 release: Fable 5.1 model, 1M context, pricing.",
     "source_item": {
       "title": "Claude Code v2.1.257",
@@ -11120,15 +11120,34 @@
         "cluster_score": 15
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/eed9d6836feb.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, dieser Claude Code Release ist wichtig.\n\nDer neue Claude Fable 5.1 ist jetzt der Default – 1M Kontext, mit interessanten Preisen und Cache Reads. Für Devs, die mit großen Kontextfenstern arbeiten, ist das ein Game Changer, besonders wenn sie Kosten optimieren wollen. Und die neuen Time-Format-Einstellungen sind nützlich für Anwendungen, die präzise Zeitangaben verarbeiten müssen.",
-    "chloe_note": "Hey, *Claude Code v2.1.257* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New Claude Fable 5.1 model with 1M context and pricing ships in Claude Code v2.1.257, plus security and control features.Cluster context: 1 sources, engagement 0. Common terms: only, didn, above, auto. Score aktuell: 95. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.257"
+    "chloe_note": "Hey, *Claude Code v2.1.257* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New Claude Fable 5.1 model with 1M context and pricing ships in Claude Code v2.1.257, plus security and control features.Cluster context: 1 sources, engagement 0. Common terms: only, didn, above, auto. Score aktuell: 95. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.257",
+    "sarah_package": {
+      "title": "Claude Fable 5.1 ships as the new default for Claude Code.",
+      "subtitle": "$10/$50 per Mtok; 1M context; $0.25/Mtok cache reads.",
+      "description": "New 1M-context default model priced at $10/$50 per Mtok with $0.25/Mtok cache reads. Time format and timeZone settings added for transcript ",
+      "hashtags": [
+        "#LLM",
+        "#ClaudeCode",
+        "#Anthropic"
+      ],
+      "question": "Anyone using the new model in prod today?",
+      "card_stat": "1M context",
+      "card_claim": "New default model cuts context costs",
+      "card_context": "Claude Fable 5.1 · 1M context · $10/$50 per Mtok · $0.25/Mtok cache reads"
+    },
+    "composer_version": "2",
+    "card_layout": "release",
+    "card_variant": "editorial_release",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-09-01-claude-code-v2-1-257-eed9d6836feb.md",
+    "published_at": "2026-09-01T20:07:42.703927Z"
   },
   {
     "id": "2bb10938e66e",
-    "status": "approved",
+    "status": "rejected",
     "created_at": "2026-09-01T19:00:36.006111Z",
     "score": 60,
     "reason": "local newsworthiness fallback",
@@ -11170,6 +11189,7 @@
     "is_llm_mode": false,
     "breaking": false,
     "claire_note": "Aus *LangChain Releases* ist ein starker Kandidat reingekommen: *langchain==1.4.0a3*.\nRelevanz fuer Builder: local newsworthiness fallback\n_Score: 60_",
-    "chloe_note": "*langchain==1.4.0a3* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: langchain, class, response, mode. Bewertung: 60. Quelle: https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.4.0a3"
+    "chloe_note": "*langchain==1.4.0a3* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch local newsworthiness fallbackCluster context: 1 sources, engagement 0. Common terms: langchain, class, response, mode. Bewertung: 60. Quelle: https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.4.0a3",
+    "rejected_at": "2026-09-01T20:07:42.703927Z"
   }
 ]
