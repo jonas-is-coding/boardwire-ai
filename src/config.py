@@ -16,6 +16,9 @@ PERSONAS_PATH = CONFIG_DIR / "personas.json"
 QUALITY_PATH = CONFIG_DIR / "quality.json"
 HASHTAGS_PATH = CONFIG_DIR / "hashtags.json"
 REPLY_DIGEST_CONFIG_PATH = CONFIG_DIR / "reply_digest.json"
+# Growth automation: follow-drip seeds/filters and the bio + pinned intro thread.
+GROWTH_CONFIG_PATH = CONFIG_DIR / "growth.json"
+IDENTITY_CONFIG_PATH = CONFIG_DIR / "identity.json"
 SEEN_ITEMS_PATH = DATA_DIR / "seen_items.json"
 DRAFTS_PATH = DATA_DIR / "drafts.json"
 REVIEW_QUEUE_PATH = DATA_DIR / "review_queue.json"
@@ -27,6 +30,8 @@ PUBLISHED_RELEASES_PATH = DATA_DIR / "published_releases.json"
 # Gate rejections log rendered into the review queue report.
 GATE_REJECTIONS_PATH = DATA_DIR / "gate_rejections.json"
 VIRALITY_MODEL_PATH = DATA_DIR / "virality_model.json"
+# Growth ledger: every follow the drip ever created + pinned-thread state.
+GROWTH_LEDGER_PATH = DATA_DIR / "growth_ledger.json"
 EMBEDDINGS_CACHE_PATH = DATA_DIR / "embeddings.json"
 CLUSTERS_DEBUG_PATH = DATA_DIR / "clusters.json"
 # Newsroom (multi-source research) persistence.

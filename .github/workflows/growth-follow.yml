@@ -1,0 +1,108 @@
+name: Boardwire Growth Follow
+
+on:
+  # Weekdays 07:40 UTC = 09:40 Berlin (CEST) — a human-looking morning slot.
+  # ~12 paced follows per run (config/growth.json follows_per_run; override with
+  # the repo variable BOARDWIRE_GROWTH_FOLLOWS_PER_RUN). Follows are permanent:
+  # the growth package has no unfollow path, so the filters do the work.
+  # Runs after the reply digest (07:15) so both land before the day starts.
+  schedule:
+    - cron: "40 7 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "seed = follow the configured seed accounts themselves; discover = follow accounts found via their graphs, lists and keyword search"
+        required: false
+        default: "discover"
+        type: choice
+        options:
+          - discover
+          - seed
+      dry_run:
+        description: "Plan only — write nothing to Bluesky"
+        required: false
+        default: false
+        type: boolean
+      limit:
+        description: "Max follows this run (blank = follows_per_run from config)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: boardwire-growth-follow-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  growth_follow:
+    runs-on: ubuntu-latest
+    environment: production
+    env:
+      BOARDWIRE_REAL_PUBLISH_ENABLED: true
+      BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+      BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
+      BOARDWIRE_GROWTH_FOLLOWS_PER_RUN: ${{ vars.BOARDWIRE_GROWTH_FOLLOWS_PER_RUN }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Follow drip
+        env:
+          BW_GROWTH_MODE: ${{ inputs.mode || 'discover' }}
+          BW_GROWTH_DRY_RUN: ${{ inputs.dry_run }}
+          BW_GROWTH_LIMIT: ${{ inputs.limit }}
+        run: |
+          args=(--growth-follow --growth-mode "$BW_GROWTH_MODE")
+
+          if [ "$BW_GROWTH_DRY_RUN" = "true" ]; then
+            args+=(--growth-dry-run)
+          fi
+
+          if [ -n "$BW_GROWTH_LIMIT" ]; then
+            args+=(--growth-limit "$BW_GROWTH_LIMIT")
+          fi
+
+          python -m src.main "${args[@]}"
+
+      - name: Commit growth ledger
+        # The ledger is written after every single follow, so it is committed
+        # even when the drip step aborted part-way (rate limit, PDS error).
+        if: ${{ !cancelled() }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data/growth_ledger.json 2>/dev/null || true
+
+          if git diff --cached --quiet; then
+            echo "No growth ledger changes to commit"
+          else
+            git commit -m "chore: update growth follow ledger"
+
+            for attempt in 1 2 3; do
+              if git push; then
+                exit 0
+              fi
+
+              echo "Push failed on attempt ${attempt}; rebasing onto latest ${GITHUB_REF_NAME} before retrying"
+              git fetch origin "${GITHUB_REF_NAME}"
+              git rebase "origin/${GITHUB_REF_NAME}"
+            done
+
+            echo "Push failed after 3 attempts" >&2
+            exit 1
+          fi

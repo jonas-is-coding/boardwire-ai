@@ -7,7 +7,27 @@
     "Ollama",
     "AI agents"
   ],
+  "target_handles": [
+    "simonwillison.net",
+    "natolambert.bsky.social",
+    "hamel.bsky.social",
+    "rasbt.bsky.social",
+    "emollick.bsky.social",
+    "yoavgo.bsky.social",
+    "danielvanstrien.bsky.social",
+    "kylelo.bsky.social",
+    "stellaathena.bsky.social",
+    "dorialexander.bsky.social",
+    "s.ly",
+    "ai2.bsky.social"
+  ],
   "max_posts": 8,
   "posts_per_keyword": 5,
-  "min_engagement": 5
+  "posts_per_target": 5,
+  "min_engagement": 5,
+  "target_min_engagement": 0,
+  "target_quota": 0.6,
+  "max_age_hours": 36,
+  "max_reply_count": 40,
+  "max_per_author": 2
 }

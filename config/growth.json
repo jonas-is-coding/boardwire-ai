@@ -1,0 +1,74 @@
+{
+  "_readme": "Follow-drip config. seed_handles: verified niche accounts (highest-leverage setting: discovery reads THEIR follow graphs, so seed quality compounds). list_uris: at:// list or starter-pack URIs, or bsky.app starter-pack / list URLs (resolved at runtime). Weights score graph relevance, not follow-back odds. There is no unfollow path. The Growth Config Check workflow verifies seeds + lists on every PR.",
+  "seed_handles": [
+    "simonwillison.net",
+    "natolambert.bsky.social",
+    "hamel.bsky.social",
+    "rasbt.bsky.social",
+    "emollick.bsky.social",
+    "yoavgo.bsky.social",
+    "danielvanstrien.bsky.social",
+    "kylelo.bsky.social",
+    "stellaathena.bsky.social",
+    "dorialexander.bsky.social",
+    "s.ly",
+    "ai2.bsky.social"
+  ],
+  "list_uris": [
+    "https://bsky.app/starter-pack/nimobeeren.com/3l7i7ciwnt22v",
+    "https://bsky.app/starter-pack/pelayoarbues.com/3l7gammw22z2c",
+    "https://bsky.app/starter-pack/pelayoarbues.com/3l7isybcp522s",
+    "https://bsky.app/starter-pack/devtools.fm/3l7uo2usby32x",
+    "https://bsky.app/starter-pack/aisupremacy.bsky.social/3lbvqgzrohc2f"
+  ],
+  "keywords": [
+    "Claude Code",
+    "MCP server",
+    "local LLM",
+    "open weights",
+    "Ollama",
+    "llama.cpp",
+    "AI agents",
+    "AI engineering"
+  ],
+  "weights": {
+    "seed_follows": 1.0,
+    "seed_followers": 0.5,
+    "lists": 0.8,
+    "search": 0.4,
+    "bio_keyword": 0.2
+  },
+  "filters": {
+    "min_followers": 30,
+    "max_followers": 50000,
+    "min_posts": 10,
+    "max_follow_ratio": 4.0,
+    "max_days_since_post": 45,
+    "require_description": true,
+    "blocked_keywords": [
+      "crypto",
+      "nft",
+      "airdrop",
+      "forex",
+      "casino",
+      "onlyfans",
+      "giveaway",
+      "follow back",
+      "followback",
+      "follow4follow",
+      "f4f",
+      "growth hacking"
+    ]
+  },
+  "follows_per_run": 12,
+  "graph_depth_per_seed": 100,
+  "max_search_results": 50,
+  "max_list_members": 100,
+  "max_hydrate": 300,
+  "freshness_pool_factor": 3,
+  "seed_max_days_since_post": 90,
+  "pace_seconds": [
+    20,
+    45
+  ]
+}

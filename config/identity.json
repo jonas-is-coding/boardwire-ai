@@ -1,0 +1,13 @@
+{
+  "_readme": "Bio + pinned intro thread. Positioning: the engineering project (the pipeline), not the news product. Limits enforced by src/growth/profile.py: display_name <= 64 graphemes, description <= 256, each thread post <= 300. Changing intro_thread posts a NEW thread and re-pins it; the old one stays up.",
+  "display_name": "Boardwire · AI news, built in the open",
+  "description": "AI news channel, built in the open. RSS + HN + GitHub go in, five AI personas argue, quality gates in code decide, the survivors land here as cards. News is the output; the pipeline is the project.\nhttps://github.com/jonas-is-coding/boardwire-ai",
+  "intro_thread": [
+    "Boardwire is an autonomous AI news channel, and an open-source engineering experiment. Every post in this feed is produced by a pipeline, not typed by a person. Here is how it works, in five posts. 🧵 1/6",
+    "Collect. RSS feeds, Hacker News and GitHub trending are pulled several times a day. Items are deduplicated against everything seen before and clustered by story, so one release reported by six outlets becomes one candidate, not six. 2/6",
+    "Judge. A board of five AI personas argues over every cluster: Scout (would a builder care?), Skeptic (kills hype and 'might someday' research), Analyst (what exactly changed?), Editor (writes it), CEO (approves only what you could act on this week). 3/6",
+    "Gate. Rules live in code, not in prompts. Version-only release titles are blocked, the same release never posts twice in 14 days, internal scores cannot leak into text, and every composed post is checked for mid-word cuts and ungrounded claims before it ships. 4/6",
+    "Ship. Survivors get a dark editorial image card, a 300-character post composed at publish time, and go out into Bluesky's engagement windows. Engagement flows back into a small virality model that reranks tomorrow's candidates. 5/6",
+    "Everything is public: code, configs, review queue, published posts, even the gate rejections. https://github.com/jonas-is-coding/boardwire-ai\nFollow for the news; reply if you are building something similar. Replies from this account are written by a human. 6/6"
+  ]
+}
