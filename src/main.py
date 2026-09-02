@@ -1015,6 +1015,13 @@ def _build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--export-web-articles", action="store_true", help="Export review items as Markdown web articles to generated/articles.")
     parser.add_argument("--newsroom-research", action="store_true", help="Run the newsroom deep-research pipeline (desk -> reporter) and write dossiers to data/dossiers.")
     parser.add_argument("--reply-digest", action="store_true", help="Send a Slack digest of niche Bluesky posts with SUGGESTED replies (human posts manually; never auto-posts).")
+    parser.add_argument("--growth-follow", action="store_true", help="Run the paced follow drip on the Bluesky account (permanent follows; the growth package has no unfollow path).")
+    parser.add_argument("--growth-mode", choices=["seed", "discover"], default="discover", help="--growth-follow source: 'seed' follows the configured seed_handles themselves; 'discover' (default) follows accounts found via the seeds' graphs, lists and keyword search.")
+    parser.add_argument("--growth-dry-run", action="store_true", help="Plan growth actions (follow / profile / pin) without writing anything to Bluesky.")
+    parser.add_argument("--growth-limit", type=int, default=None, help="Override follows_per_run from config/growth.json for this run.")
+    parser.add_argument("--growth-verify-seeds", action="store_true", help="Resolve every seed handle in config/growth.json and print followers/posts/last post; exits 1 if any is unresolved.")
+    parser.add_argument("--growth-profile", action="store_true", help="Update display name + bio from config/identity.json, merged onto the live profile record (avatar, banner, pinned post preserved).")
+    parser.add_argument("--growth-pin-thread", action="store_true", help="Post the intro thread from config/identity.json and pin its root post (idempotent, resume-safe).")
     return parser
 
 
@@ -2410,6 +2417,131 @@ def _reply_digest(logger) -> int:
     return 0
 
 
+def _growth(args, logger) -> int:
+    """Growth automation: follow drip, seed check, profile record, pinned intro
+    thread. Graph reads need the authenticated viewer state, so credentials are
+    required even for dry runs; real writes additionally require
+    BOARDWIRE_REAL_PUBLISH_ENABLED=true. The growth package has no unfollow or
+    delete path by design."""
+    from src.growth.client import GrowthClient, GrowthClientError
+    from src.growth.settings import load_growth_config
+
+    handle = os.getenv("BLUESKY_HANDLE", "").strip()
+    app_password = os.getenv("BLUESKY_APP_PASSWORD", "").strip()
+    if not handle or not app_password:
+        logger.error("Growth commands require BLUESKY_HANDLE and BLUESKY_APP_PASSWORD (graph reads need the authenticated viewer state)")
+        return 1
+    wants_write = bool(args.growth_follow or args.growth_profile or args.growth_pin_thread) and not args.growth_dry_run
+    if wants_write and os.getenv("BOARDWIRE_REAL_PUBLISH_ENABLED", "false").strip().lower() != "true":
+        logger.error("Refusing growth writes: BOARDWIRE_REAL_PUBLISH_ENABLED must be true (or add --growth-dry-run)")
+        return 1
+    if args.growth_limit is not None and args.growth_limit < 1:
+        logger.error("--growth-limit must be at least 1 when provided")
+        return 1
+
+    config = load_growth_config()
+    client = GrowthClient(handle, app_password, logger=logger)
+    try:
+        client.login()
+    except GrowthClientError as exc:
+        logger.error("Bluesky login failed: %s", exc)
+        return 1
+    logger.info("Growth: logged in as @%s (%s)%s", client.handle, client.did, " [dry-run]" if args.growth_dry_run else "")
+
+    steps = (
+        (args.growth_verify_seeds, _growth_verify_seeds),
+        (args.growth_profile, _growth_profile),
+        (args.growth_pin_thread, _growth_pin_thread),
+        (args.growth_follow, _growth_follow),
+    )
+    exit_code = 0
+    for enabled, step in steps:
+        if not enabled:
+            continue
+        try:
+            exit_code = max(exit_code, step(client, config, args, logger))
+        except GrowthClientError as exc:
+            logger.error("Growth step %s failed: %s", step.__name__.lstrip("_"), exc)
+            exit_code = 1
+        except ValueError as exc:  # invalid config/identity.json
+            logger.error("%s", exc)
+            exit_code = 1
+    return exit_code
+
+
+def _growth_verify_seeds(client, config, args, logger) -> int:
+    from src.growth.discover import verify_seeds
+
+    if not config.seed_handles:
+        logger.error("config/growth.json has no seed_handles — add 8-12 verified niche accounts first")
+        return 1
+    rows = verify_seeds(client, config, logger)
+    return 1 if any(not row.get("ok") for row in rows) else 0
+
+
+def _growth_profile(client, config, args, logger) -> int:
+    from src.growth.profile import load_identity, update_profile
+
+    identity = load_identity()
+    update_profile(client, identity, dry_run=args.growth_dry_run, logger=logger)
+    return 0
+
+
+def _growth_pin_thread(client, config, args, logger) -> int:
+    from src.growth.ledger import GrowthLedger
+    from src.growth.profile import load_identity, pin_intro_thread
+
+    identity = load_identity()
+    ledger = GrowthLedger.load(config.ledger_path)
+    result = pin_intro_thread(client, identity, ledger, dry_run=args.growth_dry_run, logger=logger)
+    logger.info("Pin thread: %s%s", result.status, f" ({result.root_uri})" if result.root_uri else "")
+    return 0
+
+
+def _growth_follow(client, config, args, logger) -> int:
+    from src.growth.discover import discover_candidates, seed_candidates
+    from src.growth.follower import run_follow_drip
+    from src.growth.ledger import GrowthLedger
+
+    ledger = GrowthLedger.load(config.ledger_path)
+    own_did = client.did or ""
+    if args.growth_mode == "seed":
+        if not config.seed_handles:
+            logger.error("--growth-mode seed needs seed_handles in config/growth.json")
+            return 1
+        candidates = seed_candidates(client, config, logger, own_did=own_did)
+    else:
+        if not (config.seed_handles or config.list_uris or config.keywords):
+            logger.error("Discovery needs seed_handles, list_uris or keywords in config/growth.json")
+            return 1
+        candidates = discover_candidates(client, config, logger, own_did=own_did, exclude_dids=ledger.followed_dids())
+    if not candidates:
+        logger.info("Growth follow (%s): no candidates", args.growth_mode)
+        return 0
+
+    summary = run_follow_drip(
+        client,
+        candidates,
+        ledger,
+        config,
+        mode=args.growth_mode,
+        limit=args.growth_limit,
+        dry_run=args.growth_dry_run,
+        logger=logger,
+    )
+    logger.info(
+        "Growth follow (%s%s): followed=%d planned=%d skipped_already=%d failed=%d%s",
+        args.growth_mode,
+        " dry-run" if args.growth_dry_run else "",
+        summary.followed,
+        summary.planned,
+        summary.skipped_already,
+        summary.failed,
+        f" ABORTED: {summary.aborted}" if summary.aborted else "",
+    )
+    return 1 if summary.aborted else 0
+
+
 def _self_check_writer(logger) -> int:
     fixtures = _load_fixture_items()
     quality_config = _load_quality_config()
@@ -2534,6 +2666,8 @@ def run(argv: list[str] | None = None) -> int:
         return _engagement_report(logger)
     if args.reply_digest:
         return _reply_digest(logger)
+    if args.growth_follow or args.growth_verify_seeds or args.growth_profile or args.growth_pin_thread:
+        return _growth(args, logger)
 
     sources = _load_sources()
     personas = load_personas(JsonStore.load(PERSONAS_PATH, default=[]))

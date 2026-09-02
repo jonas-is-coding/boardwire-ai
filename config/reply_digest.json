@@ -7,7 +7,14 @@
     "Ollama",
     "AI agents"
   ],
+  "target_handles": [],
   "max_posts": 8,
   "posts_per_keyword": 5,
-  "min_engagement": 5
+  "posts_per_target": 5,
+  "min_engagement": 5,
+  "target_min_engagement": 0,
+  "target_quota": 0.6,
+  "max_age_hours": 36,
+  "max_reply_count": 40,
+  "max_per_author": 2
 }

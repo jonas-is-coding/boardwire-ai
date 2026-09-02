@@ -1,0 +1,51 @@
+name: Boardwire Reply Digest
+
+on:
+  # Weekdays 07:15 UTC = 09:15 Berlin (CEST): the digest lands in Slack at the
+  # start of the day so the 1-3 manual replies go out while the posts are
+  # fresh. Read-only against the public Bluesky AppView plus one Slack webhook
+  # POST — this workflow never posts anything to Bluesky.
+  # NOTE: in Berlin winter (CET, UTC+1) this fires at 08:15 local time.
+  schedule:
+    - cron: "15 7 * * 1-5"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reply_digest:
+    runs-on: ubuntu-latest
+    environment: production
+    env:
+      # Only used to exclude Boardwire's own posts from the digest; no login.
+      BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+      CEREBRAS_API_KEY: ${{ secrets.CEREBRAS_API_KEY }}
+      MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
+      GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
+      GEMINI_API_KEY_4: ${{ secrets.GEMINI_API_KEY_4 }}
+      SLACK_WEBHOOK_URL_SARAH: ${{ secrets.SLACK_WEBHOOK_URL_SARAH }}
+      SLACK_WEBHOOK_URL_DEBUG: ${{ secrets.SLACK_WEBHOOK_URL_DEBUG }}
+      SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Send reply digest to Slack (suggestions only)
+        run: python -m src.main --reply-digest

@@ -1,0 +1,51 @@
+{
+  "_readme": "Follow-drip config. seed_handles: 8-12 verified niche accounts (highest-leverage setting: discovery reads THEIR follow graphs). list_uris: at:// URIs of starter-pack lists. Weights score graph relevance, not follow-back odds. There is no unfollow path.",
+  "seed_handles": [],
+  "list_uris": [],
+  "keywords": [
+    "Claude Code",
+    "MCP server",
+    "local LLM",
+    "open weights",
+    "Ollama",
+    "llama.cpp",
+    "AI agents",
+    "AI engineering"
+  ],
+  "weights": {
+    "seed_follows": 1.0,
+    "seed_followers": 0.5,
+    "lists": 0.8,
+    "search": 0.4,
+    "bio_keyword": 0.2
+  },
+  "filters": {
+    "min_followers": 30,
+    "max_followers": 50000,
+    "min_posts": 10,
+    "max_follow_ratio": 4.0,
+    "max_days_since_post": 45,
+    "require_description": true,
+    "blocked_keywords": [
+      "crypto",
+      "nft",
+      "airdrop",
+      "forex",
+      "casino",
+      "onlyfans",
+      "giveaway",
+      "follow back",
+      "followback",
+      "follow4follow",
+      "f4f",
+      "growth hacking"
+    ]
+  },
+  "follows_per_run": 12,
+  "graph_depth_per_seed": 100,
+  "max_search_results": 50,
+  "max_list_members": 100,
+  "max_hydrate": 300,
+  "freshness_pool_factor": 3,
+  "pace_seconds": [20, 45]
+}

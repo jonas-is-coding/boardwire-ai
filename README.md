@@ -317,14 +317,92 @@ Enforced in code (`src/quality/gates.py`), not just asked for in the prompt:
 python -m src.main --reply-digest
 ```
 
-Queries the public Bluesky search API (`app.bsky.feed.searchPosts`, no auth)
-for recent high-engagement posts matching the niche keywords in
-`config/reply_digest.json`, drafts one substantive reply suggestion per post
-via the existing LLM chain, and sends the digest to the Slack webhook.
+Finds fresh posts worth replying to, drafts one substantive reply suggestion
+per post via the existing LLM chain, and sends the digest to Slack
+(`reply-digest.yml`: weekdays 07:15 UTC = 09:15 Berlin). Two read-only
+channels, both on the public AppView (no auth):
+
+- **Target accounts** (`target_handles` in `config/reply_digest.json`) — the
+  accounts whose audience Boardwire needs. Their newest original posts are
+  fetched via `getAuthorFeed`.
+- **Keyword search** (`keywords`) — `searchPosts` for the niche terms, limited
+  to the freshness window via `since`.
+
+Ranking rules (`src/feedback/reply_digest.py::select_digest`):
+
+| Rule | Config | Default | Why |
+|---|---|---|---|
+| Target quota | `target_quota` | `0.6` | 60 % of the slots are *reserved* for target posts. A score multiplier was rejected: a 3× bonus loses against any viral stranger's post — exactly when the target list should win. |
+| Freshness | `max_age_hours` | `36` | A reply is worth most in the first hours; older posts are dropped. |
+| Crowding | `max_reply_count`, `max_per_author` | `40`, `2` | A reply under 40+ others is buried; no author takes more than 2 slots. |
+| Engagement floor | `min_engagement`, `target_min_engagement` | `5`, `0` | Keyword hits need traction; a target post with zero replies is the best place to be first. |
 
 **This tool never posts replies itself** — it only suggests; a human reads the
-digest and posts manually. Replies are the strongest visibility signal on
-Bluesky, which is exactly why they must stay human.
+digest and posts 1–3 replies manually (about five minutes a day). Replies are
+the strongest visibility signal on Bluesky, and LLM replies under strangers'
+posts get an account muted by exactly the people whose audience it needs —
+which is why they stay human.
+
+## Growth automation (follow drip, profile, pinned intro)
+
+Opt-in, credential-gated growth for the Bluesky account (`src/growth/`).
+Positioning decision: bio and pinned thread explain the **engineering
+project** — the pipeline — not the news product; the news is the output.
+
+| Command | What it does |
+|---|---|
+| `--growth-verify-seeds` | Resolves every `seed_handles` entry in `config/growth.json`, prints followers / posts / last post, exits 1 on unresolved handles. |
+| `--growth-follow --growth-mode seed` | Follows the seed accounts themselves. |
+| `--growth-follow` (`--growth-mode discover`) | Paced follow drip over accounts discovered from the seeds' graphs (`growth-follow.yml`: weekdays 07:40 UTC, ~12 follows per run). |
+| `--growth-profile` | Writes display name + bio from `config/identity.json`, merged onto the live profile record. |
+| `--growth-pin-thread` | Posts the 6-post intro thread from `config/identity.json` and pins its root. Idempotent and resume-safe. |
+
+Add `--growth-dry-run` to any of them to plan without writing; `--growth-limit N`
+caps one run. Every growth command needs `BLUESKY_HANDLE` +
+`BLUESKY_APP_PASSWORD` (graph reads require the authenticated `viewer` state);
+real writes additionally need `BOARDWIRE_REAL_PUBLISH_ENABLED=true`.
+
+Design decisions worth keeping:
+
+- **No unfollow path.** There is no delete call anywhere in `src/growth`; a
+  test scans the package source for the delete and batch-write XRPC names.
+  Follows are permanent, so the filters do the work up front.
+- **Scoring on graph relevance, not follow-back odds.** Discovery runs four
+  weighted channels — who the seeds follow (`1.0`), who follows the seeds
+  (`0.5`), starter-pack lists (`0.8`), keyword search over profiles (`0.4`) —
+  plus a small bio-keyword bonus, and sums the weights per account. An account
+  three seeds follow beats one keyword hit. Optimising for follow-backs is
+  follow/unfollow thinking with an extra step.
+- **Re-hydration before filtering.** Graph pages and search results carry no
+  `viewer.following`; the top raw candidates are re-fetched through the
+  authenticated `getProfiles` batch before any filter runs. That is what makes
+  the drip idempotent — `data/growth_ledger.json` is only a cache.
+- **Filters** (`config/growth.json`): follower and post-count bounds,
+  follows/followers ratio (follow-spam), moderation labels, blocked bio
+  keywords, empty bios, and a last-post freshness check on the top pool so
+  dormant accounts never see the follow.
+- **Ledger write before the sleep.** The ledger is saved after every single
+  follow, *before* the pacing sleep, and the workflow commits it even when the
+  run aborts — a cancelled run never loses its state.
+- **Profile update merges** onto the live record: a naive overwrite of
+  `app.bsky.actor.profile/self` destroys the avatar and banner blob references
+  and the pinned post.
+
+Rollout order:
+
+```bash
+python -m src.main --growth-verify-seeds
+python -m src.main --growth-follow --growth-mode seed --growth-dry-run
+python -m src.main --growth-follow --growth-mode seed
+python -m src.main --growth-profile --growth-dry-run && python -m src.main --growth-profile
+python -m src.main --growth-pin-thread --growth-dry-run && python -m src.main --growth-pin-thread
+```
+
+Manual work that stays manual: fill `seed_handles` with 8–12 verified niche
+accounts (highest leverage in the whole setup — discovery reads *their* graphs,
+so seed quality compounds), put the same handles into `target_handles` of
+`config/reply_digest.json`, add starter-pack `at://` list URIs to `list_uris`,
+and spend five minutes a day on the Slack digest.
 
 ## Staying current & breaking-news burst
 
