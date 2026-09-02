@@ -11194,11 +11194,11 @@
   },
   {
     "id": "d079dc8dbfcd",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-09-02T15:58:50.824396Z",
     "score": 90,
     "reason": "Open-source tool launch for agent code management. High engagement confirms immediate builder relevance.",
-    "proposed_post": "Open-source tool `pacifio/atlas` launched, providing source control for AI agents. Builders can track and query changes from multiple coding agents, streamlining agent-driven development.",
+    "proposed_post": "Atlas turns agents into a first-class primitive with source control.\n\npacifio/atlas manages multiple coding agents, tracks changes, and unifies queries, +895 stars today.\n\nAnyone running multiple agents in prod?\n\n#AI #AIAgents #DevTools",
     "source_angle": "GitHub Trending: New open-source tool for agent development.",
     "source_item": {
       "title": "pacifio/atlas — Source control for agents. Use multiple coding agents, track their changes and query them in one place",
@@ -11229,10 +11229,29 @@
         "cluster_score": 35
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/d079dc8dbfcd.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das hier ist interessant: 'pacifio/atlas'.\n\nIst im Grunde Git für AI-Agents. Mit dem Tool kannst du mehrere Coding-Agents gleichzeitig nutzen, ihre Änderungen nachverfolgen und alles an einem Ort abfragen. Für Devs, die mit mehreren Agents arbeiten, ist das ein Game-Changer, weil es endlich Versionskontrolle und Kollaboration für diese Setups bietet.",
-    "chloe_note": "Kurzes Update: *pacifio/atlas — Source control for agents. Use multiple coding agents, track their changes and query them in one place* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Open-source tool launch for agent code management. High engagement confirms immediate builder relevance.Cluster context: 1 sources, engagement 895. Common terms: control, multiple, one, stars. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://github.com/pacifio/atlas"
+    "chloe_note": "Kurzes Update: *pacifio/atlas — Source control for agents. Use multiple coding agents, track their changes and query them in one place* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Open-source tool launch for agent code management. High engagement confirms immediate builder relevance.Cluster context: 1 sources, engagement 895. Common terms: control, multiple, one, stars. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://github.com/pacifio/atlas",
+    "sarah_package": {
+      "title": "Atlas turns agents into a first-class primitive with source control.",
+      "subtitle": "pacifio/atlas manages multiple coding agents, tracks changes, and unifies queries, +895 stars today.",
+      "description": "Git-like versioning for agent workflows. Replaces ad-hoc logs with a shared state layer for teams running parallel agents.",
+      "hashtags": [
+        "#AI",
+        "#AIAgents",
+        "#DevTools"
+      ],
+      "question": "Anyone running multiple agents in prod?",
+      "card_stat": "+895★",
+      "card_claim": "Agents now have Git-like control.",
+      "card_context": "Tracks parallel agent changes · Unifies queries · MIT License"
+    },
+    "composer_version": "2",
+    "card_layout": "repo",
+    "card_variant": "editorial_repo",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-09-02-pacifio-atlas-source-control-for-agents-use-multiple-coding-agents-track-their-changes-and-query-them-in-one-place-d079dc8dbfcd.md",
+    "published_at": "2026-09-02T17:15:56.059060Z"
   }
 ]

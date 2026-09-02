@@ -3541,5 +3541,29 @@
       "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mui7wlfes72z"
     ],
     "thread_partial": false
+  },
+  {
+    "id": "d079dc8dbfcd",
+    "published_at": "2026-09-02T17:15:56.059060Z",
+    "platform": "bluesky",
+    "post": "Atlas turns agents into a first-class primitive with source control.\n\npacifio/atlas manages multiple coding agents, tracks changes, and unifies queries, +895 stars today.\n\nAnyone running multiple agents in prod?\n\n#AI #AIAgents #DevTools",
+    "source_link": "https://github.com/pacifio/atlas",
+    "source_title": "pacifio/atlas — Source control for agents. Use multiple coding agents, track their changes and query them in one place",
+    "score": 90,
+    "reason": "Open-source tool launch for agent code management. High engagement confirms immediate builder relevance.",
+    "card_path": "generated/cards/d079dc8dbfcd.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-09-02-pacifio-atlas-source-control-for-agents-use-multiple-coding-agents-track-their-changes-and-query-them-in-one-place-d079dc8dbfcd.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mukgsccx2a2b",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mukgsccx2a2b",
+    "format_variant": "question",
+    "hashtags_used": [
+      "#AI",
+      "#AIAgents",
+      "#DevTools"
+    ],
+    "published_hour_utc": 17,
+    "published_weekday": "Wednesday",
+    "composer_version": "2",
+    "card_variant": "editorial_repo"
   }
 ]
