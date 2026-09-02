@@ -99,6 +99,7 @@ class GrowthConfig:
     max_list_members: int = 100       # per list
     max_hydrate: int = 300            # top raw candidates re-hydrated via getProfiles
     freshness_pool_factor: int = 3    # last-post check for follows_per_run x factor candidates
+    seed_max_days_since_post: int = 90  # a seed silent for longer fails --growth-verify-seeds
     pace_seconds_min: float = DEFAULT_PACE_SECONDS[0]
     pace_seconds_max: float = DEFAULT_PACE_SECONDS[1]
     ledger_path: Path = GROWTH_LEDGER_PATH
@@ -221,6 +222,7 @@ def load_growth_config(path: Path | None = None) -> GrowthConfig:
         max_list_members=_int(raw, "max_list_members", 100, minimum=1),
         max_hydrate=_int(raw, "max_hydrate", 300, minimum=1),
         freshness_pool_factor=_int(raw, "freshness_pool_factor", 3, minimum=1),
+        seed_max_days_since_post=_int(raw, "seed_max_days_since_post", 90, minimum=1),
         pace_seconds_min=pace_min,
         pace_seconds_max=pace_max,
         ledger_path=ledger_path,

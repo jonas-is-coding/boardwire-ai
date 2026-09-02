@@ -22,6 +22,7 @@ only a cache.
 
 from __future__ import annotations
 
+import logging
 import re
 from collections import Counter
 from dataclasses import dataclass, field
@@ -287,11 +288,15 @@ def verify_seeds(client: GrowthClient, config: GrowthConfig, logger: Logger, now
             continue
         cand.last_post_at = _latest_post(client, cand, logger)
         age = days_since(cand.last_post_at, now)
+        reason: str | None = None
+        if age is not None and age > config.seed_max_days_since_post:
+            reason = f"dormant ({age:.0f}d since last post, max {config.seed_max_days_since_post})"
         rows.append(
             {
                 "handle": cand.handle,
                 "did": cand.did,
-                "ok": True,
+                "ok": reason is None,
+                "reason": reason,
                 "followers": cand.followers_count,
                 "follows": cand.follows_count,
                 "posts": cand.posts_count,
@@ -299,17 +304,20 @@ def verify_seeds(client: GrowthClient, config: GrowthConfig, logger: Logger, now
                 "following": cand.viewer_following,
             }
         )
-        logger.info(
-            "Seed %-32s followers=%-7d follows=%-6d posts=%-6d last_post=%s following=%s",
+        logger.log(
+            logging.WARNING if reason else logging.INFO,
+            "Seed %-32s followers=%-7d follows=%-6d posts=%-6d last_post=%-9s following=%s%s",
             cand.handle,
             cand.followers_count,
             cand.follows_count,
             cand.posts_count,
             f"{age:.0f}d ago" if age is not None else "unknown",
             "n/a (public read)" if getattr(client, "is_public", False) else ("yes" if cand.viewer_following else "no"),
+            f"  DORMANT" if reason else "",
         )
-    unresolved = [row["handle"] for row in rows if not row["ok"]]
-    logger.info("Seeds: %d resolved, %d unresolved", len(rows) - len(unresolved), len(unresolved))
+    unresolved = sum(1 for row in rows if not row["ok"] and row.get("reason") == "unresolved")
+    dormant = sum(1 for row in rows if not row["ok"] and row.get("reason") != "unresolved")
+    logger.info("Seeds: %d ok, %d unresolved, %d dormant", len(rows) - unresolved - dormant, unresolved, dormant)
     return rows
 
 

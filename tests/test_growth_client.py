@@ -190,6 +190,7 @@ def test_get_list_members_unwraps_subjects(monkeypatch) -> None:
 
 def test_latest_post_at_skips_reposts(monkeypatch) -> None:
     def get(url, kwargs):
+        assert kwargs["params"]["limit"] == "10"  # one item would let a repost on top hide the real last post
         return _Resp(
             200,
             {

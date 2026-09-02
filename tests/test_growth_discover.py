@@ -325,3 +325,14 @@ def test_verify_lists_reports_name_size_and_unresolved() -> None:
     rows = verify_lists(graph, config, _LOGGER)
     assert rows[0]["ok"] and rows[0]["name"] == "AI builders" and rows[0]["items"] == 42 and rows[0]["uri"] == _LIST
     assert rows[1] == {"reference": "https://bsky.app/starter-pack/curator.test/nope", "ok": False, "reason": "unresolved"}
+
+
+def test_verify_seeds_flags_dormant_accounts() -> None:
+    graph = _graph()
+    graph.latest["did:plc:seed1"] = _iso(200)
+    graph.latest["did:plc:seed2"] = _iso(10)
+    config = _config(seed_handles=["seed1.test", "seed2.test"], seed_max_days_since_post=90)
+
+    rows = verify_seeds(graph, config, _LOGGER, now=_NOW)
+    assert rows[0]["ok"] is False and rows[0]["reason"].startswith("dormant (200d")
+    assert rows[1]["ok"] is True and rows[1]["reason"] is None

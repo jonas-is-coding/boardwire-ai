@@ -247,11 +247,15 @@ class GrowthClient:
         return info if isinstance(info, dict) else {}
 
     def latest_post_at(self, actor: str) -> str | None:
-        """``createdAt`` of the actor's newest original post, or None."""
+        """``createdAt`` of the actor's newest original post, or None.
+
+        Reads a small page rather than one item: reposts sit in the same feed
+        and are skipped, so a repost on top must not hide the real last post.
+        """
         body = self._request(
             "GET",
             "app.bsky.feed.getAuthorFeed",
-            params={"actor": actor, "limit": "1", "filter": "posts_no_replies"},
+            params={"actor": actor, "limit": "10", "filter": "posts_no_replies"},
         )
         for item in body.get("feed") or []:
             if not isinstance(item, dict) or item.get("reason"):
