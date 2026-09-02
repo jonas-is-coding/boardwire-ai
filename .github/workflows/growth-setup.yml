@@ -1,0 +1,116 @@
+name: Boardwire Growth Setup
+
+on:
+  # One-time rollout steps that no schedule should repeat: verify the seed
+  # handles, write display name + bio, post + pin the intro thread. All three
+  # are idempotent, so re-running is safe. Run with dry_run=true first and
+  # read the log, then again with dry_run=false. The scheduled follow drip
+  # lives in growth-follow.yml; seed-mode follows are its workflow_dispatch
+  # with mode=seed.
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Plan only — write nothing to Bluesky"
+        required: false
+        default: true
+        type: boolean
+      profile:
+        description: "Update display name + bio from config/identity.json"
+        required: false
+        default: true
+        type: boolean
+      pin_thread:
+        description: "Post the intro thread from config/identity.json and pin it"
+        required: false
+        default: true
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: boardwire-growth-setup-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  growth_setup:
+    runs-on: ubuntu-latest
+    environment: production
+    env:
+      BOARDWIRE_REAL_PUBLISH_ENABLED: true
+      BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+      BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Verify seed handles
+        run: python -m src.main --growth-verify-seeds
+
+      - name: Profile + pinned intro thread
+        env:
+          BW_DRY_RUN: ${{ inputs.dry_run }}
+          BW_PROFILE: ${{ inputs.profile }}
+          BW_PIN_THREAD: ${{ inputs.pin_thread }}
+        run: |
+          args=()
+
+          if [ "$BW_PROFILE" = "true" ]; then
+            args+=(--growth-profile)
+          fi
+
+          if [ "$BW_PIN_THREAD" = "true" ]; then
+            args+=(--growth-pin-thread)
+          fi
+
+          if [ "${#args[@]}" -eq 0 ]; then
+            echo "Nothing selected (profile=false, pin_thread=false); seeds verified only."
+            exit 0
+          fi
+
+          if [ "$BW_DRY_RUN" = "true" ]; then
+            args+=(--growth-dry-run)
+          fi
+
+          python -m src.main "${args[@]}"
+
+      - name: Commit growth ledger
+        # The pinned-thread state is written after every posted thread post,
+        # so it is committed even when the step aborted part-way.
+        if: ${{ !cancelled() }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data/growth_ledger.json 2>/dev/null || true
+
+          if git diff --cached --quiet; then
+            echo "No growth ledger changes to commit"
+          else
+            git commit -m "chore: record pinned intro thread in growth ledger"
+
+            for attempt in 1 2 3; do
+              if git push; then
+                exit 0
+              fi
+
+              echo "Push failed on attempt ${attempt}; rebasing onto latest ${GITHUB_REF_NAME} before retrying"
+              git fetch origin "${GITHUB_REF_NAME}"
+              git rebase "origin/${GITHUB_REF_NAME}"
+            done
+
+            echo "Push failed after 3 attempts" >&2
+            exit 1
+          fi

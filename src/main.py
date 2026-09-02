@@ -1019,7 +1019,7 @@ def _build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--growth-mode", choices=["seed", "discover"], default="discover", help="--growth-follow source: 'seed' follows the configured seed_handles themselves; 'discover' (default) follows accounts found via the seeds' graphs, lists and keyword search.")
     parser.add_argument("--growth-dry-run", action="store_true", help="Plan growth actions (follow / profile / pin) without writing anything to Bluesky.")
     parser.add_argument("--growth-limit", type=int, default=None, help="Override follows_per_run from config/growth.json for this run.")
-    parser.add_argument("--growth-verify-seeds", action="store_true", help="Resolve every seed handle in config/growth.json and print followers/posts/last post; exits 1 if any is unresolved.")
+    parser.add_argument("--growth-verify-seeds", action="store_true", help="Resolve every seed handle and list/starter-pack reference in config/growth.json and print their stats; exits 1 if any is unresolved. Works without credentials (public AppView).")
     parser.add_argument("--growth-profile", action="store_true", help="Update display name + bio from config/identity.json, merged onto the live profile record (avatar, banner, pinned post preserved).")
     parser.add_argument("--growth-pin-thread", action="store_true", help="Post the intro thread from config/identity.json and pin its root post (idempotent, resume-safe).")
     return parser
@@ -2420,7 +2420,8 @@ def _reply_digest(logger) -> int:
 def _growth(args, logger) -> int:
     """Growth automation: follow drip, seed check, profile record, pinned intro
     thread. Graph reads need the authenticated viewer state, so credentials are
-    required even for dry runs; real writes additionally require
+    required even for dry runs of the account steps; seed verification alone
+    falls back to the public AppView. Real writes additionally require
     BOARDWIRE_REAL_PUBLISH_ENABLED=true. The growth package has no unfollow or
     delete path by design."""
     from src.growth.client import GrowthClient, GrowthClientError
@@ -2428,10 +2429,11 @@ def _growth(args, logger) -> int:
 
     handle = os.getenv("BLUESKY_HANDLE", "").strip()
     app_password = os.getenv("BLUESKY_APP_PASSWORD", "").strip()
-    if not handle or not app_password:
+    account_steps = bool(args.growth_follow or args.growth_profile or args.growth_pin_thread)
+    if (not handle or not app_password) and account_steps:
         logger.error("Growth commands require BLUESKY_HANDLE and BLUESKY_APP_PASSWORD (graph reads need the authenticated viewer state)")
         return 1
-    wants_write = bool(args.growth_follow or args.growth_profile or args.growth_pin_thread) and not args.growth_dry_run
+    wants_write = account_steps and not args.growth_dry_run
     if wants_write and os.getenv("BOARDWIRE_REAL_PUBLISH_ENABLED", "false").strip().lower() != "true":
         logger.error("Refusing growth writes: BOARDWIRE_REAL_PUBLISH_ENABLED must be true (or add --growth-dry-run)")
         return 1
@@ -2440,13 +2442,18 @@ def _growth(args, logger) -> int:
         return 1
 
     config = load_growth_config()
-    client = GrowthClient(handle, app_password, logger=logger)
-    try:
-        client.login()
-    except GrowthClientError as exc:
-        logger.error("Bluesky login failed: %s", exc)
-        return 1
-    logger.info("Growth: logged in as @%s (%s)%s", client.handle, client.did, " [dry-run]" if args.growth_dry_run else "")
+    if not handle or not app_password:
+        # Only --growth-verify-seeds requested: read the public AppView instead.
+        logger.warning("No Bluesky credentials: verifying seeds via the public AppView (following state unknown)")
+        client = GrowthClient.public_reader(logger=logger)
+    else:
+        client = GrowthClient(handle, app_password, logger=logger)
+        try:
+            client.login()
+        except GrowthClientError as exc:
+            logger.error("Bluesky login failed: %s", exc)
+            return 1
+        logger.info("Growth: logged in as @%s (%s)%s", client.handle, client.did, " [dry-run]" if args.growth_dry_run else "")
 
     steps = (
         (args.growth_verify_seeds, _growth_verify_seeds),
@@ -2470,12 +2477,13 @@ def _growth(args, logger) -> int:
 
 
 def _growth_verify_seeds(client, config, args, logger) -> int:
-    from src.growth.discover import verify_seeds
+    from src.growth.discover import verify_lists, verify_seeds
 
     if not config.seed_handles:
         logger.error("config/growth.json has no seed_handles — add 8-12 verified niche accounts first")
         return 1
     rows = verify_seeds(client, config, logger)
+    rows += verify_lists(client, config, logger)
     return 1 if any(not row.get("ok") for row in rows) else 0
 
 

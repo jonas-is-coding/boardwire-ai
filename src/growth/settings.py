@@ -47,6 +47,17 @@ def normalize_handle(value: Any) -> str:
     return str(value or "").strip().lstrip("@").lower()
 
 
+def is_list_reference(value: str) -> bool:
+    """``list_uris`` entries: an ``at://`` list or starter-pack URI, or the
+    bsky.app URL of a starter pack / list (resolved at runtime)."""
+    text = str(value or "").strip()
+    return (
+        text.startswith("at://")
+        or text.startswith("https://bsky.app/starter-pack/")
+        or (text.startswith("https://bsky.app/profile/") and "/lists/" in text)
+    )
+
+
 @dataclass(slots=True)
 class DiscoveryWeights:
     """Per-channel weight added to a candidate's score each time a channel
@@ -200,7 +211,7 @@ def load_growth_config(path: Path | None = None) -> GrowthConfig:
 
     return GrowthConfig(
         seed_handles=seeds,
-        list_uris=[u for u in _str_list(raw, "list_uris") if u.startswith("at://")],
+        list_uris=[u for u in _str_list(raw, "list_uris") if is_list_reference(u)],
         keywords=_str_list(raw, "keywords") or list(DEFAULT_KEYWORDS),
         weights=weights,
         filters=filters,

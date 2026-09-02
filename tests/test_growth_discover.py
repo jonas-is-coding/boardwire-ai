@@ -15,7 +15,9 @@ from src.growth.discover import (
     Candidate,
     discover_candidates,
     rejection_reason,
+    resolve_list_uri,
     seed_candidates,
+    verify_lists,
     verify_seeds,
 )
 from src.growth.settings import CandidateFilters, GrowthConfig
@@ -116,6 +118,17 @@ class FakeGraph:
     def latest_post_at(self, actor: str) -> str | None:
         self.calls["latest_post_at"] += 1
         return self.latest.get(actor)
+
+    def get_starter_pack(self, uri: str) -> dict:
+        self.calls["get_starter_pack"] += 1
+        if uri == "at://did:plc:list/app.bsky.graph.starterpack/pack":
+            return {"uri": uri, "list": {"uri": _LIST, "name": "AI builders", "listItemCount": 42}}
+        raise GrowthClientError("Starter pack not found", status=400, error="InvalidRequest")
+
+    def get_list_info(self, list_uri: str) -> dict:
+        if list_uri == _LIST:
+            return {"uri": _LIST, "name": "AI builders", "listItemCount": 42}
+        raise GrowthClientError("List not found", status=400, error="InvalidRequest")
 
 
 def _config(**overrides) -> GrowthConfig:
@@ -274,3 +287,41 @@ def test_verify_seeds_reports_unresolved_handles() -> None:
     assert rows[0]["followers"] == 5000
     assert rows[0]["last_post_days"] == 3.0
     assert rows[1]["reason"] == "unresolved"
+
+
+# --- lists / starter packs --------------------------------------------------
+
+
+def _graph_with_curator() -> FakeGraph:
+    graph = _graph()
+    graph.profiles["did:plc:list"] = _profile("curator.test")
+    return graph
+
+
+def test_resolve_list_uri_accepts_every_reference_shape() -> None:
+    graph = _graph_with_curator()
+    assert resolve_list_uri(graph, _LIST, _LOGGER) == _LIST
+    assert resolve_list_uri(graph, "at://did:plc:list/app.bsky.graph.starterpack/pack", _LOGGER) == _LIST
+    assert resolve_list_uri(graph, "https://bsky.app/starter-pack/curator.test/pack", _LOGGER) == _LIST
+    assert resolve_list_uri(graph, "https://bsky.app/starter-pack/did:plc:list/pack", _LOGGER) == _LIST
+    assert resolve_list_uri(graph, "https://bsky.app/profile/curator.test/lists/pack", _LOGGER) == _LIST
+    assert resolve_list_uri(graph, "https://bsky.app/starter-pack/curator.test/missing", _LOGGER) is None
+    assert resolve_list_uri(graph, "https://bsky.app/starter-pack/ghost.test/pack", _LOGGER) is None
+    assert resolve_list_uri(graph, "https://example.com/not-a-list", _LOGGER) is None
+
+
+def test_discovery_reads_starter_pack_members_via_web_url() -> None:
+    graph = _graph_with_curator()
+    config = _config(list_uris=["https://bsky.app/starter-pack/curator.test/pack"])
+    found = discover_candidates(graph, config, _LOGGER, own_did="did:plc:me", now=_NOW)
+    b = next(c for c in found if c.did == "did:plc:b")
+    assert CHANNEL_LISTS in b.channels
+    assert graph.calls["get_starter_pack"] == 1
+
+
+def test_verify_lists_reports_name_size_and_unresolved() -> None:
+    graph = _graph_with_curator()
+    config = _config(list_uris=["https://bsky.app/starter-pack/curator.test/pack", "https://bsky.app/starter-pack/curator.test/nope"])
+    rows = verify_lists(graph, config, _LOGGER)
+    assert rows[0]["ok"] and rows[0]["name"] == "AI builders" and rows[0]["items"] == 42 and rows[0]["uri"] == _LIST
+    assert rows[1] == {"reference": "https://bsky.app/starter-pack/curator.test/nope", "ok": False, "reason": "unresolved"}

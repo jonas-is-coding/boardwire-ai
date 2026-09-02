@@ -20,6 +20,8 @@ from typing import Any, Callable
 import requests
 
 PDS_URL = "https://bsky.social"
+# Unauthenticated AppView: same reads, but no ``viewer`` state and no writes.
+PUBLIC_APPVIEW_URL = "https://public.api.bsky.app"
 
 FOLLOW_COLLECTION = "app.bsky.graph.follow"
 POST_COLLECTION = "app.bsky.feed.post"
@@ -67,14 +69,30 @@ class GrowthClient:
         logger: Logger,
         pds_url: str = PDS_URL,
         sleeper: Callable[[float], None] = time.sleep,
+        public: bool = False,
     ) -> None:
         self.handle = str(handle or "").strip().lstrip("@")
         self._app_password = app_password
         self._logger = logger
         self._pds_url = pds_url.rstrip("/")
         self._sleep = sleeper
+        self._public = public
         self.access_jwt: str | None = None
         self.did: str | None = None
+
+    @classmethod
+    def public_reader(cls, *, logger: Logger, sleeper: Callable[[float], None] = time.sleep) -> "GrowthClient":
+        """Credential-free reader against the public AppView.
+
+        Same graph/profile reads, but profile views carry no ``viewer`` state
+        (so "already following" is unknown) and every write is refused. Used
+        for ``--growth-verify-seeds`` when no app password is configured.
+        """
+        return cls("", "", logger=logger, pds_url=PUBLIC_APPVIEW_URL, sleeper=sleeper, public=True)
+
+    @property
+    def is_public(self) -> bool:
+        return self._public
 
     # ------------------------------------------------------------------
     # transport
@@ -93,7 +111,10 @@ class GrowthClient:
         auth: bool = True,
     ) -> dict:
         headers: dict[str, str] = {}
-        if auth:
+        if self._public:
+            if method != "GET":
+                raise GrowthClientError(f"{nsid}: public reader cannot write")
+        elif auth:
             if not self.access_jwt:
                 raise GrowthClientError(f"{nsid}: not logged in")
             headers["Authorization"] = f"Bearer {self.access_jwt}"
@@ -144,6 +165,8 @@ class GrowthClient:
     # ------------------------------------------------------------------
 
     def login(self) -> str:
+        if self._public:
+            raise GrowthClientError("public reader has no session to create")
         body = self._request(
             "POST",
             "com.atproto.server.createSession",
@@ -210,6 +233,18 @@ class GrowthClient:
 
     def search_actors(self, query: str, limit: int = 50) -> list[dict]:
         return self._paginate("app.bsky.actor.searchActors", {"q": query}, "actors", limit)
+
+    def get_starter_pack(self, uri: str) -> dict:
+        """``starterPack`` view for an ``at://.../app.bsky.graph.starterpack/...`` URI."""
+        body = self._request("GET", "app.bsky.graph.getStarterPack", params={"starterPack": uri})
+        pack = body.get("starterPack")
+        return pack if isinstance(pack, dict) else {}
+
+    def get_list_info(self, list_uri: str) -> dict:
+        """``list`` view (name, purpose, listItemCount) without the members."""
+        body = self._request("GET", "app.bsky.graph.getList", params={"list": list_uri, "limit": "1"})
+        info = body.get("list")
+        return info if isinstance(info, dict) else {}
 
     def latest_post_at(self, actor: str) -> str | None:
         """``createdAt`` of the actor's newest original post, or None."""

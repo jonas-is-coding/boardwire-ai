@@ -1,0 +1,55 @@
+name: Boardwire Growth Config Check
+
+on:
+  # Verifies the growth config against the live public Bluesky AppView on
+  # every PR that touches it: seed handles resolve and are active, list /
+  # starter-pack references resolve to real lists, identity texts fit the
+  # AT Protocol limits. No secrets — the public reader is used, so the
+  # "already following" state is simply unknown here.
+  pull_request:
+    paths:
+      - "config/growth.json"
+      - "config/identity.json"
+      - "config/reply_digest.json"
+      - "src/growth/**"
+      - "src/feedback/reply_digest.py"
+      - ".github/workflows/growth-config-check.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  growth_config_check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt pytest
+
+      - name: Growth + reply digest tests
+        run: python -m pytest -q tests/test_growth_client.py tests/test_growth_discover.py tests/test_growth_follower.py tests/test_growth_profile.py tests/test_growth_cli.py tests/test_reply_digest.py
+
+      - name: Validate identity texts (bio + intro thread limits)
+        run: |
+          python - <<'PY'
+          from src.growth.profile import grapheme_len, load_identity
+          identity = load_identity()
+          print(f"display_name: {grapheme_len(identity.display_name)} graphemes")
+          print(f"description:  {grapheme_len(identity.description)} graphemes")
+          for idx, text in enumerate(identity.intro_thread, start=1):
+              print(f"thread {idx}/{len(identity.intro_thread)}: {grapheme_len(text)} graphemes")
+          PY
+
+      - name: Verify seed handles and lists against the public AppView
+        run: python -m src.main --growth-verify-seeds

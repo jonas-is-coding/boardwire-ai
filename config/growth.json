@@ -1,7 +1,26 @@
 {
-  "_readme": "Follow-drip config. seed_handles: 8-12 verified niche accounts (highest-leverage setting: discovery reads THEIR follow graphs). list_uris: at:// URIs of starter-pack lists. Weights score graph relevance, not follow-back odds. There is no unfollow path.",
-  "seed_handles": [],
-  "list_uris": [],
+  "_readme": "Follow-drip config. seed_handles: verified niche accounts (highest-leverage setting: discovery reads THEIR follow graphs, so seed quality compounds). list_uris: at:// list or starter-pack URIs, or bsky.app starter-pack / list URLs (resolved at runtime). Weights score graph relevance, not follow-back odds. There is no unfollow path. The Growth Config Check workflow verifies seeds + lists on every PR.",
+  "seed_handles": [
+    "simonwillison.net",
+    "natolambert.bsky.social",
+    "hamel.bsky.social",
+    "swyx.io",
+    "howard.fm",
+    "sebastianraschka.com",
+    "osanseviero.bsky.social",
+    "eugeneyan.com",
+    "mattpocock.com",
+    "xenova.bsky.social",
+    "thomwolf.bsky.social",
+    "brianell.in"
+  ],
+  "list_uris": [
+    "https://bsky.app/starter-pack/nimobeeren.com/3l7i7ciwnt22v",
+    "https://bsky.app/starter-pack/pelayoarbues.com/3l7gammw22z2c",
+    "https://bsky.app/starter-pack/pelayoarbues.com/3l7isybcp522s",
+    "https://bsky.app/starter-pack/devtools.fm/3l7uo2usby32x",
+    "https://bsky.app/starter-pack/aisupremacy.bsky.social/3lbvqgzrohc2f"
+  ],
   "keywords": [
     "Claude Code",
     "MCP server",
@@ -47,5 +66,8 @@
   "max_list_members": 100,
   "max_hydrate": 300,
   "freshness_pool_factor": 3,
-  "pace_seconds": [20, 45]
+  "pace_seconds": [
+    20,
+    45
+  ]
 }

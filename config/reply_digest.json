@@ -7,7 +7,20 @@
     "Ollama",
     "AI agents"
   ],
-  "target_handles": [],
+  "target_handles": [
+    "simonwillison.net",
+    "natolambert.bsky.social",
+    "hamel.bsky.social",
+    "swyx.io",
+    "howard.fm",
+    "sebastianraschka.com",
+    "osanseviero.bsky.social",
+    "eugeneyan.com",
+    "mattpocock.com",
+    "xenova.bsky.social",
+    "thomwolf.bsky.social",
+    "brianell.in"
+  ],
   "max_posts": 8,
   "posts_per_keyword": 5,
   "posts_per_target": 5,

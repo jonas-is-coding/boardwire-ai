@@ -202,3 +202,37 @@ def test_latest_post_at_skips_reposts(monkeypatch) -> None:
 
     client = _client(monkeypatch, [], get=get)
     assert client.latest_post_at("did:plc:a") == "2026-09-01T10:00:00Z"
+
+
+def test_public_reader_reads_without_auth_and_refuses_writes(monkeypatch) -> None:
+    calls: list = []
+
+    def fake_get(url, **kwargs):
+        calls.append({"url": url, "kwargs": kwargs})
+        return _Resp(200, {"profiles": [{"did": "did:plc:a", "handle": "a.test"}]})
+
+    monkeypatch.setattr(mod.requests, "get", fake_get)
+    monkeypatch.setattr(mod.requests, "post", lambda url, **kw: pytest.fail("public reader must never POST"))
+
+    client = GrowthClient.public_reader(logger=_LOGGER, sleeper=lambda s: None)
+    assert client.is_public
+    assert [p["did"] for p in client.get_profiles(["a.test"])] == ["did:plc:a"]
+    assert calls[0]["url"].startswith("https://public.api.bsky.app/xrpc/")
+    assert "Authorization" not in calls[0]["kwargs"]["headers"]
+    with pytest.raises(GrowthClientError):
+        client.follow("did:plc:a")
+    with pytest.raises(GrowthClientError):
+        client.login()
+
+
+def test_starter_pack_and_list_info_reads(monkeypatch) -> None:
+    def get(url, kwargs):
+        if url.endswith("app.bsky.graph.getStarterPack"):
+            assert kwargs["params"]["starterPack"] == "at://did:plc:c/app.bsky.graph.starterpack/p"
+            return _Resp(200, {"starterPack": {"list": {"uri": "at://did:plc:c/app.bsky.graph.list/l"}}})
+        assert url.endswith("app.bsky.graph.getList") and kwargs["params"]["limit"] == "1"
+        return _Resp(200, {"list": {"name": "Builders", "listItemCount": 7}, "items": []})
+
+    client = _client(monkeypatch, [], get=get)
+    assert client.get_starter_pack("at://did:plc:c/app.bsky.graph.starterpack/p")["list"]["uri"].endswith("/l")
+    assert client.get_list_info("at://did:plc:c/app.bsky.graph.list/l") == {"name": "Builders", "listItemCount": 7}

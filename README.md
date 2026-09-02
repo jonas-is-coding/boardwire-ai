@@ -351,16 +351,17 @@ project** — the pipeline — not the news product; the news is the output.
 
 | Command | What it does |
 |---|---|
-| `--growth-verify-seeds` | Resolves every `seed_handles` entry in `config/growth.json`, prints followers / posts / last post, exits 1 on unresolved handles. |
+| `--growth-verify-seeds` | Resolves every `seed_handles` entry and every `list_uris` reference in `config/growth.json`, prints followers / posts / last post and list sizes, exits 1 on anything unresolved. Works without credentials (public AppView). |
 | `--growth-follow --growth-mode seed` | Follows the seed accounts themselves. |
 | `--growth-follow` (`--growth-mode discover`) | Paced follow drip over accounts discovered from the seeds' graphs (`growth-follow.yml`: weekdays 07:40 UTC, ~12 follows per run). |
 | `--growth-profile` | Writes display name + bio from `config/identity.json`, merged onto the live profile record. |
 | `--growth-pin-thread` | Posts the 6-post intro thread from `config/identity.json` and pins its root. Idempotent and resume-safe. |
 
 Add `--growth-dry-run` to any of them to plan without writing; `--growth-limit N`
-caps one run. Every growth command needs `BLUESKY_HANDLE` +
+caps one run. The account commands need `BLUESKY_HANDLE` +
 `BLUESKY_APP_PASSWORD` (graph reads require the authenticated `viewer` state);
-real writes additionally need `BOARDWIRE_REAL_PUBLISH_ENABLED=true`.
+real writes additionally need `BOARDWIRE_REAL_PUBLISH_ENABLED=true`. Only
+`--growth-verify-seeds` runs without credentials.
 
 Design decisions worth keeping:
 
@@ -388,7 +389,39 @@ Design decisions worth keeping:
   `app.bsky.actor.profile/self` destroys the avatar and banner blob references
   and the pinned post.
 
-Rollout order:
+### Seeds, targets and lists
+
+`config/growth.json` ships with 12 seed accounts chosen for the niche (LLM
+tooling, open weights, local inference, AI engineering, MCP):
+`simonwillison.net`, `natolambert.bsky.social`, `hamel.bsky.social`,
+`swyx.io`, `howard.fm`, `sebastianraschka.com`, `osanseviero.bsky.social`,
+`eugeneyan.com`, `mattpocock.com`, `xenova.bsky.social`,
+`thomwolf.bsky.social`, `brianell.in`. The same handles are the reply digest's
+`target_handles`. `list_uris` holds five AI / ML / devtools starter packs;
+entries may be `at://` list or starter-pack URIs or plain
+`https://bsky.app/starter-pack/<handle>/<rkey>` URLs, resolved at runtime.
+
+The **Boardwire Growth Config Check** workflow (`growth-config-check.yml`)
+verifies all of this against the live public AppView on every PR that touches
+the config — no secrets needed — so a dead handle or a deleted pack fails the
+PR, not the drip.
+
+### Rollout order
+
+In GitHub Actions (uses the `production` secrets; both workflows are
+`workflow_dispatch` only):
+
+1. **Boardwire Growth Setup** with `dry_run=true` — verifies seeds and lists,
+   prints the profile diff and every thread post.
+2. **Boardwire Growth Follow** with `mode=seed` and `dry_run=true`, then again
+   with `dry_run=false` — follows the seed accounts.
+3. **Boardwire Growth Setup** with `dry_run=false` — writes display name +
+   bio, posts the intro thread and pins it (idempotent, resume-safe).
+
+After that the scheduled **Boardwire Growth Follow** (discover mode) and
+**Boardwire Reply Digest** runs need nothing further. The same sequence
+locally, with the Bluesky credentials and
+`BOARDWIRE_REAL_PUBLISH_ENABLED=true` in `.env`:
 
 ```bash
 python -m src.main --growth-verify-seeds
@@ -398,11 +431,9 @@ python -m src.main --growth-profile --growth-dry-run && python -m src.main --gro
 python -m src.main --growth-pin-thread --growth-dry-run && python -m src.main --growth-pin-thread
 ```
 
-Manual work that stays manual: fill `seed_handles` with 8–12 verified niche
-accounts (highest leverage in the whole setup — discovery reads *their* graphs,
-so seed quality compounds), put the same handles into `target_handles` of
-`config/reply_digest.json`, add starter-pack `at://` list URIs to `list_uris`,
-and spend five minutes a day on the Slack digest.
+What stays manual: five minutes a day on the Slack digest (post 1–3 of the
+suggested replies by hand), and a look at the seed list every few months —
+discovery reads *their* graphs, so seed quality compounds.
 
 ## Staying current & breaking-news burst
 

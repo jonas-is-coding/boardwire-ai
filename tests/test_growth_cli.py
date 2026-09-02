@@ -24,6 +24,12 @@ class FakeClient:
         self.follows: list[str] = []
         FakeClient.instances.append(self)
 
+    @classmethod
+    def public_reader(cls, *, logger, **kwargs) -> "FakeClient":
+        client = cls("", "", logger=logger)
+        client.is_public = True
+        return client
+
     def login(self) -> str:
         self.logged_in = True
         self.did = "did:plc:me"
@@ -63,11 +69,24 @@ def _use_fake_client(monkeypatch, tmp_path: Path, seeds: list[str]) -> Path:
     return ledger_path
 
 
-def test_growth_requires_credentials(monkeypatch) -> None:
+def test_growth_account_steps_require_credentials(monkeypatch, tmp_path) -> None:
     monkeypatch.delenv("BLUESKY_HANDLE", raising=False)
     monkeypatch.delenv("BLUESKY_APP_PASSWORD", raising=False)
+    _use_fake_client(monkeypatch, tmp_path, ["seed.test"])
     assert main_mod.run(["--growth-follow", "--growth-dry-run"]) == 1
-    assert main_mod.run(["--growth-verify-seeds"]) == 1
+    assert main_mod.run(["--growth-profile", "--growth-dry-run"]) == 1
+    assert main_mod.run(["--growth-verify-seeds", "--growth-pin-thread", "--growth-dry-run"]) == 1
+    assert FakeClient.instances == []
+
+
+def test_growth_verify_seeds_without_credentials_uses_public_reader(monkeypatch, tmp_path) -> None:
+    monkeypatch.delenv("BLUESKY_HANDLE", raising=False)
+    monkeypatch.delenv("BLUESKY_APP_PASSWORD", raising=False)
+    _use_fake_client(monkeypatch, tmp_path, ["seed.test"])
+    assert main_mod.run(["--growth-verify-seeds"]) == 0
+    client = FakeClient.instances[-1]
+    assert getattr(client, "is_public", False) is True
+    assert not client.logged_in
 
 
 def test_growth_refuses_real_writes_without_flag(monkeypatch, tmp_path) -> None:

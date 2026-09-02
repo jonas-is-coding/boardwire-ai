@@ -40,6 +40,11 @@ CHANNEL_SEARCH = "search"
 CHANNEL_BIO = "bio"
 CHANNEL_SEED = "seed"  # seed mode: the configured seeds themselves
 
+_STARTER_PACK_WEB_RE = re.compile(r"^https://bsky\.app/starter-pack/([^/?#]+)/([^/?#]+)")
+_LIST_WEB_RE = re.compile(r"^https://bsky\.app/profile/([^/?#]+)/lists/([^/?#]+)")
+_STARTER_PACK_COLLECTION = "app.bsky.graph.starterpack"
+_LIST_COLLECTION = "app.bsky.graph.list"
+
 # Moderation labels (self-labels or labeler-applied) that disqualify an account.
 _BLOCKED_LABELS = {"spam", "impersonation", "scam", "!hide", "!warn", "porn", "sexual", "nudity"}
 _MAX_BIO_HITS = 3
@@ -159,6 +164,78 @@ def _blocked_keyword(cand: Candidate, blocked: list[str]) -> str | None:
 
 
 # ---------------------------------------------------------------------------
+# lists / starter packs
+# ---------------------------------------------------------------------------
+
+
+def _actor_did(client: GrowthClient, actor: str) -> str:
+    if actor.startswith("did:"):
+        return actor
+    did = str(client.get_profile(actor).get("did") or "")
+    if not did:
+        raise GrowthClientError(f"could not resolve DID for {actor}")
+    return did
+
+
+def resolve_list_uri(client: GrowthClient, reference: str, logger: Logger) -> str | None:
+    """Turn a ``list_uris`` entry into an ``at://.../app.bsky.graph.list/...`` URI.
+
+    Accepts a list URI (returned as-is), a starter-pack URI (its list is looked
+    up), or the bsky.app URL of a starter pack or list. Returns None, with a
+    warning, when the reference cannot be resolved.
+    """
+    ref = str(reference or "").strip()
+    try:
+        if ref.startswith("at://"):
+            if f"/{_LIST_COLLECTION}/" in ref:
+                return ref
+            if f"/{_STARTER_PACK_COLLECTION}/" in ref:
+                list_uri = str((client.get_starter_pack(ref).get("list") or {}).get("uri") or "")
+                return list_uri or None
+            logger.warning("Unsupported at:// reference in list_uris: %s", ref)
+            return None
+        match = _STARTER_PACK_WEB_RE.match(ref)
+        if match:
+            did = _actor_did(client, match.group(1))
+            pack_uri = f"at://{did}/{_STARTER_PACK_COLLECTION}/{match.group(2)}"
+            list_uri = str((client.get_starter_pack(pack_uri).get("list") or {}).get("uri") or "")
+            return list_uri or None
+        match = _LIST_WEB_RE.match(ref)
+        if match:
+            did = _actor_did(client, match.group(1))
+            return f"at://{did}/{_LIST_COLLECTION}/{match.group(2)}"
+    except GrowthClientError as exc:
+        logger.warning("List reference %s could not be resolved: %s", ref, exc)
+        return None
+    logger.warning("Unrecognised list reference: %s", ref)
+    return None
+
+
+def verify_lists(client: GrowthClient, config: GrowthConfig, logger: Logger) -> list[dict]:
+    """Resolve every ``list_uris`` entry and log its name and size."""
+    rows: list[dict] = []
+    for ref in config.list_uris:
+        list_uri = resolve_list_uri(client, ref, logger)
+        if not list_uri:
+            rows.append({"reference": ref, "ok": False, "reason": "unresolved"})
+            logger.warning("List %-60s UNRESOLVED", ref)
+            continue
+        try:
+            info = client.get_list_info(list_uri)
+        except GrowthClientError as exc:
+            rows.append({"reference": ref, "uri": list_uri, "ok": False, "reason": str(exc)})
+            logger.warning("List %-60s UNAVAILABLE (%s)", ref, exc)
+            continue
+        count = int(info.get("listItemCount") or 0)
+        name = str(info.get("name") or "")
+        rows.append({"reference": ref, "uri": list_uri, "ok": True, "name": name, "items": count})
+        logger.info("List %-60s -> %-24s %4d members  %s", ref, name[:24], count, list_uri)
+    unresolved = sum(1 for row in rows if not row["ok"])
+    logger.info("Lists: %d resolved, %d unresolved", len(rows) - unresolved, unresolved)
+    return rows
+
+
+# ---------------------------------------------------------------------------
 # seeds
 # ---------------------------------------------------------------------------
 
@@ -229,7 +306,7 @@ def verify_seeds(client: GrowthClient, config: GrowthConfig, logger: Logger, now
             cand.follows_count,
             cand.posts_count,
             f"{age:.0f}d ago" if age is not None else "unknown",
-            "yes" if cand.viewer_following else "no",
+            "n/a (public read)" if getattr(client, "is_public", False) else ("yes" if cand.viewer_following else "no"),
         )
     unresolved = [row["handle"] for row in rows if not row["ok"]]
     logger.info("Seeds: %d resolved, %d unresolved", len(rows) - len(unresolved), len(unresolved))
@@ -293,7 +370,10 @@ def collect_raw_candidates(
         except GrowthClientError as exc:
             logger.warning("getFollowers failed for seed @%s: %s", handle, exc)
 
-    for list_uri in config.list_uris:
+    for reference in config.list_uris:
+        list_uri = resolve_list_uri(client, reference, logger)
+        if not list_uri:
+            continue
         label = list_uri.rsplit("/", 1)[-1]
         try:
             for profile in client.get_list_members(list_uri, limit=config.max_list_members):
