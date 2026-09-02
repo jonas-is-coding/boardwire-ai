@@ -1,0 +1,167 @@
+{
+  "version": 1,
+  "follows": {
+    "did:plc:kft6lu4trxowqmter2b6vg6z": {
+      "handle": "simonwillison.net",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mujwdefhfk2y",
+      "channel": "seed",
+      "score": 1.0,
+      "mode": "seed",
+      "via": [
+        "config seed"
+      ],
+      "followed_at": "2026-09-02T12:21:20.522641Z"
+    },
+    "did:plc:brkj2yocng7vtggmyujy4khq": {
+      "handle": "natolambert.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mujwe4yuk22n",
+      "channel": "seed",
+      "score": 1.0,
+      "mode": "seed",
+      "via": [
+        "config seed"
+      ],
+      "followed_at": "2026-09-02T12:21:46.322980Z"
+    },
+    "did:plc:6umh2rqttv3dxohq7gaxjk36": {
+      "handle": "hamel.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mujwf35pk22n",
+      "channel": "seed",
+      "score": 1.0,
+      "mode": "seed",
+      "via": [
+        "config seed"
+      ],
+      "followed_at": "2026-09-02T12:22:17.938963Z"
+    },
+    "did:plc:oxbzsf2flrqyobhxemowaceh": {
+      "handle": "rasbt.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mujwg5fabh2x",
+      "channel": "seed",
+      "score": 1.0,
+      "mode": "seed",
+      "via": [
+        "config seed"
+      ],
+      "followed_at": "2026-09-02T12:22:53.838467Z"
+    },
+    "did:plc:flxq4uyjfotciovpw3x3fxnu": {
+      "handle": "emollick.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mujwgw6fzc2n",
+      "channel": "seed",
+      "score": 1.0,
+      "mode": "seed",
+      "via": [
+        "config seed"
+      ],
+      "followed_at": "2026-09-02T12:23:19.829700Z"
+    },
+    "did:plc:faxvaqx4xnabwhxea5qqij4b": {
+      "handle": "yoavgo.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mujwhknazd2f",
+      "channel": "seed",
+      "score": 1.0,
+      "mode": "seed",
+      "via": [
+        "config seed"
+      ],
+      "followed_at": "2026-09-02T12:23:41.288235Z"
+    },
+    "did:plc:7e5mpxuweopubhexwqg5l3ba": {
+      "handle": "danielvanstrien.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mujwiv5zvw2y",
+      "channel": "seed",
+      "score": 1.0,
+      "mode": "seed",
+      "via": [
+        "config seed"
+      ],
+      "followed_at": "2026-09-02T12:24:25.879017Z"
+    },
+    "did:plc:xl4nejvjc52uhp25mceh3f7q": {
+      "handle": "kylelo.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mujwk56doe2u",
+      "channel": "seed",
+      "score": 1.0,
+      "mode": "seed",
+      "via": [
+        "config seed"
+      ],
+      "followed_at": "2026-09-02T12:25:07.831718Z"
+    },
+    "did:plc:mray7klv7leelnlkynuk57up": {
+      "handle": "stellaathena.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mujwl3q7oa2j",
+      "channel": "seed",
+      "score": 1.0,
+      "mode": "seed",
+      "via": [
+        "config seed"
+      ],
+      "followed_at": "2026-09-02T12:25:39.875672Z"
+    },
+    "did:plc:vg3thtvfbgfrr3u6pf6hy3yk": {
+      "handle": "dorialexander.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mujwlyjr4l2y",
+      "channel": "seed",
+      "score": 1.0,
+      "mode": "seed",
+      "via": [
+        "config seed"
+      ],
+      "followed_at": "2026-09-02T12:26:10.071017Z"
+    },
+    "did:plc:kbjet2membeuramtzua3vd7w": {
+      "handle": "s.ly",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mujwn5z6zw2z",
+      "channel": "seed",
+      "score": 1.0,
+      "mode": "seed",
+      "via": [
+        "config seed"
+      ],
+      "followed_at": "2026-09-02T12:26:49.402836Z"
+    },
+    "did:plc:i4kytxgsu3yfsrt2ml3o7tgq": {
+      "handle": "ai2.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mujwoizeat22",
+      "channel": "seed",
+      "score": 1.0,
+      "mode": "seed",
+      "via": [
+        "config seed"
+      ],
+      "followed_at": "2026-09-02T12:27:34.470142Z"
+    }
+  },
+  "runs": [
+    {
+      "mode": "seed",
+      "dry_run": false,
+      "limit": 12,
+      "planned": 0,
+      "followed": 12,
+      "skipped_already": 0,
+      "failed": 0,
+      "aborted": null,
+      "handles": [
+        "simonwillison.net",
+        "natolambert.bsky.social",
+        "hamel.bsky.social",
+        "rasbt.bsky.social",
+        "emollick.bsky.social",
+        "yoavgo.bsky.social",
+        "danielvanstrien.bsky.social",
+        "kylelo.bsky.social",
+        "stellaathena.bsky.social",
+        "dorialexander.bsky.social",
+        "s.ly",
+        "ai2.bsky.social"
+      ],
+      "started_at": "2026-09-02T12:21:20.397936Z",
+      "finished_at": "2026-09-02T12:27:34.470865Z"
+    }
+  ],
+  "pinned_thread": null,
+  "profile": null
+}
