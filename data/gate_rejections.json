@@ -98,5 +98,14 @@
     "reasons": [
       "Release dedupe: LangChain v1.4.0 already published at 2026-08-31T00:17:39.850752Z"
     ]
+  },
+  {
+    "rejected_at": "2026-09-02T19:06:28.171613Z",
+    "stage": "review",
+    "title": "Ollama v0.33.3",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.33.3-rc1",
+    "reasons": [
+      "Version-only release without concrete capability: 'Ollama v0.33.3'"
+    ]
   }
 ]

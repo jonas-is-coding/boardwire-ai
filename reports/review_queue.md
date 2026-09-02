@@ -4,8 +4,9 @@
 
 No pending review items.
 
-## Gate rejections (last 11)
+## Gate rejections (last 12)
 
+- `2026-09-02T19:06:28.171613Z` [review] **Ollama v0.33.3** — Version-only release without concrete capability: 'Ollama v0.33.3'
 - `2026-09-01T20:07:42.705515Z` [publish] **langchain==1.4.0a3** — Release dedupe: LangChain v1.4.0 already published at 2026-08-31T00:17:39.850752Z
 - `2026-09-01T16:04:43.513760Z` [review] **Claude Code v2.1.252** — Version-only release without concrete capability: 'Claude Code v2.1.252'
 - `2026-08-26T16:42:19.153923Z` [review] **Ollama v0.33.1-rc0** — Version-only release without concrete capability: 'Ollama v0.33.1-rc0'
