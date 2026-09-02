@@ -289,7 +289,9 @@ def verify_seeds(client: GrowthClient, config: GrowthConfig, logger: Logger, now
         cand.last_post_at = _latest_post(client, cand, logger)
         age = days_since(cand.last_post_at, now)
         reason: str | None = None
-        if age is not None and age > config.seed_max_days_since_post:
+        if cand.posts_count == 0:
+            reason = "no posts (placeholder or wiped account)"
+        elif age is not None and age > config.seed_max_days_since_post:
             reason = f"dormant ({age:.0f}d since last post, max {config.seed_max_days_since_post})"
         rows.append(
             {
@@ -313,7 +315,7 @@ def verify_seeds(client: GrowthClient, config: GrowthConfig, logger: Logger, now
             cand.posts_count,
             f"{age:.0f}d ago" if age is not None else "unknown",
             "n/a (public read)" if getattr(client, "is_public", False) else ("yes" if cand.viewer_following else "no"),
-            f"  DORMANT" if reason else "",
+            f"  FAIL: {reason}" if reason else "",
         )
     unresolved = sum(1 for row in rows if not row["ok"] and row.get("reason") == "unresolved")
     dormant = sum(1 for row in rows if not row["ok"] and row.get("reason") != "unresolved")

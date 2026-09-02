@@ -336,3 +336,11 @@ def test_verify_seeds_flags_dormant_accounts() -> None:
     rows = verify_seeds(graph, config, _LOGGER, now=_NOW)
     assert rows[0]["ok"] is False and rows[0]["reason"].startswith("dormant (200d")
     assert rows[1]["ok"] is True and rows[1]["reason"] is None
+
+
+def test_verify_seeds_flags_accounts_without_posts() -> None:
+    graph = _graph()
+    graph.profiles["did:plc:seed1"]["postsCount"] = 0
+    graph.latest["did:plc:seed1"] = None
+    rows = verify_seeds(graph, _config(seed_handles=["seed1.test"]), _LOGGER, now=_NOW)
+    assert rows[0]["ok"] is False and rows[0]["reason"].startswith("no posts")

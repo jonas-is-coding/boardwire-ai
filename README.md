@@ -391,10 +391,10 @@ Design decisions worth keeping:
 
 ### Seeds, targets and lists
 
-`config/growth.json` ships with 18 seed accounts for the niche (LLM tooling,
+`config/growth.json` ships with 25 seed accounts for the niche (LLM tooling,
 open weights, local inference, AI engineering, MCP); the config check verifies
-that each one resolves and has posted within `seed_max_days_since_post` days
-(default 90), so dormant accounts fail the PR: `simonwillison.net`, `natolambert.bsky.social`, `hamel.bsky.social`, `swyx.io`, `howard.fm`, `eugeneyan.com`, `brianell.in`, `rasbt.bsky.social`, `emollick.bsky.social`, `clem.hf.co`, `soumithchintala.bsky.social`, `srushnlp.bsky.social`, `chrisalbon.com`, `huggingface.bsky.social`, `colah.bsky.social`, `fchollet.bsky.social`, `yoavgo.bsky.social`, `danielvanstrien.bsky.social`. The same handles are the reply digest's
+that each one resolves, has posts, and has posted within
+`seed_max_days_since_post` days (default 90), so dead or dormant accounts fail the PR: `simonwillison.net`, `natolambert.bsky.social`, `hamel.bsky.social`, `rasbt.bsky.social`, `emollick.bsky.social`, `yoavgo.bsky.social`, `danielvanstrien.bsky.social`, `soldaini.net`, `kylelo.bsky.social`, `stellaathena.bsky.social`, `sarahooker.bsky.social`, `dorialexander.bsky.social`, `philschmid.bsky.social`, `merve.bsky.social`, `chiphuyen.bsky.social`, `jayalammar.bsky.social`, `hugobowne.bsky.social`, `deliprao.bsky.social`, `markriedl.bsky.social`, `sebruder.bsky.social`, `cameronwolfe.bsky.social`, `s.ly`, `thorstenball.com`, `mitchellh.com`, `ai2.bsky.social`. The same handles are the reply digest's
 `target_handles`. `list_uris` holds five AI / ML / devtools starter packs;
 entries may be `at://` list or starter-pack URIs or plain
 `https://bsky.app/starter-pack/<handle>/<rkey>` URLs, resolved at runtime.
