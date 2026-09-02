@@ -162,6 +162,39 @@
       "finished_at": "2026-09-02T12:27:34.470865Z"
     }
   ],
-  "pinned_thread": null,
+  "pinned_thread": {
+    "hash": "9ef97968a789ef20",
+    "posts": [
+      {
+        "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mujx5yf3wh2y",
+        "cid": "bafyreid5gg4e73pcisolxzwx4mithq4hwijnjxa3jvwl7l4b432tzlpevy"
+      },
+      {
+        "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mujx5yzdl622",
+        "cid": "bafyreifsqyxfj3ztwzm57h53gapmnury5lfmnhwcav5un74ommfl7772ly"
+      },
+      {
+        "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mujx5zmybj2x",
+        "cid": "bafyreiadhf55ds4ibvur6sf35kdh7iitesqnv2hlcjjc3xjowscdw5l2za"
+      },
+      {
+        "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mujx62befz2y",
+        "cid": "bafyreiewlovqgz4d4xcsbyetngi7souahrluw5twbnrp6e64fwght7uwle"
+      },
+      {
+        "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mujx62vdds2t",
+        "cid": "bafyreib57rqp4lvvrpg2kmdjc2hgjj2weec2ojvhei67adwwywjy3jytwa"
+      },
+      {
+        "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mujx63iob325",
+        "cid": "bafyreigyzf5nufzzx7wkxslmr44bfldcmszuasg4aa52ec7o7dk4sr7fpu"
+      }
+    ],
+    "root_uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mujx5yf3wh2y",
+    "root_cid": "bafyreid5gg4e73pcisolxzwx4mithq4hwijnjxa3jvwl7l4b432tzlpevy",
+    "pinned": true,
+    "posted_at": "2026-09-02T12:36:17.175913Z",
+    "pinned_at": "2026-09-02T12:36:17.780429Z"
+  },
   "profile": null
 }
