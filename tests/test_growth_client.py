@@ -237,3 +237,37 @@ def test_starter_pack_and_list_info_reads(monkeypatch) -> None:
     client = _client(monkeypatch, [], get=get)
     assert client.get_starter_pack("at://did:plc:c/app.bsky.graph.starterpack/p")["list"]["uri"].endswith("/l")
     assert client.get_list_info("at://did:plc:c/app.bsky.graph.list/l") == {"name": "Builders", "listItemCount": 7}
+
+
+def test_latest_post_at_pages_past_a_run_of_reposts(monkeypatch) -> None:
+    repost = {"reason": {"$type": "app.bsky.feed.defs#reasonRepost"}, "post": {"record": {"createdAt": "2020-01-01T00:00:00Z"}}}
+
+    def get(url, kwargs):
+        if kwargs["params"].get("cursor") is None:
+            return _Resp(200, {"feed": [repost] * 10, "cursor": "page2"})
+        return _Resp(200, {"feed": [repost, {"post": {"record": {"createdAt": "2026-08-30T10:00:00Z"}}}]})
+
+    client = _client(monkeypatch, [], get=get)
+    assert client.latest_post_at("did:plc:a") == "2026-08-30T10:00:00Z"
+
+
+def test_latest_post_at_gives_up_after_max_pages(monkeypatch) -> None:
+    repost = {"reason": {"$type": "app.bsky.feed.defs#reasonRepost"}, "post": {"record": {"createdAt": "2020-01-01T00:00:00Z"}}}
+    calls: list = []
+
+    def get(url, kwargs):
+        return _Resp(200, {"feed": [repost] * 10, "cursor": f"c{len(calls)}"})
+
+    client = _client(monkeypatch, calls, get=get)
+    assert client.latest_post_at("did:plc:a", max_pages=3) is None
+    assert len([c for c in calls if c["method"] == "GET"]) == 3
+
+
+def test_list_records_reads_own_repo_newest_first(monkeypatch) -> None:
+    def get(url, kwargs):
+        assert url.endswith("com.atproto.repo.listRecords")
+        assert kwargs["params"] == {"repo": "did:plc:me", "collection": "app.bsky.feed.post", "limit": "50", "reverse": "true"}
+        return _Resp(200, {"records": [{"uri": "at://did:plc:me/app.bsky.feed.post/1", "cid": "c1", "value": {"text": "x"}}, "junk"]})
+
+    client = _client(monkeypatch, [], get=get)
+    assert [r["cid"] for r in client.list_records("app.bsky.feed.post")] == ["c1"]

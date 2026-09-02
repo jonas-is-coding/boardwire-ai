@@ -23,7 +23,7 @@ from pathlib import Path
 
 from src.composer import byte_len
 from src.config import IDENTITY_CONFIG_PATH
-from src.growth.client import PROFILE_COLLECTION, GrowthClient, GrowthClientError, utc_now_iso
+from src.growth.client import POST_COLLECTION, PROFILE_COLLECTION, GrowthClient, GrowthClientError, utc_now_iso
 from src.growth.ledger import GrowthLedger
 from src.storage.json_store import JsonStore
 
@@ -212,6 +212,33 @@ def update_profile(client: GrowthClient, identity: Identity, *, dry_run: bool, l
 # ---------------------------------------------------------------------------
 
 
+def _find_existing_post(client: GrowthClient, text: str, root_uri: str | None) -> dict | None:
+    """An already-created thread post in our own repo: same text and, for
+    replies, the same thread root. Covers the ambiguous write — createRecord
+    reached the PDS but the response was lost — so a retry adopts the record
+    instead of posting it twice."""
+    try:
+        records = client.list_records(POST_COLLECTION, limit=50)
+    except GrowthClientError:
+        return None
+    for record in records:
+        value = record.get("value") if isinstance(record.get("value"), dict) else {}
+        if value.get("text") != text:
+            continue
+        reply = value.get("reply") if isinstance(value.get("reply"), dict) else None
+        if root_uri is None:
+            if reply:
+                continue  # looking for a root post, this one is a reply
+        else:
+            record_root = str(((reply or {}).get("root") or {}).get("uri") or "")
+            if record_root != root_uri:
+                continue
+        uri, cid = record.get("uri"), record.get("cid")
+        if uri and cid:
+            return {"uri": str(uri), "cid": str(cid)}
+    return None
+
+
 @dataclass(slots=True)
 class PinResult:
     status: str                      # skipped | dry_run | pinned
@@ -255,14 +282,30 @@ def pin_intro_thread(
     posted_now = 0
     for idx in range(len(posted), len(identity.intro_thread)):
         text = identity.intro_thread[idx]
-        reply = _reply_ref(posted[0], posted[-1]) if posted else None
-        record = build_post_record(text, created_at=utc_now_iso(now), reply=reply)
-        response = client.create_post(record)
+        root_uri = posted[0]["uri"] if posted else None
+        existing = _find_existing_post(client, text, root_uri)
+        if existing:
+            logger.info("Intro thread %d/%d already exists on the PDS, adopting %s", idx + 1, len(identity.intro_thread), existing["uri"])
+            response: dict = existing
+        else:
+            reply = _reply_ref(posted[0], posted[-1]) if posted else None
+            record = build_post_record(text, created_at=utc_now_iso(now), reply=reply)
+            try:
+                response = client.create_post(record)
+            except GrowthClientError as exc:
+                if exc.status is not None:
+                    raise  # a definite rejection; nothing was created
+                # Transport error: the write may have landed. Look before retrying.
+                existing = _find_existing_post(client, text, root_uri)
+                if not existing:
+                    raise
+                logger.warning("createRecord response lost for intro thread %d/%d; found %s on the PDS", idx + 1, len(identity.intro_thread), existing["uri"])
+                response = existing
+            posted_now += 1
         uri, cid = response.get("uri"), response.get("cid")
         if not uri or not cid:
             raise GrowthClientError("createRecord response missing uri/cid for intro thread post")
         posted.append({"uri": str(uri), "cid": str(cid)})
-        posted_now += 1
         ledger.pinned_thread = {
             "hash": thread_hash,
             "posts": posted,

@@ -246,26 +246,47 @@ class GrowthClient:
         info = body.get("list")
         return info if isinstance(info, dict) else {}
 
-    def latest_post_at(self, actor: str) -> str | None:
+    def latest_post_at(self, actor: str, max_pages: int = 3) -> str | None:
         """``createdAt`` of the actor's newest original post, or None.
 
-        Reads a small page rather than one item: reposts sit in the same feed
-        and are skipped, so a repost on top must not hide the real last post.
+        Reposts sit in the same feed (with a ``reason``) and are skipped, so
+        the feed is paged — a run of reposts on top must not hide the real
+        last post and make an active account look dormant.
         """
+        cursor: str | None = None
+        for _ in range(max(1, max_pages)):
+            params = {"actor": actor, "limit": "10", "filter": "posts_no_replies"}
+            if cursor:
+                params["cursor"] = cursor
+            body = self._request("GET", "app.bsky.feed.getAuthorFeed", params=params)
+            feed = body.get("feed") or []
+            for item in feed:
+                if not isinstance(item, dict) or item.get("reason"):
+                    continue  # reposts carry a ``reason`` and someone else's createdAt
+                post = item.get("post") or {}
+                record = post.get("record") or {}
+                created = record.get("createdAt") or post.get("indexedAt")
+                if created:
+                    return str(created)
+            cursor = body.get("cursor")
+            if not cursor or not feed:
+                break
+        return None
+
+    def list_records(self, collection: str, limit: int = 50) -> list[dict]:
+        """Newest-first ``{uri, cid, value}`` records of our own repo in ``collection``."""
         body = self._request(
             "GET",
-            "app.bsky.feed.getAuthorFeed",
-            params={"actor": actor, "limit": "10", "filter": "posts_no_replies"},
+            "com.atproto.repo.listRecords",
+            params={
+                "repo": self.did or self.handle,
+                "collection": collection,
+                "limit": str(max(1, min(100, limit))),
+                "reverse": "true",
+            },
         )
-        for item in body.get("feed") or []:
-            if not isinstance(item, dict) or item.get("reason"):
-                continue  # reposts carry a ``reason`` and someone else's createdAt
-            post = item.get("post") or {}
-            record = post.get("record") or {}
-            created = record.get("createdAt") or post.get("indexedAt")
-            if created:
-                return str(created)
-        return None
+        records = body.get("records")
+        return [r for r in records if isinstance(r, dict)] if isinstance(records, list) else []
 
     def get_record(self, collection: str, rkey: str, repo: str | None = None) -> dict | None:
         """``{uri, cid, value}`` for a record in our repo, or None if it does not exist."""

@@ -191,25 +191,38 @@ def _search_posts(keyword: str, limit: int, logger: Logger, since: str | None = 
     return posts if isinstance(posts, list) else []
 
 
-def _fetch_target_posts(handle: str, limit: int, logger: Logger) -> list[dict]:
-    """Newest original posts (no reposts, no replies) of a target account."""
-    body = _get_json(
-        _AUTHOR_FEED_URL,
-        {"actor": handle, "limit": str(limit), "filter": "posts_no_replies"},
-        f"author feed @{handle}",
-        logger,
-    )
+def _fetch_target_posts(handle: str, limit: int, logger: Logger, max_pages: int = 3) -> list[dict]:
+    """Newest original posts (no reposts, no replies) of a target account.
+
+    The feed's ``limit`` applies before reposts are filtered out, so the feed
+    is paged until ``limit`` originals are collected or it is exhausted — a
+    target that just reposted a few times must not leave the digest's
+    reserved slots empty.
+    """
     posts: list[dict] = []
-    for item in body.get("feed") or []:
-        if not isinstance(item, dict) or item.get("reason"):
-            continue  # reposts carry a ``reason``
-        post = item.get("post")
-        if not isinstance(post, dict):
-            continue
-        record = post.get("record") if isinstance(post.get("record"), dict) else {}
-        if record.get("reply") is not None:
-            continue
-        posts.append(post)
+    cursor: str | None = None
+    page_size = str(max(10, min(100, limit * 2)))
+    for _ in range(max(1, max_pages)):
+        params = {"actor": handle, "limit": page_size, "filter": "posts_no_replies"}
+        if cursor:
+            params["cursor"] = cursor
+        body = _get_json(_AUTHOR_FEED_URL, params, f"author feed @{handle}", logger)
+        feed = body.get("feed") or []
+        for item in feed:
+            if not isinstance(item, dict) or item.get("reason"):
+                continue  # reposts carry a ``reason``
+            post = item.get("post")
+            if not isinstance(post, dict):
+                continue
+            record = post.get("record") if isinstance(post.get("record"), dict) else {}
+            if record.get("reply") is not None:
+                continue
+            posts.append(post)
+            if len(posts) >= limit:
+                return posts
+        cursor = body.get("cursor")
+        if not cursor or not feed:
+            break
     return posts
 
 

@@ -29,14 +29,29 @@ _BANNER = {"$type": "blob", "ref": {"$link": "bafy-banner"}, "mimeType": "image/
 
 
 class FakeClient:
-    def __init__(self, profile_value: dict | None = None, *, cid: str = "cid-old", fail_post_at: int | None = None) -> None:
+    def __init__(
+        self,
+        profile_value: dict | None = None,
+        *,
+        cid: str = "cid-old",
+        fail_post_at: int | None = None,
+        lose_response_at: int | None = None,
+    ) -> None:
         self.records: dict[str, tuple[dict, str]] = {}
         if profile_value is not None:
             self.records["self"] = ({"$type": "app.bsky.actor.profile", **profile_value}, cid)
         self.puts: list[dict] = []
         self.posts: list[dict] = []
         self.fail_post_at = fail_post_at
+        self.lose_response_at = lose_response_at
         self.did = "did:plc:me"
+
+    def list_records(self, collection: str, limit: int = 50) -> list[dict]:
+        assert collection == "app.bsky.feed.post"
+        return [
+            {"uri": f"at://did:plc:me/app.bsky.feed.post/{n}", "cid": f"cid-post-{n}", "value": record}
+            for n, record in reversed(list(enumerate(self.posts, start=1)))
+        ][:limit]
 
     def get_record(self, collection: str, rkey: str, repo: str | None = None) -> dict | None:
         if rkey not in self.records:
@@ -55,6 +70,9 @@ class FakeClient:
         if self.fail_post_at == n:
             raise GrowthClientError("pds down", status=502)
         self.posts.append(record)
+        if self.lose_response_at == n:
+            # the write landed, the response did not (timeout / connection reset)
+            raise GrowthClientError("createRecord: request error: read timed out")
         return {"uri": f"at://did:plc:me/app.bsky.feed.post/{n}", "cid": f"cid-post-{n}"}
 
 
@@ -259,3 +277,39 @@ def test_changed_thread_is_reposted_and_repinned(tmp_path) -> None:
     assert result.root_uri == "at://did:plc:me/app.bsky.feed.post/4"
     assert client.puts[-1]["record"]["pinnedPost"]["uri"] == result.root_uri
     assert ledger.pinned_thread["hash"] == changed.thread_hash()
+
+
+def test_pin_thread_adopts_post_whose_response_was_lost(tmp_path) -> None:
+    """createRecord reached the PDS but the response timed out: the retry must
+    find the record on the PDS instead of posting the thread entry twice."""
+    client = FakeClient({"displayName": "Boardwire"}, lose_response_at=2)
+    identity = _identity()
+
+    result = pin_intro_thread(client, identity, _ledger(tmp_path), dry_run=False, logger=_LOGGER, now=_NOW)
+
+    assert result.status == "pinned" and result.posted_now == 3
+    assert len(client.posts) == 3  # no duplicate for post 2
+    assert [p["text"] for p in client.posts] == identity.intro_thread
+    assert client.posts[2]["reply"]["parent"] == {"uri": "at://did:plc:me/app.bsky.feed.post/2", "cid": "cid-post-2"}
+    assert result.uris == [f"at://did:plc:me/app.bsky.feed.post/{n}" for n in (1, 2, 3)]
+
+
+def test_pin_thread_adopts_posts_missing_from_a_lost_ledger(tmp_path) -> None:
+    """Posts already on the PDS (ledger lost or written late) are adopted, not re-posted."""
+    identity = _identity()
+    client = FakeClient({"displayName": "Boardwire"})
+    pin_intro_thread(client, identity, _ledger(tmp_path), dry_run=False, logger=_LOGGER, now=_NOW)
+    assert len(client.posts) == 3
+
+    fresh_ledger = GrowthLedger.load(tmp_path / "other-ledger.json")
+    again = pin_intro_thread(client, identity, fresh_ledger, dry_run=False, logger=_LOGGER, now=_NOW)
+    assert again.status == "pinned" and again.posted_now == 0
+    assert len(client.posts) == 3
+    assert again.root_uri == "at://did:plc:me/app.bsky.feed.post/1"
+
+
+def test_definite_rejection_still_raises_without_adopting(tmp_path) -> None:
+    client = FakeClient({"displayName": "Boardwire"}, fail_post_at=1)
+    with pytest.raises(GrowthClientError):
+        pin_intro_thread(client, _identity(), _ledger(tmp_path), dry_run=False, logger=_LOGGER, now=_NOW)
+    assert client.posts == []

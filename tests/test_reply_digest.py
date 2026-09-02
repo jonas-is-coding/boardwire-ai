@@ -277,3 +277,27 @@ def test_digest_text_labels_targets_and_age(monkeypatch) -> None:
     assert "target account" in text and "3h ago" in text
     assert "keyword: `MCP`" in text and "6h ago" in text
     assert "nothing was posted" in text
+
+
+def test_target_feed_pages_past_reposts_until_enough_originals(monkeypatch) -> None:
+    repost = {"post": _post("someone.test", "rp", hours_ago=1, likes=999), "reason": {"$type": "app.bsky.feed.defs#reasonRepost"}}
+    pages = {
+        None: {"feed": [repost] * 10, "cursor": "p2"},
+        "p2": {"feed": [repost, {"post": _post("t1.test", "a", hours_ago=2)}, {"post": _post("t1.test", "b", hours_ago=3)}], "cursor": "p3"},
+        "p3": {"feed": [{"post": _post("t1.test", "c", hours_ago=4)}]},
+    }
+    calls: list = []
+
+    def fake_get(url, **kwargs):
+        calls.append(kwargs["params"])
+        if "getAuthorFeed" in url:
+            return _Resp(200, pages[kwargs["params"].get("cursor")])
+        return _Resp(200, {"posts": []})
+
+    monkeypatch.setattr(mod.requests, "get", fake_get)
+    config = ReplyDigestConfig(keywords=["MCP"], target_handles=["t1.test"], max_posts=5, posts_per_target=2, max_per_author=5)
+
+    picked = collect_reply_candidates(config, _LOGGER, now=_NOW)
+
+    assert [c.uri.rsplit("/", 1)[-1] for c in picked] == ["a", "b"]  # stopped once posts_per_target originals were found
+    assert [p.get("cursor") for p in calls if "actor" in p] == [None, "p2"]
