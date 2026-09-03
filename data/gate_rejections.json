@@ -107,5 +107,14 @@
     "reasons": [
       "Version-only release without concrete capability: 'Ollama v0.33.3'"
     ]
+  },
+  {
+    "rejected_at": "2026-09-03T18:59:20.442340Z",
+    "stage": "review",
+    "title": "Ollama v0.33.3",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.33.3",
+    "reasons": [
+      "Version-only release without concrete capability: 'Ollama v0.33.3'"
+    ]
   }
 ]
