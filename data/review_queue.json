@@ -11253,5 +11253,48 @@
     "card_variant": "editorial_repo",
     "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-09-02-pacifio-atlas-source-control-for-agents-use-multiple-coding-agents-track-their-changes-and-query-them-in-one-place-d079dc8dbfcd.md",
     "published_at": "2026-09-02T17:15:56.059060Z"
+  },
+  {
+    "id": "ea555d576c7b",
+    "status": "approved",
+    "created_at": "2026-09-03T15:48:02.727745Z",
+    "score": 95,
+    "reason": "New CLI features enable centralized enterprise deployment of Claude Code and headless automation, directly impacting builder workflows.",
+    "proposed_post": "Claude Code v2.1.259 introduces `managedMcpServers` for centralized HTTP/SSE MCP server configuration and `--permission-prompts none` for unattended headless operation. This enables easier enterprise deployment and integration into CI/CD or automated agent workflows.",
+    "source_angle": "Claude Code CLI update for enterprise deployment & automation",
+    "source_item": {
+      "title": "Claude Code v2.1.259",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.259",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 0,
+      "summary": "<h2>What's changed</h2>\n<ul>\n<li>Added <code>managedMcpServers</code> managed setting: organizations can provide HTTP/SSE MCP servers to every user (same entry shape as <code>.mcp.json</code>); entries that name a command to run are skipped</li>\n<li>Added <code>--permission-prompts none</code> for unattended headless hosts: anything that would prompt is denied automatically while the active permission mode (including auto mode) keeps deciding</li>\n<li>Added recognition of <code>glab mr create/merge/close/reopen/note/update</code> so GitLab merge requests show as <code>MR !N</code> in the collapsed tool summary and refresh the footer MR badge</li>\n<li>Added <code>--json</code> to <code>claude plugin validate</code> for a machine-readable validation report</li>\n<li>Fixed concurrent sessions silently reverting each other's <code>~/.claude.json</code> changes — workspace trust no longer resets and MCP/project state is no longer lost when running many sessions at once</li>\n<li>Fixed a conversation whose thinking was rejected once being rejected again on every later turn</li>\n<li>Fixed Bash <code>Read()</code> deny rules not covering files given as option values (<code>--ignore-revs-file=.env</code>, <code>-f.env</code>, <code>@file</code>), <code>git diff</code>/<code>git grep</code> file operands, or <code>cd DIR &amp;&amp; cat FILE</code> compounds; <code>grep -r</code>/<code>cp -r</code> over a directory holding a denied file now asks</li>\n<li>Fixed the prompt cache being invalidated when the OAuth token refreshed in sessions with telemetry disabled</li>\n<li>Fixed fullscreen mode showing a blank conversation after a long turn with hundreds of tool calls</li>\n<li>Fixed auto mode running a turn on a model it doesn't support when a command or skill's frontmatter <code>model:</code> named one; the turn now keeps the session model</li>\n<li>Fixed <code>CLAUDE_CODE_MAX_CONTEXT_TOKENS</code> being ignored for Vertex-style model IDs (<code>@YYYYMMDD</code> suffix) of model versions Claude Code doesn't recognize</li>\n<li>Fixed the live output preview of a running shell command hiding its newest lines when an earlier line wrapped</li>\n<li>Fixed a background GitHub connection check that ran on every launch for claude.ai users; the result is now remembered across launches</li>\n<li>Fixed <code>--resume</code> failing (and <code>--continue</code> opening an empty conversation) when a saved session contains an attachment entry with no payload</li>\n<li>Fixed frontmatter <code>model:</code> on custom commands and skills being ignored in interactive sessions</li>\n<li>Fixed Artifact publishing failing once with an \"unexpected parameter <code>note</code>\" error in conversations continued from an older version</li>\n<li>Fixed managed <code>forceRemoteSettingsRefresh</code> being ignored at startup when a policy helper configured by MDM or the managed settings file had already run</li>\n<li>Fixed worktree isolation refusing hook-created worktrees on machines where <code>git rev-parse</code> fails with a message other than \"not a git repository\"</li>\n<li>Fixed OpenTelemetry metrics and events from cloud sessions missing the <code>user.email</code>, <code>organization.id</code>, and <code>user.account_uuid</code> attributes</li>\n<li>Fixed MCP servers that disconnect while their tools are being listed at startup showing as connected with no tools instead of reporting the error</li>\n<li>Fixed the file edit permission dialog sometimes showing a changed line cut short with no indication</li>\n<li>Fixed repository detection dropping a known repo identity after a transient git probe failure</li>\n<li>Fixed managed settings silently going unenforced when the managed-settings file, a drop-in, the MDM plist, or the HKLM value cannot be parsed: Claude Code now refuses to start and names the source</li>\n<li>Fixed Stop not actually stopping background agents and workflows in remote-control sessions: killed tasks now stay visible and re-stoppable until their processes exit</li>\n<li>Fixed resuming a workflow run while its previous stopped run was still exiting, which could run duplicate copies of its agents</li>\n<li>Fixed marketplace repo URLs on github.com with a trailing slash or dangling <code>?</code>/<code>#</code> producing an unusable <code>.git</code> clone URL</li>\n<li>Fixed blocking Stop hooks causing the turn after a block to lose the model's reasoning from that turn and, on some models, miss the prompt cache</li>\n<li>Fixed remote (claude.ai) sessions taking 60 seconds to start a turn after a browser-hosted MCP server's page had gone away</li>\n<li>Fixed worktree-isolated sessions refusing common Bash loops, xargs pipelines and launcher-wrapped commands that cannot reach the main checkout</li>\n<li>Improved terminal resize and first-render performance for long responses by reusing text measurements</li>\n<li>Improved <code>/workflows</code> agent detail: JSON outcomes are pretty-printed with syntax colors and real line breaks, and long outcomes fold behind an expand toggle</li>\n<li>Improved headless/SDK session start: the first turn begins up to 50 ms sooner when MCP servers finish connecting</li>\n<li>Improved <code>/install-github-app</code> to explain it is GitHub-only and point to the GitLab CI/CD docs when run inside a GitLab repository</li>\n<li>Improved nested background subagent results to be saved in the parent subagent's transcript, so resumed subagents keep them and shared transcripts show the delivery</li>\n<li>Changed <code>allowedMcpServers</code> to govern only servers users add: a literal <code>managed-mcp.json</code> server your allowlist used to filter out now loads on upgrade; use <code>deniedMcpServers</code> to keep it off</li>\n<li>[VSCode] Added an Active quick filter and a status filter menu (Needs input, Working, Completed) to the session list sidebar</li>\n<li>Fixed remote and scheduled sessions doing nothing after a connector-tool permission prompt was approved while the session was paused</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: --json, each, oauth, values, repository.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Claude Code Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "--json",
+          "each",
+          "oauth",
+          "values",
+          "repository",
+          "nested",
+          "/workflows",
+          "result"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: --json, each, oauth, values. Lead: Claude Code v2.1.259",
+        "alternative_titles": [],
+        "cluster_score": 15
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Hey Chloe,\n\nHab hier einen Claude Code Release gefunden, v2.1.259. Das ist interessant, weil sie jetzt 'managedMcpServers' hinzugefügt haben. Im Grunde können Orgs jetzt HTTP/SSE MCP-Server für alle User bereitstellen, was das Management von dev-internen Tools und Services deutlich vereinfacht. Entwickler könnten das nutzen, um ihre CI/CD-Pipelines oder interne APIs viel sauberer zu integrieren, ohne dass jeder manuell 'mcp.json' anpassen muss. Das spart Konfigurationsaufwand und reduziert Fehler.",
+    "chloe_note": "Hey, *Claude Code v2.1.259* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New CLI features enable centralized enterprise deployment of Claude Code and headless automation, directly impacting builder workflows.Cluster context: 1 sources, engagement 0. Common terms: --json, each, oauth, values. Score aktuell: 95. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.259"
   }
 ]
