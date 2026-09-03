@@ -3565,5 +3565,35 @@
     "published_weekday": "Wednesday",
     "composer_version": "2",
     "card_variant": "editorial_repo"
+  },
+  {
+    "id": "ea555d576c7b",
+    "published_at": "2026-09-03T17:07:31.046610Z",
+    "platform": "bluesky",
+    "post": "Claude Code centralizes MCP servers for enterprise deployments.\n\nClaude Code v2.1.259 adds managedMcpServers and headless flags for CI/CD…\n\nAnyone running headless deployments with this yet?\n\n#OpenSource #ClaudeCode #Anthropic",
+    "source_link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.259",
+    "source_title": "Claude Code v2.1.259",
+    "score": 95,
+    "reason": "New CLI features enable centralized enterprise deployment of Claude Code and headless automation, directly impacting builder workflows.",
+    "card_path": "generated/cards/ea555d576c7b.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-09-03-claude-code-v2-1-259-ea555d576c7b.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mumws6ongz2f",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mumws6ongz2f",
+    "format_variant": "thread",
+    "hashtags_used": [
+      "#OpenSource",
+      "#ClaudeCode",
+      "#Anthropic"
+    ],
+    "published_hour_utc": 17,
+    "published_weekday": "Thursday",
+    "composer_version": "2",
+    "card_variant": "editorial_release",
+    "thread_uris": [
+      "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mumws6ongz2f",
+      "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mumws7j7ug2u",
+      "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mumws7tae72y"
+    ],
+    "thread_partial": false
   }
 ]

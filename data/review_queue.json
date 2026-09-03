@@ -11256,11 +11256,11 @@
   },
   {
     "id": "ea555d576c7b",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-09-03T15:48:02.727745Z",
     "score": 95,
     "reason": "New CLI features enable centralized enterprise deployment of Claude Code and headless automation, directly impacting builder workflows.",
-    "proposed_post": "Claude Code v2.1.259 introduces `managedMcpServers` for centralized HTTP/SSE MCP server configuration and `--permission-prompts none` for unattended headless operation. This enables easier enterprise deployment and integration into CI/CD or automated agent workflows.",
+    "proposed_post": "Claude Code centralizes MCP servers for enterprise deployments.\n\nClaude Code v2.1.259 adds managedMcpServers and headless flags for CI/CD…\n\nAnyone running headless deployments with this yet?\n\n#OpenSource #ClaudeCode #Anthropic",
     "source_angle": "Claude Code CLI update for enterprise deployment & automation",
     "source_item": {
       "title": "Claude Code v2.1.259",
@@ -11291,10 +11291,29 @@
         "cluster_score": 15
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/ea555d576c7b.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Hey Chloe,\n\nHab hier einen Claude Code Release gefunden, v2.1.259. Das ist interessant, weil sie jetzt 'managedMcpServers' hinzugefügt haben. Im Grunde können Orgs jetzt HTTP/SSE MCP-Server für alle User bereitstellen, was das Management von dev-internen Tools und Services deutlich vereinfacht. Entwickler könnten das nutzen, um ihre CI/CD-Pipelines oder interne APIs viel sauberer zu integrieren, ohne dass jeder manuell 'mcp.json' anpassen muss. Das spart Konfigurationsaufwand und reduziert Fehler.",
-    "chloe_note": "Hey, *Claude Code v2.1.259* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New CLI features enable centralized enterprise deployment of Claude Code and headless automation, directly impacting builder workflows.Cluster context: 1 sources, engagement 0. Common terms: --json, each, oauth, values. Score aktuell: 95. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.259"
+    "chloe_note": "Hey, *Claude Code v2.1.259* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New CLI features enable centralized enterprise deployment of Claude Code and headless automation, directly impacting builder workflows.Cluster context: 1 sources, engagement 0. Common terms: --json, each, oauth, values. Score aktuell: 95. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.259",
+    "sarah_package": {
+      "title": "Claude Code centralizes MCP servers for enterprise deployments.",
+      "subtitle": "Claude Code v2.1.259 adds managedMcpServers and headless flags for CI/CD workflows.",
+      "description": "Managed MCP servers and --permission-prompts none enable unattended enterprise deployments and automated agent loops.",
+      "hashtags": [
+        "#OpenSource",
+        "#ClaudeCode",
+        "#Anthropic"
+      ],
+      "question": "Anyone running headless deployments with this yet?",
+      "card_stat": "+607★",
+      "card_claim": "Managed MCP servers cut ops overhead.",
+      "card_context": "HTTP/SSE MCP servers · CI/CD-native headless flags · centrally configured"
+    },
+    "composer_version": "2",
+    "card_layout": "release",
+    "card_variant": "editorial_release",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-09-03-claude-code-v2-1-259-ea555d576c7b.md",
+    "published_at": "2026-09-03T17:07:31.046610Z"
   }
 ]
