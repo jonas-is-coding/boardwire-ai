@@ -1,18 +1,18 @@
 # Boardwire Engagement Report
 
-Generated: `2026-09-02T08:13:54.548058Z`
+Generated: `2026-09-03T08:23:02.304325Z`
 
 ## Summary
 
-- Measured posts: **190** of 194 published
+- Measured posts: **191** of 195 published
 - Median peak engagement: **0.0**
 - Average peak engagement: **0.6**
 - Top: **5** — Graphify-Labs/graphify — AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, o
 
 ## Patterns
 
-- Release-keyword posts: avg **0.6** (n=118) vs others avg **0.7** (n=72)
-- GitHub sources: avg **0.7** (n=145) vs other sources avg **0.4** (n=45)
+- Release-keyword posts: avg **0.6** (n=118) vs others avg **0.7** (n=73)
+- GitHub sources: avg **0.7** (n=146) vs other sources avg **0.4** (n=45)
 
 ## Engagement by published hour (UTC)
 
@@ -31,7 +31,7 @@ Generated: `2026-09-02T08:13:54.548058Z`
 - 14:00 UTC: avg **0.5** (n=18)
 - 15:00 UTC: avg **0.7** (n=18)
 - 16:00 UTC: avg **0.5** (n=14)
-- 17:00 UTC: avg **0.2** (n=11)
+- 17:00 UTC: avg **0.2** (n=12)
 - 18:00 UTC: avg **1.4** (n=17)
 - 19:00 UTC: avg **0.8** (n=8)
 - 20:00 UTC: avg **1.1** (n=17)
@@ -43,7 +43,7 @@ Generated: `2026-09-02T08:13:54.548058Z`
 
 - Monday: avg **0.8** (n=32)
 - Tuesday: avg **0.7** (n=29)
-- Wednesday: avg **0.4** (n=26)
+- Wednesday: avg **0.4** (n=27)
 - Thursday: avg **0.2** (n=24)
 - Friday: avg **0.6** (n=34)
 - Saturday: avg **1.0** (n=23)
@@ -52,20 +52,20 @@ Generated: `2026-09-02T08:13:54.548058Z`
 ## Engagement by format variant
 
 - plain: avg **0.6** (n=168)
-- question: avg **0.6** (n=15)
+- question: avg **0.6** (n=16)
 - thread: avg **1.6** (n=7)
 
 ## Engagement by card variant
 
 - editorial_release: avg **0.7** (n=23)
-- editorial_repo: avg **0.8** (n=13)
+- editorial_repo: avg **0.8** (n=14)
 - editorial_security: insufficient data (n<5, have 3)
 - editorial_stat: avg **0.7** (n=10)
 
 ## Engagement by hashtag combination
 
 - #AI #AIAgents: insufficient data (n<5, have 2)
-- #AI #AIAgents #DevTools: insufficient data (n<5, have 4)
+- #AI #AIAgents #DevTools: avg **0.6** (n=5)
 - #AI #HuggingFace #OpenWeights: insufficient data (n<5, have 2)
 - #AI #LLM: insufficient data (n<5, have 3)
 - #AI #LocalLLM: insufficient data (n<5, have 1)
@@ -87,7 +87,7 @@ Generated: `2026-09-02T08:13:54.548058Z`
 ## Version-release posts vs others
 
 - Version releases: avg **0.4** (n=89)
-- Others: avg **0.8** (n=101)
+- Others: avg **0.8** (n=102)
   (Version-only releases are now blocked by the quality gate; this group should trend to n=0.)
 
 ## Ranked posts
@@ -228,12 +228,12 @@ Generated: `2026-09-02T08:13:54.548058Z`
    > OpenAI releases Codex Security repo. GitHub repo provides LLM code security guidelines, +197 comments on HN. #OpenSource #InfoSec
 
 28. **2 pts** — openai/codex — Lightweight coding agent that runs in your terminal
-   likes 2 · reposts 0 · replies 0 · quotes 0 · age 226h · score 90
+   likes 2 · reposts 0 · replies 0 · quotes 0 · age 250h · score 90
    https://github.com/openai/codex
    > Terminal coding agents are moving from plugins to core primitives. Codex CLI ships a lightweight coding agent that runs natively in terminal…
 
 29. **2 pts** — GLM-5.3 is now open-weight
-   likes 1 · reposts 0 · replies 1 · quotes 0 · age 105h · score 95
+   likes 1 · reposts 0 · replies 1 · quotes 0 · age 129h · score 95
    https://huggingface.co/zai-org/GLM-5.3
    > Z-AI ships GLM-5.3 as open-weight model. Open weights on HuggingFace with dual context windows: 128K default, 1M optional. +574 HN engagemen…
 
@@ -413,22 +413,22 @@ Generated: `2026-09-02T08:13:54.548058Z`
    > Daybreak models hit AWS Bedrock. Direct API access for AI cybersecurity integration. #LLM #InfoSec #AIAgents
 
 65. **1 pts** — Apple introduces M6 and M5 Ultra for a big leap in performance and AI compute
-   likes 1 · reposts 0 · replies 0 · quotes 0 · age 182h · score 85
+   likes 1 · reposts 0 · replies 0 · quotes 0 · age 206h · score 85
    https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/
    > Apple’s M6 Ultra delivers 2x faster on-device AI inference. Apple released M6 and M5 Ultra chips with up to 2x faster local inference on App…
 
 66. **1 pts** — langchain==1.4.0a2
-   likes 1 · reposts 0 · replies 0 · quotes 0 · age 56h · score 85
+   likes 1 · reposts 0 · replies 0 · quotes 0 · age 80h · score 85
    https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.4.0a2
    > LangChain ships MCP adapter for coding agents. langchain.mcp turns MCP servers into LangChain tools with FastMCP client features, +607 stars…
 
 67. **1 pts** — THU-MAIC/OpenMAIC — Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click
-   likes 1 · reposts 0 · replies 0 · quotes 0 · age 15h · score 90
+   likes 1 · reposts 0 · replies 0 · quotes 0 · age 39h · score 90
    https://github.com/THU-MAIC/OpenMAIC
    > OpenMAIC turns one click into a multi-agent classroom. THU-MAIC/OpenMAIC ships a runnable multi-agent classroom for testing workflows, with …
 
 68. **1 pts** — Claude Code v2.1.257
-   likes 0 · reposts 0 · replies 1 · quotes 0 · age 12h · score 95
+   likes 0 · reposts 0 · replies 1 · quotes 0 · age 36h · score 95
    https://github.com/anthropics/claude-code/releases/tag/v2.1.257
    > Claude Fable 5.1 ships as the new default for Claude Code. $10/$50 per Mtok; 1M context; $0.25/Mtok cache reads. #LLM #ClaudeCode #Anthropic
 
@@ -993,52 +993,57 @@ Generated: `2026-09-02T08:13:54.548058Z`
    > Ollama embeds agent harnesses and coding CLI. Muse Code and DeepSeek Harness land in ollama v0.32.11, +3 new integrations today. #OpenSource…
 
 181. **0 pts** — Anthropic Python SDK v0.125.0
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 306h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 330h · score 90
    https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.125.0
    > Anthropic Python SDK makes memory a managed primitive for agents. v0.125.0 adds self-hosted sandbox memory, +607 stars today, Apache 2.0. #O…
 
 182. **0 pts** — Claude Code v2.1.238
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 278h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 302h · score 90
    https://github.com/anthropics/claude-code/releases/tag/v2.1.238
    > Claude Code ships readline-style keybindings in v2.1.238. v2.1.238 adds Ctrl+W in prompt and plugin marketplace HTTP headers. Anyone using r…
 
 183. **0 pts** — tinyhumansai/openhuman — Your Personal AI super intelligence. A brain that builds a local-first memory of your life, a fantastic orchestrator of agent fleets and workflows, and a deep researcher.
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 210h · score 70
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 234h · score 70
    https://github.com/tinyhumansai/openhuman
    > OpenHuman turns personal AI into a local-first life memory engine. OpenHuman integrates recall, agent orchestration and deep research in one…
 
 184. **0 pts** — Advancing price-performance for developers with GPT‑5.6 in Kiro
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 186h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 210h · score 90
    https://openai.com/index/gpt-5-6-in-kiro
    > GPT‑5.6 lowers dev costs in Kiro. OpenAI releases GPT‑5.6 in Kiro with 48% cheaper prompts for code workflows, Apache 2.0 MCP server. #LLM #…
 
 185. **0 pts** — tt-a1i/archify — Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 162h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 186h · score 90
    https://github.com/tt-a1i/archify
    > Archify turns code into verifiable diagrams automatically. tt-a1i/archify ships an agent skill for architecture, workflow, sequence and life…
 
 186. **0 pts** — Anthropic Python SDK v1.2.0
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 129h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 153h · score 90
    https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.2.0
    > Anthropic Python SDK hardens file uploads for AWS Bedrock. Anthropic SDK v1.2.0 fixes binary uploads on AWS Bedrock and stabilizes beta name…
 
 187. **0 pts** — Claude Code v2.1.248
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 127h · score 60
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 151h · score 60
    https://github.com/anthropics/claude-code/releases/tag/v2.1.248
    > Claude Code adds --restricted mode for sandboxed agents. Anthropic/claude-code v2.1.248 ships --restricted and cacheTtl for secure agent exe…
 
 188. **0 pts** — AI Engineer Notebooks – free, framework-free RAG/agents/evals on Colab
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 103h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 127h · score 90
    https://github.com/calmrocks/ai-engineer-notebooks
    > AI Engineer Notebooks ship framework-free RAG on Colab. calmrocks/ai-engineer-notebooks delivers 12 runnable Colabs for RAG, agents, and eva…
 
 189. **0 pts** — langchain==1.4.0a1
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 37h · score 60
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 61h · score 60
    https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.4.0a1
    > LangChain adds MCP runtime testing. langchain==1.4.0a1 integrates MCP tools via FastMCP utilities, +10k stars. Running MCP tools in LangChai…
 
 190. **0 pts** — jingyaogong/minimind — 🧠 Train a 64M-parameter LLM from scratch in just 2h!
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 34h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 58h · score 90
    https://github.com/jingyaogong/minimind
    > Minimind ships a 64M LLM trained in 2 hours. Trains a 64M-parameter model from scratch in 2h on a single GPU, +472 stars today. #LLM #DevToo…
+
+191. **0 pts** — pacifio/atlas — Source control for agents. Use multiple coding agents, track their changes and query them in one place
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 15h · score 90
+   https://github.com/pacifio/atlas
+   > Atlas turns agents into a first-class primitive with source control. pacifio/atlas manages multiple coding agents, tracks changes, and unifi…
 
