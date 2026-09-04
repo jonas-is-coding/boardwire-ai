@@ -4,8 +4,11 @@
 
 No pending review items.
 
-## Gate rejections (last 13)
+## Gate rejections (last 16)
 
+- `2026-09-04T14:15:23.596098Z` [review] **Decoding the new AI lingo: Loops, harnesses, squads, hill climbing… oh my!** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-04T14:15:23.473403Z` [review] **Porting my 1993 Amiga game to Godot, with an LLM reading the 68000 assembly** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-04T14:15:23.350908Z` [review] **vLLM v0.29.0rc3** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.29.0rc3'
 - `2026-09-03T18:59:20.442340Z` [review] **Ollama v0.33.3** — Version-only release without concrete capability: 'Ollama v0.33.3'
 - `2026-09-02T19:06:28.171613Z` [review] **Ollama v0.33.3** — Version-only release without concrete capability: 'Ollama v0.33.3'
 - `2026-09-01T20:07:42.705515Z` [publish] **langchain==1.4.0a3** — Release dedupe: LangChain v1.4.0 already published at 2026-08-31T00:17:39.850752Z

@@ -116,5 +116,36 @@
     "reasons": [
       "Version-only release without concrete capability: 'Ollama v0.33.3'"
     ]
+  },
+  {
+    "rejected_at": "2026-09-04T14:15:23.350908Z",
+    "stage": "review",
+    "title": "vLLM v0.29.0rc3",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.29.0rc3",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight",
+      "Version-only release without concrete capability: 'vLLM v0.29.0rc3'"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-04T14:15:23.473403Z",
+    "stage": "review",
+    "title": "Porting my 1993 Amiga game to Godot, with an LLM reading the 68000 assembly",
+    "link": "https://babyloniantwins.com/blog/porting-a-1993-amiga-game-to-godot/",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-04T14:15:23.596098Z",
+    "stage": "review",
+    "title": "Decoding the new AI lingo: Loops, harnesses, squads, hill climbing… oh my!",
+    "link": "https://github.blog/ai-and-ml/decoding-the-new-ai-lingo-loops-harnesses-squads-hill-climbing-oh-my/",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
   }
 ]
