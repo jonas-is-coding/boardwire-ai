@@ -298,6 +298,154 @@
         "@dorialexander.bsky.social follows"
       ],
       "followed_at": "2026-09-03T12:21:40.283758Z"
+    },
+    "did:plc:fvniclloczqcqdfdsacjgas5": {
+      "handle": "sharongoldman.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3muowzoyllh2t",
+      "channel": "seed_follows",
+      "score": 2.8,
+      "mode": "discover",
+      "via": [
+        "@natolambert.bsky.social follows",
+        "@stellaathena.bsky.social follows",
+        "list 3lbvqgzd2m62c"
+      ],
+      "followed_at": "2026-09-04T12:17:08.538177Z"
+    },
+    "did:plc:ll42kqkvmrzbmawldhfcuwdq": {
+      "handle": "brettbobley.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3muox2qfznf2x",
+      "channel": "seed_follows",
+      "score": 2.5,
+      "mode": "discover",
+      "via": [
+        "@danielvanstrien.bsky.social follows",
+        "@dorialexander.bsky.social follows"
+      ],
+      "followed_at": "2026-09-04T12:17:43.575563Z"
+    },
+    "did:plc:txuufnpuq6yyejeswitmest2": {
+      "handle": "jamescham.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3muox3dtgtm2u",
+      "channel": "seed_follows",
+      "score": 2.5,
+      "mode": "discover",
+      "via": [
+        "@hamel.bsky.social follows",
+        "@emollick.bsky.social follows"
+      ],
+      "followed_at": "2026-09-04T12:18:03.944880Z"
+    },
+    "did:web:fry69.dev": {
+      "handle": "fry69.dev",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3muox4jfo3o2x",
+      "channel": "seed_follows",
+      "score": 2.5,
+      "mode": "discover",
+      "via": [
+        "@simonwillison.net follows",
+        "@rasbt.bsky.social follows"
+      ],
+      "followed_at": "2026-09-04T12:18:43.336861Z"
+    },
+    "did:plc:shkprmey4o3bc3wfcqf5j3ec": {
+      "handle": "ian.mckellar.org",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3muox5poi2c2j",
+      "channel": "seed_follows",
+      "score": 2.5,
+      "mode": "discover",
+      "via": [
+        "@simonwillison.net follows",
+        "@s.ly follows"
+      ],
+      "followed_at": "2026-09-04T12:19:23.467368Z"
+    },
+    "did:plc:2ul5gejb4x32guuixzdgrdra": {
+      "handle": "elibressert.com",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3muox6mfi3g2u",
+      "channel": "seed_follows",
+      "score": 2.5,
+      "mode": "discover",
+      "via": [
+        "@natolambert.bsky.social follows",
+        "@rasbt.bsky.social follows"
+      ],
+      "followed_at": "2026-09-04T12:19:53.589645Z"
+    },
+    "did:plc:ezto7zsm7rjxoclcecclkq3l": {
+      "handle": "rasgaard.com",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3muox7ni45j2y",
+      "channel": "seed_follows",
+      "score": 2.5,
+      "mode": "discover",
+      "via": [
+        "@danielvanstrien.bsky.social follows",
+        "@dorialexander.bsky.social follows"
+      ],
+      "followed_at": "2026-09-04T12:20:28.274843Z"
+    },
+    "did:plc:jipkqoy5pf6kwzfuzqjyaxue": {
+      "handle": "kennethenevoldsen.eurosky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3muoxabkqok2t",
+      "channel": "seed_follows",
+      "score": 2.5,
+      "mode": "discover",
+      "via": [
+        "@danielvanstrien.bsky.social follows",
+        "@kylelo.bsky.social follows"
+      ],
+      "followed_at": "2026-09-04T12:20:49.331898Z"
+    },
+    "did:plc:os4s2na3cgeietempql2vme2": {
+      "handle": "samgutentag.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3muoxbengf42y",
+      "channel": "seed_followers",
+      "score": 2.5,
+      "mode": "discover",
+      "via": [
+        "follows @hamel.bsky.social",
+        "follows @yoavgo.bsky.social",
+        "follows @stellaathena.bsky.social",
+        "follows @ai2.bsky.social"
+      ],
+      "followed_at": "2026-09-04T12:21:26.120870Z"
+    },
+    "did:plc:tjspc2ayqqvyb2ahyf53y3l6": {
+      "handle": "joel.franusic.com",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3muoxbzpaxl2t",
+      "channel": "seed_follows",
+      "score": 2.5,
+      "mode": "discover",
+      "via": [
+        "@simonwillison.net follows",
+        "@s.ly follows"
+      ],
+      "followed_at": "2026-09-04T12:21:48.209933Z"
+    },
+    "did:plc:x6m5zvil3cirjfu3co4uf2gb": {
+      "handle": "diack.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3muoxcpgcoz2y",
+      "channel": "lists",
+      "score": 2.1,
+      "mode": "discover",
+      "via": [
+        "list 3l7i7cijlhl2f",
+        "list 3l7isyaxzwq2e"
+      ],
+      "followed_at": "2026-09-04T12:22:10.977491Z"
+    },
+    "did:plc:tj6esoknvujv4bnitbn4aab3": {
+      "handle": "moijjo.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3muoxdk2ioz2y",
+      "channel": "seed_followers",
+      "score": 2.1,
+      "mode": "discover",
+      "via": [
+        "follows @natolambert.bsky.social",
+        "follows @ai2.bsky.social",
+        "search 'Ollama'"
+      ],
+      "followed_at": "2026-09-04T12:22:38.904373Z"
     }
   },
   "runs": [
@@ -352,6 +500,32 @@
       ],
       "started_at": "2026-09-03T12:15:42.700592Z",
       "finished_at": "2026-09-03T12:21:40.284686Z"
+    },
+    {
+      "mode": "discover",
+      "dry_run": false,
+      "limit": 12,
+      "planned": 0,
+      "followed": 12,
+      "skipped_already": 0,
+      "failed": 0,
+      "aborted": null,
+      "handles": [
+        "sharongoldman.bsky.social",
+        "brettbobley.bsky.social",
+        "jamescham.bsky.social",
+        "fry69.dev",
+        "ian.mckellar.org",
+        "elibressert.com",
+        "rasgaard.com",
+        "kennethenevoldsen.eurosky.social",
+        "samgutentag.bsky.social",
+        "joel.franusic.com",
+        "diack.bsky.social",
+        "moijjo.bsky.social"
+      ],
+      "started_at": "2026-09-04T12:17:08.231788Z",
+      "finished_at": "2026-09-04T12:22:38.905662Z"
     }
   ],
   "pinned_thread": {
