@@ -147,5 +147,25 @@
       "Post is empty",
       "Post lacks a clear claim or insight"
     ]
+  },
+  {
+    "rejected_at": "2026-09-04T17:33:12.533639Z",
+    "stage": "review",
+    "title": "Which tools do Claude, Codex and Cursor choose? We measured 17k runs to find out",
+    "link": "https://armature.tech/blog/which-tools-coding-agents-install",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-04T17:33:12.661178Z",
+    "stage": "review",
+    "title": "Playco cut manual fixes 50% prototyping games with GPT-6 Astra",
+    "link": "https://openai.com/index/playco-game-prototyping-with-astra",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
   }
 ]

@@ -11318,12 +11318,12 @@
   },
   {
     "id": "32f55f334ff0",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-09-04T14:15:08.958673Z",
+    "status": "approved",
+    "created_at": "2026-09-04T17:33:12.112742Z",
     "score": 90,
-    "reason": "New model deployment on Cerebras with specific performance data. Ships today via accessible API.",
-    "proposed_post": "Qwen 3.8 27B is now available for inference on Cerebras at 1500 tokens/s. This provides a new high-throughput deployment option for builders evaluating Qwen models for production workloads.",
-    "source_angle": "Cerebras offers Qwen 3.8 27B inference at 1500 tokens/s.",
+    "reason": "New model deployment with specific performance via accessible API. Ships today for builders.",
+    "proposed_post": "Qwen 3.8 27B is now available on Cerebras's inference platform, delivering 1500 tokens/s via API. Builders can deploy this model for high-throughput applications, evaluating Cerebras for specific performance needs.",
+    "source_angle": "Cerebras offers Qwen 3.8 27B with 1500 tokens/s inference via API.",
     "source_item": {
       "title": "Qwen 3.8 27B available on Cerebras at 1500 tokens/s",
       "source": "HackerNews",
@@ -11355,10 +11355,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-09-04T14:15:23.070313Z",
-    "defer_count": 1,
-    "original_score": 90,
-    "original_reason": "New model deployment on Cerebras with specific performance data. Ships today via accessible API."
+    "breaking": false,
+    "reactivated_at": "2026-09-04T17:33:12.112742Z"
   },
   {
     "id": "5bbf6a109c12",
@@ -11399,8 +11397,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-09-04T14:15:23.225063Z",
-    "defer_count": 1,
+    "deferred_at": "2026-09-04T17:33:12.255443Z",
+    "defer_count": 2,
     "original_score": 82,
     "original_reason": "New open-source RL framework for LLM/VLM post-training ships on GitHub, offering a tool for enterprise fine-tuning."
   },
@@ -11491,5 +11489,49 @@
     "breaking": false,
     "claire_note": "Okay, Chloe, das ist ein direkter Treffer für unsere Zielgruppe.\n\nDer neue Diff-Panel in Claude Code ist super relevant. Entwickler können jetzt in Echtzeit sehen, wie Claude ihren Code ändert, was die Iteration massiv beschleunigt und Vertrauen schafft. Das ist ein konkretes Feature, das den Workflow direkt optimiert.",
     "chloe_note": "*Claude Code v2.1.260* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Direct release of Claude Code update with concrete features (diff panel, prompt-cache diagnostics) for developers. Passes Ships Test.Cluster context: 1 sources, engagement 0. Common terms: backup, write, swap, while. Bewertung: 90. Quelle: https://github.com/anthropics/claude-code/releases/tag/v2.1.260"
+  },
+  {
+    "id": "f7accc9c7292",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-09-04T17:33:08.348537Z",
+    "score": 85,
+    "reason": "HydraFusion research preview in Copilot offers Opus 5 quality coding at lower cost. It's available to use now.",
+    "proposed_post": "GitHub Copilot's HydraFusion research preview matches Opus 5 quality for coding workflows at a reduced estimated cost. Builders using Copilot can expect improved code suggestions and efficiency.",
+    "source_angle": "GitHub Copilot integrates multi-model orchestration for cost-effective coding.",
+    "source_item": {
+      "title": "Project HydraFusion: Frontier quality via multi-model orchestration",
+      "source": "GitHub Blog AI",
+      "link": "https://github.blog/ai-and-ml/github-copilot/project-hydrafusion-frontier-quality-via-multi-model-orchestration/",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 5,
+      "summary": "<p>In controlled offline evaluations, HydraFusion’s selective coding workflows matched or exceeded the evaluated Opus 5 baseline while reducing estimated workflow cost. Now available as a research preview in GitHub Copilot.</p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/project-hydrafusion-frontier-quality-via-multi-model-orchestration/\">Project HydraFusion: Frontier quality via multi-model orchestration</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>\n[Cluster context: 1 sources, engagement 0, common terms: appeared, while, coding, cost., frontier.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Blog AI"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "appeared",
+          "while",
+          "coding",
+          "cost.",
+          "frontier",
+          "workflows",
+          "workflow",
+          "opus"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: appeared, while, coding, cost.. Lead: Project HydraFusion: Frontier quality via multi-model orchestration",
+        "alternative_titles": [],
+        "cluster_score": 15
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-09-04T17:33:12.404830Z",
+    "defer_count": 1,
+    "original_score": 85,
+    "original_reason": "HydraFusion research preview in Copilot offers Opus 5 quality coding at lower cost. It's available to use now."
   }
 ]
