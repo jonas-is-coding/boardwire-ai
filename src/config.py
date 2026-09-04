@@ -19,11 +19,15 @@ REPLY_DIGEST_CONFIG_PATH = CONFIG_DIR / "reply_digest.json"
 # Growth automation: follow-drip seeds/filters and the bio + pinned intro thread.
 GROWTH_CONFIG_PATH = CONFIG_DIR / "growth.json"
 IDENTITY_CONFIG_PATH = CONFIG_DIR / "identity.json"
+# Publish windows (UTC) + minimum spacing for scheduled --publish-approved runs.
+SCHEDULE_CONFIG_PATH = CONFIG_DIR / "schedule.json"
 SEEN_ITEMS_PATH = DATA_DIR / "seen_items.json"
 DRAFTS_PATH = DATA_DIR / "drafts.json"
 REVIEW_QUEUE_PATH = DATA_DIR / "review_queue.json"
 PUBLISHED_POSTS_PATH = DATA_DIR / "published_posts.json"
 ENGAGEMENT_PATH = DATA_DIR / "engagement.json"
+# Daily follower / following / post counts of the publishing account.
+ACCOUNT_SNAPSHOTS_PATH = DATA_DIR / "account_snapshots.json"
 # Release dedupe ledger: (project, version) tuples already published, so the
 # same release is never posted twice within the dedupe window.
 PUBLISHED_RELEASES_PATH = DATA_DIR / "published_releases.json"

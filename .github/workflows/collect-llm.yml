@@ -1,18 +1,21 @@
 name: Boardwire Collect with LLM
 
 on:
-  # Collect ~1.5h before each publish slot (publish-bluesky.yml) so freshly
-  # approved items are ready when the engagement window opens. Under 1,000
-  # followers 1-2 quality posts/day outperform high volume, so the daily cap
-  # is 2; only breaking-news items (score >= 92 + corroboration) may exceed it.
+  # Collect ahead of each publish window (config/schedule.json) so freshly
+  # approved items are waiting when the window opens. GitHub fires scheduled
+  # runs 2.5-8h late at the moment (see publish-bluesky.yml), so the crons sit
+  # ~3h before the windows and off the top of the hour; approved items stay
+  # valid for 48h, so an early run costs nothing. Under 1,000 followers 1-2
+  # quality posts/day outperform high volume, so the daily cap is 2; only
+  # breaking-news items (score >= 92 + corroboration) may exceed it.
   # NOTE: times assume US Eastern DAYLIGHT time (EDT); shift +1h in US winter.
   schedule:
-    # Weekdays 12:00 UTC — precedes the 13:30 UTC morning publish slot
-    - cron: "0 12 * * 1-5"
-    # Weekdays 16:00 UTC — precedes the 17:30 UTC midday publish slot
-    - cron: "0 16 * * 1-5"
-    # Sunday 20:30 UTC — precedes the 22:00 UTC Sunday-evening publish slot
-    - cron: "30 20 * * 0"
+    # Weekdays 10:07 UTC — ahead of the 13:00-16:00 UTC morning window
+    - cron: "7 10 * * 1-5"
+    # Weekdays 14:07 UTC — ahead of the 17:00-20:30 UTC midday window
+    - cron: "7 14 * * 1-5"
+    # Sunday 18:37 UTC — ahead of the 21:30-24:00 UTC Sunday-evening window
+    - cron: "37 18 * * 0"
   workflow_dispatch:
     inputs:
       limit:
@@ -51,6 +54,16 @@ jobs:
       BOARDWIRE_LLM_PROVIDER: ${{ inputs.llm_provider || 'gemini' }}
       BOARDWIRE_MAX_LLM_ITEMS: ${{ inputs.max_llm_items || '4' }}
       BOARDWIRE_MAX_POSTS_PER_DAY: ${{ inputs.max_posts_per_day || '2' }}
+      # Gemini calls per run. The default of 3 was spent after batch ranking
+      # plus ONE evaluation; every other candidate fell to the rule-based
+      # evaluator, which rejects almost everything ("fallback score below
+      # publish threshold"), so most runs approved nothing. A full run needs
+      # 1 (ranking) + max_llm_items (evaluation) + quality/notification calls.
+      BOARDWIRE_GEMINI_CALL_BUDGET: ${{ vars.BOARDWIRE_GEMINI_CALL_BUDGET || '12' }}
+      # Sarah packaging chain — override when a provider retires a model.
+      BOARDWIRE_GROQ_MODEL: ${{ vars.BOARDWIRE_GROQ_MODEL }}
+      BOARDWIRE_CEREBRAS_MODEL: ${{ vars.BOARDWIRE_CEREBRAS_MODEL }}
+      BOARDWIRE_MISTRAL_MODEL: ${{ vars.BOARDWIRE_MISTRAL_MODEL }}
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
       GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}

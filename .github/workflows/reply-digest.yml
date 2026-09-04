@@ -1,13 +1,16 @@
 name: Boardwire Reply Digest
 
 on:
-  # Weekdays 07:15 UTC = 09:15 Berlin (CEST): the digest lands in Slack at the
-  # start of the day so the 1-3 manual replies go out while the posts are
-  # fresh. Read-only against the public Bluesky AppView plus one Slack webhook
-  # POST — this workflow never posts anything to Bluesky.
-  # NOTE: in Berlin winter (CET, UTC+1) this fires at 08:15 local time.
+  # Weekdays 05:37 UTC = 07:37 Berlin (CEST). GitHub currently fires scheduled
+  # runs 2.5-5h late (the 07:15 cron landed at 12:06 UTC = 14:06 Berlin), so
+  # the cron sits early enough that the digest still reaches Slack in the
+  # morning and the 1-3 manual replies go out while the posts are fresh.
+  # Read-only: author feeds on the public AppView, keyword search through the
+  # authenticated PDS (the public host answers 403 to searchPosts from CI),
+  # plus one Slack webhook POST — this workflow never posts to Bluesky.
+  # NOTE: in Berlin winter (CET, UTC+1) this fires at 06:37 local time.
   schedule:
-    - cron: "15 7 * * 1-5"
+    - cron: "37 5 * * 1-5"
   workflow_dispatch:
 
 permissions:
@@ -18,8 +21,14 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
     env:
-      # Only used to exclude Boardwire's own posts from the digest; no login.
+      # Handle excludes Boardwire's own posts; the app password only opens a
+      # read session for searchPosts (no record is ever written here).
       BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+      BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
+      # Reply-suggestion chain — override when a provider retires a model.
+      BOARDWIRE_GROQ_MODEL: ${{ vars.BOARDWIRE_GROQ_MODEL }}
+      BOARDWIRE_CEREBRAS_MODEL: ${{ vars.BOARDWIRE_CEREBRAS_MODEL }}
+      BOARDWIRE_MISTRAL_MODEL: ${{ vars.BOARDWIRE_MISTRAL_MODEL }}
       OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
       GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
       CEREBRAS_API_KEY: ${{ secrets.CEREBRAS_API_KEY }}

@@ -9,6 +9,7 @@ from urllib.parse import urlparse
 
 from dateutil import parser as date_parser
 
+from src.feedback.account_metrics import render_account_section
 from src.feedback.engagement_store import latest_snapshot, virality_label
 from src.quality.gates import is_version_dominant_title
 from src.storage.json_store import JsonStore
@@ -266,13 +267,15 @@ def _strategy_sections(performances: list[PostPerformance]) -> list[str]:
     return lines
 
 
-def _render_markdown(summary: ReportSummary) -> str:
+def _render_markdown(summary: ReportSummary, account_snapshots: list[dict] | None = None) -> str:
     generated = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
     lines: list[str] = []
     lines.append("# Boardwire Engagement Report")
     lines.append("")
     lines.append(f"Generated: `{generated}`")
     lines.append("")
+    if account_snapshots is not None:
+        lines.extend(render_account_section(account_snapshots))
     lines.append("## Summary")
     lines.append("")
     lines.append(f"- Measured posts: **{summary.measured}** of {summary.total_posts} published")
@@ -330,12 +333,17 @@ def generate_engagement_report(
     published_posts_path: Path,
     engagement_path: Path,
     report_path: Path,
+    account_snapshots_path: Path | None = None,
 ) -> ReportSummary:
     published = JsonStore.load(published_posts_path, default=[])
     store = JsonStore.load(engagement_path, default={})
     if not isinstance(store, dict):
         store = {}
+    snapshots: list[dict] | None = None
+    if account_snapshots_path is not None:
+        loaded = JsonStore.load(account_snapshots_path, default=[])
+        snapshots = loaded if isinstance(loaded, list) else []
     summary = build_report_summary(published, store)
     report_path.parent.mkdir(parents=True, exist_ok=True)
-    report_path.write_text(_render_markdown(summary) + "\n", encoding="utf-8")
+    report_path.write_text(_render_markdown(summary, snapshots) + "\n", encoding="utf-8")
     return summary

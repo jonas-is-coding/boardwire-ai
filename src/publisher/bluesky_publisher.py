@@ -9,6 +9,7 @@ import requests
 
 from src.composer import LINK_PREFIX, byte_len, shorten_at_word_boundary
 from src.publisher.base import PublishResult
+from src.publisher.richtext import merge_facets, post_langs, tag_facets
 
 
 def _rkey_from_at_uri(uri: str) -> str | None:
@@ -220,12 +221,16 @@ class BlueskyPublisher:
         image_alt: str | None,
         reply: dict | None = None,
     ) -> dict | PublishResult:
-        text, facets = _compose_text_with_link(post, source_link)
+        text, link_facets = _compose_text_with_link(post, source_link)
+        # Hashtags only reach feeds and the tag index as facets; the API does
+        # not parse them from the text (see src/publisher/richtext.py).
+        facets = merge_facets(link_facets, tag_facets(text))
         now = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
         record: dict = {
             "$type": "app.bsky.feed.post",
             "text": text,
             "createdAt": now,
+            "langs": post_langs(),
         }
         if facets:
             record["facets"] = facets

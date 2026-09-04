@@ -146,6 +146,18 @@ def test_build_post_record_sets_reply_and_facets() -> None:
     assert "facets" not in build_post_record("plain", created_at="t")
 
 
+def test_build_post_record_declares_language_and_tag_facets(monkeypatch) -> None:
+    monkeypatch.delenv("BOARDWIRE_POST_LANGS", raising=False)
+    text = "Built in the open #OpenSource — code: https://a.b/c 🧵 1/6"
+    record = build_post_record(text, created_at="t")
+    assert record["langs"] == ["en"]
+    kinds = [f["features"][0]["$type"] for f in record["facets"]]
+    assert kinds == ["app.bsky.richtext.facet#tag", "app.bsky.richtext.facet#link"]
+    assert record["facets"][0]["features"][0]["tag"] == "OpenSource"
+    starts = [f["index"]["byteStart"] for f in record["facets"]]
+    assert starts == sorted(starts)
+
+
 # --- profile record ----------------------------------------------------------
 
 
