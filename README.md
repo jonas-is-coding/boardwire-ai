@@ -402,12 +402,22 @@ Design decisions worth keeping:
 - **No unfollow path.** There is no delete call anywhere in `src/growth`; a
   test scans the package source for the delete and batch-write XRPC names.
   Follows are permanent, so the filters do the work up front.
-- **Scoring on graph relevance, not follow-back odds.** Discovery runs four
+- **Graph relevance plus one follow-back signal.** Discovery runs four
   weighted channels — who the seeds follow (`1.0`), who follows the seeds
   (`0.5`), starter-pack lists (`0.8`), keyword search over profiles (`0.4`) —
   plus a small bio-keyword bonus, and sums the weights per account. An account
-  three seeds follow beats one keyword hit. Optimising for follow-backs is
-  follow/unfollow thinking with an extra step.
+  three seeds follow beats one keyword hit. On top of that, a **reciprocity**
+  bonus (`0.5`) rewards accounts that follow generously relative to their own
+  follower count (`follows/followers >= reciprocity_min_follow_ratio`, default
+  `0.8`) — a real signal for follow-back odds, unlike the graph channels alone.
+  `filters.max_followers` (`3000`) keeps discovery targeting accounts near our
+  own size instead of the seeds' own follower counts (thousands to tens of
+  thousands): a sub-1,000-follower account essentially never gets followed
+  back by a 20k+ account, however strongly the graph points at it. Seed
+  accounts themselves are still followed via `--growth-mode seed` regardless
+  of size — this cap only shapes *discovered* candidates. Optimising purely
+  for follow-backs (follow/unfollow) is still avoided: there is no unfollow
+  path, so a bad discovery decision is permanent.
 - **Re-hydration before filtering.** Graph pages and search results carry no
   `viewer.following`; the top raw candidates are re-fetched through the
   authenticated `getProfiles` batch before any filter runs. That is what makes

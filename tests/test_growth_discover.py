@@ -8,6 +8,7 @@ from src.growth.client import GrowthClientError
 from src.growth.discover import (
     CHANNEL_BIO,
     CHANNEL_LISTS,
+    CHANNEL_RECIPROCITY,
     CHANNEL_SEARCH,
     CHANNEL_SEED,
     CHANNEL_SEED_FOLLOWERS,
@@ -178,6 +179,28 @@ def test_scores_sum_channel_weights_and_rank_multi_seed_first() -> None:
     assert c.channels[CHANNEL_BIO] == 0.2
     assert "@seed1.test follows" in a.via and "@seed2.test follows" in a.via
     assert a.top_channel == CHANNEL_SEED_FOLLOWS
+
+
+def test_reciprocity_bonus_rewards_generous_followers_only() -> None:
+    """The reciprocity channel — the one signal that measures follow-back
+    propensity rather than graph relevance — only fires for accounts whose
+    follows/followers ratio clears reciprocity_min_follow_ratio."""
+    graph = _graph()
+    # b.test: bump into "generous follower" territory (ratio 0.9 >= 0.8 default).
+    graph.profiles["did:plc:b"]["followersCount"] = 400
+    graph.profiles["did:plc:b"]["followsCount"] = 360
+    found = discover_candidates(graph, _config(), _LOGGER, own_did="did:plc:me", now=_NOW)
+    by_did = {c.did: c for c in found}
+
+    b = by_did["did:plc:b"]
+    assert CHANNEL_RECIPROCITY in b.channels
+    assert b.channels[CHANNEL_RECIPROCITY] == 0.5
+    assert b.score == 1.0 + 0.8 + 0.2 + 0.5
+
+    # a.test keeps the default 300/500 = 0.6 ratio, below the 0.8 threshold.
+    a = by_did["did:plc:a"]
+    assert CHANNEL_RECIPROCITY not in a.channels
+    assert a.score == 2.0
 
 
 def test_known_accounts_are_pruned_before_hydration() -> None:

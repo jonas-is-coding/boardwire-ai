@@ -63,9 +63,14 @@ class DiscoveryWeights:
     """Per-channel weight added to a candidate's score each time a channel
     surfaces it.
 
-    The score measures *graph relevance* — how strongly the niche we want to be
-    part of already points at an account — and deliberately not follow-back
-    likelihood.
+    Most of the score measures *graph relevance* — how strongly the niche we
+    want to be part of already points at an account. ``reciprocity`` is the
+    one channel that measures follow-back propensity instead: an account
+    that follows generously relative to its own follower count is far more
+    likely to follow back a small account like ours than one a graph channel
+    ranks highly purely on who curates it (a seed's own list can easily point
+    at accounts with tens of thousands of followers, who essentially never
+    follow back a sub-1,000-follower account).
     """
 
     seed_follows: float = 1.0     # accounts a seed chose to follow (curated by people we trust)
@@ -73,6 +78,7 @@ class DiscoveryWeights:
     lists: float = 0.8            # starter packs / curated lists
     search: float = 0.4           # keyword search over profiles (noisiest channel)
     bio_keyword: float = 0.2      # per niche keyword found in the bio (capped at 3 hits)
+    reciprocity: float = 0.5      # follow ratio >= reciprocity_min_follow_ratio (generous follower)
 
 
 @dataclass(slots=True)
@@ -93,6 +99,9 @@ class GrowthConfig:
     keywords: list[str] = field(default_factory=lambda: list(DEFAULT_KEYWORDS))
     weights: DiscoveryWeights = field(default_factory=DiscoveryWeights)
     filters: CandidateFilters = field(default_factory=CandidateFilters)
+    # follows_count / followers_count at or above this counts as a "generous
+    # follower" for the reciprocity bonus (see DiscoveryWeights.reciprocity).
+    reciprocity_min_follow_ratio: float = 0.8
     follows_per_run: int = 12
     graph_depth_per_seed: int = 100   # follows AND followers read per seed
     max_search_results: int = 50      # per keyword
@@ -184,6 +193,7 @@ def load_growth_config(path: Path | None = None) -> GrowthConfig:
         lists=_float(weights_raw, "lists", 0.8),
         search=_float(weights_raw, "search", 0.4),
         bio_keyword=_float(weights_raw, "bio_keyword", 0.2),
+        reciprocity=_float(weights_raw, "reciprocity", 0.5),
     )
     blocked = (
         _str_list(filters_raw, "blocked_keywords")
@@ -216,6 +226,7 @@ def load_growth_config(path: Path | None = None) -> GrowthConfig:
         keywords=_str_list(raw, "keywords") or list(DEFAULT_KEYWORDS),
         weights=weights,
         filters=filters,
+        reciprocity_min_follow_ratio=_float(raw, "reciprocity_min_follow_ratio", 0.8, minimum=0.0),
         follows_per_run=follows_per_run,
         graph_depth_per_seed=_int(raw, "graph_depth_per_seed", 100, minimum=1),
         max_search_results=_int(raw, "max_search_results", 50, minimum=1),

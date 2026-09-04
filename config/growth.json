@@ -1,5 +1,5 @@
 {
-  "_readme": "Follow-drip config. seed_handles: verified niche accounts (highest-leverage setting: discovery reads THEIR follow graphs, so seed quality compounds). list_uris: at:// list or starter-pack URIs, or bsky.app starter-pack / list URLs (resolved at runtime). Weights score graph relevance, not follow-back odds. There is no unfollow path. The Growth Config Check workflow verifies seeds + lists on every PR.",
+  "_readme": "Follow-drip config. seed_handles: verified niche accounts (highest-leverage setting: discovery reads THEIR follow graphs, so seed quality compounds). list_uris: at:// list or starter-pack URIs, or bsky.app starter-pack / list URLs (resolved at runtime). Scoring mixes graph relevance (who the seeds follow/are followed by, list membership, keyword search) with one follow-back signal: the reciprocity bonus for accounts that follow generously relative to their own followers. filters.max_followers is capped well below the seeds' own follower counts on purpose \u2014 a sub-1,000-follower account almost never gets followed back by a 20k+ account, so discovery targets accounts closer to our own size, where follow-backs actually happen. There is no unfollow path. The Growth Config Check workflow verifies seeds + lists on every PR.",
   "seed_handles": [
     "simonwillison.net",
     "natolambert.bsky.social",
@@ -36,11 +36,12 @@
     "seed_followers": 0.5,
     "lists": 0.8,
     "search": 0.4,
-    "bio_keyword": 0.2
+    "bio_keyword": 0.2,
+    "reciprocity": 0.5
   },
   "filters": {
     "min_followers": 30,
-    "max_followers": 50000,
+    "max_followers": 3000,
     "min_posts": 10,
     "max_follow_ratio": 4.0,
     "max_days_since_post": 45,
@@ -70,5 +71,6 @@
   "pace_seconds": [
     20,
     45
-  ]
+  ],
+  "reciprocity_min_follow_ratio": 0.8
 }
