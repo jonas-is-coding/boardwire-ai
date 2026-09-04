@@ -192,25 +192,42 @@ Under 1,000 followers, 1-2 quality posts/day outperform high volume on Bluesky
 (impressions get spread too thin), and the Discover feed rewards early
 engagement velocity — most engagement happens in the first 1-2 hours. Boardwire
 therefore posts into the proven engagement windows instead of spraying every
-2 hours into dead air:
+2 hours into dead air.
 
-| Slot | UTC (cron) | US Eastern (EDT) | CET (summer) |
+**GitHub does not run scheduled workflows on time.** Measured over 60
+consecutive publish runs: 0.5h late in early August 2026, 2.5-8h late from the
+last week of August on. One cron per window therefore landed posts at 1 PM and
+4 PM US Eastern instead of 9:30 AM and 1:30 PM, and the second slot usually
+found an empty queue. The workflow now **polls** (every 30 minutes, off the
+top of the hour) and `config/schedule.json` decides which run may post:
+
+| Window (`config/schedule.json`) | UTC | US Eastern (EDT) | CET (summer) |
 |---|---|---|---|
-| Weekday morning (Mon-Fri) | 13:30 | 9:30 AM | 15:30 |
-| Weekday midday (Mon-Fri) | 17:30 | 1:30 PM | 19:30 |
-| Sunday evening spike | 22:00 | 6:00 PM | 00:00 (Mon) |
+| Weekday morning (Mon-Fri) | 13:00-16:00 | 9:00 AM-12:00 PM | 15:00-18:00 |
+| Weekday midday (Mon-Fri) | 17:00-20:30 | 1:00-4:30 PM | 19:00-22:30 |
+| Sunday evening | 21:30-24:00 | 5:30-8:00 PM | 23:30-02:00 (Mon) |
 
-Collection (`collect-llm.yml`) runs ~1.5h before each publish slot
-(`publish-bluesky.yml`): weekdays 12:00 & 16:00 UTC, Sunday 20:30 UTC.
+Rules (`src/schedule.py`, enforced only when `BOARDWIRE_ENFORCE_PUBLISH_WINDOWS=true`,
+which `publish-bluesky.yml` sets for scheduled runs — manual dispatch publishes
+immediately):
+
+- A routine item publishes only when the run lands **inside** a window.
+- The previous post on the same platform must be at least
+  `min_hours_between_posts` (3h) old, so the two daily posts never land in
+  consecutive 30-minute runs. The daily cap itself is enforced at collection.
+- **Breaking** items (see below) ignore both rules.
+- Runs are serialised (`concurrency` group) and check out the branch tip, so a
+  run that waited in the queue sees the post the previous run committed.
+
+Collection (`collect-llm.yml`) runs ~3h ahead of each window (weekdays 10:07 &
+14:07 UTC, Sunday 18:37 UTC) with the same drift in mind; approved items stay
+valid for 48h, so an early collection costs nothing.
 
 Notes:
-- GitHub cron is UTC and can fire up to ~15-30 min late — acceptable, the
-  windows are 2 hours wide.
-- The crons assume US Eastern **daylight** time (EDT, UTC-4). In US winter
-  (EST, UTC-5) shift each cron +1h; there is a reminder comment in both
-  workflow files.
-- `BOARDWIRE_MAX_POSTS_PER_DAY` defaults to `2` in the workflow; per publish
-  run at most one post goes out (`BOARDWIRE_MAX_PUBLISH_PER_RUN=1`).
+- The windows assume US Eastern **daylight** time (EDT, UTC-4). In US winter
+  (EST, UTC-5) shift each window in `config/schedule.json` +1h.
+- `BOARDWIRE_MAX_POSTS_PER_DAY` defaults to `2` in the collect workflow; per
+  publish run at most one routine post goes out (`BOARDWIRE_MAX_PUBLISH_PER_RUN=1`).
 
 ## Post format
 
@@ -232,6 +249,15 @@ conservatively in UTF-8 bytes, see `src/composer.py`) — never hard-truncated:
 - The link suffix and the hashtag line are reserved **first**; the fact line is
   shortened at a word boundary (clean sentence or ellipsis) when space is
   tight. Priority: link > hashtags > hook > question > fact.
+- **Facets and language are set explicitly** (`src/publisher/richtext.py`).
+  The AT Protocol does not parse hashtags or links out of the text: a record
+  created through the API with plain `#OpenSource` is inert text — not
+  clickable and invisible to the hashtag index that custom feeds and the tag
+  search use. Every post therefore carries `app.bsky.richtext.facet#tag` facets
+  for its hashtags, a `#link` facet for the source URL, and `langs`
+  (`BOARDWIRE_POST_LANGS`, default `en`) — posts without a language are
+  dropped by every language-filtered feed, Discover included. The growth
+  intro thread uses the same record builder.
 - The Sarah `description` field stays on the image card only — it no longer
   enters the post text.
 - The closing question is LLM-drafted per item, validated in code (max ~60
@@ -276,7 +302,8 @@ hashtag/keyword. Tags are selected deterministically in Python from
 `config/hashtags.json` — always exactly 1 broad tag + 1-2 specific tags matched
 from the item's title/summary/source (`src/hashtags.py`). LLM-suggested tags
 are only candidates: anything not in the config is dropped, so invented tags
-never reach Bluesky.
+never reach Bluesky. The publisher turns every tag into a `#tag` facet (see
+"Post format") — until it did, no Boardwire hashtag was indexed at all.
 
 ## Threads for top stories
 
@@ -343,6 +370,13 @@ the strongest visibility signal on Bluesky, and LLM replies under strangers'
 posts get an account muted by exactly the people whose audience it needs —
 which is why they stay human.
 
+The public AppView answers **403** to `searchPosts` from CI (every keyword
+search in the scheduled runs failed that way, leaving only the target
+channel). With `BLUESKY_HANDLE` + `BLUESKY_APP_PASSWORD` the digest opens a
+read session and runs the keyword search through the PDS instead; author feeds
+stay on the public host, and no record is ever written. Each suggestion resets
+the Sarah provider chain, so every candidate gets a draft — not just the first.
+
 ## Growth automation (follow drip, profile, pinned intro)
 
 Opt-in, credential-gated growth for the Bluesky account (`src/growth/`).
@@ -368,12 +402,22 @@ Design decisions worth keeping:
 - **No unfollow path.** There is no delete call anywhere in `src/growth`; a
   test scans the package source for the delete and batch-write XRPC names.
   Follows are permanent, so the filters do the work up front.
-- **Scoring on graph relevance, not follow-back odds.** Discovery runs four
+- **Graph relevance plus one follow-back signal.** Discovery runs four
   weighted channels — who the seeds follow (`1.0`), who follows the seeds
   (`0.5`), starter-pack lists (`0.8`), keyword search over profiles (`0.4`) —
   plus a small bio-keyword bonus, and sums the weights per account. An account
-  three seeds follow beats one keyword hit. Optimising for follow-backs is
-  follow/unfollow thinking with an extra step.
+  three seeds follow beats one keyword hit. On top of that, a **reciprocity**
+  bonus (`0.5`) rewards accounts that follow generously relative to their own
+  follower count (`follows/followers >= reciprocity_min_follow_ratio`, default
+  `0.8`) — a real signal for follow-back odds, unlike the graph channels alone.
+  `filters.max_followers` (`3000`) keeps discovery targeting accounts near our
+  own size instead of the seeds' own follower counts (thousands to tens of
+  thousands): a sub-1,000-follower account essentially never gets followed
+  back by a 20k+ account, however strongly the graph points at it. Seed
+  accounts themselves are still followed via `--growth-mode seed` regardless
+  of size — this cap only shapes *discovered* candidates. Optimising purely
+  for follow-backs (follow/unfollow) is still avoided: there is no unfollow
+  path, so a bad discovery decision is permanent.
 - **Re-hydration before filtering.** Graph pages and search results carry no
   `viewer.following`; the top raw candidates are re-fetched through the
   authenticated `getProfiles` batch before any filter runs. That is what makes
@@ -516,6 +560,17 @@ Supported providers:
 - `gemini`
 
 Gemini is recommended for low-cost/manual LLM collection.
+`BOARDWIRE_GEMINI_CALL_BUDGET` caps Gemini calls per run; the collect
+workflow sets it to 12 (repo variable to override). The old default of 3 was
+spent after batch ranking plus one evaluation, so every other candidate fell
+to the rule-based evaluator and was rejected — most runs approved nothing.
+
+Sarah packaging and reply suggestions use a separate chain (groq → cerebras →
+mistral, `src/llm/sarah_generation.py`). The model per provider is
+`BOARDWIRE_GROQ_MODEL` / `BOARDWIRE_CEREBRAS_MODEL` / `BOARDWIRE_MISTRAL_MODEL`
+(repo variables in the workflows). Providers retire models without notice — a
+`404` in the log means "set the variable to a current model"; the run
+continues on the next provider.
 
 ## GitHub Secrets
 
@@ -557,3 +612,8 @@ published hour (UTC) and weekday, by `format_variant` (question vs plain vs
 thread), by hashtag combination, and version-release posts vs others (should
 trend to n=0 after the version-only gate). Sections with fewer than 5 posts
 print `insufficient data (n<5)` instead of misleading averages.
+
+The report opens with an **Account** line: follower count with 1-day and
+7-day deltas, following and post counts. `--collect-engagement` records one
+snapshot per run in `data/account_snapshots.json` via the public `getProfile`
+(the DID comes from the newest published `at://` URI, no credentials needed).

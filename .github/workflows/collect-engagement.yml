@@ -34,7 +34,7 @@ jobs:
           path: ~/.cache/fastembed
           key: fastembed-${{ runner.os }}-bge-small-en-v1.5
 
-      - name: Collect Bluesky engagement
+      - name: Collect Bluesky engagement (+ account follower snapshot)
         run: python -m src.main --collect-engagement
 
       - name: Train virality model (no-op until enough data)
@@ -57,10 +57,13 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           git add reports/engagement_report.md
-          # virality_model.json / embeddings.json only exist once training runs,
-          # so add them best-effort and never fail the step on a missing file.
           git add data/engagement.json
-          git add data/virality_model.json data/embeddings.json 2>/dev/null || true
+          # These files only exist once their step has run at least once. One
+          # `git add` per file: a single missing pathspec aborts the whole
+          # command, which would silently drop the other files from the commit.
+          git add data/account_snapshots.json 2>/dev/null || true
+          git add data/virality_model.json 2>/dev/null || true
+          git add data/embeddings.json 2>/dev/null || true
 
           if git diff --cached --quiet; then
             echo "No engagement changes to commit"

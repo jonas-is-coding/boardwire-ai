@@ -1,23 +1,35 @@
 name: Boardwire Publish Bluesky
 
 on:
-  # Post into the Bluesky engagement windows instead of spraying every 2h into
-  # dead air. The Discover feed rewards early engagement velocity; best windows
-  # are Tue-Thu 9-11 AM and 1-3 PM US Eastern plus a Sunday-evening spike.
-  # GitHub cron is UTC and can fire up to ~15-30 min late (acceptable).
-  # NOTE: these times assume US Eastern DAYLIGHT time (EDT, UTC-4). In US
-  # winter (EST, UTC-5) shift each cron +1h to stay inside the windows.
+  # GitHub does not run scheduled workflows on time: this workflow's runs
+  # started 0.5h late in early August 2026 and 2.5-8h late from the last week
+  # of August on, which pushed posts meant for the 9:30 AM / 1:30 PM US
+  # Eastern engagement windows to 1 PM / 4 PM. So instead of one cron per
+  # window, the workflow polls every 30 minutes and config/schedule.json
+  # decides which run may post: only inside a window (weekday morning and
+  # midday, Sunday evening) and only 3h+ after the previous post. Off-the-hour
+  # minutes avoid GitHub's top-of-the-hour queue. Manual dispatch publishes
+  # immediately (BOARDWIRE_ENFORCE_PUBLISH_WINDOWS is only set for schedule).
+  # NOTE: windows assume US Eastern DAYLIGHT time (EDT, UTC-4); shift the
+  # windows in config/schedule.json +1h in US winter (EST, UTC-5).
   schedule:
-    # Weekdays 13:30 UTC = 9:30 AM US Eastern (EDT) — strongest morning window (Tue–Thu peak)
-    - cron: "30 13 * * 1-5"
-    # Weekdays 17:30 UTC = 1:30 PM US Eastern — midday window
-    - cron: "30 17 * * 1-5"
-    # Sunday 22:00 UTC = 6 PM US Eastern — Sunday-evening spike
-    - cron: "0 22 * * 0"
+    # Weekdays: every 30 min from 10:07 to 20:37 UTC covers the morning
+    # (13:00-16:00 UTC) and midday (17:00-20:30 UTC) windows even when the
+    # scheduler is 3-6h late.
+    - cron: "7,37 10-20 * * 1-5"
+    # Sunday: every 30 min from 18:07 to 23:37 UTC for the 21:30-24:00 UTC window.
+    - cron: "7,37 18-23 * * 0"
   workflow_dispatch:
 
 permissions:
   contents: write
+
+# Late runs pile up; serialise them so two runs never read the same
+# published_posts.json and both post. A queued run checks out the branch tip
+# (see Checkout), so it sees the post the previous run just committed.
+concurrency:
+  group: boardwire-publish-bluesky-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   publish_bluesky:
@@ -26,6 +38,15 @@ jobs:
     env:
       BOARDWIRE_PUBLISHER: bluesky
       BOARDWIRE_REAL_PUBLISH_ENABLED: true
+      # Scheduled runs are gated by config/schedule.json; manual runs are not.
+      BOARDWIRE_ENFORCE_PUBLISH_WINDOWS: ${{ github.event_name == 'schedule' }}
+      # Language(s) declared on every post (language-filtered feeds skip
+      # posts without one) — comma-separated BCP-47 codes.
+      BOARDWIRE_POST_LANGS: ${{ vars.BOARDWIRE_POST_LANGS || 'en' }}
+      # Sarah packaging chain — override when a provider retires a model.
+      BOARDWIRE_GROQ_MODEL: ${{ vars.BOARDWIRE_GROQ_MODEL }}
+      BOARDWIRE_CEREBRAS_MODEL: ${{ vars.BOARDWIRE_CEREBRAS_MODEL }}
+      BOARDWIRE_MISTRAL_MODEL: ${{ vars.BOARDWIRE_MISTRAL_MODEL }}
       BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
       BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
       OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
@@ -45,6 +66,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # The branch tip at checkout time, not the commit the schedule was
+          # queued on: a run that waited in the concurrency queue must see the
+          # post the previous run committed (spacing + dedupe read that file).
+          ref: ${{ github.ref_name }}
 
       - name: Set up Python
         uses: actions/setup-python@v5

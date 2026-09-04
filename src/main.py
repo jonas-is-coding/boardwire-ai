@@ -28,6 +28,7 @@ from src.composer import (
     validate_question,
 )
 from src.config import (
+    ACCOUNT_SNAPSHOTS_PATH,
     ARTICLES_DIR,
     CARDS_DIR,
     CLUSTERS_DEBUG_PATH,
@@ -66,6 +67,7 @@ from src.quality.gates import (
 )
 from src.reports.article_export import export_review_articles, write_article_for_item
 from src.reports.review_report import generate_review_queue_report
+from src.schedule import evaluate_publish_gate, load_publish_schedule
 from src.storage.json_store import JsonStore
 from src.newsroom.config import load_newsroom_config
 from src.newsroom.orchestrator import run_newsroom_research
@@ -784,6 +786,13 @@ def _apply_freshness_filter(items: list[FeedItem], logger) -> list[FeedItem]:
     for source_name, removed in sorted(removed_by_source.items(), key=lambda kv: (-kv[1], kv[0])):
         logger.info("Freshness filter removed: source=%s count=%d", source_name, removed)
     return kept
+
+
+def _env_flag(name: str, default: bool) -> bool:
+    raw = os.getenv(name)
+    if raw is None or not raw.strip():
+        return default
+    return raw.strip().lower() in {"1", "true", "yes", "on"}
 
 
 def _breaking_config() -> dict:
@@ -1781,6 +1790,23 @@ def _publish_approved(args, logger) -> int:
     # genuinely important developments don't have to wait for separate slots.
     breaking_extra_per_run = max(0, _breaking_config()["max_extra_per_run"])
 
+    # Scheduled runs poll every 30 minutes because GitHub fires crons hours
+    # late; config/schedule.json decides which of those runs may post a
+    # routine item (inside an engagement window, spaced from the last post).
+    # Breaking items bypass the gate; manual runs never enforce it.
+    routine_gate = None
+    if _env_flag("BOARDWIRE_ENFORCE_PUBLISH_WINDOWS", False):
+        routine_gate = evaluate_publish_gate(
+            load_publish_schedule(),
+            published,
+            now_dt,
+            platform=selected_platform,
+        )
+        if routine_gate.open:
+            logger.info("Publish window open: %s", routine_gate.reason)
+        else:
+            logger.info("Publish window closed for routine items: %s (breaking items still publish)", routine_gate.reason)
+
     candidates: list[dict] = []
     expired_count = 0
     for item in queue:
@@ -1835,6 +1861,8 @@ def _publish_approved(args, logger) -> int:
                 # Keep scanning for a breaking item further down rather than
                 # stopping outright (candidates may mix breaking and routine).
                 continue
+        if routine_gate is not None and not routine_gate.open and not is_breaking:
+            continue
         if tried >= publish_try_limit:
             logger.info("Hit publish try limit (%d), stopping", publish_try_limit)
             break
@@ -2325,7 +2353,37 @@ def _collect_engagement(logger) -> int:
         summary.measured,
         summary.missing,
     )
+    _snapshot_account(published, logger)
     return 0
+
+
+def _snapshot_account(published: list[dict], logger) -> None:
+    """Record the account's follower/following/post counts (best effort)."""
+    from src.feedback.account_metrics import (
+        account_did_from_posts,
+        account_trend,
+        fetch_account_counts,
+        record_account_snapshot,
+    )
+
+    actor = os.getenv("BLUESKY_HANDLE", "").strip().lstrip("@") or account_did_from_posts(published)
+    if not actor:
+        logger.info("Account snapshot skipped: no Bluesky handle or published at:// URI to resolve")
+        return
+    counts = fetch_account_counts(actor, logger)
+    if counts is None:
+        return
+    snapshots = record_account_snapshot(ACCOUNT_SNAPSHOTS_PATH, counts)
+    trend = account_trend(snapshots)
+    logger.info(
+        "Account snapshot: @%s followers=%d (1d %s, 7d %s) following=%d posts=%d",
+        counts.handle,
+        counts.followers,
+        f"{trend.followers_delta_1d:+d}" if trend and trend.followers_delta_1d is not None else "n/a",
+        f"{trend.followers_delta_7d:+d}" if trend and trend.followers_delta_7d is not None else "n/a",
+        counts.follows,
+        counts.posts,
+    )
 
 
 def _train_virality_model(logger) -> int:
@@ -2378,7 +2436,7 @@ def _engagement_report(logger) -> int:
     from src.reports.engagement_report import generate_engagement_report
 
     summary = generate_engagement_report(
-        PUBLISHED_POSTS_PATH, ENGAGEMENT_PATH, ENGAGEMENT_REPORT_PATH
+        PUBLISHED_POSTS_PATH, ENGAGEMENT_PATH, ENGAGEMENT_REPORT_PATH, account_snapshots_path=ACCOUNT_SNAPSHOTS_PATH
     )
     if summary.measured == 0:
         logger.info(

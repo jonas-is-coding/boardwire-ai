@@ -307,3 +307,65 @@ def test_release_dedupe_blocks_second_publish(pipeline) -> None:
     assert len(published) == 1  # second one rejected by dedupe
     rejections = json.loads(pipeline["rejections_path"].read_text())
     assert any("Release dedupe" in "; ".join(r.get("reasons", [])) for r in rejections)
+
+
+def _fixed_now(monkeypatch, when: datetime) -> None:
+    class _FrozenDateTime(datetime):
+        @classmethod
+        def now(cls, tz=None):  # type: ignore[override]
+            return when if tz else when.replace(tzinfo=None)
+
+    monkeypatch.setattr(main, "datetime", _FrozenDateTime)
+
+
+def test_scheduled_run_outside_publish_window_skips_routine_items(pipeline, monkeypatch) -> None:
+    monkeypatch.setenv("BOARDWIRE_ENFORCE_PUBLISH_WINDOWS", "true")
+    _fixed_now(monkeypatch, datetime(2026, 9, 3, 12, 30, tzinfo=timezone.utc))  # Thursday, before the morning window
+    JsonStore.save(pipeline["review_path"], [_queue_item(_find_variant_link("plain"), score=70)])
+
+    assert pipeline["run"]() == 0
+
+    assert not pipeline["published_path"].exists() or json.loads(pipeline["published_path"].read_text()) == []
+    queue = json.loads(pipeline["review_path"].read_text())
+    assert queue[0]["status"] == "approved"  # still waiting for the next run inside a window
+
+
+def test_scheduled_run_inside_publish_window_publishes(pipeline, monkeypatch) -> None:
+    monkeypatch.setenv("BOARDWIRE_ENFORCE_PUBLISH_WINDOWS", "true")
+    _fixed_now(monkeypatch, datetime(2026, 9, 3, 13, 40, tzinfo=timezone.utc))
+    JsonStore.save(pipeline["review_path"], [_queue_item(_find_variant_link("plain"), score=70)])
+
+    assert pipeline["run"]() == 0
+
+    assert len(json.loads(pipeline["published_path"].read_text())) == 1
+
+
+def test_scheduled_run_respects_spacing_but_lets_breaking_items_through(pipeline, monkeypatch) -> None:
+    monkeypatch.setenv("BOARDWIRE_ENFORCE_PUBLISH_WINDOWS", "true")
+    now = datetime(2026, 9, 3, 13, 40, tzinfo=timezone.utc)
+    _fixed_now(monkeypatch, now)
+    JsonStore.save(
+        pipeline["published_path"],
+        [{"id": "earlier", "platform": "dry_run", "published_at": "2026-09-03T12:00:00Z", "source_link": "https://example.com/earlier"}],
+    )
+    routine = _queue_item(_find_variant_link("plain"), score=70)
+    breaking = _queue_item("https://example.com/breaking-story", score=95, title="Model release pulled after 24h")
+    breaking["breaking"] = True
+    JsonStore.save(pipeline["review_path"], [routine, breaking])
+
+    assert pipeline["run"]() == 0
+
+    published = json.loads(pipeline["published_path"].read_text())
+    assert [p["id"] for p in published] == ["earlier", breaking["id"]]
+    queue = {item["id"]: item["status"] for item in json.loads(pipeline["review_path"].read_text())}
+    assert queue[routine["id"]] == "approved"
+
+
+def test_manual_run_ignores_publish_windows(pipeline, monkeypatch) -> None:
+    monkeypatch.delenv("BOARDWIRE_ENFORCE_PUBLISH_WINDOWS", raising=False)
+    _fixed_now(monkeypatch, datetime(2026, 9, 5, 3, 0, tzinfo=timezone.utc))  # Saturday night
+    JsonStore.save(pipeline["review_path"], [_queue_item(_find_variant_link("plain"), score=70)])
+
+    assert pipeline["run"]() == 0
+
+    assert len(json.loads(pipeline["published_path"].read_text())) == 1

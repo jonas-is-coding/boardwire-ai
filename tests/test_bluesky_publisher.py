@@ -189,3 +189,57 @@ def test_delete_post_sends_delete_record(monkeypatch) -> None:
         "collection": "app.bsky.feed.post",
         "rkey": "3abc",
     }
+
+
+def test_publish_record_carries_tag_facets_and_langs(monkeypatch, tmp_path: Path) -> None:
+    """Hashtags must ship as facets (the API never parses them) alongside the
+    link facet, and every post declares a language so language-filtered feeds
+    (Discover included) can pick it up."""
+    calls: list = []
+    _patch_requests(monkeypatch, calls)
+    monkeypatch.delenv("BOARDWIRE_POST_LANGS", raising=False)
+    image = tmp_path / "card.png"
+    image.write_bytes(b"\x89PNG")
+    pub = BlueskyPublisher(handle="h", app_password="p")
+
+    body = "Ollama läuft lokal 🚀.\n\nAdds MLX on Apple Silicon.\n\n#OpenSource #Ollama #LocalLLM"
+    result = pub.publish(post=body, source_link="https://example.com/rel#v1", image_path=str(image))
+
+    assert result.success is True
+    (record,) = _created_records(calls)
+    assert record["langs"] == ["en"]
+    raw = record["text"].encode("utf-8")
+    kinds = [(f["features"][0]["$type"], raw[f["index"]["byteStart"] : f["index"]["byteEnd"]].decode()) for f in record["facets"]]
+    assert kinds == [
+        ("app.bsky.richtext.facet#tag", "#OpenSource"),
+        ("app.bsky.richtext.facet#tag", "#Ollama"),
+        ("app.bsky.richtext.facet#tag", "#LocalLLM"),
+        ("app.bsky.richtext.facet#link", "https://example.com/rel#v1"),
+    ]
+    assert [f["features"][0].get("tag") for f in record["facets"][:3]] == ["OpenSource", "Ollama", "LocalLLM"]
+    starts = [f["index"]["byteStart"] for f in record["facets"]]
+    assert starts == sorted(starts)
+
+
+def test_thread_posts_each_carry_langs_and_hook_post_carries_tags(monkeypatch, tmp_path: Path) -> None:
+    calls: list = []
+    _patch_requests(monkeypatch, calls)
+    monkeypatch.setenv("BOARDWIRE_POST_LANGS", "en,de")
+    image = tmp_path / "card.png"
+    image.write_bytes(b"\x89PNG")
+    pub = BlueskyPublisher(handle="h", app_password="p")
+
+    result = pub.publish_thread(
+        [
+            ThreadPost(post="Hook post\n\n#AI #MCP", image_path=str(image), image_alt="card"),
+            ThreadPost(post="Concrete facts here."),
+            ThreadPost(post="", source_link="https://example.com/story"),
+        ]
+    )
+
+    assert result.success is True
+    records = _created_records(calls)
+    assert all(r["langs"] == ["en", "de"] for r in records)
+    assert [f["features"][0]["tag"] for f in records[0]["facets"]] == ["AI", "MCP"]
+    assert "facets" not in records[1]
+    assert records[2]["facets"][0]["features"][0]["uri"] == "https://example.com/story"

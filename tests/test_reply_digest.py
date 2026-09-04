@@ -86,6 +86,7 @@ def test_digest_never_posts_to_bluesky(monkeypatch) -> None:
     monkeypatch.setattr(mod.requests, "get", fake_get)
     monkeypatch.setattr(mod.requests, "post", fake_post)
     monkeypatch.setenv("BLUESKY_HANDLE", "boardwire.bsky.social")
+    monkeypatch.delenv("BLUESKY_APP_PASSWORD", raising=False)  # no session → not even a login POST
     # LLM drafting off (no providers configured in tests) → suggestion is None.
     import src.notifications.persona_voice as voice
 
@@ -301,3 +302,83 @@ def test_target_feed_pages_past_reposts_until_enough_originals(monkeypatch) -> N
 
     assert [c.uri.rsplit("/", 1)[-1] for c in picked] == ["a", "b"]  # stopped once posts_per_target originals were found
     assert [p.get("cursor") for p in calls if "actor" in p] == [None, "p2"]
+
+
+def test_digest_with_credentials_searches_through_the_pds_and_never_writes(monkeypatch) -> None:
+    """The public AppView answers 403 to searchPosts from CI. With an app
+    password the keyword search must go through the authenticated PDS; the
+    only POST allowed is createSession — never a repo write."""
+    gets: list = []
+    posts: list = []
+
+    def fake_get(url, **kwargs):
+        gets.append({"url": url, "kwargs": kwargs})
+        return _Resp(200, _search_payload())
+
+    def fake_post(url, **kwargs):
+        posts.append({"url": url, "kwargs": kwargs})
+        assert url.endswith("com.atproto.server.createSession")
+        return _Resp(200, {"accessJwt": "jwt-read", "did": "did:plc:me"})
+
+    monkeypatch.setattr(mod.requests, "get", fake_get)
+    monkeypatch.setattr(mod.requests, "post", fake_post)
+    monkeypatch.setenv("BLUESKY_HANDLE", "boardwire.bsky.social")
+    monkeypatch.setenv("BLUESKY_APP_PASSWORD", "app-pw")
+    import src.notifications.persona_voice as voice
+    import src.notifications.slack as slack
+
+    monkeypatch.setattr(voice, "draft_reply_suggestion", lambda *a, **k: "Try pairing it with a local runner?")
+    monkeypatch.setattr(slack, "reply_digest", lambda text: None)
+
+    count = mod.run_reply_digest(_LOGGER, config=ReplyDigestConfig(keywords=["MCP"], max_posts=3, posts_per_keyword=3, min_engagement=5))
+
+    assert count == 1
+    assert [p["url"] for p in posts] == [mod._CREATE_SESSION_URL]
+    assert posts[0]["kwargs"]["json"] == {"identifier": "boardwire.bsky.social", "password": "app-pw"}
+    assert not any("com.atproto.repo" in p["url"] for p in posts)
+    searches = [g for g in gets if "searchPosts" in g["url"]]
+    assert searches and all(g["url"] == mod._AUTH_SEARCH_POSTS_URL for g in searches)
+    assert all(g["kwargs"]["headers"] == {"Authorization": "Bearer jwt-read"} for g in searches)
+
+
+def test_failed_login_falls_back_to_public_search(monkeypatch) -> None:
+    gets: list = []
+
+    def fake_get(url, **kwargs):
+        gets.append({"url": url, "kwargs": kwargs})
+        return _Resp(200, {"posts": []})
+
+    monkeypatch.setattr(mod.requests, "get", fake_get)
+    monkeypatch.setattr(mod.requests, "post", lambda url, **kwargs: _Resp(401, {"error": "AuthenticationRequired"}))
+
+    token = mod.bluesky_read_session(_LOGGER, handle="boardwire.bsky.social", app_password="wrong")
+    assert token is None
+    mod.collect_reply_candidates(ReplyDigestConfig(keywords=["MCP"]), _LOGGER, token=token)
+    assert [g["url"] for g in gets] == [mod._SEARCH_POSTS_URL]
+    assert gets[0]["kwargs"]["headers"] is None
+
+
+def test_reply_suggestions_reset_the_provider_chain_per_candidate(monkeypatch) -> None:
+    from src.llm import sarah_generation
+
+    from datetime import datetime, timedelta, timezone
+
+    def _fresh(rkey: str, hours: float) -> dict:
+        post = _post("a.test", rkey, hours_ago=0)
+        post["record"]["createdAt"] = (datetime.now(timezone.utc) - timedelta(hours=hours)).isoformat().replace("+00:00", "Z")
+        return post
+
+    feeds = {"a.test": [_fresh("1", 2), _fresh("2", 3)]}  # run_reply_digest uses the real clock
+    _patch_get(monkeypatch, feeds, [])
+    monkeypatch.delenv("BLUESKY_APP_PASSWORD", raising=False)
+    import src.notifications.persona_voice as voice
+    import src.notifications.slack as slack
+
+    resets: list = []
+    monkeypatch.setattr(sarah_generation, "reset_state", lambda: resets.append(1))
+    monkeypatch.setattr(voice, "draft_reply_suggestion", lambda *a, **k: "A substantive reply suggestion.")
+    monkeypatch.setattr(slack, "reply_digest", lambda text: None)
+
+    config = ReplyDigestConfig(keywords=[], target_handles=["a.test"], max_posts=4, posts_per_target=2, max_per_author=2)
+    assert mod.run_reply_digest(_LOGGER, config=config) == 2
+    assert len(resets) == 2

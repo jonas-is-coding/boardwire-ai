@@ -1,0 +1,9 @@
+{
+  "_readme": "Publish windows (UTC) for --publish-approved. Enforced only when BOARDWIRE_ENFORCE_PUBLISH_WINDOWS=true, which publish-bluesky.yml sets for scheduled runs (manual dispatch publishes immediately). GitHub fires scheduled workflows hours late (2.5-8h observed since late August 2026), so the workflow polls every 30 minutes and this file decides which of those runs may post: only inside a window, and only min_hours_between_posts after the previous post on the same platform. Breaking items ignore both rules. Windows assume US Eastern daylight time (EDT, UTC-4): weekday morning 9:00-12:00 ET, weekday midday 13:00-16:30 ET, Sunday evening 17:30-20:00 ET. Shift each window +1h in US winter (EST).",
+  "min_hours_between_posts": 3,
+  "windows_utc": [
+    {"label": "weekday morning (9-12 ET)", "days": ["mon", "tue", "wed", "thu", "fri"], "start": "13:00", "end": "16:00"},
+    {"label": "weekday midday (1-4:30 PM ET)", "days": ["mon", "tue", "wed", "thu", "fri"], "start": "17:00", "end": "20:30"},
+    {"label": "Sunday evening (5:30-8 PM ET)", "days": ["sun"], "start": "21:30", "end": "24:00"}
+  ]
+}

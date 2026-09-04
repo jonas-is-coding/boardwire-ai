@@ -42,18 +42,23 @@ def runtime_stats() -> dict[str, object]:
     }
 
 
+# Default model per provider. Override with BOARDWIRE_<PROVIDER>_MODEL (repo
+# variables in the workflows) when a provider retires a model: the previous
+# defaults (groq llama-3.3-70b-versatile, cerebras qwen-3-32b) started
+# answering 404 in every scheduled run, which silently pushed all packaging
+# onto the last provider in the chain.
 def _provider_spec(provider: str) -> tuple[str, str, str]:
     if provider == "groq":
         return (
             "GROQ_API_KEY",
             "BOARDWIRE_GROQ_MODEL",
-            "llama-3.3-70b-versatile",
+            "openai/gpt-oss-120b",
         )
     if provider == "cerebras":
         return (
             "CEREBRAS_API_KEY",
             "BOARDWIRE_CEREBRAS_MODEL",
-            "qwen-3-32b",
+            "gpt-oss-120b",
         )
     return (
         "MISTRAL_API_KEY",
@@ -107,6 +112,14 @@ def _call_provider(provider: str, system: str, user: str, max_output_tokens: int
             _LOGGER.warning("Sarah provider request exception: provider=%s type=%s", provider, type(exc).__name__)
             return None, None
         status = int(resp.status_code)
+        if status == 404:
+            _LOGGER.warning(
+                "Sarah provider model not found (retired?): provider=%s model=%s — set %s to a current model",
+                provider,
+                model,
+                model_env,
+            )
+            return status, None
         if status >= 400:
             _LOGGER.warning("Sarah provider request failed: provider=%s model=%s status=%d", provider, model, status)
             return status, None

@@ -25,6 +25,7 @@ from src.composer import byte_len
 from src.config import IDENTITY_CONFIG_PATH
 from src.growth.client import POST_COLLECTION, PROFILE_COLLECTION, GrowthClient, GrowthClientError, utc_now_iso
 from src.growth.ledger import GrowthLedger
+from src.publisher.richtext import merge_facets, post_langs, tag_facets
 from src.storage.json_store import JsonStore
 
 # app.bsky.actor.profile / app.bsky.feed.post lexicon limits.
@@ -138,8 +139,10 @@ def link_facets(text: str) -> list[dict]:
 
 
 def build_post_record(text: str, *, created_at: str, reply: dict | None = None) -> dict:
-    record: dict = {"$type": "app.bsky.feed.post", "text": text, "createdAt": created_at}
-    facets = link_facets(text)
+    """A feed post record with link + hashtag facets and a language, exactly
+    the fields the official app sets and the raw API leaves empty."""
+    record: dict = {"$type": "app.bsky.feed.post", "text": text, "createdAt": created_at, "langs": post_langs()}
+    facets = merge_facets(link_facets(text), tag_facets(text))
     if facets:
         record["facets"] = facets
     if reply:

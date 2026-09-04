@@ -7,8 +7,14 @@ only *suggests*: it finds fresh posts worth replying to, drafts one substantive
 reply suggestion per post via the existing LLM chain, and sends the digest to
 Slack. A person reads it and posts 1-3 replies by hand.
 
-HARD RULE: this tool must never post replies itself. It performs read-only GET
-requests against the public AppView and one Slack webhook POST.
+HARD RULE: this tool must never post replies itself — no record is ever
+created, changed or deleted. It performs read-only GET requests against the
+Bluesky AppView and one Slack webhook POST. The only other POST it may make is
+``com.atproto.server.createSession``: the public AppView answers ``403`` to
+unauthenticated ``searchPosts`` calls from CI (every keyword search in the
+scheduled runs failed that way), so when ``BLUESKY_HANDLE`` +
+``BLUESKY_APP_PASSWORD`` are present the keyword search runs through the
+authenticated PDS instead. Author feeds stay on the public AppView.
 
 Ranking (``select_digest``):
 
@@ -28,6 +34,7 @@ Ranking (``select_digest``):
 from __future__ import annotations
 
 import math
+import os
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
 from logging import Logger
@@ -44,6 +51,12 @@ from src.storage.json_store import JsonStore
 # uses). Read-only; require no Bluesky secrets.
 _SEARCH_POSTS_URL = "https://public.api.bsky.app/xrpc/app.bsky.feed.searchPosts"
 _AUTHOR_FEED_URL = "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed"
+# Authenticated read path: the PDS proxies AppView reads with the session's
+# credentials. searchPosts is the one endpoint the public host refuses (403)
+# for CI callers, so keyword search goes here whenever a session exists.
+_PDS_URL = "https://bsky.social"
+_CREATE_SESSION_URL = f"{_PDS_URL}/xrpc/com.atproto.server.createSession"
+_AUTH_SEARCH_POSTS_URL = f"{_PDS_URL}/xrpc/app.bsky.feed.searchPosts"
 
 SOURCE_TARGET = "target"
 SOURCE_KEYWORD = "keyword"
@@ -164,11 +177,41 @@ def load_reply_digest_config(path: Path | None = None) -> ReplyDigestConfig:
 # ---------------------------------------------------------------------------
 
 
-def _get_json(url: str, params: dict[str, str], what: str, logger: Logger) -> dict:
-    """One read-only GET against the public AppView. Never authenticates and
-    never writes anything to Bluesky."""
+def bluesky_read_session(logger: Logger, handle: str | None = None, app_password: str | None = None) -> str | None:
+    """Access token for authenticated *reads*, or None without credentials.
+
+    Uses ``BLUESKY_HANDLE`` / ``BLUESKY_APP_PASSWORD`` unless given explicitly.
+    A failed login is logged and degrades to the public AppView — the digest
+    must still go out with the target-account channel alone.
+    """
+    handle = (handle if handle is not None else os.getenv("BLUESKY_HANDLE", "")).strip().lstrip("@")
+    app_password = (app_password if app_password is not None else os.getenv("BLUESKY_APP_PASSWORD", "")).strip()
+    if not handle or not app_password:
+        return None
     try:
-        resp = requests.get(url, params=params, timeout=30)
+        resp = requests.post(_CREATE_SESSION_URL, json={"identifier": handle, "password": app_password}, timeout=30)
+    except requests.RequestException as exc:
+        logger.warning("Reply digest login failed (%s); keyword search falls back to the public AppView", exc)
+        return None
+    if resp.status_code >= 400:
+        logger.warning("Reply digest login returned %d; keyword search falls back to the public AppView", resp.status_code)
+        return None
+    try:
+        token = str(resp.json().get("accessJwt") or "")
+    except ValueError:
+        token = ""
+    if not token:
+        logger.warning("Reply digest login response carried no accessJwt; using the public AppView")
+        return None
+    return token
+
+
+def _get_json(url: str, params: dict[str, str], what: str, logger: Logger, token: str | None = None) -> dict:
+    """One read-only GET. ``token`` adds the session's Authorization header for
+    the authenticated read path; nothing is ever written to Bluesky."""
+    headers = {"Authorization": f"Bearer {token}"} if token else None
+    try:
+        resp = requests.get(url, params=params, headers=headers, timeout=30)
     except requests.RequestException as exc:
         logger.warning("Reply digest %s failed: %s", what, exc)
         return {}
@@ -183,11 +226,18 @@ def _get_json(url: str, params: dict[str, str], what: str, logger: Logger) -> di
     return body if isinstance(body, dict) else {}
 
 
-def _search_posts(keyword: str, limit: int, logger: Logger, since: str | None = None) -> list[dict]:
+def _search_posts(
+    keyword: str,
+    limit: int,
+    logger: Logger,
+    since: str | None = None,
+    token: str | None = None,
+) -> list[dict]:
     params = {"q": keyword, "sort": "top", "limit": str(limit)}
     if since:
         params["since"] = since
-    posts = _get_json(_SEARCH_POSTS_URL, params, f"search '{keyword}'", logger).get("posts", [])
+    url = _AUTH_SEARCH_POSTS_URL if token else _SEARCH_POSTS_URL
+    posts = _get_json(url, params, f"search '{keyword}'", logger, token=token).get("posts", [])
     return posts if isinstance(posts, list) else []
 
 
@@ -303,9 +353,11 @@ def collect_reply_candidates(
     logger: Logger,
     own_handle: str = "",
     now: datetime | None = None,
+    token: str | None = None,
 ) -> list[ReplyCandidate]:
     """Fetch fresh posts worth replying to: target-account posts first, then
-    high-engagement keyword hits. Read-only."""
+    high-engagement keyword hits. Read-only; ``token`` (a read session from
+    ``bluesky_read_session``) routes the keyword search through the PDS."""
     now = now or datetime.now(timezone.utc)
     own = _normalize_handle(own_handle)
     targets = [h for h in (_normalize_handle(t) for t in config.target_handles) if h and h != own]
@@ -333,7 +385,7 @@ def collect_reply_candidates(
 
     since = (now - timedelta(hours=config.max_age_hours)).isoformat().replace("+00:00", "Z")
     for keyword in config.keywords:
-        for post in _search_posts(keyword, config.posts_per_keyword, logger, since=since):
+        for post in _search_posts(keyword, config.posts_per_keyword, logger, since=since, token=token):
             cand = _post_to_candidate(post, keyword=keyword, source=SOURCE_KEYWORD)
             if cand is None or cand.uri in seen:
                 continue
@@ -396,20 +448,28 @@ def run_reply_digest(logger: Logger, config: ReplyDigestConfig | None = None) ->
     Returns the number of candidates in the digest. This function NEVER posts
     to Bluesky — it only reads the public AppView and notifies Slack.
     """
-    import os
-
+    from src.llm import sarah_generation
     from src.notifications import persona_voice as voice
     from src.notifications import slack as notify
 
     config = config or load_reply_digest_config()
     own_handle = os.getenv("BLUESKY_HANDLE", "")
-    candidates = collect_reply_candidates(config, logger, own_handle=own_handle)
+    token = bluesky_read_session(logger)
+    logger.info(
+        "Reply digest keyword search: %s",
+        "authenticated (PDS)" if token else "public AppView (set BLUESKY_APP_PASSWORD; the public host refuses search from CI)",
+    )
+    candidates = collect_reply_candidates(config, logger, own_handle=own_handle, token=token)
     if not candidates:
         logger.info("Reply digest: no fresh niche posts found above the thresholds")
         return 0
 
     for cand in candidates:
         context = "target account Boardwire follows closely" if cand.is_target else cand.keyword
+        # The provider chain allows one call per provider per process; reset
+        # before each draft so every suggestion gets the full chain instead of
+        # only the first one (the rest used to come back "exhausted").
+        sarah_generation.reset_state()
         cand.suggestion = voice.draft_reply_suggestion(cand.author_handle, cand.text, context)
 
     digest = build_digest_text(candidates)

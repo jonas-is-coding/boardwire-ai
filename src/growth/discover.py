@@ -40,6 +40,7 @@ CHANNEL_LISTS = "lists"
 CHANNEL_SEARCH = "search"
 CHANNEL_BIO = "bio"
 CHANNEL_SEED = "seed"  # seed mode: the configured seeds themselves
+CHANNEL_RECIPROCITY = "reciprocity"  # generous follower: follow-back propensity, not graph relevance
 
 _STARTER_PACK_WEB_RE = re.compile(r"^https://bsky\.app/starter-pack/([^/?#]+)/([^/?#]+)")
 _LIST_WEB_RE = re.compile(r"^https://bsky\.app/profile/([^/?#]+)/lists/([^/?#]+)")
@@ -503,6 +504,8 @@ def discover_candidates(
         hits = _keyword_hits(f"{cand.display_name} {cand.description}", config.keywords)
         if hits:
             cand.add(CHANNEL_BIO, min(_MAX_BIO_HITS, hits) * config.weights.bio_keyword)
+        if cand.follow_ratio >= config.reciprocity_min_follow_ratio:
+            cand.add(CHANNEL_RECIPROCITY, config.weights.reciprocity)
         reason = rejection_reason(cand, config, own_did=own_did, seed_dids=seed_dids, exclude_dids=exclude_dids)
         if reason:
             stats[f"rejected: {reason}"] += 1
