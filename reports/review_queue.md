@@ -4,8 +4,13 @@
 
 No pending review items.
 
-## Gate rejections (last 18)
+## Gate rejections (last 23)
 
+- `2026-09-06T20:47:33.506997Z` [review] **OpenWhispr/openwhispr — Voice-to-text dictation app with local (Nvidia Parakeet/Whisper) and cloud models (BYOK). Privacy-first and available cross-platform.** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-06T20:47:33.439989Z` [review] **ruvnet/ruflo — 🌊 The original agent meta-harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning ** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-06T20:47:33.373873Z` [review] **vLLM v0.29.0rc4** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.29.0rc4'
+- `2026-09-06T20:47:33.307606Z` [review] **Ollama v0.34.0** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'Ollama v0.34.0'
+- `2026-09-06T20:47:32.924740Z` [review] **radixark/miles — Miles is an enterprise-facing reinforcement learning framework for LLM and VLM post-training, forked from and co-evolving with slime.** — Duplicate or near-duplicate post detected
 - `2026-09-04T17:33:12.661178Z` [review] **Playco cut manual fixes 50% prototyping games with GPT-6 Astra** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-04T17:33:12.533639Z` [review] **Which tools do Claude, Codex and Cursor choose? We measured 17k runs to find out** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-04T14:15:23.596098Z` [review] **Decoding the new AI lingo: Loops, harnesses, squads, hill climbing… oh my!** — Post is empty; Post lacks a clear claim or insight

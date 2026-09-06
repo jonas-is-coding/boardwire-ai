@@ -11361,7 +11361,7 @@
   },
   {
     "id": "5bbf6a109c12",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-09-04T14:15:17.189166Z",
     "score": 82,
     "reason": "New open-source RL framework for LLM/VLM post-training ships on GitHub, offering a tool for enterprise fine-tuning.",
@@ -11401,7 +11401,8 @@
     "deferred_at": "2026-09-04T17:33:12.255443Z",
     "defer_count": 2,
     "original_score": 82,
-    "original_reason": "New open-source RL framework for LLM/VLM post-training ships on GitHub, offering a tool for enterprise fine-tuning."
+    "original_reason": "New open-source RL framework for LLM/VLM post-training ships on GitHub, offering a tool for enterprise fine-tuning.",
+    "rejected_at": "2026-09-06T20:47:32.925206Z"
   },
   {
     "id": "ed0a922f4087",
@@ -11495,12 +11496,12 @@
   },
   {
     "id": "f7accc9c7292",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-09-04T17:33:08.348537Z",
-    "score": 85,
-    "reason": "HydraFusion research preview in Copilot offers Opus 5 quality coding at lower cost. It's available to use now.",
-    "proposed_post": "GitHub Copilot's HydraFusion research preview matches Opus 5 quality for coding workflows at a reduced estimated cost. Builders using Copilot can expect improved code suggestions and efficiency.",
-    "source_angle": "GitHub Copilot integrates multi-model orchestration for cost-effective coding.",
+    "status": "approved",
+    "created_at": "2026-09-06T20:47:32.852684Z",
+    "score": 90,
+    "reason": "New Copilot feature available now, offering improved code quality via multi-model orchestration.",
+    "proposed_post": "GitHub Copilot's HydraFusion research preview is live. It offers Opus 5 quality coding via multi-model orchestration, accessible now for improved code generation.",
+    "source_angle": "GitHub Copilot's multi-model orchestration for Opus 5 quality coding",
     "source_item": {
       "title": "Project HydraFusion: Frontier quality via multi-model orchestration",
       "source": "GitHub Blog AI",
@@ -11532,9 +11533,50 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-09-04T17:33:12.404830Z",
-    "defer_count": 1,
-    "original_score": 85,
-    "original_reason": "HydraFusion research preview in Copilot offers Opus 5 quality coding at lower cost. It's available to use now."
+    "breaking": false,
+    "reactivated_at": "2026-09-06T20:47:32.852684Z"
+  },
+  {
+    "id": "803be72a381d",
+    "status": "approved",
+    "created_at": "2026-09-06T20:47:26.437866Z",
+    "score": 85,
+    "reason": "New SDK version with concrete features for usage tracking and cost management, directly actionable for builders.",
+    "proposed_post": "Anthropic Python SDK v1.4.0 adds Claude Tag category and user breakdowns to usage reports. Builders can now track Claude API costs and usage more granularly, improving production cost management.",
+    "source_angle": "Anthropic SDK update for usage reporting",
+    "source_item": {
+      "title": "Anthropic Python SDK v1.4.0",
+      "source": "Anthropic Python SDK Releases",
+      "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.4.0",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 35,
+      "summary": "<h2>1.4.0 (2026-09-04)</h2>\n<p>Full Changelog: <a href=\"https://github.com/anthropics/anthropic-sdk-python/compare/v1.3.0...v1.4.0\">v1.3.0...v1.4.0</a></p>\n<h3>Features</h3>\n<ul>\n<li><strong>api:</strong> add Claude Tag category and user breakdowns to usage reports (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/9fce1e4994e113c35f4a7116d0c5eb90367b9c66\">9fce1e4</a>)</li>\n<li><strong>api:</strong> add named types for organization compliance settings state (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/1de1957334e7491979ddb21a1d673fa4e56d5459\">1de1957</a>)</li>\n<li><strong>api:</strong> add support for sending a workspace ID on more endpoints (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/d1d2c01d8aa128080dea3d711e12cb3df95a2149\">d1d2c01</a>)</li>\n</ul>\n<h3>Bug Fixes</h3>\n<ul>\n<li><strong>client:</strong> raise a clear error when an httpx object is passed instead of an httpx2 one (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/94470992f0f00ed331f2faa585cfda2cb8412a08\">9447099</a>)</li>\n<li>repair custom-code merge in messages resources (<a href=\"https://github.com/anthropics/anthropic-sdk-python/issues/580\">#580</a>) (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/85454cab9a323801b76500707b84c1992c1c0ee4\">85454ca</a>)</li>\n</ul>\n<h3>Chores</h3>\n<ul>\n<li><strong>examples:</strong> refresh platform model IDs (<a href=\"https://github.com/anthropics/anthropic-sdk-python/issues/499\">#499</a>) (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/182abb51cdb5dda815b0b2498dc4adaab6dde469\">182abb5</a>)</li>\n<li><strong>internal:</strong> bundle the mock server spec and update dev tooling (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/f9b0cf281932512e6b40cd1a887a44542c883468\">f9b0cf2</a>)</li>\n<li><strong>internal:</strong> clean up code comments (<a href=\"https://github.com/anthropics/anthropic-sdk-python/issues/578\">#578</a>) (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/d2023274f69dd0609ddabbf8f6af08041f868d8b\">d202327</a>)</li>\n<li><strong>internal:</strong> fix mypy unreachable error in detect-breaking-changes script (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/07834f601fb4a81958f15e2129ca091cb9d1c646\">07834f6</a>)</li>\n<li><strong>internal:</strong> narrower codeowners scope (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/daca8f13032311676ed30a6e0527ee304e1419c9\">daca8f1</a>)</li>\n<li><strong>internal:</strong> revert codeowners change (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/41aa767464881bb51937f42fe9c426ae3081fd9f\">41aa767</a>)</li>\n<li><strong>tests:</strong> remove stale warning filters (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/ba9bf356ed60fa2eb206e266c86c0202dd005616\">ba9bf35</a>)</li>\n<li><strong>tests:</strong> reword the skip reason on the path-level query param tests (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/6b5046ad29999ec887226aecff67db9feb2d1972\">6b5046a</a>)</li>\n</ul>\n<h3>Documentation</h3>\n<ul>\n<li><strong>api:</strong> update a few doc strings (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/26c509d66192f2b40150b481fa89da97e532612c\">26c509d</a>)</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: httpx2, tag, when, refresh, mock.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Anthropic Python SDK Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "httpx2",
+          "tag",
+          "when",
+          "refresh",
+          "mock",
+          "error",
+          "/h3",
+          "href"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: httpx2, tag, when, refresh. Lead: Anthropic Python SDK v1.4.0",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Hey Chloe,\n\nHab gerade die Release Notes vom Anthropic Python SDK v1.4.0 gescannt. Das ist relevant, weil die Usage Reports jetzt Claude Tag Kategorien und User Breakdowns haben. Das ist super für Devs, die ihre Kosten oder Nutzung pro Feature/User tracken und optimieren wollen, besonders in Multi-Tenant-Setups. Endlich bessere Transparenz.",
+    "chloe_note": "Hey, *Anthropic Python SDK v1.4.0* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New SDK version with concrete features for usage tracking and cost management, directly actionable for builders.Cluster context: 1 sources, engagement 0. Common terms: httpx2, tag, when, refresh. Score aktuell: 85. Link: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.4.0"
   }
 ]
