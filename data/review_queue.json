@@ -11318,7 +11318,7 @@
   },
   {
     "id": "32f55f334ff0",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-09-04T17:33:12.112742Z",
     "score": 90,
     "reason": "New model deployment with specific performance via accessible API. Ships today for builders.",
@@ -11356,7 +11356,8 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": false,
-    "reactivated_at": "2026-09-04T17:33:12.112742Z"
+    "reactivated_at": "2026-09-04T17:33:12.112742Z",
+    "expired_at": "2026-09-06T20:20:41.406042Z"
   },
   {
     "id": "5bbf6a109c12",
@@ -11404,7 +11405,7 @@
   },
   {
     "id": "ed0a922f4087",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-09-04T14:14:54.942920Z",
     "score": 95,
     "reason": "OpenAI's new flagship model release. Direct link to official announcement implies API/details are live. High builder relevance.",
@@ -11445,11 +11446,12 @@
     "is_llm_mode": true,
     "breaking": true,
     "claire_note": "Okay, Chloe, das GPT-6 Astra Ding auf HN – 1956 Punkte, 1777 Kommentare. Das ist kein Artikel im herkömmlichen Sinne, sondern der OpenAI-Post selbst, der da so durch die Decke geht.\n\nFür uns ist das relevant, weil es direkt von der Quelle kommt und die Community darauf *extrem* stark reagiert. Entwickler schauen hier, was OpenAI als Nächstes rausbringt, welche Capabilities sie hypen und welche Implikationen das für ihre eigenen Projekte haben könnte. Es geht darum, das Fundament für die nächste Generation von KI-Anwendungen zu verstehen und zu antizipieren.",
-    "chloe_note": "Kurzes Update: *GPT-6 Astra* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um OpenAI's new flagship model release. Direct link to official announcement implies API/details are live. High builder relevance.Cluster context: 1 sources, engagement 3237. Common terms: gpt-6, submitted, points, astra. Ich habe es mit 95 Punkten bewertet. Hier der Link: https://openai.com/index/gpt-6-astra/"
+    "chloe_note": "Kurzes Update: *GPT-6 Astra* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um OpenAI's new flagship model release. Direct link to official announcement implies API/details are live. High builder relevance.Cluster context: 1 sources, engagement 3237. Common terms: gpt-6, submitted, points, astra. Ich habe es mit 95 Punkten bewertet. Hier der Link: https://openai.com/index/gpt-6-astra/",
+    "expired_at": "2026-09-06T20:20:41.406042Z"
   },
   {
     "id": "eb8a9a6ecb6e",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-09-04T14:15:02.345600Z",
     "score": 90,
     "reason": "Direct release of Claude Code update with concrete features (diff panel, prompt-cache diagnostics) for developers. Passes Ships Test.",
@@ -11488,7 +11490,8 @@
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Okay, Chloe, das ist ein direkter Treffer für unsere Zielgruppe.\n\nDer neue Diff-Panel in Claude Code ist super relevant. Entwickler können jetzt in Echtzeit sehen, wie Claude ihren Code ändert, was die Iteration massiv beschleunigt und Vertrauen schafft. Das ist ein konkretes Feature, das den Workflow direkt optimiert.",
-    "chloe_note": "*Claude Code v2.1.260* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Direct release of Claude Code update with concrete features (diff panel, prompt-cache diagnostics) for developers. Passes Ships Test.Cluster context: 1 sources, engagement 0. Common terms: backup, write, swap, while. Bewertung: 90. Quelle: https://github.com/anthropics/claude-code/releases/tag/v2.1.260"
+    "chloe_note": "*Claude Code v2.1.260* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Direct release of Claude Code update with concrete features (diff panel, prompt-cache diagnostics) for developers. Passes Ships Test.Cluster context: 1 sources, engagement 0. Common terms: backup, write, swap, while. Bewertung: 90. Quelle: https://github.com/anthropics/claude-code/releases/tag/v2.1.260",
+    "expired_at": "2026-09-06T20:20:41.406042Z"
   },
   {
     "id": "f7accc9c7292",
