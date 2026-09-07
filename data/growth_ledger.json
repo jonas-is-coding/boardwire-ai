@@ -446,6 +446,150 @@
         "search 'Ollama'"
       ],
       "followed_at": "2026-09-04T12:22:38.904373Z"
+    },
+    "did:plc:ppamp6bqrppcvjukxxe3avch": {
+      "handle": "davidpicard.eurosky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3muwn6ni2bk22",
+      "channel": "seed_follows",
+      "score": 2.0,
+      "mode": "discover",
+      "via": [
+        "@rasbt.bsky.social follows",
+        "@kylelo.bsky.social follows"
+      ],
+      "followed_at": "2026-09-07T13:42:15.211654Z"
+    },
+    "did:plc:yhpo4pagfroflgcj2czskvjn": {
+      "handle": "saxon.me",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3muwn7lknvk2n",
+      "channel": "seed_follows",
+      "score": 2.0,
+      "mode": "discover",
+      "via": [
+        "@stellaathena.bsky.social follows",
+        "@dorialexander.bsky.social follows"
+      ],
+      "followed_at": "2026-09-07T13:42:46.754854Z"
+    },
+    "did:plc:74fhcdv7jj53pu254mlql3kr": {
+      "handle": "jmac-ai.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3muwnanupx224",
+      "channel": "seed_follows",
+      "score": 2.0,
+      "mode": "discover",
+      "via": [
+        "@hamel.bsky.social follows",
+        "@yoavgo.bsky.social follows"
+      ],
+      "followed_at": "2026-09-07T13:43:22.741391Z"
+    },
+    "did:plc:nlzmarrjaqejm6wdw5vvlfod": {
+      "handle": "snblickhan.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3muwnbsfjcs24",
+      "channel": "seed_follows",
+      "score": 2.0,
+      "mode": "discover",
+      "via": [
+        "@danielvanstrien.bsky.social follows",
+        "follows @danielvanstrien.bsky.social"
+      ],
+      "followed_at": "2026-09-07T13:44:01.041300Z"
+    },
+    "did:plc:qvvxd4csdhymtkfx2o5aagvf": {
+      "handle": "jonathanstray.com",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3muwncsnuom2e",
+      "channel": "seed_follows",
+      "score": 2.0,
+      "mode": "discover",
+      "via": [
+        "follows @natolambert.bsky.social",
+        "@stellaathena.bsky.social follows"
+      ],
+      "followed_at": "2026-09-07T13:44:34.868109Z"
+    },
+    "did:plc:pug4wfnm4cmjosacpcveur5x": {
+      "handle": "rao2z.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3muwndqq63o22",
+      "channel": "seed_follows",
+      "score": 2.0,
+      "mode": "discover",
+      "via": [
+        "@natolambert.bsky.social follows",
+        "@yoavgo.bsky.social follows"
+      ],
+      "followed_at": "2026-09-07T13:45:06.402980Z"
+    },
+    "did:plc:cqwxut33grujjtkuuts5jl6f": {
+      "handle": "adinawilliams.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3muwneokjfw2g",
+      "channel": "seed_follows",
+      "score": 2.0,
+      "mode": "discover",
+      "via": [
+        "@yoavgo.bsky.social follows",
+        "@kylelo.bsky.social follows"
+      ],
+      "followed_at": "2026-09-07T13:45:37.679262Z"
+    },
+    "did:plc:itpy7gpwnd36ac6pm47tuwuu": {
+      "handle": "tuhinchakr.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3muwnfs4xev2e",
+      "channel": "seed_follows",
+      "score": 2.0,
+      "mode": "discover",
+      "via": [
+        "@natolambert.bsky.social follows",
+        "@yoavgo.bsky.social follows"
+      ],
+      "followed_at": "2026-09-07T13:46:14.977928Z"
+    },
+    "did:plc:es2vvkbn6wsohrhp6iklqdxf": {
+      "handle": "srchvrs.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3muwngtlnue24",
+      "channel": "seed_follows",
+      "score": 2.0,
+      "mode": "discover",
+      "via": [
+        "@yoavgo.bsky.social follows",
+        "@danielvanstrien.bsky.social follows"
+      ],
+      "followed_at": "2026-09-07T13:46:50.064812Z"
+    },
+    "did:plc:pzmryhavpn4rcxdb6rags47d": {
+      "handle": "afedercooper.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3muwnhm73dn2e",
+      "channel": "seed_follows",
+      "score": 2.0,
+      "mode": "discover",
+      "via": [
+        "@kylelo.bsky.social follows",
+        "@stellaathena.bsky.social follows"
+      ],
+      "followed_at": "2026-09-07T13:47:15.866992Z"
+    },
+    "did:plc:7w4zm6pfg3k5giduan34rbux": {
+      "handle": "commoncrawl.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3muwniiv53g2l",
+      "channel": "seed_follows",
+      "score": 2.0,
+      "mode": "discover",
+      "via": [
+        "@kylelo.bsky.social follows",
+        "@stellaathena.bsky.social follows"
+      ],
+      "followed_at": "2026-09-07T13:47:45.948787Z"
+    },
+    "did:plc:yiwxijbeyioxmvbtbclppgga": {
+      "handle": "scasper.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3muwnjmrs452e",
+      "channel": "seed_follows",
+      "score": 2.0,
+      "mode": "discover",
+      "via": [
+        "@kylelo.bsky.social follows",
+        "@stellaathena.bsky.social follows"
+      ],
+      "followed_at": "2026-09-07T13:48:23.587371Z"
     }
   },
   "runs": [
@@ -526,6 +670,32 @@
       ],
       "started_at": "2026-09-04T12:17:08.231788Z",
       "finished_at": "2026-09-04T12:22:38.905662Z"
+    },
+    {
+      "mode": "discover",
+      "dry_run": false,
+      "limit": 12,
+      "planned": 0,
+      "followed": 12,
+      "skipped_already": 0,
+      "failed": 0,
+      "aborted": null,
+      "handles": [
+        "davidpicard.eurosky.social",
+        "saxon.me",
+        "jmac-ai.bsky.social",
+        "snblickhan.bsky.social",
+        "jonathanstray.com",
+        "rao2z.bsky.social",
+        "adinawilliams.bsky.social",
+        "tuhinchakr.bsky.social",
+        "srchvrs.bsky.social",
+        "afedercooper.bsky.social",
+        "commoncrawl.bsky.social",
+        "scasper.bsky.social"
+      ],
+      "started_at": "2026-09-07T13:42:14.904950Z",
+      "finished_at": "2026-09-07T13:48:23.588556Z"
     }
   ],
   "pinned_thread": {
