@@ -4,8 +4,10 @@
 
 No pending review items.
 
-## Gate rejections (last 23)
+## Gate rejections (last 25)
 
+- `2026-09-07T15:46:13.056198Z` [review] **lightpanda-io/browser — Lightpanda: the headless browser designed for AI and automation** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-07T15:46:12.931046Z` [review] **Claude Code v2.1.263** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'Claude Code v2.1.263'
 - `2026-09-06T20:47:33.506997Z` [review] **OpenWhispr/openwhispr — Voice-to-text dictation app with local (Nvidia Parakeet/Whisper) and cloud models (BYOK). Privacy-first and available cross-platform.** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-06T20:47:33.439989Z` [review] **ruvnet/ruflo — 🌊 The original agent meta-harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning ** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-06T20:47:33.373873Z` [review] **vLLM v0.29.0rc4** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.29.0rc4'

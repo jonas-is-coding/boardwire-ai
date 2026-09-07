@@ -218,5 +218,26 @@
       "Post is empty",
       "Post lacks a clear claim or insight"
     ]
+  },
+  {
+    "rejected_at": "2026-09-07T15:46:12.931046Z",
+    "stage": "review",
+    "title": "Claude Code v2.1.263",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.263",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight",
+      "Version-only release without concrete capability: 'Claude Code v2.1.263'"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-07T15:46:13.056198Z",
+    "stage": "review",
+    "title": "lightpanda-io/browser — Lightpanda: the headless browser designed for AI and automation",
+    "link": "https://github.com/lightpanda-io/browser",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
   }
 ]
