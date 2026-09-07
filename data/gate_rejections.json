@@ -239,5 +239,44 @@
       "Post is empty",
       "Post lacks a clear claim or insight"
     ]
+  },
+  {
+    "rejected_at": "2026-09-07T18:41:44.112501Z",
+    "stage": "review",
+    "title": "LangChain v1.6.2",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.6.2",
+    "reasons": [
+      "Version-only release without concrete capability: 'LangChain v1.6.2'"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-07T18:41:44.396363Z",
+    "stage": "review",
+    "title": "Claude Fable 5.1 made me a really nice animated pelican",
+    "link": "https://simonwillison.net/2026/Sep/1/claude-fable-5-1/",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-07T18:41:44.525930Z",
+    "stage": "review",
+    "title": "Safety overview: GPT-6 Astra",
+    "link": "https://openai.com/index/safety-overview-gpt-6-astra",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-07T18:41:44.654486Z",
+    "stage": "review",
+    "title": "Speculative Decoding in vLLM on AMD GPUs",
+    "link": "https://vllm.ai/blog/2026-08-23-speculative-decoding-amd-gpus",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
   }
 ]
