@@ -6,6 +6,11 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-09-08T14:25:15.144859Z` [review] **AI models ran real businesses: They sent $12,431 in fake invoices, lost $3,200** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-08T14:25:15.055943Z` [review] **How well do agents use test/verification techniques?** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-08T14:25:14.967280Z` [review] **Latest open artifacts (#24): Motif-3, GLM-5.3, Hy4-preview and open model licenses** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-08T14:25:14.878370Z` [review] **vLLM v0.29.0rc6** — Version-only release without concrete capability: 'vLLM v0.29.0rc6'
+- `2026-09-08T14:25:13.671095Z` [review] **Claude Code v2.1.261** — Version-only release without concrete capability: 'Claude Code v2.1.261'
 - `2026-09-07T18:41:44.654486Z` [review] **Speculative Decoding in vLLM on AMD GPUs** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-07T18:41:44.525930Z` [review] **Safety overview: GPT-6 Astra** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-07T18:41:44.396363Z` [review] **Claude Fable 5.1 made me a really nice animated pelican** — Post is empty; Post lacks a clear claim or insight
@@ -26,8 +31,3 @@ No pending review items.
 - `2026-09-02T19:06:28.171613Z` [review] **Ollama v0.33.3** — Version-only release without concrete capability: 'Ollama v0.33.3'
 - `2026-09-01T20:07:42.705515Z` [publish] **langchain==1.4.0a3** — Release dedupe: LangChain v1.4.0 already published at 2026-08-31T00:17:39.850752Z
 - `2026-09-01T16:04:43.513760Z` [review] **Claude Code v2.1.252** — Version-only release without concrete capability: 'Claude Code v2.1.252'
-- `2026-08-26T16:42:19.153923Z` [review] **Ollama v0.33.1-rc0** — Version-only release without concrete capability: 'Ollama v0.33.1-rc0'
-- `2026-08-21T12:42:13.800993Z` [review] **Claude Code v2.1.231** — Version-only release without concrete capability: 'Claude Code v2.1.231'
-- `2026-08-19T12:42:28.768718Z` [review] **Servers v2026.8.18** — Version-only release without concrete capability: 'Servers v2026.8.18'; Score below threshold (60 < 62)
-- `2026-08-17T16:17:09.977369Z` [review] **Ollama v0.32.12** — Version-only release without concrete capability: 'Ollama v0.32.12'
-- `2026-08-07T12:59:04.179302Z` [review] **Show HN: The Channels SDK – Bring Any Agent to Any Channel (Slack, MS Teams)** — Aggregator engagement metadata leaked into post: 'with 107 points'

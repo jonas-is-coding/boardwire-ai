@@ -11751,7 +11751,7 @@
   },
   {
     "id": "8f2300dafd76",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-09-07T18:41:38.793399Z",
     "score": 90,
     "reason": "Direct tool update with concrete new features for Claude Code users, improving prompt management, output handling, and cost optimization.",
@@ -11791,6 +11791,55 @@
     "deferred_at": "2026-09-07T18:41:44.266785Z",
     "defer_count": 1,
     "original_score": 90,
-    "original_reason": "Direct tool update with concrete new features for Claude Code users, improving prompt management, output handling, and cost optimization."
+    "original_reason": "Direct tool update with concrete new features for Claude Code users, improving prompt management, output handling, and cost optimization.",
+    "rejected_at": "2026-09-08T14:25:13.671703Z"
+  },
+  {
+    "id": "cfacb144c65a",
+    "status": "approved",
+    "created_at": "2026-09-08T14:25:01.056082Z",
+    "score": 85,
+    "reason": "New LangChain version ships with direct support for Azure AD auth and async tools for OpenAI integration.",
+    "proposed_post": "LangChain v1.6.1 for `langchain-openai` adds support for Azure AD auth with OpenAI 3.8 and async tools. Builders can now integrate enterprise-grade Azure AD authentication and leverage async operations for tools in their OpenAI-powered applications.",
+    "source_angle": "LangChain adds Azure AD auth & async tools for OpenAI integration.",
+    "source_item": {
+      "title": "LangChain v1.6.1",
+      "source": "LangChain Releases",
+      "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.6.1",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 35,
+      "summary": "<p>Changes since langchain-openai==1.6.0</p>\n<p>fix(openai): bump <code>max_completion_tokens</code> in cache breakpoint integration test (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/40284\">#40284</a>)<br />\nrelease(openai): 1.6.1 (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/40268\">#40268</a>)<br />\nchore(model-profiles): refresh model profile data (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/40217\">#40217</a>)<br />\nfix(openai): support Azure AD auth with OpenAI 3.8 (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/40190\">#40190</a>)<br />\nfeat(openai): support async tools (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/40208\">#40208</a>)<br />\nfeat(openai): support <code>configuration_update</code> (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/40201\">#40201</a>)<br />\nchore(model-profiles): refresh model profile data (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/40171\">#40171</a>)<br />\nfix(openai): route <code>gpt-5.6-sol</code> to responses API (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/40133\">#40133</a>)<br />\nchore(openai): fix tests (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/39972\">#39972</a>)<br />\nfix(openai): correct <code>reasoning_effort_levels</code> for gpt-5 and gpt-5.1 profiles (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/39936\">#39936</a>)<br />\nchore(model-profiles): refresh model profile data (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/39954\">#39954</a>)</p>\n[Cluster context: 1 sources, engagement 0, common terms: class, feat, langchain, issue-link, href.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "LangChain Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "class",
+          "feat",
+          "langchain",
+          "issue-link",
+          "href",
+          "js-issue-link",
+          "support",
+          "fix"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: class, feat, langchain, issue-link. Lead: LangChain v1.6.1",
+        "alternative_titles": [
+          "LangChain v1.7.1",
+          "LangChain v1.4.0",
+          "langchain==1.4.0a4",
+          "LangChain v1.7.0"
+        ],
+        "cluster_score": 5
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Hey Chloe,\n\nLangChain 1.6.1 ist raus. Nicht die größte Änderung, aber der Fix für 'max_completion_tokens' im Cache-Breakpoint-Test ist relevant. Wer mit LangChain und OpenAI arbeitet, kann hier potenziell stabileres Caching erwarten, was bei Kosten und Performance wichtig ist. Entwickler, die ihre LLM-Anwendungen optimieren, sollten das im Auge behalten.",
+    "chloe_note": "Dieser Fund besteht den Ships Test. Der Update auf LangChain 1.6.1 bietet konkrete Verbesserungen für Entwickler, die sich direkt auf die Stabilität des Caching und potenziell auf Kosten und Performance auswirken. Es gibt eine klare Handlungsaufforderung, die neue Version zu nutzen."
   }
 ]

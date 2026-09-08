@@ -278,5 +278,53 @@
       "Post is empty",
       "Post lacks a clear claim or insight"
     ]
+  },
+  {
+    "rejected_at": "2026-09-08T14:25:13.671095Z",
+    "stage": "review",
+    "title": "Claude Code v2.1.261",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.261",
+    "reasons": [
+      "Version-only release without concrete capability: 'Claude Code v2.1.261'"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-08T14:25:14.878370Z",
+    "stage": "review",
+    "title": "vLLM v0.29.0rc6",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.29.0rc6",
+    "reasons": [
+      "Version-only release without concrete capability: 'vLLM v0.29.0rc6'"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-08T14:25:14.967280Z",
+    "stage": "review",
+    "title": "Latest open artifacts (#24): Motif-3, GLM-5.3, Hy4-preview and open model licenses",
+    "link": "https://www.interconnects.ai/p/latest-open-artifacts-24-motif-3",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-08T14:25:15.055943Z",
+    "stage": "review",
+    "title": "How well do agents use test/verification techniques?",
+    "link": "https://danluu.com/agentic-testing/",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-08T14:25:15.144859Z",
+    "stage": "review",
+    "title": "AI models ran real businesses: They sent $12,431 in fake invoices, lost $3,200",
+    "link": "https://www.bottlenecklabs.com/blog/benchmarking-7-autonomous-businesses",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
   }
 ]
