@@ -6,6 +6,10 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-09-08T17:52:58.807197Z` [review] **Google DeepMind Releases AlphaGenome Atlas** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-08T17:52:58.738596Z` [review] **The Work Now Within Reach** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-08T17:52:58.669915Z` [review] **Simon Willison v4.5** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-08T17:52:56.941958Z` [review] **vLLM v0.29.0rc5** — Version-only release without concrete capability: 'vLLM v0.29.0rc5'
 - `2026-09-08T14:25:15.144859Z` [review] **AI models ran real businesses: They sent $12,431 in fake invoices, lost $3,200** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-08T14:25:15.055943Z` [review] **How well do agents use test/verification techniques?** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-08T14:25:14.967280Z` [review] **Latest open artifacts (#24): Motif-3, GLM-5.3, Hy4-preview and open model licenses** — Post is empty; Post lacks a clear claim or insight
@@ -27,7 +31,3 @@ No pending review items.
 - `2026-09-04T14:15:23.596098Z` [review] **Decoding the new AI lingo: Loops, harnesses, squads, hill climbing… oh my!** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-04T14:15:23.473403Z` [review] **Porting my 1993 Amiga game to Godot, with an LLM reading the 68000 assembly** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-04T14:15:23.350908Z` [review] **vLLM v0.29.0rc3** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.29.0rc3'
-- `2026-09-03T18:59:20.442340Z` [review] **Ollama v0.33.3** — Version-only release without concrete capability: 'Ollama v0.33.3'
-- `2026-09-02T19:06:28.171613Z` [review] **Ollama v0.33.3** — Version-only release without concrete capability: 'Ollama v0.33.3'
-- `2026-09-01T20:07:42.705515Z` [publish] **langchain==1.4.0a3** — Release dedupe: LangChain v1.4.0 already published at 2026-08-31T00:17:39.850752Z
-- `2026-09-01T16:04:43.513760Z` [review] **Claude Code v2.1.252** — Version-only release without concrete capability: 'Claude Code v2.1.252'
