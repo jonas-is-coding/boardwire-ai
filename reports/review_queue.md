@@ -6,6 +6,7 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-09-08T18:02:08.705114Z` [publish] **LangChain v1.4.0** — Release dedupe: LangChain v1.4.0 already published at 2026-08-31T00:17:39.850752Z
 - `2026-09-08T17:52:58.807197Z` [review] **Google DeepMind Releases AlphaGenome Atlas** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-08T17:52:58.738596Z` [review] **The Work Now Within Reach** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-08T17:52:58.669915Z` [review] **Simon Willison v4.5** — Post is empty; Post lacks a clear claim or insight
@@ -30,4 +31,3 @@ No pending review items.
 - `2026-09-04T17:33:12.533639Z` [review] **Which tools do Claude, Codex and Cursor choose? We measured 17k runs to find out** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-04T14:15:23.596098Z` [review] **Decoding the new AI lingo: Loops, harnesses, squads, hill climbing… oh my!** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-04T14:15:23.473403Z` [review] **Porting my 1993 Amiga game to Godot, with an LLM reading the 68000 assembly** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-04T14:15:23.350908Z` [review] **vLLM v0.29.0rc3** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.29.0rc3'
