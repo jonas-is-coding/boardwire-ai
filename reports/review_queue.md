@@ -6,6 +6,10 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-09-09T17:46:12.094330Z` [review] **Research acceleration: The view inside OpenAI** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-09T17:46:12.005260Z` [review] **Muse – Meta’s personal AI agent** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-09T17:46:11.807345Z` [review] **Ollama v0.34.0-rc4** — Version-only release without concrete capability: 'Ollama v0.34.0-rc4'
+- `2026-09-09T17:46:11.696283Z` [review] **ChatGPT Images 2.5** — Version-only release without concrete capability: 'ChatGPT Images 2.5'
 - `2026-09-09T14:27:25.771487Z` [review] **LibreOffice breaks download records after declaring it has no AI features** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-09T14:27:25.645703Z` [review] **vastsa/PI-Desktop — Local-first AI coding agent desktop: Electron + Rust host core + pi Agent Harness + user-installable plugins** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-09T14:27:25.518698Z` [review] **Tencent/teamai-cli — Make Every Team AI Native** — Post is empty; Post lacks a clear claim or insight
@@ -27,7 +31,3 @@ No pending review items.
 - `2026-09-07T18:41:44.112501Z` [review] **LangChain v1.6.2** — Version-only release without concrete capability: 'LangChain v1.6.2'
 - `2026-09-07T15:46:13.056198Z` [review] **lightpanda-io/browser — Lightpanda: the headless browser designed for AI and automation** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-07T15:46:12.931046Z` [review] **Claude Code v2.1.263** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'Claude Code v2.1.263'
-- `2026-09-06T20:47:33.506997Z` [review] **OpenWhispr/openwhispr — Voice-to-text dictation app with local (Nvidia Parakeet/Whisper) and cloud models (BYOK). Privacy-first and available cross-platform.** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-06T20:47:33.439989Z` [review] **ruvnet/ruflo — 🌊 The original agent meta-harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning ** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-06T20:47:33.373873Z` [review] **vLLM v0.29.0rc4** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.29.0rc4'
-- `2026-09-06T20:47:33.307606Z` [review] **Ollama v0.34.0** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'Ollama v0.34.0'

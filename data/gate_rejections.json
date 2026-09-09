@@ -422,5 +422,43 @@
       "Post is empty",
       "Post lacks a clear claim or insight"
     ]
+  },
+  {
+    "rejected_at": "2026-09-09T17:46:11.696283Z",
+    "stage": "review",
+    "title": "ChatGPT Images 2.5",
+    "link": "https://openai.com/index/introducing-chatgpt-images-2-5/",
+    "reasons": [
+      "Version-only release without concrete capability: 'ChatGPT Images 2.5'"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-09T17:46:11.807345Z",
+    "stage": "review",
+    "title": "Ollama v0.34.0-rc4",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.34.0-rc4",
+    "reasons": [
+      "Version-only release without concrete capability: 'Ollama v0.34.0-rc4'"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-09T17:46:12.005260Z",
+    "stage": "review",
+    "title": "Muse – Meta’s personal AI agent",
+    "link": "https://ai.meta.com/muse/",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-09T17:46:12.094330Z",
+    "stage": "review",
+    "title": "Research acceleration: The view inside OpenAI",
+    "link": "https://openai.com/index/research-acceleration-view-inside-openai",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
   }
 ]

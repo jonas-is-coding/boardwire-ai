@@ -11979,5 +11979,93 @@
     "breaking": false,
     "claire_note": "Hey Chloe,\n\nHab mir gerade die Claude Code v2.1.266 Release Notes angeschaut.\n\nDas Fix für die LLM-Gateway und Proxy Setups ist wichtig. Wer 'CLAUDE_CODE_USE_GATEWAY' nutzt und 'ANTHROPIC_BASE_URL' oder 'ANTHROPIC_AUTH_TOKEN' nicht gesetzt hat, hatte da Probleme. Das bedeutet, dass Entwickler, die Claude hinter einem Proxy oder Gateway betreiben, jetzt eine stabilere Umgebung haben, ohne dass eine undokumentierte Variable dazwischenfunkt. Das spart Kopfschmerzen beim Deployment und bei der Integration in bestehende Infrastrukturen.",
     "chloe_note": "Kurzes Update: *Claude Code v2.1.266* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Specific bug fix in Claude Code v2.1.266 addresses a regression impacting LLM-gateway/proxy setups. Clear, actionable.Cluster context: 1 sources, engagement 0. Common terms: failed, what, sign-in, own. Ich habe es mit 85 Punkten bewertet. Hier der Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.266"
+  },
+  {
+    "id": "e4cc432d7daa",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-09-09T17:45:46.580322Z",
+    "score": 90,
+    "reason": "Direct release of Claude Code CLI with new dynamic plugin loading and practical tool result cap. Passes Ships Test.",
+    "proposed_post": "Claude Code v2.1.265 adds dynamic plugin loading via `--plugin-dir` and a 1GB cap on tool results. Builders can now manage plugins more efficiently and must account for the new tool result size limit.",
+    "source_angle": "Claude Code CLI update simplifies plugin management and sets tool result limits.",
+    "source_item": {
+      "title": "Claude Code v2.1.265",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.265",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 0,
+      "summary": "<h2>What's changed</h2>\n<ul>\n<li>Added <code>user.email</code> and <code>user.groups</code> to the telemetry Claude Desktop and Cowork send through a Claude apps gateway, matching terminal sessions</li>\n<li>Added support for pointing <code>--plugin-dir</code> at a folder of plugins: each child folder with a manifest loads, and children added or removed while running are picked up</li>\n<li>Added a 1 GB cap on tool results saved to disk; the in-conversation preview says when a saved file was truncated</li>\n<li>Fixed resuming a foreground-spawned subagent changing its tool list and system prompt prefix, which broke prompt-cache reuse for that agent</li>\n<li>Fixed agent teammates and resumed subagents moving SubagentStart hook context and preloaded skills out of the prompt prefix on later turns, which broke prompt-cache reuse</li>\n<li>Fixed resume after the previous process died while a tool was running: the last prompt is no longer rewritten, and the interrupted tool call is kept and marked interrupted</li>\n<li>Fixed <code>/model opusplan[1m]</code> being rejected with \"Model not found\"</li>\n<li>Fixed syntax-highlighted code in permission prompts and messages sometimes omitting a character after a Ruby <code>?</code>, Erlang <code>$</code>, or Perl <code>$</code> sigil</li>\n<li>Fixed the fullscreen transcript jumping by one row whenever the slash-command or @-file suggestion list opened or closed</li>\n<li>Fixed a plugin path containing a backslash bypassing the symlink containment check on macOS and Linux</li>\n<li>Fixed plugin directories whose names begin with two dots being wrongly refused as outside the plugin root</li>\n<li>Fixed VS Code and SDK sessions occasionally requiring re-login when a session was closed while refreshing its token</li>\n<li>Fixed Remote Control sessions sending the end-of-turn signal before the reply's last message, which could show a reply as finished in the Claude app before its last part arrived</li>\n<li>Fixed background (<code>--bg</code>) sessions occasionally being retired mid-turn when a message arrived just before the idle timeout</li>\n<li>Fixed Claude Code's own git status and diff probes running clean filters configured by a nested repository inside the working tree</li>\n<li>Fixed the advisor tool and its instructions being re-decided per request from the request's model; the decision is now made once and announced in the conversation when it changes</li>\n<li>Fixed artifact publish accepting connector tool names the connector doesn't expose; the publish is now refused when none of the declared tools exist, and warned when only some don't</li>\n<li>Fixed <code>/add-dir &lt;subdirectory&gt;</code> refusing to load a subdirectory's agents when managed settings lock only skills to plugins, and promising agents when only agents are locked</li>\n<li>Fixed two-key keyboard shortcuts cancelling silently when the second key arrived more than a second later, as happens inside tmux; they now wait 3 seconds and show a notice when they time out</li>\n<li>Fixed forked skills (<code>context: fork</code>) not streaming their kickoff prompt and, with <code>--forward-subagent-text</code>, their text turns as progress events in stream-json</li>\n<li>Fixed a plugin's default component folder that the OS cannot check, such as a symlink loop, being silently skipped; it is now reported in <code>/plugin</code> with the error code</li>\n<li>Fixed the Claude apps gateway's OTLP telemetry relay pausing all forwarding to a collector for 30 seconds after it rejected a few payloads as malformed or too large</li>\n<li>Fixed <code>/plugin</code> Discover/Browse and <code>claude plugin list --json --available</code> showing no description or display name for marketplace plugins whose metadata lives only in their <code>plugin.json</code></li>\n<li>Fixed <code>/login</code> showing \"no gateway URL is configured\" when re-run in a session that signed in to a Claude apps gateway set by managed settings</li>\n<li>Fixed <code>/model</code> claiming a model was \"saved as your default\" when the settings file couldn't be written; it now says the save failed and why</li>\n<li>Fixed <code>/clear</code> from Remote Control waiting on SessionStart hooks and on open terminal dialogs before completing</li>\n<li>Fixed the <code>/config</code> dialog changing height when switching between its tabs</li>\n<li>Fixed resuming a workflow run after its container restarted; a resume whose run journal is missing now fails with a clear error instead of rerunning every agent</li>\n<li>Fixed the <code>claude-api</code> skill's error-code reference: model access failures return 404 and unavailable beta headers return 400, not 403</li>\n<li>Fixed non-interactive sessions (<code>-p</code> with stream-json input, Agent SDK, cloud sessions) resetting the shell working directory at each new user message; a <code>cd</code> now persists across turns</li>\n<li>Fixed MCP servers configured as <code>http</code> that only speak the legacy HTTP+SSE transport never connecting; Claude Code now falls back to SSE as the MCP spec describes</li>\n<li>Fixed some claude.ai connectors in cloud sessions showing as needing authentication even though they are connected in claude.ai (servers that answer an unsupported request with HTTP 401)</li>\n<li>Fixed remote sessions keeping their sandbox container alive while a connector approval or sign-in link waits for you</li>\n<li>Fixed resumed sessions showing long model-facing recovery instructions in \"background task didn't finish\" notices instead of a short status line</li>\n<li>Windows: Fixed Read, Write and Edit refusing every file (\"symlink resolution changed after permission was checked\") when running inside an AppContainer or restricted-token sandbox</li>\n<li>Improved <code>--worktree</code> startup on large repositories: the new worktree is now checked out in parallel (git 2.32+)</li>\n<li>Improved <code>/workflows</code> agent detail: tool calls are marked running, failed or done, the subagent's task list is shown when it has one, and Enter unfolds the listed calls with their inputs and results</li>\n<li>Improved slash commands typed mid-prompt: matches now show in a list (Tab opens it outside fullscreen) instead of a single suggestion, and a plugin skill is now found by its bare name</li>\n<li>Improved remote MCP servers that need sign-in: Claude Code no longer registers an OAuth client with them until you actually authenticate</li>\n<li>Improved the time to resume long sessions that read many files</li>\n<li>Improved the error shown when an image over the size limits cannot be decoded: it now names the cause and how to fix it instead of only citing the limit</li>\n<li>Improved the Artifact tool's read of an artifact someone else wrote: the summary now treats the page as untrusted content and flags embedded instructions rather than relaying them</li>\n<li>Updated the <code>.claude</code> folder permission option to say what it actually allows: editing files in the project's <code>.claude</code> folder (or <code>~/.claude</code>) for the session</li>\n<li>Changed machines with <code>forceLoginGatewayUrl</code> in managed settings to be Claude apps gateway sessions from startup, like <code>forceLoginMethod: \"gateway\"</code>; a leftover claude.ai login or API key is not used</li>\n<li>Changed image processing to use the runtime's built-in image support; the CLI no longer extracts a native image module to the temp directory</li>\n<li>Changed plugin display metadata to prefer the marketplace entry over <code>plugin.json</code> on the Installed tab and <code>claude plugin details</code>, filling gaps from <code>plugin.json</code></li>\n<li>Changed Claude apps gateway sessions to export OpenTelemetry directly to a collector the gateway's managed settings name in <code>OTEL_EXPORTER_OTLP_ENDPOINT</code>, instead of through the gateway's relay; sessions without a named collector still use the relay</li>\n<li>[VSCode] Added automatic archiving of sessions inactive for a set period (new \"Archive inactive sessions\" setting, default 14 days)</li>\n<li>[VSCode] Fixed the sidebar chat coming back blank after Reload Window or a restart when the conversation had been open for more than 10 minutes</li>\n<li>[VSCode] Fixed the timeline dot sitting below the text on the \"Remote Control is active\" message</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: windows, signed, results, authentication, matches.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Claude Code Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "windows",
+          "signed",
+          "results",
+          "authentication",
+          "matches",
+          "like",
+          "found",
+          "what"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: windows, signed, results, authentication. Lead: Claude Code v2.1.265",
+        "alternative_titles": [],
+        "cluster_score": 15
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-09-09T17:46:11.588461Z",
+    "defer_count": 1,
+    "original_score": 90,
+    "original_reason": "Direct release of Claude Code CLI with new dynamic plugin loading and practical tool result cap. Passes Ships Test."
+  },
+  {
+    "id": "e873e8e4dbb9",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-09-09T17:46:07.307222Z",
+    "score": 90,
+    "reason": "Model weights released with SOTA performance and commercial-friendly license. Directly actionable for builders.",
+    "proposed_post": "IBM released Granite Time Series PatchTST-FM-r2, a SOTA model for time series forecasting. Its commercial-friendly license enables immediate deployment for production use cases requiring advanced time series analysis.",
+    "source_angle": "IBM releases SOTA time series model with commercial license",
+    "source_item": {
+      "title": "IBM releases SOTA Granite Time Series PatchTST-FM-r2 model with commercial-friendly license",
+      "source": "Hugging Face Blog",
+      "link": "https://huggingface.co/blog/ibm-research/ibm-releases-sota-granite-time-series",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 10,
+      "summary": "IBM releases SOTA Granite Time Series PatchTST-FM-r2 model with commercial-friendly license\n[Cluster context: 1 sources, engagement 0, common terms: time, patchtst-fm-r2, sota, releases, ibm.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Hugging Face Blog"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "time",
+          "patchtst-fm-r2",
+          "sota",
+          "releases",
+          "ibm",
+          "series",
+          "commercial-friendly",
+          "license"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: time, patchtst-fm-r2, sota, releases. Lead: IBM releases SOTA Granite Time Series PatchTST-FM-r2 model with commercial-friendly license",
+        "alternative_titles": [],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-09-09T17:46:11.916159Z",
+    "defer_count": 1,
+    "original_score": 90,
+    "original_reason": "Model weights released with SOTA performance and commercial-friendly license. Directly actionable for builders."
   }
 ]
