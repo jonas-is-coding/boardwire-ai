@@ -6,6 +6,11 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-09-09T14:27:25.771487Z` [review] **LibreOffice breaks download records after declaring it has no AI features** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-09T14:27:25.645703Z` [review] **vastsa/PI-Desktop — Local-first AI coding agent desktop: Electron + Rust host core + pi Agent Harness + user-installable plugins** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-09T14:27:25.518698Z` [review] **Tencent/teamai-cli — Make Every Team AI Native** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-09T14:27:24.849072Z` [review] **Introducing ChatGPT Images 2.5** — Version-only release without concrete capability: 'Introducing ChatGPT Images 2.5'
+- `2026-09-09T14:27:24.118042Z` [review] **Ollama v0.34.0** — Version-only release without concrete capability: 'Ollama v0.34.0'
 - `2026-09-08T18:02:08.705114Z` [publish] **LangChain v1.4.0** — Release dedupe: LangChain v1.4.0 already published at 2026-08-31T00:17:39.850752Z
 - `2026-09-08T17:52:58.807197Z` [review] **Google DeepMind Releases AlphaGenome Atlas** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-08T17:52:58.738596Z` [review] **The Work Now Within Reach** — Post is empty; Post lacks a clear claim or insight
@@ -26,8 +31,3 @@ No pending review items.
 - `2026-09-06T20:47:33.439989Z` [review] **ruvnet/ruflo — 🌊 The original agent meta-harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning ** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-06T20:47:33.373873Z` [review] **vLLM v0.29.0rc4** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.29.0rc4'
 - `2026-09-06T20:47:33.307606Z` [review] **Ollama v0.34.0** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'Ollama v0.34.0'
-- `2026-09-06T20:47:32.924740Z` [review] **radixark/miles — Miles is an enterprise-facing reinforcement learning framework for LLM and VLM post-training, forked from and co-evolving with slime.** — Duplicate or near-duplicate post detected
-- `2026-09-04T17:33:12.661178Z` [review] **Playco cut manual fixes 50% prototyping games with GPT-6 Astra** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-04T17:33:12.533639Z` [review] **Which tools do Claude, Codex and Cursor choose? We measured 17k runs to find out** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-04T14:15:23.596098Z` [review] **Decoding the new AI lingo: Loops, harnesses, squads, hill climbing… oh my!** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-04T14:15:23.473403Z` [review] **Porting my 1993 Amiga game to Godot, with an LLM reading the 68000 assembly** — Post is empty; Post lacks a clear claim or insight
