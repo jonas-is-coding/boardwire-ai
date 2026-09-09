@@ -11667,7 +11667,7 @@
   },
   {
     "id": "2445b0d42ba9",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-09-07T15:45:45.497134Z",
     "score": 90,
     "reason": "Open-source tool for AI agent-based financial automation, trending on GitHub. Passes Ships Test.",
@@ -11706,11 +11706,12 @@
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das hier ist interessant. Ein neues GitHub-Repo, AutoHedge, verspricht einen autonomen Hedgefonds in Minuten. Es nutzt Schwarmintelligenz und AI-Agenten für Analyse und Handel.\n\nFür Developer ist das spannend, weil es zeigt, wie man mit Agenten komplexe Finanzprozesse automatisieren kann – nicht nur für Trading, sondern als Blaupause für andere datenintensive Automatisierungen. Man kann hier direkt sehen, wie Schwarmintelligenz in der Praxis aussieht und wie man solche Systeme aufbaut.",
-    "chloe_note": "Absolut. Das Repo besteht den Ships Test, da es ein direkt nutzbares Tool für Agenten-basierte Finanzautomatisierung bietet. Entwickler können es herunterladen, studieren und anwenden, um die Konzepte der Schwarmintelligenz und AI-Agenten in der Praxis zu verstehen und zu adaptieren."
+    "chloe_note": "Absolut. Das Repo besteht den Ships Test, da es ein direkt nutzbares Tool für Agenten-basierte Finanzautomatisierung bietet. Entwickler können es herunterladen, studieren und anwenden, um die Konzepte der Schwarmintelligenz und AI-Agenten in der Praxis zu verstehen und zu adaptieren.",
+    "expired_at": "2026-09-09T17:56:28.147438Z"
   },
   {
     "id": "bec2b3f7b769",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-09-07T15:45:52.707211Z",
     "score": 85,
     "reason": "OpenAI released a GitHub repo with a catalog of skills for Codex. Provides concrete examples for builders to apply.",
@@ -11749,7 +11750,8 @@
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, schau dir das mal an: 'openai/skills'. Ist heute auf GitHub Trending, +372 Sterne.\n\nDas ist ein Skills-Katalog für Codex. Für Entwickler, die mit Codex experimentieren, ist das Gold wert. Statt alles von Grund auf zu entwickeln, kann man hier direkt sehen, welche \"Skills\" schon definiert wurden und wie man sie implementiert. Das beschleunigt massiv die Entwicklung von Anwendungen, die auf Codex basieren. Spart Zeit, gibt Inspiration und hilft, Best Practices zu verstehen.",
-    "chloe_note": "*openai/skills — Skills Catalog for Codex* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch OpenAI released a GitHub repo with a catalog of skills for Codex. Provides concrete examples for builders to apply.Cluster context: 1 sources, engagement 372. Common terms: trending, codex, stars., catalog. Bewertung: 85. Quelle: https://github.com/openai/skills"
+    "chloe_note": "*openai/skills — Skills Catalog for Codex* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch OpenAI released a GitHub repo with a catalog of skills for Codex. Provides concrete examples for builders to apply.Cluster context: 1 sources, engagement 372. Common terms: trending, codex, stars., catalog. Bewertung: 85. Quelle: https://github.com/openai/skills",
+    "expired_at": "2026-09-09T17:56:28.147438Z"
   },
   {
     "id": "8f2300dafd76",
