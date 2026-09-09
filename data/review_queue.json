@@ -11583,7 +11583,7 @@
   },
   {
     "id": "8fe725f01ec8",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-09-07T18:41:43.833481Z",
     "score": 92,
     "reason": "Open-source tool ships today with concrete 98% context window reduction for AI coding agents. Direct builder value.",
@@ -11621,11 +11621,12 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": true,
-    "reactivated_at": "2026-09-07T18:41:43.833481Z"
+    "reactivated_at": "2026-09-07T18:41:43.833481Z",
+    "expired_at": "2026-09-09T20:48:58.396371Z"
   },
   {
     "id": "0b4c4862fe09",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-09-07T18:41:43.961935Z",
     "score": 92,
     "reason": "New open-source tool launch directly addresses a common pain point for AI agents (anti-scraping/bot detection).",
@@ -11663,7 +11664,8 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": true,
-    "reactivated_at": "2026-09-07T18:41:43.961935Z"
+    "reactivated_at": "2026-09-07T18:41:43.961935Z",
+    "expired_at": "2026-09-09T20:48:58.396371Z"
   },
   {
     "id": "2445b0d42ba9",
