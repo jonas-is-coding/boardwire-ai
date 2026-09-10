@@ -11986,12 +11986,12 @@
   },
   {
     "id": "e4cc432d7daa",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-09-09T17:45:46.580322Z",
-    "score": 90,
-    "reason": "Direct release of Claude Code CLI with new dynamic plugin loading and practical tool result cap. Passes Ships Test.",
-    "proposed_post": "Claude Code v2.1.265 adds dynamic plugin loading via `--plugin-dir` and a 1GB cap on tool results. Builders can now manage plugins more efficiently and must account for the new tool result size limit.",
-    "source_angle": "Claude Code CLI update simplifies plugin management and sets tool result limits.",
+    "status": "approved",
+    "created_at": "2026-09-10T14:18:53.458750Z",
+    "score": 95,
+    "reason": "Direct CLI release with new dynamic plugin loading and tool result cap. Passes Ships Test for new SDK/CLI capabilities.",
+    "proposed_post": "Claude Code CLI v2.1.265 released with dynamic plugin loading and a practical tool result cap. Builders can now integrate tools more flexibly and manage output more precisely.",
+    "source_angle": "Claude Code CLI v2.1.265: Dynamic plugin loading & tool result cap",
     "source_item": {
       "title": "Claude Code v2.1.265",
       "source": "Claude Code Releases",
@@ -12023,19 +12023,17 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-09-09T17:46:11.588461Z",
-    "defer_count": 1,
-    "original_score": 90,
-    "original_reason": "Direct release of Claude Code CLI with new dynamic plugin loading and practical tool result cap. Passes Ships Test."
+    "breaking": false,
+    "reactivated_at": "2026-09-10T14:18:53.458750Z"
   },
   {
     "id": "e873e8e4dbb9",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-09-09T17:46:07.307222Z",
+    "status": "approved",
+    "created_at": "2026-09-10T14:18:53.567536Z",
     "score": 90,
-    "reason": "Model weights released with SOTA performance and commercial-friendly license. Directly actionable for builders.",
-    "proposed_post": "IBM released Granite Time Series PatchTST-FM-r2, a SOTA model for time series forecasting. Its commercial-friendly license enables immediate deployment for production use cases requiring advanced time series analysis.",
-    "source_angle": "IBM releases SOTA time series model with commercial license",
+    "reason": "Model weights released with SOTA performance and commercial license, making it immediately actionable for builders.",
+    "proposed_post": "IBM released Granite Time Series PatchTST-FM-r2 model weights. This SOTA model is commercially licensed, allowing direct integration for forecasting and anomaly detection in builder products.",
+    "source_angle": "IBM's official release of a commercially viable SOTA time series model.",
     "source_item": {
       "title": "IBM releases SOTA Granite Time Series PatchTST-FM-r2 model with commercial-friendly license",
       "source": "Hugging Face Blog",
@@ -12067,9 +12065,51 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-09-09T17:46:11.916159Z",
+    "breaking": false,
+    "reactivated_at": "2026-09-10T14:18:53.567536Z"
+  },
+  {
+    "id": "685613eafd40",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-09-10T14:18:48.177337Z",
+    "score": 90,
+    "reason": "Open-source tool launch (CloddsBot) on GitHub. Ships today, clear builder utility for autonomous agents/trading.",
+    "proposed_post": "CloddsBot, an open-source AI trading agent built on Claude, is available on GitHub. Builders can self-host this agent to automate trading across 1000+ crypto/prediction markets, scanning for edge and executing instantly.",
+    "source_angle": "Open-source AI trading agent for crypto/prediction markets.",
+    "source_item": {
+      "title": "alsk1992/CloddsBot — Open Source AI trading agent that operates autonomously across 1000+ markets - Polymarket, Kalshi, Binance, Hyperliquid, Solana DEXs, 5 EVM chains. Scans for edge, executes instan",
+      "source": "GitHub Trending",
+      "link": "https://github.com/alsk1992/CloddsBot",
+      "source_tier": 2,
+      "engagement_score": 299.0,
+      "local_newsworthiness_score": 0,
+      "summary": "Trending on GitHub today: +299 stars. Open Source AI trading agent that operates autonomously across 1000+ markets - Polymarket, Kalshi, Binance, Hyperliquid, Solana DEXs, 5 EVM chains. Scans for edge, executes instantly, manages risk while you sleep. Agent commerce protocol for machine-to-machine payments. Self-hosted. Built on Claude.\n[Cluster context: 1 sources, engagement 299, common terms: trending, binance, you, kalshi, trading.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 299,
+        "common_terms": [
+          "trending",
+          "binance",
+          "you",
+          "kalshi",
+          "trading",
+          "solana",
+          "scans",
+          "instan"
+        ],
+        "cluster_summary": "1 sources, engagement 299. Common terms: trending, binance, you, kalshi. Lead: alsk1992/CloddsBot — Open Source AI trading agent that operates autonomously across 1000+ markets - Polymarket, Kalshi, ",
+        "alternative_titles": [],
+        "cluster_score": 25
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-09-10T14:18:53.786237Z",
     "defer_count": 1,
     "original_score": 90,
-    "original_reason": "Model weights released with SOTA performance and commercial-friendly license. Directly actionable for builders."
+    "original_reason": "Open-source tool launch (CloddsBot) on GitHub. Ships today, clear builder utility for autonomous agents/trading."
   }
 ]

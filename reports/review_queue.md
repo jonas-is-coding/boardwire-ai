@@ -6,6 +6,10 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-09-10T14:18:54.053298Z` [review] **Claude Code v2.1.267** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-10T14:18:53.963847Z` [review] **Ollama v0.34.0** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-10T14:18:53.874492Z` [review] **vercel-labs/skills — The open agent skills tool - npx skills** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-10T14:18:53.674777Z` [review] **DeepSeek v4.1 Flash** — Version-only release without concrete capability: 'DeepSeek v4.1 Flash'
 - `2026-09-09T17:46:12.094330Z` [review] **Research acceleration: The view inside OpenAI** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-09T17:46:12.005260Z` [review] **Muse – Meta’s personal AI agent** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-09T17:46:11.807345Z` [review] **Ollama v0.34.0-rc4** — Version-only release without concrete capability: 'Ollama v0.34.0-rc4'
@@ -27,7 +31,3 @@ No pending review items.
 - `2026-09-08T14:25:13.671095Z` [review] **Claude Code v2.1.261** — Version-only release without concrete capability: 'Claude Code v2.1.261'
 - `2026-09-07T18:41:44.654486Z` [review] **Speculative Decoding in vLLM on AMD GPUs** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-07T18:41:44.525930Z` [review] **Safety overview: GPT-6 Astra** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-07T18:41:44.396363Z` [review] **Claude Fable 5.1 made me a really nice animated pelican** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-07T18:41:44.112501Z` [review] **LangChain v1.6.2** — Version-only release without concrete capability: 'LangChain v1.6.2'
-- `2026-09-07T15:46:13.056198Z` [review] **lightpanda-io/browser — Lightpanda: the headless browser designed for AI and automation** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-07T15:46:12.931046Z` [review] **Claude Code v2.1.263** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'Claude Code v2.1.263'

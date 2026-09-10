@@ -460,5 +460,44 @@
       "Post is empty",
       "Post lacks a clear claim or insight"
     ]
+  },
+  {
+    "rejected_at": "2026-09-10T14:18:53.674777Z",
+    "stage": "review",
+    "title": "DeepSeek v4.1 Flash",
+    "link": "https://twitter.com/deepseek_ai/status/2097930608790167907",
+    "reasons": [
+      "Version-only release without concrete capability: 'DeepSeek v4.1 Flash'"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-10T14:18:53.874492Z",
+    "stage": "review",
+    "title": "vercel-labs/skills — The open agent skills tool - npx skills",
+    "link": "https://github.com/vercel-labs/skills",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-10T14:18:53.963847Z",
+    "stage": "review",
+    "title": "Ollama v0.34.0",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.34.0",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-10T14:18:54.053298Z",
+    "stage": "review",
+    "title": "Claude Code v2.1.267",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.267",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
   }
 ]
