@@ -11802,7 +11802,7 @@
   },
   {
     "id": "cfacb144c65a",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-09-08T14:25:01.056082Z",
     "score": 85,
     "reason": "New LangChain version ships with direct support for Azure AD auth and async tools for OpenAI integration.",
@@ -11846,7 +11846,8 @@
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Hey Chloe,\n\nLangChain 1.6.1 ist raus. Nicht die größte Änderung, aber der Fix für 'max_completion_tokens' im Cache-Breakpoint-Test ist relevant. Wer mit LangChain und OpenAI arbeitet, kann hier potenziell stabileres Caching erwarten, was bei Kosten und Performance wichtig ist. Entwickler, die ihre LLM-Anwendungen optimieren, sollten das im Auge behalten.",
-    "chloe_note": "Dieser Fund besteht den Ships Test. Der Update auf LangChain 1.6.1 bietet konkrete Verbesserungen für Entwickler, die sich direkt auf die Stabilität des Caching und potenziell auf Kosten und Performance auswirken. Es gibt eine klare Handlungsaufforderung, die neue Version zu nutzen."
+    "chloe_note": "Dieser Fund besteht den Ships Test. Der Update auf LangChain 1.6.1 bietet konkrete Verbesserungen für Entwickler, die sich direkt auf die Stabilität des Caching und potenziell auf Kosten und Performance auswirken. Es gibt eine klare Handlungsaufforderung, die neue Version zu nutzen.",
+    "expired_at": "2026-09-10T17:48:41.522864Z"
   },
   {
     "id": "c9f4496d53f4",
@@ -11941,11 +11942,11 @@
   },
   {
     "id": "ecd6bba435d7",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-09-09T14:27:18.417604Z",
     "score": 85,
     "reason": "Specific bug fix in Claude Code v2.1.266 addresses a regression impacting LLM-gateway/proxy setups. Clear, actionable.",
-    "proposed_post": "Claude Code v2.1.266 fixes a regression where `CLAUDE_CODE_USE_GATEWAY` forced Cloud-gateway sign-in, breaking API key setups. Builders using proxy/gateway configurations can now update without auth conflicts.",
+    "proposed_post": "Proxy reliability improves with Claude Code 2.1.266 fix.\n\nClaude Code 2.1.266 stops forced gateway sign‑in when CLAUDE_CODE_USE_GATEWAY lacks ANTHROPIC_BASE_U\n\n#LLM #ClaudeCode #Anthropic",
     "source_angle": "Claude Code bug fix for gateway/proxy auth",
     "source_item": {
       "title": "Claude Code v2.1.266",
@@ -11978,11 +11979,30 @@
         "cluster_score": 15
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/ecd6bba435d7.png",
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Hey Chloe,\n\nHab mir gerade die Claude Code v2.1.266 Release Notes angeschaut.\n\nDas Fix für die LLM-Gateway und Proxy Setups ist wichtig. Wer 'CLAUDE_CODE_USE_GATEWAY' nutzt und 'ANTHROPIC_BASE_URL' oder 'ANTHROPIC_AUTH_TOKEN' nicht gesetzt hat, hatte da Probleme. Das bedeutet, dass Entwickler, die Claude hinter einem Proxy oder Gateway betreiben, jetzt eine stabilere Umgebung haben, ohne dass eine undokumentierte Variable dazwischenfunkt. Das spart Kopfschmerzen beim Deployment und bei der Integration in bestehende Infrastrukturen.",
-    "chloe_note": "Kurzes Update: *Claude Code v2.1.266* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Specific bug fix in Claude Code v2.1.266 addresses a regression impacting LLM-gateway/proxy setups. Clear, actionable.Cluster context: 1 sources, engagement 0. Common terms: failed, what, sign-in, own. Ich habe es mit 85 Punkten bewertet. Hier der Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.266"
+    "chloe_note": "Kurzes Update: *Claude Code v2.1.266* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Specific bug fix in Claude Code v2.1.266 addresses a regression impacting LLM-gateway/proxy setups. Clear, actionable.Cluster context: 1 sources, engagement 0. Common terms: failed, what, sign-in, own. Ich habe es mit 85 Punkten bewertet. Hier der Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.266",
+    "sarah_package": {
+      "title": "Proxy reliability improves with Claude Code 2.1.266 fix.",
+      "subtitle": "Claude Code 2.1.266 stops forced gateway sign‑in when CLAUDE_CODE_USE_GATEWAY lacks ANTHROPIC_BASE_U",
+      "description": "The update prevents the undocumented flag from overriding API‑key authentication, restoring stable proxy and gateway operation for Claude de",
+      "hashtags": [
+        "#LLM",
+        "#ClaudeCode",
+        "#Anthropic"
+      ],
+      "question": "Has anyone tested Claude Code behind a corporate proxy?",
+      "card_stat": "v2.1.266",
+      "card_claim": "Gateway flag no longer forces cloud sign‑in",
+      "card_context": "Fixes regression in CLAUDE_CODE_USE_GATEWAY · restores API‑key auth · stable proxy deployments"
+    },
+    "composer_version": "2",
+    "card_layout": "release",
+    "card_variant": "editorial_release",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-09-09-claude-code-v2-1-266-ecd6bba435d7.md",
+    "published_at": "2026-09-10T17:48:41.522864Z"
   },
   {
     "id": "e4cc432d7daa",

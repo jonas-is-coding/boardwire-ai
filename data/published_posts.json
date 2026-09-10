@@ -3595,5 +3595,29 @@
       "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mumws7tae72y"
     ],
     "thread_partial": false
+  },
+  {
+    "id": "ecd6bba435d7",
+    "published_at": "2026-09-10T17:48:41.522864Z",
+    "platform": "bluesky",
+    "post": "Proxy reliability improves with Claude Code 2.1.266 fix.\n\nClaude Code 2.1.266 stops forced gateway sign‑in when CLAUDE_CODE_USE_GATEWAY lacks ANTHROPIC_BASE_U\n\n#LLM #ClaudeCode #Anthropic",
+    "source_link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.266",
+    "source_title": "Claude Code v2.1.266",
+    "score": 85,
+    "reason": "Specific bug fix in Claude Code v2.1.266 addresses a regression impacting LLM-gateway/proxy setups. Clear, actionable.",
+    "card_path": "generated/cards/ecd6bba435d7.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-09-09-claude-code-v2-1-266-ecd6bba435d7.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mv6medjfdg2j",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mv6medjfdg2j",
+    "format_variant": "plain",
+    "hashtags_used": [
+      "#LLM",
+      "#ClaudeCode",
+      "#Anthropic"
+    ],
+    "published_hour_utc": 17,
+    "published_weekday": "Thursday",
+    "composer_version": "2",
+    "card_variant": "editorial_release"
   }
 ]

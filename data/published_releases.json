@@ -130,5 +130,11 @@
     "version": "v2.1.259",
     "published_at": "2026-09-03T17:07:31.046610Z",
     "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.259"
+  },
+  {
+    "project": "Claude Code",
+    "version": "v2.1.266",
+    "published_at": "2026-09-10T17:48:41.522864Z",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.266"
   }
 ]
