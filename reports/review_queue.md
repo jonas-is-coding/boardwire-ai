@@ -6,6 +6,9 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-09-10T17:38:46.538427Z` [review] **armory3d/armorpaint — Graphics Creation Tools** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-10T17:38:46.447859Z` [review] **nashsu/llm_wiki — LLM Wiki is a cross-platform desktop application that turns your documents into an organized, interlinked knowledge base — automatically. Instead of traditional RAG (retrieve-and-ans** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-10T17:38:46.356628Z` [review] **Cognition launches new SWE-2 model, Rivaling Fable 5.1 and GPT-Astra** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-10T14:18:54.053298Z` [review] **Claude Code v2.1.267** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-10T14:18:53.963847Z` [review] **Ollama v0.34.0** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-10T14:18:53.874492Z` [review] **vercel-labs/skills — The open agent skills tool - npx skills** — Post is empty; Post lacks a clear claim or insight
@@ -28,6 +31,3 @@ No pending review items.
 - `2026-09-08T14:25:15.055943Z` [review] **How well do agents use test/verification techniques?** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-08T14:25:14.967280Z` [review] **Latest open artifacts (#24): Motif-3, GLM-5.3, Hy4-preview and open model licenses** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-08T14:25:14.878370Z` [review] **vLLM v0.29.0rc6** — Version-only release without concrete capability: 'vLLM v0.29.0rc6'
-- `2026-09-08T14:25:13.671095Z` [review] **Claude Code v2.1.261** — Version-only release without concrete capability: 'Claude Code v2.1.261'
-- `2026-09-07T18:41:44.654486Z` [review] **Speculative Decoding in vLLM on AMD GPUs** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-07T18:41:44.525930Z` [review] **Safety overview: GPT-6 Astra** — Post is empty; Post lacks a clear claim or insight

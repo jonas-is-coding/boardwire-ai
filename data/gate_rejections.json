@@ -499,5 +499,35 @@
       "Post is empty",
       "Post lacks a clear claim or insight"
     ]
+  },
+  {
+    "rejected_at": "2026-09-10T17:38:46.356628Z",
+    "stage": "review",
+    "title": "Cognition launches new SWE-2 model, Rivaling Fable 5.1 and GPT-Astra",
+    "link": "https://cognition.com/blog/swe-2",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-10T17:38:46.447859Z",
+    "stage": "review",
+    "title": "nashsu/llm_wiki — LLM Wiki is a cross-platform desktop application that turns your documents into an organized, interlinked knowledge base — automatically. Instead of traditional RAG (retrieve-and-ans",
+    "link": "https://github.com/nashsu/llm_wiki",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-10T17:38:46.538427Z",
+    "stage": "review",
+    "title": "armory3d/armorpaint — Graphics Creation Tools",
+    "link": "https://github.com/armory3d/armorpaint",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
   }
 ]

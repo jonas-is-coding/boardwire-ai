@@ -12107,9 +12107,97 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-09-10T14:18:53.786237Z",
-    "defer_count": 1,
+    "deferred_at": "2026-09-10T17:38:46.031576Z",
+    "defer_count": 2,
     "original_score": 90,
     "original_reason": "Open-source tool launch (CloddsBot) on GitHub. Ships today, clear builder utility for autonomous agents/trading."
+  },
+  {
+    "id": "4b61dcf3ca6d",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-09-10T17:38:23.771681Z",
+    "score": 95,
+    "reason": "Direct API release of a new voice model with concrete features (full-duplex, custom voices, telephony). Passes Ships Test.",
+    "proposed_post": "OpenAI launched GPT-Live-1 in the API, enabling full-duplex voice conversations with custom voices and telephony support. Builders can now integrate more natural, real-time voice interfaces into their applications.",
+    "source_angle": "OpenAI's new voice API for real-time, full-duplex conversations.",
+    "source_item": {
+      "title": "Build more natural voice experiences with GPT‑Live‑1 in the API",
+      "source": "OpenAI News",
+      "link": "https://openai.com/index/introducing-gpt-live-1-in-the-api",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 35,
+      "summary": "GPT‑Live‑1 brings natural, full-duplex voice conversations to the API, with stronger instruction following, custom voices, and telephony support.\n[Cluster context: 1 sources, engagement 0, common terms: full-duplex, brings, following, support., natural.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "OpenAI News"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "full-duplex",
+          "brings",
+          "following",
+          "support.",
+          "natural",
+          "instruction",
+          "experiences",
+          "voice"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: full-duplex, brings, following, support.. Lead: Build more natural voice experiences with GPT‑Live‑1 in the API",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-09-10T17:38:46.147360Z",
+    "defer_count": 1,
+    "original_score": 95,
+    "original_reason": "Direct API release of a new voice model with concrete features (full-duplex, custom voices, telephony). Passes Ships Test."
+  },
+  {
+    "id": "d4a95fbaa2b0",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-09-10T17:38:34.838748Z",
+    "score": 75,
+    "reason": "New Data agent in ChatGPT Work is live, enabling natural language data analysis and dashboard creation.",
+    "proposed_post": "OpenAI released a Data agent in ChatGPT Work. This enables natural language data connection, insight generation, and interactive dashboard building. Builders can leverage this for internal data analysis or observe OpenAI's strategy in AI data agents.",
+    "source_angle": "OpenAI's new data agent for enterprise data analysis.",
+    "source_item": {
+      "title": "Now everyone can put data to work",
+      "source": "OpenAI News",
+      "link": "https://openai.com/index/put-data-to-work",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 15,
+      "summary": "Meet the Data agent in ChatGPT Work. Connect company data, uncover insights, and build interactive dashboards with AI using natural language.\n[Cluster context: 1 sources, engagement 0, common terms: work., dashboards, natural, company, now.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "OpenAI News"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "work.",
+          "dashboards",
+          "natural",
+          "company",
+          "now",
+          "can",
+          "work",
+          "interactive"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: work., dashboards, natural, company. Lead: Now everyone can put data to work",
+        "alternative_titles": [],
+        "cluster_score": 25
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-09-10T17:38:46.266827Z",
+    "defer_count": 1,
+    "original_score": 75,
+    "original_reason": "New Data agent in ChatGPT Work is live, enabling natural language data analysis and dashboard creation."
   }
 ]
