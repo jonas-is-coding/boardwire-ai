@@ -877,6 +877,138 @@
         "@stellaathena.bsky.social follows"
       ],
       "followed_at": "2026-09-09T12:37:19.579264Z"
+    },
+    "did:plc:os4uvzzv76z34z6qhgylfnqm": {
+      "handle": "assf.art",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mv626x4ho52v",
+      "channel": "seed_follows",
+      "score": 1.5,
+      "mode": "discover",
+      "via": [
+        "@simonwillison.net follows"
+      ],
+      "followed_at": "2026-09-10T12:23:42.134868Z"
+    },
+    "did:plc:34mbm5v3umztwvvgnttvcz6e": {
+      "handle": "aaronstevenwhite.io",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mv627yb2nc23",
+      "channel": "seed_follows",
+      "score": 1.0,
+      "mode": "discover",
+      "via": [
+        "@danielvanstrien.bsky.social follows"
+      ],
+      "followed_at": "2026-09-10T12:24:16.879729Z"
+    },
+    "did:plc:lv6hohw76sleofqklr25lrvv": {
+      "handle": "adamkoszary.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mv62aq47be22",
+      "channel": "seed_follows",
+      "score": 1.0,
+      "mode": "discover",
+      "via": [
+        "@danielvanstrien.bsky.social follows"
+      ],
+      "followed_at": "2026-09-10T12:24:41.892284Z"
+    },
+    "did:plc:42c4ojmytguvourn2o6z634o": {
+      "handle": "afinetheorem.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mv62bj7zac2e",
+      "channel": "seed_follows",
+      "score": 1.0,
+      "mode": "discover",
+      "via": [
+        "@emollick.bsky.social follows"
+      ],
+      "followed_at": "2026-09-10T12:25:08.226125Z"
+    },
+    "did:plc:nhyitepp3u4u6fcfboegzcjw": {
+      "handle": "anil.recoil.org",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mv62ck3ihc2e",
+      "channel": "seed_follows",
+      "score": 1.0,
+      "mode": "discover",
+      "via": [
+        "@simonwillison.net follows"
+      ],
+      "followed_at": "2026-09-10T12:25:42.686919Z"
+    },
+    "did:plc:jf3oraummcsfodflx5w5pouf": {
+      "handle": "arxiv-cs-cl.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mv62dhpu3n2j",
+      "channel": "seed_follows",
+      "score": 1.0,
+      "mode": "discover",
+      "via": [
+        "@rasbt.bsky.social follows"
+      ],
+      "followed_at": "2026-09-10T12:26:13.754749Z"
+    },
+    "did:plc:k6ckcbpbzntrcdm37tqu7pck": {
+      "handle": "alexcbecker.net",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mv62e4yyqv2i",
+      "channel": "seed_follows",
+      "score": 1.0,
+      "mode": "discover",
+      "via": [
+        "@dorialexander.bsky.social follows"
+      ],
+      "followed_at": "2026-09-10T12:26:36.077349Z"
+    },
+    "did:plc:vgyot634chvfcwzarksytxar": {
+      "handle": "alexirpan.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mv62fgliv62v",
+      "channel": "seed_follows",
+      "score": 1.0,
+      "mode": "discover",
+      "via": [
+        "@stellaathena.bsky.social follows"
+      ],
+      "followed_at": "2026-09-10T12:27:19.695100Z"
+    },
+    "did:plc:ycmvakcgicie5gd2mp4btjoe": {
+      "handle": "adinayakup.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mv62gbrrw52l",
+      "channel": "seed_follows",
+      "score": 1.0,
+      "mode": "discover",
+      "via": [
+        "@danielvanstrien.bsky.social follows"
+      ],
+      "followed_at": "2026-09-10T12:27:48.191228Z"
+    },
+    "did:plc:ncobyzjsoag5dl2bmql62ywi": {
+      "handle": "alexiajm.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mv62hfzuej2l",
+      "channel": "seed_follows",
+      "score": 1.0,
+      "mode": "discover",
+      "via": [
+        "@kylelo.bsky.social follows"
+      ],
+      "followed_at": "2026-09-10T12:28:26.204054Z"
+    },
+    "did:plc:nrfqk6t446qme4kb7aiemqig": {
+      "handle": "ai-firehose.column.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mv62ij2mee2e",
+      "channel": "seed_follows",
+      "score": 1.0,
+      "mode": "discover",
+      "via": [
+        "@natolambert.bsky.social follows"
+      ],
+      "followed_at": "2026-09-10T12:29:03.167355Z"
+    },
+    "did:plc:p4rn5lfn7ymuxgerh6zk4mrt": {
+      "handle": "adverb.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mv62jb23sv2l",
+      "channel": "seed_follows",
+      "score": 1.0,
+      "mode": "discover",
+      "via": [
+        "@stellaathena.bsky.social follows"
+      ],
+      "followed_at": "2026-09-10T12:29:28.077547Z"
     }
   },
   "runs": [
@@ -1035,6 +1167,32 @@
       ],
       "started_at": "2026-09-09T12:31:01.186929Z",
       "finished_at": "2026-09-09T12:37:19.580741Z"
+    },
+    {
+      "mode": "discover",
+      "dry_run": false,
+      "limit": 12,
+      "planned": 0,
+      "followed": 12,
+      "skipped_already": 0,
+      "failed": 0,
+      "aborted": null,
+      "handles": [
+        "assf.art",
+        "aaronstevenwhite.io",
+        "adamkoszary.bsky.social",
+        "afinetheorem.bsky.social",
+        "anil.recoil.org",
+        "arxiv-cs-cl.bsky.social",
+        "alexcbecker.net",
+        "alexirpan.bsky.social",
+        "adinayakup.bsky.social",
+        "alexiajm.bsky.social",
+        "ai-firehose.column.social",
+        "adverb.bsky.social"
+      ],
+      "started_at": "2026-09-10T12:23:41.859297Z",
+      "finished_at": "2026-09-10T12:29:28.079113Z"
     }
   ],
   "pinned_thread": {
