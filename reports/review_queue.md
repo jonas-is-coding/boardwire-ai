@@ -6,6 +6,10 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-09-11T17:42:40.970768Z` [review] **pascalorg/editor — Open-source 3D architectural editor with a local CLI, MCP tools, and practical workflows for humans and AI agents.** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-11T17:42:40.879807Z` [review] **jihe520/MathModelAgent — 🤖📐专为数学建模设计的 Agent & skills ,自动完成数学建模，生成一份完整的可以直接提交的论文。 An Agent Designed for Mathematical Modeling ,Automatically complete mathmodel and generate a complete paper ready for su** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-11T17:42:40.790660Z` [review] **melgarafael/DeskcommCRM — Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-rea** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-11T17:42:40.701078Z` [review] **vLLM v0.1.0** — Version-only release without concrete capability: 'vLLM v0.1.0'
 - `2026-09-11T14:19:46.073655Z` [review] **Claude Code v2.1.268** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-11T14:19:45.981173Z` [review] **GPT‑Live‑1 in the API** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-11T14:19:45.885087Z` [review] **Anthropic Python SDK v1.5.0** — Post is empty; Post lacks a clear claim or insight
@@ -27,7 +31,3 @@ No pending review items.
 - `2026-09-09T14:27:24.118042Z` [review] **Ollama v0.34.0** — Version-only release without concrete capability: 'Ollama v0.34.0'
 - `2026-09-08T18:02:08.705114Z` [publish] **LangChain v1.4.0** — Release dedupe: LangChain v1.4.0 already published at 2026-08-31T00:17:39.850752Z
 - `2026-09-08T17:52:58.807197Z` [review] **Google DeepMind Releases AlphaGenome Atlas** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-08T17:52:58.738596Z` [review] **The Work Now Within Reach** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-08T17:52:58.669915Z` [review] **Simon Willison v4.5** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-08T17:52:56.941958Z` [review] **vLLM v0.29.0rc5** — Version-only release without concrete capability: 'vLLM v0.29.0rc5'
-- `2026-09-08T14:25:15.144859Z` [review] **AI models ran real businesses: They sent $12,431 in fake invoices, lost $3,200** — Post is empty; Post lacks a clear claim or insight

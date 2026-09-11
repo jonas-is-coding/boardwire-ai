@@ -12211,19 +12211,19 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-09-11T14:19:45.680998Z",
-    "defer_count": 2,
+    "deferred_at": "2026-09-11T17:42:40.473619Z",
+    "defer_count": 3,
     "original_score": 75,
     "original_reason": "New Data agent in ChatGPT Work is live, enabling natural language data analysis and dashboard creation."
   },
   {
     "id": "0da1bc6d7c5e",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-09-11T14:19:40.911938Z",
+    "status": "approved",
+    "created_at": "2026-09-11T17:42:40.358742Z",
     "score": 95,
-    "reason": "New API from OpenAI for agent development and deployment, offering a managed service for builders.",
-    "proposed_post": "OpenAI launched the Agents API, a managed service for building and deploying cloud agents. Builders can now leverage a first-party orchestration layer for long-running agentic workflows and tool use.",
-    "source_angle": "OpenAI's new managed service for cloud agents",
+    "reason": "OpenAI released a new API for agents, directly usable by builders for deployment.",
+    "proposed_post": "OpenAI launched an Agents API, offering a managed service for agent development and deployment. Builders can now leverage OpenAI's infrastructure to streamline agent orchestration and scaling.",
+    "source_angle": "OpenAI's new Agents API simplifies agent development and deployment.",
     "source_item": {
       "title": "Introducing the Agents API",
       "source": "OpenAI News",
@@ -12255,9 +12255,51 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-09-11T14:19:45.790777Z",
+    "breaking": false,
+    "reactivated_at": "2026-09-11T17:42:40.358742Z"
+  },
+  {
+    "id": "d2e470a2b3ea",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-09-11T17:42:29.493487Z",
+    "score": 90,
+    "reason": "Official OpenAI Agents API released. Direct tool for builders, ships today.",
+    "proposed_post": "OpenAI launched an Agents API, enabling developers to programmatically build and manage AI agents. This simplifies complex multi-step workflows directly within the OpenAI ecosystem.",
+    "source_angle": "Official OpenAI API release for building and managing AI agents.",
+    "source_item": {
+      "title": "OpenAI Agents API",
+      "source": "HackerNews",
+      "link": "https://developers.openai.com/api/docs/guides/agents-api/overview",
+      "source_tier": 3,
+      "engagement_score": 415.0,
+      "local_newsworthiness_score": 0,
+      "summary": "331 points, 168 comments on Hacker News — submitted by aquir — original: https://developers.openai.com/api/docs/guides/agents-api/overview\n[Cluster context: 1 sources, engagement 415, common terms: submitted, original, hacker, comments, aquir.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 415,
+        "common_terms": [
+          "submitted",
+          "original",
+          "hacker",
+          "comments",
+          "aquir",
+          "168",
+          "points",
+          "331"
+        ],
+        "cluster_summary": "1 sources, engagement 415. Common terms: submitted, original, hacker, comments. Lead: OpenAI Agents API",
+        "alternative_titles": [],
+        "cluster_score": 30
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-09-11T17:42:40.585036Z",
     "defer_count": 1,
-    "original_score": 95,
-    "original_reason": "New API from OpenAI for agent development and deployment, offering a managed service for builders."
+    "original_score": 90,
+    "original_reason": "Official OpenAI Agents API released. Direct tool for builders, ships today."
   }
 ]
