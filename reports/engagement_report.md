@@ -1,22 +1,22 @@
 # Boardwire Engagement Report
 
-Generated: `2026-09-10T08:30:00.686363Z`
+Generated: `2026-09-11T08:24:04.495853Z`
 
 ## Account
 
-- @boardwire.bsky.social: **28** followers (1d: +0, 7d: n/a) · following 72 · posts 73 · snapshots 7 · as of `2026-09-10T08:29:18.633753Z`
+- @boardwire.bsky.social: **28** followers (1d: +0, 7d: +3) · following 84 · posts 74 · snapshots 8 · as of `2026-09-11T08:23:52.804154Z`
 
 ## Summary
 
-- Measured posts: **192** of 196 published
+- Measured posts: **193** of 197 published
 - Median peak engagement: **0.0**
 - Average peak engagement: **0.6**
 - Top: **5** — Graphify-Labs/graphify — AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, o
 
 ## Patterns
 
-- Release-keyword posts: avg **0.6** (n=118) vs others avg **0.7** (n=74)
-- GitHub sources: avg **0.7** (n=147) vs other sources avg **0.4** (n=45)
+- Release-keyword posts: avg **0.6** (n=118) vs others avg **0.7** (n=75)
+- GitHub sources: avg **0.7** (n=148) vs other sources avg **0.4** (n=45)
 
 ## Engagement by published hour (UTC)
 
@@ -35,7 +35,7 @@ Generated: `2026-09-10T08:30:00.686363Z`
 - 14:00 UTC: avg **0.5** (n=18)
 - 15:00 UTC: avg **0.7** (n=18)
 - 16:00 UTC: avg **0.5** (n=14)
-- 17:00 UTC: avg **0.2** (n=13)
+- 17:00 UTC: avg **0.2** (n=14)
 - 18:00 UTC: avg **1.4** (n=17)
 - 19:00 UTC: avg **0.8** (n=8)
 - 20:00 UTC: avg **1.1** (n=17)
@@ -48,20 +48,20 @@ Generated: `2026-09-10T08:30:00.686363Z`
 - Monday: avg **0.8** (n=32)
 - Tuesday: avg **0.7** (n=29)
 - Wednesday: avg **0.4** (n=27)
-- Thursday: avg **0.3** (n=25)
+- Thursday: avg **0.3** (n=26)
 - Friday: avg **0.6** (n=34)
 - Saturday: avg **1.0** (n=23)
 - Sunday: avg **0.8** (n=22)
 
 ## Engagement by format variant
 
-- plain: avg **0.6** (n=168)
+- plain: avg **0.6** (n=169)
 - question: avg **0.6** (n=16)
 - thread: avg **1.5** (n=8)
 
 ## Engagement by card variant
 
-- editorial_release: avg **0.7** (n=24)
+- editorial_release: avg **0.6** (n=25)
 - editorial_repo: avg **0.8** (n=14)
 - editorial_security: insufficient data (n<5, have 3)
 - editorial_stat: avg **0.7** (n=10)
@@ -76,7 +76,7 @@ Generated: `2026-09-10T08:30:00.686363Z`
 - #AI #MachineLearning: insufficient data (n<5, have 1)
 - #AIAgents #DevTools #OpenSource: insufficient data (n<5, have 1)
 - #AIAgents #InfoSec #LLM: insufficient data (n<5, have 1)
-- #Anthropic #ClaudeCode #LLM: avg **0.5** (n=10)
+- #Anthropic #ClaudeCode #LLM: avg **0.5** (n=11)
 - #Anthropic #ClaudeCode #OpenSource: avg **0.4** (n=12)
 - #DevTools #LLM: insufficient data (n<5, have 1)
 - #HuggingFace #OpenSource #OpenWeights: insufficient data (n<5, have 3)
@@ -90,7 +90,7 @@ Generated: `2026-09-10T08:30:00.686363Z`
 
 ## Version-release posts vs others
 
-- Version releases: avg **0.4** (n=90)
+- Version releases: avg **0.4** (n=91)
 - Others: avg **0.8** (n=102)
   (Version-only releases are now blocked by the quality gate; this group should trend to n=0.)
 
@@ -237,7 +237,7 @@ Generated: `2026-09-10T08:30:00.686363Z`
    > Terminal coding agents are moving from plugins to core primitives. Codex CLI ships a lightweight coding agent that runs natively in terminal…
 
 29. **2 pts** — GLM-5.3 is now open-weight
-   likes 1 · reposts 0 · replies 1 · quotes 0 · age 297h · score 95
+   likes 1 · reposts 0 · replies 1 · quotes 0 · age 321h · score 95
    https://huggingface.co/zai-org/GLM-5.3
    > Z-AI ships GLM-5.3 as open-weight model. Open weights on HuggingFace with dual context windows: 128K default, 1M optional. +574 HN engagemen…
 
@@ -422,22 +422,22 @@ Generated: `2026-09-10T08:30:00.686363Z`
    > Apple’s M6 Ultra delivers 2x faster on-device AI inference. Apple released M6 and M5 Ultra chips with up to 2x faster local inference on App…
 
 66. **1 pts** — langchain==1.4.0a2
-   likes 1 · reposts 0 · replies 0 · quotes 0 · age 248h · score 85
+   likes 1 · reposts 0 · replies 0 · quotes 0 · age 272h · score 85
    https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.4.0a2
    > LangChain ships MCP adapter for coding agents. langchain.mcp turns MCP servers into LangChain tools with FastMCP client features, +607 stars…
 
 67. **1 pts** — THU-MAIC/OpenMAIC — Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click
-   likes 1 · reposts 0 · replies 0 · quotes 0 · age 207h · score 90
+   likes 1 · reposts 0 · replies 0 · quotes 0 · age 231h · score 90
    https://github.com/THU-MAIC/OpenMAIC
    > OpenMAIC turns one click into a multi-agent classroom. THU-MAIC/OpenMAIC ships a runnable multi-agent classroom for testing workflows, with …
 
 68. **1 pts** — Claude Code v2.1.257
-   likes 0 · reposts 0 · replies 1 · quotes 0 · age 204h · score 95
+   likes 0 · reposts 0 · replies 1 · quotes 0 · age 228h · score 95
    https://github.com/anthropics/claude-code/releases/tag/v2.1.257
    > Claude Fable 5.1 ships as the new default for Claude Code. $10/$50 per Mtok; 1M context; $0.25/Mtok cache reads. #LLM #ClaudeCode #Anthropic
 
 69. **1 pts** — Claude Code v2.1.259
-   likes 0 · reposts 0 · replies 1 · quotes 0 · age 159h · score 95
+   likes 0 · reposts 0 · replies 1 · quotes 0 · age 183h · score 95
    https://github.com/anthropics/claude-code/releases/tag/v2.1.259
    > Claude Code centralizes MCP servers for enterprise deployments. Claude Code v2.1.259 adds managedMcpServers and headless flags for CI/CD… An…
 
@@ -1027,32 +1027,37 @@ Generated: `2026-09-10T08:30:00.686363Z`
    > Archify turns code into verifiable diagrams automatically. tt-a1i/archify ships an agent skill for architecture, workflow, sequence and life…
 
 187. **0 pts** — Anthropic Python SDK v1.2.0
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 321h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 345h · score 90
    https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.2.0
    > Anthropic Python SDK hardens file uploads for AWS Bedrock. Anthropic SDK v1.2.0 fixes binary uploads on AWS Bedrock and stabilizes beta name…
 
 188. **0 pts** — Claude Code v2.1.248
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 319h · score 60
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 343h · score 60
    https://github.com/anthropics/claude-code/releases/tag/v2.1.248
    > Claude Code adds --restricted mode for sandboxed agents. Anthropic/claude-code v2.1.248 ships --restricted and cacheTtl for secure agent exe…
 
 189. **0 pts** — AI Engineer Notebooks – free, framework-free RAG/agents/evals on Colab
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 295h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 319h · score 90
    https://github.com/calmrocks/ai-engineer-notebooks
    > AI Engineer Notebooks ship framework-free RAG on Colab. calmrocks/ai-engineer-notebooks delivers 12 runnable Colabs for RAG, agents, and eva…
 
 190. **0 pts** — langchain==1.4.0a1
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 229h · score 60
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 253h · score 60
    https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.4.0a1
    > LangChain adds MCP runtime testing. langchain==1.4.0a1 integrates MCP tools via FastMCP utilities, +10k stars. Running MCP tools in LangChai…
 
 191. **0 pts** — jingyaogong/minimind — 🧠 Train a 64M-parameter LLM from scratch in just 2h!
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 226h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 250h · score 90
    https://github.com/jingyaogong/minimind
    > Minimind ships a 64M LLM trained in 2 hours. Trains a 64M-parameter model from scratch in 2h on a single GPU, +472 stars today. #LLM #DevToo…
 
 192. **0 pts** — pacifio/atlas — Source control for agents. Use multiple coding agents, track their changes and query them in one place
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 183h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 207h · score 90
    https://github.com/pacifio/atlas
    > Atlas turns agents into a first-class primitive with source control. pacifio/atlas manages multiple coding agents, tracks changes, and unifi…
+
+193. **0 pts** — Claude Code v2.1.266
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 15h · score 85
+   https://github.com/anthropics/claude-code/releases/tag/v2.1.266
+   > Proxy reliability improves with Claude Code 2.1.266 fix. Claude Code 2.1.266 stops forced gateway sign‑in when CLAUDE_CODE_USE_GATEWAY lacks…
 
