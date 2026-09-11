@@ -529,5 +529,35 @@
       "Post is empty",
       "Post lacks a clear claim or insight"
     ]
+  },
+  {
+    "rejected_at": "2026-09-11T14:19:45.885087Z",
+    "stage": "review",
+    "title": "Anthropic Python SDK v1.5.0",
+    "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.5.0",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-11T14:19:45.981173Z",
+    "stage": "review",
+    "title": "GPT‑Live‑1 in the API",
+    "link": "https://openai.com/index/introducing-gpt-live-1-in-the-api/",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-11T14:19:46.073655Z",
+    "stage": "review",
+    "title": "Claude Code v2.1.268",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.268",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
   }
 ]

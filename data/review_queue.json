@@ -12090,12 +12090,12 @@
   },
   {
     "id": "685613eafd40",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-09-10T14:18:48.177337Z",
-    "score": 90,
-    "reason": "Open-source tool launch (CloddsBot) on GitHub. Ships today, clear builder utility for autonomous agents/trading.",
-    "proposed_post": "CloddsBot, an open-source AI trading agent built on Claude, is available on GitHub. Builders can self-host this agent to automate trading across 1000+ crypto/prediction markets, scanning for edge and executing instantly.",
-    "source_angle": "Open-source AI trading agent for crypto/prediction markets.",
+    "status": "approved",
+    "created_at": "2026-09-11T14:19:45.562817Z",
+    "score": 95,
+    "reason": "Open-source AI trading agent released on GitHub. Ships today, clear utility for autonomous agents and multi-market integration.",
+    "proposed_post": "alsk1992/CloddsBot, an open-source AI trading agent, is now on GitHub. It operates autonomously across 1000+ markets like Polymarket, Binance, and Solana DEXs. Builders can deploy it for trading or analyze its multi-chain agent architecture.",
+    "source_angle": "Open-source AI trading agent for multi-market autonomous operations.",
     "source_item": {
       "title": "alsk1992/CloddsBot — Open Source AI trading agent that operates autonomously across 1000+ markets - Polymarket, Kalshi, Binance, Hyperliquid, Solana DEXs, 5 EVM chains. Scans for edge, executes instan",
       "source": "GitHub Trending",
@@ -12127,19 +12127,17 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-09-10T17:38:46.031576Z",
-    "defer_count": 2,
-    "original_score": 90,
-    "original_reason": "Open-source tool launch (CloddsBot) on GitHub. Ships today, clear builder utility for autonomous agents/trading."
+    "breaking": true,
+    "reactivated_at": "2026-09-11T14:19:45.562817Z"
   },
   {
     "id": "4b61dcf3ca6d",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-09-10T17:38:23.771681Z",
+    "status": "approved",
+    "created_at": "2026-09-11T14:19:45.470109Z",
     "score": 95,
-    "reason": "Direct API release of a new voice model with concrete features (full-duplex, custom voices, telephony). Passes Ships Test.",
-    "proposed_post": "OpenAI launched GPT-Live-1 in the API, enabling full-duplex voice conversations with custom voices and telephony support. Builders can now integrate more natural, real-time voice interfaces into their applications.",
-    "source_angle": "OpenAI's new voice API for real-time, full-duplex conversations.",
+    "reason": "Direct API release of new voice model with full-duplex, custom voices, and telephony. Ships today for voice builders.",
+    "proposed_post": "OpenAI released GPT-Live-1 in the API, featuring full-duplex, custom voices, and telephony. Builders can now create more natural and integrated voice experiences for agents and applications.",
+    "source_angle": "OpenAI API: GPT-Live-1 for full-duplex, custom voice, telephony",
     "source_item": {
       "title": "Build more natural voice experiences with GPT‑Live‑1 in the API",
       "source": "OpenAI News",
@@ -12171,10 +12169,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-09-10T17:38:46.147360Z",
-    "defer_count": 1,
-    "original_score": 95,
-    "original_reason": "Direct API release of a new voice model with concrete features (full-duplex, custom voices, telephony). Passes Ships Test."
+    "breaking": false,
+    "reactivated_at": "2026-09-11T14:19:45.470109Z"
   },
   {
     "id": "d4a95fbaa2b0",
@@ -12215,9 +12211,53 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-09-10T17:38:46.266827Z",
-    "defer_count": 1,
+    "deferred_at": "2026-09-11T14:19:45.680998Z",
+    "defer_count": 2,
     "original_score": 75,
     "original_reason": "New Data agent in ChatGPT Work is live, enabling natural language data analysis and dashboard creation."
+  },
+  {
+    "id": "0da1bc6d7c5e",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-09-11T14:19:40.911938Z",
+    "score": 95,
+    "reason": "New API from OpenAI for agent development and deployment, offering a managed service for builders.",
+    "proposed_post": "OpenAI launched the Agents API, a managed service for building and deploying cloud agents. Builders can now leverage a first-party orchestration layer for long-running agentic workflows and tool use.",
+    "source_angle": "OpenAI's new managed service for cloud agents",
+    "source_item": {
+      "title": "Introducing the Agents API",
+      "source": "OpenAI News",
+      "link": "https://openai.com/index/introducing-the-agents-api",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 35,
+      "summary": "Build and launch cloud agents with the Agents API, a managed service powered by the Codex harness for orchestration, long-running sessions, and tool use.\n[Cluster context: 1 sources, engagement 0, common terms: orchestration, powered, introducing, harness, managed.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "OpenAI News"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "orchestration",
+          "powered",
+          "introducing",
+          "harness",
+          "managed",
+          "launch",
+          "codex",
+          "sessions"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: orchestration, powered, introducing, harness. Lead: Introducing the Agents API",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-09-11T14:19:45.790777Z",
+    "defer_count": 1,
+    "original_score": 95,
+    "original_reason": "New API from OpenAI for agent development and deployment, offering a managed service for builders."
   }
 ]

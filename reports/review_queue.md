@@ -6,6 +6,9 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-09-11T14:19:46.073655Z` [review] **Claude Code v2.1.268** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-11T14:19:45.981173Z` [review] **GPT‑Live‑1 in the API** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-11T14:19:45.885087Z` [review] **Anthropic Python SDK v1.5.0** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-10T17:38:46.538427Z` [review] **armory3d/armorpaint — Graphics Creation Tools** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-10T17:38:46.447859Z` [review] **nashsu/llm_wiki — LLM Wiki is a cross-platform desktop application that turns your documents into an organized, interlinked knowledge base — automatically. Instead of traditional RAG (retrieve-and-ans** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-10T17:38:46.356628Z` [review] **Cognition launches new SWE-2 model, Rivaling Fable 5.1 and GPT-Astra** — Post is empty; Post lacks a clear claim or insight
@@ -28,6 +31,3 @@ No pending review items.
 - `2026-09-08T17:52:58.669915Z` [review] **Simon Willison v4.5** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-08T17:52:56.941958Z` [review] **vLLM v0.29.0rc5** — Version-only release without concrete capability: 'vLLM v0.29.0rc5'
 - `2026-09-08T14:25:15.144859Z` [review] **AI models ran real businesses: They sent $12,431 in fake invoices, lost $3,200** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-08T14:25:15.055943Z` [review] **How well do agents use test/verification techniques?** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-08T14:25:14.967280Z` [review] **Latest open artifacts (#24): Motif-3, GLM-5.3, Hy4-preview and open model licenses** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-08T14:25:14.878370Z` [review] **vLLM v0.29.0rc6** — Version-only release without concrete capability: 'vLLM v0.29.0rc6'
