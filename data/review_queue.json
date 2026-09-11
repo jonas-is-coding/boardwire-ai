@@ -11899,7 +11899,7 @@
   },
   {
     "id": "9c25b17107b2",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-09-09T14:27:03.611393Z",
     "score": 95,
     "reason": "New vLLM release with significant memory optimizations for LLM serving, directly impacting cost and performance.",
@@ -11938,7 +11938,8 @@
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, vLLM 0.29.0 ist draußen. Der Model Runner V2 ist jetzt Standard für alle Modelle. Das ist ein großer Performance-Boost für alle, die vLLM nutzen, und vereinfacht das Deployment von LLMs. Entwickler können jetzt mit weniger Aufwand stabilere und schnellere Inferenzen erwarten.",
-    "chloe_note": "Kurzes Update: *vLLM v0.29.0* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um New vLLM release with significant memory optimizations for LLM serving, directly impacting cost and performance.Cluster context: 1 sources, engagement 0. Common terms: engine, warns, pypi, sm100. Ich habe es mit 95 Punkten bewertet. Hier der Link: https://github.com/vllm-project/vllm/releases/tag/v0.29.0"
+    "chloe_note": "Kurzes Update: *vLLM v0.29.0* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um New vLLM release with significant memory optimizations for LLM serving, directly impacting cost and performance.Cluster context: 1 sources, engagement 0. Common terms: engine, warns, pypi, sm100. Ich habe es mit 95 Punkten bewertet. Hier der Link: https://github.com/vllm-project/vllm/releases/tag/v0.29.0",
+    "expired_at": "2026-09-11T17:51:07.503239Z"
   },
   {
     "id": "ecd6bba435d7",
