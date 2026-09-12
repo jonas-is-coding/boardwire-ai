@@ -1,10 +1,10 @@
 # Boardwire Engagement Report
 
-Generated: `2026-09-11T08:24:04.495853Z`
+Generated: `2026-09-12T08:12:35.132824Z`
 
 ## Account
 
-- @boardwire.bsky.social: **28** followers (1d: +0, 7d: +3) · following 84 · posts 74 · snapshots 8 · as of `2026-09-11T08:23:52.804154Z`
+- @boardwire.bsky.social: **27** followers (1d: -1, 7d: +2) · following 95 · posts 74 · snapshots 9 · as of `2026-09-12T08:12:23.715425Z`
 
 ## Summary
 
@@ -237,7 +237,7 @@ Generated: `2026-09-11T08:24:04.495853Z`
    > Terminal coding agents are moving from plugins to core primitives. Codex CLI ships a lightweight coding agent that runs natively in terminal…
 
 29. **2 pts** — GLM-5.3 is now open-weight
-   likes 1 · reposts 0 · replies 1 · quotes 0 · age 321h · score 95
+   likes 1 · reposts 0 · replies 1 · quotes 0 · age 345h · score 95
    https://huggingface.co/zai-org/GLM-5.3
    > Z-AI ships GLM-5.3 as open-weight model. Open weights on HuggingFace with dual context windows: 128K default, 1M optional. +574 HN engagemen…
 
@@ -422,22 +422,22 @@ Generated: `2026-09-11T08:24:04.495853Z`
    > Apple’s M6 Ultra delivers 2x faster on-device AI inference. Apple released M6 and M5 Ultra chips with up to 2x faster local inference on App…
 
 66. **1 pts** — langchain==1.4.0a2
-   likes 1 · reposts 0 · replies 0 · quotes 0 · age 272h · score 85
+   likes 1 · reposts 0 · replies 0 · quotes 0 · age 296h · score 85
    https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.4.0a2
    > LangChain ships MCP adapter for coding agents. langchain.mcp turns MCP servers into LangChain tools with FastMCP client features, +607 stars…
 
 67. **1 pts** — THU-MAIC/OpenMAIC — Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click
-   likes 1 · reposts 0 · replies 0 · quotes 0 · age 231h · score 90
+   likes 1 · reposts 0 · replies 0 · quotes 0 · age 255h · score 90
    https://github.com/THU-MAIC/OpenMAIC
    > OpenMAIC turns one click into a multi-agent classroom. THU-MAIC/OpenMAIC ships a runnable multi-agent classroom for testing workflows, with …
 
 68. **1 pts** — Claude Code v2.1.257
-   likes 0 · reposts 0 · replies 1 · quotes 0 · age 228h · score 95
+   likes 0 · reposts 0 · replies 1 · quotes 0 · age 252h · score 95
    https://github.com/anthropics/claude-code/releases/tag/v2.1.257
    > Claude Fable 5.1 ships as the new default for Claude Code. $10/$50 per Mtok; 1M context; $0.25/Mtok cache reads. #LLM #ClaudeCode #Anthropic
 
 69. **1 pts** — Claude Code v2.1.259
-   likes 0 · reposts 0 · replies 1 · quotes 0 · age 183h · score 95
+   likes 0 · reposts 0 · replies 1 · quotes 0 · age 207h · score 95
    https://github.com/anthropics/claude-code/releases/tag/v2.1.259
    > Claude Code centralizes MCP servers for enterprise deployments. Claude Code v2.1.259 adds managedMcpServers and headless flags for CI/CD… An…
 
@@ -1037,27 +1037,27 @@ Generated: `2026-09-11T08:24:04.495853Z`
    > Claude Code adds --restricted mode for sandboxed agents. Anthropic/claude-code v2.1.248 ships --restricted and cacheTtl for secure agent exe…
 
 189. **0 pts** — AI Engineer Notebooks – free, framework-free RAG/agents/evals on Colab
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 319h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 343h · score 90
    https://github.com/calmrocks/ai-engineer-notebooks
    > AI Engineer Notebooks ship framework-free RAG on Colab. calmrocks/ai-engineer-notebooks delivers 12 runnable Colabs for RAG, agents, and eva…
 
 190. **0 pts** — langchain==1.4.0a1
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 253h · score 60
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 277h · score 60
    https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.4.0a1
    > LangChain adds MCP runtime testing. langchain==1.4.0a1 integrates MCP tools via FastMCP utilities, +10k stars. Running MCP tools in LangChai…
 
 191. **0 pts** — jingyaogong/minimind — 🧠 Train a 64M-parameter LLM from scratch in just 2h!
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 250h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 274h · score 90
    https://github.com/jingyaogong/minimind
    > Minimind ships a 64M LLM trained in 2 hours. Trains a 64M-parameter model from scratch in 2h on a single GPU, +472 stars today. #LLM #DevToo…
 
 192. **0 pts** — pacifio/atlas — Source control for agents. Use multiple coding agents, track their changes and query them in one place
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 207h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 231h · score 90
    https://github.com/pacifio/atlas
    > Atlas turns agents into a first-class primitive with source control. pacifio/atlas manages multiple coding agents, tracks changes, and unifi…
 
 193. **0 pts** — Claude Code v2.1.266
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 15h · score 85
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 38h · score 85
    https://github.com/anthropics/claude-code/releases/tag/v2.1.266
    > Proxy reliability improves with Claude Code 2.1.266 fix. Claude Code 2.1.266 stops forced gateway sign‑in when CLAUDE_CODE_USE_GATEWAY lacks…
 

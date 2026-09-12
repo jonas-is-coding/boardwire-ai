@@ -22011,6 +22011,15 @@
         "reply_count": 1,
         "quote_count": 0,
         "total_engagement": 2
+      },
+      {
+        "observed_at": "2026-09-12T08:12:22.958901Z",
+        "age_hours": 345.04,
+        "like_count": 1,
+        "repost_count": 0,
+        "reply_count": 1,
+        "quote_count": 0,
+        "total_engagement": 2
       }
     ]
   },
@@ -22144,6 +22153,15 @@
         "reply_count": 0,
         "quote_count": 0,
         "total_engagement": 0
+      },
+      {
+        "observed_at": "2026-09-12T08:12:22.958901Z",
+        "age_hours": 343.08,
+        "like_count": 0,
+        "repost_count": 0,
+        "reply_count": 0,
+        "quote_count": 0,
+        "total_engagement": 0
       }
     ]
   },
@@ -22259,6 +22277,15 @@
         "reply_count": 0,
         "quote_count": 0,
         "total_engagement": 1
+      },
+      {
+        "observed_at": "2026-09-12T08:12:22.958901Z",
+        "age_hours": 295.91,
+        "like_count": 1,
+        "repost_count": 0,
+        "reply_count": 0,
+        "quote_count": 0,
+        "total_engagement": 1
       }
     ]
   },
@@ -22360,6 +22387,15 @@
       {
         "observed_at": "2026-09-11T08:23:52.120160Z",
         "age_hours": 252.82,
+        "like_count": 0,
+        "repost_count": 0,
+        "reply_count": 0,
+        "quote_count": 0,
+        "total_engagement": 0
+      },
+      {
+        "observed_at": "2026-09-12T08:12:22.958901Z",
+        "age_hours": 276.63,
         "like_count": 0,
         "repost_count": 0,
         "reply_count": 0,
@@ -22471,6 +22507,15 @@
         "reply_count": 0,
         "quote_count": 0,
         "total_engagement": 0
+      },
+      {
+        "observed_at": "2026-09-12T08:12:22.958901Z",
+        "age_hours": 274.19,
+        "like_count": 0,
+        "repost_count": 0,
+        "reply_count": 0,
+        "quote_count": 0,
+        "total_engagement": 0
       }
     ]
   },
@@ -22563,6 +22608,15 @@
       {
         "observed_at": "2026-09-11T08:23:52.120160Z",
         "age_hours": 231.0,
+        "like_count": 1,
+        "repost_count": 0,
+        "reply_count": 0,
+        "quote_count": 0,
+        "total_engagement": 1
+      },
+      {
+        "observed_at": "2026-09-12T08:12:22.958901Z",
+        "age_hours": 254.81,
         "like_count": 1,
         "repost_count": 0,
         "reply_count": 0,
@@ -22665,6 +22719,15 @@
         "reply_count": 1,
         "quote_count": 0,
         "total_engagement": 1
+      },
+      {
+        "observed_at": "2026-09-12T08:12:22.958901Z",
+        "age_hours": 252.08,
+        "like_count": 0,
+        "repost_count": 0,
+        "reply_count": 1,
+        "quote_count": 0,
+        "total_engagement": 1
       }
     ]
   },
@@ -22753,6 +22816,15 @@
         "reply_count": 0,
         "quote_count": 0,
         "total_engagement": 0
+      },
+      {
+        "observed_at": "2026-09-12T08:12:22.958901Z",
+        "age_hours": 230.94,
+        "like_count": 0,
+        "repost_count": 0,
+        "reply_count": 0,
+        "quote_count": 0,
+        "total_engagement": 0
       }
     ]
   },
@@ -22832,6 +22904,15 @@
         "reply_count": 1,
         "quote_count": 0,
         "total_engagement": 1
+      },
+      {
+        "observed_at": "2026-09-12T08:12:22.958901Z",
+        "age_hours": 207.08,
+        "like_count": 0,
+        "repost_count": 0,
+        "reply_count": 1,
+        "quote_count": 0,
+        "total_engagement": 1
       }
     ]
   },
@@ -22843,6 +22924,15 @@
       {
         "observed_at": "2026-09-11T08:23:52.120160Z",
         "age_hours": 14.59,
+        "like_count": 0,
+        "repost_count": 0,
+        "reply_count": 0,
+        "quote_count": 0,
+        "total_engagement": 0
+      },
+      {
+        "observed_at": "2026-09-12T08:12:22.958901Z",
+        "age_hours": 38.39,
         "like_count": 0,
         "repost_count": 0,
         "reply_count": 0,
