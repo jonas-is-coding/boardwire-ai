@@ -6,6 +6,10 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-09-13T21:07:58.556285Z` [review] **Real-SWE: Benchmarking AI models on private, real-world, enterprise codebases** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-13T21:07:58.427923Z` [review] **multimodal-art-projection/YuE — YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-13T21:07:58.298973Z` [review] **tech-leads-club/agent-skills — The secure, validated skill registry for professional AI coding agents. Extend Antigravity, Claude Code, Cursor, Copilot and more with absolute confidence.** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-13T21:07:57.764486Z` [review] **Claude Code v2.1.270** — Version-only release without concrete capability: 'Claude Code v2.1.270'
 - `2026-09-11T17:42:40.970768Z` [review] **pascalorg/editor — Open-source 3D architectural editor with a local CLI, MCP tools, and practical workflows for humans and AI agents.** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-11T17:42:40.879807Z` [review] **jihe520/MathModelAgent — 🤖📐专为数学建模设计的 Agent & skills ,自动完成数学建模，生成一份完整的可以直接提交的论文。 An Agent Designed for Mathematical Modeling ,Automatically complete mathmodel and generate a complete paper ready for su** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-11T17:42:40.790660Z` [review] **melgarafael/DeskcommCRM — Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-rea** — Post is empty; Post lacks a clear claim or insight
@@ -27,7 +31,3 @@ No pending review items.
 - `2026-09-09T14:27:25.771487Z` [review] **LibreOffice breaks download records after declaring it has no AI features** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-09T14:27:25.645703Z` [review] **vastsa/PI-Desktop — Local-first AI coding agent desktop: Electron + Rust host core + pi Agent Harness + user-installable plugins** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-09T14:27:25.518698Z` [review] **Tencent/teamai-cli — Make Every Team AI Native** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-09T14:27:24.849072Z` [review] **Introducing ChatGPT Images 2.5** — Version-only release without concrete capability: 'Introducing ChatGPT Images 2.5'
-- `2026-09-09T14:27:24.118042Z` [review] **Ollama v0.34.0** — Version-only release without concrete capability: 'Ollama v0.34.0'
-- `2026-09-08T18:02:08.705114Z` [publish] **LangChain v1.4.0** — Release dedupe: LangChain v1.4.0 already published at 2026-08-31T00:17:39.850752Z
-- `2026-09-08T17:52:58.807197Z` [review] **Google DeepMind Releases AlphaGenome Atlas** — Post is empty; Post lacks a clear claim or insight

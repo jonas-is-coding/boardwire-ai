@@ -598,5 +598,44 @@
       "Post is empty",
       "Post lacks a clear claim or insight"
     ]
+  },
+  {
+    "rejected_at": "2026-09-13T21:07:57.764486Z",
+    "stage": "review",
+    "title": "Claude Code v2.1.270",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.270",
+    "reasons": [
+      "Version-only release without concrete capability: 'Claude Code v2.1.270'"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-13T21:07:58.298973Z",
+    "stage": "review",
+    "title": "tech-leads-club/agent-skills — The secure, validated skill registry for professional AI coding agents. Extend Antigravity, Claude Code, Cursor, Copilot and more with absolute confidence.",
+    "link": "https://github.com/tech-leads-club/agent-skills",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-13T21:07:58.427923Z",
+    "stage": "review",
+    "title": "multimodal-art-projection/YuE — YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.",
+    "link": "https://github.com/multimodal-art-projection/YuE",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-13T21:07:58.556285Z",
+    "stage": "review",
+    "title": "Real-SWE: Benchmarking AI models on private, real-world, enterprise codebases",
+    "link": "https://withspecific.com/benchmarks/real-swe",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
   }
 ]

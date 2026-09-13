@@ -12179,12 +12179,12 @@
   },
   {
     "id": "d4a95fbaa2b0",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-09-10T17:38:34.838748Z",
-    "score": 75,
-    "reason": "New Data agent in ChatGPT Work is live, enabling natural language data analysis and dashboard creation.",
-    "proposed_post": "OpenAI released a Data agent in ChatGPT Work. This enables natural language data connection, insight generation, and interactive dashboard building. Builders can leverage this for internal data analysis or observe OpenAI's strategy in AI data agents.",
-    "source_angle": "OpenAI's new data agent for enterprise data analysis.",
+    "status": "approved",
+    "created_at": "2026-09-13T21:07:57.604422Z",
+    "score": 90,
+    "reason": "New, live feature from OpenAI enabling direct natural language data analysis. Passes Ships Test.",
+    "proposed_post": "OpenAI launched a new Data agent in ChatGPT Work. Builders can now use natural language for data analysis and dashboard creation, potentially streamlining internal tooling or offering a new competitive feature.",
+    "source_angle": "OpenAI's new Data agent for natural language analysis.",
     "source_item": {
       "title": "Now everyone can put data to work",
       "source": "OpenAI News",
@@ -12216,10 +12216,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-09-11T17:42:40.473619Z",
-    "defer_count": 3,
-    "original_score": 75,
-    "original_reason": "New Data agent in ChatGPT Work is live, enabling natural language data analysis and dashboard creation."
+    "breaking": false,
+    "reactivated_at": "2026-09-13T21:07:57.604422Z"
   },
   {
     "id": "0da1bc6d7c5e",
@@ -12266,12 +12264,12 @@
   },
   {
     "id": "d2e470a2b3ea",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-09-11T17:42:29.493487Z",
-    "score": 90,
-    "reason": "Official OpenAI Agents API released. Direct tool for builders, ships today.",
-    "proposed_post": "OpenAI launched an Agents API, enabling developers to programmatically build and manage AI agents. This simplifies complex multi-step workflows directly within the OpenAI ecosystem.",
-    "source_angle": "Official OpenAI API release for building and managing AI agents.",
+    "status": "approved",
+    "created_at": "2026-09-13T21:07:57.451323Z",
+    "score": 95,
+    "reason": "Official OpenAI Agents API released, direct tool for builders, ships today. Confirmed by official docs.",
+    "proposed_post": "OpenAI released an official Agents API. Builders can now integrate agentic workflows directly into their applications, streamlining complex task automation and tool orchestration.",
+    "source_angle": "OpenAI's official API for building agentic workflows.",
     "source_item": {
       "title": "OpenAI Agents API",
       "source": "HackerNews",
@@ -12303,9 +12301,50 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-09-11T17:42:40.585036Z",
-    "defer_count": 1,
-    "original_score": 90,
-    "original_reason": "Official OpenAI Agents API released. Direct tool for builders, ships today."
+    "breaking": true,
+    "reactivated_at": "2026-09-13T21:07:57.451323Z"
+  },
+  {
+    "id": "0dd613c16a2f",
+    "status": "approved",
+    "created_at": "2026-09-13T21:07:52.045769Z",
+    "score": 92,
+    "reason": "New open-source library of structured Claude skills for offensive security. Direct utility for red-teaming and security research, ships today.",
+    "proposed_post": "SnailSploit released `claude-red`, an open-source library of offensive security skills for Claude's skills system. Use these structured `SKILL.md` files to prime Claude for red-teaming, vulnerability research, or understanding attack vectors.",
+    "source_angle": "GitHub Trending: New open-source Claude skills library for offensive security.",
+    "source_item": {
+      "title": "SnailSploit/Claude-Red — claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-lev",
+      "source": "GitHub Trending",
+      "link": "https://github.com/SnailSploit/Claude-Red",
+      "source_tier": 2,
+      "engagement_score": 507.0,
+      "local_newsworthiness_score": 0,
+      "summary": "Trending on GitHub today: +507 stars. claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface — from SQLi to shellcode, EDR evasion to exploit development.\n[Cluster context: 1 sources, engagement 507, common terms: attack, claude, expert-lev, trending, claude-red.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 507,
+        "common_terms": [
+          "attack",
+          "claude",
+          "expert-lev",
+          "trending",
+          "claude-red",
+          "expert-level",
+          "skill.md",
+          "sqli"
+        ],
+        "cluster_summary": "1 sources, engagement 507. Common terms: attack, claude, expert-lev, trending. Lead: SnailSploit/Claude-Red — claude-red is a curated library of offensive security skills designed for the Claude skills sys",
+        "alternative_titles": [],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": true,
+    "claire_note": "Chloe, das hier ist interessant für jeden, der mit LLMs in Security-Kontexten arbeitet. SnailSploit/Claude-Red ist eine Bibliothek von \"Offensive Security Skills\" für Claude.\n\nDas bedeutet, Entwickler können Claude jetzt gezielt für Red Teaming oder Security-Tests primen. Statt generischer Prompts gibt's hier vorkonfigurierte Ansätze für SQLi, EDR-Evasion und mehr. Das spart Zeit und liefert konsistentere Ergebnisse für Security-Anwendungen.",
+    "chloe_note": "Hey, *SnailSploit/Claude-Red — claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-lev* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New open-source library of structured Claude skills for offensive security. Direct utility for red-teaming and security research, ships today.Cluster context: 1 sources, engagement 507. Common terms: attack, claude, expert-lev, trending. Score aktuell: 92. Link: https://github.com/SnailSploit/Claude-Red"
   }
 ]
