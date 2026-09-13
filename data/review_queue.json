@@ -12007,7 +12007,7 @@
   },
   {
     "id": "e4cc432d7daa",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-09-10T14:18:53.458750Z",
     "score": 95,
     "reason": "Direct CLI release with new dynamic plugin loading and tool result cap. Passes Ships Test for new SDK/CLI capabilities.",
@@ -12045,11 +12045,12 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": false,
-    "reactivated_at": "2026-09-10T14:18:53.458750Z"
+    "reactivated_at": "2026-09-10T14:18:53.458750Z",
+    "expired_at": "2026-09-13T20:41:35.276054Z"
   },
   {
     "id": "e873e8e4dbb9",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-09-10T14:18:53.567536Z",
     "score": 90,
     "reason": "Model weights released with SOTA performance and commercial license, making it immediately actionable for builders.",
@@ -12087,11 +12088,12 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": false,
-    "reactivated_at": "2026-09-10T14:18:53.567536Z"
+    "reactivated_at": "2026-09-10T14:18:53.567536Z",
+    "expired_at": "2026-09-13T20:41:35.276054Z"
   },
   {
     "id": "685613eafd40",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-09-11T14:19:45.562817Z",
     "score": 95,
     "reason": "Open-source AI trading agent released on GitHub. Ships today, clear utility for autonomous agents and multi-market integration.",
@@ -12129,11 +12131,12 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": true,
-    "reactivated_at": "2026-09-11T14:19:45.562817Z"
+    "reactivated_at": "2026-09-11T14:19:45.562817Z",
+    "expired_at": "2026-09-13T20:41:35.276054Z"
   },
   {
     "id": "4b61dcf3ca6d",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-09-11T14:19:45.470109Z",
     "score": 95,
     "reason": "Direct API release of new voice model with full-duplex, custom voices, and telephony. Ships today for voice builders.",
@@ -12171,7 +12174,8 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": false,
-    "reactivated_at": "2026-09-11T14:19:45.470109Z"
+    "reactivated_at": "2026-09-11T14:19:45.470109Z",
+    "expired_at": "2026-09-13T20:41:35.276054Z"
   },
   {
     "id": "d4a95fbaa2b0",
@@ -12219,7 +12223,7 @@
   },
   {
     "id": "0da1bc6d7c5e",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-09-11T17:42:40.358742Z",
     "score": 95,
     "reason": "OpenAI released a new API for agents, directly usable by builders for deployment.",
@@ -12257,7 +12261,8 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": false,
-    "reactivated_at": "2026-09-11T17:42:40.358742Z"
+    "reactivated_at": "2026-09-11T17:42:40.358742Z",
+    "expired_at": "2026-09-13T20:41:35.276054Z"
   },
   {
     "id": "d2e470a2b3ea",
