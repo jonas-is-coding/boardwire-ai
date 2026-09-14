@@ -1134,6 +1134,76 @@
         "@yoavgo.bsky.social follows"
       ],
       "followed_at": "2026-09-11T12:27:47.585137Z"
+    },
+    "did:plc:rk7mvfnpoch5c5awt4tqaoro": {
+      "handle": "sethkarten.ai",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mvicwnptgv2l",
+      "channel": "seed_followers",
+      "score": 2.5,
+      "mode": "discover",
+      "via": [
+        "follows @yoavgo.bsky.social",
+        "follows @danielvanstrien.bsky.social",
+        "@dorialexander.bsky.social follows"
+      ],
+      "followed_at": "2026-09-14T14:26:44.906318Z"
+    },
+    "did:plc:rrrww6v5fvzwriip7l65nxlt": {
+      "handle": "lowpassfilter.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mvicxj2dzc2j",
+      "channel": "seed_followers",
+      "score": 2.0,
+      "mode": "discover",
+      "via": [
+        "follows @simonwillison.net",
+        "follows @natolambert.bsky.social",
+        "follows @dorialexander.bsky.social"
+      ],
+      "followed_at": "2026-09-14T14:27:13.558626Z"
+    },
+    "did:plc:x3yt3sdtbvlhizqx5jh3hwuf": {
+      "handle": "axeghostgame.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mvicys3e532l",
+      "channel": "seed_follows",
+      "score": 1.5,
+      "mode": "discover",
+      "via": [
+        "@dorialexander.bsky.social follows"
+      ],
+      "followed_at": "2026-09-14T14:27:56.581555Z"
+    },
+    "did:plc:qjyvsm64qjqx35i2dpbl4umw": {
+      "handle": "bb-b.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mvicziuzzq2l",
+      "channel": "seed_follows",
+      "score": 1.5,
+      "mode": "discover",
+      "via": [
+        "@danielvanstrien.bsky.social follows"
+      ],
+      "followed_at": "2026-09-14T14:28:20.494206Z"
+    },
+    "did:plc:fpuqesldjwanucepchoapyhh": {
+      "handle": "bankston.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mvid2tuhsz22",
+      "channel": "seed_follows",
+      "score": 1.0,
+      "mode": "discover",
+      "via": [
+        "@stellaathena.bsky.social follows"
+      ],
+      "followed_at": "2026-09-14T14:29:05.564694Z"
+    },
+    "did:plc:3fqaxjevlbp62t2sy6zoiywj": {
+      "handle": "antoniorojascastro.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mvid3tswu423",
+      "channel": "seed_follows",
+      "score": 1.0,
+      "mode": "discover",
+      "via": [
+        "@danielvanstrien.bsky.social follows"
+      ],
+      "followed_at": "2026-09-14T14:29:39.069295Z"
     }
   },
   "runs": [
@@ -1343,6 +1413,26 @@
       ],
       "started_at": "2026-09-11T12:21:56.934165Z",
       "finished_at": "2026-09-11T12:27:47.586884Z"
+    },
+    {
+      "mode": "discover",
+      "dry_run": false,
+      "limit": 12,
+      "planned": 0,
+      "followed": 6,
+      "skipped_already": 0,
+      "failed": 0,
+      "aborted": null,
+      "handles": [
+        "sethkarten.ai",
+        "lowpassfilter.bsky.social",
+        "axeghostgame.bsky.social",
+        "bb-b.bsky.social",
+        "bankston.bsky.social",
+        "antoniorojascastro.bsky.social"
+      ],
+      "started_at": "2026-09-14T14:26:44.579914Z",
+      "finished_at": "2026-09-14T14:29:39.071083Z"
     }
   ],
   "pinned_thread": {
