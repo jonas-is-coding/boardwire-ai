@@ -667,5 +667,23 @@
       "Post is empty",
       "Post lacks a clear claim or insight"
     ]
+  },
+  {
+    "rejected_at": "2026-09-14T19:12:13.749148Z",
+    "stage": "review",
+    "title": "Ollama v0.34.1-rc0",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.34.1-rc0",
+    "reasons": [
+      "Version-only release without concrete capability: 'Ollama v0.34.1-rc0'"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-14T19:12:13.908297Z",
+    "stage": "review",
+    "title": "vLLM v0.29.1rc0",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.29.1rc0",
+    "reasons": [
+      "Version-only release without concrete capability: 'vLLM v0.29.1rc0'"
+    ]
   }
 ]
