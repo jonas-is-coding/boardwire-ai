@@ -6,6 +6,9 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-09-14T16:20:20.368872Z` [review] **rlaope/oh-my-hermes — All in one plugin for Hermes Agent ⚚ the coding intelligence, a long-term memory system and model optimized workflow packages** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-14T16:20:20.234738Z` [review] **Perplexity trusts GPT-6 Astra with end-to-end systems** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-14T16:20:20.093347Z` [review] **1Password increases engineering productivity 21% with Codex** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-13T21:07:58.556285Z` [review] **Real-SWE: Benchmarking AI models on private, real-world, enterprise codebases** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-13T21:07:58.427923Z` [review] **multimodal-art-projection/YuE — YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-13T21:07:58.298973Z` [review] **tech-leads-club/agent-skills — The secure, validated skill registry for professional AI coding agents. Extend Antigravity, Claude Code, Cursor, Copilot and more with absolute confidence.** — Post is empty; Post lacks a clear claim or insight
@@ -28,6 +31,3 @@ No pending review items.
 - `2026-09-09T17:46:12.005260Z` [review] **Muse – Meta’s personal AI agent** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-09T17:46:11.807345Z` [review] **Ollama v0.34.0-rc4** — Version-only release without concrete capability: 'Ollama v0.34.0-rc4'
 - `2026-09-09T17:46:11.696283Z` [review] **ChatGPT Images 2.5** — Version-only release without concrete capability: 'ChatGPT Images 2.5'
-- `2026-09-09T14:27:25.771487Z` [review] **LibreOffice breaks download records after declaring it has no AI features** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-09T14:27:25.645703Z` [review] **vastsa/PI-Desktop — Local-first AI coding agent desktop: Electron + Rust host core + pi Agent Harness + user-installable plugins** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-09T14:27:25.518698Z` [review] **Tencent/teamai-cli — Make Every Team AI Native** — Post is empty; Post lacks a clear claim or insight
