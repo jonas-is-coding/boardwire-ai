@@ -685,5 +685,44 @@
     "reasons": [
       "Version-only release without concrete capability: 'vLLM v0.29.1rc0'"
     ]
+  },
+  {
+    "rejected_at": "2026-09-15T14:54:02.620562Z",
+    "stage": "review",
+    "title": "Claude Code v2.1.272",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.272",
+    "reasons": [
+      "Version-only release without concrete capability: 'Claude Code v2.1.272'"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-15T14:54:02.913368Z",
+    "stage": "review",
+    "title": "Notes on gotchas while migrating 35kb preprompts from Opus to self-hosted Ollama",
+    "link": "https://patrickmccanna.net/notes-on-migrating-large-prompts-away-from-anthropic-openai-to-self-hosted-llms/",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-15T14:54:03.044702Z",
+    "stage": "review",
+    "title": "MG1937/ASC — ASC is a super FAST Android decompiler front-end designed for Agents/Mobile Researchers.",
+    "link": "https://github.com/MG1937/ASC",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-15T14:54:03.175742Z",
+    "stage": "review",
+    "title": "GitHub Copilot app for Beginners: Using the diff, terminal, and browser",
+    "link": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-using-the-diff-terminal-and-browser/",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
   }
 ]

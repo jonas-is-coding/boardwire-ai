@@ -12389,5 +12389,138 @@
     "breaking": false,
     "claire_note": "Chloe, check this out: Claude Code v2.1.269.\n\nDas 'claude plugin eval' Feature ist ein Game Changer. Entwickler können jetzt Plugin-Suites direkt gegen Claude Code testen und kriegen reproduzierbare Ergebnisse als JSON oder HTML. Das ist super, um die Qualität und Kompatibilität von Plugins schnell und objektiv zu bewerten, anstatt nur manuell zu testen. Und das 'output-style' Feature ist ein nettes Plus für die Usability.",
     "chloe_note": "Ja, das geht durch. Das 'plugin eval' Feature ist direkt nutzbar für Entwickler, um ihre Plugin-Suites zu testen und reproduzierbare Ergebnisse zu erhalten. Das erfüllt den Ships Test klar, da es eine neue, konkrete Utility zum Herunterladen und Anwenden bietet."
+  },
+  {
+    "id": "f56b7cac6d56",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-09-15T14:53:56.754872Z",
+    "score": 90,
+    "reason": "Open-source, self-hostable ChatGPT clone with multi-model support, agents, and Code Interpreter. Ships today for builders.",
+    "proposed_post": "LibreChat, an open-source ChatGPT clone, is trending on GitHub. It offers self-hostable multi-model support (DeepSeek, Groq, Anthropic, OpenAI), agents, Code Interpreter, and OpenAPI Actions. Builders can deploy a customizable, private chat interface, integrating diverse LLMs an…",
+    "source_angle": "Open-source ChatGPT alternative with multi-model and agent capabilities for self-hosting.",
+    "source_item": {
+      "title": "danny-avila/LibreChat — Enhanced ChatGPT Clone: Features Agents, MCP, Skills, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts",
+      "source": "GitHub Trending",
+      "link": "https://github.com/danny-avila/LibreChat",
+      "source_tier": 2,
+      "engagement_score": 261.0,
+      "local_newsworthiness_score": 35,
+      "summary": "Trending on GitHub today: +261 stars. Enhanced ChatGPT Clone: Features Agents, MCP, Skills, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active\n[Cluster context: 1 sources, engagement 261, common terms: gpt-5, interpreter, langchain, actions, secure.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 261,
+        "common_terms": [
+          "gpt-5",
+          "interpreter",
+          "langchain",
+          "actions",
+          "secure",
+          "danny-avila/librechat",
+          "presets",
+          "github"
+        ],
+        "cluster_summary": "1 sources, engagement 261. Common terms: gpt-5, interpreter, langchain, actions. Lead: danny-avila/LibreChat — Enhanced ChatGPT Clone: Features Agents, MCP, Skills, DeepSeek, Anthropic, AWS, OpenAI, Response",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-09-15T14:54:02.780697Z",
+    "defer_count": 1,
+    "original_score": 90,
+    "original_reason": "Open-source, self-hostable ChatGPT clone with multi-model support, agents, and Code Interpreter. Ships today for builders."
+  },
+  {
+    "id": "1be2c62d24c9",
+    "status": "approved",
+    "created_at": "2026-09-15T14:53:32.839575Z",
+    "score": 90,
+    "reason": "New open-source AI agent toolkit with concrete features (unified API, CLI, TUI) available for immediate use. High GitHub engagement.",
+    "proposed_post": "New open-source toolkit `earendil-works/pi` unifies LLM APIs, agent loops, and includes a coding agent CLI. Builders can use it today to streamline AI agent development and interaction.",
+    "source_angle": "GitHub Trending: New open-source AI agent toolkit with CLI and unified API.",
+    "source_item": {
+      "title": "earendil-works/pi — AI agent toolkit: unified LLM API, agent loop, TUI, coding agent CLI",
+      "source": "GitHub Trending",
+      "link": "https://github.com/earendil-works/pi",
+      "source_tier": 2,
+      "engagement_score": 437.0,
+      "local_newsworthiness_score": 55,
+      "summary": "Trending on GitHub today: +437 stars. AI agent toolkit: unified LLM API, agent loop, TUI, coding agent CLI\n[Cluster context: 1 sources, engagement 437, common terms: github, tui, loop, coding, cli.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 437,
+        "common_terms": [
+          "github",
+          "tui",
+          "loop",
+          "coding",
+          "cli",
+          "earendil-works/pi",
+          "unified",
+          "+437"
+        ],
+        "cluster_summary": "1 sources, engagement 437. Common terms: github, tui, loop, coding. Lead: earendil-works/pi — AI agent toolkit: unified LLM API, agent loop, TUI, coding agent CLI",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, das ist ein Hotspot. \"earendil-works/pi\" ist ein komplettes AI-Agent-Toolkit, das auf GitHub gerade durch die Decke geht.\n\nEinheitliche LLM-API, Agent-Loop, TUI und ein Coding-Agent-CLI – das ist alles, was ein Dev braucht, um schnell eigene AI-Agents zu bauen und zu testen, ohne sich durch diverse APIs kämpfen zu müssen. Direkt umsetzbar.",
+    "chloe_note": "*earendil-works/pi — AI agent toolkit: unified LLM API, agent loop, TUI, coding agent CLI* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New open-source AI agent toolkit with concrete features (unified API, CLI, TUI) available for immediate use. High GitHub engagement.Cluster context: 1 sources, engagement 437. Common terms: github, tui, loop, coding. Bewertung: 90. Quelle: https://github.com/earendil-works/pi"
+  },
+  {
+    "id": "8aadb9bf9699",
+    "status": "approved",
+    "created_at": "2026-09-15T14:53:40.474189Z",
+    "score": 90,
+    "reason": "New Ollama release with direct improvements to local LLM stability and output quality, especially for MLX users.",
+    "proposed_post": "Ollama v0.34.1 improves MLX memory management and raises the token repeat limit to 100. Builders running local LLMs on Apple Silicon should see more stable inference and fewer incomplete responses from models like Gemma3N.",
+    "source_angle": "Ollama release improves local LLM stability and output.",
+    "source_item": {
+      "title": "Ollama v0.34.1",
+      "source": "Ollama Releases",
+      "link": "https://github.com/ollama/ollama/releases/tag/v0.34.1-rc2",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 35,
+      "summary": "<h2>What's Changed</h2>\n<ul>\n<li>app: fix ChatGPT model selector spacing</li>\n<li>mlxrunner: Evict prefix cache snapshots from the active conversation</li>\n<li>mlxrunner: check system free memory and wait for evicted runners before loading the next MLX model</li>\n<li>llm: raise token repeat limit to 100 and return error instead of incomplete result</li>\n<li>mlx: scope array lifetimes instead of pinning and sweeping</li>\n<li>llm: keep gemma3n projector off the CPU</li>\n<li>app: refresh Apps layout and command copy feedback</li>\n<li>MLX and llama.cpp updates</li>\n</ul>\n<p><strong>Full Changelog</strong>: <a class=\"commit-link\" href=\"https://github.com/ollama/ollama/compare/v0.34.0...v0.34.1-rc1\"><tt>v0.34.0...v0.34.1-rc1</tt></a></p>\n[Cluster context: 1 sources, engagement 0, common terms: class, ollama, href, mlx, limit.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Ollama Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "class",
+          "ollama",
+          "href",
+          "mlx",
+          "limit",
+          "js-issue-link",
+          "issue-link",
+          "lifetimes"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: class, ollama, href, mlx. Lead: Ollama v0.34.1",
+        "alternative_titles": [
+          "Ollama v0.34.1-rc1",
+          "Ollama v0.34.0-rc2"
+        ],
+        "cluster_score": 15
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, check this out. Ollama v0.34.1 dropped.\n\nDie MLX-Runner-Updates sind hier der Knackpunkt. Endlich vernünftiges Memory-Management für prefix cache snapshots und Checks der System-RAM-Auslastung, bevor das nächste MLX-Modell geladen wird. Das bedeutet stabilere und performantere lokale LLM-Workloads, besonders beim Jonglieren mit mehreren Modellen. Wer lokal mit MLX arbeitet, wird das sofort merken.",
+    "chloe_note": "Hey, *Ollama v0.34.1* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New Ollama release with direct improvements to local LLM stability and output quality, especially for MLX users.Cluster context: 1 sources, engagement 0. Common terms: class, ollama, href, mlx. Score aktuell: 90. Link: https://github.com/ollama/ollama/releases/tag/v0.34.1-rc2"
   }
 ]

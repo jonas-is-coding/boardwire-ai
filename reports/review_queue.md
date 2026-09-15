@@ -6,6 +6,10 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-09-15T14:54:03.175742Z` [review] **GitHub Copilot app for Beginners: Using the diff, terminal, and browser** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-15T14:54:03.044702Z` [review] **MG1937/ASC — ASC is a super FAST Android decompiler front-end designed for Agents/Mobile Researchers.** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-15T14:54:02.913368Z` [review] **Notes on gotchas while migrating 35kb preprompts from Opus to self-hosted Ollama** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-15T14:54:02.620562Z` [review] **Claude Code v2.1.272** — Version-only release without concrete capability: 'Claude Code v2.1.272'
 - `2026-09-14T19:12:13.908297Z` [review] **vLLM v0.29.1rc0** — Version-only release without concrete capability: 'vLLM v0.29.1rc0'
 - `2026-09-14T19:12:13.749148Z` [review] **Ollama v0.34.1-rc0** — Version-only release without concrete capability: 'Ollama v0.34.1-rc0'
 - `2026-09-14T16:20:20.368872Z` [review] **rlaope/oh-my-hermes — All in one plugin for Hermes Agent ⚚ the coding intelligence, a long-term memory system and model optimized workflow packages** — Post is empty; Post lacks a clear claim or insight
@@ -27,7 +31,3 @@ No pending review items.
 - `2026-09-10T17:38:46.356628Z` [review] **Cognition launches new SWE-2 model, Rivaling Fable 5.1 and GPT-Astra** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-10T14:18:54.053298Z` [review] **Claude Code v2.1.267** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-10T14:18:53.963847Z` [review] **Ollama v0.34.0** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-10T14:18:53.874492Z` [review] **vercel-labs/skills — The open agent skills tool - npx skills** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-10T14:18:53.674777Z` [review] **DeepSeek v4.1 Flash** — Version-only release without concrete capability: 'DeepSeek v4.1 Flash'
-- `2026-09-09T17:46:12.094330Z` [review] **Research acceleration: The view inside OpenAI** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-09T17:46:12.005260Z` [review] **Muse – Meta’s personal AI agent** — Post is empty; Post lacks a clear claim or insight
