@@ -12179,7 +12179,7 @@
   },
   {
     "id": "d4a95fbaa2b0",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-09-13T21:07:57.604422Z",
     "score": 90,
     "reason": "New, live feature from OpenAI enabling direct natural language data analysis. Passes Ships Test.",
@@ -12217,7 +12217,8 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": false,
-    "reactivated_at": "2026-09-13T21:07:57.604422Z"
+    "reactivated_at": "2026-09-13T21:07:57.604422Z",
+    "expired_at": "2026-09-15T22:02:47.789532Z"
   },
   {
     "id": "0da1bc6d7c5e",
@@ -12264,7 +12265,7 @@
   },
   {
     "id": "d2e470a2b3ea",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-09-13T21:07:57.451323Z",
     "score": 95,
     "reason": "Official OpenAI Agents API released, direct tool for builders, ships today. Confirmed by official docs.",
@@ -12302,11 +12303,12 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": true,
-    "reactivated_at": "2026-09-13T21:07:57.451323Z"
+    "reactivated_at": "2026-09-13T21:07:57.451323Z",
+    "expired_at": "2026-09-15T22:02:47.789532Z"
   },
   {
     "id": "0dd613c16a2f",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-09-13T21:07:52.045769Z",
     "score": 92,
     "reason": "New open-source library of structured Claude skills for offensive security. Direct utility for red-teaming and security research, ships today.",
@@ -12345,7 +12347,8 @@
     "is_llm_mode": true,
     "breaking": true,
     "claire_note": "Chloe, das hier ist interessant für jeden, der mit LLMs in Security-Kontexten arbeitet. SnailSploit/Claude-Red ist eine Bibliothek von \"Offensive Security Skills\" für Claude.\n\nDas bedeutet, Entwickler können Claude jetzt gezielt für Red Teaming oder Security-Tests primen. Statt generischer Prompts gibt's hier vorkonfigurierte Ansätze für SQLi, EDR-Evasion und mehr. Das spart Zeit und liefert konsistentere Ergebnisse für Security-Anwendungen.",
-    "chloe_note": "Hey, *SnailSploit/Claude-Red — claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-lev* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New open-source library of structured Claude skills for offensive security. Direct utility for red-teaming and security research, ships today.Cluster context: 1 sources, engagement 507. Common terms: attack, claude, expert-lev, trending. Score aktuell: 92. Link: https://github.com/SnailSploit/Claude-Red"
+    "chloe_note": "Hey, *SnailSploit/Claude-Red — claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-lev* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New open-source library of structured Claude skills for offensive security. Direct utility for red-teaming and security research, ships today.Cluster context: 1 sources, engagement 507. Common terms: attack, claude, expert-lev, trending. Score aktuell: 92. Link: https://github.com/SnailSploit/Claude-Red",
+    "expired_at": "2026-09-15T22:02:47.789532Z"
   },
   {
     "id": "f66698333596",
