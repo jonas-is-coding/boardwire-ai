@@ -6,6 +6,9 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-09-15T18:05:52.508722Z` [review] **GPT-5.6 Luna vs. GPT-6 Astra: Is a $1.20 Model Good Enough for Code Review?** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-15T18:05:52.416792Z` [review] **Anthropic Python SDK v1.6.0** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-15T18:05:52.323050Z` [review] **There's a 100% Chance AI Agents Are Ruining the Internet** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-15T14:54:03.175742Z` [review] **GitHub Copilot app for Beginners: Using the diff, terminal, and browser** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-15T14:54:03.044702Z` [review] **MG1937/ASC — ASC is a super FAST Android decompiler front-end designed for Agents/Mobile Researchers.** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-15T14:54:02.913368Z` [review] **Notes on gotchas while migrating 35kb preprompts from Opus to self-hosted Ollama** — Post is empty; Post lacks a clear claim or insight
@@ -28,6 +31,3 @@ No pending review items.
 - `2026-09-11T14:19:45.885087Z` [review] **Anthropic Python SDK v1.5.0** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-10T17:38:46.538427Z` [review] **armory3d/armorpaint — Graphics Creation Tools** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-10T17:38:46.447859Z` [review] **nashsu/llm_wiki — LLM Wiki is a cross-platform desktop application that turns your documents into an organized, interlinked knowledge base — automatically. Instead of traditional RAG (retrieve-and-ans** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-10T17:38:46.356628Z` [review] **Cognition launches new SWE-2 model, Rivaling Fable 5.1 and GPT-Astra** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-10T14:18:54.053298Z` [review] **Claude Code v2.1.267** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-10T14:18:53.963847Z` [review] **Ollama v0.34.0** — Post is empty; Post lacks a clear claim or insight

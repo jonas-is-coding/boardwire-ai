@@ -724,5 +724,35 @@
       "Post is empty",
       "Post lacks a clear claim or insight"
     ]
+  },
+  {
+    "rejected_at": "2026-09-15T18:05:52.323050Z",
+    "stage": "review",
+    "title": "There's a 100% Chance AI Agents Are Ruining the Internet",
+    "link": "https://www.404media.co/theres-a-100-chance-ai-agents-are-already-ruining-the-internet/",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-15T18:05:52.416792Z",
+    "stage": "review",
+    "title": "Anthropic Python SDK v1.6.0",
+    "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.6.0",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-15T18:05:52.508722Z",
+    "stage": "review",
+    "title": "GPT-5.6 Luna vs. GPT-6 Astra: Is a $1.20 Model Good Enough for Code Review?",
+    "link": "https://entelligence.ai/blogs/gpt-5.6-luna-vs-gpt-6-astra-is-a-1.20-model-good-enough-for-code-review",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
   }
 ]
