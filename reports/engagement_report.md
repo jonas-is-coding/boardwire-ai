@@ -1,10 +1,10 @@
 # Boardwire Engagement Report
 
-Generated: `2026-09-15T09:03:32.471328Z`
+Generated: `2026-09-16T08:55:54.834665Z`
 
 ## Account
 
-- @boardwire.bsky.social: **26** followers (1d: -1, 7d: -1) · following 101 · posts 74 · snapshots 12 · as of `2026-09-15T09:03:17.694064Z`
+- @boardwire.bsky.social: **27** followers (1d: +0, 7d: -1) · following 104 · posts 74 · snapshots 13 · as of `2026-09-16T08:55:40.365842Z`
 
 ## Summary
 
@@ -427,17 +427,17 @@ Generated: `2026-09-15T09:03:32.471328Z`
    > LangChain ships MCP adapter for coding agents. langchain.mcp turns MCP servers into LangChain tools with FastMCP client features, +607 stars…
 
 67. **1 pts** — THU-MAIC/OpenMAIC — Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click
-   likes 1 · reposts 0 · replies 0 · quotes 0 · age 328h · score 90
+   likes 1 · reposts 0 · replies 0 · quotes 0 · age 352h · score 90
    https://github.com/THU-MAIC/OpenMAIC
    > OpenMAIC turns one click into a multi-agent classroom. THU-MAIC/OpenMAIC ships a runnable multi-agent classroom for testing workflows, with …
 
 68. **1 pts** — Claude Code v2.1.257
-   likes 0 · reposts 0 · replies 1 · quotes 0 · age 325h · score 95
+   likes 0 · reposts 0 · replies 1 · quotes 0 · age 349h · score 95
    https://github.com/anthropics/claude-code/releases/tag/v2.1.257
    > Claude Fable 5.1 ships as the new default for Claude Code. $10/$50 per Mtok; 1M context; $0.25/Mtok cache reads. #LLM #ClaudeCode #Anthropic
 
 69. **1 pts** — Claude Code v2.1.259
-   likes 0 · reposts 0 · replies 1 · quotes 0 · age 280h · score 95
+   likes 0 · reposts 0 · replies 1 · quotes 0 · age 304h · score 95
    https://github.com/anthropics/claude-code/releases/tag/v2.1.259
    > Claude Code centralizes MCP servers for enterprise deployments. Claude Code v2.1.259 adds managedMcpServers and headless flags for CI/CD… An…
 
@@ -1052,12 +1052,12 @@ Generated: `2026-09-15T09:03:32.471328Z`
    > Minimind ships a 64M LLM trained in 2 hours. Trains a 64M-parameter model from scratch in 2h on a single GPU, +472 stars today. #LLM #DevToo…
 
 192. **0 pts** — pacifio/atlas — Source control for agents. Use multiple coding agents, track their changes and query them in one place
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 304h · score 90
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 328h · score 90
    https://github.com/pacifio/atlas
    > Atlas turns agents into a first-class primitive with source control. pacifio/atlas manages multiple coding agents, tracks changes, and unifi…
 
 193. **0 pts** — Claude Code v2.1.266
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 111h · score 85
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 135h · score 85
    https://github.com/anthropics/claude-code/releases/tag/v2.1.266
    > Proxy reliability improves with Claude Code 2.1.266 fix. Claude Code 2.1.266 stops forced gateway sign‑in when CLAUDE_CODE_USE_GATEWAY lacks…
 
