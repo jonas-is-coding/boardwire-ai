@@ -3619,5 +3619,35 @@
     "published_weekday": "Thursday",
     "composer_version": "2",
     "card_variant": "editorial_release"
+  },
+  {
+    "id": "a4572446666b",
+    "published_at": "2026-09-16T18:47:32.781953Z",
+    "platform": "bluesky",
+    "post": "Cloudflare security-audit-skill lets agents run multi‑phase audits.\n\ncloudflare/security-audit-skill ★+1434, outputs verified, machine‑readable audit reports.\n\nAnyone using this for CI security pipelines?\n\n#AI #AIAgents #InfoSec",
+    "source_link": "https://github.com/cloudflare/security-audit-skill",
+    "source_title": "cloudflare/security-audit-skill — A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+    "score": 95,
+    "reason": "Open-source tool from Cloudflare for automated security audits with verifiable findings. Highly relevant for AI builders. Passes Ships Test.",
+    "card_path": "generated/cards/a4572446666b.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-09-16-cloudflare-security-audit-skill-a-coding-agent-skill-for-multi-phase-security-audits-with-independently-verified-machine-readable-findings-a4572446666b.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mvnsh24f652l",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mvnsh24f652l",
+    "format_variant": "thread",
+    "hashtags_used": [
+      "#AI",
+      "#AIAgents",
+      "#InfoSec"
+    ],
+    "published_hour_utc": 18,
+    "published_weekday": "Wednesday",
+    "composer_version": "2",
+    "card_variant": "editorial_repo",
+    "thread_uris": [
+      "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mvnsh24f652l",
+      "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mvnsh3bb5n2i",
+      "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mvnsh3hizd22"
+    ],
+    "thread_partial": false
   }
 ]

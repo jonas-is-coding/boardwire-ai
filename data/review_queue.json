@@ -12568,11 +12568,11 @@
   },
   {
     "id": "a4572446666b",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-09-16T14:50:30.676375Z",
     "score": 95,
     "reason": "Open-source tool from Cloudflare for automated security audits with verifiable findings. Highly relevant for AI builders. Passes Ships Test.",
-    "proposed_post": "Cloudflare released a coding-agent skill for multi-phase security audits, generating independently verified, machine-readable findings. Builders can integrate this open-source tool to automate security checks in AI development workflows.",
+    "proposed_post": "Cloudflare security-audit-skill lets agents run multi‑phase audits.\n\ncloudflare/security-audit-skill ★+1434, outputs verified, machine‑readable audit reports.\n\nAnyone using this for CI security pipelines?\n\n#AI #AIAgents #InfoSec",
     "source_angle": "Cloudflare's open-source security audit skill for AI agents",
     "source_item": {
       "title": "cloudflare/security-audit-skill — A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
@@ -12603,11 +12603,30 @@
         "cluster_score": 35
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/a4572446666b.png",
     "is_llm_mode": true,
     "breaking": true,
     "claire_note": "Chloe, schau dir das mal an: 'cloudflare/security-audit-skill'.\n\nDas ist ein Coding-Agent Skill für mehrphasige Security Audits, der unabhängig verifizierte, maschinenlesbare Ergebnisse liefert. Für Entwickler bedeutet das: automatisierte, tiefgehende Sicherheitsprüfungen, die nicht nur Schwachstellen finden, sondern auch direkt verwertbare Daten ausspucken. Könnte ein Game Changer sein, um die Sicherheit direkt in den CI/CD-Prozess zu integrieren, ohne den Overhead manueller Audits.",
-    "chloe_note": "Hey, *cloudflare/security-audit-skill — A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Open-source tool from Cloudflare for automated security audits with verifiable findings. Highly relevant for AI builders. Passes Ships Test.Cluster context: 1 sources, engagement 1434. Common terms: cloudflare/security-audit-skill, verified, machine-readable, trending. Score aktuell: 95. Link: https://github.com/cloudflare/security-audit-skill"
+    "chloe_note": "Hey, *cloudflare/security-audit-skill — A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Open-source tool from Cloudflare for automated security audits with verifiable findings. Highly relevant for AI builders. Passes Ships Test.Cluster context: 1 sources, engagement 1434. Common terms: cloudflare/security-audit-skill, verified, machine-readable, trending. Score aktuell: 95. Link: https://github.com/cloudflare/security-audit-skill",
+    "sarah_package": {
+      "title": "Cloudflare security-audit-skill lets agents run multi‑phase audits.",
+      "subtitle": "cloudflare/security-audit-skill ★+1434, outputs verified, machine‑readable audit reports.",
+      "description": "Open‑source skill from Cloudflare runs as a coding‑agent plugin, performs phased vulnerability scans and returns JSON findings for downstrea",
+      "hashtags": [
+        "#AI",
+        "#AIAgents",
+        "#InfoSec"
+      ],
+      "question": "Anyone using this for CI security pipelines?",
+      "card_stat": "+1434★",
+      "card_claim": "Agents can emit structured audit results automatically.",
+      "card_context": "Open‑source · runs as coding‑agent skill · returns JSON findings"
+    },
+    "composer_version": "2",
+    "card_layout": "repo",
+    "card_variant": "editorial_repo",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-09-16-cloudflare-security-audit-skill-a-coding-agent-skill-for-multi-phase-security-audits-with-independently-verified-machine-readable-findings-a4572446666b.md",
+    "published_at": "2026-09-16T18:47:32.781953Z"
   },
   {
     "id": "ff4a3be4075d",
