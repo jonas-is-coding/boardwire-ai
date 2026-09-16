@@ -786,5 +786,35 @@
       "Post lacks a clear claim or insight",
       "Version-only release without concrete capability: 'proto-v0.2.0: vllm-proto 0.2.0'"
     ]
+  },
+  {
+    "rejected_at": "2026-09-16T18:05:55.125826Z",
+    "stage": "review",
+    "title": "How workers are unlocking new ways of working",
+    "link": "https://openai.com/index/unlocking-new-ways-of-working",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-16T18:05:55.218592Z",
+    "stage": "review",
+    "title": "LangChain v1.4.1",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.4.1",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-16T18:05:55.311778Z",
+    "stage": "review",
+    "title": "Gemini 3.8 Live and 3.8 Live Extended Thinking",
+    "link": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
   }
 ]
