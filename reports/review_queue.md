@@ -6,6 +6,9 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-09-16T14:50:52.716825Z` [review] **proto-v0.2.0: vllm-proto 0.2.0** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'proto-v0.2.0: vllm-proto 0.2.0'
+- `2026-09-16T14:50:52.582471Z` [review] **LangChain v1.6.3** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.6.3'
+- `2026-09-16T14:50:52.447548Z` [review] **Claude Code v2.1.273** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-15T18:05:52.508722Z` [review] **GPT-5.6 Luna vs. GPT-6 Astra: Is a $1.20 Model Good Enough for Code Review?** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-15T18:05:52.416792Z` [review] **Anthropic Python SDK v1.6.0** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-15T18:05:52.323050Z` [review] **There's a 100% Chance AI Agents Are Ruining the Internet** — Post is empty; Post lacks a clear claim or insight
@@ -28,6 +31,3 @@ No pending review items.
 - `2026-09-11T17:42:40.701078Z` [review] **vLLM v0.1.0** — Version-only release without concrete capability: 'vLLM v0.1.0'
 - `2026-09-11T14:19:46.073655Z` [review] **Claude Code v2.1.268** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-11T14:19:45.981173Z` [review] **GPT‑Live‑1 in the API** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-11T14:19:45.885087Z` [review] **Anthropic Python SDK v1.5.0** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-10T17:38:46.538427Z` [review] **armory3d/armorpaint — Graphics Creation Tools** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-10T17:38:46.447859Z` [review] **nashsu/llm_wiki — LLM Wiki is a cross-platform desktop application that turns your documents into an organized, interlinked knowledge base — automatically. Instead of traditional RAG (retrieve-and-ans** — Post is empty; Post lacks a clear claim or insight

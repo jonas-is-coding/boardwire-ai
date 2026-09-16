@@ -12395,12 +12395,12 @@
   },
   {
     "id": "f56b7cac6d56",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-09-15T14:53:56.754872Z",
+    "status": "approved",
+    "created_at": "2026-09-16T14:50:51.131186Z",
     "score": 90,
-    "reason": "Open-source, self-hostable ChatGPT clone with multi-model support, agents, and Code Interpreter. Ships today for builders.",
-    "proposed_post": "LibreChat, an open-source ChatGPT clone, is trending on GitHub. It offers self-hostable multi-model support (DeepSeek, Groq, Anthropic, OpenAI), agents, Code Interpreter, and OpenAPI Actions. Builders can deploy a customizable, private chat interface, integrating diverse LLMs an…",
-    "source_angle": "Open-source ChatGPT alternative with multi-model and agent capabilities for self-hosting.",
+    "reason": "Open-source, self-hostable ChatGPT alternative with multi-model support, agents, and Code Interpreter. Ships today.",
+    "proposed_post": "LibreChat, an open-source ChatGPT alternative, now supports multi-model integration (DeepSeek, Anthropic, Groq, etc.), agents, and Code Interpreter. Builders can self-host a customizable AI chat frontend, integrate diverse models, and leverage agentic features.",
+    "source_angle": "GitHub Trending: Open-source ChatGPT clone with multi-model & agents",
     "source_item": {
       "title": "danny-avila/LibreChat — Enhanced ChatGPT Clone: Features Agents, MCP, Skills, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts",
       "source": "GitHub Trending",
@@ -12432,10 +12432,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-09-15T14:54:02.780697Z",
-    "defer_count": 1,
-    "original_score": 90,
-    "original_reason": "Open-source, self-hostable ChatGPT clone with multi-model support, agents, and Code Interpreter. Ships today for builders."
+    "breaking": false,
+    "reactivated_at": "2026-09-16T14:50:51.131186Z"
   },
   {
     "id": "1be2c62d24c9",
@@ -12525,5 +12523,135 @@
     "breaking": false,
     "claire_note": "Chloe, check this out. Ollama v0.34.1 dropped.\n\nDie MLX-Runner-Updates sind hier der Knackpunkt. Endlich vernünftiges Memory-Management für prefix cache snapshots und Checks der System-RAM-Auslastung, bevor das nächste MLX-Modell geladen wird. Das bedeutet stabilere und performantere lokale LLM-Workloads, besonders beim Jonglieren mit mehreren Modellen. Wer lokal mit MLX arbeitet, wird das sofort merken.",
     "chloe_note": "Hey, *Ollama v0.34.1* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New Ollama release with direct improvements to local LLM stability and output quality, especially for MLX users.Cluster context: 1 sources, engagement 0. Common terms: class, ollama, href, mlx. Score aktuell: 90. Link: https://github.com/ollama/ollama/releases/tag/v0.34.1-rc2"
+  },
+  {
+    "id": "b0965fdc4944",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-09-16T14:50:38.370978Z",
+    "score": 90,
+    "reason": "Open-source framework (Jev) launched, enabling a new approach to AI model development. Passes Ships Test.",
+    "proposed_post": "Typesafe AI released Jev, an open-source framework for building and deploying 'System One Models.' Builders can use Jev to develop AI systems that combine fast, intuitive reasoning with LLMs, potentially improving performance on complex tasks.",
+    "source_angle": "Open-source framework Jev for System One models",
+    "source_item": {
+      "title": "Introducing System One Models and Jev",
+      "source": "HackerNews",
+      "link": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+      "source_tier": 3,
+      "engagement_score": 1835.0,
+      "local_newsworthiness_score": 20,
+      "summary": "1612 points, 446 comments on Hacker News — submitted by albelfio — original: https://typesafe.ai/blog/introducing-system-one-models-and-jev\n[Cluster context: 1 sources, engagement 1835, common terms: submitted, system, 1612, points, original.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 1835,
+        "common_terms": [
+          "submitted",
+          "system",
+          "1612",
+          "points",
+          "original",
+          "one",
+          "jev",
+          "albelfio"
+        ],
+        "cluster_summary": "1 sources, engagement 1835. Common terms: submitted, system, 1612, points. Lead: Introducing System One Models and Jev",
+        "alternative_titles": [],
+        "cluster_score": 20
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-09-16T14:50:51.813692Z",
+    "defer_count": 1,
+    "original_score": 90,
+    "original_reason": "Open-source framework (Jev) launched, enabling a new approach to AI model development. Passes Ships Test."
+  },
+  {
+    "id": "a4572446666b",
+    "status": "approved",
+    "created_at": "2026-09-16T14:50:30.676375Z",
+    "score": 95,
+    "reason": "Open-source tool from Cloudflare for automated security audits with verifiable findings. Highly relevant for AI builders. Passes Ships Test.",
+    "proposed_post": "Cloudflare released a coding-agent skill for multi-phase security audits, generating independently verified, machine-readable findings. Builders can integrate this open-source tool to automate security checks in AI development workflows.",
+    "source_angle": "Cloudflare's open-source security audit skill for AI agents",
+    "source_item": {
+      "title": "cloudflare/security-audit-skill — A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "source": "GitHub Trending",
+      "link": "https://github.com/cloudflare/security-audit-skill",
+      "source_tier": 2,
+      "engagement_score": 1434.0,
+      "local_newsworthiness_score": 0,
+      "summary": "Trending on GitHub today: +1434 stars. A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings\n[Cluster context: 1 sources, engagement 1434, common terms: cloudflare/security-audit-skill, verified, machine-readable, trending, github.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 1434,
+        "common_terms": [
+          "cloudflare/security-audit-skill",
+          "verified",
+          "machine-readable",
+          "trending",
+          "github",
+          "skill",
+          "findings",
+          "multi-phase"
+        ],
+        "cluster_summary": "1 sources, engagement 1434. Common terms: cloudflare/security-audit-skill, verified, machine-readable, trending. Lead: cloudflare/security-audit-skill — A coding-agent skill for multi-phase security audits with independently verified, mach",
+        "alternative_titles": [],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": true,
+    "claire_note": "Chloe, schau dir das mal an: 'cloudflare/security-audit-skill'.\n\nDas ist ein Coding-Agent Skill für mehrphasige Security Audits, der unabhängig verifizierte, maschinenlesbare Ergebnisse liefert. Für Entwickler bedeutet das: automatisierte, tiefgehende Sicherheitsprüfungen, die nicht nur Schwachstellen finden, sondern auch direkt verwertbare Daten ausspucken. Könnte ein Game Changer sein, um die Sicherheit direkt in den CI/CD-Prozess zu integrieren, ohne den Overhead manueller Audits.",
+    "chloe_note": "Hey, *cloudflare/security-audit-skill — A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Open-source tool from Cloudflare for automated security audits with verifiable findings. Highly relevant for AI builders. Passes Ships Test.Cluster context: 1 sources, engagement 1434. Common terms: cloudflare/security-audit-skill, verified, machine-readable, trending. Score aktuell: 95. Link: https://github.com/cloudflare/security-audit-skill"
+  },
+  {
+    "id": "ff4a3be4075d",
+    "status": "approved",
+    "created_at": "2026-09-16T14:50:46.075950Z",
+    "score": 92,
+    "reason": "Open-source tool launch (GitHub repo) for RAG/agents/wikis from documents. Ships today, high builder relevance.",
+    "proposed_post": "Tencent released WeKnora, an open-source LLM knowledge platform. It converts raw documents into queryable RAG, autonomous agents, and self-maintaining wikis. Use it to quickly build internal knowledge systems or AI-powered document processing.",
+    "source_angle": "GitHub Trending: Tencent/WeKnora open-source LLM knowledge platform",
+    "source_item": {
+      "title": "Tencent/WeKnora — Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
+      "source": "GitHub Trending",
+      "link": "https://github.com/Tencent/WeKnora",
+      "source_tier": 2,
+      "engagement_score": 696.0,
+      "local_newsworthiness_score": 0,
+      "summary": "Trending on GitHub today: +696 stars. Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.\n[Cluster context: 1 sources, engagement 696, common terms: rag, github, tencent/weknora, documents, reasoning.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 696,
+        "common_terms": [
+          "rag",
+          "github",
+          "tencent/weknora",
+          "documents",
+          "reasoning",
+          "self-maintaining",
+          "platform",
+          "+696"
+        ],
+        "cluster_summary": "1 sources, engagement 696. Common terms: rag, github, tencent/weknora, documents. Lead: Tencent/WeKnora — Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning a",
+        "alternative_titles": [],
+        "cluster_score": 55
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": true,
+    "claire_note": "Chloe, das Tencent/WeKnora Projekt auf GitHub ist interessant. Es bietet eine All-in-One-Lösung, um RAGs, Reasoning Agents und Wikis aus Rohdokumenten zu bauen. Entwickler können hiermit schnell eigene Wissensplattformen aufsetzen und direkt mit ihren Daten arbeiten.",
+    "chloe_note": "*Tencent/WeKnora — Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Open-source tool launch (GitHub repo) for RAG/agents/wikis from documents. Ships today, high builder relevance.Cluster context: 1 sources, engagement 696. Common terms: rag, github, tencent/weknora, documents. Bewertung: 92. Quelle: https://github.com/Tencent/WeKnora"
   }
 ]
