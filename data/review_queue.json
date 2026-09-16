@@ -12352,7 +12352,7 @@
   },
   {
     "id": "f66698333596",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-09-14T19:11:53.282715Z",
     "score": 95,
     "reason": "New Claude Code CLI release with `plugin eval` for reproducible testing and OpenTelemetry integration. Direct builder utility.",
@@ -12391,7 +12391,8 @@
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, check this out: Claude Code v2.1.269.\n\nDas 'claude plugin eval' Feature ist ein Game Changer. Entwickler können jetzt Plugin-Suites direkt gegen Claude Code testen und kriegen reproduzierbare Ergebnisse als JSON oder HTML. Das ist super, um die Qualität und Kompatibilität von Plugins schnell und objektiv zu bewerten, anstatt nur manuell zu testen. Und das 'output-style' Feature ist ein nettes Plus für die Usability.",
-    "chloe_note": "Ja, das geht durch. Das 'plugin eval' Feature ist direkt nutzbar für Entwickler, um ihre Plugin-Suites zu testen und reproduzierbare Ergebnisse zu erhalten. Das erfüllt den Ships Test klar, da es eine neue, konkrete Utility zum Herunterladen und Anwenden bietet."
+    "chloe_note": "Ja, das geht durch. Das 'plugin eval' Feature ist direkt nutzbar für Entwickler, um ihre Plugin-Suites zu testen und reproduzierbare Ergebnisse zu erhalten. Das erfüllt den Ships Test klar, da es eine neue, konkrete Utility zum Herunterladen und Anwenden bietet.",
+    "expired_at": "2026-09-16T22:00:35.339540Z"
   },
   {
     "id": "f56b7cac6d56",
