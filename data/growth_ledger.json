@@ -1238,6 +1238,34 @@
         "@kylelo.bsky.social follows"
       ],
       "followed_at": "2026-09-15T12:55:15.734323Z"
+    },
+    "did:plc:jvgkdspggut5kf5mokyuxwlh": {
+      "handle": "aaronsylvan.com",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mvn6jfxekk2i",
+      "channel": "seed_followers",
+      "score": 3.0,
+      "mode": "discover",
+      "via": [
+        "follows @simonwillison.net",
+        "follows @natolambert.bsky.social",
+        "follows @hamel.bsky.social",
+        "follows @emollick.bsky.social",
+        "follows @stellaathena.bsky.social"
+      ],
+      "followed_at": "2026-09-16T12:51:04.261878Z"
+    },
+    "did:plc:crbarlvonidnzxlq3gcbyajo": {
+      "handle": "giorgio.gilest.ro",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mvn6kbcsvm27",
+      "channel": "seed_followers",
+      "score": 1.5,
+      "mode": "discover",
+      "via": [
+        "follows @natolambert.bsky.social",
+        "follows @kylelo.bsky.social",
+        "follows @stellaathena.bsky.social"
+      ],
+      "followed_at": "2026-09-16T12:51:32.954219Z"
     }
   },
   "runs": [
@@ -1484,6 +1512,22 @@
       ],
       "started_at": "2026-09-15T12:54:03.942723Z",
       "finished_at": "2026-09-15T12:55:15.736105Z"
+    },
+    {
+      "mode": "discover",
+      "dry_run": false,
+      "limit": 12,
+      "planned": 0,
+      "followed": 2,
+      "skipped_already": 0,
+      "failed": 0,
+      "aborted": null,
+      "handles": [
+        "aaronsylvan.com",
+        "giorgio.gilest.ro"
+      ],
+      "started_at": "2026-09-16T12:51:03.951883Z",
+      "finished_at": "2026-09-16T12:51:32.956220Z"
     }
   ],
   "pinned_thread": {
