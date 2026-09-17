@@ -12716,7 +12716,7 @@
   },
   {
     "id": "d74e44f5ac86",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-09-17T14:53:19.696422Z",
     "score": 85,
     "reason": "New Claude Code release with improved debugging, performance configuration, and observability features for developers.",
@@ -12758,16 +12758,17 @@
     "deferred_at": "2026-09-17T14:53:32.130950Z",
     "defer_count": 1,
     "original_score": 85,
-    "original_reason": "New Claude Code release with improved debugging, performance configuration, and observability features for developers."
+    "original_reason": "New Claude Code release with improved debugging, performance configuration, and observability features for developers.",
+    "rejected_at": "2026-09-17T18:05:53.374805Z"
   },
   {
     "id": "05355e4f021a",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-09-17T14:53:26.751985Z",
+    "status": "approved",
+    "created_at": "2026-09-17T18:05:53.217240Z",
     "score": 90,
     "reason": "Open-source autonomous coding agent released as SDK/CLI/IDE extension. Ships today for direct builder use.",
-    "proposed_post": "`cline/cline` is a new open-source autonomous coding agent, available as an SDK, IDE extension, or CLI. Builders can integrate it directly into their dev workflows or use it to create custom AI-powered tools.",
-    "source_angle": "GitHub Trending: New autonomous coding agent for dev workflows.",
+    "proposed_post": "cline, an open-source autonomous coding agent, is now available as an SDK, CLI, and IDE extension. Builders can integrate an AI agent directly into their development workflow for automated coding tasks.",
+    "source_angle": "Open-source autonomous coding agent for direct builder use.",
     "source_item": {
       "title": "cline/cline — Autonomous coding agent as an SDK, IDE extension, or CLI assistant.",
       "source": "GitHub Trending",
@@ -12799,10 +12800,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-09-17T14:53:32.245630Z",
-    "defer_count": 1,
-    "original_score": 90,
-    "original_reason": "Open-source autonomous coding agent released as SDK/CLI/IDE extension. Ships today for direct builder use."
+    "breaking": false,
+    "reactivated_at": "2026-09-17T18:05:53.217240Z"
   },
   {
     "id": "0515c06e3699",

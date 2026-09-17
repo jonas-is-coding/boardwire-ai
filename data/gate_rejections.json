@@ -847,5 +847,64 @@
       "Post lacks a clear claim or insight",
       "Version-only release without concrete capability: 'vLLM v0.30.0rc1'"
     ]
+  },
+  {
+    "rejected_at": "2026-09-17T18:05:53.373605Z",
+    "stage": "review",
+    "title": "Claude Code v2.1.274",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.274",
+    "reasons": [
+      "Version-only release without concrete capability: 'Claude Code v2.1.274'"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-17T18:05:53.530331Z",
+    "stage": "review",
+    "title": "LangChain v1.7.2",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-anthropic%3D%3D1.7.2",
+    "reasons": [
+      "Version-only release without concrete capability: 'LangChain v1.7.2'"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-17T18:05:53.665829Z",
+    "stage": "review",
+    "title": "A warning about 'model welfare'",
+    "link": "https://mustafa-suleyman.ai/a-warning-about-model-welfare",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-17T18:05:53.800257Z",
+    "stage": "review",
+    "title": "Our framework for reporting model misalignment",
+    "link": "https://openai.com/index/model-misalignment-reporting-framework",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-17T18:05:53.936915Z",
+    "stage": "review",
+    "title": "coder/coder — Secure environments for developers and their agents",
+    "link": "https://github.com/coder/coder",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-17T18:05:54.073756Z",
+    "stage": "review",
+    "title": "vLLM v0.3.0",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/proto-v0.3.0",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight",
+      "Version-only release without concrete capability: 'vLLM v0.3.0'"
+    ]
   }
 ]

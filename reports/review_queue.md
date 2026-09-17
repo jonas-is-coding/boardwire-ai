@@ -6,6 +6,12 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-09-17T18:05:54.073756Z` [review] **vLLM v0.3.0** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.3.0'
+- `2026-09-17T18:05:53.936915Z` [review] **coder/coder — Secure environments for developers and their agents** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-17T18:05:53.800257Z` [review] **Our framework for reporting model misalignment** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-17T18:05:53.665829Z` [review] **A warning about 'model welfare'** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-17T18:05:53.530331Z` [review] **LangChain v1.7.2** — Version-only release without concrete capability: 'LangChain v1.7.2'
+- `2026-09-17T18:05:53.373605Z` [review] **Claude Code v2.1.274** — Version-only release without concrete capability: 'Claude Code v2.1.274'
 - `2026-09-17T14:53:32.526955Z` [review] **vLLM v0.30.0rc1** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.30.0rc1'
 - `2026-09-17T14:53:32.433032Z` [review] **n8n-io/n8n — Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-17T14:53:32.339486Z` [review] **TencentCloud/Octop — A smarter, self-hosted AI assistant — multi-user, multi-agent.** — Post is empty; Post lacks a clear claim or insight
@@ -25,9 +31,3 @@ No pending review items.
 - `2026-09-14T19:12:13.908297Z` [review] **vLLM v0.29.1rc0** — Version-only release without concrete capability: 'vLLM v0.29.1rc0'
 - `2026-09-14T19:12:13.749148Z` [review] **Ollama v0.34.1-rc0** — Version-only release without concrete capability: 'Ollama v0.34.1-rc0'
 - `2026-09-14T16:20:20.368872Z` [review] **rlaope/oh-my-hermes — All in one plugin for Hermes Agent ⚚ the coding intelligence, a long-term memory system and model optimized workflow packages** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-14T16:20:20.234738Z` [review] **Perplexity trusts GPT-6 Astra with end-to-end systems** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-14T16:20:20.093347Z` [review] **1Password increases engineering productivity 21% with Codex** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-13T21:07:58.556285Z` [review] **Real-SWE: Benchmarking AI models on private, real-world, enterprise codebases** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-13T21:07:58.427923Z` [review] **multimodal-art-projection/YuE — YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-13T21:07:58.298973Z` [review] **tech-leads-club/agent-skills — The secure, validated skill registry for professional AI coding agents. Extend Antigravity, Claude Code, Cursor, Copilot and more with absolute confidence.** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-13T21:07:57.764486Z` [review] **Claude Code v2.1.270** — Version-only release without concrete capability: 'Claude Code v2.1.270'
