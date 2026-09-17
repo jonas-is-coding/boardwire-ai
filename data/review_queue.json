@@ -12438,7 +12438,7 @@
   },
   {
     "id": "1be2c62d24c9",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-09-15T14:53:32.839575Z",
     "score": 90,
     "reason": "New open-source AI agent toolkit with concrete features (unified API, CLI, TUI) available for immediate use. High GitHub engagement.",
@@ -12477,11 +12477,12 @@
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das ist ein Hotspot. \"earendil-works/pi\" ist ein komplettes AI-Agent-Toolkit, das auf GitHub gerade durch die Decke geht.\n\nEinheitliche LLM-API, Agent-Loop, TUI und ein Coding-Agent-CLI – das ist alles, was ein Dev braucht, um schnell eigene AI-Agents zu bauen und zu testen, ohne sich durch diverse APIs kämpfen zu müssen. Direkt umsetzbar.",
-    "chloe_note": "*earendil-works/pi — AI agent toolkit: unified LLM API, agent loop, TUI, coding agent CLI* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New open-source AI agent toolkit with concrete features (unified API, CLI, TUI) available for immediate use. High GitHub engagement.Cluster context: 1 sources, engagement 437. Common terms: github, tui, loop, coding. Bewertung: 90. Quelle: https://github.com/earendil-works/pi"
+    "chloe_note": "*earendil-works/pi — AI agent toolkit: unified LLM API, agent loop, TUI, coding agent CLI* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New open-source AI agent toolkit with concrete features (unified API, CLI, TUI) available for immediate use. High GitHub engagement.Cluster context: 1 sources, engagement 437. Common terms: github, tui, loop, coding. Bewertung: 90. Quelle: https://github.com/earendil-works/pi",
+    "expired_at": "2026-09-17T18:55:02.863321Z"
   },
   {
     "id": "8aadb9bf9699",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-09-15T14:53:40.474189Z",
     "score": 90,
     "reason": "New Ollama release with direct improvements to local LLM stability and output quality, especially for MLX users.",
@@ -12523,7 +12524,8 @@
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, check this out. Ollama v0.34.1 dropped.\n\nDie MLX-Runner-Updates sind hier der Knackpunkt. Endlich vernünftiges Memory-Management für prefix cache snapshots und Checks der System-RAM-Auslastung, bevor das nächste MLX-Modell geladen wird. Das bedeutet stabilere und performantere lokale LLM-Workloads, besonders beim Jonglieren mit mehreren Modellen. Wer lokal mit MLX arbeitet, wird das sofort merken.",
-    "chloe_note": "Hey, *Ollama v0.34.1* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New Ollama release with direct improvements to local LLM stability and output quality, especially for MLX users.Cluster context: 1 sources, engagement 0. Common terms: class, ollama, href, mlx. Score aktuell: 90. Link: https://github.com/ollama/ollama/releases/tag/v0.34.1-rc2"
+    "chloe_note": "Hey, *Ollama v0.34.1* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New Ollama release with direct improvements to local LLM stability and output quality, especially for MLX users.Cluster context: 1 sources, engagement 0. Common terms: class, ollama, href, mlx. Score aktuell: 90. Link: https://github.com/ollama/ollama/releases/tag/v0.34.1-rc2",
+    "expired_at": "2026-09-17T18:55:02.863321Z"
   },
   {
     "id": "b0965fdc4944",
