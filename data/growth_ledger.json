@@ -1266,6 +1266,18 @@
         "follows @stellaathena.bsky.social"
       ],
       "followed_at": "2026-09-16T12:51:32.954219Z"
+    },
+    "did:plc:ungs2nriazpjpmkmbaejkyig": {
+      "handle": "cstroebele.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mvposfacna2e",
+      "channel": "seed_follows",
+      "score": 2.5,
+      "mode": "discover",
+      "via": [
+        "@rasbt.bsky.social follows",
+        "@ai2.bsky.social follows"
+      ],
+      "followed_at": "2026-09-17T12:47:44.825751Z"
     }
   },
   "runs": [
@@ -1528,6 +1540,21 @@
       ],
       "started_at": "2026-09-16T12:51:03.951883Z",
       "finished_at": "2026-09-16T12:51:32.956220Z"
+    },
+    {
+      "mode": "discover",
+      "dry_run": false,
+      "limit": 12,
+      "planned": 0,
+      "followed": 1,
+      "skipped_already": 0,
+      "failed": 0,
+      "aborted": null,
+      "handles": [
+        "cstroebele.bsky.social"
+      ],
+      "started_at": "2026-09-17T12:47:44.698981Z",
+      "finished_at": "2026-09-17T12:47:44.827520Z"
     }
   ],
   "pinned_thread": {
