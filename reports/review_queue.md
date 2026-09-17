@@ -6,6 +6,9 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-09-17T14:53:32.526955Z` [review] **vLLM v0.30.0rc1** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.30.0rc1'
+- `2026-09-17T14:53:32.433032Z` [review] **n8n-io/n8n — Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-17T14:53:32.339486Z` [review] **TencentCloud/Octop — A smarter, self-hosted AI assistant — multi-user, multi-agent.** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-16T18:05:55.311778Z` [review] **Gemini 3.8 Live and 3.8 Live Extended Thinking** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-16T18:05:55.218592Z` [review] **LangChain v1.4.1** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-16T18:05:55.125826Z` [review] **How workers are unlocking new ways of working** — Post is empty; Post lacks a clear claim or insight
@@ -28,6 +31,3 @@ No pending review items.
 - `2026-09-13T21:07:58.427923Z` [review] **multimodal-art-projection/YuE — YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-13T21:07:58.298973Z` [review] **tech-leads-club/agent-skills — The secure, validated skill registry for professional AI coding agents. Extend Antigravity, Claude Code, Cursor, Copilot and more with absolute confidence.** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-13T21:07:57.764486Z` [review] **Claude Code v2.1.270** — Version-only release without concrete capability: 'Claude Code v2.1.270'
-- `2026-09-11T17:42:40.970768Z` [review] **pascalorg/editor — Open-source 3D architectural editor with a local CLI, MCP tools, and practical workflows for humans and AI agents.** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-11T17:42:40.879807Z` [review] **jihe520/MathModelAgent — 🤖📐专为数学建模设计的 Agent & skills ,自动完成数学建模，生成一份完整的可以直接提交的论文。 An Agent Designed for Mathematical Modeling ,Automatically complete mathmodel and generate a complete paper ready for su** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-11T17:42:40.790660Z` [review] **melgarafael/DeskcommCRM — Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-rea** — Post is empty; Post lacks a clear claim or insight

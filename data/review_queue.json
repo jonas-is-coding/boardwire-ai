@@ -12674,12 +12674,12 @@
   },
   {
     "id": "c4385c55a510",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-09-16T18:05:50.650845Z",
+    "status": "approved",
+    "created_at": "2026-09-17T14:53:31.672775Z",
     "score": 85,
-    "reason": "New public tool provides actionable data on model freshness, directly useful for builders evaluating models.",
-    "proposed_post": "New tool stale.jock.pl tracks release dates & training cutoffs for 20 major AI models. Use it to quickly assess model data freshness for RAG, prompt engineering, or competitive analysis, informing model selection.",
-    "source_angle": "Hacker News Show HN: Tool for AI model data freshness",
+    "reason": "New public tool provides actionable data on model freshness and training cutoffs, directly useful for model evaluation and selection.",
+    "proposed_post": "New public tool stale.jock.pl lists release dates & training data cutoffs for 20 models. Use this to assess model freshness for your application or inform model selection, avoiding stale data issues.",
+    "source_angle": "New public tool for model freshness data",
     "source_item": {
       "title": "Show HN: How Stale Is Your AI? Release age and training cutoff for 20 models",
       "source": "HackerNews",
@@ -12711,9 +12711,140 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-09-16T18:05:55.033638Z",
+    "breaking": false,
+    "reactivated_at": "2026-09-17T14:53:31.672775Z"
+  },
+  {
+    "id": "d74e44f5ac86",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-09-17T14:53:19.696422Z",
+    "score": 85,
+    "reason": "New Claude Code release with improved debugging, performance configuration, and observability features for developers.",
+    "proposed_post": "Claude Code v2.1.274 adds memory warnings, MCP startup wait config, and OpenTelemetry tracing for LLM requests. Builders can now better debug performance, manage resource usage, and monitor LLM interactions within their Claude Code applications.",
+    "source_angle": "Official Claude Code release notes",
+    "source_item": {
+      "title": "Claude Code v2.1.274",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.274",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 30,
+      "summary": "<h2>What's changed</h2>\n<ul>\n<li>Added a visible warning when memory usage is critical, with steps to free memory or restart safely</li>\n<li>Added <code>CLAUDE_CODE_MCP_STARTUP_WAIT_MS</code> to bound how long the first non-interactive turn waits for connecting MCP servers (<code>0</code> = don't wait)</li>\n<li>Added <code>effort</code> attribute to the <code>claude_code.llm_request</code> OpenTelemetry trace span, matching the <code>api_request</code> event</li>\n<li>Added <code>claude_code.managed_settings_resolved</code> OTel event: managed-settings sources and policy helper state; redacted settings and digests with <code>OTEL_LOG_MANAGED_SETTINGS=1</code></li>\n<li>Added <code>store.connect_timeout_seconds</code> to the Claude apps gateway config to lengthen the Postgres connect timeout (default 5 seconds), and improved the boot error when the database is unreachable to point to <code>store.postgres_url</code> and the configured timeout</li>\n<li>Added <code>enduser.sub</code>, the IdP subject, to the telemetry Claude Desktop and Cowork send through a Claude apps gateway</li>\n<li>Added a Claude apps gateway warning when a replica has more requests open than the 256 it sends upstream at once, and a startup log line showing that limit</li>\n<li>Added click-to-expand for collapsed teammate and agent messages in fullscreen mode</li>\n<li>Fixed sessions getting stuck endlessly retrying \"unexpected tool_use_id\" 400 errors: corrupted transcripts now self-heal where possible, and otherwise a clear error (with a <code>/rewind</code> hint) ends the loop</li>\n<li>Fixed MCP servers configured as <code>http</code> that only speak legacy HTTP+SSE failing to connect when they answer the first request with 422 or another 4xx error</li>\n<li>Fixed Streamable HTTP MCP tool calls timing out after about 5 minutes even when a longer per-server <code>timeout</code> was set</li>\n<li>Fixed MCP prompts and resources not refreshing when a server sends list-changed notifications without declaring <code>listChanged</code></li>\n<li>Fixed MCP tool calls refused with 403 insufficient_scope being reported as an expired sign-in: the error now names the missing permissions and points to <code>/mcp</code> re-authentication</li>\n<li>Fixed hook-driven sessions (such as an active <code>/goal</code>) ending with \"Prompt is too long\" instead of compacting when the context overflowed again after a reactive compaction</li>\n<li>Fixed an active <code>/goal</code> being lost when resuming (<code>--continue</code> / <code>--resume</code>) a session that had compacted</li>\n<li>Fixed <code>claude agents</code> losing <code>--model</code>, <code>--effort</code>, <code>--permission-mode</code>, <code>--allow-dangerously-skip-permissions</code> and <code>--agent</code> after an auto-update relaunch</li>\n<li>Fixed a per-turn slowdown when a language server publishes project-wide diagnostics for thousands of files</li>\n<li>Fixed subagents with <code>model: \"opus\"</code> on Bedrock, Vertex or Foundry leaving the session's model when its id has no recognizable model family (unless <code>ANTHROPIC_DEFAULT_OPUS_MODEL</code> is set)</li>\n<li>Fixed self-hosted runner sessions failing every turn with a 401 after a few failed token refreshes, until the next scheduled refresh; the runner now keeps retrying, and fetches a new token after a 401</li>\n<li>Fixed clickable links to local file paths doing nothing in VS Code and other terminals that require a <code>file://</code> URI</li>\n<li>Fixed the transcript renumbering ordered lists in your own messages (typing \"3. 2. 1.\" displayed \"3. 4. 5.\"); numbers and \"N)\" markers now show as typed</li>\n<li>Fixed AskUserQuestion preview notes being attached to a previously chosen option instead of the highlighted one</li>\n<li>Fixed AskUserQuestion preview mode dropping the highlighted option when submitting a note with Enter</li>\n<li>Fixed a resumed background agent keeping half of an interrupted tool batch when one of its calls was approved with a message</li>\n<li>Fixed a local <code>claude -p --resume</code> started with <code>CLAUDE_CODE_RESUME_INTERRUPTED_TURN</code> not reporting background tasks the previous process left unfinished</li>\n<li>Fixed the first turn of a cloud session sometimes starting without the tools of an SDK-hosted MCP server that was still connecting</li>\n<li>Fixed background agent notifications claiming the agent had no live background work when it was still waiting on its own background task and would resume</li>\n<li>Fixed error hints in Claude Desktop sessions to suggest slash commands like <code>/usage-credits</code> instead of CLI flags that cannot be used there</li>\n<li>Fixed <code>/schedule</code> saving a routine's prompt without its message role when Claude writes the routine in the shape that listing routines returns</li>\n<li>Fixed <code>/status</code> not showing the <code>apiKeyHelper</code> failure that its own error banner told you to check</li>\n<li>Fixed <code>/fast on</code> in non-interactive sessions reporting on and then turning off under an organization's managed fast mode policy; it now says the organization has disabled it</li>\n<li>Fixed the Artifact tool asking you to approve an update to an artifact that it then refused because the session had not read the latest version</li>\n<li>Fixed Cowork and claude.ai cloud sessions with network access on treating reads of a teammate's artifact as if network access were off</li>\n<li>Fixed a plugin or marketplace directory with no git repository of its own taking its version from an enclosing git repository, such as a git-managed <code>~/.claude</code></li>\n<li>Fixed <code>--strict-mcp-config</code> with an empty <code>--mcp-config</code> holding the first non-interactive turn for up to <code>MCP_TIMEOUT</code> on incidental MCP servers</li>\n<li>Fixed Stop prompt hooks re-sending their whole prompt on every block in a conversation; repeat blocks now name the condition with a 500-character label</li>\n<li>Fixed extra empty editor windows opening at startup on Linux under Wayland when running inside the Cursor or VS Code terminal</li>\n<li>Fixed an unhandled promise rejection in the Claude apps gateway when Postgres drops a connection during a spend check</li>\n<li>Fixed Claude apps gateway cutting every open stream on SIGTERM: it now lets in-flight requests finish for up to 25 seconds before exiting (<code>CLAUDE_GATEWAY_DRAIN_TIMEOUT_MS</code>)</li>\n<li>Fixed <code>installed_plugins.json</code> being rewritten on nearly every start-up when plugin policy comes from remote managed settings, which made Claude Desktop reload every open session's plugins</li>\n<li>Fixed headless and SDK sessions making a separate model call for every background task that finished; completions already queued are now answered by one call</li>\n<li>Fixed the Bash tool re-sourcing the shell profile (a multi-second stall on the next command) after every plugin reload; it now does so only when the plugins' <code>bin/</code> directories changed</li>\n<li>Fixed plugins with a top-level <code>$schema</code> in <code>hooks/hooks.json</code> showing an \"unknown key\" notice</li>\n<li>Fixed MCP connection errors and the MCP login tool's description showing secrets resolved from <code>${VAR}</code> placeholders in MCP configs</li>\n<li>Fixed Bash permission checks for commands that loop over or assign certain special shell variables; these commands now ask for permission</li>\n<li>Fixed worktree-isolated sessions accepting Bash commands with certain nested shell expansions; these are now refused</li>\n<li>Fixed the Edit permission prompt preview sometimes showing a different location than the approved edit in files with multi-byte characters</li>\n<li>Fixed background commands being stopped after 30 idle minutes on machines under mild memory pressure; they're now stopped only when memory is critically low, and the debug log says why</li>\n<li>Fixed a message a subagent sends to the main session disappearing from the Claude Desktop transcript after a relaunch</li>\n<li>Fixed a plugin loaded from a <code>.zip</code> being served from a stale extraction after several overlapping reloads</li>\n<li>Fixed a sub-agent's progress summary being replaced by a runaway multi-paragraph reply</li>\n<li>Improved startup in <code>--input-format stream-json</code> sessions: the first turn no longer waits up to 2s for still-connecting MCP servers whose tools tool search defers; they arrive on a later turn</li>\n<li>Improved Monitor tool notifications: a script's final output and its exit now arrive as one notification instead of two, saving a model turn</li>\n<li>Improved Artifact tool errors: when you are not signed in to claude.ai the terminal now says so on the first attempt, and Claude is told to stop retrying a rejected call sooner</li>\n<li>Improved artifact publishing: a publish built on an older version is stopped before it is sent, with the newer page to merge</li>\n<li>Improved safety checks before removing an agent worktree that contains submodule checkouts</li>\n<li>Improved <code>OTEL_LOG_RAW_API_BODIES=file:&lt;dir&gt;</code> output: a new <code>index.jsonl</code> and <code>request_body_id</code> / <code>message.id</code> event attributes link each response to its request file and transcript message</li>\n<li>Improved Claude apps gateway boot: it now tries the first Postgres connection up to three times before exiting, so a database that is reachable a few seconds late no longer fails the boot</li>\n<li>Improved the Claude apps gateway's spend-limit check under load: it now takes one database round trip instead of four, so fewer checks time out on a busy gateway</li>\n<li>Improved Claude apps gateway sign-in rate limit errors: <code>/login</code> now explains the refusal, and the gateway log says which limit was hit and which setting to change</li>\n<li>Changed Bedrock, Vertex, Foundry and telemetry-disabled installs to use the v2 MCP client and MCP 2026-07-28 negotiation with direct HTTP servers by default, as other installs already do (opt out: <code>MCP_SDK_GENERATION=v1</code> or <code>MCP_PROTOCOL_NEGOTIATION=legacy</code>)</li>\n<li>Changed <code>/code-review</code> to use leaner inline review prompts for every model that has no tuned settings of its own, instead of spawning many review subagents</li>\n<li>Changed <code>\"type\": \"sdk\"</code> MCP entries in <code>.mcp.json</code>, settings, plugins and agent files to be skipped with a warning: only an SDK host application can register in-process servers</li>\n<li>Changed artifact watching in local sessions: a new version published elsewhere no longer starts a turn; Claude learns of it from a later Artifact tool result</li>\n<li>Changed plugin and marketplace clones to leave Git LFS files as pointers instead of downloading them; <code>git lfs pull</code> in the checkout fetches them</li>\n<li>Changed self-hosted runners to skip a read-only repository the git host refuses at the access check instead of failing the session start</li>\n<li>Changed the <code>/status</code> GitHub line to read \"Cloud sessions\", and <code>/web-setup</code>, <code>/ultrareview</code>, and teleport messages to say \"cloud session\" instead of \"Claude Code on the web\"</li>\n<li>[VSCode] Added continuation of the step a window reload interrupted, labeled in the chat, with a Claude Code: Continue After Reload setting to turn it off</li>\n<li>[VSCode] Added Memory and Instructions entries to the Customize menu: Memory shows the auto-memory toggles, the saved memories and the memory folders, and Instructions edits the CLAUDE.md files</li>\n<li>[VSCode] Added a <code>claudeCode.lockEditorGroups</code> setting to stop Claude from locking the editor groups it opens in</li>\n<li>[VSCode] Fixed a <code>/btw</code> side question asked in a new conversation's first seconds occasionally showing another session's side-question history</li>\n<li>[VSCode] Fixed a brief freeze when the extension first looks up your global gitignore file</li>\n<li>[VSCode] Fixed a message sent while Claude was running a tool disappearing from the conversation after a window reload</li>\n<li>[VSCode] Fixed the Manage Plugins enable toggle and MCP servers dialog rows being unreachable from the keyboard</li>\n<li>[VSCode] Fixed sign-ins and sign-outs made in a terminal not showing until a reload after <code>CLAUDE_CONFIG_DIR</code> changed in the Environment Variables setting</li>\n<li>[VSCode] Fixed Edit diffs in the chat being cut off at the bottom at some panel widths and for long wrapped lines; diff boxes now fit the rows shown</li>\n<li>[VSCode] Fixed overlapping settings writes from the extension leaving <code>~/.claude/settings.json</code> unparseable or dropping a setting</li>\n<li>[VSCode] Fixed Open in New Tab (Ctrl/Cmd+Shift+Esc) sometimes leaving the new tab's message box unfocused, so typing went nowhere until you clicked it</li>\n<li>[VSCode] Fixed reopening a closed Claude tab splitting the editor layout when its locked group still holds another Claude tab and a file</li>\n<li>[VSCode] Fixed New session opening another locked editor group whenever a file tab shared the group with your Claude tab</li>\n<li>[VSCode] Fixed session names shifting sideways in the session picker while typing a search query</li>\n<li>[VSCode] Fixed the plan review card cutting off its Send feedback button and reason field when a plan has several comments; the comment list now scrolls</li>\n<li>[VSCode] Fixed inline code and code blocks in chat replies being unreadable under the High Contrast themes</li>\n<li>[VSCode] Improved screen reader navigation of the conversation: each message is announced as \"You\" or \"Claude\", with the tool name for tool steps</li>\n<li>[VSCode] Changed the default global gitignore file to <code>$XDG_CONFIG_HOME/git/ignore</code> when <code>XDG_CONFIG_HOME</code> is an absolute path</li>\n<li>[Claude Code on the web] Added a \"Compare against\" branch picker to a cloud session's diff view, so you can diff its changes against any branch instead of only the base branch</li>\n<li>[Claude Code on the web] Fixed git operations in cloud sessions failing with \"service unavailable\" when GitHub's token renewal briefly errors</li>\n<li>[Claude Code on the web] Fixed editing a routine occasionally making it fire twice or re-enabling a routine that had just been paused</li>\n<li>[Claude Code on the web] Fixed commits in cloud sessions occasionally failing with a signing error for a few minutes after the session's credentials refreshed</li>\n<li>[Claude Code on the web] Fixed the toast after saving a routine whose GitHub trigger couldn't be linked to show the reason, such as a per-repository trigger limit, instead of only \"edit to retry\"</li>\n<li>[Claude Code on the web] Fixed sessions sometimes flipping back to unread right after you mark them read</li>\n<li>[Claude Code on the web] Changed routines to skip a run and retry for up to 72 hours when the owner's GitHub connection is missing, instead of switching the routine off at the first failed check</li>\n<li>[Claude Code on the web] Changed a routine's on-hold notice: when your subscription is paused it now tells you to turn the routine back on yourself instead of promising an automatic resume</li>\n<li>[Claude Tag] Added a Guests setting to the Add channel and Add workspace forms in Claude Tag admin settings, so owners can pick Inherit, Allow, Channel only or Restrict up front</li>\n<li>[Claude Tag] Fixed Claude not answering when another Slack app or bot @mentions it; the tag now gets a reply and wakes Claude in a channel it had stopped following after days of inactivity</li>\n<li>[Claude Tag] Fixed Claude missing another app's message that tagged <a class=\"user-mention notranslate\" href=\"https://github.com/claude\">@claude</a> right after a new Slack channel was created; it's now delivered once Claude has joined</li>\n<li>[Claude Tag] Fixed Claude folding a follow-up sent minutes after its last Slack message into it as a silent edit; late updates such as blockers now post as a new reply that notifies</li>\n<li>[Claude Tag] Fixed Claude's Slack search failing with an error whenever it searched within a single channel; it now returns that channel's matching messages</li>\n<li>[Claude Tag] Fixed a safety-filter stop silently resetting a Slack thread's context when nobody was waiting; Claude now always says so and no longer cancels background work still running</li>\n<li>[Claude Tag] Fixed email addresses in Claude's Slack replies rendering with a visible <code>mailto:</code> prefix; they now show as the plain, clickable address</li>\n<li>[Claude Tag] Fixed Claude refusing to watch an Enterprise Grid channel shared with the whole organization when asked from another workspace in the grid</li>\n<li>[Claude Tag] Fixed the Environment picker in Claude Tag admin settings showing a raw environment ID instead of the environment's name for archived or app-created environments</li>\n<li>[Claude Tag] Improved Claude's live progress checklist in Slack: capped at 2,000 characters, reposted at most every 15 minutes in busy threads, with older \"Latest task list\" links updated</li>\n<li>[Claude Tag] Removed the repeated guest-attribution note Claude appended to a Slack canvas each time it edited one in a channel using the \"Channel only\" guest setting</li>\n<li>[Code Review] Fixed re-reviews occasionally leaving a fixed finding's thread open when the new review also filed a lower-severity note under it</li>\n<li>[Code Review] Fixed rare reviews ending with \"Code review encountered an error\" when GitHub or an internal service failed transiently at launch; they now wait and retry</li>\n<li>[Code Review] Improved how Code Review words each posted finding: short plain sentences that say who is affected, where the code goes wrong, and the fix up front</li>\n<li>[Code Review] Improved the check-run card and PR comment when a review is skipped because of an organization limit: each cause now links the admin page that fixes it</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: /mcp, local, disabled, pull, links.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Claude Code Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "/mcp",
+          "local",
+          "disabled",
+          "pull",
+          "links",
+          "/code",
+          "own",
+          "uri"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: /mcp, local, disabled, pull. Lead: Claude Code v2.1.274",
+        "alternative_titles": [
+          "Claude Code v2.1.271"
+        ],
+        "cluster_score": 15
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-09-17T14:53:32.130950Z",
     "defer_count": 1,
     "original_score": 85,
-    "original_reason": "New public tool provides actionable data on model freshness, directly useful for builders evaluating models."
+    "original_reason": "New Claude Code release with improved debugging, performance configuration, and observability features for developers."
+  },
+  {
+    "id": "05355e4f021a",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-09-17T14:53:26.751985Z",
+    "score": 90,
+    "reason": "Open-source autonomous coding agent released as SDK/CLI/IDE extension. Ships today for direct builder use.",
+    "proposed_post": "`cline/cline` is a new open-source autonomous coding agent, available as an SDK, IDE extension, or CLI. Builders can integrate it directly into their dev workflows or use it to create custom AI-powered tools.",
+    "source_angle": "GitHub Trending: New autonomous coding agent for dev workflows.",
+    "source_item": {
+      "title": "cline/cline — Autonomous coding agent as an SDK, IDE extension, or CLI assistant.",
+      "source": "GitHub Trending",
+      "link": "https://github.com/cline/cline",
+      "source_tier": 2,
+      "engagement_score": 381.0,
+      "local_newsworthiness_score": 55,
+      "summary": "Trending on GitHub today: +381 stars. Autonomous coding agent as an SDK, IDE extension, or CLI assistant.\n[Cluster context: 1 sources, engagement 381, common terms: assistant., +381, autonomous, sdk, stars..]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 381,
+        "common_terms": [
+          "assistant.",
+          "+381",
+          "autonomous",
+          "sdk",
+          "stars.",
+          "trending",
+          "extension",
+          "cli"
+        ],
+        "cluster_summary": "1 sources, engagement 381. Common terms: assistant., +381, autonomous, sdk. Lead: cline/cline — Autonomous coding agent as an SDK, IDE extension, or CLI assistant.",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-09-17T14:53:32.245630Z",
+    "defer_count": 1,
+    "original_score": 90,
+    "original_reason": "Open-source autonomous coding agent released as SDK/CLI/IDE extension. Ships today for direct builder use."
+  },
+  {
+    "id": "0515c06e3699",
+    "status": "approved",
+    "created_at": "2026-09-17T14:53:13.791087Z",
+    "score": 92,
+    "reason": "Open-source CLI + extension released, enabling AI agents to control real browsers without interruption. Directly actionable for agent builders.",
+    "proposed_post": "Tencent released BrowserSkill, a CLI + browser extension. This lets AI agents use your real, logged-in browser without interrupting your work, enabling more complex web automation for agent-based applications.",
+    "source_angle": "Open-source tool for AI agent browser automation",
+    "source_item": {
+      "title": "Tencent/BrowserSkill — Let AI agents use your real, logged-in browser without interrupting your work. CLI + extension for browser automation across any shell-capable AI agent.",
+      "source": "GitHub Trending",
+      "link": "https://github.com/Tencent/BrowserSkill",
+      "source_tier": 2,
+      "engagement_score": 1350.0,
+      "local_newsworthiness_score": 105,
+      "summary": "Trending on GitHub today: +1350 stars. Let AI agents use your real, logged-in browser without interrupting your work. CLI + extension for browser automation across any shell-capable AI agent.\n[Cluster context: 1 sources, engagement 1350, common terms: +1350, logged-in, interrupting, let, across.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 1350,
+        "common_terms": [
+          "+1350",
+          "logged-in",
+          "interrupting",
+          "let",
+          "across",
+          "shell-capable",
+          "trending",
+          "extension"
+        ],
+        "cluster_summary": "1 sources, engagement 1350. Common terms: +1350, logged-in, interrupting, let. Lead: Tencent/BrowserSkill — Let AI agents use your real, logged-in browser without interrupting your work. CLI + extension fo",
+        "alternative_titles": [],
+        "cluster_score": 55
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": true,
+    "claire_note": "Chloe, das hier ist interessant. BrowserSkill ist heute auf GitHub hochgegangen und löst ein echtes Problem: Wie lässt man AI-Agenten mit einem echten Browser interagieren, ohne die eigene Arbeit zu unterbrechen. Entwickler können damit ihre AI-Agenten auf Web-Workflows loslassen, die sonst manuelle Login-Sessions oder komplexe API-Integrationen erfordern würden. Das ist ein Game-Changer für Automatisierung und AI-gestützte Tests.",
+    "chloe_note": "Hey, *Tencent/BrowserSkill — Let AI agents use your real, logged-in browser without interrupting your work. CLI + extension for browser automation across any shell-capable AI agent.* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Open-source CLI + extension released, enabling AI agents to control real browsers without interruption. Directly actionable for agent builders.Cluster context: 1 sources, engagement 1350. Common terms: +1350, logged-in, interrupting, let. Score aktuell: 92. Link: https://github.com/Tencent/BrowserSkill"
   }
 ]
