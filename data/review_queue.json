@@ -12530,7 +12530,7 @@
   },
   {
     "id": "b0965fdc4944",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-09-16T18:05:54.916449Z",
     "score": 90,
     "reason": "Open-source framework Jev launched, providing builders with a new tool for AI model development. Passes Ships Test.",
@@ -12568,7 +12568,8 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": false,
-    "reactivated_at": "2026-09-16T18:05:54.916449Z"
+    "reactivated_at": "2026-09-16T18:05:54.916449Z",
+    "expired_at": "2026-09-18T20:45:28.500439Z"
   },
   {
     "id": "a4572446666b",
