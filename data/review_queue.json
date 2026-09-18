@@ -12939,5 +12939,49 @@
     "breaking": false,
     "claire_note": "Chloe, das hier ist interessant: 'anthropics/knowledge-work-plugins'.\n\nEin Open-Source-Repo von Plugins für Claude Cowork, speziell für Knowledge Worker. Das ist für Entwickler relevant, die ihren eigenen Claude-Workflow optimieren oder eigene Tools für diesen Stack bauen wollen. Direkt anwendbar, um die Produktivität mit Claude zu steigern oder als Basis für eigene Erweiterungen.",
     "chloe_note": "Das hier besteht den Ships Test. Entwickler können das Repo direkt herunterladen und die Plugins sofort in Claude Cowork nutzen oder als Ausgangspunkt für eigene Entwicklungen verwenden. Das ist direkt anwendbar und bietet konkreten Mehrwert."
+  },
+  {
+    "id": "8b793390dcc7",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-09-18T17:39:01.864448Z",
+    "score": 75,
+    "reason": "Launch HN indicates a live product for portable AI chat sessions. Addresses context management for multi-agent builders.",
+    "proposed_post": "Skillsync (YC W26) launches a platform to make AI chat sessions portable across agents. Builders can now maintain conversational context and history when switching between different AI models or agent systems, streamlining multi-agent app development.",
+    "source_angle": "Hacker News Launch HN: Skillsync for portable AI chat sessions",
+    "source_item": {
+      "title": "Launch HN: Skillsync (YC W26) – AI chat sessions made portable across agents",
+      "source": "HackerNews",
+      "link": "https://news.ycombinator.com/item?id=49743049",
+      "source_tier": 3,
+      "engagement_score": 87.5,
+      "local_newsworthiness_score": 0,
+      "summary": "61 points, 53 comments on Hacker News — submitted by cat-whisperer\n[Cluster context: 1 sources, engagement 87, common terms: w26, made, chat, skillsync, cat-whisperer.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 87,
+        "common_terms": [
+          "w26",
+          "made",
+          "chat",
+          "skillsync",
+          "cat-whisperer",
+          "sessions",
+          "comments",
+          "hacker"
+        ],
+        "cluster_summary": "1 sources, engagement 87. Common terms: w26, made, chat, skillsync. Lead: Launch HN: Skillsync (YC W26) – AI chat sessions made portable across agents",
+        "alternative_titles": [],
+        "cluster_score": 20
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-09-18T17:39:20.108556Z",
+    "defer_count": 1,
+    "original_score": 75,
+    "original_reason": "Launch HN indicates a live product for portable AI chat sessions. Addresses context management for multi-agent builders."
   }
 ]

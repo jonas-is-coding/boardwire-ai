@@ -6,6 +6,8 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-09-18T17:39:20.229679Z` [review] **Anthropic Python SDK v1.7.0** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-18T17:39:20.169741Z` [review] **Microsoft exec called AI scraping 'the largest theft of labor in human history'** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-18T14:23:08.176467Z` [review] **Show HN: Aclif – Agent CLI framework: one grammar, canonical names across SaaS** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-18T14:23:08.037492Z` [review] **tradesdontlie/tradingview-mcp — AI-assisted TradingView chart analysis — connect Claude Code to your TradingView Desktop for personal workflow automation** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-18T14:23:07.897799Z` [review] **langchain-typesafe==0.0.1a2** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'langchain-typesafe==0.0.1a2'
@@ -29,5 +31,3 @@ No pending review items.
 - `2026-09-15T18:05:52.323050Z` [review] **There's a 100% Chance AI Agents Are Ruining the Internet** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-15T14:54:03.175742Z` [review] **GitHub Copilot app for Beginners: Using the diff, terminal, and browser** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-15T14:54:03.044702Z` [review] **MG1937/ASC — ASC is a super FAST Android decompiler front-end designed for Agents/Mobile Researchers.** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-15T14:54:02.913368Z` [review] **Notes on gotchas while migrating 35kb preprompts from Opus to self-hosted Ollama** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-15T14:54:02.620562Z` [review] **Claude Code v2.1.272** — Version-only release without concrete capability: 'Claude Code v2.1.272'
