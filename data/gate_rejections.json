@@ -906,5 +906,36 @@
       "Post lacks a clear claim or insight",
       "Version-only release without concrete capability: 'vLLM v0.3.0'"
     ]
+  },
+  {
+    "rejected_at": "2026-09-18T14:23:07.897799Z",
+    "stage": "review",
+    "title": "langchain-typesafe==0.0.1a2",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-typesafe%3D%3D0.0.1a2",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight",
+      "Version-only release without concrete capability: 'langchain-typesafe==0.0.1a2'"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-18T14:23:08.037492Z",
+    "stage": "review",
+    "title": "tradesdontlie/tradingview-mcp — AI-assisted TradingView chart analysis — connect Claude Code to your TradingView Desktop for personal workflow automation",
+    "link": "https://github.com/tradesdontlie/tradingview-mcp",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-18T14:23:08.176467Z",
+    "stage": "review",
+    "title": "Show HN: Aclif – Agent CLI framework: one grammar, canonical names across SaaS",
+    "link": "https://www.aclif.ai/",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
   }
 ]

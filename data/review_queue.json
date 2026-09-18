@@ -12847,5 +12847,97 @@
     "breaking": true,
     "claire_note": "Chloe, das hier ist interessant. BrowserSkill ist heute auf GitHub hochgegangen und löst ein echtes Problem: Wie lässt man AI-Agenten mit einem echten Browser interagieren, ohne die eigene Arbeit zu unterbrechen. Entwickler können damit ihre AI-Agenten auf Web-Workflows loslassen, die sonst manuelle Login-Sessions oder komplexe API-Integrationen erfordern würden. Das ist ein Game-Changer für Automatisierung und AI-gestützte Tests.",
     "chloe_note": "Hey, *Tencent/BrowserSkill — Let AI agents use your real, logged-in browser without interrupting your work. CLI + extension for browser automation across any shell-capable AI agent.* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Open-source CLI + extension released, enabling AI agents to control real browsers without interruption. Directly actionable for agent builders.Cluster context: 1 sources, engagement 1350. Common terms: +1350, logged-in, interrupting, let. Score aktuell: 92. Link: https://github.com/Tencent/BrowserSkill"
+  },
+  {
+    "id": "d38d5ece3cde",
+    "status": "approved",
+    "created_at": "2026-09-18T14:22:55.153824Z",
+    "score": 90,
+    "reason": "Ollama v0.34.2 is a direct release with a critical memory fix for MLX speculative decoding and a llama.cpp update. Ships today.",
+    "proposed_post": "Ollama v0.34.2 fixes excessive memory growth during long generations with MLX speculative decoding & updates llama.cpp. Update for improved stability and reduced memory footprint in local LLM inference.",
+    "source_angle": "Ollama release fixes memory growth and updates core dependency.",
+    "source_item": {
+      "title": "Ollama v0.34.2",
+      "source": "Ollama Releases",
+      "link": "https://github.com/ollama/ollama/releases/tag/v0.34.2",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 35,
+      "summary": "<h2>What's Changed</h2>\n<ul>\n<li>Added first-run setup when running <code>ollama</code>, with options to sign in or continue locally. Setup completion is shared with the desktop app on macOS and Windows.</li>\n<li>Added <code>ollama://apps</code> to open the desktop app’s Apps page directly on macOS and Windows.</li>\n<li>Fixed excessive memory growth during long generations with MLX speculative decoding.</li>\n<li>Updated llama.cpp.</li>\n</ul>\n<p><strong>Full Changelog</strong>: <a class=\"commit-link\" href=\"https://github.com/ollama/ollama/compare/v0.34.1...v0.34.2\"><tt>v0.34.1...v0.34.2</tt></a></p>\n[Cluster context: 1 sources, engagement 0, common terms: ollama, mlx, href, class, what.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Ollama Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "ollama",
+          "mlx",
+          "href",
+          "class",
+          "what",
+          "when",
+          "shared",
+          "commit-link"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: ollama, mlx, href, class. Lead: Ollama v0.34.2",
+        "alternative_titles": [
+          "Ollama v0.34.2-rc3",
+          "Ollama v0.34.2-rc2",
+          "Ollama v0.34.2-rc0",
+          "Ollama v0.34.1",
+          "Ollama v0.34.1-rc1"
+        ],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Hey Chloe,\n\nOllama v0.34.2 ist ein kleiner, aber wichtiger Release für Developer, die schnell mit lokalen Modellen loslegen wollen. Das neue First-Run-Setup macht den Einstieg nochmal smoother, besonders für Leute, die nicht tief in der CLI stecken. Die 'ollama://apps' URL ist auch nett für eine schnellere Desktop-App-Integration.\n\nDas senkt die Einstiegshürde und könnte mehr Leute dazu bringen, mit lokalen LLMs zu experimentieren.",
+    "chloe_note": "Dieser Release-Hinweis besteht den Ships Test. Es gibt eine neue Version zum Herunterladen und Deployen, inklusive spezifischer Fixes und Verbesserungen, die direkt nutzbar sind. Die Erwähnung des First-Run-Setups und der 'ollama://apps' URL unterstreicht den praktischen Nutzen."
+  },
+  {
+    "id": "29c3202cca1c",
+    "status": "approved",
+    "created_at": "2026-09-18T14:23:01.264373Z",
+    "score": 85,
+    "reason": "Open-source plugin repository for Claude Cowork. Code is available to download and use today.",
+    "proposed_post": "Anthropic released `anthropics/knowledge-work-plugins`, an open-source repository of plugins for Claude Cowork. Builders can now inspect, adapt, or contribute to official Claude plugin examples, accelerating custom tool development.",
+    "source_angle": "Anthropic's open-source Claude Cowork plugins hit GitHub Trending.",
+    "source_item": {
+      "title": "anthropics/knowledge-work-plugins — Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+      "source": "GitHub Trending",
+      "link": "https://github.com/anthropics/knowledge-work-plugins",
+      "source_tier": 2,
+      "engagement_score": 300.0,
+      "local_newsworthiness_score": 50,
+      "summary": "Trending on GitHub today: +300 stars. Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork\n[Cluster context: 1 sources, engagement 300, common terms: workers, github, stars., primarily, +300.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 300,
+        "common_terms": [
+          "workers",
+          "github",
+          "stars.",
+          "primarily",
+          "+300",
+          "repository",
+          "claude",
+          "anthropics/knowledge-work-plugins"
+        ],
+        "cluster_summary": "1 sources, engagement 300. Common terms: workers, github, stars., primarily. Lead: anthropics/knowledge-work-plugins — Open source repository of plugins primarily intended for knowledge workers to use in",
+        "alternative_titles": [],
+        "cluster_score": 25
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, das hier ist interessant: 'anthropics/knowledge-work-plugins'.\n\nEin Open-Source-Repo von Plugins für Claude Cowork, speziell für Knowledge Worker. Das ist für Entwickler relevant, die ihren eigenen Claude-Workflow optimieren oder eigene Tools für diesen Stack bauen wollen. Direkt anwendbar, um die Produktivität mit Claude zu steigern oder als Basis für eigene Erweiterungen.",
+    "chloe_note": "Das hier besteht den Ships Test. Entwickler können das Repo direkt herunterladen und die Plugins sofort in Claude Cowork nutzen oder als Ausgangspunkt für eigene Entwicklungen verwenden. Das ist direkt anwendbar und bietet konkreten Mehrwert."
   }
 ]

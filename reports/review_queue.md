@@ -6,6 +6,9 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-09-18T14:23:08.176467Z` [review] **Show HN: Aclif – Agent CLI framework: one grammar, canonical names across SaaS** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-18T14:23:08.037492Z` [review] **tradesdontlie/tradingview-mcp — AI-assisted TradingView chart analysis — connect Claude Code to your TradingView Desktop for personal workflow automation** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-18T14:23:07.897799Z` [review] **langchain-typesafe==0.0.1a2** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'langchain-typesafe==0.0.1a2'
 - `2026-09-17T18:05:54.073756Z` [review] **vLLM v0.3.0** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.3.0'
 - `2026-09-17T18:05:53.936915Z` [review] **coder/coder — Secure environments for developers and their agents** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-17T18:05:53.800257Z` [review] **Our framework for reporting model misalignment** — Post is empty; Post lacks a clear claim or insight
@@ -28,6 +31,3 @@ No pending review items.
 - `2026-09-15T14:54:03.044702Z` [review] **MG1937/ASC — ASC is a super FAST Android decompiler front-end designed for Agents/Mobile Researchers.** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-15T14:54:02.913368Z` [review] **Notes on gotchas while migrating 35kb preprompts from Opus to self-hosted Ollama** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-15T14:54:02.620562Z` [review] **Claude Code v2.1.272** — Version-only release without concrete capability: 'Claude Code v2.1.272'
-- `2026-09-14T19:12:13.908297Z` [review] **vLLM v0.29.1rc0** — Version-only release without concrete capability: 'vLLM v0.29.1rc0'
-- `2026-09-14T19:12:13.749148Z` [review] **Ollama v0.34.1-rc0** — Version-only release without concrete capability: 'Ollama v0.34.1-rc0'
-- `2026-09-14T16:20:20.368872Z` [review] **rlaope/oh-my-hermes — All in one plugin for Hermes Agent ⚚ the coding intelligence, a long-term memory system and model optimized workflow packages** — Post is empty; Post lacks a clear claim or insight
