@@ -12396,7 +12396,7 @@
   },
   {
     "id": "f56b7cac6d56",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-09-16T14:50:51.131186Z",
     "score": 90,
     "reason": "Open-source, self-hostable ChatGPT alternative with multi-model support, agents, and Code Interpreter. Ships today.",
@@ -12434,7 +12434,8 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": false,
-    "reactivated_at": "2026-09-16T14:50:51.131186Z"
+    "reactivated_at": "2026-09-16T14:50:51.131186Z",
+    "expired_at": "2026-09-18T17:49:26.485265Z"
   },
   {
     "id": "1be2c62d24c9",
@@ -12633,7 +12634,7 @@
   },
   {
     "id": "ff4a3be4075d",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-09-16T14:50:46.075950Z",
     "score": 92,
     "reason": "Open-source tool launch (GitHub repo) for RAG/agents/wikis from documents. Ships today, high builder relevance.",
@@ -12672,7 +12673,8 @@
     "is_llm_mode": true,
     "breaking": true,
     "claire_note": "Chloe, das Tencent/WeKnora Projekt auf GitHub ist interessant. Es bietet eine All-in-One-Lösung, um RAGs, Reasoning Agents und Wikis aus Rohdokumenten zu bauen. Entwickler können hiermit schnell eigene Wissensplattformen aufsetzen und direkt mit ihren Daten arbeiten.",
-    "chloe_note": "*Tencent/WeKnora — Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Open-source tool launch (GitHub repo) for RAG/agents/wikis from documents. Ships today, high builder relevance.Cluster context: 1 sources, engagement 696. Common terms: rag, github, tencent/weknora, documents. Bewertung: 92. Quelle: https://github.com/Tencent/WeKnora"
+    "chloe_note": "*Tencent/WeKnora — Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Open-source tool launch (GitHub repo) for RAG/agents/wikis from documents. Ships today, high builder relevance.Cluster context: 1 sources, engagement 696. Common terms: rag, github, tencent/weknora, documents. Bewertung: 92. Quelle: https://github.com/Tencent/WeKnora",
+    "expired_at": "2026-09-18T17:49:26.485265Z"
   },
   {
     "id": "c4385c55a510",
