@@ -957,5 +957,27 @@
       "Post is empty",
       "Post lacks a clear claim or insight"
     ]
+  },
+  {
+    "rejected_at": "2026-09-20T21:03:20.534996Z",
+    "stage": "review",
+    "title": "vLLM v0.30.0rc2",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.30.0rc2",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight",
+      "Version-only release without concrete capability: 'vLLM v0.30.0rc2'"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-20T21:03:20.677574Z",
+    "stage": "review",
+    "title": "langchain-typesafe==0.0.1a3",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-typesafe%3D%3D0.0.1a3",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight",
+      "Version-only release without concrete capability: 'langchain-typesafe==0.0.1a3'"
+    ]
   }
 ]

@@ -6,6 +6,8 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-09-20T21:03:20.677574Z` [review] **langchain-typesafe==0.0.1a3** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'langchain-typesafe==0.0.1a3'
+- `2026-09-20T21:03:20.534996Z` [review] **vLLM v0.30.0rc2** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.30.0rc2'
 - `2026-09-18T17:39:20.229679Z` [review] **Anthropic Python SDK v1.7.0** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-18T17:39:20.169741Z` [review] **Microsoft exec called AI scraping 'the largest theft of labor in human history'** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-18T14:23:08.176467Z` [review] **Show HN: Aclif – Agent CLI framework: one grammar, canonical names across SaaS** — Post is empty; Post lacks a clear claim or insight
@@ -29,5 +31,3 @@ No pending review items.
 - `2026-09-15T18:05:52.508722Z` [review] **GPT-5.6 Luna vs. GPT-6 Astra: Is a $1.20 Model Good Enough for Code Review?** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-15T18:05:52.416792Z` [review] **Anthropic Python SDK v1.6.0** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-15T18:05:52.323050Z` [review] **There's a 100% Chance AI Agents Are Ruining the Internet** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-15T14:54:03.175742Z` [review] **GitHub Copilot app for Beginners: Using the diff, terminal, and browser** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-15T14:54:03.044702Z` [review] **MG1937/ASC — ASC is a super FAST Android decompiler front-end designed for Agents/Mobile Researchers.** — Post is empty; Post lacks a clear claim or insight

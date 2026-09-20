@@ -12950,12 +12950,12 @@
   },
   {
     "id": "8b793390dcc7",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-09-18T17:39:01.864448Z",
-    "score": 75,
-    "reason": "Launch HN indicates a live product for portable AI chat sessions. Addresses context management for multi-agent builders.",
-    "proposed_post": "Skillsync (YC W26) launches a platform to make AI chat sessions portable across agents. Builders can now maintain conversational context and history when switching between different AI models or agent systems, streamlining multi-agent app development.",
-    "source_angle": "Hacker News Launch HN: Skillsync for portable AI chat sessions",
+    "status": "approved",
+    "created_at": "2026-09-20T21:03:18.826868Z",
+    "score": 85,
+    "reason": "Skillsync launched a live product for portable AI chat sessions, addressing a key pain point for multi-agent context management.",
+    "proposed_post": "Skillsync launched a tool for portable AI chat sessions, enabling context management across multiple agents. Builders can now maintain conversational state more easily when switching between AI agents.",
+    "source_angle": "HackerNews Launch HN: Portable AI chat sessions for multi-agent context.",
     "source_item": {
       "title": "Launch HN: Skillsync (YC W26) – AI chat sessions made portable across agents",
       "source": "HackerNews",
@@ -12987,9 +12987,149 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-09-18T17:39:20.108556Z",
+    "breaking": false,
+    "reactivated_at": "2026-09-20T21:03:18.826868Z"
+  },
+  {
+    "id": "e3e51b66ab34",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-09-20T21:03:07.825633Z",
+    "score": 90,
+    "reason": "New open-source GPU orchestration framework for large models. Ships today, direct utility for builders.",
+    "proposed_post": "higgsfield-ai/higgsfield, a new open-source GPU orchestration and ML framework, is available. It enables fault-tolerant, scalable training for models with billions to trillions of parameters, offering a tool for managing large-scale distributed AI infrastructure.",
+    "source_angle": "GitHub Trending: New open-source GPU orchestration for large models.",
+    "source_item": {
+      "title": "higgsfield-ai/higgsfield — Fault-tolerant, highly scalable GPU orchestration, and a machine learning framework designed for training models with billions to trillions of parameters",
+      "source": "GitHub Trending",
+      "link": "https://github.com/higgsfield-ai/higgsfield",
+      "source_tier": 2,
+      "engagement_score": 461.0,
+      "local_newsworthiness_score": 0,
+      "summary": "Trending on GitHub today: +461 stars. Fault-tolerant, highly scalable GPU orchestration, and a machine learning framework designed for training models with billions to trillions of parameters\n[Cluster context: 1 sources, engagement 461, common terms: scalable, fault-tolerant, parameters, designed, +461.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 461,
+        "common_terms": [
+          "scalable",
+          "fault-tolerant",
+          "parameters",
+          "designed",
+          "+461",
+          "stars.",
+          "learning",
+          "gpu"
+        ],
+        "cluster_summary": "1 sources, engagement 461. Common terms: scalable, fault-tolerant, parameters, designed. Lead: higgsfield-ai/higgsfield — Fault-tolerant, highly scalable GPU orchestration, and a machine learning framework designed ",
+        "alternative_titles": [],
+        "cluster_score": 25
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-09-20T21:03:20.240114Z",
     "defer_count": 1,
-    "original_score": 75,
-    "original_reason": "Launch HN indicates a live product for portable AI chat sessions. Addresses context management for multi-agent builders."
+    "original_score": 90,
+    "original_reason": "New open-source GPU orchestration framework for large models. Ships today, direct utility for builders."
+  },
+  {
+    "id": "8d2ddcce5bb5",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-09-20T21:03:15.029838Z",
+    "score": 90,
+    "reason": "New Ollama release adds concrete API feature for model control. Ships today, direct builder utility.",
+    "proposed_post": "Ollama v0.34.3 adds `thinking` controls to `/api/show`, exposing model processing settings (e.g., \"low\", \"high\", \"max\"). Builders can now programmatically inspect and configure local LLM behavior for more granular inference control.",
+    "source_angle": "Ollama API now exposes model thinking controls.",
+    "source_item": {
+      "title": "Ollama v0.34.3",
+      "source": "Ollama Releases",
+      "link": "https://github.com/ollama/ollama/releases/tag/v0.34.3-rc1",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 35,
+      "summary": "<h2>What's Changed</h2>\n<p><code>GET /api/show</code> now advertises each model's thinking controls and default:</p>\n<div class=\"highlight highlight-source-shell notranslate position-relative overflow-auto\"><pre>curl http://localhost:11434/api/show -d <span class=\"pl-s\"><span class=\"pl-pds\">'</span>{\"model\": \"glm-5.3-flash:cloud\"}<span class=\"pl-pds\">'</span></span></pre></div>\n<div class=\"highlight highlight-source-json notranslate position-relative overflow-auto\"><pre>{\n  <span class=\"pl-ent\">\"thinking\"</span>: {\n    <span class=\"pl-ent\">\"values\"</span>: [<span class=\"pl-s\"><span class=\"pl-pds\">\"</span>low<span class=\"pl-pds\">\"</span></span>, <span class=\"pl-s\"><span class=\"pl-pds\">\"</span>high<span class=\"pl-pds\">\"</span></span>, <span class=\"pl-s\"><span class=\"pl-pds\">\"</span>max<span class=\"pl-pds\">\"</span></span>],\n    <span class=\"pl-ent\">\"default\"</span>: <span class=\"pl-s\"><span class=\"pl-pds\">\"</span>max<span class=\"pl-pds\">\"</span></span>\n  }\n}</pre></div>\n<ul>\n<li><strong>Nemotron H</strong> vision models are now supported on Apple Silicon with MLX</li>\n<li>Ollama's macOS app will now no longer reopen windows you've closed when activating it</li>\n<li>Fix for model pulls from HuggingFace</li>\n</ul>\n<p><strong>Full Changelog</strong>: <a class=\"commit-link\" href=\"https://github.com/ollama/ollama/compare/v0.34.2...v0.34.3-rc0\"><tt>v0.34.2...v0.34.3-rc0</tt></a></p>\n[Cluster context: 1 sources, engagement 0, common terms: ollama, href, class, mlx, what.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Ollama Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "ollama",
+          "href",
+          "class",
+          "mlx",
+          "what",
+          "when",
+          "now",
+          "issue-link"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: ollama, href, class, mlx. Lead: Ollama v0.34.3",
+        "alternative_titles": [
+          "Ollama v0.34.3-rc0",
+          "Ollama v0.34.2-rc3",
+          "Ollama v0.34.2-rc2",
+          "Ollama v0.34.2-rc0",
+          "Ollama v0.34.1",
+          "Ollama v0.34.1-rc1"
+        ],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-09-20T21:03:20.396187Z",
+    "defer_count": 1,
+    "original_score": 90,
+    "original_reason": "New Ollama release adds concrete API feature for model control. Ships today, direct builder utility."
+  },
+  {
+    "id": "f551fd45669f",
+    "status": "approved",
+    "created_at": "2026-09-20T21:02:59.372637Z",
+    "score": 95,
+    "reason": "Direct cost reduction for Claude API users via server-side auto mode classifier. Ships today.",
+    "proposed_post": "Claude Code v2.1.278 defaults auto mode to server-side, eliminating classifier overhead charges for API/Enterprise/Bedrock/Vertex/Foundry users. Builders can expect reduced Claude API costs for applications leveraging auto mode.",
+    "source_angle": "Claude Code release: auto mode classifier billing change",
+    "source_item": {
+      "title": "Claude Code v2.1.278",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.278",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 35,
+      "summary": "<h2>What's changed</h2>\n<ul>\n<li>Changed auto mode for Claude API and Enterprise users, and on Bedrock, Vertex, Foundry and gateways, to default to the server-side classifier, which does not charge for classifier overhead (<code>CLAUDE_CODE_AUTO_MODE_SERVER=0</code> opts out on Bedrock, Vertex, Foundry and gateways); warns on billed fallback. See <a href=\"https://code.claude.com/docs/en/auto-mode-classifier-billing\" rel=\"nofollow\">https://code.claude.com/docs/en/auto-mode-classifier-billing</a></li>\n<li>Added an <code>Auto mode server</code> row to <code>/status</code> showing whether this session's auto mode classifier runs on the server</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: default, /ul, enterprise, what, row.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Claude Code Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "default",
+          "/ul",
+          "enterprise",
+          "what",
+          "row",
+          "out",
+          "gateways",
+          "which"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: default, /ul, enterprise, what. Lead: Claude Code v2.1.278",
+        "alternative_titles": [
+          "Claude Code v2.1.277",
+          "Claude Code v2.1.275",
+          "Claude Code v2.1.271"
+        ],
+        "cluster_score": 15
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, das hier ist interessant für jeden, der Claude in seine Apps integriert.\n\nDer Auto-Modus für die API und Enterprise-Nutzer wechselt standardmäßig auf den Server-Side Classifier. Das bedeutet: keine Kosten mehr für den Classifier-Overhead. Entwickler können jetzt Modelle effizienter nutzen, ohne sich Gedanken über versteckte Kosten zu machen. Das ist ein direkter Win für die Kostenkontrolle bei der Nutzung von Claude-APIs.",
+    "chloe_note": "Dieser Fund besteht den Ships Test. Die direkte Kostenreduktion durch den Server-Side Classifier ist ein klares, nutzbares Update für Entwickler, die Claude-APIs einsetzen. Es gibt etwas Konkretes zum Deployen, das sofortige Auswirkungen auf die Kosten hat."
   }
 ]
