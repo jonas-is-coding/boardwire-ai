@@ -1,10 +1,10 @@
 # Boardwire Engagement Report
 
-Generated: `2026-09-19T08:22:26.128201Z`
+Generated: `2026-09-20T08:54:16.401788Z`
 
 ## Account
 
-- @boardwire.bsky.social: **30** followers (1d: +2, 7d: +3) · following 109 · posts 77 · snapshots 16 · as of `2026-09-19T08:22:16.547317Z`
+- @boardwire.bsky.social: **30** followers (1d: +0, 7d: +3) · following 109 · posts 77 · snapshots 17 · as of `2026-09-20T08:54:03.715026Z`
 
 ## Summary
 
@@ -243,7 +243,7 @@ Generated: `2026-09-19T08:22:26.128201Z`
    > Z-AI ships GLM-5.3 as open-weight model. Open weights on HuggingFace with dual context windows: 128K default, 1M optional. +574 HN engagemen…
 
 30. **2 pts** — cloudflare/security-audit-skill — A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings
-   likes 1 · reposts 0 · replies 1 · quotes 0 · age 62h · score 95
+   likes 1 · reposts 0 · replies 1 · quotes 0 · age 86h · score 95
    https://github.com/cloudflare/security-audit-skill
    > Cloudflare security-audit-skill lets agents run multi‑phase audits. cloudflare/security-audit-skill ★+1434, outputs verified, machine‑readab…
 
@@ -1063,7 +1063,7 @@ Generated: `2026-09-19T08:22:26.128201Z`
    > Atlas turns agents into a first-class primitive with source control. pacifio/atlas manages multiple coding agents, tracks changes, and unifi…
 
 194. **0 pts** — Claude Code v2.1.266
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 207h · score 85
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 231h · score 85
    https://github.com/anthropics/claude-code/releases/tag/v2.1.266
    > Proxy reliability improves with Claude Code 2.1.266 fix. Claude Code 2.1.266 stops forced gateway sign‑in when CLAUDE_CODE_USE_GATEWAY lacks…
 
