@@ -12679,7 +12679,7 @@
   },
   {
     "id": "c4385c55a510",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-09-17T14:53:31.672775Z",
     "score": 85,
     "reason": "New public tool provides actionable data on model freshness and training cutoffs, directly useful for model evaluation and selection.",
@@ -12717,7 +12717,8 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": false,
-    "reactivated_at": "2026-09-17T14:53:31.672775Z"
+    "reactivated_at": "2026-09-17T14:53:31.672775Z",
+    "expired_at": "2026-09-20T20:43:40.948880Z"
   },
   {
     "id": "d74e44f5ac86",
@@ -12768,7 +12769,7 @@
   },
   {
     "id": "05355e4f021a",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-09-17T18:05:53.217240Z",
     "score": 90,
     "reason": "Open-source autonomous coding agent released as SDK/CLI/IDE extension. Ships today for direct builder use.",
@@ -12806,11 +12807,12 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": false,
-    "reactivated_at": "2026-09-17T18:05:53.217240Z"
+    "reactivated_at": "2026-09-17T18:05:53.217240Z",
+    "expired_at": "2026-09-20T20:43:40.948880Z"
   },
   {
     "id": "0515c06e3699",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-09-17T14:53:13.791087Z",
     "score": 92,
     "reason": "Open-source CLI + extension released, enabling AI agents to control real browsers without interruption. Directly actionable for agent builders.",
@@ -12849,11 +12851,12 @@
     "is_llm_mode": true,
     "breaking": true,
     "claire_note": "Chloe, das hier ist interessant. BrowserSkill ist heute auf GitHub hochgegangen und löst ein echtes Problem: Wie lässt man AI-Agenten mit einem echten Browser interagieren, ohne die eigene Arbeit zu unterbrechen. Entwickler können damit ihre AI-Agenten auf Web-Workflows loslassen, die sonst manuelle Login-Sessions oder komplexe API-Integrationen erfordern würden. Das ist ein Game-Changer für Automatisierung und AI-gestützte Tests.",
-    "chloe_note": "Hey, *Tencent/BrowserSkill — Let AI agents use your real, logged-in browser without interrupting your work. CLI + extension for browser automation across any shell-capable AI agent.* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Open-source CLI + extension released, enabling AI agents to control real browsers without interruption. Directly actionable for agent builders.Cluster context: 1 sources, engagement 1350. Common terms: +1350, logged-in, interrupting, let. Score aktuell: 92. Link: https://github.com/Tencent/BrowserSkill"
+    "chloe_note": "Hey, *Tencent/BrowserSkill — Let AI agents use your real, logged-in browser without interrupting your work. CLI + extension for browser automation across any shell-capable AI agent.* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Open-source CLI + extension released, enabling AI agents to control real browsers without interruption. Directly actionable for agent builders.Cluster context: 1 sources, engagement 1350. Common terms: +1350, logged-in, interrupting, let. Score aktuell: 92. Link: https://github.com/Tencent/BrowserSkill",
+    "expired_at": "2026-09-20T20:43:40.948880Z"
   },
   {
     "id": "d38d5ece3cde",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-09-18T14:22:55.153824Z",
     "score": 90,
     "reason": "Ollama v0.34.2 is a direct release with a critical memory fix for MLX speculative decoding and a llama.cpp update. Ships today.",
@@ -12898,11 +12901,12 @@
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Hey Chloe,\n\nOllama v0.34.2 ist ein kleiner, aber wichtiger Release für Developer, die schnell mit lokalen Modellen loslegen wollen. Das neue First-Run-Setup macht den Einstieg nochmal smoother, besonders für Leute, die nicht tief in der CLI stecken. Die 'ollama://apps' URL ist auch nett für eine schnellere Desktop-App-Integration.\n\nDas senkt die Einstiegshürde und könnte mehr Leute dazu bringen, mit lokalen LLMs zu experimentieren.",
-    "chloe_note": "Dieser Release-Hinweis besteht den Ships Test. Es gibt eine neue Version zum Herunterladen und Deployen, inklusive spezifischer Fixes und Verbesserungen, die direkt nutzbar sind. Die Erwähnung des First-Run-Setups und der 'ollama://apps' URL unterstreicht den praktischen Nutzen."
+    "chloe_note": "Dieser Release-Hinweis besteht den Ships Test. Es gibt eine neue Version zum Herunterladen und Deployen, inklusive spezifischer Fixes und Verbesserungen, die direkt nutzbar sind. Die Erwähnung des First-Run-Setups und der 'ollama://apps' URL unterstreicht den praktischen Nutzen.",
+    "expired_at": "2026-09-20T20:43:40.948880Z"
   },
   {
     "id": "29c3202cca1c",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-09-18T14:23:01.264373Z",
     "score": 85,
     "reason": "Open-source plugin repository for Claude Cowork. Code is available to download and use today.",
@@ -12941,7 +12945,8 @@
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das hier ist interessant: 'anthropics/knowledge-work-plugins'.\n\nEin Open-Source-Repo von Plugins für Claude Cowork, speziell für Knowledge Worker. Das ist für Entwickler relevant, die ihren eigenen Claude-Workflow optimieren oder eigene Tools für diesen Stack bauen wollen. Direkt anwendbar, um die Produktivität mit Claude zu steigern oder als Basis für eigene Erweiterungen.",
-    "chloe_note": "Das hier besteht den Ships Test. Entwickler können das Repo direkt herunterladen und die Plugins sofort in Claude Cowork nutzen oder als Ausgangspunkt für eigene Entwicklungen verwenden. Das ist direkt anwendbar und bietet konkreten Mehrwert."
+    "chloe_note": "Das hier besteht den Ships Test. Entwickler können das Repo direkt herunterladen und die Plugins sofort in Claude Cowork nutzen oder als Ausgangspunkt für eigene Entwicklungen verwenden. Das ist direkt anwendbar und bietet konkreten Mehrwert.",
+    "expired_at": "2026-09-20T20:43:40.948880Z"
   },
   {
     "id": "8b793390dcc7",
