@@ -1009,5 +1009,34 @@
       "Post is empty",
       "Post lacks a clear claim or insight"
     ]
+  },
+  {
+    "rejected_at": "2026-09-21T19:14:26.248654Z",
+    "stage": "review",
+    "title": "vLLM v0.30.0",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.30.0",
+    "reasons": [
+      "Version-only release without concrete capability: 'vLLM v0.30.0'"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-21T19:14:26.393220Z",
+    "stage": "review",
+    "title": "Llama Index v0.14.25",
+    "link": "https://github.com/run-llama/llama_index/releases/tag/v0.14.25",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-21T19:14:26.531384Z",
+    "stage": "review",
+    "title": "Pirate Face Rescues LLM Models from Deletion",
+    "link": "https://pirateface.co/",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
   }
 ]

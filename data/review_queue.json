@@ -13034,12 +13034,12 @@
   },
   {
     "id": "8d2ddcce5bb5",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-09-20T21:03:15.029838Z",
+    "status": "approved",
+    "created_at": "2026-09-21T19:14:25.793206Z",
     "score": 90,
-    "reason": "New Ollama release adds concrete API feature for model control. Ships today, direct builder utility.",
-    "proposed_post": "Ollama v0.34.3 adds `thinking` controls to `/api/show`, exposing model processing settings (e.g., \"low\", \"high\", \"max\"). Builders can now programmatically inspect and configure local LLM behavior for more granular inference control.",
-    "source_angle": "Ollama API now exposes model thinking controls.",
+    "reason": "New Ollama release with concrete API features for model control. Direct utility for local LLM development.",
+    "proposed_post": "Ollama v0.34.3 ships with new API features for model control. Builders can now programmatically manage local models, streamlining development and deployment workflows for local LLM applications.",
+    "source_angle": "Ollama release, API features for local model control",
     "source_item": {
       "title": "Ollama v0.34.3",
       "source": "Ollama Releases",
@@ -13078,10 +13078,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-09-20T21:03:20.396187Z",
-    "defer_count": 1,
-    "original_score": 90,
-    "original_reason": "New Ollama release adds concrete API feature for model control. Ships today, direct builder utility."
+    "breaking": false,
+    "reactivated_at": "2026-09-21T19:14:25.793206Z"
   },
   {
     "id": "f551fd45669f",
@@ -13129,5 +13127,100 @@
     "breaking": false,
     "claire_note": "Chloe, das hier ist interessant für jeden, der Claude in seine Apps integriert.\n\nDer Auto-Modus für die API und Enterprise-Nutzer wechselt standardmäßig auf den Server-Side Classifier. Das bedeutet: keine Kosten mehr für den Classifier-Overhead. Entwickler können jetzt Modelle effizienter nutzen, ohne sich Gedanken über versteckte Kosten zu machen. Das ist ein direkter Win für die Kostenkontrolle bei der Nutzung von Claude-APIs.",
     "chloe_note": "Dieser Fund besteht den Ships Test. Die direkte Kostenreduktion durch den Server-Side Classifier ist ein klares, nutzbares Update für Entwickler, die Claude-APIs einsetzen. Es gibt etwas Konkretes zum Deployen, das sofortige Auswirkungen auf die Kosten hat."
+  },
+  {
+    "id": "6385ea2ad5cf",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-09-21T19:14:07.062723Z",
+    "score": 90,
+    "reason": "New Claude Code version with direct feature additions for agent configuration and network deployment.",
+    "proposed_post": "Claude Code v2.1.277 adds AGENTS.md support, allowing builders to define project instructions via AGENTS.md instead of CLAUDE.md. This offers more flexibility for structuring agent configurations.",
+    "source_angle": "New configuration options for Claude Code agents.",
+    "source_item": {
+      "title": "Claude Code v2.1.277",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.277",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 25,
+      "summary": "<h2>What's changed</h2>\n<ul>\n<li>Added AGENTS.md support: in a project with no CLAUDE.md, Claude Code reads AGENTS.md instead; change it under \"Project instructions\" in <code>/config</code> (not yet on Bedrock, Vertex or Foundry)</li>\n<li>Added <code>CLAUDE_GATEWAY_PROXY_IS_EGRESS_BOUNDARY=1</code> for Claude apps gateways whose only egress is a forward proxy: every outbound request hands the proxy the hostname instead of resolving it locally</li>\n<li>Added an optional <code>headers:</code> map on Claude apps gateway upstreams, to send static headers to a proxy you run in front of a provider</li>\n<li>Added a line saying a background task's update is waiting when it finishes while a panel such as <code>/tasks</code> is open</li>\n<li>Fixed <code>claude -p</code> and Agent SDK sessions that could hang with no result after an internal error; they now report the error and exit with code 1</li>\n<li>Fixed conversations failing every request with \"text content blocks must be non-empty\" when an earlier assistant turn held an empty text block beside other content, including after <code>--resume</code></li>\n<li>Fixed being unexpectedly logged out when an older Claude Code build (for example an IDE extension's bundled CLI) runs on the same machine as the current one</li>\n<li>Fixed interactive start-up hanging or showing an error for <code>ANTHROPIC_API_KEY</code> users when <code>~/.claude.json</code> holds a malformed <code>customApiKeyResponses</code> value</li>\n<li>Fixed update checks erroring every 30 minutes, and <code>claude update</code> hanging when a minimum or maximum version is set, if a proxy returns an invalid version; a malformed <code>minimumVersion</code> is now ignored</li>\n<li>Fixed <code>claude update</code> on winget- or apk-managed installs reporting \"up to date\" when the version lookup failed</li>\n<li>Fixed <code>claude plugin install</code> sometimes failing and breaking the installed copy when reinstalling a plugin version that a session or another program was using; an unchanged copy is now left alone</li>\n<li>Fixed Grep and Glob reporting no matches when the search could not start because the system was out of processes, memory or file handles; they now return an error saying so</li>\n<li>Fixed the Write tool silently ending the turn as a declined permission when the target path is an existing directory; it now reports a clear error</li>\n<li>Fixed the Edit tool treating an escaped backslash followed by <code>uXXXX</code> text as a <code>\\uXXXX</code> escape, which could make an edit of a non-ASCII character rewrite an escaped backslash sequence instead</li>\n<li>Fixed the Edit tool reporting \"Invalid regular expression: regular expression too large\" instead of \"String not found in file\" when a very large edit containing non-ASCII text did not match the file</li>\n<li>Fixed a turn ending early with \"Path contains null bytes\" when a tool call's file path contained <code>\\u0000</code> written as an escape sequence; escaped control characters now stay as literal text</li>\n<li>Fixed background sessions (<code>claude --bg</code>) exiting when a plugin's LSP server exited or closed its stdin</li>\n<li>Fixed a crash (\"Type error\") when opening <code>/mcp</code> or <code>/plugin manage</code> with a malformed <code>claudeAiMcpEverConnected</code> value in <code>~/.claude.json</code></li>\n<li>Fixed a crash at launch when <code>~/.claude.json</code> holds a malformed <code>theme</code> value</li>\n<li>Fixed a crash (\"unrecoverable interface error\") when the prompt held text containing terminal color codes, for example a prompt recalled from history or text loaded from the external editor</li>\n<li>Fixed a crash when resuming a session whose saved history holds an assistant message stored as a plain string</li>\n<li>Fixed sessions on slow or heavily loaded machines sometimes exiting with \"Claude Code exited after an unrecoverable interface error\" when the first spinner appeared</li>\n<li>Fixed a rare case where the screen could stop updating for the rest of the session after an internal rendering error</li>\n<li>Fixed a rare case on Windows where a turn could stop with an error such as \"Out of memory\" right after Claude replied, so that reply's tool calls never ran</li>\n<li>Fixed sessions continued after <code>/clear</code> (restart, <code>--continue</code>, <code>--resume</code>) missing part of their first message when a SessionStart hook printed output, causing a full prompt-cache miss</li>\n<li>Fixed messages from other agents (such as a subagent's SendMessage) that arrived mid-turn showing up below the \"Ran N shell commands\" row instead of where they arrived</li>\n<li>Fixed the \"copied\" notice not appearing after drag-selecting text in the fullscreen <code>/resume</code> picker and other panels that cover the prompt area</li>\n<li>Fixed <code>$TMPDIR</code> expanding empty in Bash commands that run outside the sandbox while sandboxing is enabled</li>\n<li>Fixed WebFetch and WebSearch in Cowork cloud sessions not telling Claude why a request was refused, such as a used-up fetch budget or an admin policy</li>\n<li>Fixed the Claude apps gateway's telemetry relay ignoring a collector hostname or domain listed in <code>NO_PROXY</code> when a proxy is set</li>\n<li>Fixed one malformed <code>strictKnownMarketplaces</code> or <code>blockedMarketplaces</code> entry silently disabling the whole enterprise marketplace policy</li>\n<li>Fixed failed auto-updates leaving large staged downloads behind in <code>~/.cache/claude/staging</code></li>\n<li>Fixed <code>/plugin</code> not stripping terminal control characters from messages on the Installed tab, such as the error of a failed plugin update</li>\n<li>Fixed <code>/plugin</code> → Installed and <code>/skills</code> crashing when a skill or legacy command is named like a built-in Object property such as <code>constructor</code> or <code>toString</code></li>\n<li>Fixed <code>/plugin</code> closing with no message when every install in a multi-select failed</li>\n<li>Fixed uninstalled plugins reappearing as \"failed to load\" rows in <code>/plugin</code> Installed, and Remove not clearing such a row</li>\n<li>Fixed plugins from the official marketplace being recorded without their commit in <code>installed_plugins.json</code>, and <code>installed_plugins.json</code> keeping the old commit after updating a pinned-commit plugin</li>\n<li>Fixed plugin reload previews keeping every previewed copy of a plugin archive unpacked until exit, and overwriting the cached <code>--plugin-url</code> archive a reload falls back to when its download fails</li>\n<li>Fixed Remote Control session bookkeeping failing when <code>~/.claude.json</code> holds a malformed placeholder record</li>\n<li>Fixed the error after a revoked claude.ai login blaming an expired Anthropic profile; it now leads with <code>/login</code></li>\n<li>Fixed typed or pasted text occasionally coming out scrambled in the <code>claude agents</code> dispatch input during key repeat or very fast input</li>\n<li>Fixed a crash (\"unrecoverable interface error\") when resuming a session whose saved transcript contains a stop hook summary without a well-formed hook list</li>\n<li>Fixed Enter on a selected agent panel row doing nothing when <code>keybindings.json</code> rebinds Enter in the Chat context, for example to <code>chat:queueSubmit</code></li>\n<li>Fixed PDF page reads on Windows failing when the working folder's path is long (about 120 characters or more)</li>\n<li>Fixed a headless resume (<code>claude -p --resume</code>, the SDK, a VS Code extension window reload) starting the session's cost and usage totals at zero; headless sessions now save their totals at exit</li>\n<li>Fixed project skills from the main repository not loading in <code>--worktree</code> sessions when <code>.claude/skills</code> is untracked</li>\n<li>Fixed a <code>sandbox.excludedCommands</code> glob exempting an entire compound Bash command from the sandbox when only one part matched; every part must now match</li>\n<li>Fixed resumed subagents and teammates re-rendering the MCP tool definitions they had loaded, which broke prompt caching for that agent</li>\n<li>Fixed rate-limited artifact publishes telling Claude to stop retrying; Claude is now told nothing was published and when to send the same publish again</li>\n<li>Fixed attachments recorded earlier in a conversation being re-rendered after a resume or relaunch, which dropped extended thinking and missed the prompt cache</li>\n<li>Fixed Console sign-in showing only \"Request failed with status code 400\" when the server refuses to create an API key; it now shows the server's message</li>\n<li>Fixed messages typed while Claude is still working sometimes being ignored by the model</li>\n<li>Improved session start-up for SDK and headless (<code>-p</code>) use: the first turn no longer waits on the per-directory CLAUDE.md lookup</li>\n<li>Improved the Claude apps gateway's loopback error messages to name <code>CLAUDE_GATEWAY_ALLOW_LOOPBACK</code></li>\n<li>Improved <code>/plugin</code> Installed: an MCP server listed apart from its plugin now shows which plugin it belongs to</li>\n<li>Improved <code>claude plugin install</code> on an already-installed plugin: it now says when the marketplace offers a newer version and names the <code>claude plugin update</code> command</li>\n<li>Improved the startup notice overflow line under the logo: it now reads \"N more notices hidden\" instead of \"+N more · /status\"</li>\n<li>Improved prompt handling: invisible Unicode formatting and tag characters in a prompt are removed and the cleaned prompt is shown for review before it is sent</li>\n<li>Improved <code>/ultrareview</code> when there's nothing to review: messages say which case you're in, offer a command that reviews your latest commit, and a new repository's first commit is reviewed in full</li>\n<li>Improved artifact link handling so Claude reads claude.ai artifact links with the Artifact tool instead of WebFetch when that tool is available</li>\n<li>Improved the dangerous-rm permission prompt to name the flagged rm command and suggest a <code>${VAR:?}</code> guard, so headless runs can recover</li>\n<li>Improved the Artifact tool's permission prompts: shorter sentences, pages and artifacts named by title or file name, and links listed after the text</li>\n<li>Changed Fable to always appear in <code>/model</code> on the Anthropic API; it is greyed out only when your organization's settings disable it</li>\n<li>Changed the Bash sandbox instructions on Bedrock, Vertex and Foundry to the first-party wording, which frames the sandbox as the boundary of what the task was given</li>\n<li>Changed <code>/ultrareview</code> in non-interactive sessions to refuse when the repository has no base branch or shared history</li>\n<li>Changed subagent results to reach the main agent under a header marking them as subagent output, with the result indented, so text in a subagent's result cannot pass as the session's own instructions</li>\n<li>Changed workflow scripts' computed <code>agent()</code> prompts on Bedrock, Vertex and Foundry to reach the subagent framed as script-authored text, so the safety classifier does not read them as the user</li>\n<li>Removed the background Haiku auto-title request from <code>claude -p</code> runs launched outside an SDK or IDE</li>\n<li>Removed the deprecated TaskOutput tool; Claude reads a background task's output file with Read instead, and the <code>taskOutputMaxChars</code> setting and <code>TASK_MAX_OUTPUT_LENGTH</code> no longer have any effect</li>\n<li>[VSCode] Added a Sign out row to the panel menu, with <code>/logout</code> in the typed command menu</li>\n<li>[VSCode] Added background shells and other running tasks to the agent map, each with a Stop, and a typed <code>/tasks</code> that opens it</li>\n<li>[VSCode] Added a Copy response button on responses and a typed <code>/copy</code></li>\n<li>[VSCode] Added a one-time notice when inactive sessions are archived automatically, and an \"Unarchive all\" action on the Archived sessions group</li>\n<li>[VSCode] Added the session's cost and token usage to the Account &amp; usage dialog and the session manager where plan limits do not apply (Vertex, Bedrock, Foundry, API key)</li>\n<li>[VSCode] Fixed the \"General config\" menu row showing <code>/config</code> usage text instead of opening settings, and made typed <code>/mcp</code>, <code>/hooks</code>, <code>/memory</code>, <code>/rewind</code> and similar commands open their dialogs</li>\n<li>[VSCode] Fixed the effort slider's level not persisting into later sessions on a model that already had a level saved with <code>/effort</code></li>\n<li>[VSCode] Fixed Auto missing from the mode picker for conversations opened in an already-used panel when the saved model setting is a differently-cased alias such as \"Sonnet\"</li>\n<li>[VSCode] Fixed <code>/fast</code> not saving fast mode as the default, so it was lost when the extension relaunched Claude Code</li>\n<li>[Claude Code on the web] Added Personal and Organization sections to the environment picker on Team and Enterprise plans, and admins can now share a personal environment with the organization</li>\n<li>[Claude Code on the web] Changed organization environments to open as a read-only summary from the Code tab on Team and Enterprise plans, with editing under Admin settings → Cloud environments</li>\n<li>[Claude Code on the web] Fixed a cloud environment saved with Custom network access and no domains silently reverting to Trusted; the dialog now asks for at least one domain</li>\n<li>[Claude Code on the web] Changed the admin Claude Code setting labeled \"Web\" to \"Cloud sessions\" and removed the redundant read-only Mobile row beneath it</li>\n<li>[Claude Tag] Fixed routines created in a Slack channel on an Enterprise Grid org-wide install failing to read other public channels in their workspace when they ran</li>\n<li>[Claude Tag] Fixed the \"Learn more\" links on credential presets in Claude Tag access bundles to open each vendor's credential-setup page instead of a generic API reference</li>\n<li>[Claude Tag] Changed the Pylon credential preset in Claude Tag access bundles so admins can point it at Pylon's EU host</li>\n<li>[Claude Tag] Fixed Google Cloud credential forms in Claude Tag access bundles: a refused key file now says why, the website and scopes stay locked, and a rejected rotation keeps the pasted key</li>\n<li>[Claude Tag] Fixed the network events log in Claude Tag admin settings showing no response status for requests through connections that use AWS signing, client certificates or a custom CA</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: working, value, skills, command, had.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Claude Code Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "working",
+          "value",
+          "skills",
+          "command",
+          "had",
+          "extension",
+          "fast",
+          "until"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: working, value, skills, command. Lead: Claude Code v2.1.277",
+        "alternative_titles": [
+          "Claude Code v2.1.275",
+          "Claude Code v2.1.271"
+        ],
+        "cluster_score": 15
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-09-21T19:14:25.946907Z",
+    "defer_count": 1,
+    "original_score": 90,
+    "original_reason": "New Claude Code version with direct feature additions for agent configuration and network deployment."
+  },
+  {
+    "id": "ccddf48bfa00",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-09-21T19:14:14.641465Z",
+    "score": 85,
+    "reason": "LangChain v1.6.3 released with specific support for future OpenAI models, a concrete SDK update passing the Ships Test.",
+    "proposed_post": "LangChain v1.6.3 adds support for GPT-6 request constraints. Builders can now future-proof their applications for upcoming OpenAI model releases.",
+    "source_angle": "LangChain SDK update for future OpenAI model compatibility.",
+    "source_item": {
+      "title": "LangChain v1.6.3",
+      "source": "LangChain Releases",
+      "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.6.3",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 35,
+      "summary": "<p>Changes since langchain-openai==1.6.2</p>\n<p>release(openai): 1.6.3 (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/40719\">#40719</a>)<br />\nfix(openai): expose inferred Responses API routing at initialization (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/40715\">#40715</a>)<br />\nchore(deps): bump anyio from 4.11.0 to 4.14.2 in /libs/partners/openai (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/40629\">#40629</a>)<br />\nfix(openai): support GPT-6 request constraints (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/40443\">#40443</a>)</p>\n[Cluster context: 1 sources, engagement 0, common terms: href, issue-link, js-issue-link, class, langchain.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "LangChain Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "href",
+          "issue-link",
+          "js-issue-link",
+          "class",
+          "langchain",
+          "since",
+          "bump",
+          "deps"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: href, issue-link, js-issue-link, class. Lead: LangChain v1.6.3",
+        "alternative_titles": [
+          "LangChain v1.6.4",
+          "langchain-typesafe==0.0.1a1",
+          "LangChain v1.6.2"
+        ],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-09-21T19:14:26.096549Z",
+    "defer_count": 1,
+    "original_score": 85,
+    "original_reason": "LangChain v1.6.3 released with specific support for future OpenAI models, a concrete SDK update passing the Ships Test."
   }
 ]

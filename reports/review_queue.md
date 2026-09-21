@@ -6,6 +6,9 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-09-21T19:14:26.531384Z` [review] **Pirate Face Rescues LLM Models from Deletion** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-21T19:14:26.393220Z` [review] **Llama Index v0.14.25** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-21T19:14:26.248654Z` [review] **vLLM v0.30.0** — Version-only release without concrete capability: 'vLLM v0.30.0'
 - `2026-09-21T16:27:24.373565Z` [review] **zhouxiaoka/autoclip — AutoClip : AI-powered video clipping and highlight generation · 一款智能高光提取与剪辑的二创工具** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-21T16:27:24.273689Z` [review] **Introducing the Australian Youth Safety Blueprint** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-21T16:27:24.178670Z` [review] **Why I still haven’t bought into true RSI** — Post is empty; Post lacks a clear claim or insight
@@ -28,6 +31,3 @@ No pending review items.
 - `2026-09-16T18:05:55.311778Z` [review] **Gemini 3.8 Live and 3.8 Live Extended Thinking** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-16T18:05:55.218592Z` [review] **LangChain v1.4.1** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-16T18:05:55.125826Z` [review] **How workers are unlocking new ways of working** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-16T14:50:52.716825Z` [review] **proto-v0.2.0: vllm-proto 0.2.0** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'proto-v0.2.0: vllm-proto 0.2.0'
-- `2026-09-16T14:50:52.582471Z` [review] **LangChain v1.6.3** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.6.3'
-- `2026-09-16T14:50:52.447548Z` [review] **Claude Code v2.1.273** — Post is empty; Post lacks a clear claim or insight
