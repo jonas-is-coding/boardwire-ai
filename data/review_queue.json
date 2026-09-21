@@ -12992,12 +12992,12 @@
   },
   {
     "id": "e3e51b66ab34",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-09-20T21:03:07.825633Z",
+    "status": "approved",
+    "created_at": "2026-09-21T16:27:24.085430Z",
     "score": 90,
-    "reason": "New open-source GPU orchestration framework for large models. Ships today, direct utility for builders.",
-    "proposed_post": "higgsfield-ai/higgsfield, a new open-source GPU orchestration and ML framework, is available. It enables fault-tolerant, scalable training for models with billions to trillions of parameters, offering a tool for managing large-scale distributed AI infrastructure.",
-    "source_angle": "GitHub Trending: New open-source GPU orchestration for large models.",
+    "reason": "New open-source GPU orchestration framework ships today, directly addressing scalability and fault tolerance for large model training.",
+    "proposed_post": "higgsfield-ai/higgsfield released an open-source GPU orchestration framework. It enables fault-tolerant, scalable training for models with billions to trillions of parameters, simplifying large-scale model development and deployment.",
+    "source_angle": "Open-source GPU orchestration for large models",
     "source_item": {
       "title": "higgsfield-ai/higgsfield — Fault-tolerant, highly scalable GPU orchestration, and a machine learning framework designed for training models with billions to trillions of parameters",
       "source": "GitHub Trending",
@@ -13029,10 +13029,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-09-20T21:03:20.240114Z",
-    "defer_count": 1,
-    "original_score": 90,
-    "original_reason": "New open-source GPU orchestration framework for large models. Ships today, direct utility for builders."
+    "breaking": false,
+    "reactivated_at": "2026-09-21T16:27:24.085430Z"
   },
   {
     "id": "8d2ddcce5bb5",

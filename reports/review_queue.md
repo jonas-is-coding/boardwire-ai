@@ -6,6 +6,9 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-09-21T16:27:24.373565Z` [review] **zhouxiaoka/autoclip — AutoClip : AI-powered video clipping and highlight generation · 一款智能高光提取与剪辑的二创工具** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-21T16:27:24.273689Z` [review] **Introducing the Australian Youth Safety Blueprint** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-21T16:27:24.178670Z` [review] **Why I still haven’t bought into true RSI** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-20T21:03:20.677574Z` [review] **langchain-typesafe==0.0.1a3** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'langchain-typesafe==0.0.1a3'
 - `2026-09-20T21:03:20.534996Z` [review] **vLLM v0.30.0rc2** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.30.0rc2'
 - `2026-09-18T17:39:20.229679Z` [review] **Anthropic Python SDK v1.7.0** — Post is empty; Post lacks a clear claim or insight
@@ -28,6 +31,3 @@ No pending review items.
 - `2026-09-16T14:50:52.716825Z` [review] **proto-v0.2.0: vllm-proto 0.2.0** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'proto-v0.2.0: vllm-proto 0.2.0'
 - `2026-09-16T14:50:52.582471Z` [review] **LangChain v1.6.3** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.6.3'
 - `2026-09-16T14:50:52.447548Z` [review] **Claude Code v2.1.273** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-15T18:05:52.508722Z` [review] **GPT-5.6 Luna vs. GPT-6 Astra: Is a $1.20 Model Good Enough for Code Review?** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-15T18:05:52.416792Z` [review] **Anthropic Python SDK v1.6.0** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-15T18:05:52.323050Z` [review] **There's a 100% Chance AI Agents Are Ruining the Internet** — Post is empty; Post lacks a clear claim or insight

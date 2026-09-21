@@ -979,5 +979,35 @@
       "Post lacks a clear claim or insight",
       "Version-only release without concrete capability: 'langchain-typesafe==0.0.1a3'"
     ]
+  },
+  {
+    "rejected_at": "2026-09-21T16:27:24.178670Z",
+    "stage": "review",
+    "title": "Why I still haven’t bought into true RSI",
+    "link": "https://www.interconnects.ai/p/where-i-stand-on-rsi",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-21T16:27:24.273689Z",
+    "stage": "review",
+    "title": "Introducing the Australian Youth Safety Blueprint",
+    "link": "https://openai.com/index/australian-youth-safety-blueprint",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-21T16:27:24.373565Z",
+    "stage": "review",
+    "title": "zhouxiaoka/autoclip — AutoClip : AI-powered video clipping and highlight generation · 一款智能高光提取与剪辑的二创工具",
+    "link": "https://github.com/zhouxiaoka/autoclip",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
   }
 ]
