@@ -6,6 +6,8 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-09-22T18:02:30.300726Z` [review] **Priorities and principles for effective third party assessments** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-22T18:02:30.207711Z` [review] **Advisory Group on Mathematics and Artificial Intelligence** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-22T14:42:29.534635Z` [review] **Claude Code v2.1.275** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-22T14:42:29.452115Z` [review] **LangChain v1.6.2** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.6.2'
 - `2026-09-22T14:42:29.369832Z` [review] **superdesigndev/treg — OpenRouter for agent tools. Join community here:  https://discord.gg/6mQYYfFMAn** — Post is empty; Post lacks a clear claim or insight
@@ -29,5 +31,3 @@ No pending review items.
 - `2026-09-17T18:05:53.530331Z` [review] **LangChain v1.7.2** — Version-only release without concrete capability: 'LangChain v1.7.2'
 - `2026-09-17T18:05:53.373605Z` [review] **Claude Code v2.1.274** — Version-only release without concrete capability: 'Claude Code v2.1.274'
 - `2026-09-17T14:53:32.526955Z` [review] **vLLM v0.30.0rc1** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.30.0rc1'
-- `2026-09-17T14:53:32.433032Z` [review] **n8n-io/n8n — Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-17T14:53:32.339486Z` [review] **TencentCloud/Octop — A smarter, self-hosted AI assistant — multi-user, multi-agent.** — Post is empty; Post lacks a clear claim or insight

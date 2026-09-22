@@ -1069,5 +1069,25 @@
       "Post is empty",
       "Post lacks a clear claim or insight"
     ]
+  },
+  {
+    "rejected_at": "2026-09-22T18:02:30.207711Z",
+    "stage": "review",
+    "title": "Advisory Group on Mathematics and Artificial Intelligence",
+    "link": "https://openai.com/index/advisory-group-on-mathematics-and-ai",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-22T18:02:30.300726Z",
+    "stage": "review",
+    "title": "Priorities and principles for effective third party assessments",
+    "link": "https://openai.com/index/priorities-principles-third-party-assessments",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
   }
 ]
