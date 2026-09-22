@@ -3649,5 +3649,35 @@
       "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mvnsh3hizd22"
     ],
     "thread_partial": false
+  },
+  {
+    "id": "96358eec3155",
+    "published_at": "2026-09-22T18:15:24.008962Z",
+    "platform": "bluesky",
+    "post": "Google launches open-agent orchestration runtime for AI agents.\n\ngoogle/ax provides an Apache‑2.0 runtime with +2324★ on GitHub for multi‑agent workflows.\n\n#AI #AIAgents #DevTools",
+    "source_link": "https://github.com/google/ax",
+    "source_title": "google/ax — Google's open agentic orchestration runtime",
+    "score": 95,
+    "reason": "Google released an open-source agent orchestration runtime, directly actionable for builders. High engagement confirms relevance.",
+    "card_path": "generated/cards/96358eec3155.png",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-09-22-google-ax-google-s-open-agentic-orchestration-runtime-96358eec3155.md",
+    "external_id": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mw4th3oori2v",
+    "url": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mw4th3oori2v",
+    "format_variant": "thread",
+    "hashtags_used": [
+      "#AI",
+      "#AIAgents",
+      "#DevTools"
+    ],
+    "published_hour_utc": 18,
+    "published_weekday": "Tuesday",
+    "composer_version": "2",
+    "card_variant": "editorial_repo",
+    "thread_uris": [
+      "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mw4th3oori2v",
+      "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mw4th4p2am27",
+      "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.feed.post/3mw4th4udua2i"
+    ],
+    "thread_partial": false
   }
 ]

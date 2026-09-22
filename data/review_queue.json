@@ -13265,11 +13265,11 @@
   },
   {
     "id": "96358eec3155",
-    "status": "approved",
+    "status": "published_dry_run",
     "created_at": "2026-09-22T14:42:17.179222Z",
     "score": 95,
     "reason": "Google released an open-source agent orchestration runtime, directly actionable for builders. High engagement confirms relevance.",
-    "proposed_post": "Google released `google/ax`, an open-source agentic orchestration runtime. Builders can use this to structure and manage multi-agent AI systems, simplifying complex agent workflows.",
+    "proposed_post": "Google launches open-agent orchestration runtime for AI agents.\n\ngoogle/ax provides an Apache‑2.0 runtime with +2324★ on GitHub for multi‑agent workflows.\n\n#AI #AIAgents #DevTools",
     "source_angle": "Google's open-source agent orchestration runtime",
     "source_item": {
       "title": "google/ax — Google's open agentic orchestration runtime",
@@ -13300,10 +13300,29 @@
         "cluster_score": 35
       }
     },
-    "card_path": null,
+    "card_path": "generated/cards/96358eec3155.png",
     "is_llm_mode": true,
     "breaking": true,
     "claire_note": "Chloe, das hier ist interessant: 'google/ax' trendet auf GitHub.\n\nDas ist Googles Open-Source-Lösung für Agentic Orchestration. Für Entwickler bedeutet das eine fertige Runtime, um komplexe Agenten-Workflows zu bauen und zu steuern, statt alles von Grund auf neu zu entwickeln. Das könnte ein Game Changer sein, um KI-Agenten in bestehende Systeme zu integrieren.",
-    "chloe_note": "*google/ax — Google's open agentic orchestration runtime* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Google released an open-source agent orchestration runtime, directly actionable for builders. High engagement confirms relevance.Cluster context: 1 sources, engagement 2324. Common terms: google/ax, github, orchestration, +2324. Bewertung: 95. Quelle: https://github.com/google/ax"
+    "chloe_note": "*google/ax — Google's open agentic orchestration runtime* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Google released an open-source agent orchestration runtime, directly actionable for builders. High engagement confirms relevance.Cluster context: 1 sources, engagement 2324. Common terms: google/ax, github, orchestration, +2324. Bewertung: 95. Quelle: https://github.com/google/ax",
+    "sarah_package": {
+      "title": "Google launches open-agent orchestration runtime for AI agents.",
+      "subtitle": "google/ax provides an Apache‑2.0 runtime with +2324★ on GitHub for multi‑agent workflows.",
+      "description": "Google open‑sourced the ax runtime under Apache 2.0, offering a plug‑and‑play orchestrator for multi‑agent pipelines. Available on GitHub.",
+      "hashtags": [
+        "#AI",
+        "#AIAgents",
+        "#DevTools"
+      ],
+      "question": "Are you integrating ax into production agents?",
+      "card_stat": "+2324★",
+      "card_claim": "Ready‑made runtime for multi‑agent pipelines",
+      "card_context": "Apache 2.0 · open-source runtime · orchestrates multi‑agent workflows"
+    },
+    "composer_version": "2",
+    "card_layout": "repo",
+    "card_variant": "editorial_repo",
+    "article_path": "/home/runner/work/boardwire-ai/boardwire-ai/articles/2026-09-22-google-ax-google-s-open-agentic-orchestration-runtime-96358eec3155.md",
+    "published_at": "2026-09-22T18:15:24.008962Z"
   }
 ]
