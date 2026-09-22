@@ -13130,12 +13130,12 @@
   },
   {
     "id": "6385ea2ad5cf",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-09-21T19:14:07.062723Z",
+    "status": "approved",
+    "created_at": "2026-09-22T14:42:28.845326Z",
     "score": 90,
-    "reason": "New Claude Code version with direct feature additions for agent configuration and network deployment.",
-    "proposed_post": "Claude Code v2.1.277 adds AGENTS.md support, allowing builders to define project instructions via AGENTS.md instead of CLAUDE.md. This offers more flexibility for structuring agent configurations.",
-    "source_angle": "New configuration options for Claude Code agents.",
+    "reason": "New Claude Code version with direct feature additions for agent configuration and network deployment. Ships today.",
+    "proposed_post": "Claude Code v2.1.277 ships with new features for agent configuration and network deployment. Builders can now streamline agent setup and deployment workflows directly within the framework.",
+    "source_angle": "Official Claude Code release with new agent and deployment features.",
     "source_item": {
       "title": "Claude Code v2.1.277",
       "source": "Claude Code Releases",
@@ -13170,19 +13170,17 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-09-21T19:14:25.946907Z",
-    "defer_count": 1,
-    "original_score": 90,
-    "original_reason": "New Claude Code version with direct feature additions for agent configuration and network deployment."
+    "breaking": false,
+    "reactivated_at": "2026-09-22T14:42:28.845326Z"
   },
   {
     "id": "ccddf48bfa00",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-09-21T19:14:14.641465Z",
-    "score": 85,
-    "reason": "LangChain v1.6.3 released with specific support for future OpenAI models, a concrete SDK update passing the Ships Test.",
-    "proposed_post": "LangChain v1.6.3 adds support for GPT-6 request constraints. Builders can now future-proof their applications for upcoming OpenAI model releases.",
-    "source_angle": "LangChain SDK update for future OpenAI model compatibility.",
+    "status": "approved",
+    "created_at": "2026-09-22T14:42:28.938450Z",
+    "score": 90,
+    "reason": "LangChain SDK update provides immediate future-proofing for OpenAI integrations, passing the Ships Test.",
+    "proposed_post": "LangChain v1.6.3 adds specific support for future OpenAI models. Builders can update now to ensure compatibility and reduce integration work when new OpenAI APIs drop.",
+    "source_angle": "LangChain SDK update for future OpenAI model compatibility",
     "source_item": {
       "title": "LangChain v1.6.3",
       "source": "LangChain Releases",
@@ -13218,9 +13216,94 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-09-21T19:14:26.096549Z",
+    "breaking": false,
+    "reactivated_at": "2026-09-22T14:42:28.938450Z"
+  },
+  {
+    "id": "b22b345f3e2b",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-09-22T14:42:23.953019Z",
+    "score": 90,
+    "reason": "Open-source runtime for AI agents to interact with office documents. Ships today, direct utility for agent builders.",
+    "proposed_post": "dream-num/univer is a new open-source runtime for AI agents to interact with spreadsheets, docs, slides, and PDFs. Builders can use this to equip agents with office automation capabilities.",
+    "source_angle": "GitHub Trending: New open-source runtime for AI agents.",
+    "source_item": {
+      "title": "dream-num/univer — The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
+      "source": "GitHub Trending",
+      "link": "https://github.com/dream-num/univer",
+      "source_tier": 2,
+      "engagement_score": 202.0,
+      "local_newsworthiness_score": 0,
+      "summary": "Trending on GitHub today: +202 stars. The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.\n[Cluster context: 1 sources, engagement 202, common terms: +202, harness, tables, github, one.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 202,
+        "common_terms": [
+          "+202",
+          "harness",
+          "tables",
+          "github",
+          "one",
+          "runtime.",
+          "slides",
+          "docs"
+        ],
+        "cluster_summary": "1 sources, engagement 202. Common terms: +202, harness, tables, github. Lead: dream-num/univer — The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in ",
+        "alternative_titles": [],
+        "cluster_score": 25
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-09-22T14:42:29.290267Z",
     "defer_count": 1,
-    "original_score": 85,
-    "original_reason": "LangChain v1.6.3 released with specific support for future OpenAI models, a concrete SDK update passing the Ships Test."
+    "original_score": 90,
+    "original_reason": "Open-source runtime for AI agents to interact with office documents. Ships today, direct utility for agent builders."
+  },
+  {
+    "id": "96358eec3155",
+    "status": "approved",
+    "created_at": "2026-09-22T14:42:17.179222Z",
+    "score": 95,
+    "reason": "Google released an open-source agent orchestration runtime, directly actionable for builders. High engagement confirms relevance.",
+    "proposed_post": "Google released `google/ax`, an open-source agentic orchestration runtime. Builders can use this to structure and manage multi-agent AI systems, simplifying complex agent workflows.",
+    "source_angle": "Google's open-source agent orchestration runtime",
+    "source_item": {
+      "title": "google/ax — Google's open agentic orchestration runtime",
+      "source": "GitHub Trending",
+      "link": "https://github.com/google/ax",
+      "source_tier": 2,
+      "engagement_score": 2324.0,
+      "local_newsworthiness_score": 55,
+      "summary": "Trending on GitHub today: +2324 stars. Google's open agentic orchestration runtime\n[Cluster context: 1 sources, engagement 2324, common terms: google/ax, github, orchestration, +2324, agentic.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 2324,
+        "common_terms": [
+          "google/ax",
+          "github",
+          "orchestration",
+          "+2324",
+          "agentic",
+          "runtime",
+          "stars.",
+          "trending"
+        ],
+        "cluster_summary": "1 sources, engagement 2324. Common terms: google/ax, github, orchestration, +2324. Lead: google/ax — Google's open agentic orchestration runtime",
+        "alternative_titles": [],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": true,
+    "claire_note": "Chloe, das hier ist interessant: 'google/ax' trendet auf GitHub.\n\nDas ist Googles Open-Source-Lösung für Agentic Orchestration. Für Entwickler bedeutet das eine fertige Runtime, um komplexe Agenten-Workflows zu bauen und zu steuern, statt alles von Grund auf neu zu entwickeln. Das könnte ein Game Changer sein, um KI-Agenten in bestehende Systeme zu integrieren.",
+    "chloe_note": "*google/ax — Google's open agentic orchestration runtime* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Google released an open-source agent orchestration runtime, directly actionable for builders. High engagement confirms relevance.Cluster context: 1 sources, engagement 2324. Common terms: google/ax, github, orchestration, +2324. Bewertung: 95. Quelle: https://github.com/google/ax"
   }
 ]
