@@ -12950,7 +12950,7 @@
   },
   {
     "id": "8b793390dcc7",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-09-20T21:03:18.826868Z",
     "score": 85,
     "reason": "Skillsync launched a live product for portable AI chat sessions, addressing a key pain point for multi-agent context management.",
@@ -12988,7 +12988,8 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": false,
-    "reactivated_at": "2026-09-20T21:03:18.826868Z"
+    "reactivated_at": "2026-09-20T21:03:18.826868Z",
+    "expired_at": "2026-09-22T21:36:30.918328Z"
   },
   {
     "id": "e3e51b66ab34",
@@ -13083,7 +13084,7 @@
   },
   {
     "id": "f551fd45669f",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-09-20T21:02:59.372637Z",
     "score": 95,
     "reason": "Direct cost reduction for Claude API users via server-side auto mode classifier. Ships today.",
@@ -13126,7 +13127,8 @@
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das hier ist interessant für jeden, der Claude in seine Apps integriert.\n\nDer Auto-Modus für die API und Enterprise-Nutzer wechselt standardmäßig auf den Server-Side Classifier. Das bedeutet: keine Kosten mehr für den Classifier-Overhead. Entwickler können jetzt Modelle effizienter nutzen, ohne sich Gedanken über versteckte Kosten zu machen. Das ist ein direkter Win für die Kostenkontrolle bei der Nutzung von Claude-APIs.",
-    "chloe_note": "Dieser Fund besteht den Ships Test. Die direkte Kostenreduktion durch den Server-Side Classifier ist ein klares, nutzbares Update für Entwickler, die Claude-APIs einsetzen. Es gibt etwas Konkretes zum Deployen, das sofortige Auswirkungen auf die Kosten hat."
+    "chloe_note": "Dieser Fund besteht den Ships Test. Die direkte Kostenreduktion durch den Server-Side Classifier ist ein klares, nutzbares Update für Entwickler, die Claude-APIs einsetzen. Es gibt etwas Konkretes zum Deployen, das sofortige Auswirkungen auf die Kosten hat.",
+    "expired_at": "2026-09-22T21:36:30.918328Z"
   },
   {
     "id": "6385ea2ad5cf",
