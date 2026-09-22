@@ -1373,6 +1373,44 @@
         "@s.ly follows"
       ],
       "followed_at": "2026-09-21T14:36:27.818446Z"
+    },
+    "did:plc:3wfafays7qjkiqzl437y5hav": {
+      "handle": "thejoyraises.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mw4bcpbyox2n",
+      "channel": "seed_followers",
+      "score": 5.5,
+      "mode": "discover",
+      "via": [
+        "follows @simonwillison.net",
+        "follows @natolambert.bsky.social",
+        "follows @hamel.bsky.social",
+        "follows @rasbt.bsky.social",
+        "follows @emollick.bsky.social"
+      ],
+      "followed_at": "2026-09-22T12:50:56.463339Z"
+    },
+    "did:plc:47qoki4n7yn24shmm662sxr6": {
+      "handle": "benjamingammon.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mw4bdop6a227",
+      "channel": "seed_follows",
+      "score": 1.5,
+      "mode": "discover",
+      "via": [
+        "@danielvanstrien.bsky.social follows"
+      ],
+      "followed_at": "2026-09-22T12:51:29.394657Z"
+    },
+    "did:plc:yv6u5hqq62nambxturvzgxwl": {
+      "handle": "adocomplete.com",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mw4benmh4x2v",
+      "channel": "seed_follows",
+      "score": 1.4,
+      "mode": "discover",
+      "via": [
+        "@s.ly follows",
+        "search 'Claude Code'"
+      ],
+      "followed_at": "2026-09-22T12:52:03.050821Z"
     }
   },
   "runs": [
@@ -1686,6 +1724,23 @@
       ],
       "started_at": "2026-09-21T14:33:43.089360Z",
       "finished_at": "2026-09-21T14:36:27.821112Z"
+    },
+    {
+      "mode": "discover",
+      "dry_run": false,
+      "limit": 12,
+      "planned": 0,
+      "followed": 3,
+      "skipped_already": 0,
+      "failed": 0,
+      "aborted": null,
+      "handles": [
+        "thejoyraises.bsky.social",
+        "benjamingammon.bsky.social",
+        "adocomplete.com"
+      ],
+      "started_at": "2026-09-22T12:50:56.262206Z",
+      "finished_at": "2026-09-22T12:52:03.052367Z"
     }
   ],
   "pinned_thread": {
