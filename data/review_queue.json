@@ -13364,8 +13364,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-09-23T14:55:20.263766Z",
-    "defer_count": 1,
+    "deferred_at": "2026-09-23T18:21:56.269254Z",
+    "defer_count": 2,
     "original_score": 95,
     "original_reason": "Anthropic's official SDK release adds new model support and critical tool-use features for agent development. This is a direct, actionable update for builders."
   },
@@ -13413,5 +13413,48 @@
     "breaking": false,
     "claire_note": "Chloe, das ist ein direktes Update von Anthropic – die haben gerade Opus 5.5 rausgehauen.\n\nFür uns Builder heißt das: 1M Kontext, ordentliche Preisanpassung und Cache-Reads für wiederkehrende Prompts. Wer auf Claude setzt, kann damit sofort größere und komplexere Aufgaben angehen, ohne dass die Kosten explodieren.",
     "chloe_note": "Das Update zu Claude Opus 5.5 in Claude Code v2.1.280 besteht den Ships Test. Es gibt konkrete Änderungen am Modell mit 1M Kontext und Preisanpassungen, die Entwickler direkt nutzen und deployen können. Der Verweis auf Cache-Reads und MCP Config Updates verstärkt den praktischen Nutzen."
+  },
+  {
+    "id": "9c2cafaf060f",
+    "status": "approved",
+    "created_at": "2026-09-23T18:21:47.087410Z",
+    "score": 95,
+    "reason": "New flagship models from OpenAI, likely available via API. High builder relevance and passes Ships Test.",
+    "proposed_post": "OpenAI introduced GPT-6 Sol and Luna. Builders can now evaluate these new models for performance and cost improvements in their applications, or prepare for API access.",
+    "source_angle": "OpenAI's new flagship models, GPT-6 Sol and Luna, are introduced.",
+    "source_item": {
+      "title": "GPT-6 Sol and Luna",
+      "source": "HackerNews",
+      "link": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+      "source_tier": 3,
+      "engagement_score": 2088.5,
+      "local_newsworthiness_score": 45,
+      "summary": "1684 points, 809 comments on Hacker News — submitted by OfficialTurkey — original: https://openai.com/index/introducing-gpt-6-sol-and-luna/\n[Cluster context: 1 sources, engagement 2088, common terms: luna, sol, comments, points, original.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 2088,
+        "common_terms": [
+          "luna",
+          "sol",
+          "comments",
+          "points",
+          "original",
+          "submitted",
+          "1684",
+          "gpt-6"
+        ],
+        "cluster_summary": "1 sources, engagement 2088. Common terms: luna, sol, comments, points. Lead: GPT-6 Sol and Luna",
+        "alternative_titles": [],
+        "cluster_score": 20
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": true,
+    "claire_note": "Chloe, das hier ist ein Hype-Magnet. \"GPT-6 Sol und Luna\" auf HackerNews mit fast 1700 Punkten und 800 Kommentaren? Entwickler werden wissen wollen, was OpenAI da wieder rausgehauen hat. Das ist ein direktes Signal, dass hier neue Capabilities oder Modelle für die nächsten Projekte anstehen könnten.",
+    "chloe_note": "Das geht durch. Der Artikel beschreibt neue Modelle, die über eine API verfügbar sein werden und somit direkt nutzbar sind. Klare Relevanz für Entwickler, die auf neue Capabilities zugreifen wollen."
   }
 ]

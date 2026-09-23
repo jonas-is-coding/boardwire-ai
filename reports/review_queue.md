@@ -6,6 +6,9 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-09-23T18:21:58.113054Z` [review] **vLLM v0.30.1rc0** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.30.1rc0'
+- `2026-09-23T18:21:57.970387Z` [review] **LangChain v1.7.4** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-23T18:21:56.408005Z` [review] **Claude Opus 5.5** — Version-only release without concrete capability: 'Claude Opus 5.5'
 - `2026-09-23T14:55:20.675130Z` [review] **HKUDS/CLI-Anything — "CLI-Anything: Making ALL Software Agent-Native" -- CLI-Hub:  https://clianything.cc/** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-23T14:55:20.537510Z` [review] **Open-Dev-Society/OpenStock — OpenStock is an open-source alternative to expensive market platforms. Track real-time prices, set personalized alerts, and explore detailed company insights — built openl** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-23T14:55:20.400306Z` [review] **strands-agents/harness-sdk — Build an agent harness and control it end-to-end. Open-source SDK for production AI agents in Python & TypeScript - any model, any cloud.** — Post is empty; Post lacks a clear claim or insight
@@ -28,6 +31,3 @@ No pending review items.
 - `2026-09-18T14:23:08.037492Z` [review] **tradesdontlie/tradingview-mcp — AI-assisted TradingView chart analysis — connect Claude Code to your TradingView Desktop for personal workflow automation** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-18T14:23:07.897799Z` [review] **langchain-typesafe==0.0.1a2** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'langchain-typesafe==0.0.1a2'
 - `2026-09-17T18:05:54.073756Z` [review] **vLLM v0.3.0** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.3.0'
-- `2026-09-17T18:05:53.936915Z` [review] **coder/coder — Secure environments for developers and their agents** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-17T18:05:53.800257Z` [review] **Our framework for reporting model misalignment** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-17T18:05:53.665829Z` [review] **A warning about 'model welfare'** — Post is empty; Post lacks a clear claim or insight

@@ -1119,5 +1119,35 @@
       "Post is empty",
       "Post lacks a clear claim or insight"
     ]
+  },
+  {
+    "rejected_at": "2026-09-23T18:21:56.408005Z",
+    "stage": "review",
+    "title": "Claude Opus 5.5",
+    "link": "https://www.anthropic.com/claude-opus-5-5",
+    "reasons": [
+      "Version-only release without concrete capability: 'Claude Opus 5.5'"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-23T18:21:57.970387Z",
+    "stage": "review",
+    "title": "LangChain v1.7.4",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-anthropic%3D%3D1.7.4",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-23T18:21:58.113054Z",
+    "stage": "review",
+    "title": "vLLM v0.30.1rc0",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.30.1rc0",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight",
+      "Version-only release without concrete capability: 'vLLM v0.30.1rc0'"
+    ]
   }
 ]
