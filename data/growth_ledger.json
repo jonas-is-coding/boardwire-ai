@@ -1411,6 +1411,18 @@
         "search 'Claude Code'"
       ],
       "followed_at": "2026-09-22T12:52:03.050821Z"
+    },
+    "did:plc:fjqvlcfakpht4exffejyfc25": {
+      "handle": "alexgarcia.xyz",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mw6sdwmod424",
+      "channel": "seed_followers",
+      "score": 1.0,
+      "mode": "discover",
+      "via": [
+        "follows @emollick.bsky.social",
+        "follows @s.ly"
+      ],
+      "followed_at": "2026-09-23T13:01:10.820939Z"
     }
   },
   "runs": [
@@ -1741,6 +1753,21 @@
       ],
       "started_at": "2026-09-22T12:50:56.262206Z",
       "finished_at": "2026-09-22T12:52:03.052367Z"
+    },
+    {
+      "mode": "discover",
+      "dry_run": false,
+      "limit": 12,
+      "planned": 0,
+      "followed": 1,
+      "skipped_already": 0,
+      "failed": 0,
+      "aborted": null,
+      "handles": [
+        "alexgarcia.xyz"
+      ],
+      "started_at": "2026-09-23T13:01:10.588178Z",
+      "finished_at": "2026-09-23T13:01:10.822321Z"
     }
   ],
   "pinned_thread": {
