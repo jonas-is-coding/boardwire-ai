@@ -12993,7 +12993,7 @@
   },
   {
     "id": "e3e51b66ab34",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-09-21T16:27:24.085430Z",
     "score": 90,
     "reason": "New open-source GPU orchestration framework ships today, directly addressing scalability and fault tolerance for large model training.",
@@ -13031,7 +13031,8 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": false,
-    "reactivated_at": "2026-09-21T16:27:24.085430Z"
+    "reactivated_at": "2026-09-21T16:27:24.085430Z",
+    "expired_at": "2026-09-23T18:57:10.066440Z"
   },
   {
     "id": "8d2ddcce5bb5",
