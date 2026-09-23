@@ -6,6 +6,9 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-09-23T14:55:20.675130Z` [review] **HKUDS/CLI-Anything — "CLI-Anything: Making ALL Software Agent-Native" -- CLI-Hub:  https://clianything.cc/** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-23T14:55:20.537510Z` [review] **Open-Dev-Society/OpenStock — OpenStock is an open-source alternative to expensive market platforms. Track real-time prices, set personalized alerts, and explore detailed company insights — built openl** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-23T14:55:20.400306Z` [review] **strands-agents/harness-sdk — Build an agent harness and control it end-to-end. Open-source SDK for production AI agents in Python & TypeScript - any model, any cloud.** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-22T18:02:30.300726Z` [review] **Priorities and principles for effective third party assessments** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-22T18:02:30.207711Z` [review] **Advisory Group on Mathematics and Artificial Intelligence** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-22T14:42:29.534635Z` [review] **Claude Code v2.1.275** — Post is empty; Post lacks a clear claim or insight
@@ -28,6 +31,3 @@ No pending review items.
 - `2026-09-17T18:05:53.936915Z` [review] **coder/coder — Secure environments for developers and their agents** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-17T18:05:53.800257Z` [review] **Our framework for reporting model misalignment** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-17T18:05:53.665829Z` [review] **A warning about 'model welfare'** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-17T18:05:53.530331Z` [review] **LangChain v1.7.2** — Version-only release without concrete capability: 'LangChain v1.7.2'
-- `2026-09-17T18:05:53.373605Z` [review] **Claude Code v2.1.274** — Version-only release without concrete capability: 'Claude Code v2.1.274'
-- `2026-09-17T14:53:32.526955Z` [review] **vLLM v0.30.0rc1** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.30.0rc1'

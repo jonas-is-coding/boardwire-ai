@@ -1089,5 +1089,35 @@
       "Post is empty",
       "Post lacks a clear claim or insight"
     ]
+  },
+  {
+    "rejected_at": "2026-09-23T14:55:20.400306Z",
+    "stage": "review",
+    "title": "strands-agents/harness-sdk — Build an agent harness and control it end-to-end. Open-source SDK for production AI agents in Python & TypeScript - any model, any cloud.",
+    "link": "https://github.com/strands-agents/harness-sdk",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-23T14:55:20.537510Z",
+    "stage": "review",
+    "title": "Open-Dev-Society/OpenStock — OpenStock is an open-source alternative to expensive market platforms. Track real-time prices, set personalized alerts, and explore detailed company insights — built openl",
+    "link": "https://github.com/Open-Dev-Society/OpenStock",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-23T14:55:20.675130Z",
+    "stage": "review",
+    "title": "HKUDS/CLI-Anything — \"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:  https://clianything.cc/",
+    "link": "https://github.com/HKUDS/CLI-Anything",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
   }
 ]
