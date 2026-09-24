@@ -13500,8 +13500,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-09-24T14:56:23.945293Z",
-    "defer_count": 1,
+    "deferred_at": "2026-09-24T18:23:12.912456Z",
+    "defer_count": 2,
     "original_score": 90,
     "original_reason": "Direct release with new security, IAM, and Bedrock Guardrail integration for Claude apps gateway. Actionable for builders."
   },
@@ -13549,8 +13549,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-09-24T14:56:24.067851Z",
-    "defer_count": 1,
+    "deferred_at": "2026-09-24T18:23:13.022015Z",
+    "defer_count": 2,
     "original_score": 90,
     "original_reason": "Direct release with concrete performance and reliability improvements for local LLM development via Ollama. Passes Ships Test."
   },

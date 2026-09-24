@@ -1180,5 +1180,44 @@
       "Post is empty",
       "Post lacks a clear claim or insight"
     ]
+  },
+  {
+    "rejected_at": "2026-09-24T18:23:13.134175Z",
+    "stage": "review",
+    "title": "LangChain v1.6.5",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.6.5",
+    "reasons": [
+      "Version-only release without concrete capability: 'LangChain v1.6.5'"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-24T18:23:13.230842Z",
+    "stage": "review",
+    "title": "Advancing Private AI Compute with secure, server-side memory",
+    "link": "https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-24T18:23:13.329299Z",
+    "stage": "review",
+    "title": "Claude Code v2.1.271",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.271",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-24T18:23:13.429747Z",
+    "stage": "review",
+    "title": "Simon Willison v2.6",
+    "link": "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
   }
 ]

@@ -6,6 +6,10 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-09-24T18:23:13.429747Z` [review] **Simon Willison v2.6** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-24T18:23:13.329299Z` [review] **Claude Code v2.1.271** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-24T18:23:13.230842Z` [review] **Advancing Private AI Compute with secure, server-side memory** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-24T18:23:13.134175Z` [review] **LangChain v1.6.5** — Version-only release without concrete capability: 'LangChain v1.6.5'
 - `2026-09-24T14:56:24.360428Z` [review] **leejet/stable-diffusion.cpp — Diffusion model(SD,Flux,Wan,Qwen Image,Z-Image,...) inference in pure C/C++** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-24T14:56:24.262747Z` [review] **NVIDIA/Model-Optimizer — A unified library of SOTA model optimization techniques like quantization, distillation, pruning, neural architecture search, speculative decoding, etc. It compresses deep lea** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-24T14:56:24.165718Z` [review] **LangChain v1.6.6** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.6.6'
@@ -27,7 +31,3 @@ No pending review items.
 - `2026-09-21T16:27:24.273689Z` [review] **Introducing the Australian Youth Safety Blueprint** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-21T16:27:24.178670Z` [review] **Why I still haven’t bought into true RSI** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-20T21:03:20.677574Z` [review] **langchain-typesafe==0.0.1a3** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'langchain-typesafe==0.0.1a3'
-- `2026-09-20T21:03:20.534996Z` [review] **vLLM v0.30.0rc2** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.30.0rc2'
-- `2026-09-18T17:39:20.229679Z` [review] **Anthropic Python SDK v1.7.0** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-18T17:39:20.169741Z` [review] **Microsoft exec called AI scraping 'the largest theft of labor in human history'** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-18T14:23:08.176467Z` [review] **Show HN: Aclif – Agent CLI framework: one grammar, canonical names across SaaS** — Post is empty; Post lacks a clear claim or insight
