@@ -6,6 +6,9 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-09-24T14:56:24.360428Z` [review] **leejet/stable-diffusion.cpp — Diffusion model(SD,Flux,Wan,Qwen Image,Z-Image,...) inference in pure C/C++** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-24T14:56:24.262747Z` [review] **NVIDIA/Model-Optimizer — A unified library of SOTA model optimization techniques like quantization, distillation, pruning, neural architecture search, speculative decoding, etc. It compresses deep lea** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-24T14:56:24.165718Z` [review] **LangChain v1.6.6** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.6.6'
 - `2026-09-23T18:21:58.113054Z` [review] **vLLM v0.30.1rc0** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.30.1rc0'
 - `2026-09-23T18:21:57.970387Z` [review] **LangChain v1.7.4** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-23T18:21:56.408005Z` [review] **Claude Opus 5.5** — Version-only release without concrete capability: 'Claude Opus 5.5'
@@ -28,6 +31,3 @@ No pending review items.
 - `2026-09-18T17:39:20.229679Z` [review] **Anthropic Python SDK v1.7.0** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-18T17:39:20.169741Z` [review] **Microsoft exec called AI scraping 'the largest theft of labor in human history'** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-18T14:23:08.176467Z` [review] **Show HN: Aclif – Agent CLI framework: one grammar, canonical names across SaaS** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-18T14:23:08.037492Z` [review] **tradesdontlie/tradingview-mcp — AI-assisted TradingView chart analysis — connect Claude Code to your TradingView Desktop for personal workflow automation** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-18T14:23:07.897799Z` [review] **langchain-typesafe==0.0.1a2** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'langchain-typesafe==0.0.1a2'
-- `2026-09-17T18:05:54.073756Z` [review] **vLLM v0.3.0** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.3.0'

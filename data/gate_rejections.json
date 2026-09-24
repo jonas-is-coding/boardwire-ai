@@ -1149,5 +1149,36 @@
       "Post lacks a clear claim or insight",
       "Version-only release without concrete capability: 'vLLM v0.30.1rc0'"
     ]
+  },
+  {
+    "rejected_at": "2026-09-24T14:56:24.165718Z",
+    "stage": "review",
+    "title": "LangChain v1.6.6",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.6.6",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight",
+      "Version-only release without concrete capability: 'LangChain v1.6.6'"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-24T14:56:24.262747Z",
+    "stage": "review",
+    "title": "NVIDIA/Model-Optimizer — A unified library of SOTA model optimization techniques like quantization, distillation, pruning, neural architecture search, speculative decoding, etc. It compresses deep lea",
+    "link": "https://github.com/NVIDIA/Model-Optimizer",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-24T14:56:24.360428Z",
+    "stage": "review",
+    "title": "leejet/stable-diffusion.cpp — Diffusion model(SD,Flux,Wan,Qwen Image,Z-Image,...) inference in pure C/C++",
+    "link": "https://github.com/leejet/stable-diffusion.cpp",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
   }
 ]
