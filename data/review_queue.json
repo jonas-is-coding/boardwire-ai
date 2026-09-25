@@ -13420,7 +13420,7 @@
   },
   {
     "id": "9c2cafaf060f",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-09-23T18:21:47.087410Z",
     "score": 95,
     "reason": "New flagship models from OpenAI, likely available via API. High builder relevance and passes Ships Test.",
@@ -13459,7 +13459,8 @@
     "is_llm_mode": true,
     "breaking": true,
     "claire_note": "Chloe, das hier ist ein Hype-Magnet. \"GPT-6 Sol und Luna\" auf HackerNews mit fast 1700 Punkten und 800 Kommentaren? Entwickler werden wissen wollen, was OpenAI da wieder rausgehauen hat. Das ist ein direktes Signal, dass hier neue Capabilities oder Modelle für die nächsten Projekte anstehen könnten.",
-    "chloe_note": "Das geht durch. Der Artikel beschreibt neue Modelle, die über eine API verfügbar sein werden und somit direkt nutzbar sind. Klare Relevanz für Entwickler, die auf neue Capabilities zugreifen wollen."
+    "chloe_note": "Das geht durch. Der Artikel beschreibt neue Modelle, die über eine API verfügbar sein werden und somit direkt nutzbar sind. Klare Relevanz für Entwickler, die auf neue Capabilities zugreifen wollen.",
+    "expired_at": "2026-09-25T19:13:42.892929Z"
   },
   {
     "id": "be77debf7351",
