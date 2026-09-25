@@ -1219,5 +1219,45 @@
       "Post is empty",
       "Post lacks a clear claim or insight"
     ]
+  },
+  {
+    "rejected_at": "2026-09-25T15:10:25.007017Z",
+    "stage": "review",
+    "title": "Ollama v0.40.0",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.40.0-rc0",
+    "reasons": [
+      "Version-only release without concrete capability: 'Ollama v0.40.0'"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-25T15:10:25.149127Z",
+    "stage": "review",
+    "title": "AI-powered fuzzing with the GitHub Security Lab Taskflow Agent",
+    "link": "https://github.blog/security/application-security/ai-powered-fuzzing-with-the-github-security-lab-taskflow-agent/",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-25T15:10:25.290367Z",
+    "stage": "review",
+    "title": "androoAGI/starnet — A living pixel-art station where real AI agents do real work. Local-first desktop agent harness - bring your own key, watch your crew actually run.",
+    "link": "https://github.com/androoAGI/starnet",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-25T15:10:25.431116Z",
+    "stage": "review",
+    "title": "LangChain v1.6.3",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-fireworks%3D%3D1.6.3",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight",
+      "Version-only release without concrete capability: 'LangChain v1.6.3'"
+    ]
   }
 ]

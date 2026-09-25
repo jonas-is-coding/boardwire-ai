@@ -6,6 +6,10 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-09-25T15:10:25.431116Z` [review] **LangChain v1.6.3** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.6.3'
+- `2026-09-25T15:10:25.290367Z` [review] **androoAGI/starnet — A living pixel-art station where real AI agents do real work. Local-first desktop agent harness - bring your own key, watch your crew actually run.** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-25T15:10:25.149127Z` [review] **AI-powered fuzzing with the GitHub Security Lab Taskflow Agent** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-25T15:10:25.007017Z` [review] **Ollama v0.40.0** — Version-only release without concrete capability: 'Ollama v0.40.0'
 - `2026-09-24T18:23:13.429747Z` [review] **Simon Willison v2.6** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-24T18:23:13.329299Z` [review] **Claude Code v2.1.271** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-24T18:23:13.230842Z` [review] **Advancing Private AI Compute with secure, server-side memory** — Post is empty; Post lacks a clear claim or insight
@@ -27,7 +31,3 @@ No pending review items.
 - `2026-09-21T19:14:26.531384Z` [review] **Pirate Face Rescues LLM Models from Deletion** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-21T19:14:26.393220Z` [review] **Llama Index v0.14.25** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-21T19:14:26.248654Z` [review] **vLLM v0.30.0** — Version-only release without concrete capability: 'vLLM v0.30.0'
-- `2026-09-21T16:27:24.373565Z` [review] **zhouxiaoka/autoclip — AutoClip : AI-powered video clipping and highlight generation · 一款智能高光提取与剪辑的二创工具** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-21T16:27:24.273689Z` [review] **Introducing the Australian Youth Safety Blueprint** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-21T16:27:24.178670Z` [review] **Why I still haven’t bought into true RSI** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-20T21:03:20.677574Z` [review] **langchain-typesafe==0.0.1a3** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'langchain-typesafe==0.0.1a3'
