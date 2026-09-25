@@ -13634,9 +13634,100 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-09-25T15:10:24.843964Z",
-    "defer_count": 1,
+    "deferred_at": "2026-09-25T18:26:35.404359Z",
+    "defer_count": 2,
     "original_score": 85,
     "original_reason": "GitHub release for Claude Code CLI with new integration capabilities and deployment stability fixes."
+  },
+  {
+    "id": "1aa52118d66e",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-09-25T18:26:23.983931Z",
+    "score": 70,
+    "reason": "Ollama v0.34.3 ships with a concrete API enhancement for model introspection, useful for programmatic configuration.",
+    "proposed_post": "Ollama v0.34.3 updates `/api/show` to expose model \"thinking controls\" and defaults. Builders can now programmatically inspect model capabilities for dynamic configuration.",
+    "source_angle": "Ollama API now provides more model metadata for programmatic use.",
+    "source_item": {
+      "title": "Ollama v0.34.3",
+      "source": "Ollama Releases",
+      "link": "https://github.com/ollama/ollama/releases/tag/v0.34.3",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 35,
+      "summary": "<h2>What's Changed</h2>\n<p><code>GET /api/show</code> now advertises each model's thinking controls and default:</p>\n<p>Available in the CLI with:</p>\n<div class=\"snippet-clipboard-content notranslate position-relative overflow-auto\"><pre class=\"notranslate\"><code>ollama show gemma4\n</code></pre></div>\n<div class=\"snippet-clipboard-content notranslate position-relative overflow-auto\"><pre class=\"notranslate\"><code>    thinking\n        levels     false, true\n        default    true\n</code></pre></div>\n<p>Available in the API with:</p>\n<div class=\"highlight highlight-source-shell notranslate position-relative overflow-auto\"><pre>curl http://localhost:11434/api/show -d <span class=\"pl-s\"><span class=\"pl-pds\">'</span>{\"model\": \"glm-5.3-flash:cloud\"}<span class=\"pl-pds\">'</span></span></pre></div>\n<div class=\"highlight highlight-source-json notranslate position-relative overflow-auto\"><pre>{\n  <span class=\"pl-ent\">\"thinking\"</span>: {\n    <span class=\"pl-ent\">\"values\"</span>: [<span class=\"pl-s\"><span class=\"pl-pds\">\"</span>low<span class=\"pl-pds\">\"</span></span>, <span class=\"pl-s\"><span class=\"pl-pds\">\"</span>high<span class=\"pl-pds\">\"</span></span>, <span class=\"pl-s\"><span class=\"pl-pds\">\"</span>max<span class=\"pl-pds\">\"</span></span>],\n    <span class=\"pl-ent\">\"default\"</span>: <span class=\"pl-s\"><span class=\"pl-pds\">\"</span>max<span class=\"pl-pds\">\"</span></span>\n  }\n}</pre></div>\n<p>Also available on ollama.com directly for cloud models.</p>\n<ul>\n<li><strong>Nemotron H</strong> vision models are now supported on Apple Silicon with MLX</li>\n<li>Ollama's macOS app will now no longer reopen windows you've closed when activating it</li>\n<li>Fix for model pulls from HuggingFace</li>\n</ul>\n<p><strong>Full Changelog</strong>: <a class=\"commit-link\" href=\"https://github.com/ollama/ollama/compare/v0.34.2...v0.34.3\"><tt>v0.34.2...v0.34.3</tt></a></p>\n[Cluster context: 1 sources, engagement 0, common terms: ollama, href, when, mlx, app.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Ollama Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "ollama",
+          "href",
+          "when",
+          "mlx",
+          "app",
+          "what",
+          "now",
+          "each"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: ollama, href, when, mlx. Lead: Ollama v0.34.3",
+        "alternative_titles": [
+          "Ollama v0.34.2-rc3",
+          "Ollama v0.34.2-rc2"
+        ],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-09-25T18:26:35.731356Z",
+    "defer_count": 1,
+    "original_score": 70,
+    "original_reason": "Ollama v0.34.3 ships with a concrete API enhancement for model introspection, useful for programmatic configuration."
+  },
+  {
+    "id": "daefa520ff2f",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-09-25T18:26:32.077074Z",
+    "score": 90,
+    "reason": "New Copilot feature allows natural language UI/workflow generation. Passes Ships Test as concrete capability for builders.",
+    "proposed_post": "GitHub Copilot now enables building custom workflows with \"canvases\" by describing interfaces in plain English. Builders can generate and update live surfaces, accelerating custom tool creation and task automation directly within their dev environment.",
+    "source_angle": "GitHub Copilot's new natural language UI/workflow generation.",
+    "source_item": {
+      "title": "GitHub Copilot app for Beginners: How to build custom workflows with canvases",
+      "source": "GitHub Blog AI",
+      "link": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-build-custom-workflows-with-canvases/",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 0,
+      "summary": "<p>Describe the interface you need in plain English, then let the agent build a live surface you can both use and update—so you spend less time adapting to tools and more time getting work done.</p>\n<p>The post <a href=\"https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-build-custom-workflows-with-canvases/\">GitHub Copilot app for Beginners: How to build custom workflows with canvases</a> appeared first on <a href=\"https://github.blog\">The GitHub Blog</a>.</p>\n[Cluster context: 1 sources, engagement 0, common terms: tools, canvases, need, describe, live.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Blog AI"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "tools",
+          "canvases",
+          "need",
+          "describe",
+          "live",
+          "time",
+          "beginners",
+          "interface"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: tools, canvases, need, describe. Lead: GitHub Copilot app for Beginners: How to build custom workflows with canvases",
+        "alternative_titles": [],
+        "cluster_score": 15
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-09-25T18:26:35.900215Z",
+    "defer_count": 1,
+    "original_score": 90,
+    "original_reason": "New Copilot feature allows natural language UI/workflow generation. Passes Ships Test as concrete capability for builders."
   }
 ]

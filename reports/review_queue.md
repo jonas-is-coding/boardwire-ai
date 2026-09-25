@@ -6,6 +6,9 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-09-25T18:26:36.177909Z` [review] **shy3130/tick-stock-panel — TSP自托管、零运维的 A 股「选股 + 监控 + 回测」量化工作台 | LLM能力驱使策略定制+个股分析+复盘 | 自由接入第三方数据源与个性化扩展数据 | 个人开源** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-25T18:26:36.038298Z` [review] **Airbnb widens access to GPT-6 Astra and OpenAI frontier models** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-25T18:26:35.570471Z` [review] **LangChain v1.6.5** — Version-only release without concrete capability: 'LangChain v1.6.5'
 - `2026-09-25T15:10:25.431116Z` [review] **LangChain v1.6.3** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.6.3'
 - `2026-09-25T15:10:25.290367Z` [review] **androoAGI/starnet — A living pixel-art station where real AI agents do real work. Local-first desktop agent harness - bring your own key, watch your crew actually run.** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-25T15:10:25.149127Z` [review] **AI-powered fuzzing with the GitHub Security Lab Taskflow Agent** — Post is empty; Post lacks a clear claim or insight
@@ -28,6 +31,3 @@ No pending review items.
 - `2026-09-22T14:42:29.534635Z` [review] **Claude Code v2.1.275** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-22T14:42:29.452115Z` [review] **LangChain v1.6.2** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.6.2'
 - `2026-09-22T14:42:29.369832Z` [review] **superdesigndev/treg — OpenRouter for agent tools. Join community here:  https://discord.gg/6mQYYfFMAn** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-21T19:14:26.531384Z` [review] **Pirate Face Rescues LLM Models from Deletion** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-21T19:14:26.393220Z` [review] **Llama Index v0.14.25** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-21T19:14:26.248654Z` [review] **vLLM v0.30.0** — Version-only release without concrete capability: 'vLLM v0.30.0'
