@@ -1423,6 +1423,18 @@
         "follows @s.ly"
       ],
       "followed_at": "2026-09-23T13:01:10.820939Z"
+    },
+    "did:plc:m662pcusozwdsbrelbz4mwyv": {
+      "handle": "lelandmcinnes.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mwdt5hwkl32f",
+      "channel": "seed_follows",
+      "score": 1.8,
+      "mode": "discover",
+      "via": [
+        "@emollick.bsky.social follows",
+        "list 3l7isyaxzwq2e"
+      ],
+      "followed_at": "2026-09-25T12:58:46.501624Z"
     }
   },
   "runs": [
@@ -1768,6 +1780,21 @@
       ],
       "started_at": "2026-09-23T13:01:10.588178Z",
       "finished_at": "2026-09-23T13:01:10.822321Z"
+    },
+    {
+      "mode": "discover",
+      "dry_run": false,
+      "limit": 12,
+      "planned": 0,
+      "followed": 1,
+      "skipped_already": 0,
+      "failed": 0,
+      "aborted": null,
+      "handles": [
+        "lelandmcinnes.bsky.social"
+      ],
+      "started_at": "2026-09-25T12:58:46.320992Z",
+      "finished_at": "2026-09-25T12:58:46.503810Z"
     }
   ],
   "pinned_thread": {
