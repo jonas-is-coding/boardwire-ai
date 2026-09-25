@@ -1,10 +1,10 @@
 # Boardwire Engagement Report
 
-Generated: `2026-09-24T08:50:56.717360Z`
+Generated: `2026-09-25T09:11:43.451571Z`
 
 ## Account
 
-- @boardwire.bsky.social: **31** followers (1d: +1, 7d: +4) · following 119 · posts 80 · snapshots 21 · as of `2026-09-24T08:50:42.830499Z`
+- @boardwire.bsky.social: **31** followers (1d: +0, 7d: +1) · following 119 · posts 80 · snapshots 22 · as of `2026-09-25T09:11:27.169042Z`
 
 ## Summary
 
@@ -243,12 +243,12 @@ Generated: `2026-09-24T08:50:56.717360Z`
    > Z-AI ships GLM-5.3 as open-weight model. Open weights on HuggingFace with dual context windows: 128K default, 1M optional. +574 HN engagemen…
 
 30. **2 pts** — cloudflare/security-audit-skill — A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings
-   likes 1 · reposts 0 · replies 1 · quotes 0 · age 182h · score 95
+   likes 1 · reposts 0 · replies 1 · quotes 0 · age 206h · score 95
    https://github.com/cloudflare/security-audit-skill
    > Cloudflare security-audit-skill lets agents run multi‑phase audits. cloudflare/security-audit-skill ★+1434, outputs verified, machine‑readab…
 
 31. **2 pts** — google/ax — Google's open agentic orchestration runtime
-   likes 1 · reposts 0 · replies 1 · quotes 0 · age 39h · score 95
+   likes 1 · reposts 0 · replies 1 · quotes 0 · age 63h · score 95
    https://github.com/google/ax
    > Google launches open-agent orchestration runtime for AI agents. google/ax provides an Apache‑2.0 runtime with +2324★ on GitHub for multi‑age…
 
@@ -1068,7 +1068,7 @@ Generated: `2026-09-24T08:50:56.717360Z`
    > Atlas turns agents into a first-class primitive with source control. pacifio/atlas manages multiple coding agents, tracks changes, and unifi…
 
 195. **0 pts** — Claude Code v2.1.266
-   likes 0 · reposts 0 · replies 0 · quotes 0 · age 327h · score 85
+   likes 0 · reposts 0 · replies 0 · quotes 0 · age 351h · score 85
    https://github.com/anthropics/claude-code/releases/tag/v2.1.266
    > Proxy reliability improves with Claude Code 2.1.266 fix. Claude Code 2.1.266 stops forced gateway sign‑in when CLAUDE_CODE_USE_GATEWAY lacks…
 
