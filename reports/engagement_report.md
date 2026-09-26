@@ -1,10 +1,10 @@
 # Boardwire Engagement Report
 
-Generated: `2026-09-25T09:11:43.451571Z`
+Generated: `2026-09-26T08:55:23.162966Z`
 
 ## Account
 
-- @boardwire.bsky.social: **31** followers (1d: +0, 7d: +1) · following 119 · posts 80 · snapshots 22 · as of `2026-09-25T09:11:27.169042Z`
+- @boardwire.bsky.social: **31** followers (1d: +0, 7d: +1) · following 120 · posts 80 · snapshots 23 · as of `2026-09-26T08:55:10.316401Z`
 
 ## Summary
 
@@ -243,12 +243,12 @@ Generated: `2026-09-25T09:11:43.451571Z`
    > Z-AI ships GLM-5.3 as open-weight model. Open weights on HuggingFace with dual context windows: 128K default, 1M optional. +574 HN engagemen…
 
 30. **2 pts** — cloudflare/security-audit-skill — A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings
-   likes 1 · reposts 0 · replies 1 · quotes 0 · age 206h · score 95
+   likes 1 · reposts 0 · replies 1 · quotes 0 · age 230h · score 95
    https://github.com/cloudflare/security-audit-skill
    > Cloudflare security-audit-skill lets agents run multi‑phase audits. cloudflare/security-audit-skill ★+1434, outputs verified, machine‑readab…
 
 31. **2 pts** — google/ax — Google's open agentic orchestration runtime
-   likes 1 · reposts 0 · replies 1 · quotes 0 · age 63h · score 95
+   likes 1 · reposts 0 · replies 1 · quotes 0 · age 87h · score 95
    https://github.com/google/ax
    > Google launches open-agent orchestration runtime for AI agents. google/ax provides an Apache‑2.0 runtime with +2324★ on GitHub for multi‑age…
 
