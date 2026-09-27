@@ -1,10 +1,10 @@
 # Boardwire Engagement Report
 
-Generated: `2026-09-26T08:55:23.162966Z`
+Generated: `2026-09-27T09:38:51.480363Z`
 
 ## Account
 
-- @boardwire.bsky.social: **31** followers (1d: +0, 7d: +1) · following 120 · posts 80 · snapshots 23 · as of `2026-09-26T08:55:10.316401Z`
+- @boardwire.bsky.social: **31** followers (1d: +0, 7d: +1) · following 120 · posts 80 · snapshots 24 · as of `2026-09-27T09:38:37.148195Z`
 
 ## Summary
 
@@ -36,7 +36,7 @@ Generated: `2026-09-26T08:55:23.162966Z`
 - 15:00 UTC: avg **0.7** (n=18)
 - 16:00 UTC: avg **0.5** (n=14)
 - 17:00 UTC: avg **0.2** (n=14)
-- 18:00 UTC: avg **1.4** (n=19)
+- 18:00 UTC: avg **1.5** (n=19)
 - 19:00 UTC: avg **0.8** (n=8)
 - 20:00 UTC: avg **1.1** (n=17)
 - 21:00 UTC: insufficient data (n<5, have 3)
@@ -57,19 +57,19 @@ Generated: `2026-09-26T08:55:23.162966Z`
 
 - plain: avg **0.6** (n=169)
 - question: avg **0.6** (n=16)
-- thread: avg **1.6** (n=10)
+- thread: avg **1.7** (n=10)
 
 ## Engagement by card variant
 
 - editorial_release: avg **0.6** (n=25)
-- editorial_repo: avg **0.9** (n=16)
+- editorial_repo: avg **1.0** (n=16)
 - editorial_security: insufficient data (n<5, have 3)
 - editorial_stat: avg **0.7** (n=10)
 
 ## Engagement by hashtag combination
 
 - #AI #AIAgents: insufficient data (n<5, have 2)
-- #AI #AIAgents #DevTools: avg **0.8** (n=6)
+- #AI #AIAgents #DevTools: avg **1.0** (n=6)
 - #AI #AIAgents #InfoSec: insufficient data (n<5, have 1)
 - #AI #HuggingFace #OpenWeights: insufficient data (n<5, have 2)
 - #AI #LLM: insufficient data (n<5, have 3)
@@ -172,85 +172,85 @@ Generated: `2026-09-26T08:55:23.162966Z`
    https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.4.2
    > LangChain fixes context errors. LangChain v1.4.2 handles ContextWindowExceededError, +0 stars. Anyone running this with OpenAI models? #Open…
 
-16. **2 pts** — chopratejas/headroom — Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 60-95% fewer tokens, same answers. Library, proxy, MCP server.
+16. **3 pts** — google/ax — Google's open agentic orchestration runtime
+   likes 2 · reposts 0 · replies 1 · quotes 0 · age 111h · score 95
+   https://github.com/google/ax
+   > Google launches open-agent orchestration runtime for AI agents. google/ax provides an Apache‑2.0 runtime with +2324★ on GitHub for multi‑age…
+
+17. **2 pts** — chopratejas/headroom — Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 60-95% fewer tokens, same answers. Library, proxy, MCP server.
    likes 2 · reposts 0 · replies 0 · quotes 0 · age 348h · score 95
    https://github.com/chopratejas/headroom
    > Headroom compresses LLM context before inference. chopratejas/headroom library, proxy, and MCP server cuts tool outputs, logs, and RAG chunk…
 
-17. **2 pts** — NousResearch/hermes-agent — The agent that grows with you
+18. **2 pts** — NousResearch/hermes-agent — The agent that grows with you
    likes 1 · reposts 0 · replies 1 · quotes 0 · age 349h · score 90
    https://github.com/NousResearch/hermes-agent
    > Agent memory is becoming infrastructure. Hermes-agent turns recall into persistent state for coding-agent workflows, with +1736 stars today.…
 
-18. **2 pts** — Show HN: Lowfat – pluggable CLI filter that saved 91.8% of my LLM tokens
+19. **2 pts** — Show HN: Lowfat – pluggable CLI filter that saved 91.8% of my LLM tokens
    likes 2 · reposts 0 · replies 0 · quotes 0 · age 355h · score 90
    https://github.com/zdk/lowfat
    > LLM token usage drops with pluggable CLI filters. Lowfat reduces LLM input tokens by up to 91.8%, Apache 2.0 licensed. Lowfat is a new open-…
 
-19. **2 pts** — LangChain v1.1.0
+20. **2 pts** — LangChain v1.1.0
    likes 0 · reposts 0 · replies 0 · quotes 0 · age 349h · score 60
    https://github.com/langchain-ai/langchain/releases/tag/langchain-deepseek%3D%3D1.1.0
    > LangChain v1.1.0 ships local execution for coding agents. Adds new generation providers under MPL 2.0 license with local model support. Lang…
 
-20. **2 pts** — mattpocock/skills — Skills for Real Engineers. Straight from my .claude directory.
+21. **2 pts** — mattpocock/skills — Skills for Real Engineers. Straight from my .claude directory.
    likes 2 · reposts 0 · replies 0 · quotes 0 · age 350h · score 95
    https://github.com/mattpocock/skills
    > Claude skills become open infrastructure. mattpocock/skills adds 1849 stars with prompt engineering techniques for real engineers. Directly …
 
-21. **2 pts** — Anthropic Python SDK v0.110.0
+22. **2 pts** — Anthropic Python SDK v0.110.0
    likes 1 · reposts 0 · replies 1 · quotes 0 · age 358h · score 95
    https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.110.0
    > Anthropic Python SDK adds code execution tool for agents. v0.110.0 exposes code_execution_20260120 for direct integration into agent loops. …
 
-22. **2 pts** — Identity verification on Claude
+23. **2 pts** — Identity verification on Claude
    likes 2 · reposts 0 · replies 0 · quotes 0 · age 348h · score 75
    https://support.claude.com/en/articles/14328960-identity-verification-on-claude
    > Claude now requires identity verification. Impacts user onboarding, account management, and API access with 228 points on Hacker News. Anthr…
 
-23. **2 pts** — browser-use/video-use — Edit videos with coding agents
+24. **2 pts** — browser-use/video-use — Edit videos with coding agents
    likes 1 · reposts 0 · replies 1 · quotes 0 · age 345h · score 90
    https://github.com/browser-use/video-use
    > VideoUse adds programmatic video editing for coding agents. browser-use/vid enables agent-driven video edits in browser workflows with +186 …
 
-24. **2 pts** — 0xNyk/council-of-high-intelligence — 18 AI personas deliberate your hardest decisions across multiple LLM providers. Aristotle, Feynman, Kahneman, Torvalds & more — structured multi-round deliberation
+25. **2 pts** — 0xNyk/council-of-high-intelligence — 18 AI personas deliberate your hardest decisions across multiple LLM providers. Aristotle, Feynman, Kahneman, Torvalds & more — structured multi-round deliberation
    likes 2 · reposts 0 · replies 0 · quotes 0 · age 347h · score 90
    https://github.com/0xNyk/council-of-high-intelligence
    > Council-of-high-intelligence ships multi-agent deliberation as a primi 0xNyk/council-of-high-intelligence runs 18 AI personas across LLM pro…
 
-25. **2 pts** — Zackriya-Solutions/meetily — Privacy first, AI meeting assistant with 4x faster Parakeet/Whisper live transcription, speaker diarization, and Ollama summarization built on Rust. 100% local processing.
+26. **2 pts** — Zackriya-Solutions/meetily — Privacy first, AI meeting assistant with 4x faster Parakeet/Whisper live transcription, speaker diarization, and Ollama summarization built on Rust. 100% local processing.
    likes 2 · reposts 0 · replies 0 · quotes 0 · age 231h · score 92
    https://github.com/Zackriya-Solutions/meetily
    > Meetily brings local AI meeting transcription. 4x faster Parakeet/Whisper transcription and Ollama summarization with 607 stars, 100% local …
 
-26. **2 pts** — vLLM v0.25.0
+27. **2 pts** — vLLM v0.25.0
    likes 2 · reposts 0 · replies 0 · quotes 0 · age 111h · score 90
    https://github.com/vllm-project/vllm/releases/tag/v0.25.0
    > vLLM ships PagedAttention v2 for batched inference. vLLM v0.25.0 enables +22% throughput and lower latency on A100 GPUs. Apache 2.0. New Bat…
 
-27. **2 pts** — Codex Security
+28. **2 pts** — Codex Security
    likes 2 · reposts 0 · replies 0 · quotes 0 · age 346h · score 90
    https://github.com/openai/codex-security
    > OpenAI releases Codex Security repo. GitHub repo provides LLM code security guidelines, +197 comments on HN. #OpenSource #InfoSec
 
-28. **2 pts** — openai/codex — Lightweight coding agent that runs in your terminal
+29. **2 pts** — openai/codex — Lightweight coding agent that runs in your terminal
    likes 2 · reposts 0 · replies 0 · quotes 0 · age 346h · score 90
    https://github.com/openai/codex
    > Terminal coding agents are moving from plugins to core primitives. Codex CLI ships a lightweight coding agent that runs natively in terminal…
 
-29. **2 pts** — GLM-5.3 is now open-weight
+30. **2 pts** — GLM-5.3 is now open-weight
    likes 1 · reposts 0 · replies 1 · quotes 0 · age 345h · score 95
    https://huggingface.co/zai-org/GLM-5.3
    > Z-AI ships GLM-5.3 as open-weight model. Open weights on HuggingFace with dual context windows: 128K default, 1M optional. +574 HN engagemen…
 
-30. **2 pts** — cloudflare/security-audit-skill — A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings
-   likes 1 · reposts 0 · replies 1 · quotes 0 · age 230h · score 95
+31. **2 pts** — cloudflare/security-audit-skill — A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings
+   likes 1 · reposts 0 · replies 1 · quotes 0 · age 255h · score 95
    https://github.com/cloudflare/security-audit-skill
    > Cloudflare security-audit-skill lets agents run multi‑phase audits. cloudflare/security-audit-skill ★+1434, outputs verified, machine‑readab…
-
-31. **2 pts** — google/ax — Google's open agentic orchestration runtime
-   likes 1 · reposts 0 · replies 1 · quotes 0 · age 87h · score 95
-   https://github.com/google/ax
-   > Google launches open-agent orchestration runtime for AI agents. google/ax provides an Apache‑2.0 runtime with +2324★ on GitHub for multi‑age…
 
 32. **1 pts** — Lum1104/Understand-Anything — Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex
    likes 1 · reposts 0 · replies 0 · quotes 0 · age 358h · score 105
