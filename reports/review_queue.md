@@ -6,6 +6,10 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-09-27T21:35:52.858590Z` [review] **Parallel cut research time and cost in half with GPT‑6 Astra** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-27T21:35:52.769328Z` [review] **LangChain v1.6.4** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.6.4'
+- `2026-09-27T21:35:52.689745Z` [review] **Claude Code v2.1.283** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-27T21:35:52.387868Z` [review] **Claude Code v2.1.282** — Duplicate or near-duplicate post detected
 - `2026-09-25T18:26:36.177909Z` [review] **shy3130/tick-stock-panel — TSP自托管、零运维的 A 股「选股 + 监控 + 回测」量化工作台 | LLM能力驱使策略定制+个股分析+复盘 | 自由接入第三方数据源与个性化扩展数据 | 个人开源** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-25T18:26:36.038298Z` [review] **Airbnb widens access to GPT-6 Astra and OpenAI frontier models** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-25T18:26:35.570471Z` [review] **LangChain v1.6.5** — Version-only release without concrete capability: 'LangChain v1.6.5'
@@ -27,7 +31,3 @@ No pending review items.
 - `2026-09-23T14:55:20.537510Z` [review] **Open-Dev-Society/OpenStock — OpenStock is an open-source alternative to expensive market platforms. Track real-time prices, set personalized alerts, and explore detailed company insights — built openl** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-23T14:55:20.400306Z` [review] **strands-agents/harness-sdk — Build an agent harness and control it end-to-end. Open-source SDK for production AI agents in Python & TypeScript - any model, any cloud.** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-22T18:02:30.300726Z` [review] **Priorities and principles for effective third party assessments** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-22T18:02:30.207711Z` [review] **Advisory Group on Mathematics and Artificial Intelligence** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-22T14:42:29.534635Z` [review] **Claude Code v2.1.275** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-22T14:42:29.452115Z` [review] **LangChain v1.6.2** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.6.2'
-- `2026-09-22T14:42:29.369832Z` [review] **superdesigndev/treg — OpenRouter for agent tools. Join community here:  https://discord.gg/6mQYYfFMAn** — Post is empty; Post lacks a clear claim or insight

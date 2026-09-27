@@ -1288,5 +1288,45 @@
       "Post is empty",
       "Post lacks a clear claim or insight"
     ]
+  },
+  {
+    "rejected_at": "2026-09-27T21:35:52.387868Z",
+    "stage": "review",
+    "title": "Claude Code v2.1.282",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.282",
+    "reasons": [
+      "Duplicate or near-duplicate post detected"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-27T21:35:52.689745Z",
+    "stage": "review",
+    "title": "Claude Code v2.1.283",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.283",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-27T21:35:52.769328Z",
+    "stage": "review",
+    "title": "LangChain v1.6.4",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.6.4",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight",
+      "Version-only release without concrete capability: 'LangChain v1.6.4'"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-27T21:35:52.858590Z",
+    "stage": "review",
+    "title": "Parallel cut research time and cost in half with GPT‑6 Astra",
+    "link": "https://openai.com/index/parallel-cuts-time-and-cost-with-astra",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
   }
 ]
