@@ -1348,5 +1348,26 @@
       "Post is empty",
       "Post lacks a clear claim or insight"
     ]
+  },
+  {
+    "rejected_at": "2026-09-28T20:29:13.177410Z",
+    "stage": "review",
+    "title": "Prompting Claude Opus 5.5",
+    "link": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5-5",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight",
+      "Version-only release without concrete capability: 'Prompting Claude Opus 5.5'"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-28T20:29:13.257591Z",
+    "stage": "review",
+    "title": "Holo4: powering generalist computer-use agents",
+    "link": "https://huggingface.co/blog/Hcompany/holo4",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
   }
 ]

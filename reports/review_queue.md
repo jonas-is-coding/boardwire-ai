@@ -6,6 +6,8 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-09-28T20:29:13.257591Z` [review] **Holo4: powering generalist computer-use agents** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-28T20:29:13.177410Z` [review] **Prompting Claude Opus 5.5** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'Prompting Claude Opus 5.5'
 - `2026-09-28T18:06:17.106294Z` [review] **Two years of OpenAI Academy** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-28T18:06:17.028125Z` [review] **There are no "rogue" AI agents** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-27T21:35:52.858590Z` [review] **Parallel cut research time and cost in half with GPT‑6 Astra** — Post is empty; Post lacks a clear claim or insight
@@ -29,5 +31,3 @@ No pending review items.
 - `2026-09-23T18:21:58.113054Z` [review] **vLLM v0.30.1rc0** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.30.1rc0'
 - `2026-09-23T18:21:57.970387Z` [review] **LangChain v1.7.4** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-23T18:21:56.408005Z` [review] **Claude Opus 5.5** — Version-only release without concrete capability: 'Claude Opus 5.5'
-- `2026-09-23T14:55:20.675130Z` [review] **HKUDS/CLI-Anything — "CLI-Anything: Making ALL Software Agent-Native" -- CLI-Hub:  https://clianything.cc/** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-23T14:55:20.537510Z` [review] **Open-Dev-Society/OpenStock — OpenStock is an open-source alternative to expensive market platforms. Track real-time prices, set personalized alerts, and explore detailed company insights — built openl** — Post is empty; Post lacks a clear claim or insight
