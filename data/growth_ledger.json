@@ -1435,6 +1435,19 @@
         "list 3l7isyaxzwq2e"
       ],
       "followed_at": "2026-09-25T12:58:46.501624Z"
+    },
+    "did:plc:7yzi3b3diq6jxbpfpxhmm62s": {
+      "handle": "mikedemo.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mwloju3qus26",
+      "channel": "seed_followers",
+      "score": 2.0,
+      "mode": "discover",
+      "via": [
+        "follows @simonwillison.net",
+        "follows @natolambert.bsky.social",
+        "follows @emollick.bsky.social"
+      ],
+      "followed_at": "2026-09-28T15:57:31.111511Z"
     }
   },
   "runs": [
@@ -1795,6 +1808,21 @@
       ],
       "started_at": "2026-09-25T12:58:46.320992Z",
       "finished_at": "2026-09-25T12:58:46.503810Z"
+    },
+    {
+      "mode": "discover",
+      "dry_run": false,
+      "limit": 12,
+      "planned": 0,
+      "followed": 1,
+      "skipped_already": 0,
+      "failed": 0,
+      "aborted": null,
+      "handles": [
+        "mikedemo.bsky.social"
+      ],
+      "started_at": "2026-09-28T15:57:30.933404Z",
+      "finished_at": "2026-09-28T15:57:31.113669Z"
     }
   ],
   "pinned_thread": {
