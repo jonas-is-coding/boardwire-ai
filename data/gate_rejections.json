@@ -1328,5 +1328,25 @@
       "Post is empty",
       "Post lacks a clear claim or insight"
     ]
+  },
+  {
+    "rejected_at": "2026-09-28T18:06:17.028125Z",
+    "stage": "review",
+    "title": "There are no \"rogue\" AI agents",
+    "link": "https://eoinhiggins.substack.com/p/there-are-no-rogue-ai-agents",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-28T18:06:17.106294Z",
+    "stage": "review",
+    "title": "Two years of OpenAI Academy",
+    "link": "https://openai.com/index/two-years-of-openai-academy",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
   }
 ]

@@ -6,6 +6,8 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-09-28T18:06:17.106294Z` [review] **Two years of OpenAI Academy** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-28T18:06:17.028125Z` [review] **There are no "rogue" AI agents** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-27T21:35:52.858590Z` [review] **Parallel cut research time and cost in half with GPT‑6 Astra** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-27T21:35:52.769328Z` [review] **LangChain v1.6.4** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.6.4'
 - `2026-09-27T21:35:52.689745Z` [review] **Claude Code v2.1.283** — Post is empty; Post lacks a clear claim or insight
@@ -29,5 +31,3 @@ No pending review items.
 - `2026-09-23T18:21:56.408005Z` [review] **Claude Opus 5.5** — Version-only release without concrete capability: 'Claude Opus 5.5'
 - `2026-09-23T14:55:20.675130Z` [review] **HKUDS/CLI-Anything — "CLI-Anything: Making ALL Software Agent-Native" -- CLI-Hub:  https://clianything.cc/** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-23T14:55:20.537510Z` [review] **Open-Dev-Society/OpenStock — OpenStock is an open-source alternative to expensive market platforms. Track real-time prices, set personalized alerts, and explore detailed company insights — built openl** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-23T14:55:20.400306Z` [review] **strands-agents/harness-sdk — Build an agent harness and control it end-to-end. Open-source SDK for production AI agents in Python & TypeScript - any model, any cloud.** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-22T18:02:30.300726Z` [review] **Priorities and principles for effective third party assessments** — Post is empty; Post lacks a clear claim or insight

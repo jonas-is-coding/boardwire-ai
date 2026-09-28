@@ -13734,12 +13734,12 @@
   },
   {
     "id": "64e5476cb8f8",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-09-27T21:35:47.263316Z",
+    "status": "approved",
+    "created_at": "2026-09-28T18:06:16.950031Z",
     "score": 90,
-    "reason": "Open-source tool launch for multi-agent orchestration of Claude Code and Codex. Ships today.",
-    "proposed_post": "New open-source tool `mvschwarz/openrig` released, a multi-agent harness for Claude Code and Codex. Builders can now orchestrate these models together for more robust code generation and task execution.",
-    "source_angle": "Open-source tool for multi-agent LLM orchestration",
+    "reason": "Open-source tool launch for multi-agent orchestration, ships today. Clear utility for builders combining LLMs.",
+    "proposed_post": "mvschwarz/openrig, an open-source multi-agent harness, is now available. It lets builders orchestrate Claude Code and Codex together, enabling hybrid agent systems for complex coding tasks.",
+    "source_angle": "Open-source multi-agent harness for Claude Code and Codex",
     "source_item": {
       "title": "mvschwarz/openrig — Multi-agent harness that runs Claude Code and Codex together as one system",
       "source": "GitHub Trending",
@@ -13771,9 +13771,7 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-09-27T21:35:52.602407Z",
-    "defer_count": 1,
-    "original_score": 90,
-    "original_reason": "Open-source tool launch for multi-agent orchestration of Claude Code and Codex. Ships today."
+    "breaking": false,
+    "reactivated_at": "2026-09-28T18:06:16.950031Z"
   }
 ]
