@@ -13776,12 +13776,12 @@
   },
   {
     "id": "05a7087235eb",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-09-28T20:28:58.579064Z",
-    "score": 90,
-    "reason": "SDK update ships with new model and tool-use feature. Directly actionable for developers.",
-    "proposed_post": "Anthropic Python SDK v1.9.0 adds `claude-sonnet-5-5` and a `between_tools` thinking type. Update your SDK to access the new Sonnet model and explore enhanced tool-use reasoning for complex agentic workflows.",
-    "source_angle": "Anthropic SDK update adds new model and tool-use API.",
+    "status": "approved",
+    "created_at": "2026-09-29T16:29:19.446719Z",
+    "score": 95,
+    "reason": "Anthropic SDK update with new model and tool-use feature is a direct, actionable release for developers.",
+    "proposed_post": "Anthropic Python SDK v1.9.0 ships with a new model and tool-use feature. Builders can immediately leverage these capabilities to enhance their Claude integrations.",
+    "source_angle": "Anthropic SDK update with new model and tool-use",
     "source_item": {
       "title": "Anthropic Python SDK v1.9.0",
       "source": "Anthropic Python SDK Releases",
@@ -13813,14 +13813,12 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-09-28T20:29:12.910857Z",
-    "defer_count": 1,
-    "original_score": 90,
-    "original_reason": "SDK update ships with new model and tool-use feature. Directly actionable for developers."
+    "breaking": false,
+    "reactivated_at": "2026-09-29T16:29:19.446719Z"
   },
   {
     "id": "0f5e98f5ab90",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-09-28T20:29:03.141639Z",
     "score": 90,
     "reason": "New LangChain version with direct support for Bedrock Mantle models and a fix for GPT-6 structured output. Clear, actionable update.",
@@ -13863,16 +13861,17 @@
     "deferred_at": "2026-09-28T20:29:13.007804Z",
     "defer_count": 1,
     "original_score": 90,
-    "original_reason": "New LangChain version with direct support for Bedrock Mantle models and a fix for GPT-6 structured output. Clear, actionable update."
+    "original_reason": "New LangChain version with direct support for Bedrock Mantle models and a fix for GPT-6 structured output. Clear, actionable update.",
+    "rejected_at": "2026-09-29T16:29:19.576974Z"
   },
   {
     "id": "1d50740ce4ae",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-09-28T20:29:08.214111Z",
+    "status": "approved",
+    "created_at": "2026-09-29T16:29:19.694262Z",
     "score": 90,
-    "reason": "New API in a widely used local LLM runtime, available now as an RC. Passes Ships Test.",
-    "proposed_post": "Ollama v0.35.0-rc0 adds a System One scoring API. Builders can now integrate local model evaluation or response scoring directly into their Ollama workflows.",
-    "source_angle": "Ollama adds local model scoring API",
+    "reason": "New API in Ollama RC is a concrete, usable release for local LLM integration. Passes Ships Test.",
+    "proposed_post": "Ollama v0.35.0-rc0 ships with a new API, available as an RC. Builders can use this immediately to integrate local LLMs with updated capabilities or improved workflows.",
+    "source_angle": "Ollama new API for local LLM integration",
     "source_item": {
       "title": "Ollama v0.35.0-rc0",
       "source": "Ollama Releases",
@@ -13904,10 +13903,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-09-28T20:29:13.100149Z",
-    "defer_count": 1,
-    "original_score": 90,
-    "original_reason": "New API in a widely used local LLM runtime, available now as an RC. Passes Ships Test."
+    "breaking": false,
+    "reactivated_at": "2026-09-29T16:29:19.694262Z"
   },
   {
     "id": "01b06d01028b",

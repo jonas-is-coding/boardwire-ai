@@ -1369,5 +1369,54 @@
       "Post is empty",
       "Post lacks a clear claim or insight"
     ]
+  },
+  {
+    "rejected_at": "2026-09-29T16:29:19.575492Z",
+    "stage": "review",
+    "title": "LangChain v1.4.3",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.4.3",
+    "reasons": [
+      "Version-only release without concrete capability: 'LangChain v1.4.3'"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-29T16:29:19.794204Z",
+    "stage": "review",
+    "title": "Sonnet 5.5",
+    "link": "https://www.anthropic.com/claude-sonnet-5-5",
+    "reasons": [
+      "Version-only release without concrete capability: 'Sonnet 5.5'"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-29T16:29:19.894897Z",
+    "stage": "review",
+    "title": "Ollama v0.35.0",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.35.0",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-29T16:29:19.994953Z",
+    "stage": "review",
+    "title": "NVIDIA/OpenShell — OpenShell is the safe, private runtime for autonomous AI agents.",
+    "link": "https://github.com/NVIDIA/OpenShell",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-29T16:29:20.096215Z",
+    "stage": "review",
+    "title": "LangChain v1.7.5",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-anthropic%3D%3D1.7.5",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight",
+      "Version-only release without concrete capability: 'LangChain v1.7.5'"
+    ]
   }
 ]

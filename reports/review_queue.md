@@ -6,6 +6,11 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-09-29T16:29:20.096215Z` [review] **LangChain v1.7.5** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.7.5'
+- `2026-09-29T16:29:19.994953Z` [review] **NVIDIA/OpenShell — OpenShell is the safe, private runtime for autonomous AI agents.** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-29T16:29:19.894897Z` [review] **Ollama v0.35.0** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-29T16:29:19.794204Z` [review] **Sonnet 5.5** — Version-only release without concrete capability: 'Sonnet 5.5'
+- `2026-09-29T16:29:19.575492Z` [review] **LangChain v1.4.3** — Version-only release without concrete capability: 'LangChain v1.4.3'
 - `2026-09-28T20:29:13.257591Z` [review] **Holo4: powering generalist computer-use agents** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-28T20:29:13.177410Z` [review] **Prompting Claude Opus 5.5** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'Prompting Claude Opus 5.5'
 - `2026-09-28T18:06:17.106294Z` [review] **Two years of OpenAI Academy** — Post is empty; Post lacks a clear claim or insight
@@ -26,8 +31,3 @@ No pending review items.
 - `2026-09-24T18:23:13.230842Z` [review] **Advancing Private AI Compute with secure, server-side memory** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-24T18:23:13.134175Z` [review] **LangChain v1.6.5** — Version-only release without concrete capability: 'LangChain v1.6.5'
 - `2026-09-24T14:56:24.360428Z` [review] **leejet/stable-diffusion.cpp — Diffusion model(SD,Flux,Wan,Qwen Image,Z-Image,...) inference in pure C/C++** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-24T14:56:24.262747Z` [review] **NVIDIA/Model-Optimizer — A unified library of SOTA model optimization techniques like quantization, distillation, pruning, neural architecture search, speculative decoding, etc. It compresses deep lea** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-24T14:56:24.165718Z` [review] **LangChain v1.6.6** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.6.6'
-- `2026-09-23T18:21:58.113054Z` [review] **vLLM v0.30.1rc0** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.30.1rc0'
-- `2026-09-23T18:21:57.970387Z` [review] **LangChain v1.7.4** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-23T18:21:56.408005Z` [review] **Claude Opus 5.5** — Version-only release without concrete capability: 'Claude Opus 5.5'
