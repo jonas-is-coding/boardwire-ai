@@ -6,6 +6,9 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-09-29T19:15:34.865717Z` [review] **Uncensored and Offensive Security AI Models Benchmark** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-29T19:15:34.720094Z` [review] **t8y2/dbx — 25 MB lightweight cross-platform database client for 100+ databases, including MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, SQL Server, and Dameng. Built-in AI, MCP Server, CLI, deskt** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-29T19:15:34.572100Z` [review] **LangChain v1.6.6** — Version-only release without concrete capability: 'LangChain v1.6.6'
 - `2026-09-29T16:29:20.096215Z` [review] **LangChain v1.7.5** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.7.5'
 - `2026-09-29T16:29:19.994953Z` [review] **NVIDIA/OpenShell — OpenShell is the safe, private runtime for autonomous AI agents.** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-29T16:29:19.894897Z` [review] **Ollama v0.35.0** — Post is empty; Post lacks a clear claim or insight
@@ -28,6 +31,3 @@ No pending review items.
 - `2026-09-25T15:10:25.007017Z` [review] **Ollama v0.40.0** — Version-only release without concrete capability: 'Ollama v0.40.0'
 - `2026-09-24T18:23:13.429747Z` [review] **Simon Willison v2.6** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-24T18:23:13.329299Z` [review] **Claude Code v2.1.271** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-24T18:23:13.230842Z` [review] **Advancing Private AI Compute with secure, server-side memory** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-24T18:23:13.134175Z` [review] **LangChain v1.6.5** — Version-only release without concrete capability: 'LangChain v1.6.5'
-- `2026-09-24T14:56:24.360428Z` [review] **leejet/stable-diffusion.cpp — Diffusion model(SD,Flux,Wan,Qwen Image,Z-Image,...) inference in pure C/C++** — Post is empty; Post lacks a clear claim or insight

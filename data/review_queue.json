@@ -13948,5 +13948,49 @@
     "breaking": false,
     "claire_note": "Chloe, schau mal hier: Claude Code v2.1.284.\n\nDie Einführung von Sonnet 5.5 mit 1M Kontext und den neuen Preisen ist krass. Für Entwickler bedeutet das: größere Codebases, komplexere Logik oder ganze Projekt-Setups können jetzt in einem einzigen Kontext verarbeitet werden, ohne aufwendiges Chunking. Das macht Prototyping und Refactoring mit Claude deutlich effizienter und potenziell günstiger durch die Cache Reads.",
     "chloe_note": "Genehmigt. Der Ships Test ist bestanden, da Sonnet 5.5 mit 1M Kontext direkt via API verfügbar ist und eine klare Preisstruktur hat. Entwickler können es sofort nutzen, um ihre Codebases zu verarbeiten."
+  },
+  {
+    "id": "9a1fe9fb8f47",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-09-29T19:15:13.489225Z",
+    "score": 95,
+    "reason": "New OpenAI model with significant, quantifiable cost reduction for API access. Direct impact on builder economics.",
+    "proposed_post": "OpenAI released GPT-6.1 Sol, offering near-Astra intelligence for coding and computer use. Builders can now achieve similar performance to Astra at 1/5th the API token price, directly impacting application cost efficiency.",
+    "source_angle": "OpenAI's new model offers near-Astra performance at 1/5th the cost.",
+    "source_item": {
+      "title": "Introducing GPT-6.1 Sol",
+      "source": "OpenAI News",
+      "link": "https://openai.com/index/introducing-gpt-6-1-sol",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 35,
+      "summary": "Meet GPT-6.1 Sol: near-Astra intelligence for coding, computer use, and professional work at one-fifth of Astra’s standard API input and output token prices.\n[Cluster context: 1 sources, engagement 0, common terms: input, standard, astra, work, sol.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "OpenAI News"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "input",
+          "standard",
+          "astra",
+          "work",
+          "sol",
+          "token",
+          "computer",
+          "prices."
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: input, standard, astra, work. Lead: Introducing GPT-6.1 Sol",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-09-29T19:15:34.408234Z",
+    "defer_count": 1,
+    "original_score": 95,
+    "original_reason": "New OpenAI model with significant, quantifiable cost reduction for API access. Direct impact on builder economics."
   }
 ]

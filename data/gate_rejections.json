@@ -1418,5 +1418,34 @@
       "Post lacks a clear claim or insight",
       "Version-only release without concrete capability: 'LangChain v1.7.5'"
     ]
+  },
+  {
+    "rejected_at": "2026-09-29T19:15:34.572100Z",
+    "stage": "review",
+    "title": "LangChain v1.6.6",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.6.6",
+    "reasons": [
+      "Version-only release without concrete capability: 'LangChain v1.6.6'"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-29T19:15:34.720094Z",
+    "stage": "review",
+    "title": "t8y2/dbx — 25 MB lightweight cross-platform database client for 100+ databases, including MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, SQL Server, and Dameng. Built-in AI, MCP Server, CLI, deskt",
+    "link": "https://github.com/t8y2/dbx",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-29T19:15:34.865717Z",
+    "stage": "review",
+    "title": "Uncensored and Offensive Security AI Models Benchmark",
+    "link": "https://github.com/JoasASantos/Offensive-Security-AI-Models",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
   }
 ]
