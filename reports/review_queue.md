@@ -6,6 +6,10 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-09-30T16:24:19.081550Z` [review] **Towards safety cases for frontier AI training** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-30T16:24:18.947906Z` [review] **Introducing SynthID Bio** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-30T16:24:18.814454Z` [review] **DraftKings is using AI to behaviorally target chronic gamblers** — Post is empty; Post lacks a clear claim or insight
+- `2026-09-30T16:24:18.678962Z` [review] **LangChain v1.6.7** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.6.7'
 - `2026-09-29T19:15:34.865717Z` [review] **Uncensored and Offensive Security AI Models Benchmark** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-29T19:15:34.720094Z` [review] **t8y2/dbx — 25 MB lightweight cross-platform database client for 100+ databases, including MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, SQL Server, and Dameng. Built-in AI, MCP Server, CLI, deskt** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-29T19:15:34.572100Z` [review] **LangChain v1.6.6** — Version-only release without concrete capability: 'LangChain v1.6.6'
@@ -27,7 +31,3 @@ No pending review items.
 - `2026-09-25T18:26:35.570471Z` [review] **LangChain v1.6.5** — Version-only release without concrete capability: 'LangChain v1.6.5'
 - `2026-09-25T15:10:25.431116Z` [review] **LangChain v1.6.3** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.6.3'
 - `2026-09-25T15:10:25.290367Z` [review] **androoAGI/starnet — A living pixel-art station where real AI agents do real work. Local-first desktop agent harness - bring your own key, watch your crew actually run.** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-25T15:10:25.149127Z` [review] **AI-powered fuzzing with the GitHub Security Lab Taskflow Agent** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-25T15:10:25.007017Z` [review] **Ollama v0.40.0** — Version-only release without concrete capability: 'Ollama v0.40.0'
-- `2026-09-24T18:23:13.429747Z` [review] **Simon Willison v2.6** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-24T18:23:13.329299Z` [review] **Claude Code v2.1.271** — Post is empty; Post lacks a clear claim or insight

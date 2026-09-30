@@ -1447,5 +1447,46 @@
       "Post is empty",
       "Post lacks a clear claim or insight"
     ]
+  },
+  {
+    "rejected_at": "2026-09-30T16:24:18.678962Z",
+    "stage": "review",
+    "title": "LangChain v1.6.7",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.6.7",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight",
+      "Version-only release without concrete capability: 'LangChain v1.6.7'"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-30T16:24:18.814454Z",
+    "stage": "review",
+    "title": "DraftKings is using AI to behaviorally target chronic gamblers",
+    "link": "https://www.eff.org/deeplinks/2026/09/draftkings-using-ai-supercharge-harms-online-behavioral-advertising",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-30T16:24:18.947906Z",
+    "stage": "review",
+    "title": "Introducing SynthID Bio",
+    "link": "https://deepmind.google/blog/introducing-synthid-bio/",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-30T16:24:19.081550Z",
+    "stage": "review",
+    "title": "Towards safety cases for frontier AI training",
+    "link": "https://openai.com/index/towards-safety-cases-for-frontier-ai-training",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
   }
 ]
