@@ -1488,5 +1488,36 @@
       "Post is empty",
       "Post lacks a clear claim or insight"
     ]
+  },
+  {
+    "rejected_at": "2026-09-30T19:03:48.658187Z",
+    "stage": "review",
+    "title": "Claude Code v2.1.285",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.285",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-30T19:03:48.805598Z",
+    "stage": "review",
+    "title": "vLLM v0.4.0",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/proto-v0.4.0",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight",
+      "Version-only release without concrete capability: 'vLLM v0.4.0'"
+    ]
+  },
+  {
+    "rejected_at": "2026-09-30T19:03:48.955068Z",
+    "stage": "review",
+    "title": "LangChain v1.7.0",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-fireworks%3D%3D1.7.0",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
   }
 ]

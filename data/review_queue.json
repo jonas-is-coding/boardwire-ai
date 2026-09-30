@@ -13953,12 +13953,12 @@
   },
   {
     "id": "9a1fe9fb8f47",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-09-29T19:15:13.489225Z",
+    "status": "approved",
+    "created_at": "2026-09-30T19:03:47.618447Z",
     "score": 95,
-    "reason": "New OpenAI model with significant, quantifiable cost reduction for API access. Direct impact on builder economics.",
-    "proposed_post": "OpenAI released GPT-6.1 Sol, offering near-Astra intelligence for coding and computer use. Builders can now achieve similar performance to Astra at 1/5th the API token price, directly impacting application cost efficiency.",
-    "source_angle": "OpenAI's new model offers near-Astra performance at 1/5th the cost.",
+    "reason": "New OpenAI model with quantifiable API cost reduction ships today, directly impacting builder economics.",
+    "proposed_post": "OpenAI released GPT-6.1 Sol, offering quantifiable cost reduction for API access. Builders can immediately lower inference costs by migrating existing applications or building new ones with improved economics.",
+    "source_angle": "OpenAI's new model offers immediate cost savings for API users.",
     "source_item": {
       "title": "Introducing GPT-6.1 Sol",
       "source": "OpenAI News",
@@ -13990,9 +13990,138 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-09-29T19:15:34.408234Z",
+    "breaking": false,
+    "reactivated_at": "2026-09-30T19:03:47.618447Z"
+  },
+  {
+    "id": "f3d99d8a69d6",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-09-30T19:03:31.083543Z",
+    "score": 90,
+    "reason": "OpenAI launched 'Dots' for always-on agents, likely a new API/framework. High builder interest.",
+    "proposed_post": "OpenAI introduced 'Dots,' a new framework for always-on agents. This enables persistent, autonomous AI applications, reducing the need for constant re-initialization and opening new possibilities for continuous background tasks.",
+    "source_angle": "OpenAI's new always-on agent framework",
+    "source_item": {
+      "title": "Dots: Always-on agents",
+      "source": "HackerNews",
+      "link": "https://openai.com/index/introducing-dots/",
+      "source_tier": 3,
+      "engagement_score": 1033.5,
+      "local_newsworthiness_score": 45,
+      "summary": "727 points, 613 comments on Hacker News — submitted by alvis — original: https://openai.com/index/introducing-dots/\n[Cluster context: 1 sources, engagement 1033, common terms: dots, 727, comments, always-on, alvis.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 1033,
+        "common_terms": [
+          "dots",
+          "727",
+          "comments",
+          "always-on",
+          "alvis",
+          "original",
+          "hacker",
+          "points"
+        ],
+        "cluster_summary": "1 sources, engagement 1033. Common terms: dots, 727, comments, always-on. Lead: Dots: Always-on agents",
+        "alternative_titles": [],
+        "cluster_score": 20
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-09-30T19:03:48.333774Z",
     "defer_count": 1,
-    "original_score": 95,
-    "original_reason": "New OpenAI model with significant, quantifiable cost reduction for API access. Direct impact on builder economics."
+    "original_score": 90,
+    "original_reason": "OpenAI launched 'Dots' for always-on agents, likely a new API/framework. High builder interest."
+  },
+  {
+    "id": "0567611c090f",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-09-30T19:03:42.967110Z",
+    "score": 90,
+    "reason": "New SDK release with concrete API features for enterprise management (analytics, spend limits, RBAC) and agent control.",
+    "proposed_post": "Anthropic Python SDK v1.10.0 adds Admin API features for Claude Enterprise, including analytics, spend limits, and RBAC. It also adds a refusal stop reason for Managed Agents. Builders can now better manage and monitor enterprise Claude deployments and refine agent behavior.",
+    "source_angle": "Anthropic SDK update for enterprise management and agent control.",
+    "source_item": {
+      "title": "Anthropic Python SDK v1.10.0",
+      "source": "Anthropic Python SDK Releases",
+      "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.10.0",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 65,
+      "summary": "<h2>1.10.0 (2026-09-30)</h2>\n<p>Full Changelog: <a href=\"https://github.com/anthropics/anthropic-sdk-python/compare/v1.9.0...v1.10.0\">v1.9.0...v1.10.0</a></p>\n<h3>Features</h3>\n<ul>\n<li><strong>api:</strong> add a refusal stop reason and stop_details to Managed Agents session idle events (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/cba653fc52ed4a9b57108a0b1ae80d1f51fb46dd\">cba653f</a>)</li>\n<li><strong>api:</strong> add Claude Enterprise analytics, spend limits, and RBAC groups and roles to the Admin API (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/6bb2c0ca493168069298a0c6c1740073b564d192\">6bb2c0c</a>)</li>\n<li><strong>api:</strong> add per-user usage and cost reports to the Admin API analytics (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/7443920c35d323d887bf908911224c7f2e0d8fde\">7443920</a>)</li>\n<li><strong>api:</strong> add Plugins and Plugin Marketplaces to the Admin API (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/1baad3b04df8fc5f1cbcf59bd2eca5e51d88c1e0\">1baad3b</a>)</li>\n<li><strong>api:</strong> add repository error types to Managed Agents session errors (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/c682f7e359e3367581a41829fdb51250dd51b0c3\">c682f7e</a>)</li>\n<li><strong>api:</strong> allow removing a plugin's org-wide installation setting (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/17f52fcde9fec28a2f96e763d9a2217326104fd8\">17f52fc</a>)</li>\n<li><strong>api:</strong> MCP tunnels beta: add read-only <code>transport</code> object to Tunnel and return the one-time relay <code>token</code> in the create response (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/88718ff4bdfab22f256b12ec7fdd20509805978c\">88718ff</a>)</li>\n<li><strong>api:</strong> Organization API endpoints are now GA (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/f1d195a6ae90b2b2482b2a6f8f1732d7241b5984\">f1d195a</a>)</li>\n</ul>\n<h3>Bug Fixes</h3>\n<ul>\n<li><strong>api:</strong> make memory store description, metadata, archived_at required (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/6cc39d34e7f3a1ae1eea82fbc634849761966b20\">6cc39d3</a>)</li>\n<li><strong>api:</strong> type admin plugin preference and marketplace fields as enums (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/b4dfd998969d8a23ab7128caa152989aa867c7d2\">b4dfd99</a>)</li>\n<li><strong>credentials:</strong> refuse config files that group or others can write (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/cd5fc6a1e5a65cbd08f5c77465617526c313f0b8\">cd5fc6a</a>)</li>\n<li><strong>pagination:</strong> auto-paging continues past an empty page while next_page is set (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/c027a26dd4f33840ea3749db3b3e4059ec749983\">c027a26</a>)</li>\n<li><strong>tools:</strong> stop the session tool runner after any idle that ends the turn (<a href=\"https://github.com/anthropics/anthropic-sdk-python/issues/969\">#969</a>) (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/9c60a531709471050c084034dece6782cc3298e5\">9c60a53</a>)</li>\n</ul>\n<h3>Chores</h3>\n<ul>\n<li><strong>api:</strong> update MCP Tunnels types and descriptions (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/aa49ba7fbb56425feebb7c3d0dcc75fd1f109ed4\">aa49ba7</a>)</li>\n<li><strong>ci:</strong> run tests on the oldest and newest Python in parallel (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/53bb298f0bbed38b60c2b961bd6daf973365b1a1\">53bb298</a>)</li>\n<li><strong>docs:</strong> remove placeholder enum descriptions (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/f535d6701f65928264cd8fb738e4327fa94fb32c\">f535d67</a>)</li>\n<li><strong>internal:</strong> format request options with one argument per line (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/4e2463e13499c5e7ba6b2ef389f65b0e8f234350\">4e2463e</a>)</li>\n<li><strong>tests:</strong> match mocked binary routes when a request adds query params (<a href=\"https://github.com/anthropics/anthropic-sdk-python/commit/078147029a62d22ea5fe85cf897cfbdc1693b656\">0781470</a>)</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: one, cost, error, events, managed.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Anthropic Python SDK Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "one",
+          "cost",
+          "error",
+          "events",
+          "managed",
+          "enterprise",
+          "can",
+          "adds"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: one, cost, error, events. Lead: Anthropic Python SDK v1.10.0",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-09-30T19:03:48.509838Z",
+    "defer_count": 1,
+    "original_score": 90,
+    "original_reason": "New SDK release with concrete API features for enterprise management (analytics, spend limits, RBAC) and agent control."
+  },
+  {
+    "id": "8b7ee3cc54f0",
+    "status": "approved",
+    "created_at": "2026-09-30T19:03:22.136587Z",
+    "score": 95,
+    "reason": "New OpenAI model release (GPT 6.1 Sol) with significant cost reduction and performance claims. Passes Ships Test.",
+    "proposed_post": "OpenAI released GPT 6.1 Sol, delivering near-Astra intelligence at 1/5th the cost. This enables high-performance applications previously constrained by budget, opening new product possibilities.",
+    "source_angle": "OpenAI GPT 6.1 Sol release: cost-effective high-intelligence model",
+    "source_item": {
+      "title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
+      "source": "HackerNews",
+      "link": "https://openai.com/index/introducing-gpt-6-1-sol/",
+      "source_tier": 3,
+      "engagement_score": 1495.0,
+      "local_newsworthiness_score": 45,
+      "summary": "1036 points, 918 comments on Hacker News — submitted by crorella — original: https://openai.com/index/introducing-gpt-6-1-sol/\n[Cluster context: 1 sources, engagement 1495, common terms: 6.1, sol, 1036, comments, price.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 1495,
+        "common_terms": [
+          "6.1",
+          "sol",
+          "1036",
+          "comments",
+          "price",
+          "original",
+          "intelligence",
+          "hacker"
+        ],
+        "cluster_summary": "1 sources, engagement 1495. Common terms: 6.1, sol, 1036, comments. Lead: GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
+        "alternative_titles": [],
+        "cluster_score": 20
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": true,
+    "claire_note": "Aus *HackerNews* ist ein starker Kandidat reingekommen: *GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price*.\nRelevanz fuer Builder: New OpenAI model release (GPT 6.1 Sol) with significant cost reduction and performance claims. Passes Ships Test.\n_Score: 95_",
+    "chloe_note": "*GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New OpenAI model release (GPT 6.1 Sol) with significant cost reduction and performance claims. Passes Ships Test.Cluster context: 1 sources, engagement 1495. Common terms: 6.1, sol, 1036, comments. Bewertung: 95. Quelle: https://openai.com/index/introducing-gpt-6-1-sol/"
   }
 ]
