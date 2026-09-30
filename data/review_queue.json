@@ -13736,7 +13736,7 @@
   },
   {
     "id": "64e5476cb8f8",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-09-28T18:06:16.950031Z",
     "score": 90,
     "reason": "Open-source tool launch for multi-agent orchestration, ships today. Clear utility for builders combining LLMs.",
@@ -13774,7 +13774,8 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": false,
-    "reactivated_at": "2026-09-28T18:06:16.950031Z"
+    "reactivated_at": "2026-09-28T18:06:16.950031Z",
+    "expired_at": "2026-09-30T20:57:21.610641Z"
   },
   {
     "id": "05a7087235eb",
@@ -13910,7 +13911,7 @@
   },
   {
     "id": "01b06d01028b",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-09-28T20:28:51.233816Z",
     "score": 95,
     "reason": "New Claude Sonnet 5.5 model released via API, now default, with 1M context and clear pricing. Ships today.",
@@ -13949,7 +13950,8 @@
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, schau mal hier: Claude Code v2.1.284.\n\nDie Einführung von Sonnet 5.5 mit 1M Kontext und den neuen Preisen ist krass. Für Entwickler bedeutet das: größere Codebases, komplexere Logik oder ganze Projekt-Setups können jetzt in einem einzigen Kontext verarbeitet werden, ohne aufwendiges Chunking. Das macht Prototyping und Refactoring mit Claude deutlich effizienter und potenziell günstiger durch die Cache Reads.",
-    "chloe_note": "Genehmigt. Der Ships Test ist bestanden, da Sonnet 5.5 mit 1M Kontext direkt via API verfügbar ist und eine klare Preisstruktur hat. Entwickler können es sofort nutzen, um ihre Codebases zu verarbeiten."
+    "chloe_note": "Genehmigt. Der Ships Test ist bestanden, da Sonnet 5.5 mit 1M Kontext direkt via API verfügbar ist und eine klare Preisstruktur hat. Entwickler können es sofort nutzen, um ihre Codebases zu verarbeiten.",
+    "expired_at": "2026-09-30T20:57:21.610641Z"
   },
   {
     "id": "9a1fe9fb8f47",
