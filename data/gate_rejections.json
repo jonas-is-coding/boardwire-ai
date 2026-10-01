@@ -1550,5 +1550,26 @@
       "Post lacks a clear claim or insight",
       "Version-only release without concrete capability: 'vLLM v0.31.0rc3'"
     ]
+  },
+  {
+    "rejected_at": "2026-10-01T19:24:29.689162Z",
+    "stage": "review",
+    "title": "Clef: Open-source decision models, and new RL fine-tuning platform",
+    "link": "https://blog.cloudflare.com/clef-decision-models/",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-01T19:24:29.836756Z",
+    "stage": "review",
+    "title": "vLLM v0.31.0rc2",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.31.0rc2",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight",
+      "Version-only release without concrete capability: 'vLLM v0.31.0rc2'"
+    ]
   }
 ]

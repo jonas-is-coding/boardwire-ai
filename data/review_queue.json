@@ -13999,12 +13999,12 @@
   },
   {
     "id": "f3d99d8a69d6",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-09-30T19:03:31.083543Z",
-    "score": 90,
-    "reason": "OpenAI launched 'Dots' for always-on agents, likely a new API/framework. High builder interest.",
-    "proposed_post": "OpenAI introduced 'Dots,' a new framework for always-on agents. This enables persistent, autonomous AI applications, reducing the need for constant re-initialization and opening new possibilities for continuous background tasks.",
-    "source_angle": "OpenAI's new always-on agent framework",
+    "status": "approved",
+    "created_at": "2026-10-01T19:24:27.674424Z",
+    "score": 95,
+    "reason": "Direct OpenAI launch of a new agent framework/API for always-on agents. Passes Ships Test. High builder relevance.",
+    "proposed_post": "OpenAI launched 'Dots', a new framework for always-on agents. Builders can now deploy persistent, context-aware AI applications directly via OpenAI's platform.",
+    "source_angle": "OpenAI's new agent framework for persistent AI",
     "source_item": {
       "title": "Dots: Always-on agents",
       "source": "HackerNews",
@@ -14036,10 +14036,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-09-30T19:03:48.333774Z",
-    "defer_count": 1,
-    "original_score": 90,
-    "original_reason": "OpenAI launched 'Dots' for always-on agents, likely a new API/framework. High builder interest."
+    "breaking": true,
+    "reactivated_at": "2026-10-01T19:24:27.674424Z"
   },
   {
     "id": "0567611c090f",
@@ -14127,5 +14125,92 @@
     "breaking": true,
     "claire_note": "Aus *HackerNews* ist ein starker Kandidat reingekommen: *GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price*.\nRelevanz fuer Builder: New OpenAI model release (GPT 6.1 Sol) with significant cost reduction and performance claims. Passes Ships Test.\n_Score: 95_",
     "chloe_note": "*GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New OpenAI model release (GPT 6.1 Sol) with significant cost reduction and performance claims. Passes Ships Test.Cluster context: 1 sources, engagement 1495. Common terms: 6.1, sol, 1036, comments. Bewertung: 95. Quelle: https://openai.com/index/introducing-gpt-6-1-sol/"
+  },
+  {
+    "id": "427e293d61eb",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-10-01T19:24:23.891442Z",
+    "score": 90,
+    "reason": "Claude Code v2.1.287 introduces 'Claude Mods' for deeper plugin integration and a built-in 'You should know' vigilance agent.",
+    "proposed_post": "Claude Code v2.1.287 ships with 'Claude Mods' for deeper plugin behavior and a 'You should know' built-in mod. Builders can now extend Claude Code's core functionality and leverage an AI assistant for vigilance.",
+    "source_angle": "Claude Code v2.1.287 release: deeper plugins & built-in vigilance agent",
+    "source_item": {
+      "title": "Claude Code v2.1.287",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.287",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 30,
+      "summary": "<h2>What's changed</h2>\n<ul>\n<li>Added Claude Mods: plugins may now modify deeper behavior</li>\n<li>Added You should know, a built-in mod where a side agent watches your back and flags things you or Claude might miss. Turn it on with <code>/plugin enable cc-plugin-you-should-know@builtin</code> (for first-party sessions with telemetry on)</li>\n<li>Added an <code>n:&lt;text&gt;</code> filter to the agents view that matches session names and tasks; a filter now shows matches in collapsed sections and Enter opens the first match</li>\n<li>Added <code>prompt_text</code> to the OpenTelemetry <code>user_prompt</code> event, a copy of <code>prompt</code> for backends that nest dotted keys; drop or mask it wherever you drop or mask <code>prompt</code> (<a class=\"issue-link js-issue-link\" href=\"https://github.com/anthropics/claude-code/issues/70763\">#70763</a>)</li>\n<li>Added URL prompts from MCP servers on the 2025-11-25 protocol, for example to sign in. If a server no longer connects after this update, add \"bareElicitationCapability\": true to its MCP config entry</li>\n<li>Windows: Added a startup warning when denying the Bash tool also turns off the PowerShell tool, so Claude has no shell tool</li>\n<li>Self-hosted runner: Added a built-in <code>gh api</code> (REST only) for sessions that use Anthropic-managed git on macOS and Linux machines where the GitHub CLI is not installed</li>\n<li>Fixed fast mode staying off in remote sessions owned by an agent with no user account, even when the organization allows it</li>\n<li>Fixed Remote Control not receiving messages for minutes at a time when a reconnect request got no response; it now gives up after 30 seconds and retries</li>\n<li>Fixed hooks configured with <code>asyncRewake</code> waking Claude over and over with \"found issues\" notifications when the hook's script file is missing; the broken hook is now reported once</li>\n<li>Fixed tool heartbeats not reaching SDK hosts while the model's response stream was stalled with no data arriving</li>\n<li>Fixed Bedrock and Vertex startup model checks ignoring an enforced <code>availableModels</code> list, which could collapse <code>/model</code> to one Opus row</li>\n<li>Fixed the Claude in Chrome browser picker showing a JSON parse error when Chrome could not be reached</li>\n<li>Fixed picking Fable in <code>/model</code> on a claude.ai login saving the current version's id, so your saved default now follows the newest Fable like Opus and Sonnet do</li>\n<li>Fixed switching between Opus 5.5 and Sonnet 5.5 (<code>/model</code>, <code>opusplan</code>) rewriting earlier MCP tool announcements, which could drop earlier extended thinking</li>\n<li>Fixed Amazon Bedrock Guardrails blocks that arrive mid-response ending the turn with an API error instead of the guardrail's message when the reply began with thinking</li>\n<li>Fixed a dangerous <code>rm</code> (such as one on <code>/</code> or the home directory) losing its always-ask safeguard when the same command also redirected output to a <code>~</code> or wildcard path</li>\n<li>Fixed <code>claude -p</code> and SDK sessions repeating a model fallback on every later message after the model was switched while a reply was running</li>\n<li>Fixed a folder's CLAUDE.md being attached a second time after resuming a session or after a compaction</li>\n<li>Fixed background sessions that could not be reopened from <code>claude agents</code> after the agent exited and removed the worktree the session was started in</li>\n<li>Fixed <code>/advisor</code> pairing checks: Sonnet 5.5 can now advise Opus 4.7 and 4.8, and advisors the API would refuse are flagged up front instead of being silently dropped</li>\n<li>Fixed Bash permission prompts showing internal parser names such as \"Contains simple_expansion\" instead of a plain explanation</li>\n<li>Fixed a cause of fullscreen sessions on slow or busy machines exiting with \"Claude Code exited after an unrecoverable interface error\" while a scroll key was held in a long conversation</li>\n<li>Fixed organization per-tool permission ceilings being silently dropped for an MCP tool named <code>__proto__</code></li>\n<li>Fixed Claude being told to page large MCP results saved as JSON with Read's offset and limit, which cannot split one long line</li>\n<li>Fixed the commit attribution reminder being delivered inside a tool result after a compaction</li>\n<li>Fixed screen reader mode leaving the cursor away from the typed text in search boxes (such as /resume and /permissions) and sign-in code fields</li>\n<li>Fixed screen reader mode refusing Enter with nothing typed on /rewind's summarize options, whose added context is optional</li>\n<li>Fixed screen reader mode showing a \"Tab to amend\" hint on approval prompts, where Tab does nothing</li>\n<li>Fixed screen reader mode listing arrow keys that do nothing in /permissions and /mcp, and saying \"Select with numbers\" in empty menus or while a search box has the keys</li>\n<li>Fixed screen reader mode leaving out the changed lines in file edit approval prompts and other diffs</li>\n<li>Fixed screen reader mode sending the <code>claude --teleport</code> progress screen, and an MCP form field while it is being checked, to the screen reader again on every spinner frame</li>\n<li>Fixed <code>CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS</code> not removing the structured-output format from session-title and prompt-hook requests, which Bedrock-backed gateways reject</li>\n<li>Fixed screen reader mode leaving out the top lines of a second approval prompt, a changed /config row or the rejected-plan line when the previous screen was taller than the terminal window</li>\n<li>Fixed <code>--include-partial-messages</code> sending a cut-short reply's <code>message_stop</code> late or never, so apps could show the reply as still in progress</li>\n<li>Fixed <code>claude agents</code> sometimes not showing the permission prompt a background session is waiting on</li>\n<li>Fixed <code>/ultrareview</code> giving advice about <code>.git/info/attributes</code> when the upload stops on a committed <code>.gitattributes</code> it cannot read, such as one saved as UTF-16</li>\n<li>Fixed <code>claude remote-control</code> failing to register behind an HTTP proxy with a misleading \"Check your organization permissions\" error (<a class=\"issue-link js-issue-link\" href=\"https://github.com/anthropics/claude-code/issues/97352\">#97352</a>)</li>\n<li>Fixed sandboxed Bash commands on Linux inheriting an open handle on the Claude Code executable</li>\n<li>Fixed the running-tool dot and three spinners still moving with the \"Reduce motion\" setting on, and /rewind's confirm screen updating its \"ago\" time while you type a note</li>\n<li>Fixed times in <code>claude agents</code> changing every second in screen reader mode; they now change at most every 10 seconds</li>\n<li>Fixed a revoked claude.ai login showing a generic <code>API Error: 401</code> instead of \"OAuth token revoked\"; in <code>-p</code> mode the error now starts with \"Failed to authenticate\"</li>\n<li>Fixed <code>/ultrareview</code> upload refusals advising you to copy a variable named by a repository's settings file into your own user settings</li>\n<li>Fixed <code>--output-format stream-json</code> and the SDK not streaming the turns of a <code>context: fork</code> skill run by typing <code>/&lt;skill&gt;</code> as the prompt, as they do for the Skill tool's fork</li>\n<li>Fixed /feedback and /bug: the pre-filled GitHub issue no longer includes your recent error messages, and the confirmation screen now lists them as part of the report</li>\n<li>Fixed <code>claude plugin marketplace add --sparse</code> and <code>git-subdir</code> plugin installs failing with \"transport 'http' not allowed\" when the repository is served over plain http</li>\n<li>Fixed cloud sessions sometimes losing the earlier conversation when the session restarted while it was being compacted</li>\n<li>Fixed a plugin reload that overlapped the startup <code>--plugin-url</code> download corrupting the session's cached copy of the plugin archive</li>\n<li>Fixed <code>/desktop</code> quoting partial output when opening Claude Desktop timed out or printed too much output; the error now names the cause</li>\n<li>Fixed an MCP connector tool call occasionally running twice, or the connector's calls failing until restart, when its server changed which MCP protocol version it supports</li>\n<li>Fixed SessionStart hooks from synced plugins not running in new cloud sessions</li>\n<li>Fixed the transcript's \"N hooks ran\" summary and the verbose debug log's matched-hooks count including Claude Code's internal callbacks, so one configured hook no longer shows as two</li>\n<li>Fixed files Claude sends from cloud and Remote Control sessions failing when the upload finished just after the 30-second timeout; it now waits 35 seconds</li>\n<li>Fixed repositories added mid-session in cloud and SDK sessions not loading their skills and plugins, and loading CLAUDE.md late, after Claude changed directory</li>\n<li>Fixed PNG, JPEG and WebP images over 8,000 pixels on a side failing to send from a remote session; Claude now sends a scaled-down copy</li>\n<li>Fixed messages sent from the Claude apps with 17 to 20 attached files delivering only the first 16</li>\n<li>Fixed headless sessions reporting an MCP server as needing authentication after one refused call, even though later calls succeed</li>\n<li>macOS: Fixed Remote Control sessions started with <code>claude remote-control</code> stopping mid-turn when the Mac went to idle sleep</li>\n<li>Windows: Fixed interactive <code>claude</code> hanging or crashing with \"Raw mode is not supported\" when its input is piped or redirected; it now says why and exits (use <code>-p</code> for piped input)</li>\n<li>Bedrock, Vertex, Mantle: Fixed model availability checks under <code>CLAUDE_CODE_SKIP_*_AUTH</code> sending a different <code>Authorization</code> header than real requests when <code>ANTHROPIC_CUSTOM_HEADERS</code> repeats it</li>\n<li>Improved <code>/config</code>: settings that cycle show ‹ › and step both ways with ←/→, narrow terminals stack each value under its label, and PgUp/PgDn page the list</li>\n<li>Improved plugin marketplace errors to say in plain words why a marketplace was ignored or refused, and what to do</li>\n<li>Improved plugin listings to note when a plugin's dependencies were not installed, and updating a plugin now retries an install that did not finish</li>\n<li>Improved the Claude apps gateway's error when Amazon Bedrock rejects a model ID: developers now see which model is unavailable, and the gateway log names the ID that was sent</li>\n<li>Improved SDK sessions so a message sent with priority \"now\" no longer cancels a running web fetch or web search; it keeps loading in the background</li>\n<li>Improved <code>/memory</code>: the left and right arrow keys now flip its on/off settings, such as Auto-memory</li>\n<li>Improved <code>/skill</code> names typed mid-message: Claude is now told they are skills, including <code>disable-model-invocation</code> ones</li>\n<li>Improved the contrast of the prompt input border in light themes and of the ❯ before your earlier messages</li>\n<li>Improved delivery of files Claude sends from cloud sessions and Remote Control: an upload that fails on a timeout, a network error or a 502, 503 or 504 is now retried once</li>\n<li>Improved what Claude says when a file cannot be sent for a reason that may be temporary: it now mentions that you can ask for the file again in a few minutes</li>\n<li>Improved the prompt for a held message from another session to show the message between dashed lines, matching other permission prompts</li>\n<li>Improved MCP and other tool permission prompts to show the tool call between dashed lines, matching file edit prompts</li>\n<li>Improved MCP startup in headless mode: a remote server whose first connect fails transiently is now retried without waiting for the slowest server to finish connecting</li>\n<li>Improved files Claude sends from a remote session: large files now stream from disk instead of being read into memory, and a file over the size limit is refused with the server's limit named</li>\n<li>Improved the explanation Claude gives when the server refuses a file it sends from a Remote Control or cloud session, such as an oversized image</li>\n<li>Improved handling of large MCP tool results: less memory, smaller session files, and no extra upload to count tokens for results far over the limit</li>\n<li>Windows: Improved Bash tool speed by removing a subshell that ran before every command</li>\n<li>Changed a shell write through a repo-committed symlink onto a sensitive file or out of the working tree to name where it lands and wait for a person, on lines with a <code>~</code> target too</li>\n<li>Changed Opus 4.7+ and Fable to use a 1M context window by default on Bedrock, Vertex, Foundry and the Claude apps gateway, with no <code>[1m]</code> suffix (<code>CLAUDE_CODE_DISABLE_1M_CONTEXT=1</code> keeps 200K)</li>\n<li>Changed replies from <code>claude agents</code> to arrive as queued messages; slash commands other than <code>/stop</code> sent while a turn is running now run when it ends</li>\n<li>Changed whole-tool <code>Bash</code> allow rules and allowing hooks to prompt for, not run, shell writes to files Claude Code's file tools refuse outright (the Anthropic profile store, the host credentials file)</li>\n<li>Changed right-click paste on Windows and Linux, and middle-click paste on Linux, to happen when the button is released; moving the pointer away before releasing cancels it</li>\n<li>Changed MCP server <code>alwaysLoad: false</code> to defer all of that server's tools behind tool search</li>\n<li>Changed screen reader mode to write new or changed lines without first pausing with the cursor at the start of the line; set <code>CLAUDE_AX_PREPARK_MS=50</code> to restore the pause</li>\n<li>Changed automatic model switches after a flagged message to keep your current effort level instead of the new model's default</li>\n<li>Changed waiting permission prompts to show oldest first, so a new prompt no longer covers the one you're reading (prompts with a countdown still open on top)</li>\n<li>[VSCode] Added \"Run in background\" to a running command or sub-agent, to move it to the background and keep working</li>\n<li>[VSCode] Added the output of background shells and Monitors to their cards in the agent map</li>\n<li>[VSCode] Fixed settings dialogs blaming a timeout when Claude Code's reply was too large to confirm a save</li>\n<li>[VSCode] Fixed reopening a cloud session that the side bar already brought to this machine opening it again in a new tab; the side bar is shown instead</li>\n<li>[VSCode] Fixed the side bar's Web tab not listing cloud sessions started after the window loaded; a failed load now says \"Remote server is not connected\" instead of \"No web sessions yet\"</li>\n<li>[VSCode] Fixed a tab restored after a reload starting a second Claude process on a conversation the side bar already has open; it now shows the \"still open somewhere else\" notice</li>\n<li>[VSCode] Fixed tool-row file links, session-list links and two hints showing in plain text</li>\n<li>[VSCode] Fixed a background agent's still-running command showing as failed once the main turn ended</li>\n<li>[VSCode] Fixed a user's own <code>/usage</code> or <code>/context</code> command opening the extension's dialog instead of running when picked from the command menu</li>\n<li>[VSCode] Fixed file links in the plan preview tab doing nothing when clicked; they now open the file like links in chat replies</li>\n<li>[VSCode] Fixed opening a tool's input or output in an editor tab failing with \"Timeout waiting after 1000ms\" on remote hosts such as WSL when the tab is slow to appear</li>\n<li>[VSCode] Improved the Manage plugins dialog: a failed marketplace add, remove or refresh now says what went wrong</li>\n<li>[VSCode] Changed the Claude in Chrome \"Enabled by default\" switch to also connect the editor's own sessions, which still ask before browser actions</li>\n<li>[Cloud sessions] Fixed occasional failures to fetch from or push to GitHub when GitHub briefly refused a newly issued access token</li>\n<li>[Claude Tag] Fixed Claude posting a failure warning, such as a spend limit notice, in a Slack thread when a background event like GitHub activity woke it and nobody was waiting on a reply</li>\n<li>[Claude Tag] Fixed Claude Tag's spend limits page in admin settings leaving out recently created and private channels in organizations with many channels</li>\n<li>[Claude Tag] Improved Claude's task list in long Slack threads: background work no longer reposts it as a new message on its own, so people following the thread aren't notified</li>\n<li>[Code Review] Fixed finding comments and their \"Why this was flagged\" text stopping mid-sentence; they now end on a complete sentence</li>\n<li>[Code Review] Fixed Code Review skipping a pull request after a new push when its review had failed twice on the previous commit; it now reviews the latest commit</li>\n<li>[Code Review] Improved the failed-review card on a pull request whose conversation is locked: it now says the lock blocked the review and that nothing was posted or charged</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: them, blocks, variable, auth, dangerous.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Claude Code Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "them",
+          "blocks",
+          "variable",
+          "auth",
+          "dangerous",
+          "recently",
+          "availability",
+          "had"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: them, blocks, variable, auth. Lead: Claude Code v2.1.287",
+        "alternative_titles": [],
+        "cluster_score": 15
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-10-01T19:24:29.543193Z",
+    "defer_count": 1,
+    "original_score": 90,
+    "original_reason": "Claude Code v2.1.287 introduces 'Claude Mods' for deeper plugin integration and a built-in 'You should know' vigilance agent."
+  },
+  {
+    "id": "14ad25ef78f2",
+    "status": "approved",
+    "created_at": "2026-10-01T19:24:15.805900Z",
+    "score": 90,
+    "reason": "New Gemini model (4 Argon) released by Google, available via API. Direct impact for builders to evaluate and deploy.",
+    "proposed_post": "Google launched Gemini 4 Argon. This new model variant is available via API. Builders should assess its specific performance and cost profile for immediate integration into their AI products.",
+    "source_angle": "Google announces new Gemini 4 Argon model via official blog.",
+    "source_item": {
+      "title": "Gemini 4 Argon",
+      "source": "HackerNews",
+      "link": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+      "source_tier": 3,
+      "engagement_score": 2160.0,
+      "local_newsworthiness_score": 45,
+      "summary": "1615 points, 1090 comments on Hacker News — submitted by bradleyg223 — original: https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/\n[Cluster context: 1 sources, engagement 2160, common terms: hacker, comments, 1090, original, argon.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 2160,
+        "common_terms": [
+          "hacker",
+          "comments",
+          "1090",
+          "original",
+          "argon",
+          "points",
+          "submitted",
+          "1615"
+        ],
+        "cluster_summary": "1 sources, engagement 2160. Common terms: hacker, comments, 1090, original. Lead: Gemini 4 Argon",
+        "alternative_titles": [],
+        "cluster_score": 20
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, dieser Gemini 4 Argon Artikel von Google explodiert gerade auf Hacker News. Über 1000 Kommentare – da brodelt was.\n\nFür Entwickler ist das interessant, weil Argon wohl ein deutlich effizienteres, leichteres Modell ist. Das könnte bedeuten, dass wir bald leistungsfähige Gemini-Features lokal oder auf Edge-Devices nutzen können, ohne die üblichen Kosten und Latenzen der großen Modelle. Das öffnet Türen für neue Anwendungsfälle, wo Größe bisher ein Killer war.",
+    "chloe_note": "Dieser Artikel besteht den Ships Test. Die Verfügbarkeit über API bedeutet, dass Entwickler direkt evaluieren und deployen können, um die versprochene Effizienz zu testen. Das ist ein klares \"zum Nutzen\" und \"zum Deployen\"."
   }
 ]

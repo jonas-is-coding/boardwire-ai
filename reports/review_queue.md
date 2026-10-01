@@ -6,6 +6,8 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-10-01T19:24:29.836756Z` [review] **vLLM v0.31.0rc2** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.31.0rc2'
+- `2026-10-01T19:24:29.689162Z` [review] **Clef: Open-source decision models, and new RL fine-tuning platform** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-01T17:00:29.290397Z` [review] **vLLM v0.31.0rc3** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.31.0rc3'
 - `2026-10-01T17:00:29.143678Z` [review] **tile-ai/tilelang — Domain-specific language designed to streamline the development of high-performance GPU/CPU/Accelerators kernels** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-01T17:00:28.998433Z` [review] **Introducing Olmo-core 3: Open, scalable training infrastructure for large MoEs** — Post is empty; Post lacks a clear claim or insight
@@ -29,5 +31,3 @@ No pending review items.
 - `2026-09-28T18:06:17.106294Z` [review] **Two years of OpenAI Academy** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-28T18:06:17.028125Z` [review] **There are no "rogue" AI agents** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-27T21:35:52.858590Z` [review] **Parallel cut research time and cost in half with GPT‑6 Astra** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-27T21:35:52.769328Z` [review] **LangChain v1.6.4** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.6.4'
-- `2026-09-27T21:35:52.689745Z` [review] **Claude Code v2.1.283** — Post is empty; Post lacks a clear claim or insight
