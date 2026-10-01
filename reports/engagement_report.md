@@ -1,10 +1,10 @@
 # Boardwire Engagement Report
 
-Generated: `2026-09-30T10:05:17.723847Z`
+Generated: `2026-10-01T10:33:28.259568Z`
 
 ## Account
 
-- @boardwire.bsky.social: **31** followers (1d: +0, 7d: +0) · following 121 · posts 80 · snapshots 27 · as of `2026-09-30T10:05:04.551180Z`
+- @boardwire.bsky.social: **32** followers (1d: +1, 7d: +1) · following 121 · posts 80 · snapshots 28 · as of `2026-10-01T10:33:14.614596Z`
 
 ## Summary
 
@@ -173,7 +173,7 @@ Generated: `2026-09-30T10:05:17.723847Z`
    > LangChain fixes context errors. LangChain v1.4.2 handles ContextWindowExceededError, +0 stars. Anyone running this with OpenAI models? #Open…
 
 16. **3 pts** — google/ax — Google's open agentic orchestration runtime
-   likes 2 · reposts 0 · replies 1 · quotes 0 · age 184h · score 95
+   likes 2 · reposts 0 · replies 1 · quotes 0 · age 208h · score 95
    https://github.com/google/ax
    > Google launches open-agent orchestration runtime for AI agents. google/ax provides an Apache‑2.0 runtime with +2324★ on GitHub for multi‑age…
 
@@ -248,7 +248,7 @@ Generated: `2026-09-30T10:05:17.723847Z`
    > Z-AI ships GLM-5.3 as open-weight model. Open weights on HuggingFace with dual context windows: 128K default, 1M optional. +574 HN engagemen…
 
 31. **2 pts** — cloudflare/security-audit-skill — A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings
-   likes 1 · reposts 0 · replies 1 · quotes 0 · age 327h · score 95
+   likes 1 · reposts 0 · replies 1 · quotes 0 · age 352h · score 95
    https://github.com/cloudflare/security-audit-skill
    > Cloudflare security-audit-skill lets agents run multi‑phase audits. cloudflare/security-audit-skill ★+1434, outputs verified, machine‑readab…
 
