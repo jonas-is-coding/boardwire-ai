@@ -14043,10 +14043,10 @@
   },
   {
     "id": "0567611c090f",
-    "status": "deferred_due_to_cap",
+    "status": "deferred_generation_unavailable",
     "created_at": "2026-09-30T19:03:42.967110Z",
     "score": 90,
-    "reason": "New SDK release with concrete API features for enterprise management (analytics, spend limits, RBAC) and agent control.",
+    "reason": "deferred: generation provider unavailable",
     "proposed_post": "Anthropic Python SDK v1.10.0 adds Admin API features for Claude Enterprise, including analytics, spend limits, and RBAC. It also adds a refusal stop reason for Managed Agents. Builders can now better manage and monitor enterprise Claude deployments and refine agent behavior.",
     "source_angle": "Anthropic SDK update for enterprise management and agent control.",
     "source_item": {
@@ -14080,8 +14080,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-09-30T19:03:48.509838Z",
-    "defer_count": 1,
+    "deferred_at": "2026-10-01T17:00:22.917786Z",
+    "defer_count": 2,
     "original_score": 90,
     "original_reason": "New SDK release with concrete API features for enterprise management (analytics, spend limits, RBAC) and agent control."
   },

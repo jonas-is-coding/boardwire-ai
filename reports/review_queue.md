@@ -6,6 +6,9 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-10-01T17:00:29.290397Z` [review] **vLLM v0.31.0rc3** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.31.0rc3'
+- `2026-10-01T17:00:29.143678Z` [review] **tile-ai/tilelang — Domain-specific language designed to streamline the development of high-performance GPU/CPU/Accelerators kernels** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-01T17:00:28.998433Z` [review] **Introducing Olmo-core 3: Open, scalable training infrastructure for large MoEs** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-30T19:03:48.955068Z` [review] **LangChain v1.7.0** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-30T19:03:48.805598Z` [review] **vLLM v0.4.0** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.4.0'
 - `2026-09-30T19:03:48.658187Z` [review] **Claude Code v2.1.285** — Post is empty; Post lacks a clear claim or insight
@@ -28,6 +31,3 @@ No pending review items.
 - `2026-09-27T21:35:52.858590Z` [review] **Parallel cut research time and cost in half with GPT‑6 Astra** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-27T21:35:52.769328Z` [review] **LangChain v1.6.4** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.6.4'
 - `2026-09-27T21:35:52.689745Z` [review] **Claude Code v2.1.283** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-27T21:35:52.387868Z` [review] **Claude Code v2.1.282** — Duplicate or near-duplicate post detected
-- `2026-09-25T18:26:36.177909Z` [review] **shy3130/tick-stock-panel — TSP自托管、零运维的 A 股「选股 + 监控 + 回测」量化工作台 | LLM能力驱使策略定制+个股分析+复盘 | 自由接入第三方数据源与个性化扩展数据 | 个人开源** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-25T18:26:36.038298Z` [review] **Airbnb widens access to GPT-6 Astra and OpenAI frontier models** — Post is empty; Post lacks a clear claim or insight
