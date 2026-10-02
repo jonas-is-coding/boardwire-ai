@@ -14128,12 +14128,12 @@
   },
   {
     "id": "427e293d61eb",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-10-01T19:24:23.891442Z",
+    "status": "approved",
+    "created_at": "2026-10-02T19:07:42.112765Z",
     "score": 90,
-    "reason": "Claude Code v2.1.287 introduces 'Claude Mods' for deeper plugin integration and a built-in 'You should know' vigilance agent.",
-    "proposed_post": "Claude Code v2.1.287 ships with 'Claude Mods' for deeper plugin behavior and a 'You should know' built-in mod. Builders can now extend Claude Code's core functionality and leverage an AI assistant for vigilance.",
-    "source_angle": "Claude Code v2.1.287 release: deeper plugins & built-in vigilance agent",
+    "reason": "New SDK version with concrete features for deeper plugin integration and a vigilance agent. Passes Ships Test.",
+    "proposed_post": "Claude Code v2.1.287 ships with 'Claude Mods' for deeper plugin integration and a 'You should know' vigilance agent. Builders can now create more robust and integrated Claude applications with enhanced safety features.",
+    "source_angle": "Claude Code v2.1.287 adds plugin integration and vigilance agent.",
     "source_item": {
       "title": "Claude Code v2.1.287",
       "source": "Claude Code Releases",
@@ -14165,10 +14165,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-10-01T19:24:29.543193Z",
-    "defer_count": 1,
-    "original_score": 90,
-    "original_reason": "Claude Code v2.1.287 introduces 'Claude Mods' for deeper plugin integration and a built-in 'You should know' vigilance agent."
+    "breaking": false,
+    "reactivated_at": "2026-10-02T19:07:42.112765Z"
   },
   {
     "id": "14ad25ef78f2",

@@ -1582,5 +1582,15 @@
       "Post lacks a clear claim or insight",
       "Version-only release without concrete capability: 'vLLM v0.31.0rc4'"
     ]
+  },
+  {
+    "rejected_at": "2026-10-02T19:07:42.257144Z",
+    "stage": "review",
+    "title": "FLUX 3 Image",
+    "link": "https://bfl.ai/models/flux-3-image",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
   }
 ]

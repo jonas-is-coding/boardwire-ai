@@ -6,6 +6,7 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-10-02T19:07:42.257144Z` [review] **FLUX 3 Image** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-02T16:15:38.970909Z` [review] **vLLM v0.31.0rc4** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.31.0rc4'
 - `2026-10-01T19:24:29.836756Z` [review] **vLLM v0.31.0rc2** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.31.0rc2'
 - `2026-10-01T19:24:29.689162Z` [review] **Clef: Open-source decision models, and new RL fine-tuning platform** — Post is empty; Post lacks a clear claim or insight
@@ -30,4 +31,3 @@ No pending review items.
 - `2026-09-28T20:29:13.257591Z` [review] **Holo4: powering generalist computer-use agents** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-28T20:29:13.177410Z` [review] **Prompting Claude Opus 5.5** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'Prompting Claude Opus 5.5'
 - `2026-09-28T18:06:17.106294Z` [review] **Two years of OpenAI Academy** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-28T18:06:17.028125Z` [review] **There are no "rogue" AI agents** — Post is empty; Post lacks a clear claim or insight
