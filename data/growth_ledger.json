@@ -1448,6 +1448,17 @@
         "follows @emollick.bsky.social"
       ],
       "followed_at": "2026-09-28T15:57:31.111511Z"
+    },
+    "did:plc:xkawmgpf7ocrxzkf4bxgjgmj": {
+      "handle": "aliahad.com",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mwvkdkrofc2g",
+      "channel": "seed_follows",
+      "score": 1.5,
+      "mode": "discover",
+      "via": [
+        "@ai2.bsky.social follows"
+      ],
+      "followed_at": "2026-10-02T14:09:03.353260Z"
     }
   },
   "runs": [
@@ -1823,6 +1834,21 @@
       ],
       "started_at": "2026-09-28T15:57:30.933404Z",
       "finished_at": "2026-09-28T15:57:31.113669Z"
+    },
+    {
+      "mode": "discover",
+      "dry_run": false,
+      "limit": 12,
+      "planned": 0,
+      "followed": 1,
+      "skipped_already": 0,
+      "failed": 0,
+      "aborted": null,
+      "handles": [
+        "aliahad.com"
+      ],
+      "started_at": "2026-10-02T14:09:02.287720Z",
+      "finished_at": "2026-10-02T14:09:03.355505Z"
     }
   ],
   "pinned_thread": {
