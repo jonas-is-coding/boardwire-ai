@@ -14078,8 +14078,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-10-01T17:00:22.917786Z",
-    "defer_count": 2,
+    "deferred_at": "2026-10-02T16:14:28.718928Z",
+    "defer_count": 3,
     "original_score": 90,
     "original_reason": "New SDK release with concrete API features for enterprise management (analytics, spend limits, RBAC) and agent control."
   },

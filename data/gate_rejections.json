@@ -1571,5 +1571,16 @@
       "Post lacks a clear claim or insight",
       "Version-only release without concrete capability: 'vLLM v0.31.0rc2'"
     ]
+  },
+  {
+    "rejected_at": "2026-10-02T16:15:38.970909Z",
+    "stage": "review",
+    "title": "vLLM v0.31.0rc4",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.31.0rc4",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight",
+      "Version-only release without concrete capability: 'vLLM v0.31.0rc4'"
+    ]
   }
 ]
