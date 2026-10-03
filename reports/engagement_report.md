@@ -1,10 +1,10 @@
 # Boardwire Engagement Report
 
-Generated: `2026-10-02T10:08:31.978986Z`
+Generated: `2026-10-03T09:30:53.074021Z`
 
 ## Account
 
-- @boardwire.bsky.social: **34** followers (1d: +3, 7d: +3) · following 121 · posts 80 · snapshots 29 · as of `2026-10-02T10:08:17.749008Z`
+- @boardwire.bsky.social: **34** followers (1d: +2, 7d: +3) · following 122 · posts 80 · snapshots 30 · as of `2026-10-03T09:30:39.703683Z`
 
 ## Summary
 
@@ -173,7 +173,7 @@ Generated: `2026-10-02T10:08:31.978986Z`
    > LangChain fixes context errors. LangChain v1.4.2 handles ContextWindowExceededError, +0 stars. Anyone running this with OpenAI models? #Open…
 
 16. **3 pts** — google/ax — Google's open agentic orchestration runtime
-   likes 2 · reposts 0 · replies 1 · quotes 0 · age 232h · score 95
+   likes 2 · reposts 0 · replies 1 · quotes 0 · age 255h · score 95
    https://github.com/google/ax
    > Google launches open-agent orchestration runtime for AI agents. google/ax provides an Apache‑2.0 runtime with +2324★ on GitHub for multi‑age…
 
