@@ -14215,5 +14215,48 @@
     "claire_note": "Chloe, dieser Gemini 4 Argon Artikel von Google explodiert gerade auf Hacker News. Über 1000 Kommentare – da brodelt was.\n\nFür Entwickler ist das interessant, weil Argon wohl ein deutlich effizienteres, leichteres Modell ist. Das könnte bedeuten, dass wir bald leistungsfähige Gemini-Features lokal oder auf Edge-Devices nutzen können, ohne die üblichen Kosten und Latenzen der großen Modelle. Das öffnet Türen für neue Anwendungsfälle, wo Größe bisher ein Killer war.",
     "chloe_note": "Dieser Artikel besteht den Ships Test. Die Verfügbarkeit über API bedeutet, dass Entwickler direkt evaluieren und deployen können, um die versprochene Effizienz zu testen. Das ist ein klares \"zum Nutzen\" und \"zum Deployen\".",
     "expired_at": "2026-10-04T21:15:03.008289Z"
+  },
+  {
+    "id": "c561a09001ab",
+    "status": "approved",
+    "created_at": "2026-10-04T21:54:17.209724Z",
+    "score": 75,
+    "reason": "Practical guide with hands-on experiments comparing LM architectures for text classification, offering actionable insights for builders.",
+    "proposed_post": "New guide from Sebastian Raschka compares RNNs, CNNs, and Transformers for text classification, detailing accuracy and efficiency via hands-on experiments. Use these results to inform your choice of architecture for production text classification, optimizing for performance or c…",
+    "source_angle": "Comparative analysis of LM architectures for text classification with hands-on experiments.",
+    "source_item": {
+      "title": "Language Models for Text Classification: From Bag-of-Words to Jev",
+      "source": "Sebastian Raschka (Ahead of AI)",
+      "link": "https://magazine.sebastianraschka.com/p/classifier-history-and-jev",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 0,
+      "summary": "A Visual Guide to RNNs, CNNs, Transformers, and Calibration, with Hands-On Experiments on Accuracy and Efficiency\n[Cluster context: 1 sources, engagement 0, common terms: classification, experiments, hands-on, efficiency, calibration.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Sebastian Raschka (Ahead of AI)"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "classification",
+          "experiments",
+          "hands-on",
+          "efficiency",
+          "calibration",
+          "visual",
+          "guide",
+          "jev"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: classification, experiments, hands-on, efficiency. Lead: Language Models for Text Classification: From Bag-of-Words to Jev",
+        "alternative_titles": [],
+        "cluster_score": 15
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Hey Chloe,\n\nHab mir den Artikel von Raschka angeschaut. Das ist ein solides Deep Dive für jeden, der mit Textklassifizierung arbeitet. Er geht von Bag-of-Words bis zu modernen Modellen durch, mit echten Hands-on-Experimenten zu Accuracy und Efficiency.\n\nEin Dev kann hier direkt sehen, welche Architekturen (RNNs, CNNs, Transformers) für Textklassifizierung gut funktionieren und wie man die Kalibrierung angeht. Das ist super praktisch, um Entscheidungen für das eigene Modell zu treffen und Benchmarks zu verstehen.",
+    "chloe_note": "Dieser Artikel besteht den Ships Test. Die hands-on Experimente und der direkte Vergleich von Architekturen bieten Entwicklern konkrete Anhaltspunkte, um eigene Modelle zu bewerten und Designentscheidungen zu treffen. Das ist direkt nutzbar."
   }
 ]

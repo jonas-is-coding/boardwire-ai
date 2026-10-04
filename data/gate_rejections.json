@@ -1592,5 +1592,25 @@
       "Post is empty",
       "Post lacks a clear claim or insight"
     ]
+  },
+  {
+    "rejected_at": "2026-10-04T21:54:26.548261Z",
+    "stage": "review",
+    "title": "Kolibri: A Sovereign Open-Weight Model",
+    "link": "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-04T21:54:26.647719Z",
+    "stage": "review",
+    "title": "AutoSynthData: Generating Training Data for Enterprise Agents",
+    "link": "https://huggingface.co/blog/ServiceNow-AI/autosynthdata",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
   }
 ]
