@@ -14000,7 +14000,7 @@
   },
   {
     "id": "f3d99d8a69d6",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-01T19:24:27.674424Z",
     "score": 95,
     "reason": "Direct OpenAI launch of a new agent framework/API for always-on agents. Passes Ships Test. High builder relevance.",
@@ -14038,7 +14038,8 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": true,
-    "reactivated_at": "2026-10-01T19:24:27.674424Z"
+    "reactivated_at": "2026-10-01T19:24:27.674424Z",
+    "expired_at": "2026-10-04T21:15:03.008289Z"
   },
   {
     "id": "0567611c090f",
@@ -14130,7 +14131,7 @@
   },
   {
     "id": "427e293d61eb",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-02T19:07:42.112765Z",
     "score": 90,
     "reason": "New SDK version with concrete features for deeper plugin integration and a vigilance agent. Passes Ships Test.",
@@ -14168,11 +14169,12 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": false,
-    "reactivated_at": "2026-10-02T19:07:42.112765Z"
+    "reactivated_at": "2026-10-02T19:07:42.112765Z",
+    "expired_at": "2026-10-04T21:15:03.008289Z"
   },
   {
     "id": "14ad25ef78f2",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-01T19:24:15.805900Z",
     "score": 90,
     "reason": "New Gemini model (4 Argon) released by Google, available via API. Direct impact for builders to evaluate and deploy.",
@@ -14211,6 +14213,7 @@
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, dieser Gemini 4 Argon Artikel von Google explodiert gerade auf Hacker News. Über 1000 Kommentare – da brodelt was.\n\nFür Entwickler ist das interessant, weil Argon wohl ein deutlich effizienteres, leichteres Modell ist. Das könnte bedeuten, dass wir bald leistungsfähige Gemini-Features lokal oder auf Edge-Devices nutzen können, ohne die üblichen Kosten und Latenzen der großen Modelle. Das öffnet Türen für neue Anwendungsfälle, wo Größe bisher ein Killer war.",
-    "chloe_note": "Dieser Artikel besteht den Ships Test. Die Verfügbarkeit über API bedeutet, dass Entwickler direkt evaluieren und deployen können, um die versprochene Effizienz zu testen. Das ist ein klares \"zum Nutzen\" und \"zum Deployen\"."
+    "chloe_note": "Dieser Artikel besteht den Ships Test. Die Verfügbarkeit über API bedeutet, dass Entwickler direkt evaluieren und deployen können, um die versprochene Effizienz zu testen. Das ist ein klares \"zum Nutzen\" und \"zum Deployen\".",
+    "expired_at": "2026-10-04T21:15:03.008289Z"
   }
 ]
