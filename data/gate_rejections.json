@@ -1612,5 +1612,44 @@
       "Post is empty",
       "Post lacks a clear claim or insight"
     ]
+  },
+  {
+    "rejected_at": "2026-10-05T19:14:44.224659Z",
+    "stage": "review",
+    "title": "Ollama v0.40.0",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.40.0-rc3",
+    "reasons": [
+      "Version-only release without concrete capability: 'Ollama v0.40.0'"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-05T19:14:44.887113Z",
+    "stage": "review",
+    "title": "cloudflare/cloudflare-os — Agent workspace built on Cloudflare Workers for creating documents, building apps, and running agents with your company’s context and systems.",
+    "link": "https://github.com/cloudflare/cloudflare-os",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-05T19:14:45.036144Z",
+    "stage": "review",
+    "title": "michael-denyer/pstack-claude — Claude Code, Codex, Pi, OpenCode, Gemini, and Prime Agent versions of Poteto's pstack. Rigorous agent workflows with Cursor primitives translated for other harnesses.",
+    "link": "https://github.com/michael-denyer/pstack-claude",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-05T19:14:45.187670Z",
+    "stage": "review",
+    "title": "ReviewBench: An open benchmark for AI code review",
+    "link": "https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review/",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
   }
 ]

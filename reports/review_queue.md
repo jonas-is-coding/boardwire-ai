@@ -6,6 +6,10 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-10-05T19:14:45.187670Z` [review] **ReviewBench: An open benchmark for AI code review** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-05T19:14:45.036144Z` [review] **michael-denyer/pstack-claude — Claude Code, Codex, Pi, OpenCode, Gemini, and Prime Agent versions of Poteto's pstack. Rigorous agent workflows with Cursor primitives translated for other harnesses.** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-05T19:14:44.887113Z` [review] **cloudflare/cloudflare-os — Agent workspace built on Cloudflare Workers for creating documents, building apps, and running agents with your company’s context and systems.** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-05T19:14:44.224659Z` [review] **Ollama v0.40.0** — Version-only release without concrete capability: 'Ollama v0.40.0'
 - `2026-10-04T21:54:26.647719Z` [review] **AutoSynthData: Generating Training Data for Enterprise Agents** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-04T21:54:26.548261Z` [review] **Kolibri: A Sovereign Open-Weight Model** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-02T19:07:42.257144Z` [review] **FLUX 3 Image** — Post is empty; Post lacks a clear claim or insight
@@ -27,7 +31,3 @@ No pending review items.
 - `2026-09-29T19:15:34.572100Z` [review] **LangChain v1.6.6** — Version-only release without concrete capability: 'LangChain v1.6.6'
 - `2026-09-29T16:29:20.096215Z` [review] **LangChain v1.7.5** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.7.5'
 - `2026-09-29T16:29:19.994953Z` [review] **NVIDIA/OpenShell — OpenShell is the safe, private runtime for autonomous AI agents.** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-29T16:29:19.894897Z` [review] **Ollama v0.35.0** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-29T16:29:19.794204Z` [review] **Sonnet 5.5** — Version-only release without concrete capability: 'Sonnet 5.5'
-- `2026-09-29T16:29:19.575492Z` [review] **LangChain v1.4.3** — Version-only release without concrete capability: 'LangChain v1.4.3'
-- `2026-09-28T20:29:13.257591Z` [review] **Holo4: powering generalist computer-use agents** — Post is empty; Post lacks a clear claim or insight
