@@ -6,6 +6,10 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-10-05T21:27:29.467959Z` [review] **Disrupting a coordinated model-distillation campaign** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-05T21:27:29.385718Z` [review] **OpenAI "rogue" agent activities found on Wikimedia projects** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-05T21:27:29.300205Z` [review] **vLLM v0.31.0rc5** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.31.0rc5'
+- `2026-10-05T21:27:29.217473Z` [review] **Ollama v0.40.0-rc1** — Version-only release without concrete capability: 'Ollama v0.40.0-rc1'
 - `2026-10-05T19:14:45.187670Z` [review] **ReviewBench: An open benchmark for AI code review** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-05T19:14:45.036144Z` [review] **michael-denyer/pstack-claude — Claude Code, Codex, Pi, OpenCode, Gemini, and Prime Agent versions of Poteto's pstack. Rigorous agent workflows with Cursor primitives translated for other harnesses.** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-05T19:14:44.887113Z` [review] **cloudflare/cloudflare-os — Agent workspace built on Cloudflare Workers for creating documents, building apps, and running agents with your company’s context and systems.** — Post is empty; Post lacks a clear claim or insight
@@ -27,7 +31,3 @@ No pending review items.
 - `2026-09-30T16:24:18.814454Z` [review] **DraftKings is using AI to behaviorally target chronic gamblers** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-30T16:24:18.678962Z` [review] **LangChain v1.6.7** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.6.7'
 - `2026-09-29T19:15:34.865717Z` [review] **Uncensored and Offensive Security AI Models Benchmark** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-29T19:15:34.720094Z` [review] **t8y2/dbx — 25 MB lightweight cross-platform database client for 100+ databases, including MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, SQL Server, and Dameng. Built-in AI, MCP Server, CLI, deskt** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-29T19:15:34.572100Z` [review] **LangChain v1.6.6** — Version-only release without concrete capability: 'LangChain v1.6.6'
-- `2026-09-29T16:29:20.096215Z` [review] **LangChain v1.7.5** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.7.5'
-- `2026-09-29T16:29:19.994953Z` [review] **NVIDIA/OpenShell — OpenShell is the safe, private runtime for autonomous AI agents.** — Post is empty; Post lacks a clear claim or insight

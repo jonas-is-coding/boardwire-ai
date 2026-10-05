@@ -1651,5 +1651,45 @@
       "Post is empty",
       "Post lacks a clear claim or insight"
     ]
+  },
+  {
+    "rejected_at": "2026-10-05T21:27:29.217473Z",
+    "stage": "review",
+    "title": "Ollama v0.40.0-rc1",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.40.0-rc1",
+    "reasons": [
+      "Version-only release without concrete capability: 'Ollama v0.40.0-rc1'"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-05T21:27:29.300205Z",
+    "stage": "review",
+    "title": "vLLM v0.31.0rc5",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.31.0rc5",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight",
+      "Version-only release without concrete capability: 'vLLM v0.31.0rc5'"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-05T21:27:29.385718Z",
+    "stage": "review",
+    "title": "OpenAI \"rogue\" agent activities found on Wikimedia projects",
+    "link": "https://diff.wikimedia.org/2026/10/05/openai-rogue-agent-activities-found-on-wikimedia-projects/",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-05T21:27:29.467959Z",
+    "stage": "review",
+    "title": "Disrupting a coordinated model-distillation campaign",
+    "link": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
   }
 ]
