@@ -1459,6 +1459,42 @@
         "@ai2.bsky.social follows"
       ],
       "followed_at": "2026-10-02T14:09:03.353260Z"
+    },
+    "did:plc:zhwrua7fczxye2v44dvrz6mq": {
+      "handle": "anamarasovic.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mx7ncf6tqr2u",
+      "channel": "seed_follows",
+      "score": 2.0,
+      "mode": "discover",
+      "via": [
+        "@stellaathena.bsky.social follows",
+        "@ai2.bsky.social follows"
+      ],
+      "followed_at": "2026-10-06T14:28:41.645693Z"
+    },
+    "did:plc:rwncbp4bh6trecqjspzzxuka": {
+      "handle": "jcjray.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mx7ndnjv2x2o",
+      "channel": "seed_followers",
+      "score": 2.0,
+      "mode": "discover",
+      "via": [
+        "follows @simonwillison.net",
+        "follows @natolambert.bsky.social",
+        "follows @ai2.bsky.social"
+      ],
+      "followed_at": "2026-10-06T14:29:23.947503Z"
+    },
+    "did:plc:inrodrb3c5dryx5h6uzavjwl": {
+      "handle": "billmill.org",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mx7nerkimn2v",
+      "channel": "seed_follows",
+      "score": 1.5,
+      "mode": "discover",
+      "via": [
+        "@simonwillison.net follows"
+      ],
+      "followed_at": "2026-10-06T14:30:03.061071Z"
     }
   },
   "runs": [
@@ -1849,6 +1885,23 @@
       ],
       "started_at": "2026-10-02T14:09:02.287720Z",
       "finished_at": "2026-10-02T14:09:03.355505Z"
+    },
+    {
+      "mode": "discover",
+      "dry_run": false,
+      "limit": 12,
+      "planned": 0,
+      "followed": 3,
+      "skipped_already": 0,
+      "failed": 0,
+      "aborted": null,
+      "handles": [
+        "anamarasovic.bsky.social",
+        "jcjray.bsky.social",
+        "billmill.org"
+      ],
+      "started_at": "2026-10-06T14:28:41.168645Z",
+      "finished_at": "2026-10-06T14:30:03.063166Z"
     }
   ],
   "pinned_thread": {
