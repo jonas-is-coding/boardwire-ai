@@ -14043,7 +14043,7 @@
   },
   {
     "id": "0567611c090f",
-    "status": "deferred_generation_unavailable",
+    "status": "expired_deferred",
     "created_at": "2026-09-30T19:03:42.967110Z",
     "score": 90,
     "reason": "deferred: generation provider unavailable",
@@ -14352,12 +14352,12 @@
   },
   {
     "id": "8ab08f6c1194",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-10-05T21:27:11.087351Z",
-    "score": 90,
-    "reason": "New Claude Code version with concrete features like UI selection access and built-in GitHub API for developers.",
-    "proposed_post": "Claude Code v2.1.288 adds `$.ui.selection()` for mods to access selected text in fullscreen. This enables richer UI interactions and context-aware tools within Claude Code.",
-    "source_angle": "Claude Code v2.1.288 release with new mod capabilities",
+    "status": "approved",
+    "created_at": "2026-10-06T19:24:14.461597Z",
+    "score": 95,
+    "reason": "New Claude Code version ships with UI selection access and GitHub API, enabling immediate use for developers.",
+    "proposed_post": "Claude Code v2.1.288 adds UI selection access and a built-in GitHub API. Builders can now automate UI interactions and integrate directly with GitHub repos for AI-assisted development workflows.",
+    "source_angle": "Claude Code v2.1.288 release with new developer features.",
     "source_item": {
       "title": "Claude Code v2.1.288",
       "source": "Claude Code Releases",
@@ -14389,10 +14389,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-10-05T21:27:29.023481Z",
-    "defer_count": 1,
-    "original_score": 90,
-    "original_reason": "New Claude Code version with concrete features like UI selection access and built-in GitHub API for developers."
+    "breaking": false,
+    "reactivated_at": "2026-10-06T19:24:14.461597Z"
   },
   {
     "id": "b36821e5e788",
@@ -14435,5 +14433,48 @@
     "is_llm_mode": true,
     "breaking": true,
     "reactivated_at": "2026-10-06T16:42:59.543160Z"
+  },
+  {
+    "id": "f49a786b5d9d",
+    "status": "approved",
+    "created_at": "2026-10-06T19:24:01.563544Z",
+    "score": 90,
+    "reason": "GitHub repo for open-source AI-designed hardware released, highly actionable for custom silicon.",
+    "proposed_post": "FeSens released openTPU, an open-source project for AI-designed inference hardware. Builders can now explore custom silicon generation, potentially optimizing cost and performance for specific AI workloads.",
+    "source_angle": "Open-source AI-designed inference hardware project released.",
+    "source_item": {
+      "title": "AI is now capable of developing its own inference hardware",
+      "source": "HackerNews",
+      "link": "https://github.com/FeSens/openTPU",
+      "source_tier": 3,
+      "engagement_score": 215.5,
+      "local_newsworthiness_score": 40,
+      "summary": "143 points, 145 comments on Hacker News — submitted by fsbonetto — original: https://github.com/FeSens/openTPU\n[Cluster context: 1 sources, engagement 215, common terms: submitted, fsbonetto, inference, hardware, 143.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 215,
+        "common_terms": [
+          "submitted",
+          "fsbonetto",
+          "inference",
+          "hardware",
+          "143",
+          "hacker",
+          "now",
+          "points"
+        ],
+        "cluster_summary": "1 sources, engagement 215. Common terms: submitted, fsbonetto, inference, hardware. Lead: AI is now capable of developing its own inference hardware",
+        "alternative_titles": [],
+        "cluster_score": 10
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, check this out: \"AI is now capable of developing its own inference hardware.\"\n\nDas ist krass. Ein Open-Source-TPU, das von AI designt wurde. Das ist der nächste Schritt in der Hardware-Optimierung für AI – nicht nur, dass AI besser wird, sondern dass sie sich selbst die Werkzeuge dafür baut.\n\nJeder, der an Edge-AI, effizienten Modellen oder einfach nur an der Zukunft der Hardware-Entwicklung arbeitet, muss das sehen. Das könnte die Art und Weise, wie wir Inference-Hardware entwickeln, komplett umkrempeln, weg von manueller Optimierung hin zu AI-generierten Architekturen. Das ist ein Game Changer für Developer, die am Limit der Performance kratzen.",
+    "chloe_note": "Das besteht den Ships Test. Es gibt ein GitHub Repo für die TPU zum Herunterladen und Nutzen, was für Entwickler, die an Custom Silicon arbeiten, direkt umsetzbar ist. Der Fokus auf AI-generierte Hardware für Inference ist ein klares Signal."
   }
 ]

@@ -6,6 +6,9 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-10-06T19:24:16.081364Z` [review] **Opus 5.5 agents discover two room-temperature magnetic semiconductor candidates** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-06T19:24:15.926955Z` [review] **LangChain v1.6.7** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.6.7'
+- `2026-10-06T19:24:15.770890Z` [review] **Ollama v0.40.0** — Version-only release without concrete capability: 'Ollama v0.40.0'
 - `2026-10-06T16:42:59.844058Z` [review] **Mistral Large 4** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-06T16:42:59.694561Z` [review] **Ollama v0.40.0** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'Ollama v0.40.0'
 - `2026-10-05T21:27:29.467959Z` [review] **Disrupting a coordinated model-distillation campaign** — Post is empty; Post lacks a clear claim or insight
@@ -28,6 +31,3 @@ No pending review items.
 - `2026-09-30T19:03:48.955068Z` [review] **LangChain v1.7.0** — Post is empty; Post lacks a clear claim or insight
 - `2026-09-30T19:03:48.805598Z` [review] **vLLM v0.4.0** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.4.0'
 - `2026-09-30T19:03:48.658187Z` [review] **Claude Code v2.1.285** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-30T16:24:19.081550Z` [review] **Towards safety cases for frontier AI training** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-30T16:24:18.947906Z` [review] **Introducing SynthID Bio** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-30T16:24:18.814454Z` [review] **DraftKings is using AI to behaviorally target chronic gamblers** — Post is empty; Post lacks a clear claim or insight
