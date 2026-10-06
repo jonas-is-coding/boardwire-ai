@@ -14080,8 +14080,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-10-02T16:14:28.718928Z",
-    "defer_count": 3,
+    "deferred_at": "2026-10-06T16:41:53.575856Z",
+    "defer_count": 4,
     "original_score": 90,
     "original_reason": "New SDK release with concrete API features for enterprise management (analytics, spend limits, RBAC) and agent control."
   },
@@ -14396,12 +14396,12 @@
   },
   {
     "id": "b36821e5e788",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-10-05T21:27:17.590273Z",
-    "score": 90,
-    "reason": "Open-weight model release. Direct artifact for builders to download and use today.",
-    "proposed_post": "Reflection released Beam, a 501B open-weight model. Builders can now download and fine-tune this model for specific applications, offering a new option for custom deployments.",
-    "source_angle": "New 501B open-weight model for fine-tuning and deployment.",
+    "status": "approved",
+    "created_at": "2026-10-06T16:42:59.543160Z",
+    "score": 95,
+    "reason": "Open-weight model released, immediately usable by builders. Passes Ships Test with direct artifact.",
+    "proposed_post": "Reflection released Beam, a 501B open-weight model. Builders can download and deploy these weights today for custom applications, offering a new option for self-hosted inference.",
+    "source_angle": "New open-weight model for self-hosted deployment.",
     "source_item": {
       "title": "Beam: Reflection's 501B open-weight model",
       "source": "HackerNews",
@@ -14433,9 +14433,7 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-10-05T21:27:29.117574Z",
-    "defer_count": 1,
-    "original_score": 90,
-    "original_reason": "Open-weight model release. Direct artifact for builders to download and use today."
+    "breaking": true,
+    "reactivated_at": "2026-10-06T16:42:59.543160Z"
   }
 ]
