@@ -1742,5 +1742,36 @@
       "Post is empty",
       "Post lacks a clear claim or insight"
     ]
+  },
+  {
+    "rejected_at": "2026-10-07T17:25:09.916964Z",
+    "stage": "review",
+    "title": "morluto/rea — Reverse engineer anything with agents, from app behavior down to native binaries.",
+    "link": "https://github.com/morluto/rea",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-07T17:25:10.056142Z",
+    "stage": "review",
+    "title": "Sharing AI progress in mathematics",
+    "link": "https://openai.com/index/sharing-ai-progress-in-mathematics",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-07T17:25:10.198012Z",
+    "stage": "review",
+    "title": "vLLM v0.31.1rc0",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.31.1rc0",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight",
+      "Version-only release without concrete capability: 'vLLM v0.31.1rc0'"
+    ]
   }
 ]

@@ -6,6 +6,9 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-10-07T17:25:10.198012Z` [review] **vLLM v0.31.1rc0** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.31.1rc0'
+- `2026-10-07T17:25:10.056142Z` [review] **Sharing AI progress in mathematics** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-07T17:25:09.916964Z` [review] **morluto/rea — Reverse engineer anything with agents, from app behavior down to native binaries.** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-06T19:24:16.081364Z` [review] **Opus 5.5 agents discover two room-temperature magnetic semiconductor candidates** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-06T19:24:15.926955Z` [review] **LangChain v1.6.7** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.6.7'
 - `2026-10-06T19:24:15.770890Z` [review] **Ollama v0.40.0** — Version-only release without concrete capability: 'Ollama v0.40.0'
@@ -28,6 +31,3 @@ No pending review items.
 - `2026-10-01T17:00:29.290397Z` [review] **vLLM v0.31.0rc3** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.31.0rc3'
 - `2026-10-01T17:00:29.143678Z` [review] **tile-ai/tilelang — Domain-specific language designed to streamline the development of high-performance GPU/CPU/Accelerators kernels** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-01T17:00:28.998433Z` [review] **Introducing Olmo-core 3: Open, scalable training infrastructure for large MoEs** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-30T19:03:48.955068Z` [review] **LangChain v1.7.0** — Post is empty; Post lacks a clear claim or insight
-- `2026-09-30T19:03:48.805598Z` [review] **vLLM v0.4.0** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.4.0'
-- `2026-09-30T19:03:48.658187Z` [review] **Claude Code v2.1.285** — Post is empty; Post lacks a clear claim or insight
