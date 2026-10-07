@@ -14649,5 +14649,92 @@
     "breaking": true,
     "claire_note": "Chloe, dieser Mistral Large 4 Artikel auf HN hat 1968 Punkte und über 1100 Kommentare. Das ist eine Ansage.\n\nFür Entwickler ist das interessant, weil Mistral hier potenziell einen neuen Top-Tier-Player im LLM-Space etabliert, der nicht von den üblichen Verdächtigen kommt. Wenn die Performance hält, was die Hype-Zahlen versprechen, haben wir hier eine Alternative zu OpenAI oder Anthropic, die man für spezifische Anwendungsfälle evaluieren muss – gerade mit Blick auf Kosten und Latenz. Das könnte für viele Projekte eine echte Option sein, die bisher an den großen Modellen hängen.",
     "chloe_note": "*Mistral Large 4* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New flagship model released by a major lab, immediately accessible via API for builders. High impact.Cluster context: 1 sources, engagement 2554. Common terms: 1968, comments, submitted, philpax. Bewertung: 95. Quelle: https://mistral.ai/news/mistral-large-4/\\"
+  },
+  {
+    "id": "af94e9206792",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-10-07T19:51:45.120355Z",
+    "score": 75,
+    "reason": "New open-source macOS terminal with specific features for AI agent development. Ships today.",
+    "proposed_post": "manaflow-ai/cmux is a new open-source macOS terminal based on Ghostty. It offers vertical tabs and notifications tailored for AI coding agents, providing a dedicated environment for managing multi-agent development workflows.",
+    "source_angle": "GitHub Trending: New open-source macOS terminal for AI dev.",
+    "source_item": {
+      "title": "manaflow-ai/cmux — Open source Ghostty-based macOS terminal with vertical tabs and notifications for AI coding agents. Built for multitasking, organization, and programmability.",
+      "source": "GitHub Trending",
+      "link": "https://github.com/manaflow-ai/cmux",
+      "source_tier": 2,
+      "engagement_score": 96.0,
+      "local_newsworthiness_score": 0,
+      "summary": "Trending on GitHub today: +96 stars. Open source Ghostty-based macOS terminal with vertical tabs and notifications for AI coding agents. Built for multitasking, organization, and programmability.\n[Cluster context: 1 sources, engagement 96, common terms: trending, built, terminal, programmability., notifications.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 96,
+        "common_terms": [
+          "trending",
+          "built",
+          "terminal",
+          "programmability.",
+          "notifications",
+          "agents.",
+          "github",
+          "+96"
+        ],
+        "cluster_summary": "1 sources, engagement 96. Common terms: trending, built, terminal, programmability.. Lead: manaflow-ai/cmux — Open source Ghostty-based macOS terminal with vertical tabs and notifications for AI coding agents. B",
+        "alternative_titles": [],
+        "cluster_score": 15
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-10-07T19:51:53.051752Z",
+    "defer_count": 1,
+    "original_score": 75,
+    "original_reason": "New open-source macOS terminal with specific features for AI agent development. Ships today."
+  },
+  {
+    "id": "a97c34bd2faa",
+    "status": "approved",
+    "created_at": "2026-10-07T19:51:32.755695Z",
+    "score": 90,
+    "reason": "New open, lightweight multimodal embedding model released by Google. Direct utility for builders in RAG/search applications.",
+    "proposed_post": "EmbeddingGemma 2, an open, lightweight multimodal embedding model, is released. Use it for more efficient, flexible multimodal RAG and search, enabling on-device or cost-sensitive applications.",
+    "source_angle": "Google releases open, lightweight multimodal embedding model",
+    "source_item": {
+      "title": "EmbeddingGemma 2: An open, lightweight multimodal embedding model",
+      "source": "HackerNews",
+      "link": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/",
+      "source_tier": 3,
+      "engagement_score": 433.5,
+      "local_newsworthiness_score": 10,
+      "summary": "411 points, 45 comments on Hacker News — submitted by ilreb — original: https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/\n[Cluster context: 1 sources, engagement 433, common terms: hacker, multimodal, original, embeddinggemma, points.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 433,
+        "common_terms": [
+          "hacker",
+          "multimodal",
+          "original",
+          "embeddinggemma",
+          "points",
+          "submitted",
+          "ilreb",
+          "411"
+        ],
+        "cluster_summary": "1 sources, engagement 433. Common terms: hacker, multimodal, original, embeddinggemma. Lead: EmbeddingGemma 2: An open, lightweight multimodal embedding model",
+        "alternative_titles": [],
+        "cluster_score": 10
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, dieser EmbeddingGemma 2 Post ist auf HackerNews hochgeschossen. Google hat ein neues, leichtgewichtiges multimodales Embedding-Modell rausgebracht.\n\nDas ist relevant, weil Entwickler jetzt einfacher eigene, spezialisierte Embeddings für Text und Bilder erstellen können, auch auf kleineren Devices. Die Open-Source-Verfügbarkeit senkt die Hürde für Experimente und Customization erheblich. Ein Builder kann damit zum Beispiel effizienter Retrieval Augmented Generation (RAG) Systeme bauen, die sowohl Text- als auch Bilddaten verstehen.",
+    "chloe_note": "Genehmigt. Der Beitrag besteht den Ships Test klar, da er ein Modell zum direkten Download und zur Nutzung anbietet. Entwickler können damit sofort spezialisierte Embeddings für RAG-Systeme und andere Anwendungen erstellen."
   }
 ]

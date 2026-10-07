@@ -6,6 +6,9 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-10-07T19:51:53.517124Z` [review] **Show HN: NanoMuse – An open-source AI agent for your phone and computer** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-07T19:51:53.361802Z` [review] **Anthropic Python SDK v1.12.0** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-07T19:51:53.206815Z` [review] **Helping teens learn, plan, and shape the future of AI** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-07T17:25:10.198012Z` [review] **vLLM v0.31.1rc0** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.31.1rc0'
 - `2026-10-07T17:25:10.056142Z` [review] **Sharing AI progress in mathematics** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-07T17:25:09.916964Z` [review] **morluto/rea — Reverse engineer anything with agents, from app behavior down to native binaries.** — Post is empty; Post lacks a clear claim or insight
@@ -28,6 +31,3 @@ No pending review items.
 - `2026-10-02T16:15:38.970909Z` [review] **vLLM v0.31.0rc4** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.31.0rc4'
 - `2026-10-01T19:24:29.836756Z` [review] **vLLM v0.31.0rc2** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.31.0rc2'
 - `2026-10-01T19:24:29.689162Z` [review] **Clef: Open-source decision models, and new RL fine-tuning platform** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-01T17:00:29.290397Z` [review] **vLLM v0.31.0rc3** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.31.0rc3'
-- `2026-10-01T17:00:29.143678Z` [review] **tile-ai/tilelang — Domain-specific language designed to streamline the development of high-performance GPU/CPU/Accelerators kernels** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-01T17:00:28.998433Z` [review] **Introducing Olmo-core 3: Open, scalable training infrastructure for large MoEs** — Post is empty; Post lacks a clear claim or insight
