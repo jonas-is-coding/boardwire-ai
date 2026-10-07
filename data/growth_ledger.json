@@ -1495,6 +1495,19 @@
         "@simonwillison.net follows"
       ],
       "followed_at": "2026-10-06T14:30:03.061071Z"
+    },
+    "did:plc:y45ltamcc3nesvd5cpxqavcu": {
+      "handle": "alexpriest.com",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mxc6ouzfyg2v",
+      "channel": "seed_followers",
+      "score": 2.0,
+      "mode": "discover",
+      "via": [
+        "follows @natolambert.bsky.social",
+        "follows @hamel.bsky.social",
+        "follows @emollick.bsky.social"
+      ],
+      "followed_at": "2026-10-07T14:45:13.956588Z"
     }
   },
   "runs": [
@@ -1902,6 +1915,21 @@
       ],
       "started_at": "2026-10-06T14:28:41.168645Z",
       "finished_at": "2026-10-06T14:30:03.063166Z"
+    },
+    {
+      "mode": "discover",
+      "dry_run": false,
+      "limit": 12,
+      "planned": 0,
+      "followed": 1,
+      "skipped_already": 0,
+      "failed": 0,
+      "aborted": null,
+      "handles": [
+        "alexpriest.com"
+      ],
+      "started_at": "2026-10-07T14:45:13.828701Z",
+      "finished_at": "2026-10-07T14:45:13.958915Z"
     }
   ],
   "pinned_thread": {
