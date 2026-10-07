@@ -14262,7 +14262,7 @@
   },
   {
     "id": "81f072a31a25",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-05T19:14:24.015922Z",
     "score": 90,
     "reason": "vLLM v0.31.0 released with specific performance optimizations for DeepSeek-V4.1-Flash, directly actionable for builders.",
@@ -14304,11 +14304,12 @@
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das vLLM v0.31.0 Release ist ein Blick wert. FlashMLA mit NVFP4 für DeepSeek-V4.1 ist jetzt der SM100-Standard. Das bedeutet für Builder auf SM100-Hardware signifikante Performance-Steigerungen, besonders wenn sie DeepSeek-Modelle einsetzen und Kosten/Latenz optimieren wollen.",
-    "chloe_note": "Das vLLM Release v0.31.0 besteht den Ships Test. Es gibt eine neue Version zum Herunterladen und konkrete Performance-Vorteile für DeepSeek-Modelle auf SM100-Hardware, die Entwickler direkt nutzen können."
+    "chloe_note": "Das vLLM Release v0.31.0 besteht den Ships Test. Es gibt eine neue Version zum Herunterladen und konkrete Performance-Vorteile für DeepSeek-Modelle auf SM100-Hardware, die Entwickler direkt nutzen können.",
+    "expired_at": "2026-10-07T22:13:02.501203Z"
   },
   {
     "id": "e331578e99d6",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-05T19:14:36.994459Z",
     "score": 85,
     "reason": "New Claude Code version with bug fixes and performance improvements. Directly impacts developer workflow stability.",
@@ -14349,7 +14350,8 @@
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, der Claude Code Release 2.1.289 hat ein paar interessante Fixes. Die gefixten Probleme bei Shell-Commands und Terminal-Freezes sind genau die Art von kleinen, nervigen Bugs, die Entwickler produktiver machen, weil sie weniger Zeit mit Workarounds verschwenden. Das ist relevant, weil es direkt die Dev-Experience verbessert und Stabilität in der Toolchain bedeutet.",
-    "chloe_note": "Kurzes Update: *Claude Code v2.1.289* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um New Claude Code version with bug fixes and performance improvements. Directly impacts developer workflow stability.Cluster context: 1 sources, engagement 0. Common terms: session, claude, first, control. Ich habe es mit 85 Punkten bewertet. Hier der Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.289"
+    "chloe_note": "Kurzes Update: *Claude Code v2.1.289* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um New Claude Code version with bug fixes and performance improvements. Directly impacts developer workflow stability.Cluster context: 1 sources, engagement 0. Common terms: session, claude, first, control. Ich habe es mit 85 Punkten bewertet. Hier der Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.289",
+    "expired_at": "2026-10-07T22:13:02.501203Z"
   },
   {
     "id": "8ab08f6c1194",
