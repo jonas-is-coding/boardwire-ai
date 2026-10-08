@@ -6,6 +6,11 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-10-08T17:22:47.516820Z` [review] **LangChain v1.7.0** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-08T17:22:47.351444Z` [review] **Docker Agent** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-08T17:22:47.185740Z` [review] **Claude Code v2.1.294** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-08T17:22:47.016874Z` [review] **Anthropic Python SDK v1.12.1** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-08T17:22:46.847251Z` [review] **Claude Haiku 5.5** — Version-only release without concrete capability: 'Claude Haiku 5.5'
 - `2026-10-07T19:51:53.517124Z` [review] **Show HN: NanoMuse – An open-source AI agent for your phone and computer** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-07T19:51:53.361802Z` [review] **Anthropic Python SDK v1.12.0** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-07T19:51:53.206815Z` [review] **Helping teens learn, plan, and shape the future of AI** — Post is empty; Post lacks a clear claim or insight
@@ -26,8 +31,3 @@ No pending review items.
 - `2026-10-05T19:14:44.887113Z` [review] **cloudflare/cloudflare-os — Agent workspace built on Cloudflare Workers for creating documents, building apps, and running agents with your company’s context and systems.** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-05T19:14:44.224659Z` [review] **Ollama v0.40.0** — Version-only release without concrete capability: 'Ollama v0.40.0'
 - `2026-10-04T21:54:26.647719Z` [review] **AutoSynthData: Generating Training Data for Enterprise Agents** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-04T21:54:26.548261Z` [review] **Kolibri: A Sovereign Open-Weight Model** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-02T19:07:42.257144Z` [review] **FLUX 3 Image** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-02T16:15:38.970909Z` [review] **vLLM v0.31.0rc4** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.31.0rc4'
-- `2026-10-01T19:24:29.836756Z` [review] **vLLM v0.31.0rc2** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.31.0rc2'
-- `2026-10-01T19:24:29.689162Z` [review] **Clef: Open-source decision models, and new RL fine-tuning platform** — Post is empty; Post lacks a clear claim or insight

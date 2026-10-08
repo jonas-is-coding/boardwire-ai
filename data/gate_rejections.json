@@ -1803,5 +1803,54 @@
       "Post is empty",
       "Post lacks a clear claim or insight"
     ]
+  },
+  {
+    "rejected_at": "2026-10-08T17:22:46.847251Z",
+    "stage": "review",
+    "title": "Claude Haiku 5.5",
+    "link": "https://www.anthropic.com/claude-haiku-5-5",
+    "reasons": [
+      "Version-only release without concrete capability: 'Claude Haiku 5.5'"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-08T17:22:47.016874Z",
+    "stage": "review",
+    "title": "Anthropic Python SDK v1.12.1",
+    "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.12.1",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-08T17:22:47.185740Z",
+    "stage": "review",
+    "title": "Claude Code v2.1.294",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.294",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-08T17:22:47.351444Z",
+    "stage": "review",
+    "title": "Docker Agent",
+    "link": "https://github.com/docker/docker-agent",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-08T17:22:47.516820Z",
+    "stage": "review",
+    "title": "LangChain v1.7.0",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.7.0",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
   }
 ]

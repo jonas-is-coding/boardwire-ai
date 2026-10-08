@@ -14483,12 +14483,12 @@
   },
   {
     "id": "54d7adeea329",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-10-07T17:24:43.332185Z",
+    "status": "approved",
+    "created_at": "2026-10-08T17:22:46.467996Z",
     "score": 90,
-    "reason": "DeepMind released an open, lightweight multimodal embedding model. Direct utility for builders in RAG/search applications.",
-    "proposed_post": "Google DeepMind released EmbeddingGemma 2, an open, lightweight multimodal embedding model. Builders can now integrate open-source multimodal embeddings for RAG, search, and other applications, potentially reducing costs or improving performance.",
-    "source_angle": "DeepMind releases open, lightweight multimodal embedding model",
+    "reason": "DeepMind released open, lightweight multimodal embedding model weights. Clear utility for local RAG/search applications.",
+    "proposed_post": "Google DeepMind released EmbeddingGemma 2, an open, lightweight multimodal embedding model. Use it for local RAG/search with joint text-image understanding, reducing API costs and latency.",
+    "source_angle": "DeepMind releases open multimodal embedding model",
     "source_item": {
       "title": "EmbeddingGemma 2: an open, lightweight multimodal embedding model",
       "source": "Google DeepMind Blog",
@@ -14516,10 +14516,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-10-07T17:25:09.777398Z",
-    "defer_count": 1,
-    "original_score": 90,
-    "original_reason": "DeepMind released an open, lightweight multimodal embedding model. Direct utility for builders in RAG/search applications."
+    "breaking": false,
+    "reactivated_at": "2026-10-08T17:22:46.467996Z"
   },
   {
     "id": "7b09550310ac",
@@ -14655,12 +14653,12 @@
   },
   {
     "id": "af94e9206792",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-10-07T19:51:45.120355Z",
-    "score": 75,
-    "reason": "New open-source macOS terminal with specific features for AI agent development. Ships today.",
-    "proposed_post": "manaflow-ai/cmux is a new open-source macOS terminal based on Ghostty. It offers vertical tabs and notifications tailored for AI coding agents, providing a dedicated environment for managing multi-agent development workflows.",
-    "source_angle": "GitHub Trending: New open-source macOS terminal for AI dev.",
+    "status": "approved",
+    "created_at": "2026-10-08T17:22:46.660045Z",
+    "score": 85,
+    "reason": "Open-source macOS terminal specifically for AI agent development. Ships today with concrete features for builders.",
+    "proposed_post": "manaflow-ai/cmux, an open-source macOS terminal, launched with vertical tabs and notifications for AI coding agents. Builders can use it to better organize and monitor agent output and multi-agent sessions.",
+    "source_angle": "New open-source macOS terminal for AI agent development",
     "source_item": {
       "title": "manaflow-ai/cmux — Open source Ghostty-based macOS terminal with vertical tabs and notifications for AI coding agents. Built for multitasking, organization, and programmability.",
       "source": "GitHub Trending",
@@ -14692,10 +14690,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-10-07T19:51:53.051752Z",
-    "defer_count": 1,
-    "original_score": 75,
-    "original_reason": "New open-source macOS terminal with specific features for AI agent development. Ships today."
+    "breaking": false,
+    "reactivated_at": "2026-10-08T17:22:46.660045Z"
   },
   {
     "id": "a97c34bd2faa",
