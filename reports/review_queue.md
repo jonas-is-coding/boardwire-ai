@@ -6,6 +6,9 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-10-08T19:47:17.749340Z` [review] **Multimodal open d1 decision models for the edge** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-08T19:47:17.625990Z` [review] **One Model Family, Two Gold-Level Results: Fine-Tuning Nemotron for IOI and IMO** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-08T19:47:17.503356Z` [review] **LangChain v1.6.8** — Version-only release without concrete capability: 'LangChain v1.6.8'
 - `2026-10-08T17:22:47.516820Z` [review] **LangChain v1.7.0** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-08T17:22:47.351444Z` [review] **Docker Agent** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-08T17:22:47.185740Z` [review] **Claude Code v2.1.294** — Post is empty; Post lacks a clear claim or insight
@@ -28,6 +31,3 @@ No pending review items.
 - `2026-10-05T21:27:29.217473Z` [review] **Ollama v0.40.0-rc1** — Version-only release without concrete capability: 'Ollama v0.40.0-rc1'
 - `2026-10-05T19:14:45.187670Z` [review] **ReviewBench: An open benchmark for AI code review** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-05T19:14:45.036144Z` [review] **michael-denyer/pstack-claude — Claude Code, Codex, Pi, OpenCode, Gemini, and Prime Agent versions of Poteto's pstack. Rigorous agent workflows with Cursor primitives translated for other harnesses.** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-05T19:14:44.887113Z` [review] **cloudflare/cloudflare-os — Agent workspace built on Cloudflare Workers for creating documents, building apps, and running agents with your company’s context and systems.** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-05T19:14:44.224659Z` [review] **Ollama v0.40.0** — Version-only release without concrete capability: 'Ollama v0.40.0'
-- `2026-10-04T21:54:26.647719Z` [review] **AutoSynthData: Generating Training Data for Enterprise Agents** — Post is empty; Post lacks a clear claim or insight

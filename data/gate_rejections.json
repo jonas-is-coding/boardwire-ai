@@ -1852,5 +1852,34 @@
       "Post is empty",
       "Post lacks a clear claim or insight"
     ]
+  },
+  {
+    "rejected_at": "2026-10-08T19:47:17.503356Z",
+    "stage": "review",
+    "title": "LangChain v1.6.8",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.6.8",
+    "reasons": [
+      "Version-only release without concrete capability: 'LangChain v1.6.8'"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-08T19:47:17.625990Z",
+    "stage": "review",
+    "title": "One Model Family, Two Gold-Level Results: Fine-Tuning Nemotron for IOI and IMO",
+    "link": "https://huggingface.co/blog/nvidia/nemotron-ioi-and-imo-2026",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-08T19:47:17.749340Z",
+    "stage": "review",
+    "title": "Multimodal open d1 decision models for the edge",
+    "link": "https://huggingface.co/blog/LiquidAI/open-d1",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
   }
 ]

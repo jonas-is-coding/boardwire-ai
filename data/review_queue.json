@@ -14735,5 +14735,135 @@
     "breaking": false,
     "claire_note": "Chloe, dieser EmbeddingGemma 2 Post ist auf HackerNews hochgeschossen. Google hat ein neues, leichtgewichtiges multimodales Embedding-Modell rausgebracht.\n\nDas ist relevant, weil Entwickler jetzt einfacher eigene, spezialisierte Embeddings für Text und Bilder erstellen können, auch auf kleineren Devices. Die Open-Source-Verfügbarkeit senkt die Hürde für Experimente und Customization erheblich. Ein Builder kann damit zum Beispiel effizienter Retrieval Augmented Generation (RAG) Systeme bauen, die sowohl Text- als auch Bilddaten verstehen.",
     "chloe_note": "Genehmigt. Der Beitrag besteht den Ships Test klar, da er ein Modell zum direkten Download und zur Nutzung anbietet. Entwickler können damit sofort spezialisierte Embeddings für RAG-Systeme und andere Anwendungen erstellen."
+  },
+  {
+    "id": "bcdd98176723",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-10-08T19:46:53.398590Z",
+    "score": 95,
+    "reason": "GPT-6 with Intelligent UI is rolling out globally in ChatGPT, offering new interactive capabilities and faster responses.",
+    "proposed_post": "GPT-6 with Intelligent UI is rolling out globally in ChatGPT, enabling faster responses with visuals and interactive experiences. Builders should explore how this new interactive paradigm impacts user expectations and future API integrations.",
+    "source_angle": "OpenAI's new flagship model and interactive UI paradigm.",
+    "source_item": {
+      "title": "GPT-6 and Intelligent UI for everyone",
+      "source": "OpenAI News",
+      "link": "https://openai.com/index/gpt-6-for-everyone",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 15,
+      "summary": "GPT‑6 is rolling out globally in ChatGPT with Intelligent UI, delivering faster responses with visuals and interactive experiences you can explore and use directly.\n[Cluster context: 1 sources, engagement 0, common terms: rolling, can, experiences, directly., gpt.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "OpenAI News"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "rolling",
+          "can",
+          "experiences",
+          "directly.",
+          "gpt",
+          "you",
+          "out",
+          "interactive"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: rolling, can, experiences, directly.. Lead: GPT-6 and Intelligent UI for everyone",
+        "alternative_titles": [],
+        "cluster_score": 25
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-10-08T19:47:17.096297Z",
+    "defer_count": 1,
+    "original_score": 95,
+    "original_reason": "GPT-6 with Intelligent UI is rolling out globally in ChatGPT, offering new interactive capabilities and faster responses."
+  },
+  {
+    "id": "8feef196d3b6",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-10-08T19:47:00.737800Z",
+    "score": 95,
+    "reason": "Direct API release of new Haiku model with 1M context and new pricing. Adds specific API controls for agents. Highly actionable for builders.",
+    "proposed_post": "Claude Haiku 5.5 is now the default on Anthropic API, offering 1M context at $0.10/$0.50 per Mtok. New `agentType` and `isDeferred` fields enable finer control over subagents and tool visibility. Builders can deploy more complex, context-rich agentic workflows.",
+    "source_angle": "New Claude Haiku model and API features for agent development.",
+    "source_item": {
+      "title": "Claude Code v2.1.293",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.293",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 0,
+      "summary": "<h2>What's changed</h2>\n<ul>\n<li>Added Claude Haiku 5.5 (<code>claude-haiku-5-5</code>), now the default Haiku model on the Anthropic API — 1M context, $0.10/$0.50 per Mtok ($0.50/$2.50 for prompts over 100K)</li>\n<li>Added <code>agentType</code> to the <code>subagentStatusLine</code> payload, so scripts can tell custom subagent types apart</li>\n<li>Added <code>isDeferred</code> to <code>$.tool.register</code> for mods: <code>false</code> lists the tool's schema in the prompt from the start instead of behind tool search</li>\n<li>Fixed Claude sometimes treating its own last actions before a context compaction as done after it, and retracting or redoing finished work</li>\n<li>Fixed a memory leak where an HTTP MCP connection kept every request it had sent until it closed</li>\n<li>Fixed a message sent while Claude was working being lost when <code>←</code> moved the session to the background; if a queued message can't move, <code>←</code> now stays put and says so</li>\n<li>Fixed <code>/model</code> effort ←/→ wrapping past the highest or lowest level, which could accidentally save Low as a model's default effort</li>\n<li>Fixed <code>/tui</code> disconnecting Claude in Chrome in a session started with <code>--chrome</code>, and ignoring <code>--no-chrome</code></li>\n<li>Fixed Claude being told to continue or message subagents with <code>SendMessage</code> in sessions, including resumed ones, where a host, a permission rule or a <code>--tools</code> list removed that tool</li>\n<li>Fixed subagents and <code>--agent</code> sessions being told a built-in tool was disabled for the whole session when only their own tool list left it out</li>\n<li>Fixed a claude.ai-synced skill's edited description sometimes not reaching the model until a new conversation or <code>/clear</code></li>\n<li>Fixed <code>claude logs</code>, <code>stop</code>, <code>kill</code>, <code>rm</code> and <code>claude daemon status</code>, <code>stop</code>, <code>uninstall</code> sometimes signing you out when your login had expired or was about to</li>\n<li>Fixed the footer's agents count disappearing after a momentary failure to read the sessions folder (for example, too many open files)</li>\n<li>Fixed a custom agent named <code>worker</code> being shown as \"Agent\" when it starts, and the agent detail dialog's title losing the agent type once the agent finishes</li>\n<li>Fixed the Artifact tool's transcript row briefly reading <code>Artifact(\"(unprintable path)\")</code> while a publish call was still streaming in</li>\n<li>Fixed the <code>/ultrareview</code> upload on Linux wrongly refusing some repositories, such as one inside another checkout, over a settings file that \"could not be parsed\" while a sandboxed command was running</li>\n<li>Fixed the <code>/ultrareview</code> upload's refusal over split-index files advising a git command that could leave git unable to read its index</li>\n<li>Fixed replies in very long Remote Control and cloud sessions that could still appear a block at a time instead of streaming in</li>\n<li>Fixed Remote Control uploading a session's starting history again after every credential recovery</li>\n<li>Fixed PushNotification reporting \"Remote Control inactive\" in sessions started with <code>claude remote-control</code></li>\n<li>Fixed a mod's hooks on <code>classic.*</code> events being skipped while the plugin hooks worker restarts, which left settings hooks to answer without them</li>\n<li>Fixed <code>claude plugin test</code> failing for mods that call <code>$.session.append</code>; tests can read the appended rows back with the new <code>mock.session</code></li>\n<li>Fixed <code>claude plugin eval</code> refusing every Bash-granting run on Macs with Docker Desktop (links under <code>~/.docker/bin</code>); the refusal now names which part of a credential store held the link</li>\n<li>Fixed the Claude apps gateway refusing to start when a <code>desktop</code> policy sets Claude Desktop's built-in browser keys, such as <code>builtinBrowserEnabled</code></li>\n<li>Fixed <code>claude agents</code> offering bypass permissions that background sessions then ignored when consent was saved only in <code>.claude/settings.local.json</code> or a <code>--settings</code> file; it now asks for consent first, and a session that ignores bypass shows a short notice that stays</li>\n<li>Fixed <code>←</code> backgrounding a session after 10 seconds while the prompt held unsent text (it now cancels the move) or a question was waiting for your answer</li>\n<li>Fixed Esc, or No without feedback, on a permission prompt not stopping the turn when <code>←</code> had just been pressed to move the session to the background</li>\n<li>Fixed the agents view briefly replacing the session list with placeholder rows when the sessions folder could not be read (for example, too many open files)</li>\n<li>Fixed path-scoped rules and nested CLAUDE.md files not loading when Claude views a file with a single-file cat, head, tail, sed -n or grep command in the Bash tool instead of the Read tool</li>\n<li>Fixed pasted text that begins and ends with the same words sometimes being sent to Claude as if it had been typed</li>\n<li>Fixed a skill name in pasted text being treated as typed when an accent typed or pasted right after the paste merged into its last letter</li>\n<li>Fixed <code>/feedback</code> returning to the drafts list after Ctrl+O or Ctrl+Z while a report was sending, leaving the send impossible to cancel</li>\n<li>Fixed <code>claude purge</code> stopping silently (exit 0, or a hang in a terminal) when a file or folder could not be deleted; it now deletes the rest, lists what it could not delete, and exits 1</li>\n<li>Fixed keybindings.json checks: a lone \" \" (space key) is no longer reported as an error, and keys like \"ctrl+ k\" now get a warning</li>\n<li>Fixed vim mode <code>&gt;&gt;</code> and <code>&lt;&lt;</code> on a line of only spaces leaving the cursor past the end of the line, where a following <code>x</code> deleted nothing</li>\n<li>Fixed vim mode: after deleting whole lines in Visual mode (<code>V</code> then <code>d</code>) the cursor lands on the first non-blank, and <code>.</code> after it acts on the cursor's line</li>\n<li>Windows: Fixed stopping a status line, hook, or shell command sometimes terminating an unrelated process that had been given the same process ID</li>\n<li>Reverted the auto mode denial message change from 2.1.281 that told Claude a denial covers the outcome, not only the exact command</li>\n<li>Reverted the 2.1.290 fix for cloud sessions staying asleep after a container restart lost a pending <code>/loop</code> wakeup or scheduled task; Claude is no longer told, and the session stays asleep</li>\n<li>Improved startup for Team and Enterprise organizations: policy and managed settings are fetched earlier, and a stalled request is retried after 3 seconds</li>\n<li>Improved Claude in Chrome: fewer page actions are refused when the browser is slow to report its tabs</li>\n<li>Improved the Claude in Chrome message in cloud sessions when the browser can't be reached: if you belong to more than one organization, it now says the extension must be signed in to the same one, and how to change that</li>\n<li>Improved the Bash edit diff note to say the listed files changed while the command ran, which can include writes by other processes</li>\n<li>Improved artifacts: Claude pins libraries to exact versions two weeks old or older</li>\n<li>Changed claude.ai skill syncing to check for changes about every 40 minutes, instead of every 10, while no session is in use</li>\n<li>Changed the order of agent lists and of MCP servers announced to the model: names with non-ASCII characters now sort after ASCII names</li>\n<li>Changed OpenTelemetry <code>claude_code.at_mention</code> logging to emit at most 100 agent and 100 MCP-resource events each time a prompt is read</li>\n<li>Self-hosted runner: Changed the orchestrator to sleep 4 to 6 seconds between polls instead of a constant 5, so several replicas for one environment stop polling at the same moment</li>\n<li>[Claude Tag] Fixed Claude in Slack saying a workspace isn't set up in Enterprise Grid channels shared across workspaces when Slack labels a message with a workspace that isn't connected</li>\n<li>[Claude Tag] Fixed Claude in Slack stopping mid-task in a channel when an admin changed the channel's connectors, plugins, skills or rules; the change now applies once Claude finishes</li>\n<li>[Claude Tag] Fixed asking Claude in Slack to run a thread's routine now with extra notes starting a separate run that couldn't post back; the run now continues in that thread</li>\n<li>[Claude Tag] Fixed an access bundle's Add a connector dialog in Claude Tag admin settings showing every Google connector as connected after one Google sign-in</li>\n<li>[Claude Tag] Improved Claude Tag admin settings to list an Enterprise Grid that isn't connected yet, with a Connect button</li>\n<li>[Claude Tag] Changed Claude in Slack to join announcement channels, where only admins can post, without posting its intro</li>\n<li>[Claude Tag] Changed the limit on channel rules in Claude Tag admin settings from 20 to 50 for each workspace and for the organization-wide Slack page</li>\n<li>[Code Review] Improved Code Review's Add a repository dialog to list each repository that couldn't be added and why, such as missing GitHub write access</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: prompts, lost, last, cloud, changed.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Claude Code Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "prompts",
+          "lost",
+          "last",
+          "cloud",
+          "changed",
+          "claude",
+          "session",
+          "what"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: prompts, lost, last, cloud. Lead: Claude Code v2.1.293",
+        "alternative_titles": [
+          "Claude Code v2.1.291",
+          "Claude Code v2.1.290"
+        ],
+        "cluster_score": 15
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-10-08T19:47:17.233525Z",
+    "defer_count": 1,
+    "original_score": 95,
+    "original_reason": "Direct API release of new Haiku model with 1M context and new pricing. Adds specific API controls for agents. Highly actionable for builders."
+  },
+  {
+    "id": "51553d938fc6",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-10-08T19:47:07.331749Z",
+    "score": 85,
+    "reason": "New ASR model released on Hugging Face, directly usable by builders for speech-to-text applications.",
+    "proposed_post": "TII UAE released Falcon ASR on Hugging Face. Builders can now integrate this new ASR model for speech-to-text, offering a new option for transcription or voice interfaces.",
+    "source_angle": "New ASR model release",
+    "source_item": {
+      "title": "Introducing Falcon ASR",
+      "source": "Hugging Face Blog",
+      "link": "https://huggingface.co/blog/tiiuae/falcon-asr",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 10,
+      "summary": "Introducing Falcon ASR\n[Cluster context: 1 sources, engagement 0, common terms: asr, introducing, falcon.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Hugging Face Blog"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "asr",
+          "introducing",
+          "falcon"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: asr, introducing, falcon. Lead: Introducing Falcon ASR",
+        "alternative_titles": [],
+        "cluster_score": 15
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-10-08T19:47:17.365772Z",
+    "defer_count": 1,
+    "original_score": 85,
+    "original_reason": "New ASR model released on Hugging Face, directly usable by builders for speech-to-text applications."
   }
 ]
