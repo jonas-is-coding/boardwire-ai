@@ -14355,7 +14355,7 @@
   },
   {
     "id": "8ab08f6c1194",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-06T19:24:14.461597Z",
     "score": 95,
     "reason": "New Claude Code version ships with UI selection access and GitHub API, enabling immediate use for developers.",
@@ -14393,7 +14393,8 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": false,
-    "reactivated_at": "2026-10-06T19:24:14.461597Z"
+    "reactivated_at": "2026-10-06T19:24:14.461597Z",
+    "expired_at": "2026-10-08T22:20:47.294308Z"
   },
   {
     "id": "b36821e5e788",
@@ -14440,7 +14441,7 @@
   },
   {
     "id": "f49a786b5d9d",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-06T19:24:01.563544Z",
     "score": 90,
     "reason": "GitHub repo for open-source AI-designed hardware released, highly actionable for custom silicon.",
@@ -14479,7 +14480,8 @@
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, check this out: \"AI is now capable of developing its own inference hardware.\"\n\nDas ist krass. Ein Open-Source-TPU, das von AI designt wurde. Das ist der nächste Schritt in der Hardware-Optimierung für AI – nicht nur, dass AI besser wird, sondern dass sie sich selbst die Werkzeuge dafür baut.\n\nJeder, der an Edge-AI, effizienten Modellen oder einfach nur an der Zukunft der Hardware-Entwicklung arbeitet, muss das sehen. Das könnte die Art und Weise, wie wir Inference-Hardware entwickeln, komplett umkrempeln, weg von manueller Optimierung hin zu AI-generierten Architekturen. Das ist ein Game Changer für Developer, die am Limit der Performance kratzen.",
-    "chloe_note": "Das besteht den Ships Test. Es gibt ein GitHub Repo für die TPU zum Herunterladen und Nutzen, was für Entwickler, die an Custom Silicon arbeiten, direkt umsetzbar ist. Der Fokus auf AI-generierte Hardware für Inference ist ein klares Signal."
+    "chloe_note": "Das besteht den Ships Test. Es gibt ein GitHub Repo für die TPU zum Herunterladen und Nutzen, was für Entwickler, die an Custom Silicon arbeiten, direkt umsetzbar ist. Der Fokus auf AI-generierte Hardware für Inference ist ein klares Signal.",
+    "expired_at": "2026-10-08T22:20:47.294308Z"
   },
   {
     "id": "54d7adeea329",
