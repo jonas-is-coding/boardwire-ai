@@ -6,6 +6,10 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-10-09T19:24:16.002283Z` [review] **twostraws/SwiftUI-Agent-Skill — SwiftUI agent skill for Claude Code, Codex, and other AI tools.** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-09T19:24:15.919109Z` [review] **Show HN: Let your AI agents paint big arrows, boxes and text on your screen** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-09T19:24:15.735624Z` [review] **Claude Code v2.1.291** — Version-only release without concrete capability: 'Claude Code v2.1.291'
+- `2026-10-09T19:24:15.633215Z` [review] **Introducing Falcon ASR** — Duplicate or near-duplicate post detected
 - `2026-10-09T16:58:31.902345Z` [review] **Simon Willison v5.5** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-09T16:58:31.745242Z` [review] **BerriAI/litellm — The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-09T16:58:31.590032Z` [review] **Claude Code v2.1.295** — Post is empty; Post lacks a clear claim or insight
@@ -27,7 +31,3 @@ No pending review items.
 - `2026-10-06T19:24:15.926955Z` [review] **LangChain v1.6.7** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.6.7'
 - `2026-10-06T19:24:15.770890Z` [review] **Ollama v0.40.0** — Version-only release without concrete capability: 'Ollama v0.40.0'
 - `2026-10-06T16:42:59.844058Z` [review] **Mistral Large 4** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-06T16:42:59.694561Z` [review] **Ollama v0.40.0** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'Ollama v0.40.0'
-- `2026-10-05T21:27:29.467959Z` [review] **Disrupting a coordinated model-distillation campaign** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-05T21:27:29.385718Z` [review] **OpenAI "rogue" agent activities found on Wikimedia projects** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-05T21:27:29.300205Z` [review] **vLLM v0.31.0rc5** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.31.0rc5'

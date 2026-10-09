@@ -1911,5 +1911,43 @@
       "Post is empty",
       "Post lacks a clear claim or insight"
     ]
+  },
+  {
+    "rejected_at": "2026-10-09T19:24:15.633215Z",
+    "stage": "review",
+    "title": "Introducing Falcon ASR",
+    "link": "https://huggingface.co/blog/tiiuae/falcon-asr",
+    "reasons": [
+      "Duplicate or near-duplicate post detected"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-09T19:24:15.735624Z",
+    "stage": "review",
+    "title": "Claude Code v2.1.291",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.291",
+    "reasons": [
+      "Version-only release without concrete capability: 'Claude Code v2.1.291'"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-09T19:24:15.919109Z",
+    "stage": "review",
+    "title": "Show HN: Let your AI agents paint big arrows, boxes and text on your screen",
+    "link": "https://github.com/franzenzenhofer/big-arrow-on-the-screen",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-09T19:24:16.002283Z",
+    "stage": "review",
+    "title": "twostraws/SwiftUI-Agent-Skill — SwiftUI agent skill for Claude Code, Codex, and other AI tools.",
+    "link": "https://github.com/twostraws/SwiftUI-Agent-Skill",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
   }
 ]

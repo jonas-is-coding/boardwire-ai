@@ -14827,7 +14827,7 @@
   },
   {
     "id": "51553d938fc6",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-10-08T19:47:07.331749Z",
     "score": 85,
     "reason": "New ASR model released on Hugging Face, directly usable by builders for speech-to-text applications.",
@@ -14862,7 +14862,8 @@
     "deferred_at": "2026-10-09T16:58:31.247711Z",
     "defer_count": 2,
     "original_score": 85,
-    "original_reason": "New ASR model released on Hugging Face, directly usable by builders for speech-to-text applications."
+    "original_reason": "New ASR model released on Hugging Face, directly usable by builders for speech-to-text applications.",
+    "rejected_at": "2026-10-09T19:24:15.634774Z"
   },
   {
     "id": "25911c57f854",
@@ -14903,9 +14904,57 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-10-09T16:58:31.431564Z",
-    "defer_count": 1,
+    "deferred_at": "2026-10-09T19:24:15.543410Z",
+    "defer_count": 2,
     "original_score": 90,
     "original_reason": "Anthropic SDK release adds concrete new capabilities for Managed Agents, enabling more complex multi-agent system development."
+  },
+  {
+    "id": "31ded5489a64",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-10-09T19:24:12.228193Z",
+    "score": 85,
+    "reason": "Concrete bug fix in a widely used AI framework that directly impacts production reliability for LLM applications.",
+    "proposed_post": "LangChain v1.4.4 adds retry logic to `SummarizationMiddleware` for context overflow. This improves robustness for long document summarization, reducing failures in production LLM applications.",
+    "source_angle": "LangChain bug fix improves summarization reliability.",
+    "source_item": {
+      "title": "LangChain v1.4.4",
+      "source": "LangChain Releases",
+      "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.4.4",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 60,
+      "summary": "<p>Changes since langchain==1.4.3</p>\n<p>release(langchain): 1.4.4 (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/41163\">#41163</a>)<br />\nfix(langchain): (SummarizationMiddleware) retry summary step on context overflow (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/41159\">#41159</a>)<br />\nchore(deps): bump fsspec from 2026.6.0 to 2026.9.0 in /libs/langchain_v1 (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/41097\">#41097</a>)<br />\nchore(deps): bump multidict from 6.7.0 to 6.9.1 in /libs/langchain_v1 (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/41075\">#41075</a>)<br />\nchore(deps): bump langgraph-sdk from 0.4.2 to 0.4.4 in /libs/langchain_v1 (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/41074\">#41074</a>)<br />\nchore(deps): bump fsspec from 2025.10.0 to 2026.6.0 in /libs/langchain_v1 (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/41071\">#41071</a>)<br />\nchore(langchain): bump minimum FastMCP to 4.0.11 (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/41054\">#41054</a>)<br />\nchore(deps): bump pyjwt from 2.13.0 to 2.15.0 in /libs/langchain_v1 (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/40939\">#40939</a>)<br />\nchore(deps): bump urllib3 from 2.7.0 to 2.8.0 in /libs/langchain_v1 (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/40943\">#40943</a>)</p>\n[Cluster context: 1 sources, engagement 0, common terms: issue-link, js-issue-link, class, langchain, changes.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "LangChain Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "issue-link",
+          "js-issue-link",
+          "class",
+          "langchain",
+          "changes",
+          "since",
+          "href",
+          "deps"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: issue-link, js-issue-link, class, langchain. Lead: LangChain v1.6.9",
+        "alternative_titles": [
+          "LangChain v1.6.9",
+          "LangChain v1.2.3",
+          "LangChain v1.7.1"
+        ],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-10-09T19:24:15.837064Z",
+    "defer_count": 1,
+    "original_score": 85,
+    "original_reason": "Concrete bug fix in a widely used AI framework that directly impacts production reliability for LLM applications."
   }
 ]
