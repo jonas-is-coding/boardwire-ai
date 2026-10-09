@@ -14523,7 +14523,7 @@
   },
   {
     "id": "7b09550310ac",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-07T17:24:18.193278Z",
     "score": 90,
     "reason": "New Claude Code CLI/SDK release with concrete features for agent control, plugin management, and mod development.",
@@ -14565,11 +14565,12 @@
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, schau dir das an: Claude hat 'claude plugin install --marketplace' hinzugefügt. Das ist ein Game-Changer für Devs, die ihre eigenen Plugin-Quellen managen wollen, ohne sich mit manuellen Adds rumzuschlagen. Direkter Zugriff auf private oder spezialisierte Marktplätze – das spart Zeit und Ärger.",
-    "chloe_note": "Hey, *Claude Code v2.1.292* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New Claude Code CLI/SDK release with concrete features for agent control, plugin management, and mod development.Cluster context: 1 sources, engagement 0. Common terms: when, cloud, prompts, where. Score aktuell: 90. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.292"
+    "chloe_note": "Hey, *Claude Code v2.1.292* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New Claude Code CLI/SDK release with concrete features for agent control, plugin management, and mod development.Cluster context: 1 sources, engagement 0. Common terms: when, cloud, prompts, where. Score aktuell: 90. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.292",
+    "expired_at": "2026-10-09T21:32:53.469102Z"
   },
   {
     "id": "85e75d30d80d",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-07T17:24:25.073074Z",
     "score": 95,
     "reason": "OpenAI released a new API in public beta, directly usable by builders for structured decision-making.",
@@ -14608,11 +14609,12 @@
     "is_llm_mode": true,
     "breaking": true,
     "claire_note": "Chloe, das OpenAI Decisions API ist in der Public Beta und hat auf HN ordentlich Wellen geschlagen. 374 Punkte, 218 Kommentare.\n\nDas ist relevant, weil es Entwicklern ermöglicht, komplexe Entscheidungslogik direkt in ihre Apps zu integrieren, ohne sich um die darunterliegenden Modelle kümmern zu müssen. Stell dir vor, du kannst personalisierte Empfehlungen, dynamische Content-Filter oder automatisierte Workflow-Entscheidungen mit ein paar API-Calls umsetzen. Das spart massiv Zeit bei der Implementierung von intelligenten Systemen und könnte für viele Anwendungsfälle eine Game Changer sein, besonders wenn es um schnelle Iteration geht.",
-    "chloe_note": "*Decisions API is in public beta* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch OpenAI released a new API in public beta, directly usable by builders for structured decision-making.Cluster context: 1 sources, engagement 483. Common terms: beta, comments, submitted, 374. Bewertung: 95. Quelle: https://developers.openai.com/api/docs/guides/decisions"
+    "chloe_note": "*Decisions API is in public beta* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch OpenAI released a new API in public beta, directly usable by builders for structured decision-making.Cluster context: 1 sources, engagement 483. Common terms: beta, comments, submitted, 374. Bewertung: 95. Quelle: https://developers.openai.com/api/docs/guides/decisions",
+    "expired_at": "2026-10-09T21:32:53.469102Z"
   },
   {
     "id": "6e00f5424777",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-07T17:24:32.734993Z",
     "score": 95,
     "reason": "New flagship model released by a major lab, immediately accessible via API for builders. High impact.",
@@ -14651,7 +14653,8 @@
     "is_llm_mode": true,
     "breaking": true,
     "claire_note": "Chloe, dieser Mistral Large 4 Artikel auf HN hat 1968 Punkte und über 1100 Kommentare. Das ist eine Ansage.\n\nFür Entwickler ist das interessant, weil Mistral hier potenziell einen neuen Top-Tier-Player im LLM-Space etabliert, der nicht von den üblichen Verdächtigen kommt. Wenn die Performance hält, was die Hype-Zahlen versprechen, haben wir hier eine Alternative zu OpenAI oder Anthropic, die man für spezifische Anwendungsfälle evaluieren muss – gerade mit Blick auf Kosten und Latenz. Das könnte für viele Projekte eine echte Option sein, die bisher an den großen Modellen hängen.",
-    "chloe_note": "*Mistral Large 4* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New flagship model released by a major lab, immediately accessible via API for builders. High impact.Cluster context: 1 sources, engagement 2554. Common terms: 1968, comments, submitted, philpax. Bewertung: 95. Quelle: https://mistral.ai/news/mistral-large-4/\\"
+    "chloe_note": "*Mistral Large 4* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New flagship model released by a major lab, immediately accessible via API for builders. High impact.Cluster context: 1 sources, engagement 2554. Common terms: 1968, comments, submitted, philpax. Bewertung: 95. Quelle: https://mistral.ai/news/mistral-large-4/\\",
+    "expired_at": "2026-10-09T21:32:53.469102Z"
   },
   {
     "id": "af94e9206792",
@@ -14697,7 +14700,7 @@
   },
   {
     "id": "a97c34bd2faa",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-07T19:51:32.755695Z",
     "score": 90,
     "reason": "New open, lightweight multimodal embedding model released by Google. Direct utility for builders in RAG/search applications.",
@@ -14736,7 +14739,8 @@
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, dieser EmbeddingGemma 2 Post ist auf HackerNews hochgeschossen. Google hat ein neues, leichtgewichtiges multimodales Embedding-Modell rausgebracht.\n\nDas ist relevant, weil Entwickler jetzt einfacher eigene, spezialisierte Embeddings für Text und Bilder erstellen können, auch auf kleineren Devices. Die Open-Source-Verfügbarkeit senkt die Hürde für Experimente und Customization erheblich. Ein Builder kann damit zum Beispiel effizienter Retrieval Augmented Generation (RAG) Systeme bauen, die sowohl Text- als auch Bilddaten verstehen.",
-    "chloe_note": "Genehmigt. Der Beitrag besteht den Ships Test klar, da er ein Modell zum direkten Download und zur Nutzung anbietet. Entwickler können damit sofort spezialisierte Embeddings für RAG-Systeme und andere Anwendungen erstellen."
+    "chloe_note": "Genehmigt. Der Beitrag besteht den Ships Test klar, da er ein Modell zum direkten Download und zur Nutzung anbietet. Entwickler können damit sofort spezialisierte Embeddings für RAG-Systeme und andere Anwendungen erstellen.",
+    "expired_at": "2026-10-09T21:32:53.469102Z"
   },
   {
     "id": "bcdd98176723",
