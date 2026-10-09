@@ -1881,5 +1881,35 @@
       "Post is empty",
       "Post lacks a clear claim or insight"
     ]
+  },
+  {
+    "rejected_at": "2026-10-09T16:58:31.590032Z",
+    "stage": "review",
+    "title": "Claude Code v2.1.295",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.295",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-09T16:58:31.745242Z",
+    "stage": "review",
+    "title": "BerriAI/litellm — The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure",
+    "link": "https://github.com/BerriAI/litellm",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-09T16:58:31.902345Z",
+    "stage": "review",
+    "title": "Simon Willison v5.5",
+    "link": "https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
   }
 ]

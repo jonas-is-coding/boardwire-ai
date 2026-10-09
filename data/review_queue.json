@@ -14740,12 +14740,12 @@
   },
   {
     "id": "bcdd98176723",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-10-08T19:46:53.398590Z",
+    "status": "approved",
+    "created_at": "2026-10-09T16:58:30.885590Z",
     "score": 95,
-    "reason": "GPT-6 with Intelligent UI is rolling out globally in ChatGPT, offering new interactive capabilities and faster responses.",
-    "proposed_post": "GPT-6 with Intelligent UI is rolling out globally in ChatGPT, enabling faster responses with visuals and interactive experiences. Builders should explore how this new interactive paradigm impacts user expectations and future API integrations.",
-    "source_angle": "OpenAI's new flagship model and interactive UI paradigm.",
+    "reason": "New flagship model and UI rolling out in ChatGPT, offering immediate access to new capabilities and speed.",
+    "proposed_post": "GPT-6 with Intelligent UI is rolling out globally in ChatGPT. Builders can leverage new interactive capabilities and faster responses to enhance their AI applications or explore new interaction paradigms.",
+    "source_angle": "OpenAI's new flagship model and UI",
     "source_item": {
       "title": "GPT-6 and Intelligent UI for everyone",
       "source": "OpenAI News",
@@ -14777,19 +14777,17 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-10-08T19:47:17.096297Z",
-    "defer_count": 1,
-    "original_score": 95,
-    "original_reason": "GPT-6 with Intelligent UI is rolling out globally in ChatGPT, offering new interactive capabilities and faster responses."
+    "breaking": false,
+    "reactivated_at": "2026-10-09T16:58:30.885590Z"
   },
   {
     "id": "8feef196d3b6",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-10-08T19:47:00.737800Z",
+    "status": "approved",
+    "created_at": "2026-10-09T16:58:31.072330Z",
     "score": 95,
-    "reason": "Direct API release of new Haiku model with 1M context and new pricing. Adds specific API controls for agents. Highly actionable for builders.",
-    "proposed_post": "Claude Haiku 5.5 is now the default on Anthropic API, offering 1M context at $0.10/$0.50 per Mtok. New `agentType` and `isDeferred` fields enable finer control over subagents and tool visibility. Builders can deploy more complex, context-rich agentic workflows.",
-    "source_angle": "New Claude Haiku model and API features for agent development.",
+    "reason": "Direct API release of new Haiku model with 1M context, new pricing, and agent controls. Highly actionable for builders.",
+    "proposed_post": "Claude Haiku model is now available via API with 1M context and new pricing. Specific API controls for agents were also added. Builders can integrate Haiku for high-context tasks, optimize costs, and develop more precise agent behaviors.",
+    "source_angle": "Claude Haiku API release: 1M context, new pricing, agent controls.",
     "source_item": {
       "title": "Claude Code v2.1.293",
       "source": "Claude Code Releases",
@@ -14824,10 +14822,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-10-08T19:47:17.233525Z",
-    "defer_count": 1,
-    "original_score": 95,
-    "original_reason": "Direct API release of new Haiku model with 1M context and new pricing. Adds specific API controls for agents. Highly actionable for builders."
+    "breaking": false,
+    "reactivated_at": "2026-10-09T16:58:31.072330Z"
   },
   {
     "id": "51553d938fc6",
@@ -14863,9 +14859,53 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-10-08T19:47:17.365772Z",
-    "defer_count": 1,
+    "deferred_at": "2026-10-09T16:58:31.247711Z",
+    "defer_count": 2,
     "original_score": 85,
     "original_reason": "New ASR model released on Hugging Face, directly usable by builders for speech-to-text applications."
+  },
+  {
+    "id": "25911c57f854",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-10-09T16:58:26.584374Z",
+    "score": 90,
+    "reason": "Anthropic SDK release adds concrete new capabilities for Managed Agents, enabling more complex multi-agent system development.",
+    "proposed_post": "Anthropic Python SDK v1.13.0 adds workflows, multiagent configuration, and thread status filtering for Managed Agents. Builders can now implement more sophisticated multi-agent systems and manage their state within Anthropic's platform.",
+    "source_angle": "Anthropic SDK adds multi-agent workflows for Managed Agents.",
+    "source_item": {
+      "title": "Anthropic Python SDK v1.13.0",
+      "source": "Anthropic Python SDK Releases",
+      "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.13.0",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 35,
+      "summary": "<h3>Features</h3>\n<ul>\n<li><strong>api:</strong> add types for the Chat and Cowork unified analytics metrics</li>\n<li><strong>api:</strong> add workflows, multiagent configuration and thread status filtering to Managed Agents</li>\n</ul>\n<h3>Chores</h3>\n<ul>\n<li><strong>internal:</strong> name the default API version header value</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: value, types, /strong, name, /ul.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Anthropic Python SDK Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "value",
+          "types",
+          "/strong",
+          "name",
+          "/ul",
+          "/li",
+          "configuration",
+          "v1.13.0"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: value, types, /strong, name. Lead: Anthropic Python SDK v1.13.0",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-10-09T16:58:31.431564Z",
+    "defer_count": 1,
+    "original_score": 90,
+    "original_reason": "Anthropic SDK release adds concrete new capabilities for Managed Agents, enabling more complex multi-agent system development."
   }
 ]

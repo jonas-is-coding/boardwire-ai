@@ -6,6 +6,9 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-10-09T16:58:31.902345Z` [review] **Simon Willison v5.5** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-09T16:58:31.745242Z` [review] **BerriAI/litellm — The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-09T16:58:31.590032Z` [review] **Claude Code v2.1.295** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-08T19:47:17.749340Z` [review] **Multimodal open d1 decision models for the edge** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-08T19:47:17.625990Z` [review] **One Model Family, Two Gold-Level Results: Fine-Tuning Nemotron for IOI and IMO** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-08T19:47:17.503356Z` [review] **LangChain v1.6.8** — Version-only release without concrete capability: 'LangChain v1.6.8'
@@ -28,6 +31,3 @@ No pending review items.
 - `2026-10-05T21:27:29.467959Z` [review] **Disrupting a coordinated model-distillation campaign** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-05T21:27:29.385718Z` [review] **OpenAI "rogue" agent activities found on Wikimedia projects** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-05T21:27:29.300205Z` [review] **vLLM v0.31.0rc5** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.31.0rc5'
-- `2026-10-05T21:27:29.217473Z` [review] **Ollama v0.40.0-rc1** — Version-only release without concrete capability: 'Ollama v0.40.0-rc1'
-- `2026-10-05T19:14:45.187670Z` [review] **ReviewBench: An open benchmark for AI code review** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-05T19:14:45.036144Z` [review] **michael-denyer/pstack-claude — Claude Code, Codex, Pi, OpenCode, Gemini, and Prime Agent versions of Poteto's pstack. Rigorous agent workflows with Cursor primitives translated for other harnesses.** — Post is empty; Post lacks a clear claim or insight
