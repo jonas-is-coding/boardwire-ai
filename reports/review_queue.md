@@ -6,6 +6,11 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-10-11T22:26:20.406157Z` [review] **LangChain v1.6.9** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.6.9'
+- `2026-10-11T22:26:20.247430Z` [review] **Claude Code v2.1.296** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-11T22:26:20.088152Z` [review] **Servers v1.0.0** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-11T22:26:19.925897Z` [review] **Ollama v0.40.3** — Version-only release without concrete capability: 'Ollama v0.40.3'
+- `2026-10-11T22:26:19.365216Z` [review] **LangChain v1.4.4** — Version-only release without concrete capability: 'LangChain v1.4.4'
 - `2026-10-09T19:24:16.002283Z` [review] **twostraws/SwiftUI-Agent-Skill — SwiftUI agent skill for Claude Code, Codex, and other AI tools.** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-09T19:24:15.919109Z` [review] **Show HN: Let your AI agents paint big arrows, boxes and text on your screen** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-09T19:24:15.735624Z` [review] **Claude Code v2.1.291** — Version-only release without concrete capability: 'Claude Code v2.1.291'
@@ -26,8 +31,3 @@ No pending review items.
 - `2026-10-07T19:51:53.206815Z` [review] **Helping teens learn, plan, and shape the future of AI** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-07T17:25:10.198012Z` [review] **vLLM v0.31.1rc0** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.31.1rc0'
 - `2026-10-07T17:25:10.056142Z` [review] **Sharing AI progress in mathematics** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-07T17:25:09.916964Z` [review] **morluto/rea — Reverse engineer anything with agents, from app behavior down to native binaries.** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-06T19:24:16.081364Z` [review] **Opus 5.5 agents discover two room-temperature magnetic semiconductor candidates** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-06T19:24:15.926955Z` [review] **LangChain v1.6.7** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.6.7'
-- `2026-10-06T19:24:15.770890Z` [review] **Ollama v0.40.0** — Version-only release without concrete capability: 'Ollama v0.40.0'
-- `2026-10-06T16:42:59.844058Z` [review] **Mistral Large 4** — Post is empty; Post lacks a clear claim or insight

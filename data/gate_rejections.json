@@ -1,23 +1,5 @@
 [
   {
-    "rejected_at": "2026-07-24T13:41:14.581379Z",
-    "stage": "review",
-    "title": "Claude Code v2.1.218",
-    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.218",
-    "reasons": [
-      "Version-only release without concrete capability: 'Claude Code v2.1.218'"
-    ]
-  },
-  {
-    "rejected_at": "2026-07-30T17:16:09.047725Z",
-    "stage": "review",
-    "title": "Ollama v0.32.4-rc0",
-    "link": "https://github.com/ollama/ollama/releases/tag/v0.32.4-rc0",
-    "reasons": [
-      "Version-only release without concrete capability: 'Ollama v0.32.4-rc0'"
-    ]
-  },
-  {
     "rejected_at": "2026-07-31T18:55:55.621952Z",
     "stage": "publish",
     "title": "Advancing the price-performance frontier with GPT‑5.6",
@@ -1948,6 +1930,55 @@
     "reasons": [
       "Post is empty",
       "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-11T22:26:19.365216Z",
+    "stage": "review",
+    "title": "LangChain v1.4.4",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.4.4",
+    "reasons": [
+      "Version-only release without concrete capability: 'LangChain v1.4.4'"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-11T22:26:19.925897Z",
+    "stage": "review",
+    "title": "Ollama v0.40.3",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.40.3",
+    "reasons": [
+      "Version-only release without concrete capability: 'Ollama v0.40.3'"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-11T22:26:20.088152Z",
+    "stage": "review",
+    "title": "Servers v1.0.0",
+    "link": "https://github.com/modelcontextprotocol/servers/releases/tag/v1.0.0",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-11T22:26:20.247430Z",
+    "stage": "review",
+    "title": "Claude Code v2.1.296",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.296",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-11T22:26:20.406157Z",
+    "stage": "review",
+    "title": "LangChain v1.6.9",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.6.9",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight",
+      "Version-only release without concrete capability: 'LangChain v1.6.9'"
     ]
   }
 ]
