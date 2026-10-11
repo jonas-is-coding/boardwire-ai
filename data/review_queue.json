@@ -14485,7 +14485,7 @@
   },
   {
     "id": "54d7adeea329",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-08T17:22:46.467996Z",
     "score": 90,
     "reason": "DeepMind released open, lightweight multimodal embedding model weights. Clear utility for local RAG/search applications.",
@@ -14519,7 +14519,8 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": false,
-    "reactivated_at": "2026-10-08T17:22:46.467996Z"
+    "reactivated_at": "2026-10-08T17:22:46.467996Z",
+    "expired_at": "2026-10-11T21:47:56.402776Z"
   },
   {
     "id": "7b09550310ac",
@@ -14658,7 +14659,7 @@
   },
   {
     "id": "af94e9206792",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-08T17:22:46.660045Z",
     "score": 85,
     "reason": "Open-source macOS terminal specifically for AI agent development. Ships today with concrete features for builders.",
@@ -14696,7 +14697,8 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": false,
-    "reactivated_at": "2026-10-08T17:22:46.660045Z"
+    "reactivated_at": "2026-10-08T17:22:46.660045Z",
+    "expired_at": "2026-10-11T21:47:56.402776Z"
   },
   {
     "id": "a97c34bd2faa",
@@ -14744,7 +14746,7 @@
   },
   {
     "id": "bcdd98176723",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-09T16:58:30.885590Z",
     "score": 95,
     "reason": "New flagship model and UI rolling out in ChatGPT, offering immediate access to new capabilities and speed.",
@@ -14782,11 +14784,12 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": false,
-    "reactivated_at": "2026-10-09T16:58:30.885590Z"
+    "reactivated_at": "2026-10-09T16:58:30.885590Z",
+    "expired_at": "2026-10-11T21:47:56.402776Z"
   },
   {
     "id": "8feef196d3b6",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-09T16:58:31.072330Z",
     "score": 95,
     "reason": "Direct API release of new Haiku model with 1M context, new pricing, and agent controls. Highly actionable for builders.",
@@ -14827,7 +14830,8 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": false,
-    "reactivated_at": "2026-10-09T16:58:31.072330Z"
+    "reactivated_at": "2026-10-09T16:58:31.072330Z",
+    "expired_at": "2026-10-11T21:47:56.402776Z"
   },
   {
     "id": "51553d938fc6",
