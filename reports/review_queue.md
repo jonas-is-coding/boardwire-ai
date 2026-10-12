@@ -6,6 +6,10 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-10-12T19:46:57.130648Z` [review] **GitHub Copilot app for Beginners: How to teach Copilot about your codebase** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-12T19:46:57.023751Z` [review] **vLLM v0.31.0rc1** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.31.0rc1'
+- `2026-10-12T19:46:56.920025Z` [review] **LangChain v1.4.5** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.4.5'
+- `2026-10-12T19:46:55.499148Z` [review] **Ollama v0.40.4** — Version-only release without concrete capability: 'Ollama v0.40.4'
 - `2026-10-11T22:26:20.406157Z` [review] **LangChain v1.6.9** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.6.9'
 - `2026-10-11T22:26:20.247430Z` [review] **Claude Code v2.1.296** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-11T22:26:20.088152Z` [review] **Servers v1.0.0** — Post is empty; Post lacks a clear claim or insight
@@ -27,7 +31,3 @@ No pending review items.
 - `2026-10-08T17:22:47.016874Z` [review] **Anthropic Python SDK v1.12.1** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-08T17:22:46.847251Z` [review] **Claude Haiku 5.5** — Version-only release without concrete capability: 'Claude Haiku 5.5'
 - `2026-10-07T19:51:53.517124Z` [review] **Show HN: NanoMuse – An open-source AI agent for your phone and computer** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-07T19:51:53.361802Z` [review] **Anthropic Python SDK v1.12.0** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-07T19:51:53.206815Z` [review] **Helping teens learn, plan, and shape the future of AI** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-07T17:25:10.198012Z` [review] **vLLM v0.31.1rc0** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.31.1rc0'
-- `2026-10-07T17:25:10.056142Z` [review] **Sharing AI progress in mathematics** — Post is empty; Post lacks a clear claim or insight

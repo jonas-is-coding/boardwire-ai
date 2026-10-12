@@ -1,41 +1,5 @@
 [
   {
-    "rejected_at": "2026-07-31T18:55:55.621952Z",
-    "stage": "publish",
-    "title": "Advancing the price-performance frontier with GPT‑5.6",
-    "link": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/",
-    "reasons": [
-      "Aggregator engagement metadata leaked into post: '587 points on Hacker News'"
-    ]
-  },
-  {
-    "rejected_at": "2026-08-06T14:03:53.921187Z",
-    "stage": "review",
-    "title": "Ollama v0.32.6",
-    "link": "https://github.com/ollama/ollama/releases/tag/v0.32.6",
-    "reasons": [
-      "Version-only release without concrete capability: 'Ollama v0.32.6'"
-    ]
-  },
-  {
-    "rejected_at": "2026-08-07T12:59:04.179302Z",
-    "stage": "review",
-    "title": "Show HN: The Channels SDK – Bring Any Agent to Any Channel (Slack, MS Teams)",
-    "link": "https://github.com/CopilotKit/channels-sdk",
-    "reasons": [
-      "Aggregator engagement metadata leaked into post: 'with 107 points'"
-    ]
-  },
-  {
-    "rejected_at": "2026-08-17T16:17:09.977369Z",
-    "stage": "review",
-    "title": "Ollama v0.32.12",
-    "link": "https://github.com/ollama/ollama/releases/tag/v0.32.12",
-    "reasons": [
-      "Version-only release without concrete capability: 'Ollama v0.32.12'"
-    ]
-  },
-  {
     "rejected_at": "2026-08-19T12:42:28.768718Z",
     "stage": "review",
     "title": "Servers v2026.8.18",
@@ -1979,6 +1943,47 @@
       "Post is empty",
       "Post lacks a clear claim or insight",
       "Version-only release without concrete capability: 'LangChain v1.6.9'"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-12T19:46:55.499148Z",
+    "stage": "review",
+    "title": "Ollama v0.40.4",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.40.4-rc0",
+    "reasons": [
+      "Version-only release without concrete capability: 'Ollama v0.40.4'"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-12T19:46:56.920025Z",
+    "stage": "review",
+    "title": "LangChain v1.4.5",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.4.5",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight",
+      "Version-only release without concrete capability: 'LangChain v1.4.5'"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-12T19:46:57.023751Z",
+    "stage": "review",
+    "title": "vLLM v0.31.0rc1",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.31.0rc1",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight",
+      "Version-only release without concrete capability: 'vLLM v0.31.0rc1'"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-12T19:46:57.130648Z",
+    "stage": "review",
+    "title": "GitHub Copilot app for Beginners: How to teach Copilot about your codebase",
+    "link": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-teach-copilot-about-your-codebase/",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
     ]
   }
 ]
