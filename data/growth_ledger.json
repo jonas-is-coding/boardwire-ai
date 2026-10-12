@@ -1521,6 +1521,46 @@
         "follows @ai2.bsky.social"
       ],
       "followed_at": "2026-10-09T14:40:05.428228Z"
+    },
+    "did:plc:4ny75o4x76g7ti3qpoimh6qo": {
+      "handle": "brianpcf.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mxoylnwbge26",
+      "channel": "seed_followers",
+      "score": 3.5,
+      "mode": "discover",
+      "via": [
+        "follows @simonwillison.net",
+        "follows @natolambert.bsky.social",
+        "follows @rasbt.bsky.social",
+        "follows @emollick.bsky.social",
+        "follows @s.ly"
+      ],
+      "followed_at": "2026-10-12T17:00:39.993030Z"
+    },
+    "did:plc:zzmm5mndc5ym2iikxx4dkmqo": {
+      "handle": "elglassman.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mxoymfgbd32r",
+      "channel": "seed_followers",
+      "score": 2.5,
+      "mode": "discover",
+      "via": [
+        "follows @yoavgo.bsky.social",
+        "@kylelo.bsky.social follows",
+        "follows @ai2.bsky.social"
+      ],
+      "followed_at": "2026-10-12T17:01:04.632427Z"
+    },
+    "did:plc:bqqtl3prsgd3daxahny756pe": {
+      "handle": "billhelm.lol",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mxoynenczi2t",
+      "channel": "seed_followers",
+      "score": 1.0,
+      "mode": "discover",
+      "via": [
+        "follows @simonwillison.net",
+        "follows @emollick.bsky.social"
+      ],
+      "followed_at": "2026-10-12T17:01:37.380774Z"
     }
   },
   "runs": [
@@ -1958,6 +1998,23 @@
       ],
       "started_at": "2026-10-09T14:40:05.303604Z",
       "finished_at": "2026-10-09T14:40:05.430591Z"
+    },
+    {
+      "mode": "discover",
+      "dry_run": false,
+      "limit": 12,
+      "planned": 0,
+      "followed": 3,
+      "skipped_already": 0,
+      "failed": 0,
+      "aborted": null,
+      "handles": [
+        "brianpcf.bsky.social",
+        "elglassman.bsky.social",
+        "billhelm.lol"
+      ],
+      "started_at": "2026-10-12T17:00:39.866483Z",
+      "finished_at": "2026-10-12T17:01:37.383234Z"
     }
   ],
   "pinned_thread": {
