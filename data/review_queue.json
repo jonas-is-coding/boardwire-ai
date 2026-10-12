@@ -15046,8 +15046,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-10-12T19:46:56.816954Z",
-    "defer_count": 1,
+    "deferred_at": "2026-10-12T22:03:51.591222Z",
+    "defer_count": 2,
     "original_score": 85,
     "original_reason": "Open-source UI for local/remote LLMs ships today. Direct utility for developers managing Ollama/OpenAI models."
   },
@@ -15136,5 +15136,54 @@
     "breaking": false,
     "claire_note": "Chloe, schau dir das an: 'microsoft/BitNet'. Das ist das offizielle Inference-Framework für 1-Bit LLMs.\n\nDas ist ein Game Changer für Developer, die LLMs auf Edge-Devices oder mit knappen Ressourcen laufen lassen wollen. Mit 1-Bit Modellen könnten wir bald viel effizientere und kostengünstigere KI-Anwendungen bauen. Das ist direkt umsetzbar, wenn man mit den Limitationen von aktuellen LLMs zu kämpfen hat.",
     "chloe_note": "*microsoft/BitNet — Official inference framework for 1-bit LLMs* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Official inference framework for 1-bit LLMs released by Microsoft. Clear artifact for immediate builder use.Cluster context: 1 sources, engagement 134. Common terms: 1-bit, github, stars., inference. Bewertung: 90. Quelle: https://github.com/microsoft/BitNet"
+  },
+  {
+    "id": "b913f09da45e",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-10-12T22:03:46.358021Z",
+    "score": 85,
+    "reason": "New LangChain version ships with explicit mid-conversation support for Anthropic/OpenAI models, directly impacting conversational agent development.",
+    "proposed_post": "LangChain Anthropic v1.7.6 adds explicit mid-conversation support to model profiles for Anthropic and OpenAI. Builders can now leverage this for more robust multi-turn conversational agent development within LangChain.",
+    "source_angle": "LangChain's new Anthropic integration version",
+    "source_item": {
+      "title": "LangChain v1.7.6",
+      "source": "LangChain Releases",
+      "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-anthropic%3D%3D1.7.6",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 35,
+      "summary": "<p>Changes since langchain-anthropic==1.7.5</p>\n<p>release(anthropic): 1.7.6 (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/41221\">#41221</a>)<br />\nchore(model-profiles): refresh model profile data (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/41145\">#41145</a>)<br />\nfeat(core,anthropic,openai): declare mid-conversation support in model profiles (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/41180\">#41180</a>)<br />\nchore(deps): bump langgraph-sdk from 0.4.4 to 0.4.6 in /libs/partners/anthropic (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/41101\">#41101</a>)<br />\nchore(deps): bump langgraph-sdk from 0.4.2 to 0.4.4 in /libs/partners/anthropic (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/41080\">#41080</a>)<br />\nchore(deps): bump urllib3 from 2.7.0 to 2.8.0 in /libs/partners/anthropic (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/40964\">#40964</a>)</p>\n[Cluster context: 1 sources, engagement 0, common terms: class, issue-link, since, langchain, changes.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "LangChain Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "class",
+          "issue-link",
+          "since",
+          "langchain",
+          "changes",
+          "href",
+          "js-issue-link",
+          "core"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: class, issue-link, since, langchain. Lead: LangChain v1.7.1",
+        "alternative_titles": [
+          "LangChain v1.7.1",
+          "LangChain v1.6.10",
+          "LangChain v1.2.3",
+          "LangChain v1.7.1"
+        ],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-10-12T22:03:51.743326Z",
+    "defer_count": 1,
+    "original_score": 85,
+    "original_reason": "New LangChain version ships with explicit mid-conversation support for Anthropic/OpenAI models, directly impacting conversational agent development."
   }
 ]

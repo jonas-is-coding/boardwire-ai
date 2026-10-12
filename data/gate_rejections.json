@@ -1,33 +1,5 @@
 [
   {
-    "rejected_at": "2026-08-19T12:42:28.768718Z",
-    "stage": "review",
-    "title": "Servers v2026.8.18",
-    "link": "https://github.com/modelcontextprotocol/servers/releases/tag/2026.8.18",
-    "reasons": [
-      "Version-only release without concrete capability: 'Servers v2026.8.18'",
-      "Score below threshold (60 < 62)"
-    ]
-  },
-  {
-    "rejected_at": "2026-08-21T12:42:13.800993Z",
-    "stage": "review",
-    "title": "Claude Code v2.1.231",
-    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.231",
-    "reasons": [
-      "Version-only release without concrete capability: 'Claude Code v2.1.231'"
-    ]
-  },
-  {
-    "rejected_at": "2026-08-26T16:42:19.153923Z",
-    "stage": "review",
-    "title": "Ollama v0.33.1-rc0",
-    "link": "https://github.com/ollama/ollama/releases/tag/v0.33.1-rc0",
-    "reasons": [
-      "Version-only release without concrete capability: 'Ollama v0.33.1-rc0'"
-    ]
-  },
-  {
     "rejected_at": "2026-09-01T16:04:43.513760Z",
     "stage": "review",
     "title": "Claude Code v2.1.252",
@@ -1981,6 +1953,36 @@
     "stage": "review",
     "title": "GitHub Copilot app for Beginners: How to teach Copilot about your codebase",
     "link": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-teach-copilot-about-your-codebase/",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-12T22:03:51.871416Z",
+    "stage": "review",
+    "title": "I expect rapid progress but not towards general superintelligence",
+    "link": "https://www.interconnects.ai/p/i-expect-rapid-progress-but-not-towards",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-12T22:03:51.999907Z",
+    "stage": "review",
+    "title": "Pollo AI turns creative ideas into campaigns with OpenAI",
+    "link": "https://openai.com/index/pollo-ai",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-12T22:03:52.126775Z",
+    "stage": "review",
+    "title": "Disrupting AI-enabled “false front” operations",
+    "link": "https://openai.com/index/disrupting-ai-enabled-false-front-operations",
     "reasons": [
       "Post is empty",
       "Post lacks a clear claim or insight"

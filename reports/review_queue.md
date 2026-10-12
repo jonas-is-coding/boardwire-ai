@@ -6,6 +6,9 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-10-12T22:03:52.126775Z` [review] **Disrupting AI-enabled “false front” operations** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-12T22:03:51.999907Z` [review] **Pollo AI turns creative ideas into campaigns with OpenAI** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-12T22:03:51.871416Z` [review] **I expect rapid progress but not towards general superintelligence** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-12T19:46:57.130648Z` [review] **GitHub Copilot app for Beginners: How to teach Copilot about your codebase** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-12T19:46:57.023751Z` [review] **vLLM v0.31.0rc1** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.31.0rc1'
 - `2026-10-12T19:46:56.920025Z` [review] **LangChain v1.4.5** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.4.5'
@@ -28,6 +31,3 @@ No pending review items.
 - `2026-10-08T17:22:47.516820Z` [review] **LangChain v1.7.0** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-08T17:22:47.351444Z` [review] **Docker Agent** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-08T17:22:47.185740Z` [review] **Claude Code v2.1.294** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-08T17:22:47.016874Z` [review] **Anthropic Python SDK v1.12.1** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-08T17:22:46.847251Z` [review] **Claude Haiku 5.5** — Version-only release without concrete capability: 'Claude Haiku 5.5'
-- `2026-10-07T19:51:53.517124Z` [review] **Show HN: NanoMuse – An open-source AI agent for your phone and computer** — Post is empty; Post lacks a clear claim or insight
