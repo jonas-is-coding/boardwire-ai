@@ -302,5 +302,13 @@
     "followers": 33,
     "follows": 127,
     "posts": 80
+  },
+  {
+    "observed_at": "2026-10-12T11:26:35.662999Z",
+    "did": "did:plc:e4wr5lkpn63w5hy6iisnauqu",
+    "handle": "boardwire.bsky.social",
+    "followers": 33,
+    "follows": 127,
+    "posts": 80
   }
 ]
