@@ -6,6 +6,10 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-10-13T20:10:21.478227Z` [review] **Run fast, private agents on-device with LFM2.5-24B-A2B** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-13T20:10:21.319778Z` [review] **vLLM v0.32.0rc0** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.32.0rc0'
+- `2026-10-13T20:10:21.158154Z` [review] **LangChain v1.6.10** — Version-only release without concrete capability: 'LangChain v1.6.10'
+- `2026-10-13T20:10:20.971783Z` [review] **Ollama v0.40.4** — Version-only release without concrete capability: 'Ollama v0.40.4'
 - `2026-10-13T17:32:48.113459Z` [review] **Muse Wonder** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-13T17:32:48.005729Z` [review] **LangChain v1.7.1** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.7.1'
 - `2026-10-13T17:32:47.896437Z` [review] **'AI' Is Not a Tool by Rich Hickey** — Post is empty; Post lacks a clear claim or insight
@@ -27,7 +31,3 @@ No pending review items.
 - `2026-10-09T19:24:15.633215Z` [review] **Introducing Falcon ASR** — Duplicate or near-duplicate post detected
 - `2026-10-09T16:58:31.902345Z` [review] **Simon Willison v5.5** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-09T16:58:31.745242Z` [review] **BerriAI/litellm — The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-09T16:58:31.590032Z` [review] **Claude Code v2.1.295** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-08T19:47:17.749340Z` [review] **Multimodal open d1 decision models for the edge** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-08T19:47:17.625990Z` [review] **One Model Family, Two Gold-Level Results: Fine-Tuning Nemotron for IOI and IMO** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-08T19:47:17.503356Z` [review] **LangChain v1.6.8** — Version-only release without concrete capability: 'LangChain v1.6.8'

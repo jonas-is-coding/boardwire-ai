@@ -1,45 +1,5 @@
 [
   {
-    "rejected_at": "2026-09-03T18:59:20.442340Z",
-    "stage": "review",
-    "title": "Ollama v0.33.3",
-    "link": "https://github.com/ollama/ollama/releases/tag/v0.33.3",
-    "reasons": [
-      "Version-only release without concrete capability: 'Ollama v0.33.3'"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-04T14:15:23.350908Z",
-    "stage": "review",
-    "title": "vLLM v0.29.0rc3",
-    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.29.0rc3",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight",
-      "Version-only release without concrete capability: 'vLLM v0.29.0rc3'"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-04T14:15:23.473403Z",
-    "stage": "review",
-    "title": "Porting my 1993 Amiga game to Godot, with an LLM reading the 68000 assembly",
-    "link": "https://babyloniantwins.com/blog/porting-a-1993-amiga-game-to-godot/",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-04T14:15:23.596098Z",
-    "stage": "review",
-    "title": "Decoding the new AI lingo: Loops, harnesses, squads, hill climbing… oh my!",
-    "link": "https://github.blog/ai-and-ml/decoding-the-new-ai-lingo-loops-harnesses-squads-hill-climbing-oh-my/",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
     "rejected_at": "2026-09-04T17:33:12.533639Z",
     "stage": "review",
     "title": "Which tools do Claude, Codex and Cursor choose? We measured 17k runs to find out",
@@ -1987,6 +1947,45 @@
     "stage": "review",
     "title": "Muse Wonder",
     "link": "https://research.meta.ai/blog/muse-wonder",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-13T20:10:20.971783Z",
+    "stage": "review",
+    "title": "Ollama v0.40.4",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.40.4-rc1",
+    "reasons": [
+      "Version-only release without concrete capability: 'Ollama v0.40.4'"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-13T20:10:21.158154Z",
+    "stage": "review",
+    "title": "LangChain v1.6.10",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.6.10",
+    "reasons": [
+      "Version-only release without concrete capability: 'LangChain v1.6.10'"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-13T20:10:21.319778Z",
+    "stage": "review",
+    "title": "vLLM v0.32.0rc0",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.32.0rc0",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight",
+      "Version-only release without concrete capability: 'vLLM v0.32.0rc0'"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-13T20:10:21.478227Z",
+    "stage": "review",
+    "title": "Run fast, private agents on-device with LFM2.5-24B-A2B",
+    "link": "https://huggingface.co/blog/LiquidAI/lfm25-24b-a2b",
     "reasons": [
       "Post is empty",
       "Post lacks a clear claim or insight"
