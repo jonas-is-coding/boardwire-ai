@@ -1,32 +1,5 @@
 [
   {
-    "rejected_at": "2026-09-01T16:04:43.513760Z",
-    "stage": "review",
-    "title": "Claude Code v2.1.252",
-    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.252",
-    "reasons": [
-      "Version-only release without concrete capability: 'Claude Code v2.1.252'"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-01T20:07:42.705515Z",
-    "stage": "publish",
-    "title": "langchain==1.4.0a3",
-    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.4.0a3",
-    "reasons": [
-      "Release dedupe: LangChain v1.4.0 already published at 2026-08-31T00:17:39.850752Z"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-02T19:06:28.171613Z",
-    "stage": "review",
-    "title": "Ollama v0.33.3",
-    "link": "https://github.com/ollama/ollama/releases/tag/v0.33.3-rc1",
-    "reasons": [
-      "Version-only release without concrete capability: 'Ollama v0.33.3'"
-    ]
-  },
-  {
     "rejected_at": "2026-09-03T18:59:20.442340Z",
     "stage": "review",
     "title": "Ollama v0.33.3",
@@ -1983,6 +1956,37 @@
     "stage": "review",
     "title": "Disrupting AI-enabled “false front” operations",
     "link": "https://openai.com/index/disrupting-ai-enabled-false-front-operations",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-13T17:32:47.896437Z",
+    "stage": "review",
+    "title": "'AI' Is Not a Tool by Rich Hickey",
+    "link": "https://www.linkedin.com/pulse/ai-tool-rich-hickey-kjl8e",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-13T17:32:48.005729Z",
+    "stage": "review",
+    "title": "LangChain v1.7.1",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.7.1",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight",
+      "Version-only release without concrete capability: 'LangChain v1.7.1'"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-13T17:32:48.113459Z",
+    "stage": "review",
+    "title": "Muse Wonder",
+    "link": "https://research.meta.ai/blog/muse-wonder",
     "reasons": [
       "Post is empty",
       "Post lacks a clear claim or insight"

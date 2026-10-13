@@ -6,6 +6,9 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-10-13T17:32:48.113459Z` [review] **Muse Wonder** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-13T17:32:48.005729Z` [review] **LangChain v1.7.1** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.7.1'
+- `2026-10-13T17:32:47.896437Z` [review] **'AI' Is Not a Tool by Rich Hickey** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-12T22:03:52.126775Z` [review] **Disrupting AI-enabled “false front” operations** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-12T22:03:51.999907Z` [review] **Pollo AI turns creative ideas into campaigns with OpenAI** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-12T22:03:51.871416Z` [review] **I expect rapid progress but not towards general superintelligence** — Post is empty; Post lacks a clear claim or insight
@@ -28,6 +31,3 @@ No pending review items.
 - `2026-10-08T19:47:17.749340Z` [review] **Multimodal open d1 decision models for the edge** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-08T19:47:17.625990Z` [review] **One Model Family, Two Gold-Level Results: Fine-Tuning Nemotron for IOI and IMO** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-08T19:47:17.503356Z` [review] **LangChain v1.6.8** — Version-only release without concrete capability: 'LangChain v1.6.8'
-- `2026-10-08T17:22:47.516820Z` [review] **LangChain v1.7.0** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-08T17:22:47.351444Z` [review] **Docker Agent** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-08T17:22:47.185740Z` [review] **Claude Code v2.1.294** — Post is empty; Post lacks a clear claim or insight

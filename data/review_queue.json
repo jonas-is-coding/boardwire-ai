@@ -15009,12 +15009,12 @@
   },
   {
     "id": "33ed200362c3",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-10-12T19:46:51.065654Z",
-    "score": 85,
-    "reason": "Open-source UI for local/remote LLMs ships today. Direct utility for developers managing Ollama/OpenAI models.",
-    "proposed_post": "open-webui, a self-hostable UI for Ollama and OpenAI APIs, is trending on GitHub. Use it to manage and interact with local and remote LLMs via a unified interface, simplifying local development and testing.",
-    "source_angle": "GitHub Trending: open-webui offers a unified UI for Ollama and OpenAI APIs.",
+    "status": "approved",
+    "created_at": "2026-10-13T17:32:47.663506Z",
+    "score": 90,
+    "reason": "Open-source UI for local/remote LLMs shipped, providing immediate utility for developers managing Ollama/OpenAI models.",
+    "proposed_post": "Open-WebUI, an open-source interface for local Ollama and OpenAI API models, has shipped. Builders can now manage and interact with various LLMs from a single UI, streamlining local development and testing workflows.",
+    "source_angle": "Open-source UI for LLM management.",
     "source_item": {
       "title": "open-webui/open-webui — User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
       "source": "GitHub Trending",
@@ -15046,10 +15046,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-10-12T22:03:51.591222Z",
-    "defer_count": 2,
-    "original_score": 85,
-    "original_reason": "Open-source UI for local/remote LLMs ships today. Direct utility for developers managing Ollama/OpenAI models."
+    "breaking": false,
+    "reactivated_at": "2026-10-13T17:32:47.663506Z"
   },
   {
     "id": "a8cf3ac85d20",
@@ -15139,12 +15137,12 @@
   },
   {
     "id": "b913f09da45e",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-10-12T22:03:46.358021Z",
-    "score": 85,
-    "reason": "New LangChain version ships with explicit mid-conversation support for Anthropic/OpenAI models, directly impacting conversational agent development.",
-    "proposed_post": "LangChain Anthropic v1.7.6 adds explicit mid-conversation support to model profiles for Anthropic and OpenAI. Builders can now leverage this for more robust multi-turn conversational agent development within LangChain.",
-    "source_angle": "LangChain's new Anthropic integration version",
+    "status": "approved",
+    "created_at": "2026-10-13T17:32:47.789503Z",
+    "score": 90,
+    "reason": "LangChain v1.7.6 released with explicit mid-conversation support for Anthropic/OpenAI, a concrete SDK update for builders.",
+    "proposed_post": "LangChain v1.7.6 adds explicit mid-conversation support for Anthropic/OpenAI models. This simplifies building robust conversational agents with these LLMs.",
+    "source_angle": "LangChain SDK update for conversational AI",
     "source_item": {
       "title": "LangChain v1.7.6",
       "source": "LangChain Releases",
@@ -15181,9 +15179,7 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-10-12T22:03:51.743326Z",
-    "defer_count": 1,
-    "original_score": 85,
-    "original_reason": "New LangChain version ships with explicit mid-conversation support for Anthropic/OpenAI models, directly impacting conversational agent development."
+    "breaking": false,
+    "reactivated_at": "2026-10-13T17:32:47.789503Z"
   }
 ]
