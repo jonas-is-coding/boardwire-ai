@@ -1561,6 +1561,32 @@
         "follows @emollick.bsky.social"
       ],
       "followed_at": "2026-10-12T17:01:37.380774Z"
+    },
+    "did:plc:whilukvvqttizd6tzdqqvhsf": {
+      "handle": "fernandotmngr.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mxrday6cyq22",
+      "channel": "seed_followers",
+      "score": 2.0,
+      "mode": "discover",
+      "via": [
+        "follows @natolambert.bsky.social",
+        "follows @emollick.bsky.social",
+        "follows @ai2.bsky.social"
+      ],
+      "followed_at": "2026-10-13T15:16:52.297326Z"
+    },
+    "did:plc:pe6ioqxwanemkq7ltfnql7ks": {
+      "handle": "liam.scot",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mxrdc5tkor2r",
+      "channel": "seed_followers",
+      "score": 2.0,
+      "mode": "discover",
+      "via": [
+        "follows @simonwillison.net",
+        "follows @natolambert.bsky.social",
+        "follows @emollick.bsky.social"
+      ],
+      "followed_at": "2026-10-13T15:17:31.786605Z"
     }
   },
   "runs": [
@@ -2015,6 +2041,22 @@
       ],
       "started_at": "2026-10-12T17:00:39.866483Z",
       "finished_at": "2026-10-12T17:01:37.383234Z"
+    },
+    {
+      "mode": "discover",
+      "dry_run": false,
+      "limit": 12,
+      "planned": 0,
+      "followed": 2,
+      "skipped_already": 0,
+      "failed": 0,
+      "aborted": null,
+      "handles": [
+        "fernandotmngr.bsky.social",
+        "liam.scot"
+      ],
+      "started_at": "2026-10-13T15:16:52.099220Z",
+      "finished_at": "2026-10-13T15:17:31.788624Z"
     }
   ],
   "pinned_thread": {
