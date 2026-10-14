@@ -14875,7 +14875,7 @@
   },
   {
     "id": "25911c57f854",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-11T22:26:19.185428Z",
     "score": 90,
     "reason": "New SDK version with concrete features for multi-agent development. Ships today.",
@@ -14913,7 +14913,8 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": false,
-    "reactivated_at": "2026-10-11T22:26:19.185428Z"
+    "reactivated_at": "2026-10-11T22:26:19.185428Z",
+    "expired_at": "2026-10-14T14:58:39.289627Z"
   },
   {
     "id": "31ded5489a64",
@@ -14966,7 +14967,7 @@
   },
   {
     "id": "ea0064d8d9f9",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-11T22:26:07.393179Z",
     "score": 90,
     "reason": "Open-source tool for self-hosting AI agents on Cloudflare's free tier. Clear cost benefit and immediate deployability.",
@@ -15005,7 +15006,8 @@
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das Talorys-Projekt auf GitHub ist interessant. Ein Self-hosted AI-Agent auf Cloudflare's Free Tier – das ist direkt umsetzbar für jeden, der experimentieren will, ohne gleich Kosten zu haben. Entwickler können damit schnell eine persönliche KI-Lösung aufsetzen und anpassen, was eine gute Basis für eigene, datenschutzfreundliche Anwendungen sein kann.",
-    "chloe_note": "Hey, *Talorys – A self-hosted personal AI agent on Cloudflare's free tier* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Open-source tool for self-hosting AI agents on Cloudflare's free tier. Clear cost benefit and immediate deployability.Cluster context: 1 sources, engagement 395. Common terms: comments, rociiu, original, 321. Score aktuell: 90. Link: https://github.com/rociiu/talorys"
+    "chloe_note": "Hey, *Talorys – A self-hosted personal AI agent on Cloudflare's free tier* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Open-source tool for self-hosting AI agents on Cloudflare's free tier. Clear cost benefit and immediate deployability.Cluster context: 1 sources, engagement 395. Common terms: comments, rociiu, original, 321. Score aktuell: 90. Link: https://github.com/rociiu/talorys",
+    "expired_at": "2026-10-14T14:58:39.289627Z"
   },
   {
     "id": "33ed200362c3",
