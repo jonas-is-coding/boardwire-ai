@@ -1587,6 +1587,42 @@
         "follows @emollick.bsky.social"
       ],
       "followed_at": "2026-10-13T15:17:31.786605Z"
+    },
+    "did:plc:w6e6xqcp4f2kxw4w44aet2n7": {
+      "handle": "climate-nature.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mxtmf22o4s2j",
+      "channel": "seed_followers",
+      "score": 2.0,
+      "mode": "discover",
+      "via": [
+        "follows @simonwillison.net",
+        "follows @natolambert.bsky.social",
+        "follows @emollick.bsky.social"
+      ],
+      "followed_at": "2026-10-14T13:05:31.628646Z"
+    },
+    "did:plc:l525grjkqocq2jiazkbvzdln": {
+      "handle": "ai.thecompound.tech",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mxtmg4iwzh2u",
+      "channel": "seed_followers",
+      "score": 1.5,
+      "mode": "discover",
+      "via": [
+        "follows @simonwillison.net",
+        "follows @rasbt.bsky.social"
+      ],
+      "followed_at": "2026-10-14T13:06:07.749050Z"
+    },
+    "did:plc:qzcurelmw2t3uvrfaka3ddde": {
+      "handle": "andyliu.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mxtmgzkh6a2o",
+      "channel": "seed_follows",
+      "score": 1.0,
+      "mode": "discover",
+      "via": [
+        "@danielvanstrien.bsky.social follows"
+      ],
+      "followed_at": "2026-10-14T13:06:38.205456Z"
     }
   },
   "runs": [
@@ -2057,6 +2093,23 @@
       ],
       "started_at": "2026-10-13T15:16:52.099220Z",
       "finished_at": "2026-10-13T15:17:31.788624Z"
+    },
+    {
+      "mode": "discover",
+      "dry_run": false,
+      "limit": 12,
+      "planned": 0,
+      "followed": 3,
+      "skipped_already": 0,
+      "failed": 0,
+      "aborted": null,
+      "handles": [
+        "climate-nature.bsky.social",
+        "ai.thecompound.tech",
+        "andyliu.bsky.social"
+      ],
+      "started_at": "2026-10-14T13:05:31.500598Z",
+      "finished_at": "2026-10-14T13:06:38.208127Z"
     }
   ],
   "pinned_thread": {
