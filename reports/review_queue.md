@@ -6,6 +6,8 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-10-14T15:01:06.750000Z` [review] **Higgsfield takes AI video from 1 minute to over 10** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-14T15:01:06.672517Z` [review] **ifixai-ai/iFixAi — Independent Auditing of AI Agents. Run by human or the agent itself, to answer the most crucial question in the AI Agent Economy. Is the agent doing what is supposed to do? With iFi** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-13T20:10:21.478227Z` [review] **Run fast, private agents on-device with LFM2.5-24B-A2B** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-13T20:10:21.319778Z` [review] **vLLM v0.32.0rc0** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.32.0rc0'
 - `2026-10-13T20:10:21.158154Z` [review] **LangChain v1.6.10** — Version-only release without concrete capability: 'LangChain v1.6.10'
@@ -29,5 +31,3 @@ No pending review items.
 - `2026-10-09T19:24:15.919109Z` [review] **Show HN: Let your AI agents paint big arrows, boxes and text on your screen** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-09T19:24:15.735624Z` [review] **Claude Code v2.1.291** — Version-only release without concrete capability: 'Claude Code v2.1.291'
 - `2026-10-09T19:24:15.633215Z` [review] **Introducing Falcon ASR** — Duplicate or near-duplicate post detected
-- `2026-10-09T16:58:31.902345Z` [review] **Simon Willison v5.5** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-09T16:58:31.745242Z` [review] **BerriAI/litellm — The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure** — Post is empty; Post lacks a clear claim or insight

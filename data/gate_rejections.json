@@ -1,25 +1,5 @@
 [
   {
-    "rejected_at": "2026-09-04T17:33:12.533639Z",
-    "stage": "review",
-    "title": "Which tools do Claude, Codex and Cursor choose? We measured 17k runs to find out",
-    "link": "https://armature.tech/blog/which-tools-coding-agents-install",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-04T17:33:12.661178Z",
-    "stage": "review",
-    "title": "Playco cut manual fixes 50% prototyping games with GPT-6 Astra",
-    "link": "https://openai.com/index/playco-game-prototyping-with-astra",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
     "rejected_at": "2026-09-06T20:47:32.924740Z",
     "stage": "review",
     "title": "radixark/miles — Miles is an enterprise-facing reinforcement learning framework for LLM and VLM post-training, forked from and co-evolving with slime.",
@@ -1986,6 +1966,26 @@
     "stage": "review",
     "title": "Run fast, private agents on-device with LFM2.5-24B-A2B",
     "link": "https://huggingface.co/blog/LiquidAI/lfm25-24b-a2b",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-14T15:01:06.672517Z",
+    "stage": "review",
+    "title": "ifixai-ai/iFixAi — Independent Auditing of AI Agents. Run by human or the agent itself, to answer the most crucial question in the AI Agent Economy. Is the agent doing what is supposed to do? With iFi",
+    "link": "https://github.com/ifixai-ai/iFixAi",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-14T15:01:06.750000Z",
+    "stage": "review",
+    "title": "Higgsfield takes AI video from 1 minute to over 10",
+    "link": "https://openai.com/index/higgsfield-longer-videos-voice",
     "reasons": [
       "Post is empty",
       "Post lacks a clear claim or insight"
