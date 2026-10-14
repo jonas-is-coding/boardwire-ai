@@ -6,6 +6,9 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-10-14T18:28:01.396117Z` [review] **How Third Moment Research runs 10,000 agents for 36+ hours** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-14T18:28:01.233437Z` [review] **Amp puts AI agents to work beyond code with OpenAI models** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-14T18:28:01.072822Z` [review] **Ollama v0.40.4** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-14T15:01:06.750000Z` [review] **Higgsfield takes AI video from 1 minute to over 10** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-14T15:01:06.672517Z` [review] **ifixai-ai/iFixAi — Independent Auditing of AI Agents. Run by human or the agent itself, to answer the most crucial question in the AI Agent Economy. Is the agent doing what is supposed to do? With iFi** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-13T20:10:21.478227Z` [review] **Run fast, private agents on-device with LFM2.5-24B-A2B** — Post is empty; Post lacks a clear claim or insight
@@ -28,6 +31,3 @@ No pending review items.
 - `2026-10-11T22:26:19.925897Z` [review] **Ollama v0.40.3** — Version-only release without concrete capability: 'Ollama v0.40.3'
 - `2026-10-11T22:26:19.365216Z` [review] **LangChain v1.4.4** — Version-only release without concrete capability: 'LangChain v1.4.4'
 - `2026-10-09T19:24:16.002283Z` [review] **twostraws/SwiftUI-Agent-Skill — SwiftUI agent skill for Claude Code, Codex, and other AI tools.** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-09T19:24:15.919109Z` [review] **Show HN: Let your AI agents paint big arrows, boxes and text on your screen** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-09T19:24:15.735624Z` [review] **Claude Code v2.1.291** — Version-only release without concrete capability: 'Claude Code v2.1.291'
-- `2026-10-09T19:24:15.633215Z` [review] **Introducing Falcon ASR** — Duplicate or near-duplicate post detected

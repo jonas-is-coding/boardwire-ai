@@ -1,36 +1,5 @@
 [
   {
-    "rejected_at": "2026-09-06T20:47:32.924740Z",
-    "stage": "review",
-    "title": "radixark/miles — Miles is an enterprise-facing reinforcement learning framework for LLM and VLM post-training, forked from and co-evolving with slime.",
-    "link": "https://github.com/radixark/miles",
-    "reasons": [
-      "Duplicate or near-duplicate post detected"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-06T20:47:33.307606Z",
-    "stage": "review",
-    "title": "Ollama v0.34.0",
-    "link": "https://github.com/ollama/ollama/releases/tag/v0.34.0-rc1",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight",
-      "Version-only release without concrete capability: 'Ollama v0.34.0'"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-06T20:47:33.373873Z",
-    "stage": "review",
-    "title": "vLLM v0.29.0rc4",
-    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.29.0rc4",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight",
-      "Version-only release without concrete capability: 'vLLM v0.29.0rc4'"
-    ]
-  },
-  {
     "rejected_at": "2026-09-06T20:47:33.439989Z",
     "stage": "review",
     "title": "ruvnet/ruflo — 🌊 The original agent meta-harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning ",
@@ -1986,6 +1955,36 @@
     "stage": "review",
     "title": "Higgsfield takes AI video from 1 minute to over 10",
     "link": "https://openai.com/index/higgsfield-longer-videos-voice",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-14T18:28:01.072822Z",
+    "stage": "review",
+    "title": "Ollama v0.40.4",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.40.4",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-14T18:28:01.233437Z",
+    "stage": "review",
+    "title": "Amp puts AI agents to work beyond code with OpenAI models",
+    "link": "https://openai.com/index/amp-beyond-coding",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-14T18:28:01.396117Z",
+    "stage": "review",
+    "title": "How Third Moment Research runs 10,000 agents for 36+ hours",
+    "link": "https://openai.com/index/third-moment-research",
     "reasons": [
       "Post is empty",
       "Post lacks a clear claim or insight"
