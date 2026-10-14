@@ -15053,7 +15053,7 @@
   },
   {
     "id": "a8cf3ac85d20",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-12T19:46:36.765934Z",
     "score": 90,
     "reason": "Direct release of Claude Code updates with new hooks and detailed tool call introspection for builders.",
@@ -15092,11 +15092,12 @@
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Hey Chloe,\n\nDas hier ist interessant: Claude Code hat 'serverToolUses' zu 'turn.step' hinzugefügt. Das ist ein großer Schritt für Devs, die ihre Agenten im Detail debuggen und optimieren wollen.\n\nJetzt können sie genau sehen, welche Tools der Advisor wann mit welchen Inputs benutzt hat. Das macht die Ursachenforschung bei Fehlern oder unerwartetem Verhalten viel einfacher und Transparenz ist hier entscheidend.",
-    "chloe_note": "Hey, *Claude Code v2.1.290* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Direct release of Claude Code updates with new hooks and detailed tool call introspection for builders.Cluster context: 1 sources, engagement 0. Common terms: changes, reject, dropped, sends. Score aktuell: 90. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.290"
+    "chloe_note": "Hey, *Claude Code v2.1.290* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Direct release of Claude Code updates with new hooks and detailed tool call introspection for builders.Cluster context: 1 sources, engagement 0. Common terms: changes, reject, dropped, sends. Score aktuell: 90. Link: https://github.com/anthropics/claude-code/releases/tag/v2.1.290",
+    "expired_at": "2026-10-14T22:32:19.295250Z"
   },
   {
     "id": "62eaad8937c8",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-12T19:46:42.942716Z",
     "score": 90,
     "reason": "Official inference framework for 1-bit LLMs released by Microsoft. Clear artifact for immediate builder use.",
@@ -15135,7 +15136,8 @@
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, schau dir das an: 'microsoft/BitNet'. Das ist das offizielle Inference-Framework für 1-Bit LLMs.\n\nDas ist ein Game Changer für Developer, die LLMs auf Edge-Devices oder mit knappen Ressourcen laufen lassen wollen. Mit 1-Bit Modellen könnten wir bald viel effizientere und kostengünstigere KI-Anwendungen bauen. Das ist direkt umsetzbar, wenn man mit den Limitationen von aktuellen LLMs zu kämpfen hat.",
-    "chloe_note": "*microsoft/BitNet — Official inference framework for 1-bit LLMs* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Official inference framework for 1-bit LLMs released by Microsoft. Clear artifact for immediate builder use.Cluster context: 1 sources, engagement 134. Common terms: 1-bit, github, stars., inference. Bewertung: 90. Quelle: https://github.com/microsoft/BitNet"
+    "chloe_note": "*microsoft/BitNet — Official inference framework for 1-bit LLMs* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Official inference framework for 1-bit LLMs released by Microsoft. Clear artifact for immediate builder use.Cluster context: 1 sources, engagement 134. Common terms: 1-bit, github, stars., inference. Bewertung: 90. Quelle: https://github.com/microsoft/BitNet",
+    "expired_at": "2026-10-14T22:32:19.295250Z"
   },
   {
     "id": "b913f09da45e",
