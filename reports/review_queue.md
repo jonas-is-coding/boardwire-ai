@@ -6,6 +6,11 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-10-15T14:53:58.939101Z` [review] **lightseekorg/tokenspeed — TokenSpeed is a speed-of-light LLM inference engine.** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-15T14:53:58.773719Z` [review] **Hugging Face Blog v1.5** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'Hugging Face Blog v1.5'
+- `2026-10-15T14:53:58.610533Z` [review] **LFM2.5-24B-A2B: Built for fast on-device agents** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-15T14:53:57.893204Z` [review] **vLLM v0.32.0rc2** — Version-only release without concrete capability: 'vLLM v0.32.0rc2'
+- `2026-10-15T14:53:57.708176Z` [review] **Ollama v0.40.5-rc1** — Version-only release without concrete capability: 'Ollama v0.40.5-rc1'
 - `2026-10-14T18:28:01.396117Z` [review] **How Third Moment Research runs 10,000 agents for 36+ hours** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-14T18:28:01.233437Z` [review] **Amp puts AI agents to work beyond code with OpenAI models** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-14T18:28:01.072822Z` [review] **Ollama v0.40.4** — Post is empty; Post lacks a clear claim or insight
@@ -26,8 +31,3 @@ No pending review items.
 - `2026-10-12T19:46:56.920025Z` [review] **LangChain v1.4.5** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.4.5'
 - `2026-10-12T19:46:55.499148Z` [review] **Ollama v0.40.4** — Version-only release without concrete capability: 'Ollama v0.40.4'
 - `2026-10-11T22:26:20.406157Z` [review] **LangChain v1.6.9** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.6.9'
-- `2026-10-11T22:26:20.247430Z` [review] **Claude Code v2.1.296** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-11T22:26:20.088152Z` [review] **Servers v1.0.0** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-11T22:26:19.925897Z` [review] **Ollama v0.40.3** — Version-only release without concrete capability: 'Ollama v0.40.3'
-- `2026-10-11T22:26:19.365216Z` [review] **LangChain v1.4.4** — Version-only release without concrete capability: 'LangChain v1.4.4'
-- `2026-10-09T19:24:16.002283Z` [review] **twostraws/SwiftUI-Agent-Skill — SwiftUI agent skill for Claude Code, Codex, and other AI tools.** — Post is empty; Post lacks a clear claim or insight

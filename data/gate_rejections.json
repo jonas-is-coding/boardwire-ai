@@ -1,55 +1,5 @@
 [
   {
-    "rejected_at": "2026-09-06T20:47:33.439989Z",
-    "stage": "review",
-    "title": "ruvnet/ruflo — 🌊 The original agent meta-harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning ",
-    "link": "https://github.com/ruvnet/ruflo",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-06T20:47:33.506997Z",
-    "stage": "review",
-    "title": "OpenWhispr/openwhispr — Voice-to-text dictation app with local (Nvidia Parakeet/Whisper) and cloud models (BYOK). Privacy-first and available cross-platform.",
-    "link": "https://github.com/OpenWhispr/openwhispr",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-07T15:46:12.931046Z",
-    "stage": "review",
-    "title": "Claude Code v2.1.263",
-    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.263",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight",
-      "Version-only release without concrete capability: 'Claude Code v2.1.263'"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-07T15:46:13.056198Z",
-    "stage": "review",
-    "title": "lightpanda-io/browser — Lightpanda: the headless browser designed for AI and automation",
-    "link": "https://github.com/lightpanda-io/browser",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-07T18:41:44.112501Z",
-    "stage": "review",
-    "title": "LangChain v1.6.2",
-    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.6.2",
-    "reasons": [
-      "Version-only release without concrete capability: 'LangChain v1.6.2'"
-    ]
-  },
-  {
     "rejected_at": "2026-09-07T18:41:44.396363Z",
     "stage": "review",
     "title": "Claude Fable 5.1 made me a really nice animated pelican",
@@ -1985,6 +1935,55 @@
     "stage": "review",
     "title": "How Third Moment Research runs 10,000 agents for 36+ hours",
     "link": "https://openai.com/index/third-moment-research",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-15T14:53:57.708176Z",
+    "stage": "review",
+    "title": "Ollama v0.40.5-rc1",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.40.5-rc1",
+    "reasons": [
+      "Version-only release without concrete capability: 'Ollama v0.40.5-rc1'"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-15T14:53:57.893204Z",
+    "stage": "review",
+    "title": "vLLM v0.32.0rc2",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.32.0rc2",
+    "reasons": [
+      "Version-only release without concrete capability: 'vLLM v0.32.0rc2'"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-15T14:53:58.610533Z",
+    "stage": "review",
+    "title": "LFM2.5-24B-A2B: Built for fast on-device agents",
+    "link": "https://www.liquid.ai/blog/lfm2-5-24b-a2b",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-15T14:53:58.773719Z",
+    "stage": "review",
+    "title": "Hugging Face Blog v1.5",
+    "link": "https://huggingface.co/blog/swiss-ai/apertus-v15-release-notes",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight",
+      "Version-only release without concrete capability: 'Hugging Face Blog v1.5'"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-15T14:53:58.939101Z",
+    "stage": "review",
+    "title": "lightseekorg/tokenspeed — TokenSpeed is a speed-of-light LLM inference engine.",
+    "link": "https://github.com/lightseekorg/tokenspeed",
     "reasons": [
       "Post is empty",
       "Post lacks a clear claim or insight"
