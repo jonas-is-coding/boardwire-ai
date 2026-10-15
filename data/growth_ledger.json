@@ -1623,6 +1623,18 @@
         "@danielvanstrien.bsky.social follows"
       ],
       "followed_at": "2026-10-14T13:06:38.205456Z"
+    },
+    "did:plc:xczt7b7ru4ucgurr7222xuna": {
+      "handle": "alobbs.com",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mxw4534jps2h",
+      "channel": "seed_followers",
+      "score": 1.5,
+      "mode": "discover",
+      "via": [
+        "follows @natolambert.bsky.social",
+        "follows @s.ly"
+      ],
+      "followed_at": "2026-10-15T12:52:43.672631Z"
     }
   },
   "runs": [
@@ -2110,6 +2122,21 @@
       ],
       "started_at": "2026-10-14T13:05:31.500598Z",
       "finished_at": "2026-10-14T13:06:38.208127Z"
+    },
+    {
+      "mode": "discover",
+      "dry_run": false,
+      "limit": 12,
+      "planned": 0,
+      "followed": 1,
+      "skipped_already": 0,
+      "failed": 0,
+      "aborted": null,
+      "handles": [
+        "alobbs.com"
+      ],
+      "started_at": "2026-10-15T12:52:43.399766Z",
+      "finished_at": "2026-10-15T12:52:43.674675Z"
     }
   ],
   "pinned_thread": {
