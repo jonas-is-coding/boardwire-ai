@@ -1,15 +1,5 @@
 [
   {
-    "rejected_at": "2026-09-07T18:41:44.396363Z",
-    "stage": "review",
-    "title": "Claude Fable 5.1 made me a really nice animated pelican",
-    "link": "https://simonwillison.net/2026/Sep/1/claude-fable-5-1/",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
     "rejected_at": "2026-09-07T18:41:44.525930Z",
     "stage": "review",
     "title": "Safety overview: GPT-6 Astra",
@@ -1984,6 +1974,16 @@
     "stage": "review",
     "title": "lightseekorg/tokenspeed — TokenSpeed is a speed-of-light LLM inference engine.",
     "link": "https://github.com/lightseekorg/tokenspeed",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-15T18:10:35.108973Z",
+    "stage": "review",
+    "title": "Krea 3 – An image model built for editing at scale",
+    "link": "https://www.krea.ai/krea-3",
     "reasons": [
       "Post is empty",
       "Post lacks a clear claim or insight"

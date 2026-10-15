@@ -6,6 +6,7 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-10-15T18:10:35.108973Z` [review] **Krea 3 – An image model built for editing at scale** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-15T14:53:58.939101Z` [review] **lightseekorg/tokenspeed — TokenSpeed is a speed-of-light LLM inference engine.** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-15T14:53:58.773719Z` [review] **Hugging Face Blog v1.5** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'Hugging Face Blog v1.5'
 - `2026-10-15T14:53:58.610533Z` [review] **LFM2.5-24B-A2B: Built for fast on-device agents** — Post is empty; Post lacks a clear claim or insight
@@ -30,4 +31,3 @@ No pending review items.
 - `2026-10-12T19:46:57.023751Z` [review] **vLLM v0.31.0rc1** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.31.0rc1'
 - `2026-10-12T19:46:56.920025Z` [review] **LangChain v1.4.5** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.4.5'
 - `2026-10-12T19:46:55.499148Z` [review] **Ollama v0.40.4** — Version-only release without concrete capability: 'Ollama v0.40.4'
-- `2026-10-11T22:26:20.406157Z` [review] **LangChain v1.6.9** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.6.9'

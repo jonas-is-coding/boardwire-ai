@@ -15359,5 +15359,90 @@
     "breaking": false,
     "claire_note": "Chloe, schau dir das mal an. XERJ ist auf GitHub Trending. Die versprechen, Daten für KI zu indexieren – Code, Logs, PDFs – und das mit 40x weniger Token als grep oder sed. Das ist ein Game Changer für jeden, der Agents trainiert oder RAG-Systeme baut und nicht Unmengen an Tokens verfeuern will. Ein Entwickler kann damit seine Datenbasis für KI-Anwendungen deutlich effizienter und kostengünstiger aufbereiten.",
     "chloe_note": "Hey, *xerj-org/xerj — XERJ is the new way for AI to search data. Its autoindex capability activates agents to know your data without the token waste of grep and sed. One command indexes code, docs, logs and* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Open-source tool for AI-native data indexing/search, claims 40x token reduction vs grep, Elasticsearch compatible. Ships today.Cluster context: 1 sources, engagement 725. Common terms: trending, xerj, way, its. Score aktuell: 90. Link: https://github.com/xerj-org/xerj"
+  },
+  {
+    "id": "b14cb0dcfe73",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-10-15T18:10:11.974680Z",
+    "score": 90,
+    "reason": "Open-weight release of a frontier multimodal MoE model from Meta. Directly actionable for builders.",
+    "proposed_post": "Meta released Muse Spark Open, an open-weight multimodal mixture-of-experts model. Builders can now download and experiment with a frontier multimodal MoE architecture, enabling new research and application development.",
+    "source_angle": "Meta's open-weight multimodal MoE release",
+    "source_item": {
+      "title": "Welcome Muse Spark Open: open-weight frontier multimodal mixture-of-experts model from Meta",
+      "source": "Hugging Face Blog",
+      "link": "https://huggingface.co/blog/meta-muse-spark-open",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 10,
+      "summary": "Welcome Muse Spark Open: open-weight frontier multimodal mixture-of-experts model from Meta\n[Cluster context: 1 sources, engagement 0, common terms: frontier, spark, welcome, muse, meta.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Hugging Face Blog"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "frontier",
+          "spark",
+          "welcome",
+          "muse",
+          "meta",
+          "open-weight",
+          "multimodal",
+          "mixture-of-experts"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: frontier, spark, welcome, muse. Lead: Welcome Muse Spark Open: open-weight frontier multimodal mixture-of-experts model from Meta",
+        "alternative_titles": [],
+        "cluster_score": 15
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-10-15T18:10:34.764542Z",
+    "defer_count": 1,
+    "original_score": 90,
+    "original_reason": "Open-weight release of a frontier multimodal MoE model from Meta. Directly actionable for builders."
+  },
+  {
+    "id": "a6fa01ca923f",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-10-15T18:10:32.658308Z",
+    "score": 85,
+    "reason": "New model integrated into a widely used open-source library (Diffusers), making it immediately usable for builders.",
+    "proposed_post": "FLUX.3 Image Klein is now integrated into Hugging Face Diffusers. Builders can immediately access and use this new image generation model via the Diffusers library for their projects.",
+    "source_angle": "Hugging Face Diffusers adds FLUX.3 Image Klein model.",
+    "source_item": {
+      "title": "Welcome FLUX.3 Image Klein in Diffusers",
+      "source": "Hugging Face Blog",
+      "link": "https://huggingface.co/blog/flux-3",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 10,
+      "summary": "Welcome FLUX.3 Image Klein in Diffusers\n[Cluster context: 1 sources, engagement 0, common terms: flux.3, welcome, klein, diffusers, image.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Hugging Face Blog"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "flux.3",
+          "welcome",
+          "klein",
+          "diffusers",
+          "image"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: flux.3, welcome, klein, diffusers. Lead: Welcome FLUX.3 Image Klein in Diffusers",
+        "alternative_titles": [],
+        "cluster_score": 15
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-10-15T18:10:34.945740Z",
+    "defer_count": 1,
+    "original_score": 85,
+    "original_reason": "New model integrated into a widely used open-source library (Diffusers), making it immediately usable for builders."
   }
 ]
