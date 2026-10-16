@@ -1635,6 +1635,30 @@
         "follows @s.ly"
       ],
       "followed_at": "2026-10-15T12:52:43.672631Z"
+    },
+    "did:plc:ci7qswuutg6kqusbvzddkzhg": {
+      "handle": "seanjungbluth.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mxym554faz2o",
+      "channel": "seed_follows",
+      "score": 2.0,
+      "mode": "discover",
+      "via": [
+        "@simonwillison.net follows",
+        "follows @simonwillison.net"
+      ],
+      "followed_at": "2026-10-16T12:44:25.100732Z"
+    },
+    "did:plc:5bvyhog4rsqnzp6jnvzcbzus": {
+      "handle": "ben-r.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mxym65zkh52g",
+      "channel": "lists",
+      "score": 1.3,
+      "mode": "discover",
+      "via": [
+        "follows @rasbt.bsky.social",
+        "list 3lbvqgzd2m62c"
+      ],
+      "followed_at": "2026-10-16T12:44:59.610450Z"
     }
   },
   "runs": [
@@ -2137,6 +2161,22 @@
       ],
       "started_at": "2026-10-15T12:52:43.399766Z",
       "finished_at": "2026-10-15T12:52:43.674675Z"
+    },
+    {
+      "mode": "discover",
+      "dry_run": false,
+      "limit": 12,
+      "planned": 0,
+      "followed": 2,
+      "skipped_already": 0,
+      "failed": 0,
+      "aborted": null,
+      "handles": [
+        "seanjungbluth.bsky.social",
+        "ben-r.bsky.social"
+      ],
+      "started_at": "2026-10-16T12:44:24.873511Z",
+      "finished_at": "2026-10-16T12:44:59.612066Z"
     }
   ],
   "pinned_thread": {
