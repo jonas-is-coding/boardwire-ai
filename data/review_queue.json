@@ -15190,7 +15190,7 @@
   },
   {
     "id": "395e037a538a",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-14T18:27:39.028099Z",
     "score": 85,
     "reason": "Anthropic SDK update adds OpenTelemetry tracing for API calls, streaming, and tool runs. Direct builder utility.",
@@ -15229,11 +15229,12 @@
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, schau mal hier: Anthropic Python SDK v1.14.0.\n\nDie neuen Features für Managed Agents mit 'execution_identity' sind super relevant. Entwickler können damit feinere Kontrollen und Audit-Trails für ihre Agenten implementieren, was bei komplexeren AI-Anwendungen ein Muss ist. Auch der 'organization_type_not_supported' Error für Spend Limits ist wichtig – hilft, Kostenfallen frühzeitig zu erkennen.",
-    "chloe_note": "Hey, *Anthropic Python SDK v1.14.0* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Anthropic SDK update adds OpenTelemetry tracing for API calls, streaming, and tool runs. Direct builder utility.Cluster context: 1 sources, engagement 0. Common terms: dropped, start, chores, runs. Score aktuell: 85. Link: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.14.0"
+    "chloe_note": "Hey, *Anthropic Python SDK v1.14.0* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Anthropic SDK update adds OpenTelemetry tracing for API calls, streaming, and tool runs. Direct builder utility.Cluster context: 1 sources, engagement 0. Common terms: dropped, start, chores, runs. Score aktuell: 85. Link: https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.14.0",
+    "expired_at": "2026-10-16T18:43:51.023415Z"
   },
   {
     "id": "373fc71b5060",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-14T18:27:47.159842Z",
     "score": 90,
     "reason": "Claude Code v2.1.300 ships with new mod capabilities and platform integration, passing the Ships Test.",
@@ -15274,7 +15275,8 @@
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das Claude Code Update 2.1.300 hat ein paar interessante Änderungen. Besonders das 'virtualText' für Prompt-Dekorationen ist spannend – Entwickler können jetzt kontextbezogene Infos im Prompt-Feld anzeigen, ohne den eigentlichen Prompt zu verändern. Das macht die UX von Tools, die auf Claude basieren, deutlich cleaner.\n\nDie neuen OpenTelemetry Metriken für 'cache_creation' sind auch nützlich, um die Performance und Kosten von Cache-Zugriffen besser zu überwachen. Direkter Impact für alle, die Claude-basierte Anwendungen optimieren wollen.",
-    "chloe_note": "Der Ships Test ist bestanden. 'virtualText' ist ein klares Feature zum Nutzen und 'cache_creation' Metriken können direkt deployt werden, um Performance zu überwachen. Beides bietet unmittelbaren Wert für Entwickler."
+    "chloe_note": "Der Ships Test ist bestanden. 'virtualText' ist ein klares Feature zum Nutzen und 'cache_creation' Metriken können direkt deployt werden, um Performance zu überwachen. Beides bietet unmittelbaren Wert für Entwickler.",
+    "expired_at": "2026-10-16T18:43:51.023415Z"
   },
   {
     "id": "aec941593a03",
