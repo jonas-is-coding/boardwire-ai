@@ -6,6 +6,10 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-10-16T17:56:08.554384Z` [review] **Apple ML Research: Muse Spark Open with MLX on Mac Studio** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-16T17:56:08.479909Z` [review] **Bringing GPT-Rosalind to academic research labs** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-16T17:56:08.406155Z` [review] **Scaling Indic Pretraining: 2.8 Trillion Tokens and an Open Data Generation Pipeline** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-16T17:56:07.891148Z` [review] **Ollama v0.40.5-rc0** — Version-only release without concrete capability: 'Ollama v0.40.5-rc0'
 - `2026-10-16T14:45:43.159299Z` [review] **vLLM v0.32.0rc1** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.32.0rc1'
 - `2026-10-16T14:45:43.072726Z` [review] **LangChain v1.6.11** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.6.11'
 - `2026-10-16T14:45:42.987289Z` [review] **Ollama v0.40.5** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'Ollama v0.40.5'
@@ -27,7 +31,3 @@ No pending review items.
 - `2026-10-13T17:32:48.113459Z` [review] **Muse Wonder** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-13T17:32:48.005729Z` [review] **LangChain v1.7.1** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.7.1'
 - `2026-10-13T17:32:47.896437Z` [review] **'AI' Is Not a Tool by Rich Hickey** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-12T22:03:52.126775Z` [review] **Disrupting AI-enabled “false front” operations** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-12T22:03:51.999907Z` [review] **Pollo AI turns creative ideas into campaigns with OpenAI** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-12T22:03:51.871416Z` [review] **I expect rapid progress but not towards general superintelligence** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-12T19:46:57.130648Z` [review] **GitHub Copilot app for Beginners: How to teach Copilot about your codebase** — Post is empty; Post lacks a clear claim or insight

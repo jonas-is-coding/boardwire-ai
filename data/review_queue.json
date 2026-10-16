@@ -15482,8 +15482,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-10-16T14:45:42.786398Z",
-    "defer_count": 1,
+    "deferred_at": "2026-10-16T17:56:07.812686Z",
+    "defer_count": 2,
     "original_score": 90,
     "original_reason": "Anthropic SDK update with new API parameters for speed control and tool use, plus spend cap visibility. Ships today."
   },
@@ -15526,9 +15526,52 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-10-16T14:45:42.901953Z",
-    "defer_count": 1,
+    "deferred_at": "2026-10-16T17:56:07.731002Z",
+    "defer_count": 2,
     "original_score": 95,
     "original_reason": "Direct release of Claude Code v2.1.301 with concrete features for API reliability, observability, and terminal interaction."
+  },
+  {
+    "id": "c6cd38844b1b",
+    "status": "approved",
+    "created_at": "2026-10-16T17:56:02.616768Z",
+    "score": 95,
+    "reason": "Meta AI open-sourced Muse Spark, providing direct access for builders. Passes Ships Test.",
+    "proposed_post": "Meta AI open-sourced Muse Spark. Builders can now access and integrate this new model, enabling direct experimentation and deployment.",
+    "source_angle": "Meta AI's new open-source model",
+    "source_item": {
+      "title": "Muse Spark Open",
+      "source": "HackerNews",
+      "link": "https://research.meta.ai/blog/muse-spark-open",
+      "source_tier": 3,
+      "engagement_score": 1120.5,
+      "local_newsworthiness_score": 45,
+      "summary": "894 points, 453 comments on Hacker News — submitted by bigwheels — original: https://research.meta.ai/blog/muse-spark-open\n[Cluster context: 1 sources, engagement 1120, common terms: submitted, muse, original, comments, 894.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 1120,
+        "common_terms": [
+          "submitted",
+          "muse",
+          "original",
+          "comments",
+          "894",
+          "points",
+          "453",
+          "hacker"
+        ],
+        "cluster_summary": "1 sources, engagement 1120. Common terms: submitted, muse, original, comments. Lead: Muse Spark Open",
+        "alternative_titles": [],
+        "cluster_score": 20
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": true,
+    "claire_note": "Chloe, der Muse Spark Open Post von Meta ist interessant.\n\nEntwickler können sich hier mit einem neuen, ziemlich schnellen Text-to-Image-Modell auseinandersetzen, das unter der MIT-Lizenz steht. Das ist eine solide Basis für eigene Projekte, wenn man über die üblichen Modelle hinaus will. Der Fokus auf Effizienz könnte besonders für Leute spannend sein, die Bildgenerierung in Echtzeit oder auf Geräten mit begrenzten Ressourcen brauchen.",
+    "chloe_note": "Kurzes Update: *Muse Spark Open* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Meta AI open-sourced Muse Spark, providing direct access for builders. Passes Ships Test.Cluster context: 1 sources, engagement 1120. Common terms: submitted, muse, original, comments. Ich habe es mit 95 Punkten bewertet. Hier der Link: https://research.meta.ai/blog/muse-spark-open"
   }
 ]
