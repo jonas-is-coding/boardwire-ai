@@ -6,6 +6,10 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-10-18T21:01:11.537628Z` [review] **LangChain v1.6.12** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.6.12'
+- `2026-10-18T21:01:11.388519Z` [review] **DeepSeek search and fetch – $0.75 per 1000 successful requests** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-18T21:01:11.241631Z` [review] **Claude Code v2.1.302** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-18T21:01:11.093924Z` [review] **DeepSeek-v4.1-Flash-1017** — Version-only release without concrete capability: 'DeepSeek-v4.1-Flash-1017'
 - `2026-10-16T17:56:08.554384Z` [review] **Apple ML Research: Muse Spark Open with MLX on Mac Studio** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-16T17:56:08.479909Z` [review] **Bringing GPT-Rosalind to academic research labs** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-16T17:56:08.406155Z` [review] **Scaling Indic Pretraining: 2.8 Trillion Tokens and an Open Data Generation Pipeline** — Post is empty; Post lacks a clear claim or insight
@@ -27,7 +31,3 @@ No pending review items.
 - `2026-10-13T20:10:21.478227Z` [review] **Run fast, private agents on-device with LFM2.5-24B-A2B** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-13T20:10:21.319778Z` [review] **vLLM v0.32.0rc0** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.32.0rc0'
 - `2026-10-13T20:10:21.158154Z` [review] **LangChain v1.6.10** — Version-only release without concrete capability: 'LangChain v1.6.10'
-- `2026-10-13T20:10:20.971783Z` [review] **Ollama v0.40.4** — Version-only release without concrete capability: 'Ollama v0.40.4'
-- `2026-10-13T17:32:48.113459Z` [review] **Muse Wonder** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-13T17:32:48.005729Z` [review] **LangChain v1.7.1** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.7.1'
-- `2026-10-13T17:32:47.896437Z` [review] **'AI' Is Not a Tool by Rich Hickey** — Post is empty; Post lacks a clear claim or insight

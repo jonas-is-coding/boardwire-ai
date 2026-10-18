@@ -1,44 +1,5 @@
 [
   {
-    "rejected_at": "2026-09-08T17:52:56.941958Z",
-    "stage": "review",
-    "title": "vLLM v0.29.0rc5",
-    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.29.0rc5",
-    "reasons": [
-      "Version-only release without concrete capability: 'vLLM v0.29.0rc5'"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-08T17:52:58.669915Z",
-    "stage": "review",
-    "title": "Simon Willison v4.5",
-    "link": "https://simonwillison.net/2026/Sep/2/claudes-new-system-prompt/",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-08T17:52:58.738596Z",
-    "stage": "review",
-    "title": "The Work Now Within Reach",
-    "link": "https://openai.com/index/the-work-now-within-reach",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-08T17:52:58.807197Z",
-    "stage": "review",
-    "title": "Google DeepMind Releases AlphaGenome Atlas",
-    "link": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/alphagenome-atlas/",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
     "rejected_at": "2026-09-08T18:02:08.705114Z",
     "stage": "publish",
     "title": "LangChain v1.4.0",
@@ -1991,6 +1952,46 @@
     "reasons": [
       "Post is empty",
       "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-18T21:01:11.093924Z",
+    "stage": "review",
+    "title": "DeepSeek-v4.1-Flash-1017",
+    "link": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "reasons": [
+      "Version-only release without concrete capability: 'DeepSeek-v4.1-Flash-1017'"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-18T21:01:11.241631Z",
+    "stage": "review",
+    "title": "Claude Code v2.1.302",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.302",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-18T21:01:11.388519Z",
+    "stage": "review",
+    "title": "DeepSeek search and fetch – $0.75 per 1000 successful requests",
+    "link": "https://api-docs.deepseek.com/guides/search/",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-18T21:01:11.537628Z",
+    "stage": "review",
+    "title": "LangChain v1.6.12",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.6.12",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight",
+      "Version-only release without concrete capability: 'LangChain v1.6.12'"
     ]
   }
 ]

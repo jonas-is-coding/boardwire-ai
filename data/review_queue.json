@@ -15451,12 +15451,12 @@
   },
   {
     "id": "f3c0b13b4c15",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-10-16T14:45:29.383213Z",
+    "status": "approved",
+    "created_at": "2026-10-18T21:01:10.946426Z",
     "score": 90,
-    "reason": "Anthropic SDK update with new API parameters for speed control and tool use, plus spend cap visibility. Ships today.",
-    "proposed_post": "Anthropic Python SDK v1.15.0 adds a `speed` parameter to the Messages API and `between_tools` to model capabilities. Builders can now control Claude's generation speed (beta for some models) and get more granular tool-use insights, impacting latency and cost.",
-    "source_angle": "Anthropic Python SDK v1.15.0 release adds speed parameter and tool-use capabilities.",
+    "reason": "New SDK version with concrete API parameters for speed, tool use, and cost management. Directly actionable for builders.",
+    "proposed_post": "Anthropic Python SDK v1.15.0 adds API parameters for speed control, tool use, and spend cap visibility. Builders can now optimize latency, improve tool integration, and manage API costs directly in their applications.",
+    "source_angle": "Anthropic Python SDK update for builders",
     "source_item": {
       "title": "Anthropic Python SDK v1.15.0",
       "source": "Anthropic Python SDK Releases",
@@ -15488,19 +15488,17 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-10-16T17:56:07.812686Z",
-    "defer_count": 2,
-    "original_score": 90,
-    "original_reason": "Anthropic SDK update with new API parameters for speed control and tool use, plus spend cap visibility. Ships today."
+    "breaking": false,
+    "reactivated_at": "2026-10-18T21:01:10.946426Z"
   },
   {
     "id": "3d02909d42fe",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-10-16T14:45:38.954254Z",
-    "score": 95,
-    "reason": "Direct release of Claude Code v2.1.301 with concrete features for API reliability, observability, and terminal interaction.",
-    "proposed_post": "Claude Code v2.1.301 adds `CLAUDE_CODE_RETRY_WATCHDOG_MAX_USAGE_LIMIT_WAIT_MS` for usage limit handling, OpenTelemetry tracing for `claude-api`, and multi-line `rows` input for mods. Builders can now improve unattended API reliability, gain deeper observability, and create more…",
-    "source_angle": "Claude Code v2.1.301 release: API retry, OpenTelemetry, multi-line input",
+    "status": "approved",
+    "created_at": "2026-10-18T21:01:10.776119Z",
+    "score": 90,
+    "reason": "Direct release of Claude Code v2.1.301 with concrete features for API reliability, observability, and terminal interaction. Passes Ships Test.",
+    "proposed_post": "Claude Code v2.1.301 shipped with updates for API reliability, observability, and terminal interaction. Builders can now integrate Claude's code features with more confidence and better debugging tools.",
+    "source_angle": "Claude Code SDK/CLI update",
     "source_item": {
       "title": "Claude Code v2.1.301",
       "source": "Claude Code Releases",
@@ -15532,10 +15530,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-10-16T17:56:07.731002Z",
-    "defer_count": 2,
-    "original_score": 95,
-    "original_reason": "Direct release of Claude Code v2.1.301 with concrete features for API reliability, observability, and terminal interaction."
+    "breaking": false,
+    "reactivated_at": "2026-10-18T21:01:10.776119Z"
   },
   {
     "id": "c6cd38844b1b",
@@ -15580,5 +15576,27 @@
     "claire_note": "Chloe, der Muse Spark Open Post von Meta ist interessant.\n\nEntwickler können sich hier mit einem neuen, ziemlich schnellen Text-to-Image-Modell auseinandersetzen, das unter der MIT-Lizenz steht. Das ist eine solide Basis für eigene Projekte, wenn man über die üblichen Modelle hinaus will. Der Fokus auf Effizienz könnte besonders für Leute spannend sein, die Bildgenerierung in Echtzeit oder auf Geräten mit begrenzten Ressourcen brauchen.",
     "chloe_note": "Kurzes Update: *Muse Spark Open* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Meta AI open-sourced Muse Spark, providing direct access for builders. Passes Ships Test.Cluster context: 1 sources, engagement 1120. Common terms: submitted, muse, original, comments. Ich habe es mit 95 Punkten bewertet. Hier der Link: https://research.meta.ai/blog/muse-spark-open",
     "expired_at": "2026-10-18T20:31:04.925632Z"
+  },
+  {
+    "id": "5e2ccb5a6e52",
+    "status": "deferred_generation_unavailable",
+    "created_at": "2026-10-18T21:01:07.065620Z",
+    "score": 60,
+    "reason": "deferred: generation provider unavailable",
+    "proposed_post": "",
+    "source_angle": "Rule-based",
+    "source_item": {
+      "title": "vLLM v0.32.0",
+      "source": "vLLM Releases",
+      "link": "https://github.com/vllm-project/vllm/releases/tag/v0.32.0",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 60
+    },
+    "deferred_at": "2026-10-18T21:01:07.065586Z",
+    "defer_count": 1,
+    "original_score": 60,
+    "original_reason": "deferred: generation provider unavailable",
+    "card_path": null
   }
 ]
