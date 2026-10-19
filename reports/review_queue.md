@@ -6,6 +6,10 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-10-19T19:46:22.056079Z` [review] **How to continue a GitHub Copilot app session in VS Code** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-19T19:46:21.888061Z` [review] **Show HN: Qwen3-4B with the AI writing tics trained out** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-19T19:46:21.720270Z` [review] **DeepSeek V4.1 Flash 1017 (Max)** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-19T19:46:20.624748Z` [review] **vLLM v0.32.0rc3** — Boring release phrasing without concrete builder capability; Version-only release without concrete capability: 'vLLM v0.32.0rc3'
 - `2026-10-19T16:56:46.460107Z` [review] **Claude Code v2.1.303** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'Claude Code v2.1.303'
 - `2026-10-19T16:56:46.389076Z` [review] **vLLM v0.32.1rc0** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.32.1rc0'
 - `2026-10-19T16:56:43.610147Z` [review] **vLLM v0.32.0** — Version-only release without concrete capability: 'vLLM v0.32.0'
@@ -27,7 +31,3 @@ No pending review items.
 - `2026-10-15T14:53:57.893204Z` [review] **vLLM v0.32.0rc2** — Version-only release without concrete capability: 'vLLM v0.32.0rc2'
 - `2026-10-15T14:53:57.708176Z` [review] **Ollama v0.40.5-rc1** — Version-only release without concrete capability: 'Ollama v0.40.5-rc1'
 - `2026-10-14T18:28:01.396117Z` [review] **How Third Moment Research runs 10,000 agents for 36+ hours** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-14T18:28:01.233437Z` [review] **Amp puts AI agents to work beyond code with OpenAI models** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-14T18:28:01.072822Z` [review] **Ollama v0.40.4** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-14T15:01:06.750000Z` [review] **Higgsfield takes AI video from 1 minute to over 10** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-14T15:01:06.672517Z` [review] **ifixai-ai/iFixAi — Independent Auditing of AI Agents. Run by human or the agent itself, to answer the most crucial question in the AI Agent Economy. Is the agent doing what is supposed to do? With iFi** — Post is empty; Post lacks a clear claim or insight

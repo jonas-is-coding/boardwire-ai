@@ -1,44 +1,5 @@
 [
   {
-    "rejected_at": "2026-09-09T14:27:25.518698Z",
-    "stage": "review",
-    "title": "Tencent/teamai-cli — Make Every Team AI Native",
-    "link": "https://github.com/Tencent/teamai-cli",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-09T14:27:25.645703Z",
-    "stage": "review",
-    "title": "vastsa/PI-Desktop — Local-first AI coding agent desktop: Electron + Rust host core + pi Agent Harness + user-installable plugins",
-    "link": "https://github.com/vastsa/PI-Desktop",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-09T14:27:25.771487Z",
-    "stage": "review",
-    "title": "LibreOffice breaks download records after declaring it has no AI features",
-    "link": "https://manualdousuario.net/en/libreoffice-download-record-no-ai/",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-09T17:46:11.696283Z",
-    "stage": "review",
-    "title": "ChatGPT Images 2.5",
-    "link": "https://openai.com/index/introducing-chatgpt-images-2-5/",
-    "reasons": [
-      "Version-only release without concrete capability: 'ChatGPT Images 2.5'"
-    ]
-  },
-  {
     "rejected_at": "2026-09-09T17:46:11.807345Z",
     "stage": "review",
     "title": "Ollama v0.34.0-rc4",
@@ -1996,6 +1957,46 @@
       "Post is empty",
       "Post lacks a clear claim or insight",
       "Version-only release without concrete capability: 'Claude Code v2.1.303'"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-19T19:46:20.624748Z",
+    "stage": "review",
+    "title": "vLLM v0.32.0rc3",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.32.0rc3",
+    "reasons": [
+      "Boring release phrasing without concrete builder capability",
+      "Version-only release without concrete capability: 'vLLM v0.32.0rc3'"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-19T19:46:21.720270Z",
+    "stage": "review",
+    "title": "DeepSeek V4.1 Flash 1017 (Max)",
+    "link": "https://artificialanalysis.ai/models/deepseek-v4-1-flash-1017",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-19T19:46:21.888061Z",
+    "stage": "review",
+    "title": "Show HN: Qwen3-4B with the AI writing tics trained out",
+    "link": "https://100toolkit.com/blog/deslop-model/",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-19T19:46:22.056079Z",
+    "stage": "review",
+    "title": "How to continue a GitHub Copilot app session in VS Code",
+    "link": "https://github.blog/ai-and-ml/github-copilot/how-to-continue-a-github-copilot-app-session-in-vs-code/",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
     ]
   }
 ]
