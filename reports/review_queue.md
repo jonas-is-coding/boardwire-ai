@@ -6,6 +6,9 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-10-19T16:56:46.460107Z` [review] **Claude Code v2.1.303** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'Claude Code v2.1.303'
+- `2026-10-19T16:56:46.389076Z` [review] **vLLM v0.32.1rc0** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.32.1rc0'
+- `2026-10-19T16:56:43.610147Z` [review] **vLLM v0.32.0** — Version-only release without concrete capability: 'vLLM v0.32.0'
 - `2026-10-18T21:01:11.537628Z` [review] **LangChain v1.6.12** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.6.12'
 - `2026-10-18T21:01:11.388519Z` [review] **DeepSeek search and fetch – $0.75 per 1000 successful requests** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-18T21:01:11.241631Z` [review] **Claude Code v2.1.302** — Post is empty; Post lacks a clear claim or insight
@@ -28,6 +31,3 @@ No pending review items.
 - `2026-10-14T18:28:01.072822Z` [review] **Ollama v0.40.4** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-14T15:01:06.750000Z` [review] **Higgsfield takes AI video from 1 minute to over 10** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-14T15:01:06.672517Z` [review] **ifixai-ai/iFixAi — Independent Auditing of AI Agents. Run by human or the agent itself, to answer the most crucial question in the AI Agent Economy. Is the agent doing what is supposed to do? With iFi** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-13T20:10:21.478227Z` [review] **Run fast, private agents on-device with LFM2.5-24B-A2B** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-13T20:10:21.319778Z` [review] **vLLM v0.32.0rc0** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.32.0rc0'
-- `2026-10-13T20:10:21.158154Z` [review] **LangChain v1.6.10** — Version-only release without concrete capability: 'LangChain v1.6.10'

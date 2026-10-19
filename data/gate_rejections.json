@@ -1,32 +1,5 @@
 [
   {
-    "rejected_at": "2026-09-08T18:02:08.705114Z",
-    "stage": "publish",
-    "title": "LangChain v1.4.0",
-    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.4.0",
-    "reasons": [
-      "Release dedupe: LangChain v1.4.0 already published at 2026-08-31T00:17:39.850752Z"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-09T14:27:24.118042Z",
-    "stage": "review",
-    "title": "Ollama v0.34.0",
-    "link": "https://github.com/ollama/ollama/releases/tag/v0.34.0-rc3",
-    "reasons": [
-      "Version-only release without concrete capability: 'Ollama v0.34.0'"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-09T14:27:24.849072Z",
-    "stage": "review",
-    "title": "Introducing ChatGPT Images 2.5",
-    "link": "https://openai.com/index/introducing-chatgpt-images-2-5",
-    "reasons": [
-      "Version-only release without concrete capability: 'Introducing ChatGPT Images 2.5'"
-    ]
-  },
-  {
     "rejected_at": "2026-09-09T14:27:25.518698Z",
     "stage": "review",
     "title": "Tencent/teamai-cli — Make Every Team AI Native",
@@ -1992,6 +1965,37 @@
       "Post is empty",
       "Post lacks a clear claim or insight",
       "Version-only release without concrete capability: 'LangChain v1.6.12'"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-19T16:56:43.610147Z",
+    "stage": "review",
+    "title": "vLLM v0.32.0",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.32.0",
+    "reasons": [
+      "Version-only release without concrete capability: 'vLLM v0.32.0'"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-19T16:56:46.389076Z",
+    "stage": "review",
+    "title": "vLLM v0.32.1rc0",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.32.1rc0",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight",
+      "Version-only release without concrete capability: 'vLLM v0.32.1rc0'"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-19T16:56:46.460107Z",
+    "stage": "review",
+    "title": "Claude Code v2.1.303",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.303",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight",
+      "Version-only release without concrete capability: 'Claude Code v2.1.303'"
     ]
   }
 ]
