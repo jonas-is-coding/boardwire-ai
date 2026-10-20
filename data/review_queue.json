@@ -15688,7 +15688,7 @@
   },
   {
     "id": "5cf03cbf231a",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-10-19T19:46:09.507041Z",
     "score": 90,
     "reason": "New server version released with clear upgrade path and spec support. Directly actionable for builders.",
@@ -15728,16 +15728,17 @@
     "deferred_at": "2026-10-19T19:46:21.373596Z",
     "defer_count": 1,
     "original_score": 90,
-    "original_reason": "New server version released with clear upgrade path and spec support. Directly actionable for builders."
+    "original_reason": "New server version released with clear upgrade path and spec support. Directly actionable for builders.",
+    "rejected_at": "2026-10-20T14:58:01.476019Z"
   },
   {
     "id": "1fc1f84f57a4",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-10-19T19:46:15.708178Z",
+    "status": "approved",
+    "created_at": "2026-10-20T14:58:01.554735Z",
     "score": 90,
-    "reason": "New tool/integration (TorchNeuron) for AWS Trainium, directly impacts builder efficiency for training HF models.",
-    "proposed_post": "TorchNeuron simplifies running Hugging Face models on AWS Trainium. Builders can now more easily leverage AWS's custom training hardware for potential cost or performance gains.",
-    "source_angle": "AWS Trainium integration for Hugging Face models",
+    "reason": "New tool (TorchNeuron) released by Hugging Face simplifies running HF models on AWS Trainium, directly impacting builder efficiency.",
+    "proposed_post": "Hugging Face released TorchNeuron, a new tool for AWS Trainium. This simplifies running HF models on Trainium, directly improving training efficiency for builders.",
+    "source_angle": "Hugging Face releases TorchNeuron for AWS Trainium, boosting training efficiency.",
     "source_item": {
       "title": "TorchNeuron: running HF models on AWS Trainium is easier than ever",
       "source": "Hugging Face Blog",
@@ -15767,10 +15768,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-10-19T19:46:21.555363Z",
-    "defer_count": 1,
-    "original_score": 90,
-    "original_reason": "New tool/integration (TorchNeuron) for AWS Trainium, directly impacts builder efficiency for training HF models."
+    "breaking": false,
+    "reactivated_at": "2026-10-20T14:58:01.554735Z"
   },
   {
     "id": "21c2d0d33b29",
@@ -15817,5 +15816,92 @@
     "breaking": false,
     "claire_note": "Chloe, check this out: Ollama v0.40.6-rc1.\n\nDas Proxy-Verhalten ist hier spannend. Wenn du hinter einem Proxy sitzt, leitet Ollama jetzt DNS-Anfragen für Redirect-Ziele direkt an den Proxy weiter. Ohne Proxy bleibt der bisherige Resolve-and-Pin-Pfad bestehen. Das ist ein klares Plus für Leute, die Ollama in komplexeren Netzwerkumgebungen betreiben und mehr Kontrolle über DNS-Auflösung brauchen, oder eben auch nicht. Fixes für den nil CancelFunc Crash sind auch immer gut für Stabilität.",
     "chloe_note": "Hey, *Ollama v0.40.6-rc1* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Ollama v0.40.6-rc1 is a direct release with concrete network and stability improvements for local LLM deployment.Cluster context: 1 sources, engagement 0. Common terms: ollama, without, trust, blobdownload.release. Score aktuell: 90. Link: https://github.com/ollama/ollama/releases/tag/v0.40.6-rc1"
+  },
+  {
+    "id": "c84913605794",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-10-20T14:57:56.584656Z",
+    "score": 90,
+    "reason": "Open-source tool launch with clear utility for model testing and safety exploration. Strong community signal.",
+    "proposed_post": "YuJunZhiXue/dsh-purge is an open-source tool for jailbreaking AI models, supporting per-model prompt customization. Builders can use it to test model robustness or explore safety limitations in custom deployments.",
+    "source_angle": "Open-source jailbreak tool for model robustness testing.",
+    "source_item": {
+      "title": "YuJunZhiXue/dsh-purge — DeepSeek Harness 破甲：让所有模型都能破甲，不同模型可换不同提示词；默认提示词面向国模「小码酱」。Jailbreak for every model — swap prompts per model. 求 Star 收藏 ⭐ 如要二开，请查看署名要求部分",
+      "source": "GitHub Trending",
+      "link": "https://github.com/YuJunZhiXue/dsh-purge",
+      "source_tier": 2,
+      "engagement_score": 1168.0,
+      "local_newsworthiness_score": 0,
+      "summary": "Trending on GitHub today: +1168 stars. DeepSeek Harness 破甲：让所有模型都能破甲，不同模型可换不同提示词；默认提示词面向国模「小码酱」。Jailbreak for every model — swap prompts per model. 求 Star 收藏 ⭐ 如要二开，请查看署名要求部分\n[Cluster context: 1 sources, engagement 1168, common terms: model., per, star, harness, +1168.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 1168,
+        "common_terms": [
+          "model.",
+          "per",
+          "star",
+          "harness",
+          "+1168",
+          "github",
+          "prompts",
+          "every"
+        ],
+        "cluster_summary": "1 sources, engagement 1168. Common terms: model., per, star, harness. Lead: YuJunZhiXue/dsh-purge — DeepSeek Harness 破甲：让所有模型都能破甲，不同模型可换不同提示词；默认提示词面向国模「小码酱」。Jailbreak for every model — swap prompt",
+        "alternative_titles": [],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-10-20T14:58:03.097010Z",
+    "defer_count": 1,
+    "original_score": 90,
+    "original_reason": "Open-source tool launch with clear utility for model testing and safety exploration. Strong community signal."
+  },
+  {
+    "id": "d7a06e09b0f1",
+    "status": "approved",
+    "created_at": "2026-10-20T14:57:49.205145Z",
+    "score": 95,
+    "reason": "DeepSeek open-sourced its inference engine, DeepInfer, a direct tool for builders to optimize model deployment.",
+    "proposed_post": "DeepSeek open-sourced DeepInfer, its inference engine. Builders can now leverage DeepSeek's optimized engine for faster, cheaper inference, improving deployment efficiency for compatible models.",
+    "source_angle": "DeepSeek's open-source inference engine launch via Hacker News.",
+    "source_item": {
+      "title": "DeepSeek just open-sourced its inference engine",
+      "source": "HackerNews",
+      "link": "https://github.com/deepseek-ai/DeepInfer",
+      "source_tier": 3,
+      "engagement_score": 1557.0,
+      "local_newsworthiness_score": 100,
+      "summary": "1326 points, 462 comments on Hacker News — submitted by ggcr — original: https://github.com/deepseek-ai/DeepInfer\n[Cluster context: 1 sources, engagement 1557, common terms: submitted, its, open-sourced, original, comments.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 1557,
+        "common_terms": [
+          "submitted",
+          "its",
+          "open-sourced",
+          "original",
+          "comments",
+          "hacker",
+          "engine",
+          "462"
+        ],
+        "cluster_summary": "1 sources, engagement 1557. Common terms: submitted, its, open-sourced, original. Lead: DeepSeek just open-sourced its inference engine",
+        "alternative_titles": [],
+        "cluster_score": 40
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": true,
+    "claire_note": "Chloe, check this out. DeepSeek hat gerade seinen Inference Engine Open Source gestellt.\n\nDas ist groß, weil es Entwicklern ermöglicht, die DeepSeek-Modelle lokal und effizienter auszuführen. Das bedeutet mehr Kontrolle über die Performance und potentiell niedrigere Kosten für alle, die generative KI-Anwendungen bauen wollen. Die 462 Kommentare auf HN zeigen, dass das Thema Resonanz findet.",
+    "chloe_note": "Hey, *DeepSeek just open-sourced its inference engine* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen DeepSeek open-sourced its inference engine, DeepInfer, a direct tool for builders to optimize model deployment.Cluster context: 1 sources, engagement 1557. Common terms: submitted, its, open-sourced, original. Score aktuell: 95. Link: https://github.com/deepseek-ai/DeepInfer"
   }
 ]

@@ -6,6 +6,10 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-10-20T14:58:03.308249Z` [review] **sickn33/agentic-awesome-skills — AAS Core is the local, agent-first control plane for complete catalog discovery, agent-owned selection, stack validation, and planning, backed by 2,600+ agentic skills** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-20T14:58:03.239431Z` [review] **vllm-project/vllm — A high-throughput and memory-efficient inference and serving engine for LLMs** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-20T14:58:03.169064Z` [review] **Claude Code v2.1.304** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-20T14:58:01.474838Z` [review] **Servers v2.0.0** — Version-only release without concrete capability: 'Servers v2.0.0'
 - `2026-10-19T19:46:22.056079Z` [review] **How to continue a GitHub Copilot app session in VS Code** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-19T19:46:21.888061Z` [review] **Show HN: Qwen3-4B with the AI writing tics trained out** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-19T19:46:21.720270Z` [review] **DeepSeek V4.1 Flash 1017 (Max)** — Post is empty; Post lacks a clear claim or insight
@@ -27,7 +31,3 @@ No pending review items.
 - `2026-10-15T18:10:35.108973Z` [review] **Krea 3 – An image model built for editing at scale** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-15T14:53:58.939101Z` [review] **lightseekorg/tokenspeed — TokenSpeed is a speed-of-light LLM inference engine.** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-15T14:53:58.773719Z` [review] **Hugging Face Blog v1.5** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'Hugging Face Blog v1.5'
-- `2026-10-15T14:53:58.610533Z` [review] **LFM2.5-24B-A2B: Built for fast on-device agents** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-15T14:53:57.893204Z` [review] **vLLM v0.32.0rc2** — Version-only release without concrete capability: 'vLLM v0.32.0rc2'
-- `2026-10-15T14:53:57.708176Z` [review] **Ollama v0.40.5-rc1** — Version-only release without concrete capability: 'Ollama v0.40.5-rc1'
-- `2026-10-14T18:28:01.396117Z` [review] **How Third Moment Research runs 10,000 agents for 36+ hours** — Post is empty; Post lacks a clear claim or insight
