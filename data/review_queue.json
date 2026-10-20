@@ -15451,7 +15451,7 @@
   },
   {
     "id": "f3c0b13b4c15",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-18T21:01:10.946426Z",
     "score": 90,
     "reason": "New SDK version with concrete API parameters for speed, tool use, and cost management. Directly actionable for builders.",
@@ -15489,11 +15489,12 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": false,
-    "reactivated_at": "2026-10-18T21:01:10.946426Z"
+    "reactivated_at": "2026-10-18T21:01:10.946426Z",
+    "expired_at": "2026-10-20T22:14:52.232121Z"
   },
   {
     "id": "3d02909d42fe",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-18T21:01:10.776119Z",
     "score": 90,
     "reason": "Direct release of Claude Code v2.1.301 with concrete features for API reliability, observability, and terminal interaction. Passes Ships Test.",
@@ -15531,7 +15532,8 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": false,
-    "reactivated_at": "2026-10-18T21:01:10.776119Z"
+    "reactivated_at": "2026-10-18T21:01:10.776119Z",
+    "expired_at": "2026-10-20T22:14:52.232121Z"
   },
   {
     "id": "c6cd38844b1b",
