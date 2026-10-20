@@ -1,45 +1,5 @@
 [
   {
-    "rejected_at": "2026-09-10T14:18:53.874492Z",
-    "stage": "review",
-    "title": "vercel-labs/skills — The open agent skills tool - npx skills",
-    "link": "https://github.com/vercel-labs/skills",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-10T14:18:53.963847Z",
-    "stage": "review",
-    "title": "Ollama v0.34.0",
-    "link": "https://github.com/ollama/ollama/releases/tag/v0.34.0",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-10T14:18:54.053298Z",
-    "stage": "review",
-    "title": "Claude Code v2.1.267",
-    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.267",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-10T17:38:46.356628Z",
-    "stage": "review",
-    "title": "Cognition launches new SWE-2 model, Rivaling Fable 5.1 and GPT-Astra",
-    "link": "https://cognition.com/blog/swe-2",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
     "rejected_at": "2026-09-10T17:38:46.447859Z",
     "stage": "review",
     "title": "nashsu/llm_wiki — LLM Wiki is a cross-platform desktop application that turns your documents into an organized, interlinked knowledge base — automatically. Instead of traditional RAG (retrieve-and-ans",
@@ -1995,6 +1955,45 @@
     "stage": "review",
     "title": "sickn33/agentic-awesome-skills — AAS Core is the local, agent-first control plane for complete catalog discovery, agent-owned selection, stack validation, and planning, backed by 2,600+ agentic skills",
     "link": "https://github.com/sickn33/agentic-awesome-skills",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-20T18:26:30.161911Z",
+    "stage": "review",
+    "title": "Ollama v0.40.4-rc2",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.40.4-rc2",
+    "reasons": [
+      "Version-only release without concrete capability: 'Ollama v0.40.4-rc2'"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-20T18:26:30.232496Z",
+    "stage": "review",
+    "title": "Latest open artifacts (#25): DeepSeek V4.1 Flash 1017, American-made models, and new regulatory controls in the US & China",
+    "link": "https://www.interconnects.ai/p/latest-open-artifacts-25-deepseek",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-20T18:26:30.306280Z",
+    "stage": "review",
+    "title": "Launch HN: Laminar (YC S24) – RL-trained model that finds errors in agent traces",
+    "link": "https://news.ycombinator.com/item?id=50154029",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-20T18:26:30.378294Z",
+    "stage": "review",
+    "title": "Meta shakes up the frontiers, open and closed",
+    "link": "https://www.interconnects.ai/p/meta-shakes-up-the-frontiers-open",
     "reasons": [
       "Post is empty",
       "Post lacks a clear claim or insight"

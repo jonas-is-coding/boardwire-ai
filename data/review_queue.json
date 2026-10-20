@@ -15819,12 +15819,12 @@
   },
   {
     "id": "c84913605794",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-10-20T14:57:56.584656Z",
-    "score": 90,
-    "reason": "Open-source tool launch with clear utility for model testing and safety exploration. Strong community signal.",
-    "proposed_post": "YuJunZhiXue/dsh-purge is an open-source tool for jailbreaking AI models, supporting per-model prompt customization. Builders can use it to test model robustness or explore safety limitations in custom deployments.",
-    "source_angle": "Open-source jailbreak tool for model robustness testing.",
+    "status": "approved",
+    "created_at": "2026-10-20T18:26:29.910973Z",
+    "score": 92,
+    "reason": "Open-source tool for LLM red-teaming and safety testing. Ships today with strong community signal.",
+    "proposed_post": "YuJunZhiXue/dsh-purge, an open-source tool, enables jailbreaking various LLMs with customizable prompts. Use it for red-teaming your models, testing safety guardrails, or exploring model vulnerabilities.",
+    "source_angle": "Open-source LLM jailbreak tool for red-teaming",
     "source_item": {
       "title": "YuJunZhiXue/dsh-purge — DeepSeek Harness 破甲：让所有模型都能破甲，不同模型可换不同提示词；默认提示词面向国模「小码酱」。Jailbreak for every model — swap prompts per model. 求 Star 收藏 ⭐ 如要二开，请查看署名要求部分",
       "source": "GitHub Trending",
@@ -15856,10 +15856,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-10-20T14:58:03.097010Z",
-    "defer_count": 1,
-    "original_score": 90,
-    "original_reason": "Open-source tool launch with clear utility for model testing and safety exploration. Strong community signal."
+    "breaking": true,
+    "reactivated_at": "2026-10-20T18:26:29.910973Z"
   },
   {
     "id": "d7a06e09b0f1",
@@ -15903,5 +15901,93 @@
     "breaking": true,
     "claire_note": "Chloe, check this out. DeepSeek hat gerade seinen Inference Engine Open Source gestellt.\n\nDas ist groß, weil es Entwicklern ermöglicht, die DeepSeek-Modelle lokal und effizienter auszuführen. Das bedeutet mehr Kontrolle über die Performance und potentiell niedrigere Kosten für alle, die generative KI-Anwendungen bauen wollen. Die 462 Kommentare auf HN zeigen, dass das Thema Resonanz findet.",
     "chloe_note": "Hey, *DeepSeek just open-sourced its inference engine* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen DeepSeek open-sourced its inference engine, DeepInfer, a direct tool for builders to optimize model deployment.Cluster context: 1 sources, engagement 1557. Common terms: submitted, its, open-sourced, original. Score aktuell: 95. Link: https://github.com/deepseek-ai/DeepInfer"
+  },
+  {
+    "id": "92f2ff8958e0",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-10-20T18:26:11.042916Z",
+    "score": 90,
+    "reason": "Anthropic Python SDK v1.16.0 released with User Profiles generally available and updated Google Cloud integration. Ships today.",
+    "proposed_post": "Anthropic Python SDK v1.16.0 ships, making User Profiles generally available. Builders can now integrate user-specific data and management more robustly into Anthropic-powered applications.",
+    "source_angle": "Anthropic SDK update with GA User Profiles and GCP v1 endpoints",
+    "source_item": {
+      "title": "Anthropic Python SDK v1.16.0",
+      "source": "Anthropic Python SDK Releases",
+      "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.16.0",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 65,
+      "summary": "<h3>Features</h3>\n<ul>\n<li><strong>api:</strong> add data_refreshed_at and has_more to analytics report pages</li>\n<li><strong>api:</strong> add workspace rate-limit updates to the Admin API</li>\n<li><strong>api:</strong> make User Profiles generally available</li>\n<li><strong>client:</strong> yield server-sent events with unrecognized event names</li>\n<li><strong>google-cloud:</strong> use the v1 endpoints and add the organization endpoint</li>\n</ul>\n<h3>Chores</h3>\n<ul>\n<li><strong>ci:</strong> skip the changelog check on draft pull requests</li>\n<li><strong>docs:</strong> add credential expiry descriptions to the Managed Agents API reference</li>\n<li><strong>docs:</strong> add Messages API request descriptions</li>\n<li><strong>docs:</strong> correct plugin manifest_version and reach descriptions</li>\n<li><strong>docs:</strong> improve Managed Agents memory store descriptions</li>\n<li><strong>docs:</strong> improve Managed Agents vault and credential descriptions</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: request, user, available, strong, admin.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Anthropic Python SDK Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "request",
+          "user",
+          "available",
+          "strong",
+          "admin",
+          "plugin",
+          "changelog",
+          "correct"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: request, user, available, strong. Lead: Anthropic Python SDK v1.16.0",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-10-20T18:26:29.993168Z",
+    "defer_count": 1,
+    "original_score": 90,
+    "original_reason": "Anthropic Python SDK v1.16.0 released with User Profiles generally available and updated Google Cloud integration. Ships today."
+  },
+  {
+    "id": "52f3956df28f",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-10-20T18:26:17.286630Z",
+    "score": 90,
+    "reason": "Open-source tool launch (GitHub repo) enabling native PyTorch on TPUs. Clear utility for PyTorch developers.",
+    "proposed_post": "Google open-sourced TorchTPU, a native PyTorch backend for TPUs. PyTorch developers can now directly target TPUs for model training/inference, potentially reducing costs or improving speed on Google Cloud.",
+    "source_angle": "Google open-sources PyTorch backend for TPUs",
+    "source_item": {
+      "title": "Google open-sources TorchTPU, a native PyTorch back end for TPUs",
+      "source": "HackerNews",
+      "link": "https://github.com/google-pytorch/torch_tpu",
+      "source_tier": 3,
+      "engagement_score": 92.0,
+      "local_newsworthiness_score": 30,
+      "summary": "80 points, 24 comments on Hacker News — submitted by ilreb — original: https://github.com/google-pytorch/torch_tpu\n[Cluster context: 1 sources, engagement 92, common terms: back, submitted, native, original, end.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 92,
+        "common_terms": [
+          "back",
+          "submitted",
+          "native",
+          "original",
+          "end",
+          "hacker",
+          "torchtpu",
+          "tpus"
+        ],
+        "cluster_summary": "1 sources, engagement 92. Common terms: back, submitted, native, original. Lead: Google open-sources TorchTPU, a native PyTorch back end for TPUs",
+        "alternative_titles": [],
+        "cluster_score": 20
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-10-20T18:26:30.076958Z",
+    "defer_count": 1,
+    "original_score": 90,
+    "original_reason": "Open-source tool launch (GitHub repo) enabling native PyTorch on TPUs. Clear utility for PyTorch developers."
   }
 ]

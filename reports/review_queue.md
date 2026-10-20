@@ -6,6 +6,10 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-10-20T18:26:30.378294Z` [review] **Meta shakes up the frontiers, open and closed** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-20T18:26:30.306280Z` [review] **Launch HN: Laminar (YC S24) – RL-trained model that finds errors in agent traces** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-20T18:26:30.232496Z` [review] **Latest open artifacts (#25): DeepSeek V4.1 Flash 1017, American-made models, and new regulatory controls in the US & China** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-20T18:26:30.161911Z` [review] **Ollama v0.40.4-rc2** — Version-only release without concrete capability: 'Ollama v0.40.4-rc2'
 - `2026-10-20T14:58:03.308249Z` [review] **sickn33/agentic-awesome-skills — AAS Core is the local, agent-first control plane for complete catalog discovery, agent-owned selection, stack validation, and planning, backed by 2,600+ agentic skills** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-20T14:58:03.239431Z` [review] **vllm-project/vllm — A high-throughput and memory-efficient inference and serving engine for LLMs** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-20T14:58:03.169064Z` [review] **Claude Code v2.1.304** — Post is empty; Post lacks a clear claim or insight
@@ -27,7 +31,3 @@ No pending review items.
 - `2026-10-16T17:56:07.891148Z` [review] **Ollama v0.40.5-rc0** — Version-only release without concrete capability: 'Ollama v0.40.5-rc0'
 - `2026-10-16T14:45:43.159299Z` [review] **vLLM v0.32.0rc1** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.32.0rc1'
 - `2026-10-16T14:45:43.072726Z` [review] **LangChain v1.6.11** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.6.11'
-- `2026-10-16T14:45:42.987289Z` [review] **Ollama v0.40.5** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'Ollama v0.40.5'
-- `2026-10-15T18:10:35.108973Z` [review] **Krea 3 – An image model built for editing at scale** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-15T14:53:58.939101Z` [review] **lightseekorg/tokenspeed — TokenSpeed is a speed-of-light LLM inference engine.** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-15T14:53:58.773719Z` [review] **Hugging Face Blog v1.5** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'Hugging Face Blog v1.5'
