@@ -1672,6 +1672,47 @@
         "follows @dorialexander.bsky.social"
       ],
       "followed_at": "2026-10-19T14:59:08.147616Z"
+    },
+    "did:plc:jstsvmu43snjnnbmsn4xbwxs": {
+      "handle": "uuidforme.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mycotlvbc62f",
+      "channel": "seed_followers",
+      "score": 3.0,
+      "mode": "discover",
+      "via": [
+        "follows @simonwillison.net",
+        "follows @natolambert.bsky.social",
+        "follows @hamel.bsky.social",
+        "follows @emollick.bsky.social",
+        "follows @ai2.bsky.social"
+      ],
+      "followed_at": "2026-10-20T12:59:23.657498Z"
+    },
+    "did:plc:hbwoif3ag744lk2rohyn4rsw": {
+      "handle": "rocksanen.org",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mycourwukz2t",
+      "channel": "seed_followers",
+      "score": 2.5,
+      "mode": "discover",
+      "via": [
+        "follows @simonwillison.net",
+        "follows @natolambert.bsky.social",
+        "follows @emollick.bsky.social",
+        "follows @ai2.bsky.social"
+      ],
+      "followed_at": "2026-10-20T13:00:03.554760Z"
+    },
+    "did:plc:xswr2t4d2fib2pyekexsfy23": {
+      "handle": "aishortcut42.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3mycovnbozv2r",
+      "channel": "seed_followers",
+      "score": 1.5,
+      "mode": "discover",
+      "via": [
+        "follows @natolambert.bsky.social",
+        "follows @hamel.bsky.social"
+      ],
+      "followed_at": "2026-10-20T13:00:32.227798Z"
     }
   },
   "runs": [
@@ -2205,6 +2246,23 @@
       ],
       "started_at": "2026-10-19T14:59:07.874998Z",
       "finished_at": "2026-10-19T14:59:08.149874Z"
+    },
+    {
+      "mode": "discover",
+      "dry_run": false,
+      "limit": 12,
+      "planned": 0,
+      "followed": 3,
+      "skipped_already": 0,
+      "failed": 0,
+      "aborted": null,
+      "handles": [
+        "uuidforme.bsky.social",
+        "rocksanen.org",
+        "aishortcut42.bsky.social"
+      ],
+      "started_at": "2026-10-20T12:59:23.455280Z",
+      "finished_at": "2026-10-20T13:00:32.230410Z"
     }
   ],
   "pinned_thread": {
