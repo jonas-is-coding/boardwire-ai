@@ -15604,7 +15604,7 @@
   },
   {
     "id": "cfb7743a7b1a",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-19T16:56:22.751975Z",
     "score": 95,
     "reason": "Mistral released new time-series models. Ships today, direct from source, high builder relevance.",
@@ -15643,11 +15643,12 @@
     "is_llm_mode": true,
     "breaking": true,
     "claire_note": "Chloe, das ist ein Volltreffer. Mistral hat Timestral rausgebracht – ihre Foundation Models für Zeitreihen. Das ist riesig, weil es Entwicklern endlich ermöglicht, komplexe Zeitreihendaten mit State-of-the-Art-LLMs zu verarbeiten, ohne alles von Grund auf neu trainieren zu müssen. Stell dir vor, du kannst jetzt viel einfacher Prognosen, Anomalieerkennung oder multivariate Analysen in deine Apps einbauen.",
-    "chloe_note": "Dieser Fund besteht den Ships Test klar. Mistral bietet direkt nutzbare Foundation Models an, die Entwickler sofort in ihre Zeitreihen-Anwendungen integrieren können. Das ist ein direkter Download und Deploy, der einen signifikanten Mehrwert für Builder liefert."
+    "chloe_note": "Dieser Fund besteht den Ships Test klar. Mistral bietet direkt nutzbare Foundation Models an, die Entwickler sofort in ihre Zeitreihen-Anwendungen integrieren können. Das ist ein direkter Download und Deploy, der einen signifikanten Mehrwert für Builder liefert.",
+    "expired_at": "2026-10-21T19:12:06.073383Z"
   },
   {
     "id": "804b61cdf379",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-19T16:56:30.219597Z",
     "score": 90,
     "reason": "New open-source tool ships today, offers concrete token cost savings (20-95%) for LLM inputs like logs, RAG, JSON.",
@@ -15686,7 +15687,8 @@
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das ist ein direkter Hit für jeden, der mit LLM-Kosten kämpft. 'headroomlabs-ai/headroom' verspricht massive Token-Einsparungen, besonders bei JSON und Coding Agents, ohne die Antwortqualität zu beeinträchtigen.\n\nEin Dev kann das sofort als Library, Proxy oder MCP Server einbinden, um die Betriebskosten zu senken und die Performance zu verbessern, besonders bei intensiven RAG-Anwendungen oder Agenten-Workflows. Das ist ein praktisches Tool mit sofortigem ROI.",
-    "chloe_note": "Das besteht den Ships Test. Es gibt hier eine klare Möglichkeit für Devs, \"headroom\" als Library, Proxy oder MCP Server zu implementieren und damit direkt Kosten zu sparen. Der Fokus auf konkrete Anwendungsfälle wie JSON und Coding Agents unterstreicht den praktischen Nutzen."
+    "chloe_note": "Das besteht den Ships Test. Es gibt hier eine klare Möglichkeit für Devs, \"headroom\" als Library, Proxy oder MCP Server zu implementieren und damit direkt Kosten zu sparen. Der Fokus auf konkrete Anwendungsfälle wie JSON und Coding Agents unterstreicht den praktischen Nutzen.",
+    "expired_at": "2026-10-21T19:12:06.073383Z"
   },
   {
     "id": "5cf03cbf231a",
