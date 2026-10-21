@@ -15777,7 +15777,7 @@
   },
   {
     "id": "21c2d0d33b29",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-19T19:46:01.909519Z",
     "score": 90,
     "reason": "Ollama v0.40.6-rc1 is a direct release with concrete network and stability improvements for local LLM deployment.",
@@ -15819,7 +15819,8 @@
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, check this out: Ollama v0.40.6-rc1.\n\nDas Proxy-Verhalten ist hier spannend. Wenn du hinter einem Proxy sitzt, leitet Ollama jetzt DNS-Anfragen für Redirect-Ziele direkt an den Proxy weiter. Ohne Proxy bleibt der bisherige Resolve-and-Pin-Pfad bestehen. Das ist ein klares Plus für Leute, die Ollama in komplexeren Netzwerkumgebungen betreiben und mehr Kontrolle über DNS-Auflösung brauchen, oder eben auch nicht. Fixes für den nil CancelFunc Crash sind auch immer gut für Stabilität.",
-    "chloe_note": "Hey, *Ollama v0.40.6-rc1* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Ollama v0.40.6-rc1 is a direct release with concrete network and stability improvements for local LLM deployment.Cluster context: 1 sources, engagement 0. Common terms: ollama, without, trust, blobdownload.release. Score aktuell: 90. Link: https://github.com/ollama/ollama/releases/tag/v0.40.6-rc1"
+    "chloe_note": "Hey, *Ollama v0.40.6-rc1* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Ollama v0.40.6-rc1 is a direct release with concrete network and stability improvements for local LLM deployment.Cluster context: 1 sources, engagement 0. Common terms: ollama, without, trust, blobdownload.release. Score aktuell: 90. Link: https://github.com/ollama/ollama/releases/tag/v0.40.6-rc1",
+    "expired_at": "2026-10-21T22:37:59.030652Z"
   },
   {
     "id": "c84913605794",
