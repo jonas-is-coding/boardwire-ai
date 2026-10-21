@@ -1,35 +1,5 @@
 [
   {
-    "rejected_at": "2026-09-10T17:38:46.447859Z",
-    "stage": "review",
-    "title": "nashsu/llm_wiki — LLM Wiki is a cross-platform desktop application that turns your documents into an organized, interlinked knowledge base — automatically. Instead of traditional RAG (retrieve-and-ans",
-    "link": "https://github.com/nashsu/llm_wiki",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-10T17:38:46.538427Z",
-    "stage": "review",
-    "title": "armory3d/armorpaint — Graphics Creation Tools",
-    "link": "https://github.com/armory3d/armorpaint",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-11T14:19:45.885087Z",
-    "stage": "review",
-    "title": "Anthropic Python SDK v1.5.0",
-    "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.5.0",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
     "rejected_at": "2026-09-11T14:19:45.981173Z",
     "stage": "review",
     "title": "GPT‑Live‑1 in the API",
@@ -1994,6 +1964,36 @@
     "stage": "review",
     "title": "Meta shakes up the frontiers, open and closed",
     "link": "https://www.interconnects.ai/p/meta-shakes-up-the-frontiers-open",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-21T15:05:32.818503Z",
+    "stage": "review",
+    "title": "Claude Code v2.1.306",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.306",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-21T15:05:32.890707Z",
+    "stage": "review",
+    "title": "Launch HN: Respan (YC W24) – Open-source Rust AI gateway built around plugins",
+    "link": "https://news.ycombinator.com/item?id=50167583",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-21T15:05:32.965777Z",
+    "stage": "review",
+    "title": "OpenAI models are coming to Google Cloud",
+    "link": "https://openai.com/index/openai-models-google-cloud",
     "reasons": [
       "Post is empty",
       "Post lacks a clear claim or insight"
