@@ -6,6 +6,7 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-10-21T18:32:26.972434Z` [review] **How Specializing the Vocabulary of SLMs Can Cut Inference Cost by 77% in Real Applications** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-21T15:05:32.965777Z` [review] **OpenAI models are coming to Google Cloud** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-21T15:05:32.890707Z` [review] **Launch HN: Respan (YC W24) – Open-source Rust AI gateway built around plugins** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-21T15:05:32.818503Z` [review] **Claude Code v2.1.306** — Post is empty; Post lacks a clear claim or insight
@@ -30,4 +31,3 @@ No pending review items.
 - `2026-10-18T21:01:11.093924Z` [review] **DeepSeek-v4.1-Flash-1017** — Version-only release without concrete capability: 'DeepSeek-v4.1-Flash-1017'
 - `2026-10-16T17:56:08.554384Z` [review] **Apple ML Research: Muse Spark Open with MLX on Mac Studio** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-16T17:56:08.479909Z` [review] **Bringing GPT-Rosalind to academic research labs** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-16T17:56:08.406155Z` [review] **Scaling Indic Pretraining: 2.8 Trillion Tokens and an Open Data Generation Pipeline** — Post is empty; Post lacks a clear claim or insight

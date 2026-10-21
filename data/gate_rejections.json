@@ -1,15 +1,5 @@
 [
   {
-    "rejected_at": "2026-09-11T14:19:45.981173Z",
-    "stage": "review",
-    "title": "GPT‑Live‑1 in the API",
-    "link": "https://openai.com/index/introducing-gpt-live-1-in-the-api/",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
     "rejected_at": "2026-09-11T14:19:46.073655Z",
     "stage": "review",
     "title": "Claude Code v2.1.268",
@@ -1994,6 +1984,16 @@
     "stage": "review",
     "title": "OpenAI models are coming to Google Cloud",
     "link": "https://openai.com/index/openai-models-google-cloud",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-21T18:32:26.972434Z",
+    "stage": "review",
+    "title": "How Specializing the Vocabulary of SLMs Can Cut Inference Cost by 77% in Real Applications",
+    "link": "https://huggingface.co/blog/Dharma-AI/vocabx-vocabulary-specialization",
     "reasons": [
       "Post is empty",
       "Post lacks a clear claim or insight"

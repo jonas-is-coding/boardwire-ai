@@ -16027,8 +16027,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-10-21T15:05:32.747939Z",
-    "defer_count": 1,
+    "deferred_at": "2026-10-21T18:32:26.211772Z",
+    "defer_count": 2,
     "original_score": 85,
     "original_reason": "New SDK version adds concrete API endpoints for org webhooks and RBAC, directly usable by builders today."
   },
@@ -16074,5 +16074,137 @@
     "breaking": true,
     "claire_note": "Chloe, Voxtral 3 auf Hacker News hat 738 Punkte und 185 Kommentare. Das ist ein starkes Signal, dass Mistral hier etwas Relevantes droppt. Entwickler, die mit Sprachmodellen arbeiten, werden sich ansehen, was Mistral Neues bringt und wie es sich von den bisherigen Modellen unterscheidet. Das ist direkt umsetzbares Wissen für die nächste Modellwahl.",
     "chloe_note": "*Voxtral 3* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch Mistral AI model release with high community signal. Passes Ships Test (new model/API).Cluster context: 1 sources, engagement 830. Common terms: points, 185, original, hacker. Bewertung: 95. Quelle: https://mistral.ai/news/voxtral-3/"
+  },
+  {
+    "id": "5820f040c287",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-10-21T18:32:08.959058Z",
+    "score": 90,
+    "reason": "Direct SDK release from Tier 1 source with breaking changes and new API version support. Ships today.",
+    "proposed_post": "Anthropic Python SDK v2.0.0 ships with breaking changes and support for API version 2026-10-21, adding a `workspace_id` filter for spend limits. Builders should review changes for compatibility and leverage new cost management features.",
+    "source_angle": "Anthropic SDK update with new API version and spend limit filters.",
+    "source_item": {
+      "title": "Anthropic Python SDK v2.0.0",
+      "source": "Anthropic Python SDK Releases",
+      "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.0.0",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 65,
+      "summary": "<h3>⚠ BREAKING CHANGES</h3>\n<ul>\n<li><strong>api:</strong> add support for new API version 2026-10-21</li>\n</ul>\n<h3>Features</h3>\n<ul>\n<li><strong>api:</strong> add a workspace_id filter and the usage_tier scope type to list spend limits</li>\n<li><strong>api:</strong> add support for new API version 2026-10-21</li>\n</ul>\n<h3>Documentation</h3>\n<ul>\n<li><strong>api:</strong> remove outdated system role note from messages description</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: features, /h3, version, /ul, usage.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Anthropic Python SDK Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "features",
+          "/h3",
+          "version",
+          "/ul",
+          "usage",
+          "support",
+          "remove",
+          "v2.0.0"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: features, /h3, version, /ul. Lead: Anthropic Python SDK v2.0.0",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-10-21T18:32:26.410228Z",
+    "defer_count": 1,
+    "original_score": 90,
+    "original_reason": "Direct SDK release from Tier 1 source with breaking changes and new API version support. Ships today."
+  },
+  {
+    "id": "54a8d59505e4",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-10-21T18:32:16.745654Z",
+    "score": 85,
+    "reason": "LangChain v1.4.2 ships with a fix for Perplexity Agent API search results, directly impacting builders.",
+    "proposed_post": "LangChain v1.4.2 fixes an issue preserving Perplexity Agent API search results. Builders using LangChain with Perplexity's Agent API can now reliably access search results, improving agent reliability.",
+    "source_angle": "LangChain update fixes Perplexity Agent API integration",
+    "source_item": {
+      "title": "LangChain v1.4.2",
+      "source": "LangChain Releases",
+      "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-perplexity%3D%3D1.4.2",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 60,
+      "summary": "<p>Changes since langchain-perplexity==1.4.1</p>\n<p>release(perplexity): 1.4.2 (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/41392\">#41392</a>)<br />\nchore(model-profiles): refresh model profile data (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/41354\">#41354</a>)<br />\nchore(deps): bump certifi from 2025.8.3 to 2026.10.19 in /libs/partners/perplexity (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/41377\">#41377</a>)<br />\nfix(perplexity): preserve Agent API search results (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/41349\">#41349</a>)<br />\nfix: fix dependencies in some partner packages (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/41266\">#41266</a>)<br />\nchore(deps): bump urllib3 from 2.7.0 to 2.8.0 in /libs/partners/perplexity (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/40947\">#40947</a>)<br />\nchore(deps): bump anyio from 4.11.0 to 4.14.2 in /libs/partners/perplexity (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/40633\">#40633</a>)<br />\nfix(perplexity): map Responses API cache tokens into input_token_details (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/39923\">#39923</a>)<br />\nfix(perplexity): emit search_context_size once per stream in _astream (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/39924\">#39924</a>)<br />\ndocs(perplexity): update <code>ChatPerplexity</code> docstring examples for Agent API (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/39831\">#39831</a>)</p>\n[Cluster context: 1 sources, engagement 0, common terms: astream, map, deps, perplexity, search.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "LangChain Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "astream",
+          "map",
+          "deps",
+          "perplexity",
+          "search",
+          "per",
+          "model-profiles",
+          "profile"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: astream, map, deps, perplexity. Lead: LangChain v1.4.2",
+        "alternative_titles": [],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-10-21T18:32:26.606952Z",
+    "defer_count": 1,
+    "original_score": 85,
+    "original_reason": "LangChain v1.4.2 ships with a fix for Perplexity Agent API search results, directly impacting builders."
+  },
+  {
+    "id": "eb46f9f75a64",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-10-21T18:32:24.121611Z",
+    "score": 90,
+    "reason": "New Claude Code SDK version with critical bug fixes for cloud integrations and sandbox enhancements.",
+    "proposed_post": "Claude Code v2.1.305 adds `sandbox.allowNestedUserNamespaces` for Linux and fixes Vertex/Bedrock tool search failures. Builders can now run more complex sandboxed ops and avoid critical integration issues on cloud platforms.",
+    "source_angle": "Claude Code SDK release with sandbox and cloud integration fixes.",
+    "source_item": {
+      "title": "Claude Code v2.1.305",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.305",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 10,
+      "summary": "<h2>What's changed</h2>\n<ul>\n<li>Added <code>sandbox.allowNestedUserNamespaces</code> so sandboxed commands on Linux can create user namespaces (Chromium, rootless podman); this lets them get around the sandbox's file protections</li>\n<li>Added <code>CLAUDE_CODE_RETRY_WATCHDOG_USAGE_LIMIT_RECHECK_MS</code> so unattended retry mode (<code>CLAUDE_CODE_RETRY_WATCHDOG</code>) notices a usage limit that was lifted before its reset</li>\n<li>Fixed every request failing on Vertex, Bedrock and other providers when the endpoint or a gateway rejects tool search, and behind gateways with ToolSearch disallowed or left out of <code>--tools</code> (a 2.1.304 regression): Claude Code now retries without it</li>\n<li>Fixed <code>/effort</code> and <code>/autocompact</code> settings not applying when the model name differed from a <code>modelOverrides</code> value by letter case or a <code>[1m]</code> tag</li>\n<li>Fixed new worktrees in a bare repository sometimes starting from local HEAD instead of the default branch, and unchanged subagent worktrees sometimes not being cleaned up</li>\n<li>Fixed Bash commands on a full disk failing with a raw <code>ENOSPC</code> file path: the error now says the disk is full and that nothing ran</li>\n<li>Fixed an MCP server passed by a cloud session or by the SDK's <code>setMcpServers</code> being replaced later in the session by a same-named server from your own settings</li>\n<li>Fixed Claude naming the wrong model for a subagent's work after the subagent switched to a fallback model</li>\n<li>Fixed cloud sessions and teammates not telling Claude when a compaction had to leave the oldest messages out of its summary to fit</li>\n<li>Fixed more cases of scheduled Cowork cloud sessions waiting five minutes for each subagent whose WebFetch needed a URL approval that nobody was there to give</li>\n<li>Fixed Workflow resume re-running already-completed <code>pipeline()</code> and <code>parallel()</code> agents instead of serving them from the run's journal</li>\n<li>Fixed Remote Control leaving empty \"(session)\" entries in <code>/resume</code> after switching conversations with <code>/resume</code></li>\n<li>Fixed <code>/usage</code> rows being cut off in narrow terminals</li>\n<li>Fixed startup warnings printing as raw text above the logo: they now go to the debug log, and permission rules that restrict nothing show as warning rows under the banner</li>\n<li>Fixed screen reader mode: search boxes now say \"Search:\" instead of a symbol VoiceOver read as \"telephone recorder\", and highlighted prompt text, such as Ctrl+R search matches and \"ultrathink\", no longer has spaces inside words</li>\n<li>Self-hosted runner: Fixed a start script that shares only its stdout with the runner or orchestrator failing with <code>Resource temporarily unavailable</code> when <code>TERM</code> is set (a 2.1.300 regression)</li>\n<li>Self-hosted runner: Fixed repository access failing since 2.1.296 when a git credential helper or askpass program reads its settings through <code>GIT_CONFIG</code></li>\n<li>Self-hosted runner: Fixed the orchestrator reporting a spawn-runner hook as timed out when a runner it started in the background kept its output open</li>\n<li>Improved <code>/usage</code>: each warning is now a one-line fix that names its source, and <code>f</code> applies the fixes; the same fixes appear in VS Code and <code>/doctor</code></li>\n<li>Improved MCP consent dialogs so an Enter meant for the prompt is less likely to be taken as Accept</li>\n<li>Improved a mod's <code>Image</code> to draw its picture in iTerm2 3.5 and later with fullscreen rendering, where it showed only its <code>alt</code> text</li>\n<li>Remote Control: Improved the spawn-mode messages: pressing <code>w</code> now says the new mode is saved for the folder, and a later <code>claude remote-control</code> start that uses the saved mode says where it came from</li>\n<li>Changed <code>allowedMcpServers</code> to stop filtering <code>managed-mcp.json</code> stdio servers that use <code>${VAR}</code> only in <code>env</code>: one your allowlist left out now loads on upgrade; use <code>deniedMcpServers</code> to keep it off</li>\n<li>Changed plugins that Claude Desktop mounts by path to no longer keep their <code>allowed-tools</code> when your organization's managed settings set <code>allowManagedPermissionRulesOnly</code></li>\n<li>Changed the <code>/artifacts</code> delete confirmation to take 1 or Enter to keep, 2 to delete, and Esc to cancel; <code>y</code> and <code>n</code> no longer answer it</li>\n<li>Changed a mod's docked pane to stay within 45% of the terminal's width, including a width kept from a wider terminal</li>\n<li>[VSCode] Added a \"Running start-up hooks\" spinner status, with a screen reader announcement, while SessionStart or Setup hooks run</li>\n<li>[VSCode] Fixed the spinner cutting off \"Compacting...\" when your <code>spinnerVerbs</code> setting replaces the built-in verbs with short ones</li>\n<li>[VSCode] Changed the message shown when a session does not start in time and no hook is running: it now leads with the output logs and lists causes instead of pointing to sign-in and network first</li>\n<li>[Cloud sessions] Fixed the Cloud environments admin page wrongly refusing to save an existing environment with an \"installs packages\" error</li>\n<li>[Cloud sessions] Improved deleting a self-hosted environment so the dialog and error messages say what blocks the delete and what it will affect</li>\n<li>[Claude Tag] Added public Slack channels Claude hasn't joined to the Claude Tag admin Add place search, so admins can set one up from there</li>\n<li>[Claude Tag] Fixed Claude Tag access bundles so a repository that moved to another GitHub account can be added again</li>\n<li>[Claude Tag] Fixed a routine set up in a Slack DM thread no longer posting after another routine in that thread restarted the conversation; both now keep posting there</li>\n<li>[Claude Tag] Fixed routines set up in a Slack thread reporting success without posting after the conversation ended; those runs are now skipped and the creator is told</li>\n<li>[Claude Tag] Improved Claude Tag admin pages in large organizations so plugin, skill and bundle edits work while the channel list is still loading</li>\n<li>[Code Review] Fixed Code Review sometimes not reviewing the newest commit when several pushes landed on a pull request during a review</li>\n<li>[Code Review] Changed Code Review re-reviews so they no longer open with LGTM while earlier blocking findings are still open</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: terminals, spawn-mode, read, recheck, whose.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Claude Code Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "terminals",
+          "spawn-mode",
+          "read",
+          "recheck",
+          "whose",
+          "added",
+          "entries",
+          "var"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: terminals, spawn-mode, read, recheck. Lead: Claude Code v2.1.305",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-10-21T18:32:26.804127Z",
+    "defer_count": 1,
+    "original_score": 90,
+    "original_reason": "New Claude Code SDK version with critical bug fixes for cloud integrations and sandbox enhancements."
   }
 ]
