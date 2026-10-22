@@ -1,34 +1,5 @@
 [
   {
-    "rejected_at": "2026-09-11T14:19:46.073655Z",
-    "stage": "review",
-    "title": "Claude Code v2.1.268",
-    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.268",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-11T17:42:40.701078Z",
-    "stage": "review",
-    "title": "vLLM v0.1.0",
-    "link": "https://github.com/vllm-project/vllm/releases/tag/proto-v0.1.0",
-    "reasons": [
-      "Version-only release without concrete capability: 'vLLM v0.1.0'"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-11T17:42:40.790660Z",
-    "stage": "review",
-    "title": "melgarafael/DeskcommCRM — Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-rea",
-    "link": "https://github.com/melgarafael/DeskcommCRM",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
     "rejected_at": "2026-09-11T17:42:40.879807Z",
     "stage": "review",
     "title": "jihe520/MathModelAgent — 🤖📐专为数学建模设计的 Agent & skills ,自动完成数学建模，生成一份完整的可以直接提交的论文。 An Agent Designed for Mathematical Modeling ,Automatically complete mathmodel and generate a complete paper ready for su",
@@ -1994,6 +1965,36 @@
     "stage": "review",
     "title": "How Specializing the Vocabulary of SLMs Can Cut Inference Cost by 77% in Real Applications",
     "link": "https://huggingface.co/blog/Dharma-AI/vocabx-vocabulary-specialization",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-22T15:06:00.862748Z",
+    "stage": "review",
+    "title": "Anthropic Python SDK v2.1.0",
+    "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.1.0",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-22T15:06:00.949576Z",
+    "stage": "review",
+    "title": "LangChain v1.4.7",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.4.7",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-22T15:06:01.036636Z",
+    "stage": "review",
+    "title": "Claude Duet",
+    "link": "https://claude.com/product/claude-duet",
     "reasons": [
       "Post is empty",
       "Post lacks a clear claim or insight"
