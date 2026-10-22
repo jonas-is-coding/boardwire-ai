@@ -15995,7 +15995,7 @@
   },
   {
     "id": "6e4644d2e8d2",
-    "status": "deferred_due_to_cap",
+    "status": "expired_deferred",
     "created_at": "2026-10-21T15:05:27.797368Z",
     "score": 85,
     "reason": "New SDK version adds concrete API endpoints for org webhooks and RBAC, directly usable by builders today.",
@@ -16032,8 +16032,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-10-22T15:06:00.675557Z",
-    "defer_count": 3,
+    "deferred_at": "2026-10-22T18:27:58.235729Z",
+    "defer_count": 4,
     "original_score": 85,
     "original_reason": "New SDK version adds concrete API endpoints for org webhooks and RBAC, directly usable by builders today."
   },
@@ -16161,8 +16161,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-10-22T15:06:00.776461Z",
-    "defer_count": 2,
+    "deferred_at": "2026-10-22T18:27:58.340040Z",
+    "defer_count": 3,
     "original_score": 85,
     "original_reason": "LangChain v1.4.2 ships with a fix for Perplexity Agent API search results, directly impacting builders."
   },
@@ -16207,5 +16207,49 @@
     "is_llm_mode": true,
     "breaking": false,
     "reactivated_at": "2026-10-22T15:06:00.565994Z"
+  },
+  {
+    "id": "943b0071356a",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-10-22T18:27:54.270367Z",
+    "score": 90,
+    "reason": "Open-source tool launch providing a direct alternative to a proprietary AI service. Ships today.",
+    "proposed_post": "Omnara, an open-source alternative to Claude Managed Agents, launched on GitHub. Builders can now self-host and customize agent orchestration workflows, reducing reliance on proprietary platforms.",
+    "source_angle": "Open-source alternative to proprietary agent platforms.",
+    "source_item": {
+      "title": "Show HN: Omnara – Open-source alternative to Claude Managed Agents",
+      "source": "HackerNews",
+      "link": "https://github.com/omnara-ai/omnara",
+      "source_tier": 3,
+      "engagement_score": 119.5,
+      "local_newsworthiness_score": 40,
+      "summary": "104 points, 31 comments on Hacker News — submitted by kmansm27 — original: https://github.com/omnara-ai/omnara\n[Cluster context: 1 sources, engagement 119, common terms: comments, 104, kmansm27, claude, submitted.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 119,
+        "common_terms": [
+          "comments",
+          "104",
+          "kmansm27",
+          "claude",
+          "submitted",
+          "alternative",
+          "points",
+          "original"
+        ],
+        "cluster_summary": "1 sources, engagement 119. Common terms: comments, 104, kmansm27, claude. Lead: Show HN: Omnara – Open-source alternative to Claude Managed Agents",
+        "alternative_titles": [],
+        "cluster_score": 30
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-10-22T18:27:58.562922Z",
+    "defer_count": 1,
+    "original_score": 90,
+    "original_reason": "Open-source tool launch providing a direct alternative to a proprietary AI service. Ships today."
   }
 ]

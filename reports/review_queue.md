@@ -6,6 +6,9 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-10-22T18:27:58.740223Z` [review] **Claude Code v2.1.308** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'Claude Code v2.1.308'
+- `2026-10-22T18:27:58.650995Z` [review] **Launch HN: Alter (YC S25) – Access control for multi-user agents** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-22T18:27:58.455391Z` [review] **LangChain v1.7.0** — Version-only release without concrete capability: 'LangChain v1.7.0'
 - `2026-10-22T15:06:01.036636Z` [review] **Claude Duet** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-22T15:06:00.949576Z` [review] **LangChain v1.4.7** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-22T15:06:00.862748Z` [review] **Anthropic Python SDK v2.1.0** — Post is empty; Post lacks a clear claim or insight
@@ -28,6 +31,3 @@ No pending review items.
 - `2026-10-19T16:56:46.460107Z` [review] **Claude Code v2.1.303** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'Claude Code v2.1.303'
 - `2026-10-19T16:56:46.389076Z` [review] **vLLM v0.32.1rc0** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.32.1rc0'
 - `2026-10-19T16:56:43.610147Z` [review] **vLLM v0.32.0** — Version-only release without concrete capability: 'vLLM v0.32.0'
-- `2026-10-18T21:01:11.537628Z` [review] **LangChain v1.6.12** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.6.12'
-- `2026-10-18T21:01:11.388519Z` [review] **DeepSeek search and fetch – $0.75 per 1000 successful requests** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-18T21:01:11.241631Z` [review] **Claude Code v2.1.302** — Post is empty; Post lacks a clear claim or insight

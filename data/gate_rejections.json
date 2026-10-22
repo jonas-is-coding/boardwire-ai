@@ -1,34 +1,5 @@
 [
   {
-    "rejected_at": "2026-09-11T17:42:40.879807Z",
-    "stage": "review",
-    "title": "jihe520/MathModelAgent — 🤖📐专为数学建模设计的 Agent & skills ,自动完成数学建模，生成一份完整的可以直接提交的论文。 An Agent Designed for Mathematical Modeling ,Automatically complete mathmodel and generate a complete paper ready for su",
-    "link": "https://github.com/jihe520/MathModelAgent",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-11T17:42:40.970768Z",
-    "stage": "review",
-    "title": "pascalorg/editor — Open-source 3D architectural editor with a local CLI, MCP tools, and practical workflows for humans and AI agents.",
-    "link": "https://github.com/pascalorg/editor",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-13T21:07:57.764486Z",
-    "stage": "review",
-    "title": "Claude Code v2.1.270",
-    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.270",
-    "reasons": [
-      "Version-only release without concrete capability: 'Claude Code v2.1.270'"
-    ]
-  },
-  {
     "rejected_at": "2026-09-13T21:07:58.298973Z",
     "stage": "review",
     "title": "tech-leads-club/agent-skills — The secure, validated skill registry for professional AI coding agents. Extend Antigravity, Claude Code, Cursor, Copilot and more with absolute confidence.",
@@ -1998,6 +1969,36 @@
     "reasons": [
       "Post is empty",
       "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-22T18:27:58.455391Z",
+    "stage": "review",
+    "title": "LangChain v1.7.0",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.7.0",
+    "reasons": [
+      "Version-only release without concrete capability: 'LangChain v1.7.0'"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-22T18:27:58.650995Z",
+    "stage": "review",
+    "title": "Launch HN: Alter (YC S25) – Access control for multi-user agents",
+    "link": "https://alterauth.com/",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-22T18:27:58.740223Z",
+    "stage": "review",
+    "title": "Claude Code v2.1.308",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.308",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight",
+      "Version-only release without concrete capability: 'Claude Code v2.1.308'"
     ]
   }
 ]
