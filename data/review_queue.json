@@ -15737,7 +15737,7 @@
   },
   {
     "id": "1fc1f84f57a4",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-20T14:58:01.554735Z",
     "score": 90,
     "reason": "New tool (TorchNeuron) released by Hugging Face simplifies running HF models on AWS Trainium, directly impacting builder efficiency.",
@@ -15773,7 +15773,8 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": false,
-    "reactivated_at": "2026-10-20T14:58:01.554735Z"
+    "reactivated_at": "2026-10-20T14:58:01.554735Z",
+    "expired_at": "2026-10-22T15:00:04.917061Z"
   },
   {
     "id": "21c2d0d33b29",
@@ -15866,7 +15867,7 @@
   },
   {
     "id": "d7a06e09b0f1",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-20T14:57:49.205145Z",
     "score": 95,
     "reason": "DeepSeek open-sourced its inference engine, DeepInfer, a direct tool for builders to optimize model deployment.",
@@ -15905,7 +15906,8 @@
     "is_llm_mode": true,
     "breaking": true,
     "claire_note": "Chloe, check this out. DeepSeek hat gerade seinen Inference Engine Open Source gestellt.\n\nDas ist groß, weil es Entwicklern ermöglicht, die DeepSeek-Modelle lokal und effizienter auszuführen. Das bedeutet mehr Kontrolle über die Performance und potentiell niedrigere Kosten für alle, die generative KI-Anwendungen bauen wollen. Die 462 Kommentare auf HN zeigen, dass das Thema Resonanz findet.",
-    "chloe_note": "Hey, *DeepSeek just open-sourced its inference engine* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen DeepSeek open-sourced its inference engine, DeepInfer, a direct tool for builders to optimize model deployment.Cluster context: 1 sources, engagement 1557. Common terms: submitted, its, open-sourced, original. Score aktuell: 95. Link: https://github.com/deepseek-ai/DeepInfer"
+    "chloe_note": "Hey, *DeepSeek just open-sourced its inference engine* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen DeepSeek open-sourced its inference engine, DeepInfer, a direct tool for builders to optimize model deployment.Cluster context: 1 sources, engagement 1557. Common terms: submitted, its, open-sourced, original. Score aktuell: 95. Link: https://github.com/deepseek-ai/DeepInfer",
+    "expired_at": "2026-10-22T15:00:04.917061Z"
   },
   {
     "id": "92f2ff8958e0",
