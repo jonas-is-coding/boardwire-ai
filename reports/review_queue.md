@@ -6,6 +6,9 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-10-23T14:56:25.325830Z` [review] **Renhuai123/ziwei-doushu — 紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-23T14:56:25.154083Z` [review] **LangChain v1.6.13** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.6.13'
+- `2026-10-23T14:56:24.982329Z` [review] **Build more responsive apps with the Decisions API** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-22T18:27:58.740223Z` [review] **Claude Code v2.1.308** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'Claude Code v2.1.308'
 - `2026-10-22T18:27:58.650995Z` [review] **Launch HN: Alter (YC S25) – Access control for multi-user agents** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-22T18:27:58.455391Z` [review] **LangChain v1.7.0** — Version-only release without concrete capability: 'LangChain v1.7.0'
@@ -28,6 +31,3 @@ No pending review items.
 - `2026-10-19T19:46:21.888061Z` [review] **Show HN: Qwen3-4B with the AI writing tics trained out** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-19T19:46:21.720270Z` [review] **DeepSeek V4.1 Flash 1017 (Max)** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-19T19:46:20.624748Z` [review] **vLLM v0.32.0rc3** — Boring release phrasing without concrete builder capability; Version-only release without concrete capability: 'vLLM v0.32.0rc3'
-- `2026-10-19T16:56:46.460107Z` [review] **Claude Code v2.1.303** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'Claude Code v2.1.303'
-- `2026-10-19T16:56:46.389076Z` [review] **vLLM v0.32.1rc0** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.32.1rc0'
-- `2026-10-19T16:56:43.610147Z` [review] **vLLM v0.32.0** — Version-only release without concrete capability: 'vLLM v0.32.0'

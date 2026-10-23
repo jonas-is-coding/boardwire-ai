@@ -1,35 +1,5 @@
 [
   {
-    "rejected_at": "2026-09-13T21:07:58.298973Z",
-    "stage": "review",
-    "title": "tech-leads-club/agent-skills — The secure, validated skill registry for professional AI coding agents. Extend Antigravity, Claude Code, Cursor, Copilot and more with absolute confidence.",
-    "link": "https://github.com/tech-leads-club/agent-skills",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-13T21:07:58.427923Z",
-    "stage": "review",
-    "title": "multimodal-art-projection/YuE — YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.",
-    "link": "https://github.com/multimodal-art-projection/YuE",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-13T21:07:58.556285Z",
-    "stage": "review",
-    "title": "Real-SWE: Benchmarking AI models on private, real-world, enterprise codebases",
-    "link": "https://withspecific.com/benchmarks/real-swe",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
     "rejected_at": "2026-09-14T16:20:20.093347Z",
     "stage": "review",
     "title": "1Password increases engineering productivity 21% with Codex",
@@ -1999,6 +1969,37 @@
       "Post is empty",
       "Post lacks a clear claim or insight",
       "Version-only release without concrete capability: 'Claude Code v2.1.308'"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-23T14:56:24.982329Z",
+    "stage": "review",
+    "title": "Build more responsive apps with the Decisions API",
+    "link": "https://openai.com/index/decisions-api",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-23T14:56:25.154083Z",
+    "stage": "review",
+    "title": "LangChain v1.6.13",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.6.13",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight",
+      "Version-only release without concrete capability: 'LangChain v1.6.13'"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-23T14:56:25.325830Z",
+    "stage": "review",
+    "title": "Renhuai123/ziwei-doushu — 紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
+    "link": "https://github.com/Renhuai123/ziwei-doushu",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
     ]
   }
 ]
