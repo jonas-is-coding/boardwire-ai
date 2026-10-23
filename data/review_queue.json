@@ -16290,14 +16290,14 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-10-23T14:56:24.612973Z",
-    "defer_count": 1,
+    "deferred_at": "2026-10-23T18:14:01.506315Z",
+    "defer_count": 2,
     "original_score": 90,
     "original_reason": "New SDK version with direct API enhancements for builders (message threads, cost reports). Ships today."
   },
   {
     "id": "20cd6088a4c9",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-10-23T14:56:18.110302Z",
     "score": 85,
     "reason": "Claude Code v2.1.309 released with critical sandboxing and permission fixes. Direct impact on security/stability for users.",
@@ -16339,6 +16339,95 @@
     "deferred_at": "2026-10-23T14:56:24.810630Z",
     "defer_count": 1,
     "original_score": 85,
-    "original_reason": "Claude Code v2.1.309 released with critical sandboxing and permission fixes. Direct impact on security/stability for users."
+    "original_reason": "Claude Code v2.1.309 released with critical sandboxing and permission fixes. Direct impact on security/stability for users.",
+    "rejected_at": "2026-10-23T18:14:01.699147Z"
+  },
+  {
+    "id": "8d6eaa9818fc",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-10-23T18:13:49.337971Z",
+    "score": 90,
+    "reason": "Anthropic SDK v1.17.0 ships with new org webhook endpoints and RBAC error codes, enabling richer integrations and admin features.",
+    "proposed_post": "Anthropic Python SDK v1.17.0 adds org webhook endpoints and RBAC error codes. Builders can now integrate custom event handling and improve admin tooling with new access control error visibility.",
+    "source_angle": "Anthropic Python SDK v1.17.0 release with new API endpoints.",
+    "source_item": {
+      "title": "Anthropic Python SDK v1.17.0",
+      "source": "Anthropic Python SDK Releases",
+      "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.17.0",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 65,
+      "summary": "<h3>Features</h3>\n<ul>\n<li><strong>api:</strong> add org webhook endpoints and user profile enforcement events</li>\n<li><strong>api:</strong> add RBAC Group owner-access error codes to the Admin API</li>\n<li><strong>api:</strong> document the unsupported_charset error code for plugin uploads</li>\n</ul>\n<h3>Bug Fixes</h3>\n<ul>\n<li><strong>bedrock:</strong> keep a workspace ID set in default_headers on the Bedrock and Mantle clients</li>\n<li><strong>google-cloud:</strong> keep workspace and user profile IDs set in default_headers</li>\n</ul>\n<h3>Chores</h3>\n<ul>\n<li><strong>ci:</strong> run the changelog check on a standard runner</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: /strong, keep, default, sdk, standard.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Anthropic Python SDK Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "/strong",
+          "keep",
+          "default",
+          "sdk",
+          "standard",
+          "add",
+          "check",
+          "/ul"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: /strong, keep, default, sdk. Lead: Anthropic Python SDK v1.17.0",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-10-23T18:14:01.894475Z",
+    "defer_count": 1,
+    "original_score": 90,
+    "original_reason": "Anthropic SDK v1.17.0 ships with new org webhook endpoints and RBAC error codes, enabling richer integrations and admin features."
+  },
+  {
+    "id": "fd7075f124f4",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-10-23T18:13:55.509591Z",
+    "score": 90,
+    "reason": "New Claude Code version with OpenTelemetry event for tool call safety monitoring and API version update.",
+    "proposed_post": "Claude Code v2.1.307 released, adding `claude_code.safety_event` for OpenTelemetry. Builders can now monitor tool call safety checks and permission rules in their Claude integrations.",
+    "source_angle": "Claude Code v2.1.307 adds OpenTelemetry safety events.",
+    "source_item": {
+      "title": "Claude Code v2.1.307",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.307",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 55,
+      "summary": "<h2>What's changed</h2>\n<ul>\n<li>Added <code>/claude-api api-version</code> to move Claude API code to API version <code>2026-10-21</code></li>\n<li>Added the <code>claude_code.safety_event</code> OpenTelemetry event for each tool call a permission rule, auto mode, a safety check, a hook or the sandbox stopped, prompted or sent back</li>\n<li>Fixed requests failing with a model-not-found error when <code>CLAUDE_CODE_DISABLE_1M_CONTEXT</code> is set and the model is an alias with the <code>[1m]</code> suffix, such as <code>opus[1m]</code></li>\n<li>Fixed the <code>prompt-caching-scope</code> beta header being sent behind custom <code>ANTHROPIC_BASE_URL</code> gateways and on Foundry, where it has no effect</li>\n<li>Fixed MCP servers showing \"needs authentication\" in <code>claude -p</code> on macOS while the login keychain was locked; they now say why, and the next run after an unlock connects without a new sign-in</li>\n<li>Fixed MCP servers being reported as timed out, and staying failed in headless runs, when a macOS or Linux computer went to sleep while they were connecting</li>\n<li>Fixed HTTP MCP tool calls being sent twice when the connection closed mid-call; only read-only or idempotent tools are now retried</li>\n<li>Fixed a turn sometimes starting without an SDK MCP server's latest tools when a background task was running</li>\n<li>Fixed some \"Autocompact is thrashing\" errors in turns that read many PDF pages, images or other large tool results</li>\n<li>Fixed <code>/autocompact</code> in cloud sessions going back to the default window after the session restarted</li>\n<li>Fixed a conversation cleared with <code>/clear</code> sometimes coming back when a cloud or self-hosted runner session restarted</li>\n<li>Fixed <code>CLAUDE_STREAM_FIRST_BYTE_TIMEOUT_MS</code> being ignored in Claude apps gateway sessions</li>\n<li>Fixed telemetry from Claude Desktop sessions behind a Claude apps gateway being rejected when <code>OTEL_EXPORTER_OTLP_HEADERS</code> is set</li>\n<li>Fixed <code>/permissions</code> &gt; Recently denied not showing the denied shell command, and auto mode's local classifier ignoring an approval from there when it checks a retried command; approving a row now names the command, not its description</li>\n<li>Fixed <code>/help</code> and the <code>/</code> command menu showing long model-facing descriptions for bundled skills such as <code>/claude-api</code> instead of their short descriptions</li>\n<li>Fixed subagent transcripts recording placeholder token usage and an empty stop reason for streamed responses</li>\n<li>Fixed model switches through the Agent SDK's <code>setModel()</code>, and apps built on it, being refused when the API took more than 5 seconds to confirm the model; Claude Code now waits up to 15 seconds</li>\n<li>Fixed a background command stopped through a connected app (such as the desktop app archiving an idle session) being reported to Claude as stopped by the user; the notice now names its output file</li>\n<li>Fixed WebFetch in Cowork cloud sessions reporting a tool error when a site answered with a 4xx status or a robots.txt refusal; it is now a normal result, as in local sessions</li>\n<li>Fixed write tools on a directly configured GitHub MCP server showing a form that closed without creating anything in the desktop app's Code tab</li>\n<li>Fixed Artifact tool reads failing with a connection reset when the server had closed a reused connection</li>\n<li>Self-hosted runner: Fixed sessions with <code>--use-anthropic-git-proxy</code> committing a <code>.claude/settings.local.json</code> left in the clone by an earlier session</li>\n<li>Self-hosted runner: Fixed archiving or requeueing a session, or stopping the runner, during its checkout hook leaving the hook's processes running and the runner's slot held</li>\n<li>Improved recovery from unparseable tool calls: Claude Code now retries the call up to twice before ending the turn with an error</li>\n<li>Improved fork subagents launched together: each is now told which launch is its own, so forks are much less likely to try to start each other's work</li>\n<li>Improved browser sign-in: the success page now appears as soon as sign-in completes, without waiting for your account profile to load</li>\n<li>Improved web search errors in cloud and self-hosted runner sessions: a search refused with a 403 that gives a reason now shows that reason instead of a generic \"Authentication error\"</li>\n<li>Improved the time to the first reply in cloud sessions when one of the desktop app's MCP servers can't connect</li>\n<li>Improved Remote Control connect time for sessions whose transcript contains large pasted images or PDF reads</li>\n<li>Changed the notice Claude gets when the WebSearch budget is used up to also tell it not to query search engines in a browser or through computer use</li>\n<li>Changed the <code>axScreenReader</code> setting and <code>CLAUDE_AX_SCREEN_READER</code> in a settings <code>env</code> block to apply only from user, managed or <code>--settings</code> settings (since 2.1.305)</li>\n<li>Self-hosted runner: Changed checkout hooks to be stopped after 30 minutes by default, failing the session's setup; if yours needs longer, raise <code>--checkout-hook-timeout-min</code> or set it to <code>0</code></li>\n<li>Self-hosted runner: Changed the certificate file built for Anthropic-managed git to filter its trusted certificates as the CLI does; a <code>[runner:warn]</code> line gives the number left out</li>\n<li>[VSCode] Added a notice on the microphone button when voice dictation stops by itself (15 seconds without recognized speech, or the 2-minute limit), saying why and that the text so far is kept</li>\n<li>[VSCode] Fixed a long prompt expanded with Show more covering the whole chat panel: a pinned prompt is now capped at 40% of the panel and scrolls</li>\n<li>[VSCode] Fixed part of a list item or table cell with LaTeX math pasting as a new list or table in rich text editors</li>\n<li>[VSCode] Fixed dictation failing behind a TLS-inspecting proxy when <code>NODE_EXTRA_CA_CERTS</code> is set only in <code>~/.claude/settings.json</code>; it now also follows <code>CLAUDE_CODE_CERT_STORE</code></li>\n<li>[VSCode] Changed the \"still open somewhere else\" notice to also cover a Claude process left over from an extension restart, which usually ends on its own within about 10 minutes</li>\n<li>[VSCode] Changed voice dictation to filter its trusted certificates as the CLI does</li>\n<li>[VSCode] Changed the extension's own requests to filter their trusted certificates as the CLI does, and to trust the <code>NODE_EXTRA_CA_CERTS</code> file named in the environment or in user settings</li>\n<li>[Cloud sessions] Fixed the repository picker saying \"No repositories match\" while a search was still running; it now shows \"Searching…\" until the results arrive</li>\n<li>[Cloud sessions] Fixed the \"Waiting for a runner\" status on self-hosted environments being cut off; with on-demand runners it now counts up from your last message and shows failed attempts</li>\n<li>[Code Review] Added <code>@claude review stop</code> (also <code>off</code> and <code>pause</code>) to Code Review, ending an <code>@claude review always</code> subscription on a pull request without starting a new review</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: switches, normal, show, soon, counts.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Claude Code Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "switches",
+          "normal",
+          "show",
+          "soon",
+          "counts",
+          "mode",
+          "less",
+          "number"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: switches, normal, show, soon. Lead: Claude Code v2.1.307",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-10-23T18:14:02.087770Z",
+    "defer_count": 1,
+    "original_score": 90,
+    "original_reason": "New Claude Code version with OpenTelemetry event for tool call safety monitoring and API version update."
   }
 ]

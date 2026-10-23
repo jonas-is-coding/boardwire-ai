@@ -1,44 +1,5 @@
 [
   {
-    "rejected_at": "2026-09-14T16:20:20.093347Z",
-    "stage": "review",
-    "title": "1Password increases engineering productivity 21% with Codex",
-    "link": "https://openai.com/index/1password",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-14T16:20:20.234738Z",
-    "stage": "review",
-    "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
-    "link": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-14T16:20:20.368872Z",
-    "stage": "review",
-    "title": "rlaope/oh-my-hermes — All in one plugin for Hermes Agent ⚚ the coding intelligence, a long-term memory system and model optimized workflow packages",
-    "link": "https://github.com/rlaope/oh-my-hermes",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-14T19:12:13.749148Z",
-    "stage": "review",
-    "title": "Ollama v0.34.1-rc0",
-    "link": "https://github.com/ollama/ollama/releases/tag/v0.34.1-rc0",
-    "reasons": [
-      "Version-only release without concrete capability: 'Ollama v0.34.1-rc0'"
-    ]
-  },
-  {
     "rejected_at": "2026-09-14T19:12:13.908297Z",
     "stage": "review",
     "title": "vLLM v0.29.1rc0",
@@ -1997,6 +1958,45 @@
     "stage": "review",
     "title": "Renhuai123/ziwei-doushu — 紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
     "link": "https://github.com/Renhuai123/ziwei-doushu",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-23T18:14:01.697195Z",
+    "stage": "review",
+    "title": "Claude Code v2.1.309",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.309",
+    "reasons": [
+      "Version-only release without concrete capability: 'Claude Code v2.1.309'"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-23T18:14:02.254699Z",
+    "stage": "review",
+    "title": "NVIDIA Kumo Relational Outperforms Supervised Machine Learning on Relational Data, No Training Required",
+    "link": "https://huggingface.co/blog/nvidia/kumo-relational",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-23T18:14:02.426224Z",
+    "stage": "review",
+    "title": "Patch the Planet: global response coordination as agents uncover critical vulnerabilities",
+    "link": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-23T18:14:02.594452Z",
+    "stage": "review",
+    "title": "Does Your Model Run on AWS Trainium? Look It Up",
+    "link": "https://huggingface.co/blog/torch-neuronx-model-support",
     "reasons": [
       "Post is empty",
       "Post lacks a clear claim or insight"

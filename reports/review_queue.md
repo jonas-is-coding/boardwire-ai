@@ -6,6 +6,10 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-10-23T18:14:02.594452Z` [review] **Does Your Model Run on AWS Trainium? Look It Up** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-23T18:14:02.426224Z` [review] **Patch the Planet: global response coordination as agents uncover critical vulnerabilities** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-23T18:14:02.254699Z` [review] **NVIDIA Kumo Relational Outperforms Supervised Machine Learning on Relational Data, No Training Required** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-23T18:14:01.697195Z` [review] **Claude Code v2.1.309** — Version-only release without concrete capability: 'Claude Code v2.1.309'
 - `2026-10-23T14:56:25.325830Z` [review] **Renhuai123/ziwei-doushu — 紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-23T14:56:25.154083Z` [review] **LangChain v1.6.13** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.6.13'
 - `2026-10-23T14:56:24.982329Z` [review] **Build more responsive apps with the Decisions API** — Post is empty; Post lacks a clear claim or insight
@@ -27,7 +31,3 @@ No pending review items.
 - `2026-10-20T14:58:03.239431Z` [review] **vllm-project/vllm — A high-throughput and memory-efficient inference and serving engine for LLMs** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-20T14:58:03.169064Z` [review] **Claude Code v2.1.304** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-20T14:58:01.474838Z` [review] **Servers v2.0.0** — Version-only release without concrete capability: 'Servers v2.0.0'
-- `2026-10-19T19:46:22.056079Z` [review] **How to continue a GitHub Copilot app session in VS Code** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-19T19:46:21.888061Z` [review] **Show HN: Qwen3-4B with the AI writing tics trained out** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-19T19:46:21.720270Z` [review] **DeepSeek V4.1 Flash 1017 (Max)** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-19T19:46:20.624748Z` [review] **vLLM v0.32.0rc3** — Boring release phrasing without concrete builder capability; Version-only release without concrete capability: 'vLLM v0.32.0rc3'
