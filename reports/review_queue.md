@@ -6,6 +6,9 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-10-25T21:13:22.177219Z` [review] **Claude Code v2.1.310** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-25T21:13:22.005467Z` [review] **Anthropic Python SDK v2.3.0** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-25T21:13:21.832796Z` [review] **Ollama v0.40.11** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'Ollama v0.40.11'
 - `2026-10-23T18:14:02.594452Z` [review] **Does Your Model Run on AWS Trainium? Look It Up** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-23T18:14:02.426224Z` [review] **Patch the Planet: global response coordination as agents uncover critical vulnerabilities** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-23T18:14:02.254699Z` [review] **NVIDIA Kumo Relational Outperforms Supervised Machine Learning on Relational Data, No Training Required** — Post is empty; Post lacks a clear claim or insight
@@ -28,6 +31,3 @@ No pending review items.
 - `2026-10-20T18:26:30.232496Z` [review] **Latest open artifacts (#25): DeepSeek V4.1 Flash 1017, American-made models, and new regulatory controls in the US & China** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-20T18:26:30.161911Z` [review] **Ollama v0.40.4-rc2** — Version-only release without concrete capability: 'Ollama v0.40.4-rc2'
 - `2026-10-20T14:58:03.308249Z` [review] **sickn33/agentic-awesome-skills — AAS Core is the local, agent-first control plane for complete catalog discovery, agent-owned selection, stack validation, and planning, backed by 2,600+ agentic skills** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-20T14:58:03.239431Z` [review] **vllm-project/vllm — A high-throughput and memory-efficient inference and serving engine for LLMs** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-20T14:58:03.169064Z` [review] **Claude Code v2.1.304** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-20T14:58:01.474838Z` [review] **Servers v2.0.0** — Version-only release without concrete capability: 'Servers v2.0.0'

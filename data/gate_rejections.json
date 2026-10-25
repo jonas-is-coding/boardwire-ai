@@ -1,33 +1,5 @@
 [
   {
-    "rejected_at": "2026-09-14T19:12:13.908297Z",
-    "stage": "review",
-    "title": "vLLM v0.29.1rc0",
-    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.29.1rc0",
-    "reasons": [
-      "Version-only release without concrete capability: 'vLLM v0.29.1rc0'"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-15T14:54:02.620562Z",
-    "stage": "review",
-    "title": "Claude Code v2.1.272",
-    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.272",
-    "reasons": [
-      "Version-only release without concrete capability: 'Claude Code v2.1.272'"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-15T14:54:02.913368Z",
-    "stage": "review",
-    "title": "Notes on gotchas while migrating 35kb preprompts from Opus to self-hosted Ollama",
-    "link": "https://patrickmccanna.net/notes-on-migrating-large-prompts-away-from-anthropic-openai-to-self-hosted-llms/",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
     "rejected_at": "2026-09-15T14:54:03.044702Z",
     "stage": "review",
     "title": "MG1937/ASC — ASC is a super FAST Android decompiler front-end designed for Agents/Mobile Researchers.",
@@ -1997,6 +1969,37 @@
     "stage": "review",
     "title": "Does Your Model Run on AWS Trainium? Look It Up",
     "link": "https://huggingface.co/blog/torch-neuronx-model-support",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-25T21:13:21.832796Z",
+    "stage": "review",
+    "title": "Ollama v0.40.11",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.40.11",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight",
+      "Version-only release without concrete capability: 'Ollama v0.40.11'"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-25T21:13:22.005467Z",
+    "stage": "review",
+    "title": "Anthropic Python SDK v2.3.0",
+    "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.3.0",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-25T21:13:22.177219Z",
+    "stage": "review",
+    "title": "Claude Code v2.1.310",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.310",
     "reasons": [
       "Post is empty",
       "Post lacks a clear claim or insight"

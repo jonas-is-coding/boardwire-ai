@@ -16258,12 +16258,12 @@
   },
   {
     "id": "14a9c52e84b2",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-10-23T14:56:12.028897Z",
+    "status": "approved",
+    "created_at": "2026-10-25T21:13:21.070708Z",
     "score": 90,
-    "reason": "New SDK version with direct API enhancements for builders (message threads, cost reports). Ships today.",
-    "proposed_post": "Anthropic Python SDK v2.2.0 adds native support for message threads. Builders can now manage conversational state and context more easily when integrating Claude.",
-    "source_angle": "Anthropic SDK update for Claude API integration",
+    "reason": "New SDK version with direct API enhancements (message threads, cost reports) for Anthropic models. Ships today.",
+    "proposed_post": "Anthropic Python SDK v2.2.0 released with direct API enhancements for message threads and cost reports. Builders can now manage conversational state and track API costs directly within the SDK.",
+    "source_angle": "Anthropic Python SDK update for builders",
     "source_item": {
       "title": "Anthropic Python SDK v2.2.0",
       "source": "Anthropic Python SDK Releases",
@@ -16297,10 +16297,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-10-23T18:14:01.506315Z",
-    "defer_count": 2,
-    "original_score": 90,
-    "original_reason": "New SDK version with direct API enhancements for builders (message threads, cost reports). Ships today."
+    "breaking": false,
+    "reactivated_at": "2026-10-25T21:13:21.070708Z"
   },
   {
     "id": "20cd6088a4c9",
@@ -16351,12 +16349,12 @@
   },
   {
     "id": "8d6eaa9818fc",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-10-23T18:13:49.337971Z",
+    "status": "approved",
+    "created_at": "2026-10-25T21:13:21.268703Z",
     "score": 90,
-    "reason": "Anthropic SDK v1.17.0 ships with new org webhook endpoints and RBAC error codes, enabling richer integrations and admin features.",
-    "proposed_post": "Anthropic Python SDK v1.17.0 adds org webhook endpoints and RBAC error codes. Builders can now integrate custom event handling and improve admin tooling with new access control error visibility.",
-    "source_angle": "Anthropic Python SDK v1.17.0 release with new API endpoints.",
+    "reason": "New SDK version with concrete features (webhooks, RBAC error codes) for improved Claude integrations and admin.",
+    "proposed_post": "Anthropic Python SDK v1.17.0 adds new org webhook endpoints and RBAC error codes. Builders can now implement richer integrations and admin features for Claude deployments.",
+    "source_angle": "Anthropic SDK update for enterprise integration",
     "source_item": {
       "title": "Anthropic Python SDK v1.17.0",
       "source": "Anthropic Python SDK Releases",
@@ -16388,10 +16386,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-10-23T18:14:01.894475Z",
-    "defer_count": 1,
-    "original_score": 90,
-    "original_reason": "Anthropic SDK v1.17.0 ships with new org webhook endpoints and RBAC error codes, enabling richer integrations and admin features."
+    "breaking": false,
+    "reactivated_at": "2026-10-25T21:13:21.268703Z"
   },
   {
     "id": "fd7075f124f4",
@@ -16432,9 +16428,53 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-10-23T18:14:02.087770Z",
-    "defer_count": 1,
+    "deferred_at": "2026-10-25T21:13:21.467458Z",
+    "defer_count": 2,
     "original_score": 90,
     "original_reason": "New Claude Code version with OpenTelemetry event for tool call safety monitoring and API version update."
+  },
+  {
+    "id": "7e0d7c6fe90b",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-10-25T21:13:16.290102Z",
+    "score": 90,
+    "reason": "Open-source AI agent released on GitHub, high community signal, available for immediate deployment by builders.",
+    "proposed_post": "makecindy/cindy, an open-source AI agent, launched on GitHub. It claims to work 'out of the box,' offering a new option for deploying agentic workflows.",
+    "source_angle": "Open-source AI agent for immediate deployment",
+    "source_item": {
+      "title": "makecindy/cindy — Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
+      "source": "GitHub Trending",
+      "link": "https://github.com/makecindy/cindy",
+      "source_tier": 2,
+      "engagement_score": 677.0,
+      "local_newsworthiness_score": 0,
+      "summary": "Trending on GitHub today: +677 stars. Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。\n[Cluster context: 1 sources, engagement 677, common terms: github, consider, stars., trending, +677.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 677,
+        "common_terms": [
+          "github",
+          "consider",
+          "stars.",
+          "trending",
+          "+677",
+          "makecindy/cindy",
+          "box",
+          "out"
+        ],
+        "cluster_summary": "1 sources, engagement 677. Common terms: github, consider, stars., trending. Lead: makecindy/cindy — Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
+        "alternative_titles": [],
+        "cluster_score": 55
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-10-25T21:13:21.661990Z",
+    "defer_count": 1,
+    "original_score": 90,
+    "original_reason": "Open-source AI agent released on GitHub, high community signal, available for immediate deployment by builders."
   }
 ]
