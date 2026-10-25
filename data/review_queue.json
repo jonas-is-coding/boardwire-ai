@@ -16086,7 +16086,7 @@
   },
   {
     "id": "5820f040c287",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-22T15:06:00.461101Z",
     "score": 95,
     "reason": "Direct SDK v2.0.0 release from Anthropic. Ships today, requires developer action for new features/compatibility.",
@@ -16124,11 +16124,12 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": false,
-    "reactivated_at": "2026-10-22T15:06:00.461101Z"
+    "reactivated_at": "2026-10-22T15:06:00.461101Z",
+    "expired_at": "2026-10-25T20:44:25.875113Z"
   },
   {
     "id": "54a8d59505e4",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-23T14:56:24.420258Z",
     "score": 90,
     "reason": "LangChain v1.4.2 released with a specific API fix, directly impacting builders using Perplexity Agent API.",
@@ -16166,11 +16167,12 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": false,
-    "reactivated_at": "2026-10-23T14:56:24.420258Z"
+    "reactivated_at": "2026-10-23T14:56:24.420258Z",
+    "expired_at": "2026-10-25T20:44:25.875113Z"
   },
   {
     "id": "eb46f9f75a64",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-22T15:06:00.565994Z",
     "score": 90,
     "reason": "New SDK version with critical bug fixes for cloud integrations. Direct release link confirms immediate availability.",
@@ -16208,11 +16210,12 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": false,
-    "reactivated_at": "2026-10-22T15:06:00.565994Z"
+    "reactivated_at": "2026-10-22T15:06:00.565994Z",
+    "expired_at": "2026-10-25T20:44:25.875113Z"
   },
   {
     "id": "943b0071356a",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-23T14:56:24.229138Z",
     "score": 90,
     "reason": "Open-source tool launch providing a direct alternative to a proprietary AI service. Ships today.",
@@ -16250,7 +16253,8 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": false,
-    "reactivated_at": "2026-10-23T14:56:24.229138Z"
+    "reactivated_at": "2026-10-23T14:56:24.229138Z",
+    "expired_at": "2026-10-25T20:44:25.875113Z"
   },
   {
     "id": "14a9c52e84b2",
