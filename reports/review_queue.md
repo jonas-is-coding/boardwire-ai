@@ -6,6 +6,11 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-10-26T19:50:41.116974Z` [review] **Using thousands of AI agents to uncover new leads in biological data** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-26T19:50:41.037084Z` [review] **IBM CEO says open weight models are now good and cheap on-prem** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-26T19:50:40.957715Z` [review] **A 10-year-old CNN outperforms frontier LLMs for skin cancer diagnosis** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-26T19:50:40.878150Z` [review] **OpenAI and Anthropic cut their LLM prices by up to 80% within a few months. Why?** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-26T19:50:40.797317Z` [review] **Ollama v0.40.11-rc0** — Version-only release without concrete capability: 'Ollama v0.40.11-rc0'
 - `2026-10-26T16:44:51.739468Z` [review] **Cloudflare links vulnerability discovery to defense with OpenAI** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-26T16:44:51.569618Z` [review] **gitroomhq/postiz-app — 📨 The ultimate agentic social media scheduling tool 🤖** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-26T16:44:51.399207Z` [review] **alchaincyf/huashu-design — Huashu Design 3.0 · 在 agent 里打一句话，拿回能交付的设计：网页 / App 原型 / 可编辑 PPTX / 动画 / 信息图 · 六个候选挑三个方向 · 84 种带样张的风格库 · 越用越懂你的外观账本与设计体检 · HTML-native design skill for Claude Code, Codex, C** — Post is empty; Post lacks a clear claim or insight
@@ -26,8 +31,3 @@ No pending review items.
 - `2026-10-22T15:06:01.036636Z` [review] **Claude Duet** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-22T15:06:00.949576Z` [review] **LangChain v1.4.7** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-22T15:06:00.862748Z` [review] **Anthropic Python SDK v2.1.0** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-21T18:32:26.972434Z` [review] **How Specializing the Vocabulary of SLMs Can Cut Inference Cost by 77% in Real Applications** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-21T15:05:32.965777Z` [review] **OpenAI models are coming to Google Cloud** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-21T15:05:32.890707Z` [review] **Launch HN: Respan (YC W24) – Open-source Rust AI gateway built around plugins** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-21T15:05:32.818503Z` [review] **Claude Code v2.1.306** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-20T18:26:30.378294Z` [review] **Meta shakes up the frontiers, open and closed** — Post is empty; Post lacks a clear claim or insight

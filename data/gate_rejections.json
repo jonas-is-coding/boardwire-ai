@@ -1,57 +1,5 @@
 [
   {
-    "rejected_at": "2026-09-15T18:05:52.508722Z",
-    "stage": "review",
-    "title": "GPT-5.6 Luna vs. GPT-6 Astra: Is a $1.20 Model Good Enough for Code Review?",
-    "link": "https://entelligence.ai/blogs/gpt-5.6-luna-vs-gpt-6-astra-is-a-1.20-model-good-enough-for-code-review",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-16T14:50:52.447548Z",
-    "stage": "review",
-    "title": "Claude Code v2.1.273",
-    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.273",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-16T14:50:52.582471Z",
-    "stage": "review",
-    "title": "LangChain v1.6.3",
-    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.6.3",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight",
-      "Version-only release without concrete capability: 'LangChain v1.6.3'"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-16T14:50:52.716825Z",
-    "stage": "review",
-    "title": "proto-v0.2.0: vllm-proto 0.2.0",
-    "link": "https://github.com/vllm-project/vllm/releases/tag/proto-v0.2.0",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight",
-      "Version-only release without concrete capability: 'proto-v0.2.0: vllm-proto 0.2.0'"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-16T18:05:55.125826Z",
-    "stage": "review",
-    "title": "How workers are unlocking new ways of working",
-    "link": "https://openai.com/index/unlocking-new-ways-of-working",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
     "rejected_at": "2026-09-16T18:05:55.218592Z",
     "stage": "review",
     "title": "LangChain v1.4.1",
@@ -2001,6 +1949,55 @@
     "stage": "review",
     "title": "Cloudflare links vulnerability discovery to defense with OpenAI",
     "link": "https://openai.com/index/cloudflare-cyber",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-26T19:50:40.797317Z",
+    "stage": "review",
+    "title": "Ollama v0.40.11-rc0",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.40.11-rc0",
+    "reasons": [
+      "Version-only release without concrete capability: 'Ollama v0.40.11-rc0'"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-26T19:50:40.878150Z",
+    "stage": "review",
+    "title": "OpenAI and Anthropic cut their LLM prices by up to 80% within a few months. Why?",
+    "link": "https://minimaxir.com/2026/10/cheap-llms/",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-26T19:50:40.957715Z",
+    "stage": "review",
+    "title": "A 10-year-old CNN outperforms frontier LLMs for skin cancer diagnosis",
+    "link": "https://lynchlab.net/llm-skin-cancer",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-26T19:50:41.037084Z",
+    "stage": "review",
+    "title": "IBM CEO says open weight models are now good and cheap on-prem",
+    "link": "https://www.theregister.com/systems/2026/10/22/ibm-ceo-says-open-weight-models-are-now-irresistibly-good-and-cheap-on-prem/5304640",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-26T19:50:41.116974Z",
+    "stage": "review",
+    "title": "Using thousands of AI agents to uncover new leads in biological data",
+    "link": "https://openai.com/index/scaling-ai-research-for-complex-biological-data",
     "reasons": [
       "Post is empty",
       "Post lacks a clear claim or insight"
