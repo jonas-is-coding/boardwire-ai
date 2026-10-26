@@ -6,6 +6,10 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-10-26T16:44:51.739468Z` [review] **Cloudflare links vulnerability discovery to defense with OpenAI** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-26T16:44:51.569618Z` [review] **gitroomhq/postiz-app — 📨 The ultimate agentic social media scheduling tool 🤖** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-26T16:44:51.399207Z` [review] **alchaincyf/huashu-design — Huashu Design 3.0 · 在 agent 里打一句话，拿回能交付的设计：网页 / App 原型 / 可编辑 PPTX / 动画 / 信息图 · 六个候选挑三个方向 · 84 种带样张的风格库 · 越用越懂你的外观账本与设计体检 · HTML-native design skill for Claude Code, Codex, C** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-26T16:44:51.227157Z` [review] **Ollama v0.40.9** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'Ollama v0.40.9'
 - `2026-10-25T21:13:22.177219Z` [review] **Claude Code v2.1.310** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-25T21:13:22.005467Z` [review] **Anthropic Python SDK v2.3.0** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-25T21:13:21.832796Z` [review] **Ollama v0.40.11** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'Ollama v0.40.11'
@@ -27,7 +31,3 @@ No pending review items.
 - `2026-10-21T15:05:32.890707Z` [review] **Launch HN: Respan (YC W24) – Open-source Rust AI gateway built around plugins** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-21T15:05:32.818503Z` [review] **Claude Code v2.1.306** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-20T18:26:30.378294Z` [review] **Meta shakes up the frontiers, open and closed** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-20T18:26:30.306280Z` [review] **Launch HN: Laminar (YC S24) – RL-trained model that finds errors in agent traces** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-20T18:26:30.232496Z` [review] **Latest open artifacts (#25): DeepSeek V4.1 Flash 1017, American-made models, and new regulatory controls in the US & China** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-20T18:26:30.161911Z` [review] **Ollama v0.40.4-rc2** — Version-only release without concrete capability: 'Ollama v0.40.4-rc2'
-- `2026-10-20T14:58:03.308249Z` [review] **sickn33/agentic-awesome-skills — AAS Core is the local, agent-first control plane for complete catalog discovery, agent-owned selection, stack validation, and planning, backed by 2,600+ agentic skills** — Post is empty; Post lacks a clear claim or insight

@@ -16391,12 +16391,12 @@
   },
   {
     "id": "fd7075f124f4",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-10-23T18:13:55.509591Z",
+    "status": "approved",
+    "created_at": "2026-10-26T16:44:50.664363Z",
     "score": 90,
-    "reason": "New Claude Code version with OpenTelemetry event for tool call safety monitoring and API version update.",
-    "proposed_post": "Claude Code v2.1.307 released, adding `claude_code.safety_event` for OpenTelemetry. Builders can now monitor tool call safety checks and permission rules in their Claude integrations.",
-    "source_angle": "Claude Code v2.1.307 adds OpenTelemetry safety events.",
+    "reason": "New Claude Code version released with OpenTelemetry for tool call safety and API update. Ships today.",
+    "proposed_post": "Claude Code v2.1.307 adds OpenTelemetry events for tool call safety monitoring and updates its API version. Builders can now integrate OTel for enhanced observability of tool call safety and must update for API compatibility.",
+    "source_angle": "Claude Code release adds OpenTelemetry for tool call safety, API update.",
     "source_item": {
       "title": "Claude Code v2.1.307",
       "source": "Claude Code Releases",
@@ -16428,18 +16428,16 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-10-25T21:13:21.467458Z",
-    "defer_count": 2,
-    "original_score": 90,
-    "original_reason": "New Claude Code version with OpenTelemetry event for tool call safety monitoring and API version update."
+    "breaking": false,
+    "reactivated_at": "2026-10-26T16:44:50.664363Z"
   },
   {
     "id": "7e0d7c6fe90b",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-10-25T21:13:16.290102Z",
-    "score": 90,
-    "reason": "Open-source AI agent released on GitHub, high community signal, available for immediate deployment by builders.",
-    "proposed_post": "makecindy/cindy, an open-source AI agent, launched on GitHub. It claims to work 'out of the box,' offering a new option for deploying agentic workflows.",
+    "status": "approved",
+    "created_at": "2026-10-26T16:44:50.837789Z",
+    "score": 95,
+    "reason": "Open-source AI agent released on GitHub, available for immediate deployment. High community signal confirms utility.",
+    "proposed_post": "The `makecindy/cindy` open-source AI agent is now available on GitHub, designed to work out-of-the-box. Builders can deploy this agent immediately for new applications without extensive setup.",
     "source_angle": "Open-source AI agent for immediate deployment",
     "source_item": {
       "title": "makecindy/cindy — Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
@@ -16472,9 +16470,51 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-10-25T21:13:21.661990Z",
+    "breaking": true,
+    "reactivated_at": "2026-10-26T16:44:50.837789Z"
+  },
+  {
+    "id": "8aededbbb356",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-10-26T16:44:43.774948Z",
+    "score": 90,
+    "reason": "Open-source desktop workspace for AI agents launched on GitHub, offering local persistence and control. Passes Ships Test.",
+    "proposed_post": "nightly-labs/openbot launched as an open-source desktop workspace for local AI agent management. It provides persistent agent environments, task queues, and browser control for integrating models like Claude/Grok into local workflows.",
+    "source_angle": "GitHub Trending: new open-source tool for local AI agent orchestration.",
+    "source_item": {
+      "title": "nightly-labs/openbot — A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agen",
+      "source": "GitHub Trending",
+      "link": "https://github.com/nightly-labs/openbot",
+      "source_tier": 2,
+      "engagement_score": 312.0,
+      "local_newsworthiness_score": 50,
+      "summary": "Trending on GitHub today: +312 stars. A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.\n[Cluster context: 1 sources, engagement 312, common terms: trending, run, agent-to-agen, desktop, github.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 312,
+        "common_terms": [
+          "trending",
+          "run",
+          "agent-to-agen",
+          "desktop",
+          "github",
+          "local-first",
+          "workspace",
+          "collaboration."
+        ],
+        "cluster_summary": "1 sources, engagement 312. Common terms: trending, run, agent-to-agen, desktop. Lead: nightly-labs/openbot — A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with ded",
+        "alternative_titles": [],
+        "cluster_score": 25
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-10-26T16:44:51.052772Z",
     "defer_count": 1,
     "original_score": 90,
-    "original_reason": "Open-source AI agent released on GitHub, high community signal, available for immediate deployment by builders."
+    "original_reason": "Open-source desktop workspace for AI agents launched on GitHub, offering local persistence and control. Passes Ships Test."
   }
 ]

@@ -1,45 +1,5 @@
 [
   {
-    "rejected_at": "2026-09-15T14:54:03.044702Z",
-    "stage": "review",
-    "title": "MG1937/ASC — ASC is a super FAST Android decompiler front-end designed for Agents/Mobile Researchers.",
-    "link": "https://github.com/MG1937/ASC",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-15T14:54:03.175742Z",
-    "stage": "review",
-    "title": "GitHub Copilot app for Beginners: Using the diff, terminal, and browser",
-    "link": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-using-the-diff-terminal-and-browser/",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-15T18:05:52.323050Z",
-    "stage": "review",
-    "title": "There's a 100% Chance AI Agents Are Ruining the Internet",
-    "link": "https://www.404media.co/theres-a-100-chance-ai-agents-are-already-ruining-the-internet/",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-15T18:05:52.416792Z",
-    "stage": "review",
-    "title": "Anthropic Python SDK v1.6.0",
-    "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.6.0",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
     "rejected_at": "2026-09-15T18:05:52.508722Z",
     "stage": "review",
     "title": "GPT-5.6 Luna vs. GPT-6 Astra: Is a $1.20 Model Good Enough for Code Review?",
@@ -2000,6 +1960,47 @@
     "stage": "review",
     "title": "Claude Code v2.1.310",
     "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.310",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-26T16:44:51.227157Z",
+    "stage": "review",
+    "title": "Ollama v0.40.9",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.40.9",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight",
+      "Version-only release without concrete capability: 'Ollama v0.40.9'"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-26T16:44:51.399207Z",
+    "stage": "review",
+    "title": "alchaincyf/huashu-design — Huashu Design 3.0 · 在 agent 里打一句话，拿回能交付的设计：网页 / App 原型 / 可编辑 PPTX / 动画 / 信息图 · 六个候选挑三个方向 · 84 种带样张的风格库 · 越用越懂你的外观账本与设计体检 · HTML-native design skill for Claude Code, Codex, C",
+    "link": "https://github.com/alchaincyf/huashu-design",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-26T16:44:51.569618Z",
+    "stage": "review",
+    "title": "gitroomhq/postiz-app — 📨 The ultimate agentic social media scheduling tool 🤖",
+    "link": "https://github.com/gitroomhq/postiz-app",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-26T16:44:51.739468Z",
+    "stage": "review",
+    "title": "Cloudflare links vulnerability discovery to defense with OpenAI",
+    "link": "https://openai.com/index/cloudflare-cyber",
     "reasons": [
       "Post is empty",
       "Post lacks a clear claim or insight"
