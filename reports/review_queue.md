@@ -6,6 +6,11 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-10-27T15:51:27.697521Z` [review] **Democratic governance of frontier AI, part II: Empowering cyber defenders** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-27T15:51:27.519986Z` [review] **OpenAI and Poland’s NASK partner to advance AI safety and security** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-27T15:51:27.341703Z` [review] **LangChain v1.7.3** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-27T15:51:27.160438Z` [review] **Ollama v0.40.12-rc1** — Version-only release without concrete capability: 'Ollama v0.40.12-rc1'
+- `2026-10-27T15:51:26.243326Z` [review] **GPT-6.1 Terra** — Version-only release without concrete capability: 'GPT-6.1 Terra'
 - `2026-10-26T19:50:41.116974Z` [review] **Using thousands of AI agents to uncover new leads in biological data** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-26T19:50:41.037084Z` [review] **IBM CEO says open weight models are now good and cheap on-prem** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-26T19:50:40.957715Z` [review] **A 10-year-old CNN outperforms frontier LLMs for skin cancer diagnosis** — Post is empty; Post lacks a clear claim or insight
@@ -26,8 +31,3 @@ No pending review items.
 - `2026-10-23T14:56:25.154083Z` [review] **LangChain v1.6.13** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.6.13'
 - `2026-10-23T14:56:24.982329Z` [review] **Build more responsive apps with the Decisions API** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-22T18:27:58.740223Z` [review] **Claude Code v2.1.308** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'Claude Code v2.1.308'
-- `2026-10-22T18:27:58.650995Z` [review] **Launch HN: Alter (YC S25) – Access control for multi-user agents** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-22T18:27:58.455391Z` [review] **LangChain v1.7.0** — Version-only release without concrete capability: 'LangChain v1.7.0'
-- `2026-10-22T15:06:01.036636Z` [review] **Claude Duet** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-22T15:06:00.949576Z` [review] **LangChain v1.4.7** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-22T15:06:00.862748Z` [review] **Anthropic Python SDK v2.1.0** — Post is empty; Post lacks a clear claim or insight
