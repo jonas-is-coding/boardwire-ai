@@ -1775,6 +1775,31 @@
         "@rasbt.bsky.social follows"
       ],
       "followed_at": "2026-10-26T14:36:26.850501Z"
+    },
+    "did:plc:btm5dpnwa7ku55s6ip5j3zrw": {
+      "handle": "daanvanesch.nl",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3myue32dgm525",
+      "channel": "seed_follows",
+      "score": 2.0,
+      "mode": "discover",
+      "via": [
+        "@danielvanstrien.bsky.social follows",
+        "@dorialexander.bsky.social follows"
+      ],
+      "followed_at": "2026-10-27T13:34:37.820125Z"
+    },
+    "did:plc:6dpwkizdqz5gkb5xldg4hazz": {
+      "handle": "solarkraft.me",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3myue3o2hrl2l",
+      "channel": "seed_followers",
+      "score": 2.0,
+      "mode": "discover",
+      "via": [
+        "follows @natolambert.bsky.social",
+        "follows @emollick.bsky.social",
+        "follows @ai2.bsky.social"
+      ],
+      "followed_at": "2026-10-27T13:34:58.501137Z"
     }
   },
   "runs": [
@@ -2344,6 +2369,22 @@
       ],
       "started_at": "2026-10-26T14:34:31.347337Z",
       "finished_at": "2026-10-26T14:36:26.852694Z"
+    },
+    {
+      "mode": "discover",
+      "dry_run": false,
+      "limit": 12,
+      "planned": 0,
+      "followed": 2,
+      "skipped_already": 0,
+      "failed": 0,
+      "aborted": null,
+      "handles": [
+        "daanvanesch.nl",
+        "solarkraft.me"
+      ],
+      "started_at": "2026-10-27T13:34:37.600169Z",
+      "finished_at": "2026-10-27T13:34:58.503342Z"
     }
   ],
   "pinned_thread": {
