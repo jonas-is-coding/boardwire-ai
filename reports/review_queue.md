@@ -6,6 +6,9 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-10-27T19:20:23.682909Z` [review] **ChatGPT’s expanding world of work** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-27T19:20:23.591578Z` [review] **GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-27T19:20:23.385332Z` [review] **Ollama v0.40.12-rc0** — Version-only release without concrete capability: 'Ollama v0.40.12-rc0'
 - `2026-10-27T15:51:27.697521Z` [review] **Democratic governance of frontier AI, part II: Empowering cyber defenders** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-27T15:51:27.519986Z` [review] **OpenAI and Poland’s NASK partner to advance AI safety and security** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-27T15:51:27.341703Z` [review] **LangChain v1.7.3** — Post is empty; Post lacks a clear claim or insight
@@ -28,6 +31,3 @@ No pending review items.
 - `2026-10-23T18:14:02.254699Z` [review] **NVIDIA Kumo Relational Outperforms Supervised Machine Learning on Relational Data, No Training Required** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-23T18:14:01.697195Z` [review] **Claude Code v2.1.309** — Version-only release without concrete capability: 'Claude Code v2.1.309'
 - `2026-10-23T14:56:25.325830Z` [review] **Renhuai123/ziwei-doushu — 紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-23T14:56:25.154083Z` [review] **LangChain v1.6.13** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.6.13'
-- `2026-10-23T14:56:24.982329Z` [review] **Build more responsive apps with the Decisions API** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-22T18:27:58.740223Z` [review] **Claude Code v2.1.308** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'Claude Code v2.1.308'
