@@ -16605,7 +16605,7 @@
   },
   {
     "id": "71decce31953",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-10-27T19:20:01.585522Z",
     "score": 90,
     "reason": "New Claude Code version with critical fixes for context handling and self-hosted runner stability. Direct impact on builder workflows.",
@@ -16645,16 +16645,17 @@
     "deferred_at": "2026-10-27T19:20:23.274563Z",
     "defer_count": 1,
     "original_score": 90,
-    "original_reason": "New Claude Code version with critical fixes for context handling and self-hosted runner stability. Direct impact on builder workflows."
+    "original_reason": "New Claude Code version with critical fixes for context handling and self-hosted runner stability. Direct impact on builder workflows.",
+    "rejected_at": "2026-10-28T16:35:21.290801Z"
   },
   {
     "id": "ff1f2e8bc3d7",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-10-27T19:20:15.258008Z",
+    "status": "approved",
+    "created_at": "2026-10-28T16:35:21.529357Z",
     "score": 90,
-    "reason": "LFM3 framework/model released on Hugging Face, enabling specialized multimodal development.",
-    "proposed_post": "Hugging Face launched LFM3, a framework for building specialized multimodal models. This enables builders to create custom vision-language models tailored for niche datasets, potentially improving task-specific performance.",
-    "source_angle": "Hugging Face launches LFM3 for specialized multimodal model creation.",
+    "reason": "LFM3 framework/model released on Hugging Face, enabling specialized multimodal development. Passes Ships Test.",
+    "proposed_post": "LiquidAI released the LFM3 framework/model on Hugging Face. Builders can now develop specialized multimodal AI with accessible tools.",
+    "source_angle": "Hugging Face release of LFM3 for specialized multimodal AI.",
     "source_item": {
       "title": "Build specialized multimodal models with LFM3",
       "source": "Hugging Face Blog",
@@ -16681,9 +16682,55 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-10-27T19:20:23.501475Z",
-    "defer_count": 1,
-    "original_score": 90,
-    "original_reason": "LFM3 framework/model released on Hugging Face, enabling specialized multimodal development."
+    "breaking": false,
+    "reactivated_at": "2026-10-28T16:35:21.529357Z"
+  },
+  {
+    "id": "4a61fdcc798a",
+    "status": "approved",
+    "created_at": "2026-10-28T16:35:07.575597Z",
+    "score": 90,
+    "reason": "New Liquid AI LFM3 models (1.7B, multimodal, 256K context) released on Ollama for local agent/tooling use.",
+    "proposed_post": "Liquid AI's 1.7B LFM3 model family (text, vision, audio, omni) is now on Ollama, with the text model offering a 256K context window. Builders can deploy these small, multimodal models locally for agentic workflows, tool calling, and structured output.",
+    "source_angle": "Ollama release of new Liquid AI LFM3 multimodal models.",
+    "source_item": {
+      "title": "Ollama v0.40.12",
+      "source": "Ollama Releases",
+      "link": "https://github.com/ollama/ollama/releases/tag/v0.40.12",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 30,
+      "summary": "<h2>Liquid AI LFM3</h2>\n<p><a href=\"https://ollama.com/library/lfm3\" rel=\"nofollow\">LFM3</a> is Liquid AI's new family of small models built for local agents, tool calling, and structured output, on Liquid's new tri-hybrid architecture. The family includes:</p>\n<ul>\n<li><a href=\"https://ollama.com/library/lfm3\" rel=\"nofollow\">lfm3</a>: a 1.7B text model with a 256K-token context window</li>\n<li><a href=\"https://ollama.com/library/lfm3-vl\" rel=\"nofollow\">lfm3-vl</a>: adds image understanding</li>\n<li><a href=\"https://ollama.com/library/lfm3-audio\" rel=\"nofollow\">lfm3-audio</a>: speech recognition, translation, and text-to-speech in 18 languages</li>\n<li><a href=\"https://ollama.com/library/lfm3-omni\" rel=\"nofollow\">lfm3-omni</a>: text, images, and audio in one model</li>\n</ul>\n<div class=\"highlight highlight-source-shell notranslate position-relative overflow-auto\"><pre>ollama run lfm3</pre></div>\n<h2>d1 decision models</h2>\n<p>Liquid AI's d1 models now come in a 2B size, built on LFM3. <a href=\"https://ollama.com/library/d1\" rel=\"nofollow\">d1</a> makes decisions about text and images, and <a href=\"https://ollama.com/library/d1-omni\" rel=\"nofollow\">d1-omni</a> adds audio.</p>\n<div class=\"highlight highlight-source-shell notranslate position-relative overflow-auto\"><pre>ollama run d1:2b <span class=\"pl-s\"><span class=\"pl-pds\">\"</span>I was charged twice for order 4417.<span class=\"pl-pds\">\"</span></span> --ask <span class=\"pl-s\"><span class=\"pl-pds\">\"</span>Is this a billing issue?<span class=\"pl-pds\">\"</span></span></pre></div>\n<p>Note: lfm3 and d1 2b are supported on Apple hardware in this release.  Support for Linux/Windows coming soon.</p>\n<h2>What's Changed</h2>\n<ul>\n<li>Faster prompt processing on Apple silicon for Gemma 4, Flint and Laguna models</li>\n<li>Speculative decoding now supports DFlash2 draft models on MLX</li>\n<li>Gemma 4 keeps more detail in small images</li>\n<li><code>ollama launch</code> now works with OpenCode v2</li>\n<li>Fixed tool-only assistant turns from Kimi CLI</li>\n<li>Updated MLX and llama.cpp</li>\n</ul>\n<p><strong>Full Changelog</strong>: <a class=\"commit-link\" href=\"https://github.com/ollama/ollama/compare/v0.40.11...v0.40.12\"><tt>v0.40.11...v0.40.12</tt></a></p>\n[Cluster context: 1 sources, engagement 0, common terms: ollama, /li, gemma, tool, draft.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Ollama Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "ollama",
+          "/li",
+          "gemma",
+          "tool",
+          "draft",
+          "speculative",
+          "/ul",
+          "href"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: ollama, /li, gemma, tool. Lead: Ollama v0.40.12",
+        "alternative_titles": [
+          "Ollama v0.40.10",
+          "Ollama v0.40.10-rc0",
+          "Ollama v0.40.9-rc3",
+          "Ollama v0.40.9-rc2"
+        ],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Hey Chloe,\n\nOllama 0.40.12 hat LFM3 von Liquid AI integriert. Das ist spannend, weil es eine neue Familie kleiner Modelle ist, die speziell für lokale Agents, Tool-Calling und strukturierte Outputs entwickelt wurden. Entwickler können damit jetzt effizienter und lokal Agents bauen, die präzise und strukturierte Daten liefern, ohne auf große Cloud-Modelle angewiesen zu sein. Gerade für Edge-Anwendungen oder Embedded Systems eine super Sache.",
+    "chloe_note": "Hey, *Ollama v0.40.12* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New Liquid AI LFM3 models (1.7B, multimodal, 256K context) released on Ollama for local agent/tooling use.Cluster context: 1 sources, engagement 0. Common terms: ollama, /li, gemma, tool. Score aktuell: 90. Link: https://github.com/ollama/ollama/releases/tag/v0.40.12"
   }
 ]

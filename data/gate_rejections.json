@@ -1,57 +1,5 @@
 [
   {
-    "rejected_at": "2026-09-17T18:05:53.800257Z",
-    "stage": "review",
-    "title": "Our framework for reporting model misalignment",
-    "link": "https://openai.com/index/model-misalignment-reporting-framework",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-17T18:05:53.936915Z",
-    "stage": "review",
-    "title": "coder/coder — Secure environments for developers and their agents",
-    "link": "https://github.com/coder/coder",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-17T18:05:54.073756Z",
-    "stage": "review",
-    "title": "vLLM v0.3.0",
-    "link": "https://github.com/vllm-project/vllm/releases/tag/proto-v0.3.0",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight",
-      "Version-only release without concrete capability: 'vLLM v0.3.0'"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-18T14:23:07.897799Z",
-    "stage": "review",
-    "title": "langchain-typesafe==0.0.1a2",
-    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-typesafe%3D%3D0.0.1a2",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight",
-      "Version-only release without concrete capability: 'langchain-typesafe==0.0.1a2'"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-18T14:23:08.037492Z",
-    "stage": "review",
-    "title": "tradesdontlie/tradingview-mcp — AI-assisted TradingView chart analysis — connect Claude Code to your TradingView Desktop for personal workflow automation",
-    "link": "https://github.com/tradesdontlie/tradingview-mcp",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
     "rejected_at": "2026-09-18T14:23:08.176467Z",
     "stage": "review",
     "title": "Show HN: Aclif – Agent CLI framework: one grammar, canonical names across SaaS",
@@ -1996,6 +1944,54 @@
     "stage": "review",
     "title": "ChatGPT’s expanding world of work",
     "link": "https://openai.com/index/chatgpt-expanding-world-of-work",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-28T16:35:21.288353Z",
+    "stage": "review",
+    "title": "Claude Code v2.1.311",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.311",
+    "reasons": [
+      "Version-only release without concrete capability: 'Claude Code v2.1.311'"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-28T16:35:22.266539Z",
+    "stage": "review",
+    "title": "LangChain v1.7.1",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.7.1",
+    "reasons": [
+      "Version-only release without concrete capability: 'LangChain v1.7.1'"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-28T16:35:22.487719Z",
+    "stage": "review",
+    "title": "elayadesign/ai-design-skills",
+    "link": "https://github.com/elayadesign/ai-design-skills",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-28T16:35:22.716698Z",
+    "stage": "review",
+    "title": "expo/skills — A collection of AI agent skills for working with Expo projects and Expo Application Services",
+    "link": "https://github.com/expo/skills",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-28T16:35:22.938620Z",
+    "stage": "review",
+    "title": "Survival LLM: AI assistant and emergency library that runs on your own computer",
+    "link": "https://www.brangus.io/survival-llm",
     "reasons": [
       "Post is empty",
       "Post lacks a clear claim or insight"
