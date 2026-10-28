@@ -16393,7 +16393,7 @@
   },
   {
     "id": "fd7075f124f4",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-26T16:44:50.664363Z",
     "score": 90,
     "reason": "New Claude Code version released with OpenTelemetry for tool call safety and API update. Ships today.",
@@ -16431,11 +16431,12 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": false,
-    "reactivated_at": "2026-10-26T16:44:50.664363Z"
+    "reactivated_at": "2026-10-26T16:44:50.664363Z",
+    "expired_at": "2026-10-28T21:15:50.941872Z"
   },
   {
     "id": "7e0d7c6fe90b",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-26T16:44:50.837789Z",
     "score": 95,
     "reason": "Open-source AI agent released on GitHub, available for immediate deployment. High community signal confirms utility.",
@@ -16473,11 +16474,12 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": true,
-    "reactivated_at": "2026-10-26T16:44:50.837789Z"
+    "reactivated_at": "2026-10-26T16:44:50.837789Z",
+    "expired_at": "2026-10-28T21:15:50.941872Z"
   },
   {
     "id": "8aededbbb356",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-26T19:50:40.696939Z",
     "score": 90,
     "reason": "Open-source tool `nightly-labs/openbot` launched on GitHub, providing local-first workspace for AI agents. Passes Ships Test.",
@@ -16515,7 +16517,8 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": false,
-    "reactivated_at": "2026-10-26T19:50:40.696939Z"
+    "reactivated_at": "2026-10-26T19:50:40.696939Z",
+    "expired_at": "2026-10-28T21:15:50.941872Z"
   },
   {
     "id": "0f1459e83a26",
