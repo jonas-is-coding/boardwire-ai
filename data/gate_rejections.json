@@ -1,57 +1,5 @@
 [
   {
-    "rejected_at": "2026-09-18T14:23:08.176467Z",
-    "stage": "review",
-    "title": "Show HN: Aclif – Agent CLI framework: one grammar, canonical names across SaaS",
-    "link": "https://www.aclif.ai/",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-18T17:39:20.169741Z",
-    "stage": "review",
-    "title": "Microsoft exec called AI scraping 'the largest theft of labor in human history'",
-    "link": "https://techcrunch.com/2026/09/17/microsoft-exec-called-ai-scraping-the-largest-theft-of-labor-in-human-history-new-unredacted-filings-reveal/",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-18T17:39:20.229679Z",
-    "stage": "review",
-    "title": "Anthropic Python SDK v1.7.0",
-    "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v1.7.0",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-20T21:03:20.534996Z",
-    "stage": "review",
-    "title": "vLLM v0.30.0rc2",
-    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.30.0rc2",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight",
-      "Version-only release without concrete capability: 'vLLM v0.30.0rc2'"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-20T21:03:20.677574Z",
-    "stage": "review",
-    "title": "langchain-typesafe==0.0.1a3",
-    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-typesafe%3D%3D0.0.1a3",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight",
-      "Version-only release without concrete capability: 'langchain-typesafe==0.0.1a3'"
-    ]
-  },
-  {
     "rejected_at": "2026-09-21T16:27:24.178670Z",
     "stage": "review",
     "title": "Why I still haven’t bought into true RSI",
@@ -1992,6 +1940,55 @@
     "stage": "review",
     "title": "Survival LLM: AI assistant and emergency library that runs on your own computer",
     "link": "https://www.brangus.io/survival-llm",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-28T19:26:28.503992Z",
+    "stage": "review",
+    "title": "Ollama v0.40.13-rc0",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.40.13-rc0",
+    "reasons": [
+      "Version-only release without concrete capability: 'Ollama v0.40.13-rc0'"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-28T19:26:28.708479Z",
+    "stage": "review",
+    "title": "vLLM v0.33.0rc1",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.33.0rc1",
+    "reasons": [
+      "Version-only release without concrete capability: 'vLLM v0.33.0rc1'"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-28T19:26:28.887038Z",
+    "stage": "review",
+    "title": "LangChain v1.7.7",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-anthropic%3D%3D1.7.7",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight",
+      "Version-only release without concrete capability: 'LangChain v1.7.7'"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-28T19:26:29.062977Z",
+    "stage": "review",
+    "title": "The Agent SDK",
+    "link": "https://cursor.com/blog/agent-sdk",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-28T19:26:29.238469Z",
+    "stage": "review",
+    "title": "Gemini 4 Carbon",
+    "link": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
     "reasons": [
       "Post is empty",
       "Post lacks a clear claim or insight"

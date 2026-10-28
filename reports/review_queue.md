@@ -6,6 +6,11 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-10-28T19:26:29.238469Z` [review] **Gemini 4 Carbon** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-28T19:26:29.062977Z` [review] **The Agent SDK** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-28T19:26:28.887038Z` [review] **LangChain v1.7.7** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.7.7'
+- `2026-10-28T19:26:28.708479Z` [review] **vLLM v0.33.0rc1** — Version-only release without concrete capability: 'vLLM v0.33.0rc1'
+- `2026-10-28T19:26:28.503992Z` [review] **Ollama v0.40.13-rc0** — Version-only release without concrete capability: 'Ollama v0.40.13-rc0'
 - `2026-10-28T16:35:22.938620Z` [review] **Survival LLM: AI assistant and emergency library that runs on your own computer** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-28T16:35:22.716698Z` [review] **expo/skills — A collection of AI agent skills for working with Expo projects and Expo Application Services** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-28T16:35:22.487719Z` [review] **elayadesign/ai-design-skills** — Post is empty; Post lacks a clear claim or insight
@@ -26,8 +31,3 @@ No pending review items.
 - `2026-10-26T19:50:40.797317Z` [review] **Ollama v0.40.11-rc0** — Version-only release without concrete capability: 'Ollama v0.40.11-rc0'
 - `2026-10-26T16:44:51.739468Z` [review] **Cloudflare links vulnerability discovery to defense with OpenAI** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-26T16:44:51.569618Z` [review] **gitroomhq/postiz-app — 📨 The ultimate agentic social media scheduling tool 🤖** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-26T16:44:51.399207Z` [review] **alchaincyf/huashu-design — Huashu Design 3.0 · 在 agent 里打一句话，拿回能交付的设计：网页 / App 原型 / 可编辑 PPTX / 动画 / 信息图 · 六个候选挑三个方向 · 84 种带样张的风格库 · 越用越懂你的外观账本与设计体检 · HTML-native design skill for Claude Code, Codex, C** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-26T16:44:51.227157Z` [review] **Ollama v0.40.9** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'Ollama v0.40.9'
-- `2026-10-25T21:13:22.177219Z` [review] **Claude Code v2.1.310** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-25T21:13:22.005467Z` [review] **Anthropic Python SDK v2.3.0** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-25T21:13:21.832796Z` [review] **Ollama v0.40.11** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'Ollama v0.40.11'
