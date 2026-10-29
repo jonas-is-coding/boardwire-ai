@@ -16522,7 +16522,7 @@
   },
   {
     "id": "0f1459e83a26",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-27T15:51:08.399232Z",
     "score": 90,
     "reason": "Open-source tool for on-device LLM interactions ships today, offering privacy and cost benefits over cloud APIs.",
@@ -16561,11 +16561,12 @@
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das hier ist interessant: \"Show HN: Hob - Open-source, on device alternative to Claude Cowork and ChatGPT\".\n\nDas ist ein Open-Source-Projekt, das lokale LLMs auf dein Gerät bringt. Entwickler können damit ihre eigenen Assistenten bauen, die wirklich privat sind und ohne Cloud-Kosten laufen. Gerade für Prototypen oder interne Tools, bei denen Daten nicht nach außen sollen, ist das ein Game Changer.",
-    "chloe_note": "Kurzes Update: *Show HN: Hob - Open-source, on device alternative to Claude Cowork and ChatGPT* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Open-source tool for on-device LLM interactions ships today, offering privacy and cost benefits over cloud APIs.Cluster context: 1 sources, engagement 175. Common terms: comments, original, points, 158. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://github.com/FrigadeHQ/hob"
+    "chloe_note": "Kurzes Update: *Show HN: Hob - Open-source, on device alternative to Claude Cowork and ChatGPT* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Open-source tool for on-device LLM interactions ships today, offering privacy and cost benefits over cloud APIs.Cluster context: 1 sources, engagement 175. Common terms: comments, original, points, 158. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://github.com/FrigadeHQ/hob",
+    "expired_at": "2026-10-29T16:49:18.209008Z"
   },
   {
     "id": "7887c7fb67a8",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-27T15:51:14.968294Z",
     "score": 90,
     "reason": "GitHub repo with LLM jailbreaks is a direct resource for red-teaming and safety testing. High engagement.",
@@ -16604,7 +16605,8 @@
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das hier ist interessant. togg53192-cmd/jailbreaks trendet gerade auf GitHub mit +890 Stars.\n\nDas ist eine Sammlung von Jailbreaks, die Entwickler direkt nutzen können, um die Grenzen von LLMs auszuloten und für eigene Projekte zu umgehen. Wer sich mit Prompt Engineering beschäftigt oder versucht, bestimmte Verhaltensweisen von Modellen zu erzwingen, findet hier konkrete Ansätze.",
-    "chloe_note": "Kurzes Update: *togg53192-cmd/jailbreaks — LIST OF ALL MY JAILBREAKS* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um GitHub repo with LLM jailbreaks is a direct resource for red-teaming and safety testing. High engagement.Cluster context: 1 sources, engagement 890. Common terms: all, trending, stars., togg53192-cmd/jailbreaks. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://github.com/togg53192-cmd/jailbreaks"
+    "chloe_note": "Kurzes Update: *togg53192-cmd/jailbreaks — LIST OF ALL MY JAILBREAKS* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um GitHub repo with LLM jailbreaks is a direct resource for red-teaming and safety testing. High engagement.Cluster context: 1 sources, engagement 890. Common terms: all, trending, stars., togg53192-cmd/jailbreaks. Ich habe es mit 90 Punkten bewertet. Hier der Link: https://github.com/togg53192-cmd/jailbreaks",
+    "expired_at": "2026-10-29T16:49:18.209008Z"
   },
   {
     "id": "71decce31953",
