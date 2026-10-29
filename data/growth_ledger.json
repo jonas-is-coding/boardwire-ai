@@ -1813,6 +1813,17 @@
         "follows @emollick.bsky.social"
       ],
       "followed_at": "2026-10-28T14:31:01.451382Z"
+    },
+    "did:plc:4gxekim7fail6hw6pddojeh5": {
+      "handle": "andreasferus.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3myzindxi6e2j",
+      "channel": "seed_follows",
+      "score": 1.5,
+      "mode": "discover",
+      "via": [
+        "@danielvanstrien.bsky.social follows"
+      ],
+      "followed_at": "2026-10-29T14:39:45.556612Z"
     }
   },
   "runs": [
@@ -2413,6 +2424,21 @@
       ],
       "started_at": "2026-10-28T14:31:01.190056Z",
       "finished_at": "2026-10-28T14:31:01.453974Z"
+    },
+    {
+      "mode": "discover",
+      "dry_run": false,
+      "limit": 12,
+      "planned": 0,
+      "followed": 1,
+      "skipped_already": 0,
+      "failed": 0,
+      "aborted": null,
+      "handles": [
+        "andreasferus.bsky.social"
+      ],
+      "started_at": "2026-10-29T14:39:45.331053Z",
+      "finished_at": "2026-10-29T14:39:45.559199Z"
     }
   ],
   "pinned_thread": {
