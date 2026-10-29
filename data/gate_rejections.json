@@ -1,35 +1,5 @@
 [
   {
-    "rejected_at": "2026-09-21T16:27:24.178670Z",
-    "stage": "review",
-    "title": "Why I still haven’t bought into true RSI",
-    "link": "https://www.interconnects.ai/p/where-i-stand-on-rsi",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-21T16:27:24.273689Z",
-    "stage": "review",
-    "title": "Introducing the Australian Youth Safety Blueprint",
-    "link": "https://openai.com/index/australian-youth-safety-blueprint",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-21T16:27:24.373565Z",
-    "stage": "review",
-    "title": "zhouxiaoka/autoclip — AutoClip : AI-powered video clipping and highlight generation · 一款智能高光提取与剪辑的二创工具",
-    "link": "https://github.com/zhouxiaoka/autoclip",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
     "rejected_at": "2026-09-21T19:14:26.248654Z",
     "stage": "review",
     "title": "vLLM v0.30.0",
@@ -1989,6 +1959,37 @@
     "stage": "review",
     "title": "Gemini 4 Carbon",
     "link": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-29T16:52:51.156124Z",
+    "stage": "review",
+    "title": "Ollama v0.40.13",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.40.13",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight",
+      "Version-only release without concrete capability: 'Ollama v0.40.13'"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-29T16:52:51.247342Z",
+    "stage": "review",
+    "title": "Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech and Decisions on Apple Platforms",
+    "link": "https://huggingface.co/blog/anydecisionmodel",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-29T16:52:51.340162Z",
+    "stage": "review",
+    "title": "Claude Code regularly sends each background agent’s transcript to its model",
+    "link": "https://gist.github.com/flamerix-ai/c3905705cc4205e5de3011fa2e74efce",
     "reasons": [
       "Post is empty",
       "Post lacks a clear claim or insight"

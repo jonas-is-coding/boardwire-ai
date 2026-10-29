@@ -16740,12 +16740,12 @@
   },
   {
     "id": "1783df37e9e2",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-10-28T19:26:10.323122Z",
+    "status": "approved",
+    "created_at": "2026-10-29T16:52:50.508755Z",
     "score": 90,
-    "reason": "Claude Code v2.1.312 ships with OIDC user ID claim support and critical bug fixes for VS Code integration.",
-    "proposed_post": "Claude Code v2.1.312 adds `oidc.user_id_claim` for flexible user identification, supporting services like Microsoft Entra ID's `oid`. This improves enterprise integration and reliability for developers using Claude Code in production.",
-    "source_angle": "Official release of Claude Code with enterprise integration features.",
+    "reason": "Specific tool release with new security integration (OIDC) and critical bug fixes for developer workflow.",
+    "proposed_post": "Claude Code v2.1.312 adds OIDC user ID claim support and critical VS Code bug fixes. Builders can now integrate Claude Code with OIDC-compliant identity providers and expect a more stable VS Code development experience.",
+    "source_angle": "Claude Code v2.1.312 release with OIDC support and VS Code fixes.",
     "source_item": {
       "title": "Claude Code v2.1.312",
       "source": "Claude Code Releases",
@@ -16777,9 +16777,138 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-10-28T19:26:28.302814Z",
+    "breaking": false,
+    "reactivated_at": "2026-10-29T16:52:50.508755Z"
+  },
+  {
+    "id": "e63c1dfe250d",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-10-29T16:52:38.228426Z",
+    "score": 90,
+    "reason": "New open-source tool on GitHub, high engagement, provides a concrete framework for agentic game dev using Claude Code.",
+    "proposed_post": "Donchitos released Claude-Code-Game-Studios, an open-source project orchestrating 49 AI agents and 72 skills for game development using Claude Code. This offers a structured framework for building agentic game dev workflows, providing a blueprint for complex multi-agent systems.",
+    "source_angle": "GitHub Trending: Open-source Claude Code agent framework for game dev",
+    "source_item": {
+      "title": "Donchitos/Claude-Code-Game-Studios — Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.",
+      "source": "GitHub Trending",
+      "link": "https://github.com/Donchitos/Claude-Code-Game-Studios",
+      "source_tier": 2,
+      "engagement_score": 538.0,
+      "local_newsworthiness_score": 0,
+      "summary": "Trending on GitHub today: +538 stars. Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.\n[Cluster context: 1 sources, engagement 538, common terms: dev, complete, trending, workflow, skills.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 538,
+        "common_terms": [
+          "dev",
+          "complete",
+          "trending",
+          "workflow",
+          "skills",
+          "donchitos/claude-code-game-studios",
+          "turn",
+          "real"
+        ],
+        "cluster_summary": "1 sources, engagement 538. Common terms: dev, complete, trending, workflow. Lead: Donchitos/Claude-Code-Game-Studios — Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, an",
+        "alternative_titles": [],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-10-29T16:52:50.949730Z",
     "defer_count": 1,
     "original_score": 90,
-    "original_reason": "Claude Code v2.1.312 ships with OIDC user ID claim support and critical bug fixes for VS Code integration."
+    "original_reason": "New open-source tool on GitHub, high engagement, provides a concrete framework for agentic game dev using Claude Code."
+  },
+  {
+    "id": "35b57c530902",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-10-29T16:52:45.349204Z",
+    "score": 90,
+    "reason": "Open-source tool launch providing a concrete framework for AI agent development with clear capabilities.",
+    "proposed_post": "CopilotKit/OpenBot is an open-source framework providing isolated browser/file environments for AI agents, logging all actions. Use it to build and observe autonomous agents with clear tool access and integrate existing AG-UI agents.",
+    "source_angle": "GitHub Trending: Open-source framework for autonomous AI agents.",
+    "source_item": {
+      "title": "CopilotKit/OpenBot — Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
+      "source": "GitHub Trending",
+      "link": "https://github.com/CopilotKit/OpenBot",
+      "source_tier": 2,
+      "engagement_score": 240.0,
+      "local_newsworthiness_score": 0,
+      "summary": "Trending on GitHub today: +240 stars. Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.\n[Cluster context: 1 sources, engagement 240, common terms: get, tools, trending, +240, bring.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 240,
+        "common_terms": [
+          "get",
+          "tools",
+          "trending",
+          "+240",
+          "bring",
+          "computer",
+          "agent.",
+          "recorded"
+        ],
+        "cluster_summary": "1 sources, engagement 240. Common terms: get, tools, trending, +240. Lead: CopilotKit/OpenBot — Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with ev",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-10-29T16:52:51.066620Z",
+    "defer_count": 1,
+    "original_score": 90,
+    "original_reason": "Open-source tool launch providing a concrete framework for AI agent development with clear capabilities."
+  },
+  {
+    "id": "ea5ac1404536",
+    "status": "approved",
+    "created_at": "2026-10-29T16:52:31.418835Z",
+    "score": 95,
+    "reason": "Mistral AI released open weights for Mistral Large 4, enabling immediate download, fine-tuning, and deployment by builders.",
+    "proposed_post": "Mistral AI released the weights for Mistral Large 4. Builders can now download, fine-tune, and deploy this new model on their own infrastructure, enabling more control and potentially lower inference costs.",
+    "source_angle": "Mistral AI releases open weights for new large model",
+    "source_item": {
+      "title": "We're releasing the weights of Mistral Large 4",
+      "source": "HackerNews",
+      "link": "https://mistral.ai/news/mistral-large-4-oss/",
+      "source_tier": 3,
+      "engagement_score": 614.5,
+      "local_newsworthiness_score": 40,
+      "summary": "546 points, 137 comments on Hacker News — submitted by kuberwastaken — original: https://mistral.ai/news/mistral-large-4-oss/\n[Cluster context: 1 sources, engagement 614, common terms: 137, hacker, weights, submitted, releasing.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 614,
+        "common_terms": [
+          "137",
+          "hacker",
+          "weights",
+          "submitted",
+          "releasing",
+          "points",
+          "kuberwastaken",
+          "546"
+        ],
+        "cluster_summary": "1 sources, engagement 614. Common terms: 137, hacker, weights, submitted. Lead: We're releasing the weights of Mistral Large 4",
+        "alternative_titles": [],
+        "cluster_score": 40
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": true,
+    "claire_note": "Chloe, schau dir das mal an: Mistral Large 4 Gewichte werden veröffentlicht.\n\nDas ist ein direkter Game Changer für jeden, der mit großen Sprachmodellen arbeitet. Entwickler können jetzt mit einem Top-Modell experimentieren und es für ihre spezifischen Anwendungsfälle feinabstimmen, ohne auf APIs angewiesen zu sein. Das bedeutet mehr Kontrolle, Kosteneffizienz und neue Möglichkeiten für lokale oder private Implementierungen.",
+    "chloe_note": "Kurzes Update: *We're releasing the weights of Mistral Large 4* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Mistral AI released open weights for Mistral Large 4, enabling immediate download, fine-tuning, and deployment by builders.Cluster context: 1 sources, engagement 614. Common terms: 137, hacker, weights, submitted. Ich habe es mit 95 Punkten bewertet. Hier der Link: https://mistral.ai/news/mistral-large-4-oss/"
   }
 ]

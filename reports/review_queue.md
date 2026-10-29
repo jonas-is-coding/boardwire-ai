@@ -6,6 +6,9 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-10-29T16:52:51.340162Z` [review] **Claude Code regularly sends each background agent’s transcript to its model** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-29T16:52:51.247342Z` [review] **Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech and Decisions on Apple Platforms** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-29T16:52:51.156124Z` [review] **Ollama v0.40.13** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'Ollama v0.40.13'
 - `2026-10-28T19:26:29.238469Z` [review] **Gemini 4 Carbon** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-28T19:26:29.062977Z` [review] **The Agent SDK** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-28T19:26:28.887038Z` [review] **LangChain v1.7.7** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.7.7'
@@ -28,6 +31,3 @@ No pending review items.
 - `2026-10-26T19:50:41.037084Z` [review] **IBM CEO says open weight models are now good and cheap on-prem** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-26T19:50:40.957715Z` [review] **A 10-year-old CNN outperforms frontier LLMs for skin cancer diagnosis** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-26T19:50:40.878150Z` [review] **OpenAI and Anthropic cut their LLM prices by up to 80% within a few months. Why?** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-26T19:50:40.797317Z` [review] **Ollama v0.40.11-rc0** — Version-only release without concrete capability: 'Ollama v0.40.11-rc0'
-- `2026-10-26T16:44:51.739468Z` [review] **Cloudflare links vulnerability discovery to defense with OpenAI** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-26T16:44:51.569618Z` [review] **gitroomhq/postiz-app — 📨 The ultimate agentic social media scheduling tool 🤖** — Post is empty; Post lacks a clear claim or insight
