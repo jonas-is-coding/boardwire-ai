@@ -16782,12 +16782,12 @@
   },
   {
     "id": "e63c1dfe250d",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-10-29T16:52:38.228426Z",
+    "status": "approved",
+    "created_at": "2026-10-29T19:30:10.550867Z",
     "score": 90,
-    "reason": "New open-source tool on GitHub, high engagement, provides a concrete framework for agentic game dev using Claude Code.",
-    "proposed_post": "Donchitos released Claude-Code-Game-Studios, an open-source project orchestrating 49 AI agents and 72 skills for game development using Claude Code. This offers a structured framework for building agentic game dev workflows, providing a blueprint for complex multi-agent systems.",
-    "source_angle": "GitHub Trending: Open-source Claude Code agent framework for game dev",
+    "reason": "Open-source tool for agentic game dev using Claude Code, ships today, high community engagement.",
+    "proposed_post": "Donchitos released Claude-Code-Game-Studios, an open-source framework orchestrating 49 AI agents and 72 skills for game development using Claude Code. This provides a concrete, hierarchical system for agentic game dev, offering a blueprint for complex multi-agent workflows.",
+    "source_angle": "Open-source tool for agentic game development with Claude Code.",
     "source_item": {
       "title": "Donchitos/Claude-Code-Game-Studios — Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.",
       "source": "GitHub Trending",
@@ -16819,10 +16819,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-10-29T16:52:50.949730Z",
-    "defer_count": 1,
-    "original_score": 90,
-    "original_reason": "New open-source tool on GitHub, high engagement, provides a concrete framework for agentic game dev using Claude Code."
+    "breaking": false,
+    "reactivated_at": "2026-10-29T19:30:10.550867Z"
   },
   {
     "id": "35b57c530902",
@@ -16863,8 +16861,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-10-29T16:52:51.066620Z",
-    "defer_count": 1,
+    "deferred_at": "2026-10-29T19:30:10.664288Z",
+    "defer_count": 2,
     "original_score": 90,
     "original_reason": "Open-source tool launch providing a concrete framework for AI agent development with clear capabilities."
   },
@@ -16910,5 +16908,47 @@
     "breaking": true,
     "claire_note": "Chloe, schau dir das mal an: Mistral Large 4 Gewichte werden veröffentlicht.\n\nDas ist ein direkter Game Changer für jeden, der mit großen Sprachmodellen arbeitet. Entwickler können jetzt mit einem Top-Modell experimentieren und es für ihre spezifischen Anwendungsfälle feinabstimmen, ohne auf APIs angewiesen zu sein. Das bedeutet mehr Kontrolle, Kosteneffizienz und neue Möglichkeiten für lokale oder private Implementierungen.",
     "chloe_note": "Kurzes Update: *We're releasing the weights of Mistral Large 4* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Mistral AI released open weights for Mistral Large 4, enabling immediate download, fine-tuning, and deployment by builders.Cluster context: 1 sources, engagement 614. Common terms: 137, hacker, weights, submitted. Ich habe es mit 95 Punkten bewertet. Hier der Link: https://mistral.ai/news/mistral-large-4-oss/"
+  },
+  {
+    "id": "e5bd41f7ccac",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-10-29T19:30:07.019127Z",
+    "score": 95,
+    "reason": "New Mistral model available on Hugging Face, direct access for builders.",
+    "proposed_post": "Mistral Large 4 is now available on Hugging Face. Builders can access and deploy this new model for their applications.",
+    "source_angle": "Mistral Large 4 release on Hugging Face",
+    "source_item": {
+      "title": "Welcome Le Chonk: Mistral Large 4 on Hugging Face",
+      "source": "Hugging Face Blog",
+      "link": "https://huggingface.co/blog/mistral-large4",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 10,
+      "summary": "Welcome Le Chonk: Mistral Large 4 on Hugging Face\n[Cluster context: 1 sources, engagement 0, common terms: mistral, face, welcome, chonk, large.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Hugging Face Blog"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "mistral",
+          "face",
+          "welcome",
+          "chonk",
+          "large",
+          "hugging"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: mistral, face, welcome, chonk. Lead: Welcome Le Chonk: Mistral Large 4 on Hugging Face",
+        "alternative_titles": [],
+        "cluster_score": 15
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-10-29T19:30:10.767104Z",
+    "defer_count": 1,
+    "original_score": 95,
+    "original_reason": "New Mistral model available on Hugging Face, direct access for builders."
   }
 ]
