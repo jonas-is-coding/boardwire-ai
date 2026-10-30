@@ -16655,7 +16655,7 @@
   },
   {
     "id": "ff1f2e8bc3d7",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-28T16:35:21.529357Z",
     "score": 90,
     "reason": "LFM3 framework/model released on Hugging Face, enabling specialized multimodal development. Passes Ships Test.",
@@ -16688,11 +16688,12 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": false,
-    "reactivated_at": "2026-10-28T16:35:21.529357Z"
+    "reactivated_at": "2026-10-28T16:35:21.529357Z",
+    "expired_at": "2026-10-30T16:38:01.853076Z"
   },
   {
     "id": "4a61fdcc798a",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-28T16:35:07.575597Z",
     "score": 90,
     "reason": "New Liquid AI LFM3 models (1.7B, multimodal, 256K context) released on Ollama for local agent/tooling use.",
@@ -16736,7 +16737,8 @@
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Hey Chloe,\n\nOllama 0.40.12 hat LFM3 von Liquid AI integriert. Das ist spannend, weil es eine neue Familie kleiner Modelle ist, die speziell für lokale Agents, Tool-Calling und strukturierte Outputs entwickelt wurden. Entwickler können damit jetzt effizienter und lokal Agents bauen, die präzise und strukturierte Daten liefern, ohne auf große Cloud-Modelle angewiesen zu sein. Gerade für Edge-Anwendungen oder Embedded Systems eine super Sache.",
-    "chloe_note": "Hey, *Ollama v0.40.12* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New Liquid AI LFM3 models (1.7B, multimodal, 256K context) released on Ollama for local agent/tooling use.Cluster context: 1 sources, engagement 0. Common terms: ollama, /li, gemma, tool. Score aktuell: 90. Link: https://github.com/ollama/ollama/releases/tag/v0.40.12"
+    "chloe_note": "Hey, *Ollama v0.40.12* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen New Liquid AI LFM3 models (1.7B, multimodal, 256K context) released on Ollama for local agent/tooling use.Cluster context: 1 sources, engagement 0. Common terms: ollama, /li, gemma, tool. Score aktuell: 90. Link: https://github.com/ollama/ollama/releases/tag/v0.40.12",
+    "expired_at": "2026-10-30T16:38:01.853076Z"
   },
   {
     "id": "1783df37e9e2",
