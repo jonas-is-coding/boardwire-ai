@@ -6,6 +6,9 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-10-30T16:41:07.139399Z` [review] **Launch HN: Simantic (YC F26) – Firmware Simulation for AI Agents** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-30T16:41:06.965572Z` [review] **vLLM v0.33.0rc2** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.33.0rc2'
+- `2026-10-30T16:41:06.790969Z` [review] **Claude Code v2.1.314** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-29T19:30:10.857089Z` [review] **An updated Model Spec for more capable and beneficial AI** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-29T16:52:51.340162Z` [review] **Claude Code regularly sends each background agent’s transcript to its model** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-29T16:52:51.247342Z` [review] **Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech and Decisions on Apple Platforms** — Post is empty; Post lacks a clear claim or insight
@@ -28,6 +31,3 @@ No pending review items.
 - `2026-10-27T15:51:27.341703Z` [review] **LangChain v1.7.3** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-27T15:51:27.160438Z` [review] **Ollama v0.40.12-rc1** — Version-only release without concrete capability: 'Ollama v0.40.12-rc1'
 - `2026-10-27T15:51:26.243326Z` [review] **GPT-6.1 Terra** — Version-only release without concrete capability: 'GPT-6.1 Terra'
-- `2026-10-26T19:50:41.116974Z` [review] **Using thousands of AI agents to uncover new leads in biological data** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-26T19:50:41.037084Z` [review] **IBM CEO says open weight models are now good and cheap on-prem** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-26T19:50:40.957715Z` [review] **A 10-year-old CNN outperforms frontier LLMs for skin cancer diagnosis** — Post is empty; Post lacks a clear claim or insight

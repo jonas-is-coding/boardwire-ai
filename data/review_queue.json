@@ -16826,12 +16826,12 @@
   },
   {
     "id": "35b57c530902",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-10-29T16:52:45.349204Z",
-    "score": 90,
-    "reason": "Open-source tool launch providing a concrete framework for AI agent development with clear capabilities.",
-    "proposed_post": "CopilotKit/OpenBot is an open-source framework providing isolated browser/file environments for AI agents, logging all actions. Use it to build and observe autonomous agents with clear tool access and integrate existing AG-UI agents.",
-    "source_angle": "GitHub Trending: Open-source framework for autonomous AI agents.",
+    "status": "approved",
+    "created_at": "2026-10-30T16:41:06.015658Z",
+    "score": 92,
+    "reason": "Open-source tool launch for AI agents with clear capabilities (browser, files, tools, action logging). Ships today.",
+    "proposed_post": "CopilotKit/OpenBot launched as an open-source framework for AI agents. It gives agents a dedicated browser, files, and tools, logging all actions, and supports any AG-UI agent. Builders can use this to deploy auditable, autonomous agents with defined environments.",
+    "source_angle": "New open-source framework for building autonomous AI agents.",
     "source_item": {
       "title": "CopilotKit/OpenBot — Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
       "source": "GitHub Trending",
@@ -16863,10 +16863,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-10-29T19:30:10.664288Z",
-    "defer_count": 2,
-    "original_score": 90,
-    "original_reason": "Open-source tool launch providing a concrete framework for AI agent development with clear capabilities."
+    "breaking": true,
+    "reactivated_at": "2026-10-30T16:41:06.015658Z"
   },
   {
     "id": "ea5ac1404536",
@@ -16913,12 +16911,12 @@
   },
   {
     "id": "e5bd41f7ccac",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-10-29T19:30:07.019127Z",
-    "score": 95,
-    "reason": "New Mistral model available on Hugging Face, direct access for builders.",
-    "proposed_post": "Mistral Large 4 is now available on Hugging Face. Builders can access and deploy this new model for their applications.",
-    "source_angle": "Mistral Large 4 release on Hugging Face",
+    "status": "approved",
+    "created_at": "2026-10-30T16:41:05.844346Z",
+    "score": 90,
+    "reason": "New Mistral model directly available on Hugging Face, enabling immediate builder integration.",
+    "proposed_post": "Mistral Large 4 is now available on Hugging Face. Builders can immediately integrate and experiment with Mistral's latest model via direct access.",
+    "source_angle": "Mistral Large 4 model release on Hugging Face",
     "source_item": {
       "title": "Welcome Le Chonk: Mistral Large 4 on Hugging Face",
       "source": "Hugging Face Blog",
@@ -16948,9 +16946,96 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-10-29T19:30:10.767104Z",
+    "breaking": false,
+    "reactivated_at": "2026-10-30T16:41:05.844346Z"
+  },
+  {
+    "id": "a35cbb4e36e8",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-10-30T16:40:57.404508Z",
+    "score": 90,
+    "reason": "Ollama release adds direct support for NVIDIA's new Nemotron 3.5 Bolt E4B VLM, immediately runnable for local development.",
+    "proposed_post": "Ollama v0.40.10 adds NVIDIA Nemotron 3.5 Bolt E4B, a Gemma 4-based VLM with 128K context & DFlash speculative decoding. Builders can now run a new, fast local vision-language model for conversations, image understanding, and tool use.",
+    "source_angle": "Ollama adds NVIDIA Nemotron 3.5 Bolt E4B VLM for local use.",
+    "source_item": {
+      "title": "Ollama v0.40.10",
+      "source": "Ollama Releases",
+      "link": "https://github.com/ollama/ollama/releases/tag/v0.40.10",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 5,
+      "summary": "<h2>NVIDIA Nemotron 3.5 Bolt E4B</h2>\n<p><a href=\"https://ollama.com/library/nemotron-3.5-bolt\" rel=\"nofollow\">Nemotron 3.5 Bolt E4B</a> is NVIDIA’s smaller, Gemma 4-based vision-language model for fast local conversations, image understanding, and tool use. It supports a 128K-token context window.</p>\n<p>The model includes a DFlash draft for speculative decoding.</p>\n<div class=\"snippet-clipboard-content notranslate position-relative overflow-auto\"><pre class=\"notranslate\"><code>ollama run nemotron-3.5-bolt:e4b\n</code></pre></div>\n<p><strong>Full Changelog</strong>: <a class=\"commit-link\" href=\"https://github.com/ollama/ollama/compare/v0.40.9...v0.40.10\"><tt>v0.40.9...v0.40.10</tt></a></p>\n[Cluster context: 1 sources, engagement 0, common terms: gemma, ollama, decoding., dflash, draft.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Ollama Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "gemma",
+          "ollama",
+          "decoding.",
+          "dflash",
+          "draft",
+          "tool",
+          "speculative",
+          "nemotron-3.5-bolt"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: gemma, ollama, decoding., dflash. Lead: Ollama v0.40.10",
+        "alternative_titles": [
+          "Ollama v0.40.10-rc0"
+        ],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-10-30T16:41:06.617217Z",
     "defer_count": 1,
-    "original_score": 95,
-    "original_reason": "New Mistral model available on Hugging Face, direct access for builders."
+    "original_score": 90,
+    "original_reason": "Ollama release adds direct support for NVIDIA's new Nemotron 3.5 Bolt E4B VLM, immediately runnable for local development."
+  },
+  {
+    "id": "7e631c8c09d7",
+    "status": "approved",
+    "created_at": "2026-10-30T16:40:50.547004Z",
+    "score": 95,
+    "reason": "Critical security vulnerability in deployed Claude Code extensions. Direct, immediate action required for builders.",
+    "proposed_post": "Official Claude Code extensions contain backdoors. Builders using Claude Code should audit their integrations and assess security risks immediately.",
+    "source_angle": "Security alert for Claude Code users",
+    "source_item": {
+      "title": "Backdoors in official Claude Code extensions",
+      "source": "HackerNews",
+      "link": "https://cyberplace.social/@GossiTheDog/117528831681803563",
+      "source_tier": 3,
+      "engagement_score": 652.5,
+      "local_newsworthiness_score": 20,
+      "summary": "644 points, 17 comments on Hacker News — submitted by dsr_ — original: https://cyberplace.social/@GossiTheDog/117528831681803563\n[Cluster context: 1 sources, engagement 652, common terms: original, extensions, comments, backdoors, 644.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 652,
+        "common_terms": [
+          "original",
+          "extensions",
+          "comments",
+          "backdoors",
+          "644",
+          "hacker",
+          "claude",
+          "official"
+        ],
+        "cluster_summary": "1 sources, engagement 652. Common terms: original, extensions, comments, backdoors. Lead: Backdoors in official Claude Code extensions",
+        "alternative_titles": [],
+        "cluster_score": 20
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": true,
+    "claire_note": "Hey Chloe,\n\nHab mir gerade \"Backdoors in official Claude Code extensions\" angesehen. Das ist ein Warnschuss für jeden, der mit AI-Modellen arbeitet. Wenn offizielle Extensions manipuliert werden können, müssen wir wirklich über die Supply Chain Security unserer Tools nachdenken.\n\nEin Dev, der heute Claude oder andere AI-Modelle in seine Projekte integriert, muss das Risiko von manipulierten Erweiterungen verstehen und wie man das mitigiert. Das geht über die reine Modell-Sicherheit hinaus. Könnte ein guter Anstoß sein, um über Best Practices für die Integration von AI-Tools zu sprechen.",
+    "chloe_note": "Hey, *Backdoors in official Claude Code extensions* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Critical security vulnerability in deployed Claude Code extensions. Direct, immediate action required for builders.Cluster context: 1 sources, engagement 652. Common terms: original, extensions, comments, backdoors. Score aktuell: 95. Link: https://cyberplace.social/@GossiTheDog/117528831681803563"
   }
 ]

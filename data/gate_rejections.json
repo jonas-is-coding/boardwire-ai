@@ -1,35 +1,5 @@
 [
   {
-    "rejected_at": "2026-09-21T19:14:26.393220Z",
-    "stage": "review",
-    "title": "Llama Index v0.14.25",
-    "link": "https://github.com/run-llama/llama_index/releases/tag/v0.14.25",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-21T19:14:26.531384Z",
-    "stage": "review",
-    "title": "Pirate Face Rescues LLM Models from Deletion",
-    "link": "https://pirateface.co/",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-22T14:42:29.369832Z",
-    "stage": "review",
-    "title": "superdesigndev/treg — OpenRouter for agent tools. Join community here:  https://discord.gg/6mQYYfFMAn",
-    "link": "https://github.com/superdesigndev/treg",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
     "rejected_at": "2026-09-22T14:42:29.452115Z",
     "stage": "review",
     "title": "LangChain v1.6.2",
@@ -1991,6 +1961,37 @@
     "stage": "review",
     "title": "An updated Model Spec for more capable and beneficial AI",
     "link": "https://openai.com/index/updated-model-spec",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-30T16:41:06.790969Z",
+    "stage": "review",
+    "title": "Claude Code v2.1.314",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.314",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-30T16:41:06.965572Z",
+    "stage": "review",
+    "title": "vLLM v0.33.0rc2",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.33.0rc2",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight",
+      "Version-only release without concrete capability: 'vLLM v0.33.0rc2'"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-30T16:41:07.139399Z",
+    "stage": "review",
+    "title": "Launch HN: Simantic (YC F26) – Firmware Simulation for AI Agents",
+    "link": "https://news.ycombinator.com/item?id=50291116",
     "reasons": [
       "Post is empty",
       "Post lacks a clear claim or insight"
