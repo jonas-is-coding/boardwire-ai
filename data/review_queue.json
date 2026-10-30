@@ -17037,5 +17037,92 @@
     "breaking": true,
     "claire_note": "Hey Chloe,\n\nHab mir gerade \"Backdoors in official Claude Code extensions\" angesehen. Das ist ein Warnschuss für jeden, der mit AI-Modellen arbeitet. Wenn offizielle Extensions manipuliert werden können, müssen wir wirklich über die Supply Chain Security unserer Tools nachdenken.\n\nEin Dev, der heute Claude oder andere AI-Modelle in seine Projekte integriert, muss das Risiko von manipulierten Erweiterungen verstehen und wie man das mitigiert. Das geht über die reine Modell-Sicherheit hinaus. Könnte ein guter Anstoß sein, um über Best Practices für die Integration von AI-Tools zu sprechen.",
     "chloe_note": "Hey, *Backdoors in official Claude Code extensions* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Critical security vulnerability in deployed Claude Code extensions. Direct, immediate action required for builders.Cluster context: 1 sources, engagement 652. Common terms: original, extensions, comments, backdoors. Score aktuell: 95. Link: https://cyberplace.social/@GossiTheDog/117528831681803563"
+  },
+  {
+    "id": "e24c430a2569",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-10-30T19:07:17.894630Z",
+    "score": 90,
+    "reason": "New Ollama RC adds Gemma 4 Nemotron renderer and MLX optimizations for speculative decoding. Ships today for builders.",
+    "proposed_post": "Ollama v0.40.10-rc0 adds a `gemma4-nemotron` renderer and MLX optimizations for Gemma 4, including speculative decoding support. Builders can now deploy Gemma 4 variants with improved tool-calling behavior and potentially faster inference locally.",
+    "source_angle": "Ollama release enables better local Gemma 4 deployment and tool-calling.",
+    "source_item": {
+      "title": "Ollama v0.40.10-rc0",
+      "source": "Ollama Releases",
+      "link": "https://github.com/ollama/ollama/releases/tag/v0.40.10-rc0",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 35,
+      "summary": "<ul>\n<li>renderers: add gemma4-nemotron renderer</li>\n</ul>\n<p>Add a Gemma 4 renderer variant that renders assistant content before<br />\nits tool calls rather than after the tool responses. Models opt in with<br />\nRENDERER gemma4-nemotron; gemma4 auto-detection is unchanged.</p>\n<p>Adds the corresponding chat template as a test fixture for Jinja parity<br />\nchecks.</p>\n<ul>\n<li>mlx: support Gemma 4 targets with DFlash drafts</li>\n</ul>\n<p>Load a draft-owned output head when its config requires one, while preserving the target-head path used by existing DFlash models.</p>\n<p>Expose Gemma 4 hidden-state taps and raw logits for speculative decoding. Report safetensors target precision independently of quantized draft weights.</p>\n[Cluster context: 1 sources, engagement 0, common terms: gemma4, one, raw, report, while.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Ollama Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "gemma4",
+          "one",
+          "raw",
+          "report",
+          "while",
+          "decoding.",
+          "models.",
+          "draft-owned"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: gemma4, one, raw, report. Lead: Ollama v0.40.10-rc0",
+        "alternative_titles": [],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-10-30T19:07:32.972931Z",
+    "defer_count": 1,
+    "original_score": 90,
+    "original_reason": "New Ollama RC adds Gemma 4 Nemotron renderer and MLX optimizations for speculative decoding. Ships today for builders."
+  },
+  {
+    "id": "67d4e77248bd",
+    "status": "approved",
+    "created_at": "2026-10-30T19:07:10.943373Z",
+    "score": 95,
+    "reason": "Critical security alert for builders using AI dev tools. Direct impact on developer workflow and data security.",
+    "proposed_post": "The Claude Code VS Code extension distributed via Cursor Marketplace was compromised with a backdoor. Developers using this extension should uninstall it immediately and review their systems for potential data exposure.",
+    "source_angle": "Security vulnerability in AI dev tool",
+    "source_item": {
+      "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace",
+      "source": "HackerNews",
+      "link": "https://phorion.io/blog/offical-claude-code-vsx-compromise/",
+      "source_tier": 3,
+      "engagement_score": 710.0,
+      "local_newsworthiness_score": 20,
+      "summary": "513 points, 394 comments on Hacker News — submitted by _chall — original: https://phorion.io/blog/offical-claude-code-vsx-compromise/\n[Cluster context: 1 sources, engagement 710, common terms: comments, original, hacker, 394, submitted.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 710,
+        "common_terms": [
+          "comments",
+          "original",
+          "hacker",
+          "394",
+          "submitted",
+          "chall",
+          "513",
+          "points"
+        ],
+        "cluster_summary": "1 sources, engagement 710. Common terms: comments, original, hacker, 394. Lead: Backdoor in Claude Code for VS Code extension on the Cursor Marketplace",
+        "alternative_titles": [],
+        "cluster_score": 20
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": true,
+    "claire_note": "Hey Chloe,\n\nHab da einen Artikel auf HackerNews gefunden, der sofort meine Aufmerksamkeit hatte: \"Backdoor in Claude Code for VS Code extension on the Cursor Marketplace\".\n\nDas ist ein direkter Treffer für unsere Zielgruppe. Entwickler, die AI-Tools wie Claude in ihrer IDE nutzen, müssen das wissen. Eine Backdoor in einer VS Code Extension ist ein massives Sicherheitsrisiko und kann deren ganze Entwicklungsumgebung kompromittieren. Sie brauchen jetzt Infos, wie sie das prüfen und sich schützen können.",
+    "chloe_note": "Dieser Artikel besteht den Ships Test. Es gibt eine klare Handlungsaufforderung für Entwickler, die betroffene Extension zu prüfen und gegebenenfalls zu entfernen, um ein direktes Sicherheitsrisiko zu beheben. Das bietet einen unmittelbaren Nutzen."
   }
 ]

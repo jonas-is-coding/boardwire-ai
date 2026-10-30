@@ -1,46 +1,5 @@
 [
   {
-    "rejected_at": "2026-09-22T14:42:29.452115Z",
-    "stage": "review",
-    "title": "LangChain v1.6.2",
-    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-fireworks%3D%3D1.6.2",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight",
-      "Version-only release without concrete capability: 'LangChain v1.6.2'"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-22T14:42:29.534635Z",
-    "stage": "review",
-    "title": "Claude Code v2.1.275",
-    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.275",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-22T18:02:30.207711Z",
-    "stage": "review",
-    "title": "Advisory Group on Mathematics and Artificial Intelligence",
-    "link": "https://openai.com/index/advisory-group-on-mathematics-and-ai",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-22T18:02:30.300726Z",
-    "stage": "review",
-    "title": "Priorities and principles for effective third party assessments",
-    "link": "https://openai.com/index/priorities-principles-third-party-assessments",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
     "rejected_at": "2026-09-23T14:55:20.400306Z",
     "stage": "review",
     "title": "strands-agents/harness-sdk — Build an agent harness and control it end-to-end. Open-source SDK for production AI agents in Python & TypeScript - any model, any cloud.",
@@ -1992,6 +1951,46 @@
     "stage": "review",
     "title": "Launch HN: Simantic (YC F26) – Firmware Simulation for AI Agents",
     "link": "https://news.ycombinator.com/item?id=50291116",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-30T19:07:33.131214Z",
+    "stage": "review",
+    "title": "Making it easier for websites to express AI training preferences",
+    "link": "https://openai.com/index/helping-websites-express-ai-training-preferences",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-30T19:07:33.291494Z",
+    "stage": "review",
+    "title": "We ran AI agent swarms in Minecraft and Mindustry",
+    "link": "https://labs.ycombinator.com/projects/games/index.html",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-30T19:07:33.451213Z",
+    "stage": "review",
+    "title": "A Working Nintendo in ~1GB of Qwen Weights",
+    "link": "https://github.com/dbreunig/nesformer",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-10-30T19:07:33.612231Z",
+    "stage": "review",
+    "title": "Was I wrong about open models & cyber risks?",
+    "link": "https://www.interconnects.ai/p/was-i-wrong-about-open-models-and",
     "reasons": [
       "Post is empty",
       "Post lacks a clear claim or insight"

@@ -6,6 +6,10 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-10-30T19:07:33.612231Z` [review] **Was I wrong about open models & cyber risks?** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-30T19:07:33.451213Z` [review] **A Working Nintendo in ~1GB of Qwen Weights** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-30T19:07:33.291494Z` [review] **We ran AI agent swarms in Minecraft and Mindustry** — Post is empty; Post lacks a clear claim or insight
+- `2026-10-30T19:07:33.131214Z` [review] **Making it easier for websites to express AI training preferences** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-30T16:41:07.139399Z` [review] **Launch HN: Simantic (YC F26) – Firmware Simulation for AI Agents** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-30T16:41:06.965572Z` [review] **vLLM v0.33.0rc2** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.33.0rc2'
 - `2026-10-30T16:41:06.790969Z` [review] **Claude Code v2.1.314** — Post is empty; Post lacks a clear claim or insight
@@ -27,7 +31,3 @@ No pending review items.
 - `2026-10-27T19:20:23.591578Z` [review] **GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-27T19:20:23.385332Z` [review] **Ollama v0.40.12-rc0** — Version-only release without concrete capability: 'Ollama v0.40.12-rc0'
 - `2026-10-27T15:51:27.697521Z` [review] **Democratic governance of frontier AI, part II: Empowering cyber defenders** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-27T15:51:27.519986Z` [review] **OpenAI and Poland’s NASK partner to advance AI safety and security** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-27T15:51:27.341703Z` [review] **LangChain v1.7.3** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-27T15:51:27.160438Z` [review] **Ollama v0.40.12-rc1** — Version-only release without concrete capability: 'Ollama v0.40.12-rc1'
-- `2026-10-27T15:51:26.243326Z` [review] **GPT-6.1 Terra** — Version-only release without concrete capability: 'GPT-6.1 Terra'
