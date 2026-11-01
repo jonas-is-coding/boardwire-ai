@@ -1,44 +1,5 @@
 [
   {
-    "rejected_at": "2026-09-23T14:55:20.400306Z",
-    "stage": "review",
-    "title": "strands-agents/harness-sdk — Build an agent harness and control it end-to-end. Open-source SDK for production AI agents in Python & TypeScript - any model, any cloud.",
-    "link": "https://github.com/strands-agents/harness-sdk",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-23T14:55:20.537510Z",
-    "stage": "review",
-    "title": "Open-Dev-Society/OpenStock — OpenStock is an open-source alternative to expensive market platforms. Track real-time prices, set personalized alerts, and explore detailed company insights — built openl",
-    "link": "https://github.com/Open-Dev-Society/OpenStock",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-23T14:55:20.675130Z",
-    "stage": "review",
-    "title": "HKUDS/CLI-Anything — \"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:  https://clianything.cc/",
-    "link": "https://github.com/HKUDS/CLI-Anything",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-23T18:21:56.408005Z",
-    "stage": "review",
-    "title": "Claude Opus 5.5",
-    "link": "https://www.anthropic.com/claude-opus-5-5",
-    "reasons": [
-      "Version-only release without concrete capability: 'Claude Opus 5.5'"
-    ]
-  },
-  {
     "rejected_at": "2026-09-23T18:21:57.970387Z",
     "stage": "review",
     "title": "LangChain v1.7.4",
@@ -1991,6 +1952,46 @@
     "stage": "review",
     "title": "Was I wrong about open models & cyber risks?",
     "link": "https://www.interconnects.ai/p/was-i-wrong-about-open-models-and",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-01T22:23:01.329083Z",
+    "stage": "review",
+    "title": "Ollama v0.40.10-rc0",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.40.10-rc0",
+    "reasons": [
+      "Version-only release without concrete capability: 'Ollama v0.40.10-rc0'"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-01T22:23:02.465452Z",
+    "stage": "review",
+    "title": "vLLM v0.33.0",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.33.0",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight",
+      "Version-only release without concrete capability: 'vLLM v0.33.0'"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-01T22:23:02.643498Z",
+    "stage": "review",
+    "title": "patchy631/ai-engineering-hub — In-depth tutorials on LLMs, RAGs and real-world AI agent applications.",
+    "link": "https://github.com/patchy631/ai-engineering-hub",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-01T22:23:02.820240Z",
+    "stage": "review",
+    "title": "cjpais/Handy — A free, open source, and extensible speech-to-text application that works completely offline.",
+    "link": "https://github.com/cjpais/Handy",
     "reasons": [
       "Post is empty",
       "Post lacks a clear claim or insight"

@@ -6,6 +6,10 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-11-01T22:23:02.820240Z` [review] **cjpais/Handy — A free, open source, and extensible speech-to-text application that works completely offline.** — Post is empty; Post lacks a clear claim or insight
+- `2026-11-01T22:23:02.643498Z` [review] **patchy631/ai-engineering-hub — In-depth tutorials on LLMs, RAGs and real-world AI agent applications.** — Post is empty; Post lacks a clear claim or insight
+- `2026-11-01T22:23:02.465452Z` [review] **vLLM v0.33.0** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.33.0'
+- `2026-11-01T22:23:01.329083Z` [review] **Ollama v0.40.10-rc0** — Version-only release without concrete capability: 'Ollama v0.40.10-rc0'
 - `2026-10-30T19:07:33.612231Z` [review] **Was I wrong about open models & cyber risks?** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-30T19:07:33.451213Z` [review] **A Working Nintendo in ~1GB of Qwen Weights** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-30T19:07:33.291494Z` [review] **We ran AI agent swarms in Minecraft and Mindustry** — Post is empty; Post lacks a clear claim or insight
@@ -27,7 +31,3 @@ No pending review items.
 - `2026-10-28T16:35:22.487719Z` [review] **elayadesign/ai-design-skills** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-28T16:35:22.266539Z` [review] **LangChain v1.7.1** — Version-only release without concrete capability: 'LangChain v1.7.1'
 - `2026-10-28T16:35:21.288353Z` [review] **Claude Code v2.1.311** — Version-only release without concrete capability: 'Claude Code v2.1.311'
-- `2026-10-27T19:20:23.682909Z` [review] **ChatGPT’s expanding world of work** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-27T19:20:23.591578Z` [review] **GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-27T19:20:23.385332Z` [review] **Ollama v0.40.12-rc0** — Version-only release without concrete capability: 'Ollama v0.40.12-rc0'
-- `2026-10-27T15:51:27.697521Z` [review] **Democratic governance of frontier AI, part II: Empowering cyber defenders** — Post is empty; Post lacks a clear claim or insight

@@ -16956,12 +16956,12 @@
   },
   {
     "id": "a35cbb4e36e8",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-10-30T16:40:57.404508Z",
+    "status": "approved",
+    "created_at": "2026-11-01T22:23:01.133658Z",
     "score": 90,
-    "reason": "Ollama release adds direct support for NVIDIA's new Nemotron 3.5 Bolt E4B VLM, immediately runnable for local development.",
-    "proposed_post": "Ollama v0.40.10 adds NVIDIA Nemotron 3.5 Bolt E4B, a Gemma 4-based VLM with 128K context & DFlash speculative decoding. Builders can now run a new, fast local vision-language model for conversations, image understanding, and tool use.",
-    "source_angle": "Ollama adds NVIDIA Nemotron 3.5 Bolt E4B VLM for local use.",
+    "reason": "Ollama release adds immediate local support for a new NVIDIA VLM, enabling direct builder experimentation.",
+    "proposed_post": "Ollama v0.40.10 adds direct support for NVIDIA's Nemotron 3.5 Bolt E4B VLM. Builders can now run this multimodal model locally for development and testing without complex setup.",
+    "source_angle": "Ollama now supports NVIDIA's Nemotron 3.5 Bolt E4B VLM for local dev.",
     "source_item": {
       "title": "Ollama v0.40.10",
       "source": "Ollama Releases",
@@ -16995,10 +16995,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-10-30T16:41:06.617217Z",
-    "defer_count": 1,
-    "original_score": 90,
-    "original_reason": "Ollama release adds direct support for NVIDIA's new Nemotron 3.5 Bolt E4B VLM, immediately runnable for local development."
+    "breaking": false,
+    "reactivated_at": "2026-11-01T22:23:01.133658Z"
   },
   {
     "id": "7e631c8c09d7",
@@ -17046,7 +17044,7 @@
   },
   {
     "id": "e24c430a2569",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-10-30T19:07:17.894630Z",
     "score": 90,
     "reason": "New Ollama RC adds Gemma 4 Nemotron renderer and MLX optimizations for speculative decoding. Ships today for builders.",
@@ -17086,7 +17084,8 @@
     "deferred_at": "2026-10-30T19:07:32.972931Z",
     "defer_count": 1,
     "original_score": 90,
-    "original_reason": "New Ollama RC adds Gemma 4 Nemotron renderer and MLX optimizations for speculative decoding. Ships today for builders."
+    "original_reason": "New Ollama RC adds Gemma 4 Nemotron renderer and MLX optimizations for speculative decoding. Ships today for builders.",
+    "rejected_at": "2026-11-01T22:23:01.331026Z"
   },
   {
     "id": "67d4e77248bd",
@@ -17131,5 +17130,92 @@
     "claire_note": "Hey Chloe,\n\nHab da einen Artikel auf HackerNews gefunden, der sofort meine Aufmerksamkeit hatte: \"Backdoor in Claude Code for VS Code extension on the Cursor Marketplace\".\n\nDas ist ein direkter Treffer für unsere Zielgruppe. Entwickler, die AI-Tools wie Claude in ihrer IDE nutzen, müssen das wissen. Eine Backdoor in einer VS Code Extension ist ein massives Sicherheitsrisiko und kann deren ganze Entwicklungsumgebung kompromittieren. Sie brauchen jetzt Infos, wie sie das prüfen und sich schützen können.",
     "chloe_note": "Dieser Artikel besteht den Ships Test. Es gibt eine klare Handlungsaufforderung für Entwickler, die betroffene Extension zu prüfen und gegebenenfalls zu entfernen, um ein direktes Sicherheitsrisiko zu beheben. Das bietet einen unmittelbaren Nutzen.",
     "expired_at": "2026-11-01T21:57:07.934029Z"
+  },
+  {
+    "id": "8c9bbc2dc615",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-11-01T22:22:55.442080Z",
+    "score": 90,
+    "reason": "Direct release from Anthropic with new API features and configuration flags for Claude Code. Passes Ships Test.",
+    "proposed_post": "Claude Code v2.1.316 adds CLAUDE_CODE_DISABLE_ULTRATHINK flag and pooled group budgets via API. Builders can now disable specific agent behaviors and manage shared team spending limits for Claude apps.",
+    "source_angle": "Claude Code release: new config flags & API for cost/behavior control",
+    "source_item": {
+      "title": "Claude Code v2.1.316",
+      "source": "Claude Code Releases",
+      "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.316",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 65,
+      "summary": "<h2>What's changed</h2>\n<ul>\n<li>Added <code>CLAUDE_CODE_DISABLE_ULTRATHINK</code>, which turns the <code>ultrathink</code> keyword off</li>\n<li>Added pooled group budgets to the Claude apps gateway: one monthly budget that a group's members share, on top of each member's own limit, set with <code>pooled_budget</code> on the spend limits admin API</li>\n<li>Added <code>CLAUDE_CODE_DISABLE_LOOPED_CROSS_CERT_DROP</code> to keep system cross-certificates that certify each other in a loop, for servers whose private CA needs one</li>\n<li>Added <code>CLAUDE_CODE_SUBAGENT_EFFORT</code> to set the effort level subagents run at when nothing else names one, instead of inheriting the session's</li>\n<li>Added <code>managed.policy_mode: layered</code> to the Claude apps gateway: every policy that matches a developer applies, each merged over the ones listed below it, not only the first</li>\n<li>Added <code>guardrail.input_tagging</code> on Claude apps gateway Bedrock upstreams, which wraps prompts in the input tags that an Amazon Bedrock guardrail's prompt attacks filter needs; <code>all_messages_and_system</code> also tags the system prompt</li>\n<li>Deprecated fast mode for Opus 4.8 as of October 30, 2026; it will be removed on November 30, 2026. After removal, fast mode requests on Opus 4.8 return an error and do not fall back to standard Opus 4.8. Migrate to Opus 5.5 to keep the speedup</li>\n<li>Fixed shell commands being left running on macOS and Linux when Claude Code exits by itself, for example when credentials are refused or a cloud session is archived</li>\n<li>Fixed bash aliases with line breaks in their value (except in Git Bash), and functions whose names start with a dash, being garbled or lost in the Bash tool's shell</li>\n<li>Fixed bash scripts started from the Bash tool stopping after their first command when <code>SHELLOPTS</code> is exported</li>\n<li>Fixed PowerShell hooks not blocking on exit code 2 when the command begins with a type cast, <code>param</code>, <code>using</code> or an attribute</li>\n<li>Fixed some network requests hanging when a compressed response was cut off or corrupted</li>\n<li>Fixed <code>sonnet</code>, <code>opus</code> and <code>haiku</code> on Vertex AI and Amazon Bedrock showing an error mid-session instead of switching to an older model when the newest is not yet available to the account or region</li>\n<li>Fixed the Claude apps gateway not checking every model a request names against <code>availableModels</code>, <code>deniedModels</code> and <code>models</code>; a request that names a blocked model now gets a 400 naming the field</li>\n<li>Fixed <code>claude auth login</code> refusing to run where managed settings require a Claude apps gateway; in a terminal it now shows the gateway sign-in</li>\n<li>Fixed <code>--restricted</code> sessions uploading files from outside the working directories when a Read allow rule covered them</li>\n<li>Fixed prompts containing invisible characters needing a second Enter to send; plain prompts now send cleaned on the first Enter, and commands still wait for review</li>\n<li>Fixed sub-agents that inherited a parent sub-agent's model moving to the main model when a background job or message woke them</li>\n<li>Fixed a managed <code>autoMode.allow</code> list without <code>\"$defaults\"</code> getting the built-in exceptions back from a host app's <code>--settings</code>, a first rule added in <code>/permissions</code>, or <code>/auto-mode-setup</code></li>\n<li>Fixed cloud sessions and cloud scheduled tasks not being marked as failed when auto mode stopped a turn because the server returned no safety verdict</li>\n<li>Fixed <code>claude -p</code> text output sometimes not saying why auto mode stopped a turn when a background agent was still running</li>\n<li>Fixed <code>CLAUDE_CODE_AUTO_MODE_SERVER=1</code> being ignored in sessions started by a host application (such as Claude Desktop) behind a proxy or LLM gateway with experimental betas turned off</li>\n<li>Fixed plugin MCP <code>headersHelper</code> scripts receiving a corrupted <code>CLAUDE_PLUGIN_ROOT</code> and server URL when a credential-named environment variable was set to a switch value such as <code>1</code></li>\n<li>Fixed the SDK <code>register_repo_root</code> control request not loading the CLAUDE.md of a directory outside the working directory (with <code>CLAUDE_CODE_ADDITIONAL_DIRECTORIES_CLAUDE_MD=1</code>)</li>\n<li>Fixed the Artifact tool showing <code>?</code> for artifact database access rules at the <code>self</code> level, and not quoting those rules back when it refuses a republish that would drop them</li>\n<li>Fixed <code>/model &lt;id&gt;</code> not warning when the model isn't recognized by this version and auto-compact will assume a 200K context window</li>\n<li>Fixed the \"hold space to speak\" hint using up its three showings in one session, and showing an empty key when push-to-talk is unbound</li>\n<li>Fixed Grep and Glob never returning when the search process is killed at the timeout but does not exit, seen on Windows</li>\n<li>Fixed a rare case where resuming a conversation did not restore its plan, when <code>/clear</code> or <code>/resume</code> had been run while part of that conversation was still being saved</li>\n<li>Fixed first-run setup dropping words from the security notes and the terminal-setup explanation in narrow terminals</li>\n<li>Fixed the Enterprise survey card taking a typed 1 or 0 after a short pause; a typed answer now needs Enter</li>\n<li>Self-hosted runner: Fixed a message sent while Claude was working being answered after a Stop, once the session's process had been replaced</li>\n<li>Self-hosted runner: Fixed an MCP server's on/off switch sometimes being lost when a session moved to a new machine</li>\n<li>Windows: Fixed the Bash tool losing your aliases and functions in Git Bash when the rc file sets errexit and pipefail and only winpty aliases, or none, are defined</li>\n<li>Improved <code>/code-review</code> started from the Code tab in Claude Desktop or on the web: cloud and <code>claude remote-control</code> sessions now show the findings card, not a plain-text list</li>\n<li>Improved <code>/diff</code> on large repositories: each refresh usually runs one fewer full-repository git command, and refreshes are spaced out when git is slow</li>\n<li>Improved the messages shown when <code>/ultrareview</code>, a cloud session or a cloud agent finds no GitHub remote: they now say to create a repository at <a href=\"https://github.com/new\">https://github.com/new</a>, and <code>/ultrareview</code> no longer suggests a <code>gh</code> command that <code>gh</code> rejects</li>\n<li>Improved SSL certificate errors to name the likely causes, among them a server that leaves out an intermediate certificate, and the fix for each</li>\n<li>Changed auto mode so that an <code>autoMode.allow</code> list without <code>\"$defaults\"</code> no longer removes the built-in rule on scheduled-task prompts</li>\n<li>Changed server-managed settings for Team and Enterprise logins: settings fetched from Anthropic's API now apply without an approval prompt, and a stored copy that doesn't verify is refused</li>\n<li>[VSCode] Added sign-in to a Claude apps gateway from the chat panel, with no terminal needed</li>\n<li>[VSCode] Changed <code>ultrathink</code> to run its turn at <code>xhigh</code> effort and show in a rainbow in the chat box, as in the terminal</li>\n<li>[VSCode] Fixed the missing Effort slider, Ultracode switch and model name when the model setting has the <code>[1m]</code> tag, such as <code>opus[1m]</code></li>\n<li>[VSCode] Fixed saved <code>/btw</code> side-question history being deleted too early while a settings file has errors</li>\n<li>[VSCode] Fixed a conversation coming back in Auto mode after a reload or restart when its plan was approved with \"Yes, and manually approve edits\"</li>\n<li>[Cloud sessions] Added a form card to cloud sessions, so you can fill in or decline a form an MCP server asks for instead of the request being canceled without you seeing it</li>\n<li>[Cloud sessions] Added a \"Catching up…\" line that shows while a cloud or Remote Control session you switch back to is still bringing its messages up to date</li>\n<li>[Cloud sessions] Changed network secrets so Enterprise members can add and delete them on their own cloud environments, instead of only viewing them</li>\n<li>[Cloud sessions] Improved the Changes pane for cloud sessions: the note about what the list leaves out is now a badge beside the branch name, not a row above the diff</li>\n<li>[Cloud sessions] Fixed file search in a cloud session's Files pane showing folders as ../.. paths after Claude changed directory; results now show their path from the project's root</li>\n<li>[Claude Tag] Fixed Claude refusing to edit or append to a canvas it made in a Slack channel, from that channel, once the canvas was also shared to another channel or a DM</li>\n<li>[Claude Tag] Fixed untagged replies going unanswered in a Slack Connect thread when both organizations have installed Claude and Slack delivered the reply to the other organization's app</li>\n<li>[Claude Tag] Fixed a cloud scheduled task's live status checklist in Slack staying half-done; a run can now edit the top-level messages it posted during that run</li>\n<li>[Claude Tag] Changed a Slack channel's Respond automatically switch to a \"How Claude participates\" choice on the channel's Configure page and in Claude Tag admin settings</li>\n<li>[Code Review] Added a findings-by-severity card to the Code Review analytics page, showing the period's total findings, a daily chart stacked by severity, and each severity's count</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: /resume, survey, append, likely, naming.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Claude Code Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "/resume",
+          "survey",
+          "append",
+          "likely",
+          "naming",
+          "restore",
+          "fall",
+          "plugin"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: /resume, survey, append, likely. Lead: Claude Code v2.1.316",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-11-01T22:23:02.292409Z",
+    "defer_count": 1,
+    "original_score": 90,
+    "original_reason": "Direct release from Anthropic with new API features and configuration flags for Claude Code. Passes Ships Test."
+  },
+  {
+    "id": "e227d8dc69ce",
+    "status": "approved",
+    "created_at": "2026-11-01T22:22:47.931793Z",
+    "score": 90,
+    "reason": "New open-source, self-hostable AI SOC with LLM agent features and concrete integrations. Ships today for builders.",
+    "proposed_post": "beenuar/AiSOC is a new MIT-licensed, self-hostable open-source AI Security Operations Center. It offers LLM-agent triage, MITRE ATT&CK investigation, and a replayable decision ledger. Builders can deploy this to automate security ops or integrate LLM agents into their security s…",
+    "source_angle": "Open-source AI Security Operations Center for LLM agent triage",
+    "source_item": {
+      "title": "beenuar/AiSOC — Open-source AI Security Operations Center: alert fusion, LLM-agent triage, MITRE ATT&CK investigation, and a replayable decision ledger for every agent step. Self-hostable, runs with n",
+      "source": "GitHub Trending",
+      "link": "https://github.com/beenuar/AiSOC",
+      "source_tier": 2,
+      "engagement_score": 436.0,
+      "local_newsworthiness_score": 55,
+      "summary": "Trending on GitHub today: +436 stars. Open-source AI Security Operations Center: alert fusion, LLM-agent triage, MITRE ATT&CK investigation, and a replayable decision ledger for every agent step. Self-hostable, runs with no API keys, MIT licensed. Ships an MCP server for Claude, Cursor and Continue.\n[Cluster context: 1 sources, engagement 436, common terms: every, ships, licensed., operations, stars..]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 436,
+        "common_terms": [
+          "every",
+          "ships",
+          "licensed.",
+          "operations",
+          "stars.",
+          "step.",
+          "github",
+          "center"
+        ],
+        "cluster_summary": "1 sources, engagement 436. Common terms: every, ships, licensed., operations. Lead: beenuar/AiSOC — Open-source AI Security Operations Center: alert fusion, LLM-agent triage, MITRE ATT&CK investigation, a",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Chloe, check das hier: 'beenuar/AiSOC'. Das ist ein Open-Source AI Security Operations Center, das heute auf GitHub durch die Decke geht.\n\nFür Developer ist das mega relevant, weil es alert fusion, LLM-agent triage und MITRE ATT&CK Investigation bietet. Das Beste: Es ist self-hostable, braucht keine API Keys und hat ein replayable decision ledger für jeden Agent Step. Damit können sie ihre Sicherheits-Workflows mit KI-Power automatisieren und gleichzeitig volle Transparenz und Kontrolle behalten. Das ist ein Game Changer für alle, die ihre SecOps effizienter gestalten wollen.",
+    "chloe_note": "*beenuar/AiSOC — Open-source AI Security Operations Center: alert fusion, LLM-agent triage, MITRE ATT&CK investigation, and a replayable decision ledger for every agent step. Self-hostable, runs with n* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New open-source, self-hostable AI SOC with LLM agent features and concrete integrations. Ships today for builders.Cluster context: 1 sources, engagement 436. Common terms: every, ships, licensed., operations. Bewertung: 90. Quelle: https://github.com/beenuar/AiSOC"
   }
 ]
