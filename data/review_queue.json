@@ -16742,7 +16742,7 @@
   },
   {
     "id": "1783df37e9e2",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-29T16:52:50.508755Z",
     "score": 90,
     "reason": "Specific tool release with new security integration (OIDC) and critical bug fixes for developer workflow.",
@@ -16780,11 +16780,12 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": false,
-    "reactivated_at": "2026-10-29T16:52:50.508755Z"
+    "reactivated_at": "2026-10-29T16:52:50.508755Z",
+    "expired_at": "2026-11-01T21:57:07.934029Z"
   },
   {
     "id": "e63c1dfe250d",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-29T19:30:10.550867Z",
     "score": 90,
     "reason": "Open-source tool for agentic game dev using Claude Code, ships today, high community engagement.",
@@ -16822,11 +16823,12 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": false,
-    "reactivated_at": "2026-10-29T19:30:10.550867Z"
+    "reactivated_at": "2026-10-29T19:30:10.550867Z",
+    "expired_at": "2026-11-01T21:57:07.934029Z"
   },
   {
     "id": "35b57c530902",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-30T16:41:06.015658Z",
     "score": 92,
     "reason": "Open-source tool launch for AI agents with clear capabilities (browser, files, tools, action logging). Ships today.",
@@ -16864,11 +16866,12 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": true,
-    "reactivated_at": "2026-10-30T16:41:06.015658Z"
+    "reactivated_at": "2026-10-30T16:41:06.015658Z",
+    "expired_at": "2026-11-01T21:57:07.934029Z"
   },
   {
     "id": "ea5ac1404536",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-29T16:52:31.418835Z",
     "score": 95,
     "reason": "Mistral AI released open weights for Mistral Large 4, enabling immediate download, fine-tuning, and deployment by builders.",
@@ -16907,11 +16910,12 @@
     "is_llm_mode": true,
     "breaking": true,
     "claire_note": "Chloe, schau dir das mal an: Mistral Large 4 Gewichte werden veröffentlicht.\n\nDas ist ein direkter Game Changer für jeden, der mit großen Sprachmodellen arbeitet. Entwickler können jetzt mit einem Top-Modell experimentieren und es für ihre spezifischen Anwendungsfälle feinabstimmen, ohne auf APIs angewiesen zu sein. Das bedeutet mehr Kontrolle, Kosteneffizienz und neue Möglichkeiten für lokale oder private Implementierungen.",
-    "chloe_note": "Kurzes Update: *We're releasing the weights of Mistral Large 4* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Mistral AI released open weights for Mistral Large 4, enabling immediate download, fine-tuning, and deployment by builders.Cluster context: 1 sources, engagement 614. Common terms: 137, hacker, weights, submitted. Ich habe es mit 95 Punkten bewertet. Hier der Link: https://mistral.ai/news/mistral-large-4-oss/"
+    "chloe_note": "Kurzes Update: *We're releasing the weights of Mistral Large 4* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um Mistral AI released open weights for Mistral Large 4, enabling immediate download, fine-tuning, and deployment by builders.Cluster context: 1 sources, engagement 614. Common terms: 137, hacker, weights, submitted. Ich habe es mit 95 Punkten bewertet. Hier der Link: https://mistral.ai/news/mistral-large-4-oss/",
+    "expired_at": "2026-11-01T21:57:07.934029Z"
   },
   {
     "id": "e5bd41f7ccac",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-30T16:41:05.844346Z",
     "score": 90,
     "reason": "New Mistral model directly available on Hugging Face, enabling immediate builder integration.",
@@ -16947,7 +16951,8 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": false,
-    "reactivated_at": "2026-10-30T16:41:05.844346Z"
+    "reactivated_at": "2026-10-30T16:41:05.844346Z",
+    "expired_at": "2026-11-01T21:57:07.934029Z"
   },
   {
     "id": "a35cbb4e36e8",
@@ -16997,7 +17002,7 @@
   },
   {
     "id": "7e631c8c09d7",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-30T16:40:50.547004Z",
     "score": 95,
     "reason": "Critical security vulnerability in deployed Claude Code extensions. Direct, immediate action required for builders.",
@@ -17036,7 +17041,8 @@
     "is_llm_mode": true,
     "breaking": true,
     "claire_note": "Hey Chloe,\n\nHab mir gerade \"Backdoors in official Claude Code extensions\" angesehen. Das ist ein Warnschuss für jeden, der mit AI-Modellen arbeitet. Wenn offizielle Extensions manipuliert werden können, müssen wir wirklich über die Supply Chain Security unserer Tools nachdenken.\n\nEin Dev, der heute Claude oder andere AI-Modelle in seine Projekte integriert, muss das Risiko von manipulierten Erweiterungen verstehen und wie man das mitigiert. Das geht über die reine Modell-Sicherheit hinaus. Könnte ein guter Anstoß sein, um über Best Practices für die Integration von AI-Tools zu sprechen.",
-    "chloe_note": "Hey, *Backdoors in official Claude Code extensions* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Critical security vulnerability in deployed Claude Code extensions. Direct, immediate action required for builders.Cluster context: 1 sources, engagement 652. Common terms: original, extensions, comments, backdoors. Score aktuell: 95. Link: https://cyberplace.social/@GossiTheDog/117528831681803563"
+    "chloe_note": "Hey, *Backdoors in official Claude Code extensions* habe ich gerade fuer den Publish-Queue freigegeben. Das passt fuer Builder besonders wegen Critical security vulnerability in deployed Claude Code extensions. Direct, immediate action required for builders.Cluster context: 1 sources, engagement 652. Common terms: original, extensions, comments, backdoors. Score aktuell: 95. Link: https://cyberplace.social/@GossiTheDog/117528831681803563",
+    "expired_at": "2026-11-01T21:57:07.934029Z"
   },
   {
     "id": "e24c430a2569",
@@ -17084,7 +17090,7 @@
   },
   {
     "id": "67d4e77248bd",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-10-30T19:07:10.943373Z",
     "score": 95,
     "reason": "Critical security alert for builders using AI dev tools. Direct impact on developer workflow and data security.",
@@ -17123,6 +17129,7 @@
     "is_llm_mode": true,
     "breaking": true,
     "claire_note": "Hey Chloe,\n\nHab da einen Artikel auf HackerNews gefunden, der sofort meine Aufmerksamkeit hatte: \"Backdoor in Claude Code for VS Code extension on the Cursor Marketplace\".\n\nDas ist ein direkter Treffer für unsere Zielgruppe. Entwickler, die AI-Tools wie Claude in ihrer IDE nutzen, müssen das wissen. Eine Backdoor in einer VS Code Extension ist ein massives Sicherheitsrisiko und kann deren ganze Entwicklungsumgebung kompromittieren. Sie brauchen jetzt Infos, wie sie das prüfen und sich schützen können.",
-    "chloe_note": "Dieser Artikel besteht den Ships Test. Es gibt eine klare Handlungsaufforderung für Entwickler, die betroffene Extension zu prüfen und gegebenenfalls zu entfernen, um ein direktes Sicherheitsrisiko zu beheben. Das bietet einen unmittelbaren Nutzen."
+    "chloe_note": "Dieser Artikel besteht den Ships Test. Es gibt eine klare Handlungsaufforderung für Entwickler, die betroffene Extension zu prüfen und gegebenenfalls zu entfernen, um ein direktes Sicherheitsrisiko zu beheben. Das bietet einen unmittelbaren Nutzen.",
+    "expired_at": "2026-11-01T21:57:07.934029Z"
   }
 ]
