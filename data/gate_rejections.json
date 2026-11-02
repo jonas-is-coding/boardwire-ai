@@ -1,44 +1,5 @@
 [
   {
-    "rejected_at": "2026-09-24T14:56:24.262747Z",
-    "stage": "review",
-    "title": "NVIDIA/Model-Optimizer — A unified library of SOTA model optimization techniques like quantization, distillation, pruning, neural architecture search, speculative decoding, etc. It compresses deep lea",
-    "link": "https://github.com/NVIDIA/Model-Optimizer",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-24T14:56:24.360428Z",
-    "stage": "review",
-    "title": "leejet/stable-diffusion.cpp — Diffusion model(SD,Flux,Wan,Qwen Image,Z-Image,...) inference in pure C/C++",
-    "link": "https://github.com/leejet/stable-diffusion.cpp",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-24T18:23:13.134175Z",
-    "stage": "review",
-    "title": "LangChain v1.6.5",
-    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.6.5",
-    "reasons": [
-      "Version-only release without concrete capability: 'LangChain v1.6.5'"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-24T18:23:13.230842Z",
-    "stage": "review",
-    "title": "Advancing Private AI Compute with secure, server-side memory",
-    "link": "https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
     "rejected_at": "2026-09-24T18:23:13.329299Z",
     "stage": "review",
     "title": "Claude Code v2.1.271",
@@ -1990,6 +1951,45 @@
     "stage": "review",
     "title": "max-sixty/worktrunk — Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
     "link": "https://github.com/max-sixty/worktrunk",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-02T22:41:31.722662Z",
+    "stage": "review",
+    "title": "LangChain v1.7.9",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-anthropic%3D%3D1.7.9",
+    "reasons": [
+      "Version-only release without concrete capability: 'LangChain v1.7.9'"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-02T22:41:31.911008Z",
+    "stage": "review",
+    "title": "Astra can read and write weights to improve Qwen",
+    "link": "https://rikiyat.github.io/blog/weight-space-programming/",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-02T22:41:32.098175Z",
+    "stage": "review",
+    "title": "LifeVal",
+    "link": "https://openai.com/index/lifeval",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-02T22:41:32.284384Z",
+    "stage": "review",
+    "title": "Launch HN: Momentic (YC W24) – Agents that catch bugs by using your app",
+    "link": "https://momentic.ai/",
     "reasons": [
       "Post is empty",
       "Post lacks a clear claim or insight"

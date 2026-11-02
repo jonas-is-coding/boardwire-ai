@@ -6,6 +6,10 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-11-02T22:41:32.284384Z` [review] **Launch HN: Momentic (YC W24) – Agents that catch bugs by using your app** — Post is empty; Post lacks a clear claim or insight
+- `2026-11-02T22:41:32.098175Z` [review] **LifeVal** — Post is empty; Post lacks a clear claim or insight
+- `2026-11-02T22:41:31.911008Z` [review] **Astra can read and write weights to improve Qwen** — Post is empty; Post lacks a clear claim or insight
+- `2026-11-02T22:41:31.722662Z` [review] **LangChain v1.7.9** — Version-only release without concrete capability: 'LangChain v1.7.9'
 - `2026-11-02T20:16:29.444569Z` [review] **max-sixty/worktrunk — Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-02T20:16:29.267743Z` [review] **Fair use benefits everyone** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-02T20:16:29.091508Z` [review] **The AI cost of JavaScript frameworks** — Post is empty; Post lacks a clear claim or insight
@@ -27,7 +31,3 @@ No pending review items.
 - `2026-10-28T19:26:29.238469Z` [review] **Gemini 4 Carbon** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-28T19:26:29.062977Z` [review] **The Agent SDK** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-28T19:26:28.887038Z` [review] **LangChain v1.7.7** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.7.7'
-- `2026-10-28T19:26:28.708479Z` [review] **vLLM v0.33.0rc1** — Version-only release without concrete capability: 'vLLM v0.33.0rc1'
-- `2026-10-28T19:26:28.503992Z` [review] **Ollama v0.40.13-rc0** — Version-only release without concrete capability: 'Ollama v0.40.13-rc0'
-- `2026-10-28T16:35:22.938620Z` [review] **Survival LLM: AI assistant and emergency library that runs on your own computer** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-28T16:35:22.716698Z` [review] **expo/skills — A collection of AI agent skills for working with Expo projects and Expo Application Services** — Post is empty; Post lacks a clear claim or insight

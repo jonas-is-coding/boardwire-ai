@@ -17255,8 +17255,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-11-02T20:16:28.916435Z",
-    "defer_count": 1,
+    "deferred_at": "2026-11-02T22:41:31.069518Z",
+    "defer_count": 2,
     "original_score": 90,
     "original_reason": "Qodo launched an integration with OpenAI Codex for contextualized code review, enabling early P0 issue detection. This is a usable tool."
   },
@@ -17345,5 +17345,93 @@
     "breaking": true,
     "claire_note": "Hey Chloe,\n\nCheck this out: 'vercel-labs/agent-desktop'. Das ist eine CLI für AI-Agenten, die Computer nutzen.\n\nDas ist super relevant, weil es Entwicklern einen direkten Weg gibt, AI-Agenten zu bauen, die wirklich mit ihrem Rechner interagieren. Stell dir vor, du automatisierst Workflows, indem der Agent nicht nur Code generiert, sondern auch Befehle ausführt, Dateien bearbeitet oder durch GUIs navigiert. Das ist ein Game-Changer für alles, was mit Automatisierung und intelligenten Assistenten zu tun hat.",
     "chloe_note": "*vercel-labs/agent-desktop — Computer use CLI for AI agents* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New open-source CLI tool for AI agents to control local machines. High community signal, direct utility for agent builders.Cluster context: 1 sources, engagement 2243. Common terms: trending, cli, computer, +2243. Bewertung: 95. Quelle: https://github.com/vercel-labs/agent-desktop"
+  },
+  {
+    "id": "1b47a3f717df",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-11-02T22:41:13.026601Z",
+    "score": 90,
+    "reason": "SDK update with new GA API methods for operational control (analytics, spend limits, RBAC).",
+    "proposed_post": "Anthropic Python SDK v2.4.0 adds GA methods for analytics, spend limits, and RBAC. Builders can now programmatically manage API usage, costs, and access control for their Anthropic deployments.",
+    "source_angle": "Anthropic SDK adds operational API features",
+    "source_item": {
+      "title": "Anthropic Python SDK v2.4.0",
+      "source": "Anthropic Python SDK Releases",
+      "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.4.0",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 35,
+      "summary": "<h3>Features</h3>\n<ul>\n<li><strong>api:</strong> add GA methods for analytics, spend limits and RBAC</li>\n<li><strong>api:</strong> add named beta types for unified metrics and RBAC delete responses</li>\n<li><strong>api:</strong> add shared analytics order and increase request actor types</li>\n<li><strong>api:</strong> add tool_use_limit_reached_error and compaction_limit_reached_error session error types</li>\n<li><strong>api:</strong> add types for analytics group_by and spend limit period filters</li>\n<li><strong>api:</strong> add user_profile_id to External Keys and Workspaces</li>\n</ul>\n<h3>Bug Fixes</h3>\n<ul>\n<li><strong>api:</strong> make spend_limit nullable in the spend limit increase request approve response</li>\n<li><strong>api:</strong> require always-sent analytics fields and drop the unused project product field</li>\n<li><strong>client:</strong> let pydantic validate params types that accept omit</li>\n</ul>\n<h3>Chores</h3>\n<ul>\n<li><strong>ci:</strong> remove unused build upload steps</li>\n<li><strong>docs:</strong> clarify the Slack channel id description</li>\n<li><strong>docs:</strong> clarify what disabling the Compliance API stops</li>\n<li><strong>docs:</strong> clarify what the capability_access_all role action grants</li>\n<li><strong>docs:</strong> link Dreams model fields to the supported models section</li>\n<li><strong>docs:</strong> update example user ID in Admin API examples</li>\n<li><strong>internal:</strong> add a section for each repository's own review rules</li>\n<li><strong>internal:</strong> plainer wording in worker comments</li>\n</ul>\n<h3>Documentation</h3>\n<ul>\n<li><strong>client:</strong> add missing await to the async parse() docstring example</li>\n<li><strong>examples:</strong> keep the message threads example valid on Sonnet 5.5</li>\n<li><strong>examples:</strong> use current model IDs</li>\n<li><strong>readme:</strong> point to the docs site for documentation</li>\n<li>link to the SDK documentation instead of removed README sections</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: remove, role, features, types, client.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Anthropic Python SDK Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "remove",
+          "role",
+          "features",
+          "types",
+          "client",
+          "/strong",
+          "require",
+          "order"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: remove, role, features, types. Lead: Anthropic Python SDK v2.4.0",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-11-02T22:41:31.280183Z",
+    "defer_count": 1,
+    "original_score": 90,
+    "original_reason": "SDK update with new GA API methods for operational control (analytics, spend limits, RBAC)."
+  },
+  {
+    "id": "209342871b80",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-11-02T22:41:19.713702Z",
+    "score": 90,
+    "reason": "Open-source web scraping framework trending on GitHub. Ships today, clear utility for data acquisition.",
+    "proposed_post": "D4Vinci/Scrapling, an open-source web scraping framework, is trending on GitHub with 858 stars. Evaluate this new tool for data acquisition in AI training or RAG applications.",
+    "source_angle": "New open-source web scraping framework for AI data acquisition.",
+    "source_item": {
+      "title": "D4Vinci/Scrapling — 🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here:  https://discord.gg/EMgGbDceNQ  and follow here for",
+      "source": "GitHub Trending",
+      "link": "https://github.com/D4Vinci/Scrapling",
+      "source_tier": 2,
+      "engagement_score": 858.0,
+      "local_newsworthiness_score": 15,
+      "summary": "Trending on GitHub today: +858 stars. 🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here:  https://discord.gg/EMgGbDceNQ  and follow here for daily tips and tricks:  https://x.com/Scrapling_dev\n[Cluster context: 1 sources, engagement 858, common terms: request, +858, web, everything, follow.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 858,
+        "common_terms": [
+          "request",
+          "+858",
+          "web",
+          "everything",
+          "follow",
+          "tricks",
+          "trending",
+          "handles"
+        ],
+        "cluster_summary": "1 sources, engagement 858. Common terms: request, +858, web, everything. Lead: D4Vinci/Scrapling — 🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale cra",
+        "alternative_titles": [],
+        "cluster_score": 55
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-11-02T22:41:31.492274Z",
+    "defer_count": 1,
+    "original_score": 90,
+    "original_reason": "Open-source web scraping framework trending on GitHub. Ships today, clear utility for data acquisition."
   }
 ]
