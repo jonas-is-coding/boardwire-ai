@@ -17425,8 +17425,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-11-03T17:44:27.499104Z",
-    "defer_count": 2,
+    "deferred_at": "2026-11-03T20:29:26.866020Z",
+    "defer_count": 3,
     "original_score": 90,
     "original_reason": "Open-source web scraping framework trending on GitHub. Ships today, clear utility for data acquisition."
   },
@@ -17472,5 +17472,93 @@
     "breaking": true,
     "claire_note": "Hey Chloe,\n\nCheck this out: JustVugg/colibri. Direkt von GitHub Trending, +803 Sterne in kürzester Zeit.\n\nDas ist ein hierarchischer Inferenz-Engine für MoE-Modelle. Der Clou ist, wie die Experten gemanagt werden: Hot auf der GPU, Warm in RAM, Cold von NVMe gestreamt. Das ist pures Ressourcen-Management für große Modelle, geschrieben in C, läuft auf bestehender Hardware. Entwickler, die mit den Kosten und der Performance von MoE-Modellen kämpfen, kriegen hier einen direkten Hebel, um das Inference deutlich effizienter zu gestalten. Das ist genau die Art von Low-Level-Optimierung, die das Deployment von Frontier-Modellen praktikabler macht.",
     "chloe_note": "Kurzes Update: *JustVugg/colibri — A hierarchical inference engine for frontier MoE models: hot experts on the GPU (CUDA, Vulkan), warm ones in RAM, cold ones streamed from NVMe. Written in C, runs on the hardware yo* ist von mir fuer den Publish-Queue freigegeben. Hauptgrund ist der klare Builder-Nutzen rund um New open-source MoE inference engine optimizes expert placement across GPU/RAM/NVMe. Ships today, high community signal.Cluster context: 1 sources, engagement 803. Common terms: streamed, hierarchical, already, vulkan. Ich habe es mit 95 Punkten bewertet. Hier der Link: https://github.com/JustVugg/colibri"
+  },
+  {
+    "id": "5f1bcdb12f4d",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-11-03T20:28:59.505607Z",
+    "score": 90,
+    "reason": "Postman update silently installs AI features and attempts data sharing, impacting developer privacy and security. High community signal.",
+    "proposed_post": "Postman v10.21.0+ silently auto-installs AI plugins and attempts to share API data. Builders should audit their Postman privacy settings or consider alternatives to protect sensitive API credentials and data.",
+    "source_angle": "Critical security/privacy alert for developers using Postman.",
+    "source_item": {
+      "title": "Postman silently auto-installs AI plugins and attempts to share all API data",
+      "source": "HackerNews",
+      "link": "https://github.com/postmanlabs/postman-app-support/issues/14370",
+      "source_tier": 3,
+      "engagement_score": 822.5,
+      "local_newsworthiness_score": 95,
+      "summary": "708 points, 229 comments on Hacker News — submitted by sidgarimella — original: https://github.com/postmanlabs/postman-app-support/issues/14370\n[Cluster context: 1 sources, engagement 822, common terms: comments, attempts, submitted, 229, points.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 822,
+        "common_terms": [
+          "comments",
+          "attempts",
+          "submitted",
+          "229",
+          "points",
+          "hacker",
+          "original",
+          "silently"
+        ],
+        "cluster_summary": "1 sources, engagement 822. Common terms: comments, attempts, submitted, 229. Lead: Postman silently auto-installs AI plugins and attempts to share all API data",
+        "alternative_titles": [],
+        "cluster_score": 40
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-11-03T20:29:27.067060Z",
+    "defer_count": 1,
+    "original_score": 90,
+    "original_reason": "Postman update silently installs AI features and attempts data sharing, impacting developer privacy and security. High community signal."
+  },
+  {
+    "id": "6d52284f2ac5",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-11-03T20:29:21.532954Z",
+    "score": 85,
+    "reason": "Debunks a significant, misleading technical claim, providing actionable clarity for builders. Passes Ships Test by delivering critical, verified information.",
+    "proposed_post": "A previous claim that Astra can read/write weights to improve Qwen models is misleading. Builders should not rely on this specific capability for model improvement or integration.",
+    "source_angle": "Debunking misleading Astra/Qwen weight manipulation claims",
+    "source_item": {
+      "title": "The 'Astra can read and write weights to improve Qwen' post is misleading",
+      "source": "HackerNews",
+      "link": "https://honnibal.dev/blog/astra-read-write-misleading",
+      "source_tier": 3,
+      "engagement_score": 878.5,
+      "local_newsworthiness_score": 40,
+      "summary": "787 points, 183 comments on Hacker News — submitted by syllogism — original: https://honnibal.dev/blog/astra-read-write-misleading\n[Cluster context: 1 sources, engagement 878, common terms: improve, misleading, 787, 183, write.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 878,
+        "common_terms": [
+          "improve",
+          "misleading",
+          "787",
+          "183",
+          "write",
+          "submitted",
+          "qwen",
+          "hacker"
+        ],
+        "cluster_summary": "1 sources, engagement 878. Common terms: improve, misleading, 787, 183. Lead: The 'Astra can read and write weights to improve Qwen' post is misleading",
+        "alternative_titles": [],
+        "cluster_score": 40
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-11-03T20:29:27.474654Z",
+    "defer_count": 1,
+    "original_score": 85,
+    "original_reason": "Debunks a significant, misleading technical claim, providing actionable clarity for builders. Passes Ships Test by delivering critical, verified information."
   }
 ]

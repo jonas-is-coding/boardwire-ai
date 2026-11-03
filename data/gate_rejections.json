@@ -1,45 +1,5 @@
 [
   {
-    "rejected_at": "2026-09-25T15:10:25.149127Z",
-    "stage": "review",
-    "title": "AI-powered fuzzing with the GitHub Security Lab Taskflow Agent",
-    "link": "https://github.blog/security/application-security/ai-powered-fuzzing-with-the-github-security-lab-taskflow-agent/",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-25T15:10:25.290367Z",
-    "stage": "review",
-    "title": "androoAGI/starnet — A living pixel-art station where real AI agents do real work. Local-first desktop agent harness - bring your own key, watch your crew actually run.",
-    "link": "https://github.com/androoAGI/starnet",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-25T15:10:25.431116Z",
-    "stage": "review",
-    "title": "LangChain v1.6.3",
-    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-fireworks%3D%3D1.6.3",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight",
-      "Version-only release without concrete capability: 'LangChain v1.6.3'"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-25T18:26:35.570471Z",
-    "stage": "review",
-    "title": "LangChain v1.6.5",
-    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.6.5",
-    "reasons": [
-      "Version-only release without concrete capability: 'LangChain v1.6.5'"
-    ]
-  },
-  {
     "rejected_at": "2026-09-25T18:26:36.038298Z",
     "stage": "review",
     "title": "Airbnb widens access to GPT-6 Astra and OpenAI frontier models",
@@ -1991,6 +1951,45 @@
     "stage": "review",
     "title": "LangChain v1.4.8",
     "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.4.8",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-03T20:29:27.271247Z",
+    "stage": "review",
+    "title": "LangChain v1.7.4",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.7.4",
+    "reasons": [
+      "Version-only release without concrete capability: 'LangChain v1.7.4'"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-03T20:29:27.652869Z",
+    "stage": "review",
+    "title": "Octomind – open-source AI harness that saves your tokens, static rust",
+    "link": "https://github.com/Muvon/octomind",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-03T20:29:27.832322Z",
+    "stage": "review",
+    "title": "spotify/portal-ai-plugins",
+    "link": "https://github.com/spotify/portal-ai-plugins",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-03T20:29:28.012183Z",
+    "stage": "review",
+    "title": "Usagi-org/ai-goofish-monitor — 基于 Playwright 和AI实现的闲鱼多任务实时/定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。",
+    "link": "https://github.com/Usagi-org/ai-goofish-monitor",
     "reasons": [
       "Post is empty",
       "Post lacks a clear claim or insight"

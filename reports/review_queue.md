@@ -6,6 +6,10 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-11-03T20:29:28.012183Z` [review] **Usagi-org/ai-goofish-monitor — 基于 Playwright 和AI实现的闲鱼多任务实时/定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。** — Post is empty; Post lacks a clear claim or insight
+- `2026-11-03T20:29:27.832322Z` [review] **spotify/portal-ai-plugins** — Post is empty; Post lacks a clear claim or insight
+- `2026-11-03T20:29:27.652869Z` [review] **Octomind – open-source AI harness that saves your tokens, static rust** — Post is empty; Post lacks a clear claim or insight
+- `2026-11-03T20:29:27.271247Z` [review] **LangChain v1.7.4** — Version-only release without concrete capability: 'LangChain v1.7.4'
 - `2026-11-03T17:44:28.497989Z` [review] **LangChain v1.4.8** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-03T17:44:28.318967Z` [review] **Ollama v0.40.14** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-03T17:44:28.142979Z` [review] **Claude Code v2.1.317** — Post is empty; Post lacks a clear claim or insight
@@ -27,7 +31,3 @@ No pending review items.
 - `2026-10-30T16:41:07.139399Z` [review] **Launch HN: Simantic (YC F26) – Firmware Simulation for AI Agents** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-30T16:41:06.965572Z` [review] **vLLM v0.33.0rc2** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.33.0rc2'
 - `2026-10-30T16:41:06.790969Z` [review] **Claude Code v2.1.314** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-29T19:30:10.857089Z` [review] **An updated Model Spec for more capable and beneficial AI** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-29T16:52:51.340162Z` [review] **Claude Code regularly sends each background agent’s transcript to its model** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-29T16:52:51.247342Z` [review] **Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech and Decisions on Apple Platforms** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-29T16:52:51.156124Z` [review] **Ollama v0.40.13** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'Ollama v0.40.13'
