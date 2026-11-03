@@ -16956,7 +16956,7 @@
   },
   {
     "id": "a35cbb4e36e8",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-11-01T22:23:01.133658Z",
     "score": 90,
     "reason": "Ollama release adds immediate local support for a new NVIDIA VLM, enabling direct builder experimentation.",
@@ -16996,7 +16996,8 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": false,
-    "reactivated_at": "2026-11-01T22:23:01.133658Z"
+    "reactivated_at": "2026-11-01T22:23:01.133658Z",
+    "expired_at": "2026-11-03T23:07:04.417998Z"
   },
   {
     "id": "7e631c8c09d7",
@@ -17175,7 +17176,7 @@
   },
   {
     "id": "e227d8dc69ce",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-11-01T22:22:47.931793Z",
     "score": 90,
     "reason": "New open-source, self-hostable AI SOC with LLM agent features and concrete integrations. Ships today for builders.",
@@ -17214,7 +17215,8 @@
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, check das hier: 'beenuar/AiSOC'. Das ist ein Open-Source AI Security Operations Center, das heute auf GitHub durch die Decke geht.\n\nFür Developer ist das mega relevant, weil es alert fusion, LLM-agent triage und MITRE ATT&CK Investigation bietet. Das Beste: Es ist self-hostable, braucht keine API Keys und hat ein replayable decision ledger für jeden Agent Step. Damit können sie ihre Sicherheits-Workflows mit KI-Power automatisieren und gleichzeitig volle Transparenz und Kontrolle behalten. Das ist ein Game Changer für alle, die ihre SecOps effizienter gestalten wollen.",
-    "chloe_note": "*beenuar/AiSOC — Open-source AI Security Operations Center: alert fusion, LLM-agent triage, MITRE ATT&CK investigation, and a replayable decision ledger for every agent step. Self-hostable, runs with n* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New open-source, self-hostable AI SOC with LLM agent features and concrete integrations. Ships today for builders.Cluster context: 1 sources, engagement 436. Common terms: every, ships, licensed., operations. Bewertung: 90. Quelle: https://github.com/beenuar/AiSOC"
+    "chloe_note": "*beenuar/AiSOC — Open-source AI Security Operations Center: alert fusion, LLM-agent triage, MITRE ATT&CK investigation, and a replayable decision ledger for every agent step. Self-hostable, runs with n* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New open-source, self-hostable AI SOC with LLM agent features and concrete integrations. Ships today for builders.Cluster context: 1 sources, engagement 436. Common terms: every, ships, licensed., operations. Bewertung: 90. Quelle: https://github.com/beenuar/AiSOC",
+    "expired_at": "2026-11-03T23:07:04.417998Z"
   },
   {
     "id": "d3425e8df378",
