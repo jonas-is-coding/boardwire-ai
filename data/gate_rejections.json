@@ -1,34 +1,5 @@
 [
   {
-    "rejected_at": "2026-09-24T18:23:13.329299Z",
-    "stage": "review",
-    "title": "Claude Code v2.1.271",
-    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.271",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-24T18:23:13.429747Z",
-    "stage": "review",
-    "title": "Simon Willison v2.6",
-    "link": "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-25T15:10:25.007017Z",
-    "stage": "review",
-    "title": "Ollama v0.40.0",
-    "link": "https://github.com/ollama/ollama/releases/tag/v0.40.0-rc0",
-    "reasons": [
-      "Version-only release without concrete capability: 'Ollama v0.40.0'"
-    ]
-  },
-  {
     "rejected_at": "2026-09-25T15:10:25.149127Z",
     "stage": "review",
     "title": "AI-powered fuzzing with the GitHub Security Lab Taskflow Agent",
@@ -1990,6 +1961,36 @@
     "stage": "review",
     "title": "Launch HN: Momentic (YC W24) – Agents that catch bugs by using your app",
     "link": "https://momentic.ai/",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-03T17:44:28.142979Z",
+    "stage": "review",
+    "title": "Claude Code v2.1.317",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.317",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-03T17:44:28.318967Z",
+    "stage": "review",
+    "title": "Ollama v0.40.14",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.40.14",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-03T17:44:28.497989Z",
+    "stage": "review",
+    "title": "LangChain v1.4.8",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.4.8",
     "reasons": [
       "Post is empty",
       "Post lacks a clear claim or insight"

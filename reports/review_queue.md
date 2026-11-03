@@ -6,6 +6,9 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-11-03T17:44:28.497989Z` [review] **LangChain v1.4.8** — Post is empty; Post lacks a clear claim or insight
+- `2026-11-03T17:44:28.318967Z` [review] **Ollama v0.40.14** — Post is empty; Post lacks a clear claim or insight
+- `2026-11-03T17:44:28.142979Z` [review] **Claude Code v2.1.317** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-02T22:41:32.284384Z` [review] **Launch HN: Momentic (YC W24) – Agents that catch bugs by using your app** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-02T22:41:32.098175Z` [review] **LifeVal** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-02T22:41:31.911008Z` [review] **Astra can read and write weights to improve Qwen** — Post is empty; Post lacks a clear claim or insight
@@ -28,6 +31,3 @@ No pending review items.
 - `2026-10-29T16:52:51.340162Z` [review] **Claude Code regularly sends each background agent’s transcript to its model** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-29T16:52:51.247342Z` [review] **Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech and Decisions on Apple Platforms** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-29T16:52:51.156124Z` [review] **Ollama v0.40.13** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'Ollama v0.40.13'
-- `2026-10-28T19:26:29.238469Z` [review] **Gemini 4 Carbon** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-28T19:26:29.062977Z` [review] **The Agent SDK** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-28T19:26:28.887038Z` [review] **LangChain v1.7.7** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.7.7'
