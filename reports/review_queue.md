@@ -6,6 +6,9 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-11-04T17:57:28.243492Z` [review] **Daybreak Red is now available in AWS GovCloud (US-East)** — Post is empty; Post lacks a clear claim or insight
+- `2026-11-04T17:57:28.062462Z` [review] **Kimi K3.1 Pro model weights are out** — Post is empty; Post lacks a clear claim or insight
+- `2026-11-04T17:57:27.884956Z` [review] **LangChain v1.4.9** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.4.9'
 - `2026-11-03T20:29:28.012183Z` [review] **Usagi-org/ai-goofish-monitor — 基于 Playwright 和AI实现的闲鱼多任务实时/定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-03T20:29:27.832322Z` [review] **spotify/portal-ai-plugins** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-03T20:29:27.652869Z` [review] **Octomind – open-source AI harness that saves your tokens, static rust** — Post is empty; Post lacks a clear claim or insight
@@ -28,6 +31,3 @@ No pending review items.
 - `2026-10-30T19:07:33.451213Z` [review] **A Working Nintendo in ~1GB of Qwen Weights** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-30T19:07:33.291494Z` [review] **We ran AI agent swarms in Minecraft and Mindustry** — Post is empty; Post lacks a clear claim or insight
 - `2026-10-30T19:07:33.131214Z` [review] **Making it easier for websites to express AI training preferences** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-30T16:41:07.139399Z` [review] **Launch HN: Simantic (YC F26) – Firmware Simulation for AI Agents** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-30T16:41:06.965572Z` [review] **vLLM v0.33.0rc2** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.33.0rc2'
-- `2026-10-30T16:41:06.790969Z` [review] **Claude Code v2.1.314** — Post is empty; Post lacks a clear claim or insight
