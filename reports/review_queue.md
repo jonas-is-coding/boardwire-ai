@@ -6,6 +6,10 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-11-04T20:44:26.494077Z` [review] **Show HN: Kairos – Open-source risk and fraud decisioning platform** — Post is empty; Post lacks a clear claim or insight
+- `2026-11-04T20:44:26.330446Z` [review] **Thysrael/Horizon — 📡 Your own AI-powered news radar. Generates daily briefings in English & Chinese. | 用 AI 构建你专属的新闻雷达** — Post is empty; Post lacks a clear claim or insight
+- `2026-11-04T20:44:26.166098Z` [review] **The-PR-Agent/pr-agent — 🚀 PR Agent: The Original Open-Source PR Reviewer. This project is not the Qodo free tier.** — Post is empty; Post lacks a clear claim or insight
+- `2026-11-04T20:44:26.001925Z` [review] **LangChain v1.7.4** — Version-only release without concrete capability: 'LangChain v1.7.4'
 - `2026-11-04T17:57:28.243492Z` [review] **Daybreak Red is now available in AWS GovCloud (US-East)** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-04T17:57:28.062462Z` [review] **Kimi K3.1 Pro model weights are out** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-04T17:57:27.884956Z` [review] **LangChain v1.4.9** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.4.9'
@@ -27,7 +31,3 @@ No pending review items.
 - `2026-11-01T22:23:02.643498Z` [review] **patchy631/ai-engineering-hub — In-depth tutorials on LLMs, RAGs and real-world AI agent applications.** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-01T22:23:02.465452Z` [review] **vLLM v0.33.0** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.33.0'
 - `2026-11-01T22:23:01.329083Z` [review] **Ollama v0.40.10-rc0** — Version-only release without concrete capability: 'Ollama v0.40.10-rc0'
-- `2026-10-30T19:07:33.612231Z` [review] **Was I wrong about open models & cyber risks?** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-30T19:07:33.451213Z` [review] **A Working Nintendo in ~1GB of Qwen Weights** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-30T19:07:33.291494Z` [review] **We ran AI agent swarms in Minecraft and Mindustry** — Post is empty; Post lacks a clear claim or insight
-- `2026-10-30T19:07:33.131214Z` [review] **Making it easier for websites to express AI training preferences** — Post is empty; Post lacks a clear claim or insight

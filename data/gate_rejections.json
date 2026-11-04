@@ -1,46 +1,5 @@
 [
   {
-    "rejected_at": "2026-09-27T21:35:52.689745Z",
-    "stage": "review",
-    "title": "Claude Code v2.1.283",
-    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.283",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-27T21:35:52.769328Z",
-    "stage": "review",
-    "title": "LangChain v1.6.4",
-    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.6.4",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight",
-      "Version-only release without concrete capability: 'LangChain v1.6.4'"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-27T21:35:52.858590Z",
-    "stage": "review",
-    "title": "Parallel cut research time and cost in half with GPT‑6 Astra",
-    "link": "https://openai.com/index/parallel-cuts-time-and-cost-with-astra",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-28T18:06:17.028125Z",
-    "stage": "review",
-    "title": "There are no \"rogue\" AI agents",
-    "link": "https://eoinhiggins.substack.com/p/there-are-no-rogue-ai-agents",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
     "rejected_at": "2026-09-28T18:06:17.106294Z",
     "stage": "review",
     "title": "Two years of OpenAI Academy",
@@ -1992,6 +1951,45 @@
     "stage": "review",
     "title": "Daybreak Red is now available in AWS GovCloud (US-East)",
     "link": "https://openai.com/index/daybreak-red-aws-govcloud",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-04T20:44:26.001925Z",
+    "stage": "review",
+    "title": "LangChain v1.7.4",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.7.4",
+    "reasons": [
+      "Version-only release without concrete capability: 'LangChain v1.7.4'"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-04T20:44:26.166098Z",
+    "stage": "review",
+    "title": "The-PR-Agent/pr-agent — 🚀 PR Agent: The Original Open-Source PR Reviewer. This project is not the Qodo free tier.",
+    "link": "https://github.com/The-PR-Agent/pr-agent",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-04T20:44:26.330446Z",
+    "stage": "review",
+    "title": "Thysrael/Horizon — 📡 Your own AI-powered news radar. Generates daily briefings in English & Chinese. | 用 AI 构建你专属的新闻雷达",
+    "link": "https://github.com/Thysrael/Horizon",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-04T20:44:26.494077Z",
+    "stage": "review",
+    "title": "Show HN: Kairos – Open-source risk and fraud decisioning platform",
+    "link": "https://github.com/finic-ai/kairos",
     "reasons": [
       "Post is empty",
       "Post lacks a clear claim or insight"
