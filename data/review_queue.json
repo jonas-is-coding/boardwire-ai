@@ -17134,7 +17134,7 @@
   },
   {
     "id": "8c9bbc2dc615",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-11-02T20:16:27.932223Z",
     "score": 95,
     "reason": "Direct release of Claude Code v2.1.316 with new API features and config flags. Clear, actionable update for builders.",
@@ -17172,7 +17172,8 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": false,
-    "reactivated_at": "2026-11-02T20:16:27.932223Z"
+    "reactivated_at": "2026-11-02T20:16:27.932223Z",
+    "expired_at": "2026-11-04T23:29:29.172684Z"
   },
   {
     "id": "e227d8dc69ce",
@@ -17262,7 +17263,7 @@
   },
   {
     "id": "6655df87bdf6",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-11-02T20:16:06.105619Z",
     "score": 90,
     "reason": "vLLM v0.33.0rc3 adds support for new models, enabling immediate deployment with optimized inference.",
@@ -17301,11 +17302,12 @@
     "is_llm_mode": true,
     "breaking": false,
     "claire_note": "Chloe, das vLLM v0.33.0 Release ist ein No-Brainer für unsere Devs. Das ist ein fettes Update mit Reflection Beam-1.0 und DFlash2 Drafter – bedeutet konkret: deutlich effizientere MoE-Modelle. Entwickler können damit jetzt größere und komplexere LLMs trainieren und inferieren, ohne dass die Kosten explodieren, und das mit potenziell schnelleren Drafts.",
-    "chloe_note": "*vLLM v0.33.0* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch vLLM v0.33.0rc3 adds support for new models, enabling immediate deployment with optimized inference.Cluster context: 1 sources, engagement 0. Common terms: optional, woolgathererer, fast, jartx. Bewertung: 90. Quelle: https://github.com/vllm-project/vllm/releases/tag/v0.33.0rc3"
+    "chloe_note": "*vLLM v0.33.0* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch vLLM v0.33.0rc3 adds support for new models, enabling immediate deployment with optimized inference.Cluster context: 1 sources, engagement 0. Common terms: optional, woolgathererer, fast, jartx. Bewertung: 90. Quelle: https://github.com/vllm-project/vllm/releases/tag/v0.33.0rc3",
+    "expired_at": "2026-11-04T23:29:29.172684Z"
   },
   {
     "id": "99699bd81717",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-11-02T20:16:12.984923Z",
     "score": 95,
     "reason": "New open-source CLI tool for AI agents to control local machines. High community signal, direct utility for agent builders.",
@@ -17344,7 +17346,8 @@
     "is_llm_mode": true,
     "breaking": true,
     "claire_note": "Hey Chloe,\n\nCheck this out: 'vercel-labs/agent-desktop'. Das ist eine CLI für AI-Agenten, die Computer nutzen.\n\nDas ist super relevant, weil es Entwicklern einen direkten Weg gibt, AI-Agenten zu bauen, die wirklich mit ihrem Rechner interagieren. Stell dir vor, du automatisierst Workflows, indem der Agent nicht nur Code generiert, sondern auch Befehle ausführt, Dateien bearbeitet oder durch GUIs navigiert. Das ist ein Game-Changer für alles, was mit Automatisierung und intelligenten Assistenten zu tun hat.",
-    "chloe_note": "*vercel-labs/agent-desktop — Computer use CLI for AI agents* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New open-source CLI tool for AI agents to control local machines. High community signal, direct utility for agent builders.Cluster context: 1 sources, engagement 2243. Common terms: trending, cli, computer, +2243. Bewertung: 95. Quelle: https://github.com/vercel-labs/agent-desktop"
+    "chloe_note": "*vercel-labs/agent-desktop — Computer use CLI for AI agents* ist approved fuer den Publish-Queue. Fuer Builder ist das stark, vor allem durch New open-source CLI tool for AI agents to control local machines. High community signal, direct utility for agent builders.Cluster context: 1 sources, engagement 2243. Common terms: trending, cli, computer, +2243. Bewertung: 95. Quelle: https://github.com/vercel-labs/agent-desktop",
+    "expired_at": "2026-11-04T23:29:29.172684Z"
   },
   {
     "id": "1b47a3f717df",
