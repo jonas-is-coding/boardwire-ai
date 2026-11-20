@@ -6,6 +6,10 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-11-20T21:45:27.887901Z` [review] **vLLM v0.34.0** — Post is empty; Post lacks a clear claim or insight
+- `2026-11-20T21:45:27.792269Z` [review] **openvinotoolkit/openvino — OpenVINO™ is an open source toolkit for optimizing and deploying AI inference** — Post is empty; Post lacks a clear claim or insight
+- `2026-11-20T21:45:27.699353Z` [review] **Tracer-Cloud/opensre — The open-source agent for CI/CD reliability.** — Post is empty; Post lacks a clear claim or insight
+- `2026-11-20T21:45:27.605276Z` [review] **toeverything/AFFiNE — There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-sour** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-20T18:31:57.469849Z` [review] **firecrawl/firecrawl — Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-20T18:31:57.377630Z` [review] **More ways to move care forward with ChatGPT for Healthcare** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-20T18:31:57.285041Z` [review] **Genie 4 is now available** — Post is empty; Post lacks a clear claim or insight
@@ -27,7 +31,3 @@ No pending review items.
 - `2026-11-02T22:41:32.098175Z` [review] **LifeVal** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-02T22:41:31.911008Z` [review] **Astra can read and write weights to improve Qwen** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-02T22:41:31.722662Z` [review] **LangChain v1.7.9** — Version-only release without concrete capability: 'LangChain v1.7.9'
-- `2026-11-02T20:16:29.444569Z` [review] **max-sixty/worktrunk — Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows** — Post is empty; Post lacks a clear claim or insight
-- `2026-11-02T20:16:29.267743Z` [review] **Fair use benefits everyone** — Post is empty; Post lacks a clear claim or insight
-- `2026-11-02T20:16:29.091508Z` [review] **The AI cost of JavaScript frameworks** — Post is empty; Post lacks a clear claim or insight
-- `2026-11-01T22:23:02.820240Z` [review] **cjpais/Handy — A free, open source, and extensible speech-to-text application that works completely offline.** — Post is empty; Post lacks a clear claim or insight

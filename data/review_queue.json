@@ -17611,10 +17611,10 @@
   },
   {
     "id": "c652f5b58ad4",
-    "status": "deferred_due_to_cap",
+    "status": "deferred_generation_unavailable",
     "created_at": "2026-11-04T20:44:08.626425Z",
     "score": 85,
-    "reason": "New SDK version with concrete features for improved error handling and workspace management.",
+    "reason": "deferred: generation provider unavailable",
     "proposed_post": "Anthropic Python SDK v2.5.0 adds new error classes for HTTP statuses/API errors & an `ids` filter for workspaces. This enables more robust error handling and precise workspace management for builders.",
     "source_angle": "Anthropic SDK update for error handling and workspace filtering",
     "source_item": {
@@ -17648,8 +17648,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-11-20T18:31:57.098733Z",
-    "defer_count": 2,
+    "deferred_at": "2026-11-20T21:45:10.853979Z",
+    "defer_count": 3,
     "original_score": 85,
     "original_reason": "New SDK version with concrete features for improved error handling and workspace management."
   },
@@ -17738,5 +17738,49 @@
     "defer_count": 1,
     "original_score": 95,
     "original_reason": "New GPT models (Astra & Sol) released via API with improved performance and lower cost. Direct impact for builders."
+  },
+  {
+    "id": "c38b6d9d8af9",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-11-20T21:45:21.309569Z",
+    "score": 90,
+    "reason": "Open-source GitHub repo provides practical compliance tools for app developers, including AI-specific regulations and agent integration.",
+    "proposed_post": "New open-source GitHub repo `mjmirza/app-store-compliance` provides a pre-submission guard with 117 rejection patterns, privacy manifests, and tracked deadlines (EU AI Act, DSA) for App Store/Google Play. It includes a skill for AI coding agents, helping builders avoid rejection…",
+    "source_angle": "GitHub Trending: Open-source app compliance playbook for AI builders.",
+    "source_item": {
+      "title": "mjmirza/app-store-compliance — Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 117 documented rejection patterns and fixes, privacy manifest and Data saf",
+      "source": "GitHub Trending",
+      "link": "https://github.com/mjmirza/app-store-compliance",
+      "source_tier": 2,
+      "engagement_score": 874.0,
+      "local_newsworthiness_score": 20,
+      "summary": "Trending on GitHub today: +874 stars. Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 117 documented rejection patterns and fixes, privacy manifest and Data safety checks, 95 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.\n[Cluster context: 1 sources, engagement 874, common terms: +874, agents., fixes, checks, coppa.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "GitHub Trending"
+        ],
+        "total_engagement_score": 874,
+        "common_terms": [
+          "+874",
+          "agents.",
+          "fixes",
+          "checks",
+          "coppa",
+          "guard",
+          "documented",
+          "privacy"
+        ],
+        "cluster_summary": "1 sources, engagement 874. Common terms: +874, agents., fixes, checks. Lead: mjmirza/app-store-compliance — Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard",
+        "alternative_titles": [],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-11-20T21:45:27.512967Z",
+    "defer_count": 1,
+    "original_score": 90,
+    "original_reason": "Open-source GitHub repo provides practical compliance tools for app developers, including AI-specific regulations and agent integration."
   }
 ]
