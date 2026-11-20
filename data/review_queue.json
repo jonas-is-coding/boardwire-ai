@@ -17525,12 +17525,12 @@
   },
   {
     "id": "6d52284f2ac5",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-11-03T20:29:21.532954Z",
-    "score": 85,
-    "reason": "Debunks a significant, misleading technical claim, providing actionable clarity for builders. Passes Ships Test by delivering critical, verified information.",
-    "proposed_post": "A previous claim that Astra can read/write weights to improve Qwen models is misleading. Builders should not rely on this specific capability for model improvement or integration.",
-    "source_angle": "Debunking misleading Astra/Qwen weight manipulation claims",
+    "status": "approved",
+    "created_at": "2026-11-20T18:31:57.005365Z",
+    "score": 90,
+    "reason": "Debunks a specific, significant technical claim about Astra/Qwen, providing critical, actionable clarity for builders.",
+    "proposed_post": "A claim that Astra can read/write weights to improve Qwen models has been debunked. Builders should disregard this capability when evaluating or integrating Astra/Qwen.",
+    "source_angle": "Critical debunking of a technical claim about model capabilities.",
     "source_item": {
       "title": "The 'Astra can read and write weights to improve Qwen' post is misleading",
       "source": "HackerNews",
@@ -17562,10 +17562,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-11-04T20:44:25.438740Z",
-    "defer_count": 3,
-    "original_score": 85,
-    "original_reason": "Debunks a significant, misleading technical claim, providing actionable clarity for builders. Passes Ships Test by delivering critical, verified information."
+    "breaking": false,
+    "reactivated_at": "2026-11-20T18:31:57.005365Z"
   },
   {
     "id": "747dd937a07a",
@@ -17650,19 +17648,19 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-11-04T20:44:25.627549Z",
-    "defer_count": 1,
+    "deferred_at": "2026-11-20T18:31:57.098733Z",
+    "defer_count": 2,
     "original_score": 85,
     "original_reason": "New SDK version with concrete features for improved error handling and workspace management."
   },
   {
     "id": "63f9811a1f26",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-11-04T20:44:15.339152Z",
+    "status": "approved",
+    "created_at": "2026-11-20T18:31:56.912523Z",
     "score": 95,
-    "reason": "New Claude Code CLI version with direct developer-facing features for AWS cost attribution and model execution control.",
-    "proposed_post": "Claude Code v2.1.318 adds `assume_role` for AWS cross-account cost attribution and `effort` option for `$.model.fork`. Builders can now track cloud spend per-developer and control model execution cost directly.",
-    "source_angle": "Claude Code CLI update with AWS cost attribution & model control",
+    "reason": "New CLI version with direct developer features for cost management and execution control. Passes Ships Test.",
+    "proposed_post": "Claude Code CLI v2.1.318 released, adding AWS cost attribution and model execution controls. Builders can now better manage deployment costs and fine-tune model behavior.",
+    "source_angle": "Official Claude Code CLI release with developer-facing features.",
     "source_item": {
       "title": "Claude Code v2.1.318",
       "source": "Claude Code Releases",
@@ -17694,9 +17692,51 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-11-04T20:44:25.815443Z",
+    "breaking": false,
+    "reactivated_at": "2026-11-20T18:31:56.912523Z"
+  },
+  {
+    "id": "8840e68ce361",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-11-20T18:31:50.942823Z",
+    "score": 95,
+    "reason": "New GPT models (Astra & Sol) released via API with improved performance and lower cost. Direct impact for builders.",
+    "proposed_post": "OpenAI released GPT-6.2 Astra and Sol, available via API. These models offer improved professional outputs, coding, and efficiency at lower cost. Builders can integrate for immediate performance gains and cost optimization.",
+    "source_angle": "New flagship model release with API access and cost/performance improvements",
+    "source_item": {
+      "title": "Introducing GPT-6.2 Astra and Sol",
+      "source": "OpenAI News",
+      "link": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 35,
+      "summary": "Introducing GPT‑6.2 Astra and Sol, with better professional outputs, coding, computer use, and efficiency at lower cost across ChatGPT Work, Codex, and the API.\n[Cluster context: 1 sources, engagement 0, common terms: gpt, computer, cost, use, professional.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "OpenAI News"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "gpt",
+          "computer",
+          "cost",
+          "use",
+          "professional",
+          "api.",
+          "better",
+          "codex"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: gpt, computer, cost, use. Lead: Introducing GPT-6.2 Astra and Sol",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-11-20T18:31:57.192395Z",
     "defer_count": 1,
     "original_score": 95,
-    "original_reason": "New Claude Code CLI version with direct developer-facing features for AWS cost attribution and model execution control."
+    "original_reason": "New GPT models (Astra & Sol) released via API with improved performance and lower cost. Direct impact for builders."
   }
 ]

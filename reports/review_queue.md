@@ -6,6 +6,9 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-11-20T18:31:57.469849Z` [review] **firecrawl/firecrawl — Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.** — Post is empty; Post lacks a clear claim or insight
+- `2026-11-20T18:31:57.377630Z` [review] **More ways to move care forward with ChatGPT for Healthcare** — Post is empty; Post lacks a clear claim or insight
+- `2026-11-20T18:31:57.285041Z` [review] **Genie 4 is now available** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-04T20:44:26.494077Z` [review] **Show HN: Kairos – Open-source risk and fraud decisioning platform** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-04T20:44:26.330446Z` [review] **Thysrael/Horizon — 📡 Your own AI-powered news radar. Generates daily briefings in English & Chinese. | 用 AI 构建你专属的新闻雷达** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-04T20:44:26.166098Z` [review] **The-PR-Agent/pr-agent — 🚀 PR Agent: The Original Open-Source PR Reviewer. This project is not the Qodo free tier.** — Post is empty; Post lacks a clear claim or insight
@@ -28,6 +31,3 @@ No pending review items.
 - `2026-11-02T20:16:29.267743Z` [review] **Fair use benefits everyone** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-02T20:16:29.091508Z` [review] **The AI cost of JavaScript frameworks** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-01T22:23:02.820240Z` [review] **cjpais/Handy — A free, open source, and extensible speech-to-text application that works completely offline.** — Post is empty; Post lacks a clear claim or insight
-- `2026-11-01T22:23:02.643498Z` [review] **patchy631/ai-engineering-hub — In-depth tutorials on LLMs, RAGs and real-world AI agent applications.** — Post is empty; Post lacks a clear claim or insight
-- `2026-11-01T22:23:02.465452Z` [review] **vLLM v0.33.0** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.33.0'
-- `2026-11-01T22:23:01.329083Z` [review] **Ollama v0.40.10-rc0** — Version-only release without concrete capability: 'Ollama v0.40.10-rc0'
