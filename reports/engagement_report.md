@@ -1,10 +1,10 @@
 # Boardwire Engagement Report
 
-Generated: `2026-11-21T11:54:00.452843Z`
+Generated: `2026-11-22T12:07:42.643705Z`
 
 ## Account
 
-- @boardwire.bsky.social: **36** followers (1d: +1, 7d: +1) · following 165 · posts 80 · snapshots 64 · as of `2026-11-21T11:53:47.641944Z`
+- @boardwire.bsky.social: **37** followers (1d: +1, 7d: +2) · following 165 · posts 80 · snapshots 65 · as of `2026-11-22T12:07:24.501991Z`
 
 ## Summary
 
