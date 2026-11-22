@@ -6,6 +6,10 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-11-22T23:48:35.242111Z` [review] **vLLM v0.34.0rc4** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.34.0rc4'
+- `2026-11-22T23:48:35.163657Z` [review] **Llama Index v0.14.26** — Post is empty; Post lacks a clear claim or insight
+- `2026-11-22T23:48:35.084073Z` [review] **LangChain v1.8.5** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.8.5'
+- `2026-11-22T23:48:35.004494Z` [review] **Ollama v0.40.17** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-20T21:45:27.887901Z` [review] **vLLM v0.34.0** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-20T21:45:27.792269Z` [review] **openvinotoolkit/openvino — OpenVINO™ is an open source toolkit for optimizing and deploying AI inference** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-20T21:45:27.699353Z` [review] **Tracer-Cloud/opensre — The open-source agent for CI/CD reliability.** — Post is empty; Post lacks a clear claim or insight
@@ -27,7 +31,3 @@ No pending review items.
 - `2026-11-03T17:44:28.497989Z` [review] **LangChain v1.4.8** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-03T17:44:28.318967Z` [review] **Ollama v0.40.14** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-03T17:44:28.142979Z` [review] **Claude Code v2.1.317** — Post is empty; Post lacks a clear claim or insight
-- `2026-11-02T22:41:32.284384Z` [review] **Launch HN: Momentic (YC W24) – Agents that catch bugs by using your app** — Post is empty; Post lacks a clear claim or insight
-- `2026-11-02T22:41:32.098175Z` [review] **LifeVal** — Post is empty; Post lacks a clear claim or insight
-- `2026-11-02T22:41:31.911008Z` [review] **Astra can read and write weights to improve Qwen** — Post is empty; Post lacks a clear claim or insight
-- `2026-11-02T22:41:31.722662Z` [review] **LangChain v1.7.9** — Version-only release without concrete capability: 'LangChain v1.7.9'

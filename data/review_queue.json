@@ -17699,12 +17699,12 @@
   },
   {
     "id": "8840e68ce361",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-11-20T18:31:50.942823Z",
+    "status": "approved",
+    "created_at": "2026-11-22T23:48:34.760946Z",
     "score": 95,
-    "reason": "New GPT models (Astra & Sol) released via API with improved performance and lower cost. Direct impact for builders.",
-    "proposed_post": "OpenAI released GPT-6.2 Astra and Sol, available via API. These models offer improved professional outputs, coding, and efficiency at lower cost. Builders can integrate for immediate performance gains and cost optimization.",
-    "source_angle": "New flagship model release with API access and cost/performance improvements",
+    "reason": "New models (Astra & Sol) released via API with improved performance and lower cost. Direct builder action.",
+    "proposed_post": "OpenAI launched new GPT models, Astra & Sol, via API. Builders can now access improved performance and lower costs for their applications.",
+    "source_angle": "OpenAI API release: new models Astra & Sol",
     "source_item": {
       "title": "Introducing GPT-6.2 Astra and Sol",
       "source": "OpenAI News",
@@ -17736,19 +17736,17 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-11-20T18:31:57.192395Z",
-    "defer_count": 1,
-    "original_score": 95,
-    "original_reason": "New GPT models (Astra & Sol) released via API with improved performance and lower cost. Direct impact for builders."
+    "breaking": false,
+    "reactivated_at": "2026-11-22T23:48:34.760946Z"
   },
   {
     "id": "c38b6d9d8af9",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-11-20T21:45:21.309569Z",
+    "status": "approved",
+    "created_at": "2026-11-22T23:48:34.842562Z",
     "score": 90,
-    "reason": "Open-source GitHub repo provides practical compliance tools for app developers, including AI-specific regulations and agent integration.",
-    "proposed_post": "New open-source GitHub repo `mjmirza/app-store-compliance` provides a pre-submission guard with 117 rejection patterns, privacy manifests, and tracked deadlines (EU AI Act, DSA) for App Store/Google Play. It includes a skill for AI coding agents, helping builders avoid rejection…",
-    "source_angle": "GitHub Trending: Open-source app compliance playbook for AI builders.",
+    "reason": "Open-source playbook for App Store compliance, specifically addressing AI regulations, ships today. High community signal.",
+    "proposed_post": "New open-source GitHub repo `mjmirza/app-store-compliance` offers a playbook & pre-submission guard with 117 patterns to avoid App Store/Google Play rejections. AI builders can use this to navigate specific compliance rules and ship their agent-integrated apps faster.",
+    "source_angle": "Practical compliance guide for AI apps",
     "source_item": {
       "title": "mjmirza/app-store-compliance — Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 117 documented rejection patterns and fixes, privacy manifest and Data saf",
       "source": "GitHub Trending",
@@ -17780,9 +17778,51 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-11-20T21:45:27.512967Z",
+    "breaking": false,
+    "reactivated_at": "2026-11-22T23:48:34.842562Z"
+  },
+  {
+    "id": "c86627832b72",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-11-22T23:48:29.492386Z",
+    "score": 90,
+    "reason": "Direct report from an inference provider on critical data handling incidents. Immediate operational relevance for builders.",
+    "proposed_post": "OpenRouter reported data processing incidents on inference providers, including potential data exposure. Builders using third-party inference APIs must review their data handling policies and provider contracts for security and privacy risks.",
+    "source_angle": "Inference provider reports data processing incidents",
+    "source_item": {
+      "title": "Data Processing Incidents on Inference Providers",
+      "source": "HackerNews",
+      "link": "https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/",
+      "source_tier": 3,
+      "engagement_score": 324.5,
+      "local_newsworthiness_score": 5,
+      "summary": "277 points, 95 comments on Hacker News — submitted by sdko — original: https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/\n[Cluster context: 1 sources, engagement 324, common terms: incidents, sdko, original, providers, submitted.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 324,
+        "common_terms": [
+          "incidents",
+          "sdko",
+          "original",
+          "providers",
+          "submitted",
+          "processing",
+          "comments",
+          "inference"
+        ],
+        "cluster_summary": "1 sources, engagement 324. Common terms: incidents, sdko, original, providers. Lead: Data Processing Incidents on Inference Providers",
+        "alternative_titles": [],
+        "cluster_score": 30
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-11-22T23:48:34.925362Z",
     "defer_count": 1,
     "original_score": 90,
-    "original_reason": "Open-source GitHub repo provides practical compliance tools for app developers, including AI-specific regulations and agent integration."
+    "original_reason": "Direct report from an inference provider on critical data handling incidents. Immediate operational relevance for builders."
   }
 ]

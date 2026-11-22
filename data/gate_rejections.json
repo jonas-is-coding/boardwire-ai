@@ -1,45 +1,5 @@
 [
   {
-    "rejected_at": "2026-09-29T16:29:20.096215Z",
-    "stage": "review",
-    "title": "LangChain v1.7.5",
-    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-anthropic%3D%3D1.7.5",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight",
-      "Version-only release without concrete capability: 'LangChain v1.7.5'"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-29T19:15:34.572100Z",
-    "stage": "review",
-    "title": "LangChain v1.6.6",
-    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.6.6",
-    "reasons": [
-      "Version-only release without concrete capability: 'LangChain v1.6.6'"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-29T19:15:34.720094Z",
-    "stage": "review",
-    "title": "t8y2/dbx — 25 MB lightweight cross-platform database client for 100+ databases, including MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, SQL Server, and Dameng. Built-in AI, MCP Server, CLI, deskt",
-    "link": "https://github.com/t8y2/dbx",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-29T19:15:34.865717Z",
-    "stage": "review",
-    "title": "Uncensored and Offensive Security AI Models Benchmark",
-    "link": "https://github.com/JoasASantos/Offensive-Security-AI-Models",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
     "rejected_at": "2026-09-30T16:24:18.678962Z",
     "stage": "review",
     "title": "LangChain v1.6.7",
@@ -1994,6 +1954,48 @@
     "reasons": [
       "Post is empty",
       "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-22T23:48:35.004494Z",
+    "stage": "review",
+    "title": "Ollama v0.40.17",
+    "link": "https://github.com/ollama/ollama/releases/tag/v0.40.17",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-22T23:48:35.084073Z",
+    "stage": "review",
+    "title": "LangChain v1.8.5",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.8.5",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight",
+      "Version-only release without concrete capability: 'LangChain v1.8.5'"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-22T23:48:35.163657Z",
+    "stage": "review",
+    "title": "Llama Index v0.14.26",
+    "link": "https://github.com/run-llama/llama_index/releases/tag/v0.14.26",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-22T23:48:35.242111Z",
+    "stage": "review",
+    "title": "vLLM v0.34.0rc4",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.34.0rc4",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight",
+      "Version-only release without concrete capability: 'vLLM v0.34.0rc4'"
     ]
   }
 ]
