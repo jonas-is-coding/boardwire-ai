@@ -17525,7 +17525,7 @@
   },
   {
     "id": "6d52284f2ac5",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-11-20T18:31:57.005365Z",
     "score": 90,
     "reason": "Debunks a specific, significant technical claim about Astra/Qwen, providing critical, actionable clarity for builders.",
@@ -17563,7 +17563,8 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": false,
-    "reactivated_at": "2026-11-20T18:31:57.005365Z"
+    "reactivated_at": "2026-11-20T18:31:57.005365Z",
+    "expired_at": "2026-11-22T23:31:55.076715Z"
   },
   {
     "id": "747dd937a07a",
@@ -17655,7 +17656,7 @@
   },
   {
     "id": "63f9811a1f26",
-    "status": "approved",
+    "status": "expired_deferred",
     "created_at": "2026-11-20T18:31:56.912523Z",
     "score": 95,
     "reason": "New CLI version with direct developer features for cost management and execution control. Passes Ships Test.",
@@ -17693,7 +17694,8 @@
     "card_path": null,
     "is_llm_mode": true,
     "breaking": false,
-    "reactivated_at": "2026-11-20T18:31:56.912523Z"
+    "reactivated_at": "2026-11-20T18:31:56.912523Z",
+    "expired_at": "2026-11-22T23:31:55.076715Z"
   },
   {
     "id": "8840e68ce361",
