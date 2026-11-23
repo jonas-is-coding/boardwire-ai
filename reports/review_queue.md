@@ -6,6 +6,8 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-11-23T22:00:36.939018Z` [review] **Explore the Codex Security Plugin** — Post is empty; Post lacks a clear claim or insight
+- `2026-11-23T22:00:36.845847Z` [review] **Introducing ChatGPT for Sales** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-22T23:48:35.242111Z` [review] **vLLM v0.34.0rc4** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.34.0rc4'
 - `2026-11-22T23:48:35.163657Z` [review] **Llama Index v0.14.26** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-22T23:48:35.084073Z` [review] **LangChain v1.8.5** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.8.5'
@@ -29,5 +31,3 @@ No pending review items.
 - `2026-11-03T20:29:27.652869Z` [review] **Octomind – open-source AI harness that saves your tokens, static rust** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-03T20:29:27.271247Z` [review] **LangChain v1.7.4** — Version-only release without concrete capability: 'LangChain v1.7.4'
 - `2026-11-03T17:44:28.497989Z` [review] **LangChain v1.4.8** — Post is empty; Post lacks a clear claim or insight
-- `2026-11-03T17:44:28.318967Z` [review] **Ollama v0.40.14** — Post is empty; Post lacks a clear claim or insight
-- `2026-11-03T17:44:28.142979Z` [review] **Claude Code v2.1.317** — Post is empty; Post lacks a clear claim or insight
