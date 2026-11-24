@@ -1,36 +1,5 @@
 [
   {
-    "rejected_at": "2026-10-01T17:00:28.998433Z",
-    "stage": "review",
-    "title": "Introducing Olmo-core 3: Open, scalable training infrastructure for large MoEs",
-    "link": "https://huggingface.co/blog/allenai/olmocore3",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-10-01T17:00:29.143678Z",
-    "stage": "review",
-    "title": "tile-ai/tilelang — Domain-specific language designed to streamline the development of high-performance GPU/CPU/Accelerators kernels",
-    "link": "https://github.com/tile-ai/tilelang",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-10-01T17:00:29.290397Z",
-    "stage": "review",
-    "title": "vLLM v0.31.0rc3",
-    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.31.0rc3",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight",
-      "Version-only release without concrete capability: 'vLLM v0.31.0rc3'"
-    ]
-  },
-  {
     "rejected_at": "2026-10-01T19:24:29.689162Z",
     "stage": "review",
     "title": "Clef: Open-source decision models, and new RL fine-tuning platform",
@@ -1990,6 +1959,36 @@
     "stage": "review",
     "title": "Advancing chip design with OpenAI models",
     "link": "https://openai.com/index/advancing-chip-design-with-our-models",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-24T23:27:37.313780Z",
+    "stage": "review",
+    "title": "Richpanel helps companies automate 50% of support in 30 days",
+    "link": "https://openai.com/business/customer-stories/richpanel-ai-customer-support",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-24T23:27:37.418661Z",
+    "stage": "review",
+    "title": "Managing frontier AI risk: From training to deployment",
+    "link": "https://openai.com/index/managing-frontier-ai-risk",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-24T23:27:37.524824Z",
+    "stage": "review",
+    "title": "Research acceleration: The jagged frontier",
+    "link": "https://openai.com/index/research-acceleration-jagged-frontier",
     "reasons": [
       "Post is empty",
       "Post lacks a clear claim or insight"

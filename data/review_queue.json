@@ -17962,8 +17962,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-11-24T20:37:12.972458Z",
-    "defer_count": 1,
+    "deferred_at": "2026-11-24T23:27:36.863407Z",
+    "defer_count": 2,
     "original_score": 90,
     "original_reason": "New Claude Code release with direct cloud platform integrations and API diagnostics. Clear, actionable features for builders."
   },
@@ -18011,8 +18011,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-11-24T20:37:13.161512Z",
-    "defer_count": 1,
+    "deferred_at": "2026-11-24T23:27:36.977022Z",
+    "defer_count": 2,
     "original_score": 90,
     "original_reason": "SDK update includes new Admin API features and critical deprecation notice for Claude Opus 4.5, requiring migration planning."
   },
@@ -18055,9 +18055,53 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-11-24T20:37:13.349153Z",
-    "defer_count": 1,
+    "deferred_at": "2026-11-24T23:27:37.091792Z",
+    "defer_count": 2,
     "original_score": 90,
     "original_reason": "OpenAI and Cisco launched an open-source runtime. Passes Ships Test (open-source tool launch)."
+  },
+  {
+    "id": "91b075b7dfb5",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-11-24T23:27:31.592443Z",
+    "score": 85,
+    "reason": "OpenAI released MedChemBench, a new benchmark for evaluating AI models in drug discovery, offering a concrete tool.",
+    "proposed_post": "OpenAI introduced MedChemBench, a new benchmark for evaluating AI models in early drug discovery. Builders can use this to test and compare their models' ability to interpret molecular structures and select compounds.",
+    "source_angle": "OpenAI's new benchmark for drug discovery AI evaluation.",
+    "source_item": {
+      "title": "Can AI help scientists identify promising drug candidates?",
+      "source": "OpenAI News",
+      "link": "https://openai.com/index/introducing-medchembench",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 15,
+      "summary": "MedChemBench evaluates how well AI models interpret molecular structures, reason from experimental evidence, and select compounds in early drug discovery.\n[Cluster context: 1 sources, engagement 0, common terms: identify, early, help, evidence, experimental.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "OpenAI News"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "identify",
+          "early",
+          "help",
+          "evidence",
+          "experimental",
+          "promising",
+          "can",
+          "compounds"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: identify, early, help, evidence. Lead: Can AI help scientists identify promising drug candidates?",
+        "alternative_titles": [],
+        "cluster_score": 25
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-11-24T23:27:37.208901Z",
+    "defer_count": 1,
+    "original_score": 85,
+    "original_reason": "OpenAI released MedChemBench, a new benchmark for evaluating AI models in drug discovery, offering a concrete tool."
   }
 ]

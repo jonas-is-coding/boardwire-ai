@@ -6,6 +6,9 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-11-24T23:27:37.524824Z` [review] **Research acceleration: The jagged frontier** — Post is empty; Post lacks a clear claim or insight
+- `2026-11-24T23:27:37.418661Z` [review] **Managing frontier AI risk: From training to deployment** — Post is empty; Post lacks a clear claim or insight
+- `2026-11-24T23:27:37.313780Z` [review] **Richpanel helps companies automate 50% of support in 30 days** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-24T20:37:13.881408Z` [review] **Advancing chip design with OpenAI models** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-24T20:37:13.704163Z` [review] **LangChain v1.8.0** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.8.0'
 - `2026-11-24T20:37:13.524681Z` [review] **vLLM v0.34.1rc0** — Post is empty; Post lacks a clear claim or insight
@@ -28,6 +31,3 @@ No pending review items.
 - `2026-11-04T20:44:26.330446Z` [review] **Thysrael/Horizon — 📡 Your own AI-powered news radar. Generates daily briefings in English & Chinese. | 用 AI 构建你专属的新闻雷达** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-04T20:44:26.166098Z` [review] **The-PR-Agent/pr-agent — 🚀 PR Agent: The Original Open-Source PR Reviewer. This project is not the Qodo free tier.** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-04T20:44:26.001925Z` [review] **LangChain v1.7.4** — Version-only release without concrete capability: 'LangChain v1.7.4'
-- `2026-11-04T17:57:28.243492Z` [review] **Daybreak Red is now available in AWS GovCloud (US-East)** — Post is empty; Post lacks a clear claim or insight
-- `2026-11-04T17:57:28.062462Z` [review] **Kimi K3.1 Pro model weights are out** — Post is empty; Post lacks a clear claim or insight
-- `2026-11-04T17:57:27.884956Z` [review] **LangChain v1.4.9** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.4.9'
