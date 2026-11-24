@@ -6,6 +6,7 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-11-24T01:35:34.787716Z` [review] **Ollama v0.40.17-rc3** — Version-only release without concrete capability: 'Ollama v0.40.17-rc3'
 - `2026-11-23T22:00:36.939018Z` [review] **Explore the Codex Security Plugin** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-23T22:00:36.845847Z` [review] **Introducing ChatGPT for Sales** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-22T23:48:35.242111Z` [review] **vLLM v0.34.0rc4** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.34.0rc4'
@@ -30,4 +31,3 @@ No pending review items.
 - `2026-11-03T20:29:27.832322Z` [review] **spotify/portal-ai-plugins** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-03T20:29:27.652869Z` [review] **Octomind – open-source AI harness that saves your tokens, static rust** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-03T20:29:27.271247Z` [review] **LangChain v1.7.4** — Version-only release without concrete capability: 'LangChain v1.7.4'
-- `2026-11-03T17:44:28.497989Z` [review] **LangChain v1.4.8** — Post is empty; Post lacks a clear claim or insight

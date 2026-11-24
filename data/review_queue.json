@@ -17612,12 +17612,12 @@
   },
   {
     "id": "c652f5b58ad4",
-    "status": "deferred_generation_unavailable",
-    "created_at": "2026-11-04T20:44:08.626425Z",
-    "score": 85,
-    "reason": "deferred: generation provider unavailable",
-    "proposed_post": "Anthropic Python SDK v2.5.0 adds new error classes for HTTP statuses/API errors & an `ids` filter for workspaces. This enables more robust error handling and precise workspace management for builders.",
-    "source_angle": "Anthropic SDK update for error handling and workspace filtering",
+    "status": "approved",
+    "created_at": "2026-11-24T01:35:32.896652Z",
+    "score": 90,
+    "reason": "New SDK version from a primary AI lab. Directly actionable for developers using Anthropic's API.",
+    "proposed_post": "Anthropic Python SDK v2.5.0 released. Update your dependencies for improved Claude API interaction and potential new features.",
+    "source_angle": "Anthropic SDK update for Claude API developers",
     "source_item": {
       "title": "Anthropic Python SDK v2.5.0",
       "source": "Anthropic Python SDK Releases",
@@ -17649,10 +17649,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-11-20T21:45:10.853979Z",
-    "defer_count": 3,
-    "original_score": 85,
-    "original_reason": "New SDK version with concrete features for improved error handling and workspace management."
+    "breaking": false,
+    "reactivated_at": "2026-11-24T01:35:32.896652Z"
   },
   {
     "id": "63f9811a1f26",
@@ -17822,5 +17820,99 @@
     "is_llm_mode": true,
     "breaking": false,
     "reactivated_at": "2026-11-23T22:00:36.753406Z"
+  },
+  {
+    "id": "efec409fdefd",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-11-24T01:35:26.464500Z",
+    "score": 85,
+    "reason": "LangChain `nomic` v1.1.0 released, dropping Python 3.10 for partner packages. Passes Ships Test.",
+    "proposed_post": "LangChain's `nomic` package updated to v1.1.0, removing Python 3.10 support for partner packages. Update your dependencies and check Python environment compatibility to avoid issues.",
+    "source_angle": "LangChain `nomic` v1.1.0 release, Python 3.10 EOL for partners.",
+    "source_item": {
+      "title": "LangChain v1.1.0",
+      "source": "LangChain Releases",
+      "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-nomic%3D%3D1.1.0",
+      "source_tier": 2,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 60,
+      "summary": "<p>Changes since langchain-nomic==1.0.1</p>\n<p>fix(nomic): run integration tests serially to avoid credentials file race (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/42034\">#42034</a>)<br />\nrelease(nomic): 1.1.0 (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/41993\">#41993</a>)<br />\nrelease(standard-tests): 1.2.0 (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/41996\">#41996</a>)<br />\nfeat(partners): Remove EOL'd Python 3.10 from partner packages (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/41268\">#41268</a>)<br />\nchore(deps): patch newer-python security lock resolutions (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/41585\">#41585</a>)<br />\nrevert: patch vulnerable integration dependencies (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/41481\">#41481</a>)<br />\nbuild(deps): patch vulnerable integration dependencies (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/41473\">#41473</a>)<br />\nchore(infra): relax third-party dependency upper bounds (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/41407\">#41407</a>)<br />\nchore(deps): bump certifi from 2025.8.3 to 2026.10.19 in /libs/partners/nomic (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/41382\">#41382</a>)<br />\nfix: fix dependencies in some partner packages (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/41266\">#41266</a>)<br />\nchore(deps): bump urllib3 from 2.7.0 to 2.8.0 in /libs/partners/nomic (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/40954\">#40954</a>)<br />\nchore(deps): bump pyjwt from 2.13.0 to 2.15.0 in /libs/partners/nomic (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/40955\">#40955</a>)<br />\nchore(deps): bump anyio from 4.11.0 to 4.14.2 in /libs/partners/nomic (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/40635\">#40635</a>)<br />\nfix(partners): isolate unit tests from network [closes <a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/issues/39727\">#39727</a>] (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/39729\">#39729</a>)<br />\nchore: bump pillow from 12.2.0 to 12.3.0 in /libs/partners/nomic (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/38992\">#38992</a>)<br />\nchore(deps): refresh lockfiles (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/38746\">#38746</a>)<br />\nchore: bump vcrpy from 8.1.1 to 8.2.1 in /libs/partners/nomic (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/38300\">#38300</a>)<br />\nchore: bump langsmith from 0.8.5 to 0.8.18 in /libs/partners/nomic (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/38298\">#38298</a>)<br />\nchore: bump pyjwt from 2.12.0 to 2.13.0 in /libs/partners/nomic (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/38167\">#38167</a>)<br />\ndocs: refresh <code>README</code> installation and resources (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/38119\">#38119</a>)<br />\nrelease(core): 1.4.7 (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/38111\">#38111</a>)<br />\nrelease(core): 1.4.6 (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/38061\">#38061</a>)<br />\nfeat(partners): expose package versions for remaining partners (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/38060\">#38060</a>)<br />\nchore(infra): bump mypy to 2.1 and unify type-check config across the monorepo (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/36470\">#36470</a>)<br />\nhotfix(openai): min core dep (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/37990\">#37990</a>)<br />\nchore: bump pyarrow from 22.0.0 to 23.0.1 in /libs/partners/nomic (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/37931\">#37931</a>)<br />\ntest(langchain,partners): disable pytest-benchmark under xdist to silence <code>PytestBenchmarkWarning</code> (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/37901\">#37901</a>)<br />\nchore(infra): bump <code>langchain-tests</code> floor to 1.1.9 (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/37610\">#37610</a>)<br />\nchore: bump idna from 3.10 to 3.15 in /libs/partners/nomic (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/37552\">#37552</a>)<br />\nchore: bump langsmith from 0.8.4 to 0.8.5 in /libs/partners/nomic (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/37553\">#37553</a>)<br />\nci(infra): harden Dependabot version-bound preservation (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/37510\">#37510</a>)<br />\nchore: bump langsmith from 0.8.0 to 0.8.4 in /libs/partners/nomic (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/37417\">#37417</a>)<br />\nchore: bump langsmith from 0.7.31 to 0.8.0 in /libs/partners/nomic (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/37400\">#37400</a>)<br />\nchore: bump urllib3 from 2.6.3 to 2.7.0 in /libs/partners/nomic (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/37334\">#37334</a>)<br />\nchore: bump langchain-core from 1.3.2 to 1.3.3 in /libs/partners/nomic (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/37269\">#37269</a>)<br />\nchore(docs): update x handle references (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/37081\">#37081</a>)<br />\nhotfix: bump min core versions (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/36996\">#36996</a>)<br />\nfeat(core): add content-block-centric streaming (v2) (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/36834\">#36834</a>)<br />\nci(infra): add <code>pytest-xdist</code> to partner test groups (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/36988\">#36988</a>)<br />\nhotfix(ci): remove nobenchmark flag (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/36959\">#36959</a>)<br />\nchore(partners): standardize integration test invocation (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/36958\">#36958</a>)<br />\nchore(deps): bump pytest to <code>9.0.3</code> (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/36801\">#36801</a>)<br />\nchore: bump langsmith from 0.6.3 to 0.7.31 in /libs/partners/nomic (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/36784\">#36784</a>)<br />\nchore: bump pillow from 12.1.1 to 12.2.0 in /libs/partners/nomic (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/36779\">#36779</a>)<br />\nchore: add comment explaining <code>pygments&gt;=2.20.0</code> (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/36570\">#36570</a>)<br />\nchore: pygments&gt;=2.20.0 across all packages (<a href=\"https://github.com/advisories/GHSA-5239-wwwm-4pmq\" title=\"CVE-2026-4539\">CVE-2026-4539</a>) (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/36385\">#36385</a>)<br />\nchore: bump requests from 2.32.5 to 2.33.0 in /libs/partners/nomic (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/36250\">#36250</a>)<br />\nchore(partners): bump <code>langchain-core</code> min to <code>1.2.21</code> (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/36183\">#36183</a>)<br />\nci: suppress pytest streaming output in CI (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/36092\">#36092</a>)<br />\nci: avoid unnecessary dep installs in lint targets (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/36046\">#36046</a>)<br />\nchore: bump pyjwt from 2.10.1 to 2.12.0 in /libs/partners/nomic (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/36031\">#36031</a>)<br />\nchore: bump orjson from 3.11.5 to 3.11.6 in /libs/partners/nomic (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/35859\">#35859</a>)<br />\nfix(nomic,openai,perplexity): update pillow version to &gt;= 12.1.1, &lt;13.0.0 (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/35254\">#35254</a>)<br />\nchore(deps): bump pillow from 11.3.0 to 12.1.1 in /libs/partners/nomic (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/35178\">#35178</a>)<br />\nchore(deps): bump langsmith from 0.4.31 to 0.6.3 in /libs/partners/nomic (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/35153\">#35153</a>)<br />\nchore: add <code>make type</code> target (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/35015\">#35015</a>)<br />\nrevert: \"chore: add typing target in <code>Makefile</code>\" (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/35013\">#35013</a>)<br />\nchore: add typing target in <code>Makefile</code> (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/35012\">#35012</a>)<br />\nchore: enrich <code>pyproject.toml</code> files (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/34980\">#34980</a>)<br />\nchore(deps): bump the uv group across 20 directories with 3 updates (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/34941\">#34941</a>)<br />\nchore: upgrade urllib3 to 2.6.3 (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/34940\">#34940</a>)<br />\nchore: update twitter URLs (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/34736\">#34736</a>)<br />\nchore: ban relative imports on all packages (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/34691\">#34691</a>)<br />\nchore: update core dep in lockfiles (<a class=\"issue-link js-issue-link\" href=\"https://github.com/langchain-ai/langchain/pull/34216\">#34216</a>)</p>\n[Cluster context: 1 sources, engagement 0, common terms: 1.2.0, remove, python, class, 3.10.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "LangChain Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "1.2.0",
+          "remove",
+          "python",
+          "class",
+          "3.10",
+          "feat",
+          "changes",
+          "href"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: 1.2.0, remove, python, class. Lead: LangChain v1.2.0",
+        "alternative_titles": [
+          "LangChain v1.2.0",
+          "LangChain v1.2.0",
+          "LangChain v1.2.0",
+          "LangChain v1.5.0",
+          "LangChain v1.2.0",
+          "LangChain v1.8.0"
+        ],
+        "cluster_score": 35
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-11-24T01:35:34.607210Z",
+    "defer_count": 1,
+    "original_score": 85,
+    "original_reason": "LangChain `nomic` v1.1.0 released, dropping Python 3.10 for partner packages. Passes Ships Test."
+  },
+  {
+    "id": "b4f38764d867",
+    "status": "approved",
+    "created_at": "2026-11-24T01:35:18.371385Z",
+    "score": 90,
+    "reason": "Open-source runtime released by OpenAI/Cisco. Clear utility for protecting Linux systems during patching. Passes Ships Test.",
+    "proposed_post": "OpenAI & Cisco released Shirudo, an open-source Linux runtime. It helps protect running systems during patch rollouts, reducing security risk for deployed applications.",
+    "source_angle": "OpenAI/Cisco open-source Linux runtime for system protection",
+    "source_item": {
+      "title": "OpenAI and Cisco introduce Shirudo",
+      "source": "OpenAI News",
+      "link": "https://openai.com/index/introducing-shirudo",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 15,
+      "summary": "OpenAI and Cisco introduce Shirudo, an open-source runtime for Linux. It helps teams protect running systems while they roll out patches.\n[Cluster context: 1 sources, engagement 0, common terms: out, runtime, they, introduce, roll.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "OpenAI News"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "out",
+          "runtime",
+          "they",
+          "introduce",
+          "roll",
+          "linux.",
+          "cisco",
+          "teams"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: out, runtime, they, introduce. Lead: OpenAI and Cisco introduce Shirudo",
+        "alternative_titles": [],
+        "cluster_score": 45
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "breaking": false,
+    "claire_note": "Hey Chloe,\n\nOpenAI und Cisco haben Shirudo gelauncht, ein Open-Source-Runtime für Linux. Das ist super relevant für Devs, die ihre Systeme live halten müssen, während sie Patches einspielen. Im Prinzip ein Fallback für die Zeit, in der ein System verwundbar ist. Für alle, die mit Uptime und Sicherheit kämpfen, könnte das eine echte Erleichterung sein.",
+    "chloe_note": "Dieses Signal geht durch. Shirudo ist ein konkretes Open-Source-Runtime, das Entwickler herunterladen und auf Linux-Systemen implementieren können, um die Sicherheit während des Patching zu verbessern. Klare Relevanz und direkte Anwendbarkeit."
   }
 ]
