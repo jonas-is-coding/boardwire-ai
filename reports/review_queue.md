@@ -6,6 +6,10 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-11-24T20:37:13.881408Z` [review] **Advancing chip design with OpenAI models** — Post is empty; Post lacks a clear claim or insight
+- `2026-11-24T20:37:13.704163Z` [review] **LangChain v1.8.0** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.8.0'
+- `2026-11-24T20:37:13.524681Z` [review] **vLLM v0.34.1rc0** — Post is empty; Post lacks a clear claim or insight
+- `2026-11-24T20:37:12.781065Z` [review] **LangChain v1.1.0** — Version-only release without concrete capability: 'LangChain v1.1.0'
 - `2026-11-24T01:35:34.787716Z` [review] **Ollama v0.40.17-rc3** — Version-only release without concrete capability: 'Ollama v0.40.17-rc3'
 - `2026-11-23T22:00:36.939018Z` [review] **Explore the Codex Security Plugin** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-23T22:00:36.845847Z` [review] **Introducing ChatGPT for Sales** — Post is empty; Post lacks a clear claim or insight
@@ -27,7 +31,3 @@ No pending review items.
 - `2026-11-04T17:57:28.243492Z` [review] **Daybreak Red is now available in AWS GovCloud (US-East)** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-04T17:57:28.062462Z` [review] **Kimi K3.1 Pro model weights are out** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-04T17:57:27.884956Z` [review] **LangChain v1.4.9** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.4.9'
-- `2026-11-03T20:29:28.012183Z` [review] **Usagi-org/ai-goofish-monitor — 基于 Playwright 和AI实现的闲鱼多任务实时/定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。** — Post is empty; Post lacks a clear claim or insight
-- `2026-11-03T20:29:27.832322Z` [review] **spotify/portal-ai-plugins** — Post is empty; Post lacks a clear claim or insight
-- `2026-11-03T20:29:27.652869Z` [review] **Octomind – open-source AI harness that saves your tokens, static rust** — Post is empty; Post lacks a clear claim or insight
-- `2026-11-03T20:29:27.271247Z` [review] **LangChain v1.7.4** — Version-only release without concrete capability: 'LangChain v1.7.4'

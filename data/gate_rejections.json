@@ -1,46 +1,5 @@
 [
   {
-    "rejected_at": "2026-09-30T16:24:19.081550Z",
-    "stage": "review",
-    "title": "Towards safety cases for frontier AI training",
-    "link": "https://openai.com/index/towards-safety-cases-for-frontier-ai-training",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-30T19:03:48.658187Z",
-    "stage": "review",
-    "title": "Claude Code v2.1.285",
-    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.285",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-30T19:03:48.805598Z",
-    "stage": "review",
-    "title": "vLLM v0.4.0",
-    "link": "https://github.com/vllm-project/vllm/releases/tag/proto-v0.4.0",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight",
-      "Version-only release without concrete capability: 'vLLM v0.4.0'"
-    ]
-  },
-  {
-    "rejected_at": "2026-09-30T19:03:48.955068Z",
-    "stage": "review",
-    "title": "LangChain v1.7.0",
-    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-fireworks%3D%3D1.7.0",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
     "rejected_at": "2026-10-01T17:00:28.998433Z",
     "stage": "review",
     "title": "Introducing Olmo-core 3: Open, scalable training infrastructure for large MoEs",
@@ -1994,6 +1953,46 @@
     "link": "https://github.com/ollama/ollama/releases/tag/v0.40.17-rc3",
     "reasons": [
       "Version-only release without concrete capability: 'Ollama v0.40.17-rc3'"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-24T20:37:12.781065Z",
+    "stage": "review",
+    "title": "LangChain v1.1.0",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-nomic%3D%3D1.1.0",
+    "reasons": [
+      "Version-only release without concrete capability: 'LangChain v1.1.0'"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-24T20:37:13.524681Z",
+    "stage": "review",
+    "title": "vLLM v0.34.1rc0",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.34.1rc0",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-24T20:37:13.704163Z",
+    "stage": "review",
+    "title": "LangChain v1.8.0",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-fireworks%3D%3D1.8.0",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight",
+      "Version-only release without concrete capability: 'LangChain v1.8.0'"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-24T20:37:13.881408Z",
+    "stage": "review",
+    "title": "Advancing chip design with OpenAI models",
+    "link": "https://openai.com/index/advancing-chip-design-with-our-models",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
     ]
   }
 ]
