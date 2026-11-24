@@ -2001,6 +2001,21 @@
         "@ai2.bsky.social follows"
       ],
       "followed_at": "2026-11-20T16:27:45.773406Z"
+    },
+    "did:plc:h6xi4ohgnm2rtv6hszq6mzqb": {
+      "handle": "sergimansilla.com",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3n33dnk2j7p2t",
+      "channel": "seed_followers",
+      "score": 3.0,
+      "mode": "discover",
+      "via": [
+        "follows @rasbt.bsky.social",
+        "follows @emollick.bsky.social",
+        "follows @stellaathena.bsky.social",
+        "follows @dorialexander.bsky.social",
+        "follows @ai2.bsky.social"
+      ],
+      "followed_at": "2026-11-24T19:06:05.970512Z"
     }
   },
   "runs": [
@@ -2686,6 +2701,21 @@
       ],
       "started_at": "2026-11-20T16:22:17.875730Z",
       "finished_at": "2026-11-20T16:27:45.776066Z"
+    },
+    {
+      "mode": "discover",
+      "dry_run": false,
+      "limit": 12,
+      "planned": 0,
+      "followed": 1,
+      "skipped_already": 0,
+      "failed": 0,
+      "aborted": null,
+      "handles": [
+        "sergimansilla.com"
+      ],
+      "started_at": "2026-11-24T19:06:05.794827Z",
+      "finished_at": "2026-11-24T19:06:05.973321Z"
     }
   ],
   "pinned_thread": {
