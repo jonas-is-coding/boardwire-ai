@@ -2016,6 +2016,30 @@
         "follows @ai2.bsky.social"
       ],
       "followed_at": "2026-11-24T19:06:05.970512Z"
+    },
+    "did:plc:qhh6f5ob7zfsxyi34tv7lvxq": {
+      "handle": "k33gorg.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3n35r3ed4eb2g",
+      "channel": "seed_follows",
+      "score": 1.5,
+      "mode": "discover",
+      "via": [
+        "follows @simonwillison.net",
+        "@dorialexander.bsky.social follows"
+      ],
+      "followed_at": "2026-11-25T18:11:47.842095Z"
+    },
+    "did:plc:hkfqwkstqoblu6wwv2oh2shr": {
+      "handle": "ablationlog.org",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3n35r433kpr2a",
+      "channel": "seed_followers",
+      "score": 1.5,
+      "mode": "discover",
+      "via": [
+        "follows @natolambert.bsky.social",
+        "follows @s.ly"
+      ],
+      "followed_at": "2026-11-25T18:12:11.712321Z"
     }
   },
   "runs": [
@@ -2716,6 +2740,22 @@
       ],
       "started_at": "2026-11-24T19:06:05.794827Z",
       "finished_at": "2026-11-24T19:06:05.973321Z"
+    },
+    {
+      "mode": "discover",
+      "dry_run": false,
+      "limit": 12,
+      "planned": 0,
+      "followed": 2,
+      "skipped_already": 0,
+      "failed": 0,
+      "aborted": null,
+      "handles": [
+        "k33gorg.bsky.social",
+        "ablationlog.org"
+      ],
+      "started_at": "2026-11-25T18:11:47.654370Z",
+      "finished_at": "2026-11-25T18:12:11.714596Z"
     }
   ],
   "pinned_thread": {
