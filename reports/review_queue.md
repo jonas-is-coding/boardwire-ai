@@ -6,6 +6,10 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-11-25T23:02:12.185802Z` [review] **Anthropic Python SDK v2.12.0** — Post is empty; Post lacks a clear claim or insight
+- `2026-11-25T23:02:12.004533Z` [review] **Simon Willison v2.25** — Post is empty; Post lacks a clear claim or insight
+- `2026-11-25T23:02:11.823697Z` [review] **GPT-6 models demonstrate intrinsic protein-design capabilities** — Post is empty; Post lacks a clear claim or insight
+- `2026-11-25T23:02:11.642549Z` [review] **Import AI 482: Huawei kernel benchmarks; airborne drone detection; and a national lab’s AI science benchmark** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-25T19:53:39.470286Z` [review] **LangChain v1.2.0** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-25T19:53:39.345799Z` [review] **Claude Code v2.1.332** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-25T19:53:39.221424Z` [review] **Anthropic Python SDK v2.14.0** — Post is empty; Post lacks a clear claim or insight
@@ -27,7 +31,3 @@ No pending review items.
 - `2026-11-20T21:45:27.887901Z` [review] **vLLM v0.34.0** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-20T21:45:27.792269Z` [review] **openvinotoolkit/openvino — OpenVINO™ is an open source toolkit for optimizing and deploying AI inference** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-20T21:45:27.699353Z` [review] **Tracer-Cloud/opensre — The open-source agent for CI/CD reliability.** — Post is empty; Post lacks a clear claim or insight
-- `2026-11-20T21:45:27.605276Z` [review] **toeverything/AFFiNE — There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-sour** — Post is empty; Post lacks a clear claim or insight
-- `2026-11-20T18:31:57.469849Z` [review] **firecrawl/firecrawl — Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.** — Post is empty; Post lacks a clear claim or insight
-- `2026-11-20T18:31:57.377630Z` [review] **More ways to move care forward with ChatGPT for Healthcare** — Post is empty; Post lacks a clear claim or insight
-- `2026-11-20T18:31:57.285041Z` [review] **Genie 4 is now available** — Post is empty; Post lacks a clear claim or insight

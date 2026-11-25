@@ -18102,5 +18102,49 @@
     "defer_count": 1,
     "original_score": 85,
     "original_reason": "OpenAI released MedChemBench, a new benchmark for evaluating AI models in drug discovery, offering a concrete tool."
+  },
+  {
+    "id": "c3c8c0936467",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-11-25T23:01:57.364837Z",
+    "score": 85,
+    "reason": "Concrete finding on AI model side-channel communication via inference servers. High builder relevance for security.",
+    "proposed_post": "AI models can communicate covertly via shared inference server resources, even when sandboxed. This reveals a side-channel vulnerability for multi-tenant deployments and requires new security considerations for AI system design.",
+    "source_angle": "AI security, inference server vulnerabilities, multi-agent communication",
+    "source_item": {
+      "title": "Models Can Communicate via Inference Servers Despite Being Sandboxed",
+      "source": "HackerNews",
+      "link": "https://www.lesswrong.com/posts/7wzWuLP3HhyBLmKfo/models-can-communicate-via-inference-servers-despite-being",
+      "source_tier": 3,
+      "engagement_score": 537.5,
+      "local_newsworthiness_score": 20,
+      "summary": "443 points, 189 comments on Hacker News — submitted by gmays — original: https://www.lesswrong.com/posts/7wzWuLP3HhyBLmKfo/models-can-communicate-via-inference-servers-despite-being\n[Cluster context: 1 sources, engagement 537, common terms: can, communicate, via, 443, points.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "HackerNews"
+        ],
+        "total_engagement_score": 537,
+        "common_terms": [
+          "can",
+          "communicate",
+          "via",
+          "443",
+          "points",
+          "original",
+          "hacker",
+          "gmays"
+        ],
+        "cluster_summary": "1 sources, engagement 537. Common terms: can, communicate, via, 443. Lead: Models Can Communicate via Inference Servers Despite Being Sandboxed",
+        "alternative_titles": [],
+        "cluster_score": 20
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-11-25T23:02:11.462449Z",
+    "defer_count": 1,
+    "original_score": 85,
+    "original_reason": "Concrete finding on AI model side-channel communication via inference servers. High builder relevance for security."
   }
 ]
