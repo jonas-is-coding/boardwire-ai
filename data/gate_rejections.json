@@ -1,47 +1,5 @@
 [
   {
-    "rejected_at": "2026-10-01T19:24:29.689162Z",
-    "stage": "review",
-    "title": "Clef: Open-source decision models, and new RL fine-tuning platform",
-    "link": "https://blog.cloudflare.com/clef-decision-models/",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-10-01T19:24:29.836756Z",
-    "stage": "review",
-    "title": "vLLM v0.31.0rc2",
-    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.31.0rc2",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight",
-      "Version-only release without concrete capability: 'vLLM v0.31.0rc2'"
-    ]
-  },
-  {
-    "rejected_at": "2026-10-02T16:15:38.970909Z",
-    "stage": "review",
-    "title": "vLLM v0.31.0rc4",
-    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.31.0rc4",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight",
-      "Version-only release without concrete capability: 'vLLM v0.31.0rc4'"
-    ]
-  },
-  {
-    "rejected_at": "2026-10-02T19:07:42.257144Z",
-    "stage": "review",
-    "title": "FLUX 3 Image",
-    "link": "https://bfl.ai/models/flux-3-image",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
     "rejected_at": "2026-10-04T21:54:26.548261Z",
     "stage": "review",
     "title": "Kolibri: A Sovereign Open-Weight Model",
@@ -1989,6 +1947,45 @@
     "stage": "review",
     "title": "Research acceleration: The jagged frontier",
     "link": "https://openai.com/index/research-acceleration-jagged-frontier",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-25T19:53:38.823639Z",
+    "stage": "review",
+    "title": "Claude Code v2.1.331",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.331",
+    "reasons": [
+      "Duplicate or near-duplicate post detected"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-25T19:53:39.221424Z",
+    "stage": "review",
+    "title": "Anthropic Python SDK v2.14.0",
+    "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.14.0",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-25T19:53:39.345799Z",
+    "stage": "review",
+    "title": "Claude Code v2.1.332",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.332",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-25T19:53:39.470286Z",
+    "stage": "review",
+    "title": "LangChain v1.2.0",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-exa%3D%3D1.2.0",
     "reasons": [
       "Post is empty",
       "Post lacks a clear claim or insight"

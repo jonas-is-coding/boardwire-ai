@@ -17920,7 +17920,7 @@
   },
   {
     "id": "c7450a575f79",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-11-24T20:36:53.294300Z",
     "score": 90,
     "reason": "New Claude Code release with direct cloud platform integrations and API diagnostics. Clear, actionable features for builders.",
@@ -17967,16 +17967,17 @@
     "deferred_at": "2026-11-24T23:27:36.863407Z",
     "defer_count": 2,
     "original_score": 90,
-    "original_reason": "New Claude Code release with direct cloud platform integrations and API diagnostics. Clear, actionable features for builders."
+    "original_reason": "New Claude Code release with direct cloud platform integrations and API diagnostics. Clear, actionable features for builders.",
+    "rejected_at": "2026-11-25T19:53:38.825992Z"
   },
   {
     "id": "01e8c21fb968",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-11-24T20:37:00.959453Z",
+    "status": "approved",
+    "created_at": "2026-11-25T19:53:38.963265Z",
     "score": 90,
-    "reason": "SDK update includes new Admin API features and critical deprecation notice for Claude Opus 4.5, requiring migration planning.",
-    "proposed_post": "Anthropic Python SDK v2.13.0 marks Claude Opus 4.5 as deprecated, with end-of-life Jan 22, 2027. Builders using Opus 4.5 must plan migration to newer models or alternatives.",
-    "source_angle": "Anthropic SDK update with model deprecation and new Admin API features.",
+    "reason": "SDK update with new Admin API features and critical model deprecation requires immediate developer action/planning.",
+    "proposed_post": "Anthropic Python SDK v2.13.0 adds new Admin API features and deprecates Claude Opus 4.5. Builders using Opus 4.5 must plan migration; new Admin API features are available for immediate use.",
+    "source_angle": "Anthropic Python SDK release with Admin API and Opus 4.5 deprecation.",
     "source_item": {
       "title": "Anthropic Python SDK v2.13.0",
       "source": "Anthropic Python SDK Releases",
@@ -18013,19 +18014,17 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-11-24T23:27:36.977022Z",
-    "defer_count": 2,
-    "original_score": 90,
-    "original_reason": "SDK update includes new Admin API features and critical deprecation notice for Claude Opus 4.5, requiring migration planning."
+    "breaking": false,
+    "reactivated_at": "2026-11-25T19:53:38.963265Z"
   },
   {
     "id": "c2200112295f",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-11-24T20:37:08.008317Z",
+    "status": "approved",
+    "created_at": "2026-11-25T19:53:39.099280Z",
     "score": 90,
-    "reason": "OpenAI and Cisco launched an open-source runtime. Passes Ships Test (open-source tool launch).",
-    "proposed_post": "OpenAI & Cisco released Shirudo, an open-source runtime for Linux. Builders can use it to shield unpatched Linux systems, adding a security layer to their AI deployment infrastructure.",
-    "source_angle": "OpenAI & Cisco open-source Linux security runtime",
+    "reason": "Open-source runtime launched by OpenAI/Cisco, directly usable for Linux security.",
+    "proposed_post": "OpenAI & Cisco launched Shirudo, an open-source runtime for Linux. Deploy it today to shield unpatched systems, enhancing security for your AI infrastructure.",
+    "source_angle": "OpenAI & Cisco launch open-source Linux security runtime",
     "source_item": {
       "title": "Shirudo: OpenAI and Cisco's open-source runtime for shielding unpatched Linux",
       "source": "HackerNews",
@@ -18057,10 +18056,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-11-24T23:27:37.091792Z",
-    "defer_count": 2,
-    "original_score": 90,
-    "original_reason": "OpenAI and Cisco launched an open-source runtime. Passes Ships Test (open-source tool launch)."
+    "breaking": false,
+    "reactivated_at": "2026-11-25T19:53:39.099280Z"
   },
   {
     "id": "91b075b7dfb5",

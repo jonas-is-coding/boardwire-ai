@@ -6,6 +6,10 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-11-25T19:53:39.470286Z` [review] **LangChain v1.2.0** — Post is empty; Post lacks a clear claim or insight
+- `2026-11-25T19:53:39.345799Z` [review] **Claude Code v2.1.332** — Post is empty; Post lacks a clear claim or insight
+- `2026-11-25T19:53:39.221424Z` [review] **Anthropic Python SDK v2.14.0** — Post is empty; Post lacks a clear claim or insight
+- `2026-11-25T19:53:38.823639Z` [review] **Claude Code v2.1.331** — Duplicate or near-duplicate post detected
 - `2026-11-24T23:27:37.524824Z` [review] **Research acceleration: The jagged frontier** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-24T23:27:37.418661Z` [review] **Managing frontier AI risk: From training to deployment** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-24T23:27:37.313780Z` [review] **Richpanel helps companies automate 50% of support in 30 days** — Post is empty; Post lacks a clear claim or insight
@@ -27,7 +31,3 @@ No pending review items.
 - `2026-11-20T18:31:57.469849Z` [review] **firecrawl/firecrawl — Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-20T18:31:57.377630Z` [review] **More ways to move care forward with ChatGPT for Healthcare** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-20T18:31:57.285041Z` [review] **Genie 4 is now available** — Post is empty; Post lacks a clear claim or insight
-- `2026-11-04T20:44:26.494077Z` [review] **Show HN: Kairos – Open-source risk and fraud decisioning platform** — Post is empty; Post lacks a clear claim or insight
-- `2026-11-04T20:44:26.330446Z` [review] **Thysrael/Horizon — 📡 Your own AI-powered news radar. Generates daily briefings in English & Chinese. | 用 AI 构建你专属的新闻雷达** — Post is empty; Post lacks a clear claim or insight
-- `2026-11-04T20:44:26.166098Z` [review] **The-PR-Agent/pr-agent — 🚀 PR Agent: The Original Open-Source PR Reviewer. This project is not the Qodo free tier.** — Post is empty; Post lacks a clear claim or insight
-- `2026-11-04T20:44:26.001925Z` [review] **LangChain v1.7.4** — Version-only release without concrete capability: 'LangChain v1.7.4'
