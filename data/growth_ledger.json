@@ -2040,6 +2040,18 @@
         "follows @s.ly"
       ],
       "followed_at": "2026-11-25T18:12:11.712321Z"
+    },
+    "did:plc:auzs2ve7j2fpugupk3wfhayt": {
+      "handle": "arka6fx.bsky.social",
+      "uri": "at://did:plc:e4wr5lkpn63w5hy6iisnauqu/app.bsky.graph.follow/3n3aakhfzyw26",
+      "channel": "seed_followers",
+      "score": 1.5,
+      "mode": "discover",
+      "via": [
+        "follows @simonwillison.net",
+        "follows @emollick.bsky.social"
+      ],
+      "followed_at": "2026-11-26T17:53:59.989947Z"
     }
   },
   "runs": [
@@ -2756,6 +2768,21 @@
       ],
       "started_at": "2026-11-25T18:11:47.654370Z",
       "finished_at": "2026-11-25T18:12:11.714596Z"
+    },
+    {
+      "mode": "discover",
+      "dry_run": false,
+      "limit": 12,
+      "planned": 0,
+      "followed": 1,
+      "skipped_already": 0,
+      "failed": 0,
+      "aborted": null,
+      "handles": [
+        "arka6fx.bsky.social"
+      ],
+      "started_at": "2026-11-26T17:53:59.846008Z",
+      "finished_at": "2026-11-26T17:53:59.992404Z"
     }
   ],
   "pinned_thread": {
