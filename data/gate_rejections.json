@@ -1,35 +1,5 @@
 [
   {
-    "rejected_at": "2026-10-05T19:14:45.187670Z",
-    "stage": "review",
-    "title": "ReviewBench: An open benchmark for AI code review",
-    "link": "https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review/",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-10-05T21:27:29.217473Z",
-    "stage": "review",
-    "title": "Ollama v0.40.0-rc1",
-    "link": "https://github.com/ollama/ollama/releases/tag/v0.40.0-rc1",
-    "reasons": [
-      "Version-only release without concrete capability: 'Ollama v0.40.0-rc1'"
-    ]
-  },
-  {
-    "rejected_at": "2026-10-05T21:27:29.300205Z",
-    "stage": "review",
-    "title": "vLLM v0.31.0rc5",
-    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.31.0rc5",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight",
-      "Version-only release without concrete capability: 'vLLM v0.31.0rc5'"
-    ]
-  },
-  {
     "rejected_at": "2026-10-05T21:27:29.385718Z",
     "stage": "review",
     "title": "OpenAI \"rogue\" agent activities found on Wikimedia projects",
@@ -1990,6 +1960,36 @@
     "reasons": [
       "Post is empty",
       "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-26T22:54:59.140451Z",
+    "stage": "review",
+    "title": "Claude Code v2.1.330",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.330",
+    "reasons": [
+      "Version-only release without concrete capability: 'Claude Code v2.1.330'"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-26T22:54:59.475147Z",
+    "stage": "review",
+    "title": "LangChain v1.2.0",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-qdrant%3D%3D1.2.0",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-26T22:54:59.570793Z",
+    "stage": "review",
+    "title": "vLLM v0.34.0rc3",
+    "link": "https://github.com/vllm-project/vllm/releases/tag/v0.34.0rc3",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight",
+      "Version-only release without concrete capability: 'vLLM v0.34.0rc3'"
     ]
   }
 ]

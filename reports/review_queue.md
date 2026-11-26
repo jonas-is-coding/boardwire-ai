@@ -6,6 +6,9 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-11-26T22:54:59.570793Z` [review] **vLLM v0.34.0rc3** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.34.0rc3'
+- `2026-11-26T22:54:59.475147Z` [review] **LangChain v1.2.0** — Post is empty; Post lacks a clear claim or insight
+- `2026-11-26T22:54:59.140451Z` [review] **Claude Code v2.1.330** — Version-only release without concrete capability: 'Claude Code v2.1.330'
 - `2026-11-26T19:31:39.285219Z` [review] **LangChain v1.7.13** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-25T23:02:12.185802Z` [review] **Anthropic Python SDK v2.12.0** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-25T23:02:12.004533Z` [review] **Simon Willison v2.25** — Post is empty; Post lacks a clear claim or insight
@@ -28,6 +31,3 @@ No pending review items.
 - `2026-11-22T23:48:35.242111Z` [review] **vLLM v0.34.0rc4** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.34.0rc4'
 - `2026-11-22T23:48:35.163657Z` [review] **Llama Index v0.14.26** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-22T23:48:35.084073Z` [review] **LangChain v1.8.5** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.8.5'
-- `2026-11-22T23:48:35.004494Z` [review] **Ollama v0.40.17** — Post is empty; Post lacks a clear claim or insight
-- `2026-11-20T21:45:27.887901Z` [review] **vLLM v0.34.0** — Post is empty; Post lacks a clear claim or insight
-- `2026-11-20T21:45:27.792269Z` [review] **openvinotoolkit/openvino — OpenVINO™ is an open source toolkit for optimizing and deploying AI inference** — Post is empty; Post lacks a clear claim or insight
