@@ -1,15 +1,5 @@
 [
   {
-    "rejected_at": "2026-10-05T19:14:45.036144Z",
-    "stage": "review",
-    "title": "michael-denyer/pstack-claude — Claude Code, Codex, Pi, OpenCode, Gemini, and Prime Agent versions of Poteto's pstack. Rigorous agent workflows with Cursor primitives translated for other harnesses.",
-    "link": "https://github.com/michael-denyer/pstack-claude",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
     "rejected_at": "2026-10-05T19:14:45.187670Z",
     "stage": "review",
     "title": "ReviewBench: An open benchmark for AI code review",
@@ -1987,6 +1977,16 @@
     "stage": "review",
     "title": "Anthropic Python SDK v2.12.0",
     "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.12.0",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-26T19:31:39.285219Z",
+    "stage": "review",
+    "title": "LangChain v1.7.13",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-anthropic%3D%3D1.7.13",
     "reasons": [
       "Post is empty",
       "Post lacks a clear claim or insight"

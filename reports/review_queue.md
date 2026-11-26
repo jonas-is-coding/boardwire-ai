@@ -6,6 +6,7 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-11-26T19:31:39.285219Z` [review] **LangChain v1.7.13** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-25T23:02:12.185802Z` [review] **Anthropic Python SDK v2.12.0** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-25T23:02:12.004533Z` [review] **Simon Willison v2.25** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-25T23:02:11.823697Z` [review] **GPT-6 models demonstrate intrinsic protein-design capabilities** — Post is empty; Post lacks a clear claim or insight
@@ -30,4 +31,3 @@ No pending review items.
 - `2026-11-22T23:48:35.004494Z` [review] **Ollama v0.40.17** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-20T21:45:27.887901Z` [review] **vLLM v0.34.0** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-20T21:45:27.792269Z` [review] **openvinotoolkit/openvino — OpenVINO™ is an open source toolkit for optimizing and deploying AI inference** — Post is empty; Post lacks a clear claim or insight
-- `2026-11-20T21:45:27.699353Z` [review] **Tracer-Cloud/opensre — The open-source agent for CI/CD reliability.** — Post is empty; Post lacks a clear claim or insight
