@@ -18148,12 +18148,12 @@
   },
   {
     "id": "51926d0a85b4",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-11-26T19:31:26.539727Z",
+    "status": "approved",
+    "created_at": "2026-11-27T19:26:34.179665Z",
     "score": 90,
-    "reason": "Anthropic Python SDK v2.11.0 adds Claude Code Admin API settings & structured output perf. Ships today.",
-    "proposed_post": "Anthropic Python SDK v2.11.0 adds Claude Code managed settings to Admin API & improves structured output performance. Update to manage Claude Code settings programmatically and get faster structured outputs.",
-    "source_angle": "Anthropic SDK update for Claude Code & structured outputs",
+    "reason": "New SDK version with concrete features (Claude Code Admin API settings, structured output perf) for Claude. Ships today.",
+    "proposed_post": "Anthropic Python SDK v2.11.0 released, adding Claude Code Admin API settings and improving structured output performance. Builders can now configure Claude Code via the SDK and expect faster structured outputs.",
+    "source_angle": "Anthropic SDK update for Claude Code",
     "source_item": {
       "title": "Anthropic Python SDK v2.11.0",
       "source": "Anthropic Python SDK Releases",
@@ -18188,10 +18188,8 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-11-26T22:54:59.026127Z",
-    "defer_count": 2,
-    "original_score": 90,
-    "original_reason": "Anthropic Python SDK v2.11.0 adds Claude Code Admin API settings & structured output perf. Ships today."
+    "breaking": false,
+    "reactivated_at": "2026-11-27T19:26:34.179665Z"
   },
   {
     "id": "d6e60634aea2",
@@ -18247,12 +18245,12 @@
   },
   {
     "id": "beae3504ff9e",
-    "status": "deferred_due_to_cap",
-    "created_at": "2026-11-26T22:54:49.185684Z",
-    "score": 85,
-    "reason": "Anthropic SDK update with practical features for billing control and production monitoring.",
-    "proposed_post": "Anthropic Python SDK v2.10.0 adds beta `billing_policy` support and webhook events for external key failures. Builders can now implement more granular cost control and robust monitoring for production Anthropic API integrations.",
-    "source_angle": "Anthropic SDK update for billing and reliability",
+    "status": "approved",
+    "created_at": "2026-11-27T19:26:34.301579Z",
+    "score": 90,
+    "reason": "New SDK version with concrete features for production management and cost control. Passes Ships Test.",
+    "proposed_post": "Anthropic Python SDK v2.10.0 adds billing control and production monitoring features. Builders can now better manage costs and observe live applications using Anthropic models.",
+    "source_angle": "Anthropic SDK update for production ops",
     "source_item": {
       "title": "Anthropic Python SDK v2.10.0",
       "source": "Anthropic Python SDK Releases",
@@ -18286,14 +18284,12 @@
     },
     "card_path": null,
     "is_llm_mode": true,
-    "deferred_at": "2026-11-26T22:54:59.259519Z",
-    "defer_count": 1,
-    "original_score": 85,
-    "original_reason": "Anthropic SDK update with practical features for billing control and production monitoring."
+    "breaking": false,
+    "reactivated_at": "2026-11-27T19:26:34.301579Z"
   },
   {
     "id": "f4dc43ca260a",
-    "status": "deferred_due_to_cap",
+    "status": "rejected",
     "created_at": "2026-11-26T22:54:55.424499Z",
     "score": 95,
     "reason": "New Claude Code version with concrete dev-ops, security, and debugging enhancements. Ships today.",
@@ -18338,6 +18334,51 @@
     "deferred_at": "2026-11-26T22:54:59.379944Z",
     "defer_count": 1,
     "original_score": 95,
-    "original_reason": "New Claude Code version with concrete dev-ops, security, and debugging enhancements. Ships today."
+    "original_reason": "New Claude Code version with concrete dev-ops, security, and debugging enhancements. Ships today.",
+    "rejected_at": "2026-11-27T19:26:34.055924Z"
+  },
+  {
+    "id": "68cefabbb09a",
+    "status": "deferred_due_to_cap",
+    "created_at": "2026-11-27T19:26:29.218394Z",
+    "score": 90,
+    "reason": "New Anthropic Python SDK v2.9.0 released with API for updating Claude Tag Bundle instructions and RBAC improvements.",
+    "proposed_post": "Anthropic Python SDK v2.9.0 adds API to update Claude Tag Bundle instructions. Builders can now programmatically manage Claude's contextual behavior or prompt configurations for specific use cases.",
+    "source_angle": "Anthropic SDK release adds new API for Claude configuration",
+    "source_item": {
+      "title": "Anthropic Python SDK v2.9.0",
+      "source": "Anthropic Python SDK Releases",
+      "link": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v2.9.0",
+      "source_tier": 1,
+      "engagement_score": 0.0,
+      "local_newsworthiness_score": 0,
+      "summary": "<h3>Features</h3>\n<ul>\n<li><strong>api:</strong> add source and error codes to the RBAC Role read endpoints</li>\n<li><strong>api:</strong> add Update Bundle, which sets a Claude Tag Bundle's instructions, and return instructions on Bundle</li>\n</ul>\n<h3>Bug Fixes</h3>\n<ul>\n<li>\n<p><strong>credentials:</strong> write the credentials file on Windows with Python 3.12 and earlier</p>\n</li>\n<li>\n<p><strong>tools:</strong> compare directory names exactly when confining file tool and upload paths on Windows</p>\n</li>\n<li>\n<p><strong>tools:</strong> fully resolve file tool paths that pass through a dangling symlink</p>\n</li>\n<li>\n<p><strong>tools:</strong> ignore ripgrep config files in the agent toolset's grep tool</p>\n</li>\n<li>\n<p><strong>tools:</strong> keep an existing skill directory when the download or extraction that would replace it fails</p>\n</li>\n<li>\n<p><strong>tools:</strong> keep the session tool runner's max_idle countdown running when a session thread terminates</p>\n<p>If the runner fails to read the session's event history after a reconnect, a termination that then arrives on the event stream still cancels the countdown, until the next idle or successful read.</p>\n</li>\n<li>\n<p><strong>tools:</strong> leave symlinks that point outside /memories out of listings</p>\n</li>\n<li>\n<p><strong>tools:</strong> look for ripgrep only in absolute <code>PATH</code> entries in the agent toolset's grep tool</p>\n<p>The tool no longer runs an <code>rg</code> from a relative or empty <code>PATH</code> entry or, on Windows, from the current directory. On Windows it looks for <code>rg.exe</code>, so an <code>rg.cmd</code>, <code>rg.bat</code> or <code>rg.com</code> is no longer used. With no other <code>rg</code> on <code>PATH</code>, the tool uses its built-in search.</p>\n</li>\n<li>\n<p><strong>tools:</strong> pass over an rg inside the directories the agent toolset's file tools can write</p>\n<p><code>grep</code> passes over an <code>rg</code> that resolves to somewhere inside <code>workdir</code> or <code>allowed_roots</code>, whatever the letter case of the names. It uses the next <code>rg</code> on <code>PATH</code>, or the built-in search when there is none. With a <code>workdir</code> that holds every <code>rg</code> on the host, such as <code>/</code>, every search is a built-in search. <code>rg</code> no longer gets the <code>ANTHROPIC_*</code> variables of the process, like the shell of <code>bash</code>.</p>\n</li>\n<li>\n<p><strong>tools:</strong> read memory files only through the path that was validated</p>\n</li>\n<li>\n<p><strong>tools:</strong> read only regular files in the grep tool's built-in search</p>\n<p>The built-in search of <code>grep</code> passes over a FIFO or a device in the directory it walks, as ripgrep does. Reading one could block the search, and the event loop with it, forever.</p>\n</li>\n<li>\n<p><strong>tools:</strong> stop EnvironmentWorker from running tools for a terminated session</p>\n<p>For a terminated session, the worker now force-stops the work item right after it retrieves the session, before it downloads skills or memory stores. It no longer raises <code>SessionMemoryError</code> for such a session. The API reports an archived session as <code>terminated</code>.</p>\n</li>\n<li>\n<p><strong>tools:</strong> stop the grep tool after 30 seconds of CPU time when ripgrep is not installed</p>\n</li>\n<li>\n<p><strong>tools:</strong> stop the session tool runner from running the tool calls of a terminated session thread</p>\n<p>The runner also no longer yields these calls, including a denied call (<code>confirmation=\"deny\"</code>) and a call to a tool that it does not own. The one exception is a call whose tool is already running when the thread terminates: the runner yields it with <code>posted=False</code> and posts no result.</p>\n</li>\n</ul>\n<h3>Chores</h3>\n<ul>\n<li>\n<p><strong>api:</strong> deprecate old beta header values</p>\n<p>The API still accepts these values, but a later release removes them from the SDKs. Delete <code>prompt-caching-2024-07-31</code>, <code>pdfs-2024-09-25</code>, <code>token-counting-2024-11-01</code>, <code>token-efficient-tools-2025-02-19</code>, <code>extended-cache-ttl-2025-04-11</code>, <code>cache-diagnosis-2026-04-07</code> and <code>ce-user-management-2026-07-13</code> from your requests. <code>files-api-2025-04-14</code> and <code>skills-2025-10-02</code> select the beta response shapes, so follow the Files API and Skills migration guides before you delete them.</p>\n<p>In C#, the <code>AnthropicBeta</code> enum's members have new numbers, so code compiled against an earlier SDK version sends a different beta value, with no error, until you rebuild it.</p>\n</li>\n<li>\n<p><strong>api:</strong> stop sending an old beta header on batch requests</p>\n<p><code>beta.messages.batches</code> no longer sends <code>message-batches-2024-09-24</code>, which the API doesn't need. If your client sets a default <code>anthropic-beta</code> header, these requests now send it, where in some SDKs the old value replaced it. The API still accepts the old value. If you set it yourself, delete it: a later release removes it from the SDKs.</p>\n</li>\n<li>\n<p><strong>docs:</strong> add an example value for the workspace name</p>\n</li>\n<li>\n<p><strong>docs:</strong> clarify when the auto permission policy denies a tool call</p>\n</li>\n<li>\n<p><strong>docs:</strong> clarify which workspaces an external key can be attached to</p>\n</li>\n<li>\n<p><strong>docs:</strong> recommend multiagent_20261001 over the coordinator type</p>\n</li>\n<li>\n<p><strong>docs:</strong> say when organization_id is required on plugin reads</p>\n</li>\n<li>\n<p><strong>tests:</strong> let idle test workers take queued tests</p>\n</li>\n</ul>\n[Cluster context: 1 sources, engagement 0, common terms: name, tests, anthropicbeta, session., work.]",
+      "cluster_context": {
+        "source_count": 1,
+        "sources": [
+          "Anthropic Python SDK Releases"
+        ],
+        "total_engagement_score": 0,
+        "common_terms": [
+          "name",
+          "tests",
+          "anthropicbeta",
+          "session.",
+          "work",
+          "/h3",
+          "its",
+          "rg.exe"
+        ],
+        "cluster_summary": "1 sources, engagement 0. Common terms: name, tests, anthropicbeta, session.. Lead: Anthropic Python SDK v2.9.0",
+        "alternative_titles": [],
+        "cluster_score": 15
+      }
+    },
+    "card_path": null,
+    "is_llm_mode": true,
+    "deferred_at": "2026-11-27T19:26:34.424219Z",
+    "defer_count": 1,
+    "original_score": 90,
+    "original_reason": "New Anthropic Python SDK v2.9.0 released with API for updating Claude Tag Bundle instructions and RBAC improvements."
   }
 ]

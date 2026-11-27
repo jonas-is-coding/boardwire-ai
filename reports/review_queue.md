@@ -6,6 +6,10 @@ No pending review items.
 
 ## Gate rejections (last 25)
 
+- `2026-11-27T19:26:34.744486Z` [review] **Building on Nemotron 3.5 Parse: Open Data, Fine-Tuning, and Faster Inference** — Post is empty; Post lacks a clear claim or insight
+- `2026-11-27T19:26:34.637925Z` [review] **LangChain v1.5.0** — Post is empty; Post lacks a clear claim or insight
+- `2026-11-27T19:26:34.530345Z` [review] **Claude Code v2.1.328** — Post is empty; Post lacks a clear claim or insight
+- `2026-11-27T19:26:34.054573Z` [review] **Claude Code v2.1.329** — Version-only release without concrete capability: 'Claude Code v2.1.329'
 - `2026-11-26T22:54:59.570793Z` [review] **vLLM v0.34.0rc3** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.34.0rc3'
 - `2026-11-26T22:54:59.475147Z` [review] **LangChain v1.2.0** — Post is empty; Post lacks a clear claim or insight
 - `2026-11-26T22:54:59.140451Z` [review] **Claude Code v2.1.330** — Version-only release without concrete capability: 'Claude Code v2.1.330'
@@ -27,7 +31,3 @@ No pending review items.
 - `2026-11-24T20:37:12.781065Z` [review] **LangChain v1.1.0** — Version-only release without concrete capability: 'LangChain v1.1.0'
 - `2026-11-24T01:35:34.787716Z` [review] **Ollama v0.40.17-rc3** — Version-only release without concrete capability: 'Ollama v0.40.17-rc3'
 - `2026-11-23T22:00:36.939018Z` [review] **Explore the Codex Security Plugin** — Post is empty; Post lacks a clear claim or insight
-- `2026-11-23T22:00:36.845847Z` [review] **Introducing ChatGPT for Sales** — Post is empty; Post lacks a clear claim or insight
-- `2026-11-22T23:48:35.242111Z` [review] **vLLM v0.34.0rc4** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'vLLM v0.34.0rc4'
-- `2026-11-22T23:48:35.163657Z` [review] **Llama Index v0.14.26** — Post is empty; Post lacks a clear claim or insight
-- `2026-11-22T23:48:35.084073Z` [review] **LangChain v1.8.5** — Post is empty; Post lacks a clear claim or insight; Version-only release without concrete capability: 'LangChain v1.8.5'

@@ -1,46 +1,5 @@
 [
   {
-    "rejected_at": "2026-10-05T21:27:29.385718Z",
-    "stage": "review",
-    "title": "OpenAI \"rogue\" agent activities found on Wikimedia projects",
-    "link": "https://diff.wikimedia.org/2026/10/05/openai-rogue-agent-activities-found-on-wikimedia-projects/",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-10-05T21:27:29.467959Z",
-    "stage": "review",
-    "title": "Disrupting a coordinated model-distillation campaign",
-    "link": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
-    "rejected_at": "2026-10-06T16:42:59.694561Z",
-    "stage": "review",
-    "title": "Ollama v0.40.0",
-    "link": "https://github.com/ollama/ollama/releases/tag/v0.40.0-rc6",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight",
-      "Version-only release without concrete capability: 'Ollama v0.40.0'"
-    ]
-  },
-  {
-    "rejected_at": "2026-10-06T16:42:59.844058Z",
-    "stage": "review",
-    "title": "Mistral Large 4",
-    "link": "https://docs.mistral.ai/models/mistral-large-4-0",
-    "reasons": [
-      "Post is empty",
-      "Post lacks a clear claim or insight"
-    ]
-  },
-  {
     "rejected_at": "2026-10-06T19:24:15.770890Z",
     "stage": "review",
     "title": "Ollama v0.40.0",
@@ -1990,6 +1949,45 @@
       "Post is empty",
       "Post lacks a clear claim or insight",
       "Version-only release without concrete capability: 'vLLM v0.34.0rc3'"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-27T19:26:34.054573Z",
+    "stage": "review",
+    "title": "Claude Code v2.1.329",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.329",
+    "reasons": [
+      "Version-only release without concrete capability: 'Claude Code v2.1.329'"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-27T19:26:34.530345Z",
+    "stage": "review",
+    "title": "Claude Code v2.1.328",
+    "link": "https://github.com/anthropics/claude-code/releases/tag/v2.1.328",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-27T19:26:34.637925Z",
+    "stage": "review",
+    "title": "LangChain v1.5.0",
+    "link": "https://github.com/langchain-ai/langchain/releases/tag/langchain-perplexity%3D%3D1.5.0",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
+    ]
+  },
+  {
+    "rejected_at": "2026-11-27T19:26:34.744486Z",
+    "stage": "review",
+    "title": "Building on Nemotron 3.5 Parse: Open Data, Fine-Tuning, and Faster Inference",
+    "link": "https://huggingface.co/blog/nvidia/building-on-nemotron-35-parse-open-data-fine-tunin",
+    "reasons": [
+      "Post is empty",
+      "Post lacks a clear claim or insight"
     ]
   }
 ]
